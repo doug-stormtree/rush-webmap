@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  Input,
+  Box,
+  Heading,
   Button,
   IconButton,
   Flex,
@@ -54,17 +55,55 @@ export default function() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Choose a </DrawerHeader>
+          <DrawerHeader>Choose a map topic</DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder='Type here...' />
+            <Box
+              borderWidth='1px'
+              borderRadius='lg'
+              p={4}
+              my={2}
+            >
+              <Heading>How to beat the heat?</Heading>
+            </Box>
+            <Box
+              borderWidth='1px'
+              borderRadius='lg'
+              p={4}
+              my={2}
+            >
+              <Heading>How can I eat local?</Heading>
+            </Box>
+            <Box
+              borderWidth='1px'
+              borderRadius='lg'
+              p={4}
+              my={2}
+            >
+              <Heading>Is development here a good idea?</Heading>
+            </Box>
+            <Box
+              borderWidth='1px'
+              borderRadius='lg'
+              p={4}
+              my={2}
+            >
+              <Heading>Who do I share my home with?</Heading>
+            </Box>
+            <Box
+              borderWidth='1px'
+              borderRadius='lg'
+              p={4}
+              my={2}
+            >
+              <Heading>What grows here?</Heading>
+            </Box>
           </DrawerBody>
 
           <DrawerFooter>
             <Button variant='outline' mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme='blue'>Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
