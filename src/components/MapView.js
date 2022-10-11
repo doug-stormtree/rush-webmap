@@ -8,10 +8,10 @@ export const DEFAULT_ZOOM = 12;
 export default function MapView(props) {
   return (
     <MapContainer
+      ref={props.mapRef}
       center={DEFAULT_CENTER}
       zoom={DEFAULT_ZOOM}
       scrollWheelZoom={true}
-      whenCreated={props.setMap}
       style={props.style}
       closePopupOnClick={false}
     >

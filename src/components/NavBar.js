@@ -17,13 +17,13 @@ import {
 } from '@chakra-ui/react';
 import { FaBars } from 'react-icons/fa';
 
-export default function() {
+export default function NavBar(props) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
   return (
     <>
-      <Flex>
+      <Flex {...props}>
         <Button
           variant = 'ghost'
         >RUSH</Button>
