@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import MapView from './components/MapView';
 import ContentPane from './components/ContentPane';
 import { Flex } from '@chakra-ui/react';
-import React from 'react';
+import React, { useRef } from 'react';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -22,15 +22,26 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+console.log(app.name);
 
 function App() {
+  const map = useRef(null);
+
+  const invalidateMap = () => {
+    if (map.current) {
+      map.current.invalidateSize();
+    }
+  }
+
   return (
     <Flex
       direction='column'
+      h='100vh'
+      overflow='hidden'
     >
-      <NavBar />
-      <MapView />
-      <ContentPane h='40vh'/>
+      <NavBar flex='0'/>
+      <MapView flex='1' h='100%' mapRef={map} />
+      <ContentPane flex='0' h='md' onToggle={invalidateMap}/>
     </Flex>
   );
 }

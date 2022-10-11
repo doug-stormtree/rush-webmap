@@ -1,26 +1,84 @@
-import React from 'react';
-import { Box, Heading, Flex, Text, OrderedList, ListItem, List } from '@chakra-ui/react';
+import React, { useEffect } from 'react';
+import { 
+  Box,
+  Flex,
+  Heading,
+  IconButton,
+  ListItem,
+  OrderedList,
+  Spacer,
+  StackDivider,
+  Text,
+  useBoolean,
+  VStack
+} from '@chakra-ui/react';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-export default function ContentPane() {
+export default function ContentPane({onToggle, ...props}) {
+  const [openFlag, setOpenFlag] = useBoolean();
+
+  useEffect(() => {
+    onToggle();
+  }, [openFlag, onToggle])
+
   return (
-    <Flex
+    <VStack
+      divider={<StackDivider borderColor='gray.200' />}
+      spacing={4}
       p={4}
-      gap='10px'
+      {...props}
     >
-      <TextPane flex='1' />
-      <ListPane flex='1' />
-    </Flex>
+      <Flex direction='row' w='100%'>
+        <Heading>Details</Heading>
+        <Spacer />
+        <IconButton
+          icon={openFlag ? <FaChevronDown /> : <FaChevronUp />}
+          onClick={setOpenFlag.toggle}
+        />
+      </Flex>
+      {openFlag ? (
+        <Flex
+          h='100%'
+          gap='20px'
+          overflow='hidden'
+        >
+          <TextPane flex='1' overflowY='scroll' />
+          <ListPane flex='1' overflowY='scroll' />
+        </Flex>
+      ) : null}
+    </VStack>
   )
 }
 
 function TextPane(props) {
   return (
-    <Box {...props}>
-        <Heading>
+    <Box {...props} px={2}>
+        <Heading mb={1}>
           Story
         </Heading>
         <Text>
-          The Sensitive Ecosystems Inventory (SEI) of East Vancouver Island project has been responsible for tracking sensitive ecosystems for many regions within the Capital Regional District (CRD). Their data is what you see on the map. Their research identifies different sensitive ecosystems and allows us to understand better how these ecosystems are at risk. Some of the most significant factors responsible for the degradation and ecosystem damage are human usage and the introduction of invasive species. These ecosystems are shrinking, often due to development or land use changes. The areas on this map do not include private lands, provincial & federal lands, or Indigenous reservations. It is important to understand that each of these ecosystems plays a crucial role in the ecological well-being of this area. Damage to one sensitive ecosystem will affect another. These ecosystems in this area of the coast are known for their biodiversity. Researchers in Japan found that after “forest bathing,” participants had been breathing in phytoncides (essential wood oils) that had antimicrobial properties. Participants had increased NK (natural killer) cells, responsible for the immune response that kills tumours and viruses. Another study sprayed cedar essential oils in a hotel room before guests stayed, which had the same effect on their immune systems. So if you need an excuse to ditch school and go to the beach or buy more house plants, do it! It’s good for your health!
+          The Sensitive Ecosystems Inventory (SEI) of East Vancouver Island project has been responsible for tracking 
+          sensitive ecosystems for many regions within the Capital Regional District (CRD). Their data is what you see 
+          on the map. Their research identifies different sensitive ecosystems and allows us to understand better how 
+          these ecosystems are at risk.
+        </Text>
+        <br />
+        <Text>
+          Some of the most significant factors responsible for the degradation and ecosystem damage are human usage and 
+          the introduction of invasive species. These ecosystems are shrinking, often due to development or land use 
+          changes. The areas on this map do not include private lands, provincial & federal lands, or Indigenous 
+          reservations. It is important to understand that each of these ecosystems plays a crucial role in the 
+          ecological well-being of this area. Damage to one sensitive ecosystem will affect another. These ecosystems 
+          in this area of the coast are known for their biodiversity.
+        </Text>
+        <br />
+        <Text>
+          Researchers in Japan found that after “forest bathing,” participants had been breathing in phytoncides 
+          (essential wood oils) that had antimicrobial properties. Participants had increased NK (natural killer) 
+          cells, responsible for the immune response that kills tumours and viruses. Another study sprayed cedar 
+          essential oils in a hotel room before guests stayed, which had the same effect on their immune systems. 
+          So if you need an excuse to ditch school and go to the beach or buy more house plants, do it! It's good for 
+          your health!
         </Text>
       </Box>
   )
@@ -28,8 +86,8 @@ function TextPane(props) {
 
 function ListPane(props) {
   return (
-    <Box {...props}>
-        <Heading>
+    <Box {...props} px={2}>
+        <Heading mb={1}>
           Tips
         </Heading>
         <OrderedList>
