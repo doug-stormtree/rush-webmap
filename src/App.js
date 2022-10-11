@@ -75,6 +75,8 @@ function App() {
       direction='column'
       h='100vh'
       overflow='hidden'
+      h='100vh'
+      overflow='hidden'
     >
       <NavBar flex='0'/>
       <MapView flex='1' h='100%' mapRef={map}>
