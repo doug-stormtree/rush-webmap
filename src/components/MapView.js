@@ -16,8 +16,7 @@ export default function MapView(props) {
       closePopupOnClick={false}
     >
       <TileLayer
-        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}"
       />
       {props.children}
     </MapContainer>
