@@ -2,6 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import MapView from './components/MapView';
 import ContentPane from './components/ContentPane';
+import MenuPane from './components/MenuPane';
 import { Flex } from '@chakra-ui/react';
 import React, { useRef } from 'react';
 import * as HeatDomes from './data/HeatDomes.json';
@@ -77,16 +78,19 @@ function App() {
       overflow='hidden'
     >
       <NavBar flex='0'/>
-      <MapView flex='1' h='100%' mapRef={map}>
-        <GeoJSON
-          data={AC_Buildings}
-          pointToLayer={(a, b) => point(a, b)}
-        />
-        <GeoJSON
-          data={HeatDomes}
-          style={style_HeatDomes}
-        />
-      </MapView>
+      <Flex flex='1' direction='row' h='100%' w='100%'>
+        <MapView flex='1' h='100%' mapRef={map}>
+          <GeoJSON
+            data={AC_Buildings}
+            pointToLayer={(a, b) => point(a, b)}
+          />
+          <GeoJSON
+            data={HeatDomes}
+            style={style_HeatDomes}
+          />
+        </MapView>
+        <MenuPane flex='0' w='md' onToggle={invalidateMap}/>
+      </Flex>
       <ContentPane flex='0' h='md' onToggle={invalidateMap}/>
     </Flex>
   );
