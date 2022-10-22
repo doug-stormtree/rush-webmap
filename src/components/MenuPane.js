@@ -4,11 +4,7 @@ import {
   Flex,
   Heading,
   IconButton,
-  ListItem,
-  OrderedList,
-  Spacer,
   StackDivider,
-  Text,
   useBoolean,
   HStack
 } from '@chakra-ui/react';
