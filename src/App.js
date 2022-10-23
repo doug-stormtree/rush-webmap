@@ -4,14 +4,9 @@ import MapView from './components/MapView';
 import ContentPane from './components/ContentPane';
 import MenuPane from './components/MenuPane';
 import { Flex } from '@chakra-ui/react';
-import React, { useRef } from 'react';
-import * as HeatDomes from './data/HeatDomes.json';
-import * as AC_Buildings from './data/AC_Buildings.json';
-import { GeoJSON } from 'react-leaflet/GeoJSON';
-import { divIcon, marker } from 'leaflet';
-import ReactDOMServer from "react-dom/server";
-import { ReactComponent as CommunityCtrIcon } from './svg/cc.svg';
-import { ReactComponent as LibraryIcon } from './svg/lib.svg';
+import React, { useRef, useState } from 'react';
+import { Question, MapData } from './components/MapData';
+
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -33,36 +28,6 @@ const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
 
 function App() {
-  const style_HeatDomes = {
-    opacity: 0.5,
-    color: 'rgba(189,17,20,1.0)',
-    dashArray: '',
-    lineCap: 'butt',
-    lineJoin: 'miter',
-    weight: 1.0,
-    fill: true,
-    fillOpacity: 0.7,
-    fillColor: 'rgba(189,17,20,1.0)',
-    interactive: true,
-  }
-
-  function point(feature, latlng){
-    const icon = feature.properties.Type === "Library" ? (
-        <LibraryIcon />
-      ) : (
-        <CommunityCtrIcon />
-      );
-
-    return marker(latlng, {
-      icon: divIcon({
-        className: "",
-        iconSize: [40, 40],
-        iconAnchor: [24, 24],
-        html: ReactDOMServer.renderToString(icon),
-      })
-    });
-  }
-
   const map = useRef(null);
 
   const invalidateMap = () => {
@@ -70,6 +35,8 @@ function App() {
       map.current.invalidateSize();
     }
   }
+
+  const [activeQuestion, setActiveQuestion] = useState(Question.BeatTheHeat);
 
   return (
     <Flex
@@ -80,14 +47,7 @@ function App() {
       <NavBar flex='0'/>
       <Flex flex='1' direction='row' h='100%' w='100%'>
         <MapView flex='1' h='100%' mapRef={map}>
-          <GeoJSON
-            data={AC_Buildings}
-            pointToLayer={(a, b) => point(a, b)}
-          />
-          <GeoJSON
-            data={HeatDomes}
-            style={style_HeatDomes}
-          />
+          <MapData question={activeQuestion} />
         </MapView>
         <MenuPane flex='0' w='md' onToggle={invalidateMap}/>
       </Flex>
