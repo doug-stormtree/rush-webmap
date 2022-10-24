@@ -60,6 +60,7 @@ function App() {
       <ContentPane
         flex='0'
         h='md'
+        marginTop='auto'
         onToggle={invalidateMap}
         question={activeQuestion}
       />
