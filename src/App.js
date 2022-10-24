@@ -57,7 +57,12 @@ function App() {
           setQuestion={setActiveQuestion}
         />
       </Flex>
-      <ContentPane flex='0' h='md' onToggle={invalidateMap}/>
+      <ContentPane
+        flex='0'
+        h='md'
+        onToggle={invalidateMap}
+        question={activeQuestion}
+      />
     </Flex>
   );
 }
