@@ -28,6 +28,8 @@ export default function MenuPane({
       divider={<StackDivider borderColor='gray.200' />}
       spacing={2}
       p={2}
+      h='0'
+      minH='100%'
       {...props}
     >
       <Flex direction='column' h='100%'>
@@ -62,8 +64,9 @@ function QuestionsList({activeQuestionTitle, setQuestion}) {
   return (
     <Flex 
       direction='column'
+      h='100%'
       w='md'
-      overflow='hidden'
+      overflowY='scroll'
     >
       {Object.values(Questions).map(q =>
           <Box
