@@ -12,9 +12,9 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Questions } from './MapData';
 
 export default function MenuPane({
-  onToggle, 
-  activeQuestion, 
-  setQuestion, 
+  onToggle,
+  activeQuestion,
+  setQuestion,
   ...props
 }) {
   const [openFlag, setOpenFlag] = useBoolean(true);
@@ -39,31 +39,57 @@ export default function MenuPane({
         />
       </Flex>
       {openFlag ? (
-        <QuestionsList />
+        <QuestionsList
+          activeQuestionTitle={activeQuestion.title}
+          setQuestion={setQuestion}
+        />
       ) : null}
     </HStack>
   )
 }
 
-function QuestionsList() {
+function QuestionsList({activeQuestionTitle, setQuestion}) {
+  const BoxVariants = {
+    default: {
+      borderWidth: '1px',
+    },
+    selected: {
+      borderWidth: '4px',
+      borderColor: '#A8A04D',
+    }
+  }
+
   return (
     <Flex 
       direction='column'
       w='md'
       overflow='hidden'
     >
-      {Object.values(Questions).map(q => {
-        return q.title === "" ? (<></>) : (
+      {Object.values(Questions).map(q =>
           <Box
-            borderWidth='1px'
+            as='button'
+            key={q.title}
             borderRadius='lg'
             p={4}
             my={2}
+            _hover={{
+              bg: "#ECEAD5"
+            }}
+            _active={{
+              bg: '#dddfe2',
+              transform: 'scale(0.98)',
+              borderColor: '#bec3c9',
+            }}
+            {...(activeQuestionTitle === q.title 
+              ? BoxVariants.selected
+              : BoxVariants.default
+            )}
+            onClick={() => {setQuestion(q)}}
           >
             <Heading>{q.title}</Heading>
           </Box>
         )
-      })}
+      }
     </Flex>
   )
 }
