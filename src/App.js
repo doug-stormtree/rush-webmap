@@ -5,7 +5,7 @@ import ContentPane from './components/ContentPane';
 import MenuPane from './components/MenuPane';
 import { Flex } from '@chakra-ui/react';
 import React, { useRef, useState } from 'react';
-import { Question, MapData } from './components/MapData';
+import { Questions, MapData } from './components/MapData';
 
 
 // Import the functions you need from the SDKs you need
@@ -36,7 +36,7 @@ function App() {
     }
   }
 
-  const [activeQuestion, setActiveQuestion] = useState(Question.BeatTheHeat);
+  const [activeQuestion, setActiveQuestion] = useState(Questions.BeatTheHeat);
 
   return (
     <Flex
@@ -49,7 +49,13 @@ function App() {
         <MapView flex='1' h='100%' mapRef={map}>
           <MapData question={activeQuestion} />
         </MapView>
-        <MenuPane flex='0' w='md' onToggle={invalidateMap}/>
+        <MenuPane 
+          flex='0'
+          w='md'
+          onToggle={invalidateMap}
+          activeQuestion={activeQuestion}
+          setQuestion={setActiveQuestion}
+        />
       </Flex>
       <ContentPane flex='0' h='md' onToggle={invalidateMap}/>
     </Flex>

@@ -9,8 +9,14 @@ import {
   HStack
 } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { Questions } from './MapData';
 
-export default function MenuPane({onToggle, ...props}) {
+export default function MenuPane({
+  onToggle, 
+  activeQuestion, 
+  setQuestion, 
+  ...props
+}) {
   const [openFlag, setOpenFlag] = useBoolean(true);
 
   useEffect(() => {
@@ -46,46 +52,18 @@ function QuestionsList() {
       w='md'
       overflow='hidden'
     >
-      <Box
-        borderWidth='1px'
-        borderRadius='lg'
-        p={4}
-        my={2}
-      >
-        <Heading>How to beat the heat?</Heading>
-      </Box>
-      <Box
-        borderWidth='1px'
-        borderRadius='lg'
-        p={4}
-        my={2}
-      >
-        <Heading>How can I eat local?</Heading>
-      </Box>
-      <Box
-        borderWidth='1px'
-        borderRadius='lg'
-        p={4}
-        my={2}
-      >
-        <Heading>Is development here a good idea?</Heading>
-      </Box>
-      <Box
-        borderWidth='1px'
-        borderRadius='lg'
-        p={4}
-        my={2}
-      >
-        <Heading>Who do I share my home with?</Heading>
-      </Box>
-      <Box
-        borderWidth='1px'
-        borderRadius='lg'
-        p={4}
-        my={2}
-      >
-        <Heading>What grows here?</Heading>
-      </Box>
+      {Object.values(Questions).map(q => {
+        return q.title === "" ? (<></>) : (
+          <Box
+            borderWidth='1px'
+            borderRadius='lg'
+            p={4}
+            my={2}
+          >
+            <Heading>{q.title}</Heading>
+          </Box>
+        )
+      })}
     </Flex>
   )
 }
