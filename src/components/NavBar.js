@@ -1,27 +1,30 @@
 import React from 'react';
 import {
   Button,
-  Flex,
-  Spacer
+  Box,
+  Spacer,
+  useStyleConfig,
 } from '@chakra-ui/react';
 
 export default function NavBar(props) {
+  const styles = useStyleConfig('NavBar');
+
   return (
-    <Flex {...props}>
+    <Box __css={styles} {...props} >
       <Button
-        variant = 'ghost'
+        variant = 'nav'
       >RUSH</Button>
       <Spacer />
       <Button
-        variant = 'ghost'
+        variant = 'nav'
       >Events</Button>
       <Button
-        variant = 'ghost'
+        variant = 'nav'
       >Initiatives</Button>
       <Button
-        variant = 'ghost'
+        variant = 'nav'
       >About</Button>
       <Spacer />
-    </Flex>
+    </Box>
   )
 }
