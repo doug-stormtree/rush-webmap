@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, useStyleConfig } from '@chakra-ui/react';
+import { Box, useStyleConfig } from '@chakra-ui/react';
 
 export default function MenuCard({ title, onClick, variant }) {
   const styles = useStyleConfig('MenuCard',{variant});
