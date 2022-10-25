@@ -2,10 +2,73 @@ import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
 
 const NavBar = defineStyleConfig({
   baseStyle: {
-    bg: 'rush.400',
+    bg: 'rush.500',
     display: 'flex',
   },
-})
+});
+
+const MenuCard = defineStyleConfig({
+  baseStyle: {
+    bg: "rush.50",
+    borderRadius: "lg",
+    fontWeight: "semibold",
+    transitionProperty: "common",
+    transitionDuration: "normal",
+    _focusVisible: {
+      boxShadow: "outline",
+    },
+    _disabled: {
+      opacity: 0.4,
+      cursor: "not-allowed",
+      boxShadow: "none",
+    },
+    _hover: {
+      bg: "rush.300",
+      _disabled: {
+        bg: "initial",
+      },
+    },
+  },
+  sizes: {
+    lg: {
+      h: "12",
+      minW: "12",
+      fontSize: "lg",
+      px: "6",
+    },
+    md: {
+      minH: "5em",
+      minW: "10",
+      fontSize: "md",
+      px: "4",
+    },
+    sm: {
+      h: "8",
+      minW: "8",
+      fontSize: "sm",
+      px: "3",
+    },
+    xs: {
+      h: "6",
+      minW: "6",
+      fontSize: "xs",
+      px: "2",
+    },
+  },
+  variants: {
+    default: {
+      borderWidth: '4px',
+    },
+    selected: {
+      borderWidth: '4px',
+      borderColor: '#A8A04D',
+    },
+  },
+  defaultProps: {
+    size: "md",
+    variant: "default",
+  }
+});
 
 const theme = extendTheme({
   colors: {
@@ -24,6 +87,7 @@ const theme = extendTheme({
   },
   components: {
     NavBar,
+    MenuCard,
     Button: {
       variants: {
         nav: {
@@ -33,6 +97,11 @@ const theme = extendTheme({
         }
       }
     },
+    Heading: {
+      defaultProps: {
+      }
+    },
   }
 });
 export default theme;
+

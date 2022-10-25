@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { 
   Box,
   Flex,
@@ -9,27 +9,22 @@ import {
   Spacer,
   StackDivider,
   Text,
-  useBoolean,
   VStack
 } from '@chakra-ui/react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-export default function ContentPane({onToggle, question, ...props}) {
-  const [openFlag, setOpenFlag] = useBoolean();
-
-  useEffect(() => {
-    onToggle();
-  }, [openFlag, onToggle])
-
+export default function ContentPane({openFlag, setOpenFlag, question, ...props}) {
   return (
     <VStack
-      divider={<StackDivider borderColor='gray.200' />}
+      divider={<StackDivider borderWidth='2px' borderColor='rush.700' />}
       spacing={4}
       p={4}
+      bg='rush.100'
       {...props}
     >
       <Flex direction='row' w='100%'>
-        <Heading>Details</Heading>
+        <Spacer />
+        <Heading>{question.title}</Heading>
         <Spacer />
         <IconButton
           icon={openFlag ? <FaChevronDown /> : <FaChevronUp />}
@@ -42,8 +37,8 @@ export default function ContentPane({onToggle, question, ...props}) {
           gap='20px'
           overflow='hidden'
         >
-          <TextPane flex='1' overflowY='scroll' paragraphList={question.story}/>
-          <ListPane flex='1' overflowY='scroll' itemList={question.tips}/>
+          <TextPane flex='1' overflowY='auto' paragraphList={question.story}/>
+          <ListPane flex='1' overflowY='auto' itemList={question.tips}/>
         </Flex>
       ) : null}
     </VStack>
@@ -52,7 +47,7 @@ export default function ContentPane({onToggle, question, ...props}) {
 
 function TextPane({paragraphList, ...props}) {
   return (
-    <Box {...props} px={2}>
+    <Box {...props} pe={2}>
         <Heading mb={1}>
           Story
         </Heading>
