@@ -2,8 +2,8 @@ import NavBar from './components/NavBar';
 import MapView from './components/MapView';
 import ContentPane from './components/ContentPane';
 import MenuPane from './components/MenuPane';
-import { ChakraProvider, Flex } from '@chakra-ui/react';
-import React, { useRef, useState } from 'react';
+import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Questions, MapData } from './components/MapData';
 import theme from './theme/Theme';
 
@@ -38,6 +38,12 @@ function App() {
 
   const [activeQuestion, setActiveQuestion] = useState(Questions.BeatTheHeat);
 
+  const [openFlag, setOpenFlag] = useBoolean(true);
+
+  useEffect(() => {
+    invalidateMap();
+  }, [openFlag])
+
   return (
     <ChakraProvider theme={theme}>
       <Flex
@@ -46,7 +52,7 @@ function App() {
         overflow='hidden'
       >
         <NavBar flex='0'/>
-        <Flex flex='1' direction='row' h='100%' w='100%'>
+        <Flex flex='1' direction='row' h='100%' minH='24px' w='100%'>
           <MapView flex='1' h='100%' mapRef={map}>
             <MapData question={activeQuestion} />
           </MapView>
@@ -61,8 +67,10 @@ function App() {
         <ContentPane
           flex='0'
           h='md'
+          {...(openFlag ? {minH: 'md'} : {})}
           marginTop='auto'
-          onToggle={invalidateMap}
+          openFlag={openFlag}
+          setOpenFlag={setOpenFlag}
           question={activeQuestion}
         />
       </Flex>
