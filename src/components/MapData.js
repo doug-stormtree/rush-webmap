@@ -40,8 +40,8 @@ export const Questions = {
             return marker(latlng, {
               icon: divIcon({
                 className: "",
-                iconSize: [40, 40],
-                iconAnchor: [24, 24],
+                iconSize: [32, 32],
+                iconAnchor: [12, 12],
                 html: ReactDOMServer.renderToString(icon),
               })
             });
