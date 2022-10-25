@@ -42,13 +42,22 @@ function App() {
 
   useEffect(() => {
     invalidateMap();
-  }, [openFlag])
+  }, [openFlag]);
+
+  const [vh, setVh] = useState(`${window.innerHeight}px`);
+  const documentHeight = () => { setVh(`${window.innerHeight}px`); }
+  useEffect(() => {
+    window.addEventListener('resize', documentHeight);
+    return () => {
+      window.removeEventListener('resize', documentHeight);
+    }
+  });
 
   return (
     <ChakraProvider theme={theme}>
       <Flex
         direction='column'
-        h={`${window.innerHeight}px`}
+        h={vh}
         overflow='hidden'
       >
         <NavBar flex='0'/>
