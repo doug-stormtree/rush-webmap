@@ -48,7 +48,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Flex
         direction='column'
-        h='100vh'
+        h={`${window.innerHeight}px`}
         overflow='hidden'
       >
         <NavBar flex='0'/>
