@@ -25,7 +25,12 @@ export default function LandingModalButton(props) {
   const { isOpen, onOpen, onClose } = useDisclosure(true);
   const logos = useBreakpointValue({
     xl: logos_4xl,
-    base: logos_xl
+    base: logos_xl,
+  })
+  const isCentered = useBreakpointValue({
+    xl: true,
+    md: false,
+    base: false,
   })
   return (
     <>
@@ -34,6 +39,7 @@ export default function LandingModalButton(props) {
       <Modal 
         isOpen={isOpen}
         onClose={onClose}
+        isCentered={isCentered}
         size={{
           xl: "4xl",
           md: "xl",
