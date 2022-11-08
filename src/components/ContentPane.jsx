@@ -1,5 +1,6 @@
 import React from 'react';
-import { 
+import {
+  useBreakpointValue,
   Box,
   Flex,
   Heading,
@@ -14,6 +15,9 @@ import {
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 export default function ContentPane({openFlag, setOpenFlag, question, ...props}) {
+  const contentDirection = useBreakpointValue({ lg: 'row', base: 'column' });
+  const outerOverflow = useBreakpointValue({ lg: 'hidden', base: 'auto' });
+  const innerOverflow = useBreakpointValue({ lg: 'auto', base: 'visible' });
   return (
     <VStack
       divider={<StackDivider borderWidth='2px' borderColor='rush.700' />}
@@ -34,11 +38,12 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
       {openFlag ? (
         <Flex
           h='100%'
-          gap='20px'
-          overflow='hidden'
+          gap='10px'
+          direction={contentDirection}
+          overflow={outerOverflow}
         >
-          <TextPane flex='1' overflowY='auto' paragraphList={question.story}/>
-          <ListPane flex='1' overflowY='auto' itemList={question.tips}/>
+          <TextPane flex='1' overflowY={innerOverflow} paragraphList={question.story}/>
+          <ListPane flex='1' overflowY={innerOverflow} itemList={question.tips}/>
         </Flex>
       ) : null}
     </VStack>
