@@ -5,6 +5,7 @@ import {
   Spacer,
   useStyleConfig,
 } from '@chakra-ui/react';
+import LandingModalButton from './LandingModalButton';
 
 export default function NavBar(props) {
   const styles = useStyleConfig('NavBar');
@@ -21,9 +22,9 @@ export default function NavBar(props) {
       <Button
         variant = 'nav'
       >Initiatives</Button>
-      <Button
+      <LandingModalButton
         variant = 'nav'
-      >About</Button>
+      >About</LandingModalButton>
       <Spacer />
     </Box>
   )

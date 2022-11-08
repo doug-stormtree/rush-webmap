@@ -28,22 +28,7 @@ const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
 
 function App() {
-  const map = useRef(null);
-
-  const invalidateMap = () => {
-    if (map.current) {
-      map.current.invalidateSize();
-    }
-  }
-
-  const [activeQuestion, setActiveQuestion] = useState(Questions.BeatTheHeat);
-
-  const [openFlag, setOpenFlag] = useBoolean(true);
-
-  useEffect(() => {
-    invalidateMap();
-  }, [openFlag]);
-
+  // Fix window height to viewport on web and mobile
   const [vh, setVh] = useState(`${window.innerHeight}px`);
   const documentHeight = () => { setVh(`${window.innerHeight}px`); }
   useEffect(() => {
@@ -52,6 +37,18 @@ function App() {
       window.removeEventListener('resize', documentHeight);
     }
   });
+
+  // Leaflet map reference
+  const map = useRef(null);
+  // Function to invalidate Leaflet map size
+  const invalidateMap = () => { if (map.current) map.current.invalidateSize(); }
+
+  const [activeQuestion, setActiveQuestion] = useState(Questions.BeatTheHeat);
+
+  const [openContentFlag, setOpenContentFlag] = useBoolean(true);
+  useEffect(() => {
+    invalidateMap();
+  }, [openContentFlag]);
 
   return (
     <ChakraProvider theme={theme}>
@@ -76,10 +73,10 @@ function App() {
         <ContentPane
           flex='0'
           h='md'
-          {...(openFlag ? {minH: 'md'} : {})}
+          {...(openContentFlag ? {minH: 'md'} : {})}
           marginTop='auto'
-          openFlag={openFlag}
-          setOpenFlag={setOpenFlag}
+          openFlag={openContentFlag}
+          setOpenFlag={setOpenContentFlag}
           question={activeQuestion}
         />
       </Flex>
