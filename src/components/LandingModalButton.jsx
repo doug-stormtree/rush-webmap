@@ -22,7 +22,7 @@ import logos_4xl from '../images/RUSH_Logos_4xl.png';
 import logos_xl from '../images/RUSH_Logos_xl.png';
 
 export default function LandingModalButton(props) {
-  const { isOpen, onOpen, onClose } = useDisclosure(true);
+  const { isOpen, onOpen, onClose } = useDisclosure({defaultIsOpen: true});
   const logos = useBreakpointValue({
     xl: logos_4xl,
     base: logos_xl,
