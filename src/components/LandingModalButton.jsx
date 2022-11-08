@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  useBreakpoint,
+  useBreakpointValue,
   useDisclosure,
   Button,
+  Image,
   Modal,
   ModalBody,
   ModalContent,
@@ -17,21 +18,28 @@ import {
   TerritoryAcknowledgement,
   RushMissionStatement
 } from '../data/TextContent';
+import logos_4xl from '../images/RUSH_Logos_4xl.png';
+import logos_xl from '../images/RUSH_Logos_xl.png';
 
 export default function LandingModalButton(props) {
   const { isOpen, onOpen, onClose } = useDisclosure(true);
-  const bp = useBreakpoint();
+  const logos = useBreakpointValue({
+    xl: logos_4xl,
+    base: logos_xl
+  })
   return (
     <>
       <Button onClick={onOpen} {...props}>{props.children}</Button>
 
-      <Modal isOpen={isOpen} onClose={onClose} isCentered size={{
-        xl: "4xl",
-        lg: "xl",
-        md: "xl",
-        sm: "full",
-        base: "full",
-      }}>
+      <Modal 
+        isOpen={isOpen}
+        onClose={onClose}
+        size={{
+          xl: "4xl",
+          md: "xl",
+          base: "full",
+        }}
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Welcome to the RUSH Initiative Web Map</ModalHeader>
@@ -42,8 +50,8 @@ export default function LandingModalButton(props) {
               <Text>{ TerritoryAcknowledgement }</Text>
             </Stack>
           </ModalBody>
-
           <ModalFooter>
+            <Image src={logos} />
           </ModalFooter>
         </ModalContent>
       </Modal>
