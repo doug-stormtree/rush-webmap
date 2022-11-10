@@ -1,40 +1,25 @@
 import React, { useEffect } from 'react';
+import { useBreakpointValue } from '@chakra-ui/react';
 import { useMap } from 'react-leaflet';
-import 'leaflet-control-geocoder';
+import { SearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
+import 'leaflet-geosearch/dist/geosearch.css';
 
-// https://stackoverflow.com/a/65580899
+const provider = new OpenStreetMapProvider();
+
 export default function LeafletControlGeocoder() {
+  const searchStyle = useBreakpointValue({
+    lg: 'bar',
+    base: 'button'
+  });
   const map = useMap();
-
   useEffect(() => {
-    var geocoder = L.Control.Geocoder.nominatim();
-    if (typeof URLSearchParams !== 'undefined' && location.search.length > 0) {
-      // parse /?geocoder=nominatim from URL
-      var params = new URLSearchParams(location.search);
-      var geocoderString = params.get("geocoder");
-      if (geocoderString && L.Control.Geocoder[geocoderString]) {
-        geocoder = L.Control.Geocoder[geocoderString]();
-      } else if (geocoderString) {
-        console.warn("Unsupported geocoder", geocoderString);
-      }
-    }
-
-    L.Control.geocoder({
-      query: "",
-      placeholder: "Search here...",
-      defaultMarkGeocode: false,
-      geocoder
-    })
-      .on("markgeocode", function (e) {
-        var latlng = e.geocode.center;
-        L.marker(latlng, { icon })
-          .addTo(map)
-          .bindPopup(e.geocode.name)
-          .openPopup();
-        map.fitBounds(e.geocode.bbox);
-      })
-      .addTo(map);
-  }, []);
+    const searchControl = new SearchControl({
+      provider: provider,
+      style: searchStyle,
+    });
+    map.addControl(searchControl);
+    return () => map.removeControl(searchControl);
+  }, [map, searchStyle]);
 
   return null;
 }

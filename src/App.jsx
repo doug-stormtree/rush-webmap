@@ -1,10 +1,11 @@
-import NavBar from './components/NavBar';
-import MapView from './components/MapView';
-import ContentPane from './components/ContentPane';
-import MenuPane from './components/MenuPane';
-import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
 import React, { useRef, useState, useEffect } from 'react';
+import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
+import ContentPane from './components/ContentPane';
+import LeafletControlGeocoder from './components/LeafletControlGeocoder';
+import MapView from './components/MapView';
 import { Questions, MapData } from './components/MapData';
+import MenuPane from './components/MenuPane';
+import NavBar from './components/NavBar';
 import theme from './theme/Theme';
 
 
@@ -60,6 +61,7 @@ function App() {
         <NavBar flex='0'/>
         <Flex flex='1' direction='row' h='100%' minH='24px' w='100%'>
           <MapView flex='1' h='100%' mapRef={map}>
+            <LeafletControlGeocoder />
             <MapData question={activeQuestion} />
           </MapView>
           <MenuPane 
