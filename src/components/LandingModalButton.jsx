@@ -2,7 +2,7 @@ import React from 'react';
 import {
   useBreakpointValue,
   useDisclosure,
-  Button,
+  IconButton,
   Image,
   Modal,
   ModalBody,
@@ -14,6 +14,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
+import { FaRegQuestionCircle } from 'react-icons/fa';
 import {
   TerritoryAcknowledgement,
   RushMissionStatement
@@ -34,7 +35,14 @@ export default function LandingModalButton(props) {
   })
   return (
     <>
-      <Button onClick={onOpen} {...props}>{props.children}</Button>
+      <IconButton
+        variant='nav'
+        icon={<FaRegQuestionCircle />}
+        onClick={onOpen} 
+        {...props}
+      >
+        {props.children}
+      </IconButton>
 
       <Modal 
         isOpen={isOpen}
@@ -52,8 +60,8 @@ export default function LandingModalButton(props) {
           <ModalCloseButton />
           <ModalBody>
             <Stack spacing='1em'>
-              <Text>{ RushMissionStatement }</Text>
               <Text>{ TerritoryAcknowledgement }</Text>
+              <Text>{ RushMissionStatement }</Text>
             </Stack>
           </ModalBody>
           <ModalFooter>

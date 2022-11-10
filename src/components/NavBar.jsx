@@ -16,16 +16,7 @@ export default function NavBar(props) {
         variant = 'nav'
       >RUSH</Button>
       <Spacer />
-      <Button
-        variant = 'nav'
-      >Events</Button>
-      <Button
-        variant = 'nav'
-      >Initiatives</Button>
-      <LandingModalButton
-        variant = 'nav'
-      >About</LandingModalButton>
-      <Spacer />
+      <LandingModalButton />
     </Box>
   )
 }
