@@ -92,7 +92,7 @@ const theme = extendTheme({
       variants: {
         nav: {
           _hover: {
-            bg: 'rush.200'
+            color: 'rush.200'
           }
         }
       }
