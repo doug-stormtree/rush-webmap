@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useBreakpointValue } from '@chakra-ui/react';
 import { useMap } from 'react-leaflet';
 import { SearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
