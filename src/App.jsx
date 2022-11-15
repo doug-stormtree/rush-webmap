@@ -3,10 +3,11 @@ import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView from './components/MapView';
-import { Questions, MapData } from './components/MapData';
+import { MapData } from './components/MapData';
 import MenuPane from './components/MenuPane';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
+import BeatTheHeat from './data/beattheheat/BeatTheHeat';
 
 
 // Import the functions you need from the SDKs you need
@@ -27,6 +28,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
+
+// Collect Questions
+const Questions = { BeatTheHeat };
 
 function App() {
   // Fix window height to viewport on web and mobile
@@ -68,6 +72,7 @@ function App() {
             flex='0'
             w='md'
             onToggle={invalidateMap}
+            questions={Questions}
             activeQuestion={activeQuestion}
             setQuestion={setActiveQuestion}
           />

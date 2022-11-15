@@ -6,11 +6,11 @@ import {
   HStack
 } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { Questions } from './MapData';
 import MenuCard from './MenuCard';
 
 export default function MenuPane({
   onToggle,
+  questions,
   activeQuestion,
   setQuestion,
   ...props
@@ -39,6 +39,7 @@ export default function MenuPane({
       </Flex>
       {openFlag ? (
         <QuestionsList
+          questions={questions}
           activeQuestionTitle={activeQuestion.title}
           setQuestion={setQuestion}
         />
@@ -47,7 +48,7 @@ export default function MenuPane({
   )
 }
 
-function QuestionsList({activeQuestionTitle, setQuestion}) {
+function QuestionsList({questions, activeQuestionTitle, setQuestion}) {
   return (
     <Flex 
       direction='column'
@@ -57,7 +58,7 @@ function QuestionsList({activeQuestionTitle, setQuestion}) {
       gap={2}
       p={2}
     >
-      {Object.values(Questions).map(q => 
+      {Object.values(questions).map(q => 
         <MenuCard
           key={q.title}
           title={q.title}

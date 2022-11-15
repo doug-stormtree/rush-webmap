@@ -13,11 +13,13 @@ import {
   VStack
 } from '@chakra-ui/react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import InitiativeButton from './InitiativeButton';
 
 export default function ContentPane({openFlag, setOpenFlag, question, ...props}) {
   const contentDirection = useBreakpointValue({ lg: 'row', base: 'column' });
-  const outerOverflow = useBreakpointValue({ lg: 'hidden', base: 'auto' });
-  const innerOverflow = useBreakpointValue({ lg: 'auto', base: 'visible' });
+  const outerOverflow = useBreakpointValue({ lg: 'auto', base: 'auto' });
+  const innerOverflow = useBreakpointValue({ lg: 'visible', base: 'visible' });
+  const contentTitle = useBreakpointValue({ lg: question.question, base: question.title})
   return (
     <VStack
       divider={<StackDivider borderWidth='2px' borderColor='rush.700' />}
@@ -28,7 +30,7 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
     >
       <Flex direction='row' w='100%'>
         <Spacer />
-        <Heading>{question.title}</Heading>
+        <Heading>{contentTitle}</Heading>
         <Spacer />
         <IconButton
           icon={openFlag ? <FaChevronDown /> : <FaChevronUp />}
@@ -42,38 +44,51 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
           direction={contentDirection}
           overflow={outerOverflow}
         >
-          <TextPane flex='1' overflowY={innerOverflow} paragraphList={question.story}/>
-          <ListPane flex='1' overflowY={innerOverflow} itemList={question.tips}/>
+          <TextPane flex='1' overflowY={innerOverflow} content={question.learn}/>
+          <ListPane flex='1' overflowY={innerOverflow} content={question.act}/>
         </Flex>
       ) : null}
     </VStack>
   )
 }
 
-function TextPane({paragraphList, ...props}) {
+function TextPane({content, ...props}) {
   return (
     <Box {...props} pe={2}>
-        <Heading mb={1}>
-          Story
-        </Heading>
-        {paragraphList.map(p =>
-          <Text key={p} mb="2em">{p}</Text>
-        )}
-      </Box>
+      <Heading mb={1}>Learn</Heading>
+      {content.text.map(p =>
+        <Text key={p} mb="1em">{p}</Text>
+      )}
+      <InitiativeList initiatives={content.initiatives} />
+    </Box>
   )
 }
 
-function ListPane({itemList, ...props}) {
+function ListPane({content, ...props}) {
   return (
     <Box {...props} px={2}>
-      <Heading mb={1}>
-        Tips
-      </Heading>
-      <OrderedList>
-        {itemList.map(item =>
+      <Heading mb={1}>Act</Heading>
+      <OrderedList mb="1em">
+        {content.list.map(item =>
           <ListItem key={item}>{item}</ListItem>
         )}
       </OrderedList>
+      <InitiativeList initiatives={content.initiatives} />
     </Box>
+  )
+}
+
+function InitiativeList({initiatives}) {
+  return (
+    <Flex
+      direction="row"
+      flexWrap="wrap"
+      gap="10px"
+      margin="auto"
+    >
+      {initiatives.map(item =>
+        <InitiativeButton key={item.title} initiative={item} />
+      )}
+    </Flex>
   )
 }
