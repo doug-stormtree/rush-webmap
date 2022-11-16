@@ -1,6 +1,6 @@
 import React from "react";
 import { latLng } from "leaflet";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer } from "react-leaflet";
 
 export const DEFAULT_CENTER = latLng([48.46557, -123.314736]);
 export const DEFAULT_ZOOM = 12;
