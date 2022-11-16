@@ -15,9 +15,6 @@ export default function MapView(props) {
       style={props.style}
       closePopupOnClick={false}
     >
-      <TileLayer
-        url="http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}"
-      />
       {props.children}
     </MapContainer>
   );
