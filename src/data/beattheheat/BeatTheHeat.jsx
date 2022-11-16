@@ -1,11 +1,8 @@
 import * as HeatDomes from './HeatDomes.json';
 import * as AC_Buildings from './AC_Buildings.json';
 import image from './BeatTheHeat.jpg';
-import { divIcon, marker } from 'leaflet';
-import ReactDOMServer from "react-dom/server";
 import { ReactComponent as CommunityCtrIcon } from './cc.svg';
 import { ReactComponent as LibraryIcon } from './lib.svg';
-import { GeoJSON } from 'react-leaflet/GeoJSON';
 import NorthPark from './NorthPark1.jpg';
 import ClimateAtlas from './CA-logo-colour-whitetext-EN.png';
 
@@ -45,47 +42,10 @@ const BeatTheHeat = {
       }
     ],
   },
-  mapLayers: (
-    <>
-      <GeoJSON
-        data={AC_Buildings}
-        pointToLayer={(feature, latlng) => {
-          const icon = feature.properties.Type === "Library" ? (
-            <LibraryIcon />
-          ) : (
-            <CommunityCtrIcon />
-          );
-      
-          return marker(latlng, {
-            icon: divIcon({
-              className: "",
-              iconSize: [32, 32],
-              iconAnchor: [12, 12],
-              html: ReactDOMServer.renderToString(icon),
-            })
-          });
-        }}
-      />
-      <GeoJSON
-        data={HeatDomes}
-        style={{
-          opacity: 0.5,
-          color: 'rgba(189,17,20,1.0)',
-          dashArray: '',
-          lineCap: 'butt',
-          lineJoin: 'miter',
-          weight: 1.0,
-          fill: true,
-          fillOpacity: 0.7,
-          fillColor: 'rgba(189,17,20,1.0)',
-          interactive: true
-        }}
-      />
-    </>
-  ),
   mapData: [
     {
       data: HeatDomes,
+      format: 'polygon',
       style: {
         opacity: 0.5,
         color: 'rgba(189,17,20,1.0)',
@@ -97,6 +57,15 @@ const BeatTheHeat = {
         fillOpacity: 0.7,
         fillColor: 'rgba(189,17,20,1.0)',
         interactive: true
+      }
+    },
+    {
+      data: AC_Buildings,
+      format: 'point',
+      property: "Type",
+      propertyMap: {
+        default: (<CommunityCtrIcon />),
+        "Library": (<LibraryIcon />),
       }
     }
   ],
