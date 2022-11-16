@@ -44,7 +44,8 @@ const BeatTheHeat = {
   },
   mapData: [
     {
-      title: "Heat Domes",
+      title: 'Heat Domes',
+      patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
       data: HeatDomes,
       format: 'polygon',
       style: {
@@ -62,11 +63,12 @@ const BeatTheHeat = {
     },
     {
       title: "Air Conditioned Buildings",
+      patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
       data: AC_Buildings,
       format: 'point',
       property: "Type",
       propertyMap: {
-        default: (<CommunityCtrIcon />),
+        "Community Centre": (<CommunityCtrIcon />),
         "Library": (<LibraryIcon />),
       }
     }

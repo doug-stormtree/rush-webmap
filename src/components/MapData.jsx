@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOMServer from "react-dom/server";
+import { HStack } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 
@@ -17,20 +18,23 @@ export const MapData = ({ question }) => {
 
     const layers = question.mapData.map((data) => {
       var layer = null;
+      var patch = null;
       if (data.format === 'point') {
         layer = L.geoJSON(data.data, {
           pointToLayer: (f,l) => L.marker(l, {
             icon: featureIconByProperty(f, data.property, data.propertyMap)
           })
         });
+        patch = pointLegendPatch(data);
       } else if (data.format === 'polygon') {
         layer =  L.geoJSON(data.data, data.style);
+        patch = polygonLegendPatch(data);
       }
-      return { title: data.title, layer: layer };
+      return { patch: patch, layer: layer };
     })
     layers.forEach(el => {
       map.addLayer(el.layer)
-      legend.addOverlay(el.layer, el.title)
+      legend.addOverlay(el.layer, el.patch)
     });
     return () => {
       layers.forEach(el => map.removeLayer(el.layer));
@@ -44,8 +48,7 @@ export const MapData = ({ question }) => {
 
 const featureIconByProperty = (feature, property, propertyMap) => {
   if (property in feature.properties) {
-    const icon = (propertyMap[feature.properties[property]] 
-      || propertyMap['default']);
+    const icon = propertyMap[feature.properties[property]];
 
     return L.divIcon({
       className: "",
@@ -55,4 +58,37 @@ const featureIconByProperty = (feature, property, propertyMap) => {
     });
   }
   return;
+}
+
+const polygonLegendPatch = (data) => {
+  return ReactDOMServer.renderToString(
+    <>
+      <div style={{
+        width: '1.5em',
+        height: '1em',
+        background: data.style.fillColor,
+        display: 'inline-block',
+        marginRight: '0.5em',
+        marginTop: '2px'
+      }}>
+      </div>
+      <div style={{ display: 'inline-block' }}>{data.title}</div>
+    </>
+  )
+}
+
+const pointLegendPatch = (data) => {
+  return ReactDOMServer.renderToString(
+    <>
+      <div style={{ display: 'inline-block' }}>{data.title}</div>
+      {Object.keys(data.propertyMap).map(key =>
+        <div key={key} style={{display:'flex', alignItems:'center' }}>
+          <div
+            style={{ width: '2em', margin: '4px 0.5em 4px 1.5em', display: 'inline-block' }}
+          >{data.propertyMap[key]}</div>
+          <div style={{ textAlign: 'center', display: 'inline-block' }}>{key}</div>
+        </div>
+      )}
+    </>
+  )
 }
