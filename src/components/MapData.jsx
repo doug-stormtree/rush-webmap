@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import ReactDOMServer from "react-dom/server";
-import { HStack } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 
