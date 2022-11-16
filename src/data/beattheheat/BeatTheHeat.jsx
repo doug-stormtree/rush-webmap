@@ -44,6 +44,7 @@ const BeatTheHeat = {
   },
   mapData: [
     {
+      title: "Heat Domes",
       data: HeatDomes,
       format: 'polygon',
       style: {
@@ -60,6 +61,7 @@ const BeatTheHeat = {
       }
     },
     {
+      title: "Air Conditioned Buildings",
       data: AC_Buildings,
       format: 'point',
       property: "Type",

@@ -10,7 +10,17 @@ export const MapData = ({ question }) => {
   const map = useMap();
 
   useEffect(() => {
-    if (question.mapData.length === 0) { return };
+    const bmSat = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
+    map.addLayer(bmSat);
+    const legend = L.control.layers(
+      { "Satellite": bmSat },
+      undefined,
+      { collapsed: false }
+      ).addTo(map);
+
+    if (question.mapData.length === 0) { return () => {
+      map.removeControl(legend);
+    }};
 
     const layers = question.mapData.map((layer) => {
       if (layer.format === 'point') {
@@ -23,10 +33,17 @@ export const MapData = ({ question }) => {
         return L.geoJSON(layer.data, layer.style);
       }
     })
-    layers.forEach(el => map.addLayer(el));
-    return () => {layers.forEach(el => map.removeLayer(el))};
+    layers.forEach(el => {
+      map.addLayer(el)
+      legend.addOverlay(el)
+    });
+    return () => {
+      layers.forEach(el => map.removeLayer(el));
+      map.removeControl(legend);
+    };
   }, [map, question])
 
+  // component renders no elements
   return null;
 }
 
