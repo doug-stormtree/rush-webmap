@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  Button,
   Box,
   Spacer,
+  Text,
   useStyleConfig,
 } from '@chakra-ui/react';
 import LandingModalButton from './LandingModalButton';
@@ -12,9 +12,7 @@ export default function NavBar(props) {
 
   return (
     <Box __css={styles} {...props} >
-      <Button
-        variant = 'nav'
-      >RUSH</Button>
+      <Text size="xl" m="auto 1em">RUSH</Text>
       <Spacer />
       <LandingModalButton />
     </Box>

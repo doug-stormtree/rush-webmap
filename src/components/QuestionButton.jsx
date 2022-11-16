@@ -3,15 +3,20 @@ import {
   AspectRatio,
   Box,
   Image,
-  Text
+  Text,
+  useStyleConfig
 } from '@chakra-ui/react';
 
-export default function QuestionButton({ image, title }) {
+export default function QuestionButton({ image, title, onClick, variant }) {
+  const styles = useStyleConfig('QuestionButton',{ variant });
+
   return (
     <AspectRatio ratio={1} minW="120px" minH="120px">
       <Box
-        borderRadius="xl"
-        bg="#333"
+        as='button'
+        onClick={onClick}
+        checked='true'
+        __css={styles}
       >
         <Image
           src={image}
@@ -25,7 +30,6 @@ export default function QuestionButton({ image, title }) {
             bottom="0.5em"
             left="0.5em"
             as="b"
-            color="#FFF"
             textShadow="0 1px 0 black"
           >
             {title}

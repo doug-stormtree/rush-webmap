@@ -67,7 +67,7 @@ function App() {
   const [openContentFlag, setOpenContentFlag] = useBoolean(true);
   useEffect(() => {
     invalidateMap();
-  }, [openContentFlag]);
+  }, [openContentFlag, activeQuestion]);
 
   return (
     <ChakraProvider theme={theme}>
@@ -80,10 +80,15 @@ function App() {
           <LeafletControlGeocoder />
           <MapData question={activeQuestion} />
         </MapView>
-        <QuestionMenuBar flex='0' questions={Questions} />
+        <QuestionMenuBar
+          flex='0'
+          questions={Questions}
+          activeQuestion={activeQuestion}
+          setActiveQuestion={setActiveQuestion}
+        />
         <ContentPane
           flex='4'
-          maxH='50%'
+          maxH='40%'
           marginTop='auto'
           openFlag={openContentFlag}
           setOpenFlag={setOpenContentFlag}

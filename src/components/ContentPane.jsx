@@ -22,10 +22,10 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
   const contentTitle = useBreakpointValue({ lg: question.question, base: question.title})
   return (
     <VStack
-      divider={<StackDivider borderWidth='2px' borderColor='rush.700' />}
+      divider={<StackDivider borderWidth='2px' borderColor='WhiteAlpha.700' />}
       spacing={4}
       p={4}
-      bg='rush.100'
+      bg='WhiteAlpha.100'
       {...props}
     >
       <Flex direction='row' w='100%'>
