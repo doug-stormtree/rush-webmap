@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 import ReactDOMServer from "react-dom/server";
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
-import { FaMapMarker } from 'react-icons/fa';
-import { ReactComponent as CommunityCtrIcon } from '../data/beattheheat/cc.svg';
-import { ReactComponent as LibraryIcon } from '../data/beattheheat/lib.svg';
 
 export const MapData = ({ question }) => {
   const map = useMap();
@@ -18,27 +15,25 @@ export const MapData = ({ question }) => {
       { collapsed: false }
       ).addTo(map);
 
-    if (question.mapData.length === 0) { return () => {
-      map.removeControl(legend);
-    }};
-
-    const layers = question.mapData.map((layer) => {
-      if (layer.format === 'point') {
-        return L.geoJSON(layer.data, {
+    const layers = question.mapData.map((data) => {
+      var layer = null;
+      if (data.format === 'point') {
+        layer = L.geoJSON(data.data, {
           pointToLayer: (f,l) => L.marker(l, {
-            icon: featureIconByProperty(f, layer.property, layer.propertyMap)
+            icon: featureIconByProperty(f, data.property, data.propertyMap)
           })
         });
-      } else if (layer.format === 'polygon') {
-        return L.geoJSON(layer.data, layer.style);
+      } else if (data.format === 'polygon') {
+        layer =  L.geoJSON(data.data, data.style);
       }
+      return { title: data.title, layer: layer };
     })
     layers.forEach(el => {
-      map.addLayer(el)
-      legend.addOverlay(el)
+      map.addLayer(el.layer)
+      legend.addOverlay(el.layer, el.title)
     });
     return () => {
-      layers.forEach(el => map.removeLayer(el));
+      layers.forEach(el => map.removeLayer(el.layer));
       map.removeControl(legend);
     };
   }, [map, question])
