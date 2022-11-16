@@ -2,7 +2,7 @@ import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
 
 const NavBar = defineStyleConfig({
   baseStyle: {
-    bg: 'rush.500',
+    bg: '#FFF',
     display: 'flex',
   },
 });
@@ -70,6 +70,26 @@ const MenuCard = defineStyleConfig({
   }
 });
 
+const QuestionButton = defineStyleConfig({
+  baseStyle: {
+    bg: "#333",
+    borderRadius: "xl",
+    color: "#FFF",
+    _hover: {
+      color: "#DDD",
+    },
+  },
+  variants: {
+    default: {},
+    selected: {
+      color: "#9A9"
+    },
+  },
+  defaultProps: {
+    variant: "default"
+  }
+})
+
 const theme = extendTheme({
   colors: {
     rush: {
@@ -88,6 +108,7 @@ const theme = extendTheme({
   components: {
     NavBar,
     MenuCard,
+    QuestionButton,
     Button: {
       variants: {
         nav: {
