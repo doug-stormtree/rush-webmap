@@ -5,7 +5,6 @@ import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView from './components/MapView';
 import { MapData } from './components/MapData';
-import MenuPane from './components/MenuPane';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
 import BeatTheHeat from './data/beattheheat/BeatTheHeat';
@@ -13,6 +12,7 @@ import BeatTheHeat from './data/beattheheat/BeatTheHeat';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import QuestionMenuBar from './components/QuestionMenuBar';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -74,27 +74,16 @@ function App() {
       <Flex
         direction='column'
         h={vh}
-        overflow='hidden'
       >
         <NavBar flex='0'/>
-        <Flex flex='1' direction='row' h='100%' minH='24px' w='100%'>
-          <MapView flex='1' h='100%' mapRef={map}>
-            <LeafletControlGeocoder />
-            <MapData question={activeQuestion} />
-          </MapView>
-          <MenuPane
-            flex='0'
-            w='md'
-            onToggle={invalidateMap}
-            questions={Questions}
-            activeQuestion={activeQuestion}
-            setQuestion={setActiveQuestion}
-          />
-        </Flex>
+        <MapView flex='1' h='100%' mapRef={map}>
+          <LeafletControlGeocoder />
+          <MapData question={activeQuestion} />
+        </MapView>
+        <QuestionMenuBar flex='0' questions={Questions} />
         <ContentPane
-          flex='0'
-          h='md'
-          {...(openContentFlag ? {minH: 'md'} : {})}
+          flex='4'
+          maxH='50%'
           marginTop='auto'
           openFlag={openContentFlag}
           setOpenFlag={setOpenContentFlag}
