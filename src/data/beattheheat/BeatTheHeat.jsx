@@ -83,6 +83,23 @@ const BeatTheHeat = {
       />
     </>
   ),
+  mapData: [
+    {
+      data: HeatDomes,
+      style: {
+        opacity: 0.5,
+        color: 'rgba(189,17,20,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 1.0,
+        fill: true,
+        fillOpacity: 0.7,
+        fillColor: 'rgba(189,17,20,1.0)',
+        interactive: true
+      }
+    }
+  ],
   image: image,
 }
 export default BeatTheHeat;
