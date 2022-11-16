@@ -1,3 +1,4 @@
+
 import React, { useRef, useState, useEffect } from 'react';
 import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
 import ContentPane from './components/ContentPane';
@@ -30,7 +31,20 @@ const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
 
 // Collect Questions
-const Questions = { BeatTheHeat };
+const placeholder = { 
+  title: 'Placeholder',
+  question: 'Placeholder',
+  learn: {
+    text: [ "Lorem" ],
+    initiatives: [],
+  },
+  act: {
+    list: [ "Lorem" ],
+    initiatives: [],
+  },
+  mapData: []
+}
+const Questions = { BeatTheHeat, placeholder };
 
 function App() {
   // Fix window height to viewport on web and mobile
@@ -68,7 +82,7 @@ function App() {
             <LeafletControlGeocoder />
             <MapData question={activeQuestion} />
           </MapView>
-          <MenuPane 
+          <MenuPane
             flex='0'
             w='md'
             onToggle={invalidateMap}
