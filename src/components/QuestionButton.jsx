@@ -15,7 +15,6 @@ export default function QuestionButton({ image, title, onClick, variant }) {
       <Box
         as='button'
         onClick={onClick}
-        checked='true'
         __css={styles}
       >
         <Image
