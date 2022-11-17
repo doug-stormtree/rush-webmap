@@ -7,14 +7,28 @@ import MapView from './components/MapView';
 import { MapData } from './components/MapData';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
-import BeatTheHeat from './data/beattheheat/BeatTheHeat';
-
-
+import QuestionMenuBar from './components/QuestionMenuBar';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import QuestionMenuBar from './components/QuestionMenuBar';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Questions
+import BeatTheHeat from './data/beattheheat/BeatTheHeat';
+import EatLocal from './data/eatlocal/EatLocal';
+import Naturehood from './data/naturehood/Naturehood';
+import Coastal from './data/coastal/Coastal';
+import Power from './data/power/Power';
+import Footprint from './data/footprint/Footprint';
+import Culture from './data/culture/Culture';
+import Development from './data/development/Development';
+const Questions = {
+  BeatTheHeat,
+  EatLocal,
+  Naturehood,
+  Coastal,
+  Power,
+  Footprint,
+  Culture,
+  Development,
+};
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -29,22 +43,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
-
-// Collect Questions
-const placeholder = { 
-  title: 'Placeholder',
-  question: 'Placeholder',
-  learn: {
-    text: [ "Lorem" ],
-    initiatives: [],
-  },
-  act: {
-    list: [ "Lorem" ],
-    initiatives: [],
-  },
-  mapData: []
-}
-const Questions = { BeatTheHeat, placeholder };
 
 function App() {
   // Fix window height to viewport on web and mobile

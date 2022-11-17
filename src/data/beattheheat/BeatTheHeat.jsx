@@ -66,8 +66,8 @@ const BeatTheHeat = {
         "Community Centre": (<CommunityCtrIcon />),
         "Library": (<LibraryIcon />),
       }
-    }
+    },
   ],
   image: image,
-}
+};
 export default BeatTheHeat;
