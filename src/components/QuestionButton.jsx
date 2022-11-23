@@ -14,6 +14,7 @@ export default function QuestionButton({ image, title, onClick, variant }) {
     <AspectRatio ratio={1} minW="120px" minH="120px">
       <Box
         as='button'
+        textAlign="center"
         onClick={onClick}
         __css={styles}
       >
@@ -27,9 +28,11 @@ export default function QuestionButton({ image, title, onClick, variant }) {
           <Text
             position="absolute"
             bottom="0.5em"
-            left="0.5em"
+            left="50%"
+            transform="translateX(-50%)"
             as="b"
-            textShadow="0 1px 0 black"
+            textShadow="1px 1px 2px black, 1px 1px 1px black"
+            fontSize='sm'
           >
             {title}
           </Text>
