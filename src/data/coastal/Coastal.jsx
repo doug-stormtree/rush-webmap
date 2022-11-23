@@ -1,7 +1,7 @@
 import image from './image.jpg';
 
 const Coastal = {
-  title: "Protect the Coast",
+  title: "Protect the Coast?",
   question: "Am I vulnerable to sea level rise, tsunamis, storm surges?",
   image: image,
   learn: {

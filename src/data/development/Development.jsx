@@ -1,7 +1,7 @@
 import image from './image.jpg';
 
 const Development = {
-  title: "Development",
+  title: "Development?",
   question: "Development a good idea?",
   image: image,
   learn: {
