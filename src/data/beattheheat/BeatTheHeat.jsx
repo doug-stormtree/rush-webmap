@@ -7,7 +7,7 @@ import NorthPark from './NorthPark1.jpg';
 import ClimateAtlas from './CA-logo-colour-whitetext-EN.png';
 
 const BeatTheHeat = {
-  title: "Beat the Heat",
+  title: "Beat the Heat?",
   question: "How can I keep myself and the ecosystem cool & hydrated?",
   learn: {
     text: [

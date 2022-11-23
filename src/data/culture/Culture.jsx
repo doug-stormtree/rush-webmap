@@ -1,7 +1,7 @@
 import image from './image.jpg'
 
 const Culture = {
-  title: "Culture compass?",
+  title: "Culture Compass?",
   question: "Culture compass?",
   image: image,
   learn: {

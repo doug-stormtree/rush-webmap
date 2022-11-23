@@ -1,8 +1,8 @@
 import image from './image.jpg';
 
 const Footprint = {
-  title: '"Light Footprint" Travel',
-  question: "Self-propelled",
+  title: 'Light Footprint?',
+  question: 'Self-propelled "Light Footprint" Travel',
   image: image,
   learn: {
     text: [

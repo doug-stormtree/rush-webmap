@@ -7,7 +7,7 @@ import { ReactComponent as School } from './Green school.svg';
 import { ReactComponent as Business } from './Local business.svg';
 
 const EatLocal = {
-  title: "Eat Local",
+  title: "Eat Local?",
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
   image: image,
   learn: {
