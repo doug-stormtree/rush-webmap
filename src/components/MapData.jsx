@@ -52,7 +52,7 @@ const featureIconByProperty = (feature, property, propertyMap) => {
     const marker = (
       <div style={{
         borderRadius: '100%',
-        backgroundColor: 'rgba(250,250,250,0.9)',
+        backgroundColor: 'rgba(250,250,250,0.8)',
         fill: icon?.fill,
         stroke: icon?.stroke,
         padding: '3px',
