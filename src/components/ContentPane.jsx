@@ -56,7 +56,7 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
 function TextPane({content, ...props}) {
   return (
     <Box {...props} pe={2}>
-      <Heading mb={1}>Learn</Heading>
+      <Heading mb={1} textAlign='center'>Learn</Heading>
       {content.text.map(p =>
         <Text key={p} mb="1em">{p}</Text>
       )}
@@ -68,7 +68,7 @@ function TextPane({content, ...props}) {
 function ListPane({content, ...props}) {
   return (
     <Box {...props} px={2}>
-      <Heading mb={1}>Act</Heading>
+      <Heading mb={1} textAlign='center'>Act</Heading>
       <OrderedList mb="1em">
         {content.list.map(item =>
           <ListItem key={item}>{item}</ListItem>
