@@ -1,0 +1,1565 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3867112703509,
+          48.45534142396031
+        ]
+      },
+      "properties": {
+        "name": "Native plants - Garry oak ecosystem",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3959824947257,
+          48.44630991799647
+        ]
+      },
+      "properties": {
+        "name": "Gorge Park Community Garden",
+        "icon": "5ca7bff6ecd8490100caba12",
+        "description": [
+          "Pollinators love this sunny space. It has food plants, cottage flowers, and a rain garden and other beds filled with native species. &nbsp;And a lovely stone bench where you can sit, breathe in the beauty, &nbsp;and listen to the buzz."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4012965100946,
+          48.45129339212517
+        ]
+      },
+      "properties": {
+        "name": "Vegetable garden with pollinating species",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3908746631933,
+          48.44621274984868
+        ]
+      },
+      "properties": {
+        "name": "Gabe's house",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3950554869843,
+          48.44982593156388
+        ]
+      },
+      "properties": {
+        "name": "Boulevard Pollinator Garden",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Lots of plants for pollinators throughout the yard to build habitat and biodiveresity. Leave things as much as possible in the Fall and over the Winter so birds can feed and the insects that laid their eggs on plant matter or in the soil can rest undisturbed and emerge in the Spring. Yarrow, lavendar, ocean spray, rosemary, coast penstemon, cape fushia, brassicas left to flower. Lots of native bees, hummingbirds, and other insects. Looking forward to learning more about who they are and their needs! * Updated in Fall 2022 front planted as a shady native plant garden - sticky cinquefoil, small flowered alumroot, wild strawberry, lady fern, pacific bleeding-heart, red columbine, yarrow, fringe cup, and sea blush.&nbsp;"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4000393941596,
+          48.45215771037732
+        ]
+      },
+      "properties": {
+        "name": "Traffic circle",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Flower plant to be planted in traffic circle"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4016535995183,
+          48.45074122599803
+        ]
+      },
+      "properties": {
+        "name": "Traffic circle 2",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Flower plant to be planted in traffic circle"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3967814129552,
+          48.44940931744048
+        ]
+      },
+      "properties": {
+        "name": "Traffic circle 3",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Flower plant to be planted in traffic circle"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3935186308714,
+          48.44779078203689
+        ]
+      },
+      "properties": {
+        "name": "Traffic circle ",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Flower plants to be planted in traffic circle"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3916061661911,
+          48.44688330762318
+        ]
+      },
+      "properties": {
+        "name": "Traffic circle ",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Flowe plants to be planted in roundabout"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3925503037644,
+          48.45022799390387
+        ]
+      },
+      "properties": {
+        "name": "traffic circle",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Flower plants to be planted in roundabout"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3904689095688,
+          48.44920326236544
+        ]
+      },
+      "properties": {
+        "name": "Traffic circle ",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Folwer plants to be planted in roundabout"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4026139519884,
+          48.45123847281013
+        ]
+      },
+      "properties": {
+        "name": "Paul's garden ",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Planted boulevard in front of house"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4012138388826,
+          48.45054466023151
+        ]
+      },
+      "properties": {
+        "name": "Pam's garden",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Boulevard garden"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4061115525437,
+          48.45337322128475
+        ]
+      },
+      "properties": {
+        "name": "Walter park",
+        "icon": "5ca7bff9ecd8490100caba17",
+        "description": [
+          "Newly established park to be planted with native plants"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4067606471253,
+          48.45321311826237
+        ]
+      },
+      "properties": {
+        "name": "Sue's meadow ",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Garden to be planted"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3959620736313,
+          48.44679790849378
+        ]
+      },
+      "properties": {
+        "name": "Roadside area in Gorge park",
+        "icon": "5ca7bfe9ecd8490100cab9f1",
+        "description": [
+          "Plan to plant more flowers. Right now there is lavender. Resident wants to see more flowers."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3890097878647,
+          48.44672674244279
+        ]
+      },
+      "properties": {
+        "name": "Front yard garden",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Lots of flower bouquets. The resident sell flowers on the boulevard. Bees, wasps, hummingbird. The gardens buzzes in the summer."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3911931060028,
+          48.4466662512211
+        ]
+      },
+      "properties": {
+        "name": "Pollinator area",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Pollinator area, food plants"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4138729535134,
+          48.45177419247904
+        ]
+      },
+      "properties": {
+        "name": "Best pollinator area",
+        "icon": "5ca7bff0ecd8490100caba08",
+        "description": [
+          "best pollinator area, Food and pollinator plants, buzzing with insects"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4019202529451,
+          48.44744138406207
+        ]
+      },
+      "properties": {
+        "name": "Gorge waterway park",
+        "icon": "5ca7bfeaecd8490100cab9f3",
+        "description": [
+          "Talk to Saanich about planating more plants and flowers."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4091058791709,
+          48.45333030076657
+        ]
+      },
+      "properties": {
+        "name": "Resident's garden",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "Garry oaks, food garden, carrots, beans, kale"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.416947676964,
+          48.45240547976394
+        ]
+      },
+      "properties": {
+        "name": "Resident's gardens",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Garry oak tree and native plants in ack yard. Evergreen huckelberry and food garden in front yard"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3930563312971,
+          48.45964859836079
+        ]
+      },
+      "properties": {
+        "name": "Colquitz Middle School projects",
+        "icon": "5ca7bfe1ecd8490100cab9d5",
+        "description": [
+          "Medicinal, food and school community garden, chickens+ native plants hedgegrow and garry oak ecosystem."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3868167998203,
+          48.46239671694335
+        ]
+      },
+      "properties": {
+        "name": "Hummingbird nest",
+        "icon": "5ca7bff2ecd8490100caba0c",
+        "description": [
+          "Hummingbird nest in sequoia tree, veggie garden (potato, tomato) Geographical location is not accurate because the site is located outside the paper map we had at the event."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.394460036583,
+          48.45001450987198
+        ]
+      },
+      "properties": {
+        "name": "Resident's gardens",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Backyard: Food (pears, apples, berries, grapes)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3927303856229,
+          48.44513359454407
+        ]
+      },
+      "properties": {
+        "name": "Veggie Garden",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "Veggie garden, mint, rosemary, basil"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3942454598618,
+          48.44719643653607
+        ]
+      },
+      "properties": {
+        "name": "Food garden",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "Lavender bed (20 feet long)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4115886710564,
+          48.45134158270761
+        ]
+      },
+      "properties": {
+        "name": "Mix of pollinator plants exotic and native",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "lavender, olive tree, pear tree (mason bees)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4084689053181,
+          48.45452249649281
+        ]
+      },
+      "properties": {
+        "name": "Boulevard gardens",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Boulevard gardens"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3940529632541,
+          48.44808597955725
+        ]
+      },
+      "properties": {
+        "name": "Garden",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Front yard is planted"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4030209561928,
+          48.4535960373176
+        ]
+      },
+      "properties": {
+        "name": "Mason bee boxes",
+        "icon": "5ca7bff0ecd8490100caba08",
+        "description": [
+          "the resident makes mason bee boxes. Right now there are 5."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.398737098761,
+          48.44735743873119
+        ]
+      },
+      "properties": {
+        "name": "flower plants",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Wild honey suckle (orange)"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.393194033928,
+          48.44812157886329
+        ]
+      },
+      "properties": {
+        "name": "native trees",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "garry oak, douglas fir"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3890518558717,
+          48.44544246761535
+        ]
+      },
+      "properties": {
+        "name": "Pending development site",
+        "icon": "5ca7bfe9ecd8490100cab9f1",
+        "description": [
+          "taking out some garry oaks and native species"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3884465281911,
+          48.44371275422191
+        ]
+      },
+      "properties": {
+        "name": "pending development site",
+        "icon": "5ca7bfe9ecd8490100cab9f1",
+        "description": [
+          "taking out garry oasks and native species"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3915203355026,
+          48.44571617375732
+        ]
+      },
+      "properties": {
+        "name": "pending development site",
+        "icon": "5ca7bfe9ecd8490100cab9f1",
+        "description": [
+          "taking out some garry oaks and native species"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3971851609421,
+          48.44834930362055
+        ]
+      },
+      "properties": {
+        "name": "pending development",
+        "icon": "5ca7bfe9ecd8490100cab9f1",
+        "description": [
+          "taking out some garry oak trees and native species"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3973997376633,
+          48.44970139833504
+        ]
+      },
+      "properties": {
+        "name": "pending development site",
+        "icon": "5ca7bfe9ecd8490100cab9f1",
+        "description": [
+          "taking out some garry oaks and native species"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4031503937913,
+          48.45031338726534
+        ]
+      },
+      "properties": {
+        "name": "large Garry oak",
+        "icon": "5ca7bff9ecd8490100caba14",
+        "description": [
+          "large Garry oak tree"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4035151742173,
+          48.45002874216868
+        ]
+      },
+      "properties": {
+        "name": "garden + development of boulevard",
+        "icon": "5ca7bfe9ecd8490100cab9f1",
+        "description": [
+          "garden already planted and resident wants to plant the boulevard"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3907049439621,
+          48.44982948965168
+        ]
+      },
+      "properties": {
+        "name": "very varied garden",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Veggie beds, flower, herbs, trees, shrubs"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3907156727982,
+          48.45094671688079
+        ]
+      },
+      "properties": {
+        "name": "Gardens",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "A resident says there are plenty of gardens in this area."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3893778015459,
+          48.44794427026389
+        ]
+      },
+      "properties": {
+        "name": "food garden and pollinator habitat",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Apples, 6 plums, devoni flowers, pawpaw tree"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3995286811125,
+          48.4452880313145
+        ]
+      },
+      "properties": {
+        "name": "Apartment balcony garden",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "spinach, green onions, radishes,"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4116352347242,
+          48.45446073307374
+        ]
+      },
+      "properties": {
+        "name": "Resident's gardens",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "veggie garden, front yard is folliange, perrenials, fruit trees"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4063269766022,
+          48.45060037028665
+        ]
+      },
+      "properties": {
+        "name": "very plentiful garden",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "50 camas grown from bulbs and seeds"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4197551659528,
+          48.45308057351676
+        ]
+      },
+      "properties": {
+        "name": "Flower Planter",
+        "icon": "5ca7bff4ecd8490100caba10",
+        "description": [
+          "Flowers and various plants are planned to be in a planter in the roundabout circle."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4138538694758,
+          48.45106470904696
+        ]
+      },
+      "properties": {
+        "name": "Mix of pollinator plants and native species",
+        "icon": "5ca7bff4ecd8490100caba10",
+        "description": [
+          "Mix of pollinator plants, including both exotic and native species. The plethora of plant types include: lavender, an olive and pear tree, mulberry buses, herbs, a fig tree, dahlias, lilac, and a lemon tree. There are also many bees (mason bees and others) who frequent this plentiful spot."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4068988585863,
+          48.45082003197228
+        ]
+      },
+      "properties": {
+        "name": "Veggie Garden, Arbutus and More",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Here stands an arbutus tree with new growth on the mother tree. There is also a productive veggie garden here that grows kale, collard, beans, peas, garlic, figs and borage. Many birds, bees, butterflies and wasps visit the area. The property resident notes that they don't need hummingbird feeders because the flowers do it all!"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4061257878622,
+          48.4491202499436
+        ]
+      },
+      "properties": {
+        "name": "Suggested Planting Area",
+        "icon": "5ca7bff9ecd8490100caba17",
+        "description": [
+          "Gorge Water Way Park - Residents have suggested talking to Saanich about additional planting in the area."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4031152654653,
+          48.45020458893356
+        ]
+      },
+      "properties": {
+        "name": "Cedar Trees, Firs and More",
+        "icon": "5ca7bff9ecd8490100caba14",
+        "description": [
+          "This location is currently home to cedars, firs and bushes."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3984405112531,
+          48.44720096167046
+        ]
+      },
+      "properties": {
+        "name": "Saskatoon Berries & Pollinators",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "Saskatoon berries which attract many bees and hummingbirds."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3953336119305,
+          48.44637093713368
+        ]
+      },
+      "properties": {
+        "name": "Gorge Community Garden Plants",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "Lots of borage (which pollinators love), calendula and nasturtium."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3944864015303,
+          48.44710400454338
+        ]
+      },
+      "properties": {
+        "name": "Food Garden",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "Food garden which grows a variety of fresh foods including 3 kinds of kale, cabbage, garlic, tomatoes, chard and potatoes."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3911578096398,
+          48.44969338095456
+        ]
+      },
+      "properties": {
+        "name": "Pollinator Attraction",
+        "icon": "5ca7bff8ecd8490100caba13",
+        "description": [
+          "Veggie beds, flowers, herbs, trees and shrubs. This location attracts many hummingbirds, bees, butterflies, moths. There are also water dishes for birds and bats to grab a drink. The resident of this house often leaves debris on the ground for nests. There is also a mason bee house on the property."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3910777928809,
+          48.44695599971726
+        ]
+      },
+      "properties": {
+        "name": "Special Trees",
+        "icon": "5ca7bff9ecd8490100caba14",
+        "description": [
+          "Poplar trees, Garry Oaks and Douglas Fir."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3903176435701,
+          48.44569805368837
+        ]
+      },
+      "properties": {
+        "name": "Pollinator Area",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Front Yard Garden - Lots of flower bouquets, food plants, bees, wasps, hummingbirds. \"The garden buzzes\"."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.389764366784,
+          48.45939873825213
+        ]
+      },
+      "properties": {
+        "name": "Sequoia Tree, Veggie Garden and Hummingbird nest",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Home to a humming bird nest in a sequoia tree. Located here is also a veggie garden which grows potatoes, tomatoes, and onions."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3927562387269,
+          48.45887541211201
+        ]
+      },
+      "properties": {
+        "name": "Native Plants",
+        "icon": "5ca7bff9ecd8490100caba14",
+        "description": [
+          "Native Plant Hedgerow, many Garry Oaks around the Colquitz Middle School."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3868344228578,
+          48.45644708841729
+        ]
+      },
+      "properties": {
+        "name": "Native plant garden, including an arbutus",
+        "icon": "5ca7bff4ecd8490100caba10",
+        "description": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.384795926786,
+          48.45497735724848
+        ]
+      },
+      "properties": {
+        "name": "Mature flowering chestnut tree",
+        "icon": "5ca7bff9ecd8490100caba14",
+        "description": [
+          "A lovely old flowering chestnut tree provides blossoms and pollinator habitat in spring, refuge for birds and other creatures as well as cooling in the summer.<br>"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3838237241003,
+          48.4539516173508
+        ]
+      },
+      "properties": {
+        "name": "Native plant hedgerow",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Native species like red osier dogwood, snowberry, ocean spray"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3836976095607,
+          48.45393251017222
+        ]
+      },
+      "properties": {
+        "name": "Orchard",
+        "icon": "5ca7bff9ecd8490100caba14",
+        "description": [
+          "The heritage fruit trees found here are great pollinators!"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3837342737059,
+          48.45376706224458
+        ]
+      },
+      "properties": {
+        "name": "Flower and vegetable garden",
+        "icon": "5ca7bffaecd8490100caba18",
+        "description": [
+          "Pollinator habitat"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.383569916272,
+          48.45389711745944
+        ]
+      },
+      "properties": {
+        "name": "Chestnut",
+        "icon": "5ca7bff9ecd8490100caba14",
+        "description": [
+          "A lovely old mature Chestnut tree, provides blossoms for pollinators in spring and shade in summer.<br>"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3824306092317,
+          48.45364481490702
+        ]
+      },
+      "properties": {
+        "name": "California lilac",
+        "icon": "5ca7bff4ecd8490100caba10",
+        "description": [
+          "Drought resistant shrub, dense with blossoms in spring that bees and other pollinators love!<br>"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3846982384197,
+          48.45383101303283
+        ]
+      },
+      "properties": {
+        "name": "Laburnum and apple trees",
+        "icon": "5ca7bff4ecd8490100caba10",
+        "description": [
+          "The laburnum and apple trees at this location provide lovely spring blossoms for pollinators, refuge for birds and insects, shade and cooling in summer.<br>"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3786229295851,
+          48.45491282640917
+        ]
+      },
+      "properties": {
+        "name": "Regina Park",
+        "icon": "5ca7bff9ecd8490100caba17",
+        "description": [
+          "Regina Park consists of a small treed area, meadow, wetland and bioswale bordering the island highway. Bullrushes, sedges, hawthorns and old fruit trees can be found. The tree canopy offers a lovely cool spot and the vegetation provides a sound barrier from the noisy highway for the adjacent neighbourhood.<br>"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3849420324737,
+          48.45307147258671
+        ]
+      },
+      "properties": {
+        "name": "Maples, flowers, dogwood, cherry",
+        "icon": "5ca7bff4ecd8490100caba0f",
+        "description": [
+          "Flowers and pollens"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2945068380532,
+          48.45899137546763
+        ]
+      },
+      "properties": {
+        "name": "Cadboro Bay",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4244230059753,
+          48.63685256291814
+        ]
+      },
+      "properties": {
+        "name": "YYJ Pollinator Garden",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Native species garden planted in partnership with WASANEC and SENCOTEN Indigenous leaders, Pollinator Partnership Canada, and the Victoria Airport Authority."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3800677073338,
+          48.44754686752722
+        ]
+      },
+      "properties": {
+        "name": "Opportunity spot",
+        "icon": "5ca7bff2ecd8490100caba0c",
+        "description": [
+          "Non-native species present. Old apple trees, hawk, and hummingbirds. Often refered to as \"the neglected part of Gorge Tillicum.\""
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3689226740039,
+          48.45913965537611
+        ]
+      },
+      "properties": {
+        "name": "Residential garden",
+        "icon": "5ca7bfe9ecd8490100cab9f2",
+        "description": [
+          "Seven oak trees, camas field, and mason bees."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3499488503751,
+          48.46236311043816
+        ]
+      },
+      "properties": {
+        "name": "Blenkinsop Rd. Garry Oak Meadow",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Front yard of Garry Oak meadow species."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3504594998013,
+          48.46397295516968
+        ]
+      },
+      "properties": {
+        "name": "Residential home",
+        "icon": "5ca7bfe9ecd8490100cab9f2",
+        "description": [
+          "Nativist plant meadow installed on roof."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.358019170631,
+          48.44876188876668
+        ]
+      },
+      "properties": {
+        "name": "Children's Playground",
+        "icon": "5ca7bfe8ecd8490100cab9ed",
+        "description": [
+          "Garry Oak meadow"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3523868427291,
+          48.44978929884257
+        ]
+      },
+      "properties": {
+        "name": "Peacock Hill",
+        "icon": "5ca7bfe8ecd8490100cab9ed",
+        "description": [
+          "Garry Oak meadow, camas"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3475452080646,
+          48.46005288057427
+        ]
+      },
+      "properties": {
+        "name": "Cedar Hill Park & Golf Course",
+        "icon": "5ca7bfe9ecd8490100cab9f2",
+        "description": [
+          "Hole 7 restoration replaced lilies with camas."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3508143144452,
+          48.45377148449575
+        ]
+      },
+      "properties": {
+        "name": "Hilltop Camrose Park",
+        "icon": "5ca7bff4ecd8490100caba10",
+        "description": [
+          "Known as \"daffodil hill\" by residents. Camas field."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34349749302,
+          48.45068198400222
+        ]
+      },
+      "properties": {
+        "name": "Cedar Hill Park & Golf Course",
+        "icon": "5ca7bfe9ecd8490100cab9f2",
+        "description": [
+          "Restoration efforts resulted in removal of invasive Scotch broom and planting of snowberries. Proposed expansion of Garry Oak meadow."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3536098524126,
+          48.46616935803209
+        ]
+      },
+      "properties": {
+        "name": "Home garden",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Native plant garden."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3811069495183,
+          48.45077150719044
+        ]
+      },
+      "properties": {
+        "name": "Rudd Park",
+        "icon": null,
+        "description": [
+          "Nickname: \"Wasteland Park\"\nDesignated as area that needs improvements."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3482748906006,
+          48.46365661424042
+        ]
+      },
+      "properties": {
+        "name": "Home garden",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Camas field in front yard."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3622444491708,
+          48.45496397105643
+        ]
+      },
+      "properties": {
+        "name": "Cloverdale Elementary School",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Native garden in back, next to daycare."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3533901348485,
+          48.45788581792903
+        ]
+      },
+      "properties": {
+        "name": "Home garden",
+        "icon": "5ca7bfeaecd8490100cab9f5",
+        "description": [
+          "Camas, fawn lily meadow, nodding onion, snowberry hedge."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3562775035936,
+          48.46308984239931
+        ]
+      },
+      "properties": {
+        "name": "Home garden",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Native plants"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.348985292499,
+          48.45711848714981
+        ]
+      },
+      "properties": {
+        "name": "James Heights",
+        "icon": "5ca7bfe8ecd8490100cab9ed",
+        "description": [
+          "17 Garry Oaks, nodding onion, bedrock, camas."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3428697993125,
+          48.46523353050389
+        ]
+      },
+      "properties": {
+        "name": "Home garden",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Garry Oak habitat"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3509106746513,
+          48.4590671363182
+        ]
+      },
+      "properties": {
+        "name": "Home garden",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "Garry Oak habitat."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3574701182215,
+          48.45109195784806
+        ]
+      },
+      "properties": {
+        "name": "Home garden",
+        "icon": "5ca7bff5ecd8490100caba11",
+        "description": [
+          "2 Garry Oak seedlings, camas, Oregon grape, dogwood."
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3406648545245,
+          48.45082417080525
+        ]
+      },
+      "properties": {
+        "name": "Cecelia Creek Falls Park",
+        "icon": null,
+        "description": [
+          "Identified as area that needs improvement. Lots of grass, frequented by birds, yet has no flowers."
+        ]
+      }
+    }
+  ]
+}
