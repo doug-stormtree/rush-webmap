@@ -19,6 +19,8 @@ import Power from './data/power/Power';
 import Footprint from './data/footprint/Footprint';
 import Culture from './data/culture/Culture';
 import Development from './data/development/Development';
+import Flooding from './data/flooding/Flooding';
+import CircularEcon from './data/circularecon/CircularEcon';
 export const Questions = {
   'BeatTheHeat': BeatTheHeat,
   'EatLocal': EatLocal,
@@ -28,6 +30,8 @@ export const Questions = {
   'Footprint': Footprint,
   'Culture': Culture,
   'Development': Development,
+  'Flooding': Flooding,
+  'CircularEcon': CircularEcon,
 };
 
 // Your web app's Firebase configuration
