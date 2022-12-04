@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import ReactDOMServer from "react-dom/server";
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
+import { Questions } from '../App';
 
 export const MapData = ({ question }) => {
   const map = useMap();
@@ -15,7 +16,7 @@ export const MapData = ({ question }) => {
       { collapsed: false }
       ).addTo(map);
 
-    const layers = question.mapData.map((data) => {
+    const layers = Questions[question].mapData.map((data) => {
       var layer = null;
       var patch = null;
       if (data.format === 'point') {
@@ -48,12 +49,23 @@ export const MapData = ({ question }) => {
 const featureIconByProperty = (feature, property, propertyMap) => {
   if (property in feature.properties) {
     const icon = propertyMap[feature.properties[property]];
+    const marker = (
+      <div style={{
+        borderRadius: '100%',
+        backgroundColor: 'rgba(250,250,250,0.9)',
+        fill: icon?.fill,
+        stroke: icon?.stroke,
+        padding: '3px',
+        width: '32px',
+        height: '32px',
+      }}>{icon?.icon}</div>
+    )
 
     return L.divIcon({
       className: "",
       iconSize: [32, 32],
       iconAnchor: [12, 12],
-      html: ReactDOMServer.renderToString(icon),
+      html: ReactDOMServer.renderToString(marker),
     });
   }
   return;
@@ -83,9 +95,17 @@ const pointLegendPatch = (data) => {
       {Object.keys(data.propertyMap).map(key =>
         <div key={key} style={{display:'flex', alignItems:'center' }}>
           <div
-            style={{ width: '2em', margin: '4px 0.5em 4px 1.5em', display: 'inline-block' }}
-          >{data.propertyMap[key]}</div>
-          <div style={{ textAlign: 'center', display: 'inline-block' }}>{key}</div>
+            style={{
+              width: '2em',
+              margin: '4px 0.5em 4px 1.5em',
+              display: 'inline-block',
+              fill: data.propertyMap[key]?.fill,
+              stroke: data.propertyMap[key]?.stroke,
+            }}
+          >{data.propertyMap[key]?.icon}</div>
+          <div style={{ textAlign: 'center', display: 'inline-block' }}>
+            {data.propertyMap[key]?.legendText ?? key}
+          </div>
         </div>
       )}
     </>

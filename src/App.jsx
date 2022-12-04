@@ -19,15 +19,15 @@ import Power from './data/power/Power';
 import Footprint from './data/footprint/Footprint';
 import Culture from './data/culture/Culture';
 import Development from './data/development/Development';
-const Questions = {
-  BeatTheHeat,
-  EatLocal,
-  Naturehood,
-  Coastal,
-  Power,
-  Footprint,
-  Culture,
-  Development,
+export const Questions = {
+  'BeatTheHeat': BeatTheHeat,
+  'EatLocal': EatLocal,
+  'Naturehood': Naturehood,
+  'Coastal': Coastal,
+  'Power': Power,
+  'Footprint': Footprint,
+  'Culture': Culture,
+  'Development': Development,
 };
 
 // Your web app's Firebase configuration
@@ -60,7 +60,7 @@ function App() {
   // Function to invalidate Leaflet map size
   const invalidateMap = () => { if (map.current) map.current.invalidateSize(); }
 
-  const [activeQuestion, setActiveQuestion] = useState(Questions.BeatTheHeat);
+  const [activeQuestion, setActiveQuestion] = useState('BeatTheHeat');
 
   const [openContentFlag, setOpenContentFlag] = useBoolean(true);
   useEffect(() => {

@@ -63,8 +63,8 @@ const BeatTheHeat = {
       format: 'point',
       property: "Type",
       propertyMap: {
-        "Community Centre": (<CommunityCtrIcon />),
-        "Library": (<LibraryIcon />),
+        "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000'},
+        "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000'},
       }
     },
   ],

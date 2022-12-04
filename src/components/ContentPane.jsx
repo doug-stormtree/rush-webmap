@@ -14,12 +14,13 @@ import {
 } from '@chakra-ui/react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import InitiativeButton from './InitiativeButton';
+import { Questions } from '../App';
 
 export default function ContentPane({openFlag, setOpenFlag, question, ...props}) {
   const contentDirection = useBreakpointValue({ lg: 'row', base: 'column' });
   const outerOverflow = useBreakpointValue({ lg: 'auto', base: 'auto' });
   const innerOverflow = useBreakpointValue({ lg: 'visible', base: 'visible' });
-  const contentTitle = useBreakpointValue({ lg: question.question, base: question.title})
+  const contentTitle = useBreakpointValue({ lg: Questions[question].question, base: Questions[question].title})
   return (
     <VStack
       divider={<StackDivider borderWidth='2px' borderColor='WhiteAlpha.700' />}
@@ -44,8 +45,8 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
           direction={contentDirection}
           overflow={outerOverflow}
         >
-          <TextPane flex='1' overflowY={innerOverflow} content={question.learn}/>
-          <ListPane flex='1' overflowY={innerOverflow} content={question.act}/>
+          <TextPane flex='1' overflowY={innerOverflow} content={Questions[question].learn}/>
+          <ListPane flex='1' overflowY={innerOverflow} content={Questions[question].act}/>
         </Flex>
       ) : null}
     </VStack>
