@@ -35,11 +35,11 @@ const EatLocal = {
       format: 'point',
       property: "Type",
       propertyMap: {
-        "Business": (<Business />),
-        "NGO": (<NGO />),
-        "Student Led": (<School />),
-        "Grass Roots": (<EcoJustice />),
-        "Government": (<Government />),
+        "Business": {icon:(<Business />)},
+        "NGO": {icon:(<NGO />)},
+        "Student Led": {icon:(<School />)},
+        "Grass Roots": {icon:(<EcoJustice />)},
+        "Government": {icon:(<Government />)},
       }
     },
   ],
