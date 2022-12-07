@@ -102,10 +102,10 @@ function WebMap() {
   // Leaflet map reference
   const map = useRef(null);
   // Function to invalidate Leaflet map size
-  const invalidateMap = () => { if (map.current) map.current.invalidateSize(); }
-  useEffect(() => {
-    invalidateMap();
-  }, [openContentFlag, activeQuestion]);
+  const invalidateMap = () => { 
+    if (map.current) map.current.invalidateSize(); 
+  }
+  useEffect(invalidateMap, [openContentFlag, activeQuestion, vh]);
 
   // Function to get map state for URL sharing mode
   const getShareURL = () => {
