@@ -14,6 +14,7 @@ import {
   Heading,
   ListItem,
   OrderedList,
+  Text,
 } from '@chakra-ui/react';
 import InitiativeButton from './InitiativeButton';
 
@@ -79,13 +80,20 @@ function List({content}) {
 function InitiativeList({initiatives}) {
   return (
     <Flex
-      direction="row"
-      flexWrap="wrap"
+      direction="column"
       gap="10px"
       margin="auto"
     >
-      {initiatives.map(item =>
-        <InitiativeButton key={item.title} initiative={item} />
+      {initiatives.map((item, index) =>
+        <Flex
+          direction={ index%2===0 ? "row" : "row-reverse" }
+          justify="center"
+          alignItems="center"
+          gap="10px"
+        >
+          <InitiativeButton key={item.title} initiative={item} />
+          <Text>{item.description ?? item.title}</Text>
+        </Flex>
       )}
     </Flex>
   )
