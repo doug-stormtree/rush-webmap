@@ -9,7 +9,7 @@ import {
 
 export default function InitiativeButton({initiative}) {
   return (
-    <AspectRatio ratio={1} minW="120px">
+    <AspectRatio ratio={1} w="120px">
       <LinkBox
         borderRadius="xl"
         bg="#333"
