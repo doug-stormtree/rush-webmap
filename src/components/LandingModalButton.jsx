@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   useBreakpointValue,
+  useConst,
   useDisclosure,
   IconButton,
   Image,
@@ -22,8 +23,13 @@ import {
 import logos_4xl from '../images/RUSH_Logos_4xl.png';
 import logos_xl from '../images/RUSH_Logos_xl.png';
 
+// Check first visit outside component
+const isFirstVisit = checkFirstVisit();
+
 export default function LandingModalButton(props) {
-  const { isOpen, onOpen, onClose } = useDisclosure({defaultIsOpen: true});
+  const { isOpen, onOpen, onClose } = useDisclosure({
+    defaultIsOpen: isFirstVisit
+  });
   const logos = useBreakpointValue({
     xl: logos_4xl,
     base: logos_xl,
@@ -71,4 +77,42 @@ export default function LandingModalButton(props) {
       </Modal>
     </>
   )
+}
+
+// Check if this is the first visit to the website for the session.
+function checkFirstVisit() {
+  if (storageAvailable('sessionStorage')) {
+    // If flag is present, return false to first visit.
+    if (sessionStorage.getItem('visited')) return false;
+    // Otherwise, set flag for next visit.
+    sessionStorage.setItem('visited', 'true');
+  }
+  // Return true if storage unsupported or flag not set.
+  return true;
+}
+
+// Mozilla: Using the Web Storage API
+function storageAvailable(type) {
+  let storage;
+  try {
+      storage = window[type];
+      const x = '__storage_test__';
+      storage.setItem(x, x);
+      storage.removeItem(x);
+      return true;
+  }
+  catch (e) {
+      return e instanceof DOMException && (
+          // everything except Firefox
+          e.code === 22 ||
+          // Firefox
+          e.code === 1014 ||
+          // test name field too, because code might not be present
+          // everything except Firefox
+          e.name === 'QuotaExceededError' ||
+          // Firefox
+          e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+          // acknowledge QuotaExceededError only if there's something already stored
+          (storage && storage.length !== 0);
+  }
 }
