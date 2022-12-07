@@ -4,11 +4,12 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
+  useParams,
 } from 'react-router-dom';
 import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
-import MapView from './components/MapView';
+import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
 import { MapData } from './components/MapData';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
@@ -26,17 +27,18 @@ import Culture from './data/culture/Culture';
 import Development from './data/development/Development';
 import Flooding from './data/flooding/Flooding';
 import CircularEcon from './data/circularecon/CircularEcon';
+import { latLng } from 'leaflet';
 export const Questions = {
-  'BeatTheHeat': BeatTheHeat,
-  'EatLocal': EatLocal,
-  'Naturehood': Naturehood,
-  'Coastal': Coastal,
-  'Power': Power,
-  'Footprint': Footprint,
-  'Culture': Culture,
-  'Development': Development,
-  'Flooding': Flooding,
-  'CircularEcon': CircularEcon,
+  'beattheheat': BeatTheHeat,
+  'eatlocal': EatLocal,
+  'naturehood': Naturehood,
+  'coastal': Coastal,
+  'power': Power,
+  'footprint': Footprint,
+  'culture': Culture,
+  'development': Development,
+  'flooding': Flooding,
+  'circularecon': CircularEcon,
 };
 
 // Your web app's Firebase configuration
@@ -62,6 +64,10 @@ function App() {
             path="/"
             element={<WebMap />}
           />
+          <Route
+            path="/q/:question/z/:zoom/c/:center"
+            element={<WebMap />}
+          />
         </Routes>
       </Router>
     </ChakraProvider>
@@ -80,15 +86,21 @@ function WebMap() {
       window.removeEventListener('resize', documentHeight);
     }
   });
+  
+  // Content Pane Collapse State
+  const [openContentFlag, setOpenContentFlag] = useBoolean(true);
+  
+  // Check route params and set defaults
+  const params = useParams();
+  const { question, zoom, center } = validateParams(params);
+
+  // Active Question State
+  const [activeQuestion, setActiveQuestion] = useState(question);
 
   // Leaflet map reference
   const map = useRef(null);
   // Function to invalidate Leaflet map size
   const invalidateMap = () => { if (map.current) map.current.invalidateSize(); }
-
-  const [activeQuestion, setActiveQuestion] = useState('BeatTheHeat');
-
-  const [openContentFlag, setOpenContentFlag] = useBoolean(true);
   useEffect(() => {
     invalidateMap();
   }, [openContentFlag, activeQuestion]);
@@ -99,7 +111,13 @@ function WebMap() {
     h={vh}
     >
       <NavBar flex='0'/>
-      <MapView flex='1' h='100%' mapRef={map}>
+      <MapView
+        flex='1'
+        h='100%'
+        mapRef={map}
+        zoom={zoom}
+        center={center}
+      >
         <LeafletControlGeocoder />
         <MapData question={activeQuestion} />
       </MapView>
@@ -119,4 +137,32 @@ function WebMap() {
       />
     </Flex>
   );
+}
+
+function validateParams(params) {
+  const valid = {
+    question: params?.question && params.question in Questions
+      ? params.question
+      : 'beattheheat',
+    zoom: params?.zoom && !Number.isNaN(parseInt(params.zoom))
+      ? parseInt(params.zoom)
+      : DEFAULT_ZOOM,
+    center: params?.center && checkStringLatLng(params.center)
+      ? stringToLatLng(params.center)
+      : DEFAULT_CENTER,
+  }
+  return valid;
+}
+
+function checkStringLatLng(str) {
+  // Regular expression to check if string is a latitude and longitude
+  const regexExp = /^((\-?|\+?)?\d+(\.\d+)?),\s*((\-?|\+?)?\d+(\.\d+)?)$/gi;
+
+  return regexExp.test(str);
+}
+
+function stringToLatLng(str) {
+  const lat = parseFloat(str.split(',')[0]);
+  const lng = parseFloat(str.split(',')[1]);
+  return latLng(lat, lng);
 }
