@@ -9,8 +9,8 @@ export default function MapView(props) {
   return (
     <MapContainer
       ref={props.mapRef}
-      center={DEFAULT_CENTER}
-      zoom={DEFAULT_ZOOM}
+      center={props.center}
+      zoom={props.zoom}
       scrollWheelZoom={true}
       style={props.style}
       closePopupOnClick={false}
