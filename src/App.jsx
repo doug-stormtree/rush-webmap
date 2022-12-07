@@ -1,5 +1,10 @@
 
 import React, { useRef, useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from 'react-router-dom';
 import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
@@ -49,6 +54,23 @@ const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
 
 function App() {
+  return (
+    <ChakraProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<WebMap />}
+          />
+        </Routes>
+      </Router>
+    </ChakraProvider>
+  );
+}
+
+export default App;
+
+function WebMap() {
   // Fix window height to viewport on web and mobile
   const [vh, setVh] = useState(`${window.innerHeight}px`);
   const documentHeight = () => { setVh(`${window.innerHeight}px`); }
@@ -72,33 +94,29 @@ function App() {
   }, [openContentFlag, activeQuestion]);
 
   return (
-    <ChakraProvider theme={theme}>
-      <Flex
-        direction='column'
-        h={vh}
-      >
-        <NavBar flex='0'/>
-        <MapView flex='1' h='100%' mapRef={map}>
-          <LeafletControlGeocoder />
-          <MapData question={activeQuestion} />
-        </MapView>
-        <QuestionMenuBar
-          flex='0'
-          questions={Questions}
-          activeQuestion={activeQuestion}
-          setActiveQuestion={setActiveQuestion}
-        />
-        <ContentPane
-          flex='4'
-          maxH='40%'
-          marginTop='auto'
-          openFlag={openContentFlag}
-          setOpenFlag={setOpenContentFlag}
-          question={activeQuestion}
-        />
-      </Flex>
-    </ChakraProvider>
+    <Flex
+    direction='column'
+    h={vh}
+    >
+      <NavBar flex='0'/>
+      <MapView flex='1' h='100%' mapRef={map}>
+        <LeafletControlGeocoder />
+        <MapData question={activeQuestion} />
+      </MapView>
+      <QuestionMenuBar
+        flex='0'
+        questions={Questions}
+        activeQuestion={activeQuestion}
+        setActiveQuestion={setActiveQuestion}
+      />
+      <ContentPane
+        flex='4'
+        maxH='40%'
+        marginTop='auto'
+        openFlag={openContentFlag}
+        setOpenFlag={setOpenContentFlag}
+        question={activeQuestion}
+      />
+    </Flex>
   );
 }
-
-export default App;
