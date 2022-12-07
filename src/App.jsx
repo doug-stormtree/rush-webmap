@@ -106,6 +106,7 @@ function WebMap() {
   useEffect(() => {
     invalidateMap();
   }, [openContentFlag, activeQuestion]);
+
   // Function to get map state for URL sharing mode
   const getShareURL = () => {
     const currHost = `${window.location.protocol}//${window.location.hostname}`;
@@ -140,7 +141,7 @@ function WebMap() {
       />
       <ContentPane
         flex='4'
-        maxH='40%'
+        maxH='30%'
         marginTop='auto'
         openFlag={openContentFlag}
         setOpenFlag={setOpenContentFlag}
