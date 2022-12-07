@@ -1,5 +1,5 @@
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { createContext, useRef, useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -76,6 +76,8 @@ function App() {
 
 export default App;
 
+export const ShareURLContext = createContext();
+
 function WebMap() {
   // Fix window height to viewport on web and mobile
   const [vh, setVh] = useState(`${window.innerHeight}px`);
@@ -104,13 +106,22 @@ function WebMap() {
   useEffect(() => {
     invalidateMap();
   }, [openContentFlag, activeQuestion]);
+  // Function to get map state for URL sharing mode
+  const getShareURL = () => {
+    const currHost = `${window.location.protocol}//${window.location.hostname}`;
+    const zoom = map.current.getZoom().toString();
+    const center = map.current.getCenter();
+    const lat = center.lat.toFixed(6);
+    const lng = center.lng.toFixed(6);
+    return `${currHost}/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
+  }
 
   return (
     <Flex
     direction='column'
     h={vh}
     >
-      <NavBar flex='0'/>
+      <NavBar flex='0' getShareURL={getShareURL}/>
       <MapView
         flex='1'
         h='100%'
@@ -156,7 +167,7 @@ function validateParams(params) {
 
 function checkStringLatLng(str) {
   // Regular expression to check if string is a latitude and longitude
-  const regexExp = /^((\-?|\+?)?\d+(\.\d+)?),\s*((\-?|\+?)?\d+(\.\d+)?)$/gi;
+  const regexExp = /^((-?|\+?)?\d+(\.\d+)?),\s*((-?|\+?)?\d+(\.\d+)?)$/gi;
 
   return regexExp.test(str);
 }
