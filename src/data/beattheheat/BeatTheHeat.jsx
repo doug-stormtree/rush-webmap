@@ -14,13 +14,6 @@ const BeatTheHeat = {
       "All life is vulnerable to extreme heat. Heat islands and heat waves happen as average global temperatures rise, and hotter pockets of air move inland. The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Notice the relationship between heat island areas, green space and dark or paved surfaces. Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%. Breezes and closeness to water also affect temperature.",
       "Prolonged heat dries out landscapes, increases risk of fires, can shorten growing seasons for farmers and create conditions for viruses and bacteria to thrive. While plants cool the area and drawdown harmful greenhouse gases from the atmosphere, the soil processes the gases at a rate of 2:1 compared to plants. The partnership between soil and the atmosphere is key to having a healthy climate. Taking action to mange temperature and moisture in our neighbourhoods is a key to climate action.",
     ],
-    initiatives: [
-      { 
-        title: "Climate Atlas of Canada",
-        image: ClimateAtlas,
-        link: "https://climateatlas.ca/",
-      },
-    ],
   },
   act: {
     list: [
@@ -34,7 +27,12 @@ const BeatTheHeat = {
         title: "North Park Heatwave Map",
         image: NorthPark,
         link: "https://www.google.com/maps/d/viewer?mid=12YLjmNqss6nHrcWQYYgK0ffl8JqkYaKd&ll=48.431337468326106%2C-123.35707554999999&z=16",
-      }
+      },
+      { 
+        title: "Climate Atlas of Canada",
+        image: ClimateAtlas,
+        link: "https://climateatlas.ca/",
+      },
     ],
   },
   mapData: [
