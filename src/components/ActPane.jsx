@@ -45,7 +45,7 @@ export default function ActPane({content}) {
             <DrawerCloseButton />
             <DrawerHeader>Act</DrawerHeader>
             <DrawerBody>
-              <List content={content}/>
+              <ActionsList content={content}/>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
@@ -59,12 +59,12 @@ function ListPane({content, ...props}) {
   return (
     <Box {...props} px={2}>
       <Heading mb={1} textAlign='center'>Act</Heading>
-      <List content={content} />
+      <ActionsList content={content} />
     </Box>
   )
 }
 
-function List({content}) {
+function ActionsList({content}) {
   return (
     <>
       <OrderedList mb="1em">
@@ -83,16 +83,22 @@ function InitiativeList({initiatives}) {
       direction="column"
       gap="10px"
       margin="auto"
+      maxW='35em'
+      mb='1em'
     >
       {initiatives.map((item, index) =>
         <Flex
+          key={item.title}
           direction={ index%2===0 ? "row" : "row-reverse" }
           justify="center"
           alignItems="center"
-          gap="10px"
+          gap="1em"
         >
-          <InitiativeButton key={item.title} initiative={item} />
-          <Text>{item.description ?? item.title}</Text>
+          <InitiativeButton flex='0' initiative={item} />
+          <Text
+            flex='1'
+            textAlign={ index%2===0 ? "left" : "right" }
+          >{item.description ?? item.title}</Text>
         </Flex>
       )}
     </Flex>

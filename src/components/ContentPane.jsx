@@ -38,6 +38,7 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
       {openFlag ? (
         <Flex
           h='100%'
+          w='100%'
           gap='10px'
           direction={contentDirection}
           overflow={outerOverflow}

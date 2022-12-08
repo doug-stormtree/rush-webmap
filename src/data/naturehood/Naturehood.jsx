@@ -1,4 +1,5 @@
 import image from './image.jpg';
+import birdlife from './birdlife.jpg';
 import * as Pollinators from './Pollinators.json';
 import { ReactComponent as IconA } from './5c311b3537407e1f05ac3946.svg';
 import { ReactComponent as IconB } from './5c312b3c37407e1f05ac3950.svg';
@@ -42,7 +43,14 @@ const Naturehood = {
     list: [
       "Lorem.",
     ],
-    initiatives: [],
+    initiatives: [
+      {
+        title: "BirdLife International",
+        image: birdlife,
+        link: "https://www.birdlife.org/what-we-do/",
+        description: "BirdLife International's mission is to conserve birds, their habitats, and global biodiversity, working with people toward sustainability in the use of natural resources."
+      }
+    ],
   },
   mapData: [
     {
