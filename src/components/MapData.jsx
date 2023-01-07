@@ -8,13 +8,18 @@ export const MapData = ({ question }) => {
   const map = useMap();
 
   useEffect(() => {
+    // Add Satellite Basemap
     const bmSat = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
     map.addLayer(bmSat);
+    
+    // Leaflet Legend
+    /*
     const legend = L.control.layers(
       { "Satellite": bmSat },
       undefined,
       { collapsed: false }
       ).addTo(map);
+    */
 
     const layers = Questions[question].mapData.map((data) => {
       var layer = null;
@@ -34,11 +39,11 @@ export const MapData = ({ question }) => {
     })
     layers.forEach(el => {
       map.addLayer(el.layer)
-      legend.addOverlay(el.layer, el.patch)
+      //legend.addOverlay(el.layer, el.patch)
     });
     return () => {
       layers.forEach(el => map.removeLayer(el.layer));
-      map.removeControl(legend);
+      //map.removeControl(legend);
     };
   }, [map, question])
 
