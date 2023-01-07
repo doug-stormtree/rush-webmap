@@ -15,6 +15,7 @@ import { MapData } from './components/MapData';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
 import QuestionMenuBar from './components/QuestionMenuBar';
+import LegendPane from './components/LegendPane';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // Questions
@@ -125,16 +126,22 @@ function WebMap() {
     h={vh}
     >
       <NavBar flex='0' getShareURL={getShareURL}/>
-      <MapView
+      <Flex
         flex='1'
+        direction='row'
         h='100%'
-        mapRef={map}
-        zoom={zoom}
-        center={center}
       >
-        <LeafletControlGeocoder />
-        <MapData question={activeQuestion} />
-      </MapView>
+        <MapView
+          flex='1'
+          mapRef={map}
+          zoom={zoom}
+          center={center}
+        >
+          <LeafletControlGeocoder />
+          <MapData question={activeQuestion} />
+        </MapView>
+        <LegendPane flex='0' />
+      </Flex>
       <QuestionMenuBar
         flex='0'
         questions={Questions}
