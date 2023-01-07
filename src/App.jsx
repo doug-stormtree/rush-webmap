@@ -7,6 +7,7 @@ import {
   useParams,
 } from 'react-router-dom';
 import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
+import create from 'zustand';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
@@ -40,6 +41,7 @@ export const Questions = {
   'flooding': Flooding,
   'circularecon': CircularEcon,
 };
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
