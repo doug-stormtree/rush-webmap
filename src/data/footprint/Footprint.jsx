@@ -16,7 +16,8 @@ const Footprint = {
     ],
     initiatives: [],
   },
-  mapData: [
-  ],
+  mapData: {
+    
+  },
 };
 export default Footprint;

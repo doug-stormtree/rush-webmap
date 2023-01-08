@@ -52,8 +52,8 @@ const Naturehood = {
       }
     ],
   },
-  mapData: [
-    {
+  mapData: {
+    'naturehood-pollinators': {
       title: "Pollinators",
       patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
       data: Pollinators,
@@ -88,6 +88,6 @@ const Naturehood = {
         '5ca7bffaecd8490100caba18': { icon: (<IconZ />), fill: '#089848', stroke: '#089848', legendText: "Garden" },
       },
     },
-  ],
+  },
 };
 export default Naturehood;

@@ -16,7 +16,8 @@ const Culture = {
     ],
     initiatives: [],
   },
-  mapData: [
-  ],
+  mapData: {
+    
+  },
 };
 export default Culture;
