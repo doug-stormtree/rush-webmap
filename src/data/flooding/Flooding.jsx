@@ -16,7 +16,8 @@ const Flooding = {
     ],
     initiatives: [],
   },
-  mapData: [
-  ],
+  mapData: {
+    
+  },
 };
 export default Flooding;

@@ -28,8 +28,8 @@ const EatLocal = {
     ],
     initiatives: [],
   },
-  mapData: [
-    {
+  mapData: {
+    'eatlocal-food-security': {
       title: "Food Security",
       data: FoodSecurity,
       format: 'point',
@@ -42,6 +42,6 @@ const EatLocal = {
         "Government": {icon:(<Government />),fill:"#ff6432" },
       }
     },
-  ],
+  },
 };
 export default EatLocal;

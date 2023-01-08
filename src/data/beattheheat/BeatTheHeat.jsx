@@ -35,8 +35,8 @@ const BeatTheHeat = {
       },
     ],
   },
-  mapData: [
-    {
+  mapData: {
+    'beattheheat-heat-domes': {
       title: 'Heat Domes',
       patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
       data: HeatDomes,
@@ -54,7 +54,7 @@ const BeatTheHeat = {
         interactive: true
       }
     },
-    {
+    'beattheheat-ac-buildings': {
       title: "Air Conditioned Buildings",
       patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
       data: AC_Buildings,
@@ -65,7 +65,7 @@ const BeatTheHeat = {
         "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000'},
       }
     },
-  ],
+  },
   image: image,
 };
 export default BeatTheHeat;
