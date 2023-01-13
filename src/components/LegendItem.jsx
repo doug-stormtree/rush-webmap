@@ -23,10 +23,19 @@ const LegendItem = ({ name, description, children }) => {
         <IconButton variant='ghost' icon={<FaInfoCircle />} onClick={isOpen ? onClose : onOpen}/>
       </Flex>
       { isOpen
-        ? <Text>{description}</Text>
+        ? <LegendItemDetails description={description} children={children} />
         : null
       }
     </>
   );
 }
 export default LegendItem;
+
+const LegendItemDetails = ({ description, children }) => {
+  return (
+    <Flex direction='column'>
+      <Text>{description}</Text>
+      {children}
+    </Flex>
+  );
+}

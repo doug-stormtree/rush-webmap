@@ -16,8 +16,6 @@ const CircularEcon = {
     ],
     initiatives: [],
   },
-  mapData: {
-    
-  },
+  mapData: [],
 };
 export default CircularEcon;

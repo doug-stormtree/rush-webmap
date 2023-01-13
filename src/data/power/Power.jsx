@@ -16,7 +16,6 @@ const Power = {
     ],
     initiatives: [],
   },
-  mapData: [
-  ],
+  mapData: [],
 };
 export default Power;
