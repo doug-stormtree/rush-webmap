@@ -16,8 +16,6 @@ const Development = {
     ],
     initiatives: [],
   },
-  mapData: {
-    
-  },
+  mapData: [],
 };
 export default Development;

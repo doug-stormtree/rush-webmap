@@ -37,8 +37,6 @@ const Coastal = {
       }
     ],
   },
-  mapData: {
-
-  },
+  mapData: [],
 };
 export default Coastal;

@@ -7,7 +7,6 @@ import {
   useParams,
 } from 'react-router-dom';
 import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
-import create from 'zustand';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
@@ -16,33 +15,11 @@ import NavBar from './components/NavBar';
 import theme from './theme/Theme';
 import QuestionMenuBar from './components/QuestionMenuBar';
 import LegendPane from './components/LegendPane';
+import { latLng } from 'leaflet';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // Questions
-import BeatTheHeat from './data/beattheheat/BeatTheHeat';
-import EatLocal from './data/eatlocal/EatLocal';
-import Naturehood from './data/naturehood/Naturehood';
-import Coastal from './data/coastal/Coastal';
-import Power from './data/power/Power';
-import Footprint from './data/footprint/Footprint';
-import Culture from './data/culture/Culture';
-import Development from './data/development/Development';
-import Flooding from './data/flooding/Flooding';
-import CircularEcon from './data/circularecon/CircularEcon';
-import { latLng } from 'leaflet';
-export const Questions = {
-  'beattheheat': BeatTheHeat,
-  'eatlocal': EatLocal,
-  'naturehood': Naturehood,
-  'coastal': Coastal,
-  'power': Power,
-  'footprint': Footprint,
-  'culture': Culture,
-  'development': Development,
-  'flooding': Flooding,
-  'circularecon': CircularEcon,
-};
-
+import Questions from './data/Questions';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -144,7 +121,6 @@ function WebMap() {
       </Flex>
       <QuestionMenuBar
         flex='0'
-        questions={Questions}
         activeQuestion={activeQuestion}
         setActiveQuestion={setActiveQuestion}
       />

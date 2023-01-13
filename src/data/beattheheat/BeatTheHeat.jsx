@@ -9,6 +9,7 @@ import ClimateAtlas from './CA-logo-colour-whitetext-EN.png';
 const BeatTheHeat = {
   title: "Beat the Heat?",
   question: "How can I keep myself and the ecosystem cool & hydrated?",
+  image: image,
   learn: {
     text: [
       "All life is vulnerable to extreme heat. Heat islands and heat waves happen as average global temperatures rise, and hotter pockets of air move inland. The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Notice the relationship between heat island areas, green space and dark or paved surfaces. Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%. Breezes and closeness to water also affect temperature.",
@@ -35,8 +36,8 @@ const BeatTheHeat = {
       },
     ],
   },
-  mapData: {
-    'beattheheat-heat-domes': {
+  mapData: [
+    {
       title: 'Heat Domes',
       patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
       data: HeatDomes,
@@ -54,7 +55,7 @@ const BeatTheHeat = {
         interactive: true
       }
     },
-    'beattheheat-ac-buildings': {
+    {
       title: "Air Conditioned Buildings",
       patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
       data: AC_Buildings,
@@ -65,7 +66,6 @@ const BeatTheHeat = {
         "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000'},
       }
     },
-  },
-  image: image,
+  ],
 };
 export default BeatTheHeat;

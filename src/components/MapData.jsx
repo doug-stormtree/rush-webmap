@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ReactDOMServer from "react-dom/server";
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
-import { Questions } from '../App';
+import Questions from '../data/Questions';
 
 export const MapData = ({ question }) => {
   const map = useMap();
@@ -21,7 +21,7 @@ export const MapData = ({ question }) => {
       ).addTo(map);
     */
 
-    const layers = Questions[question].mapData.map((data) => {
+    const layers = Object.values(Questions.get(question).mapData).map((data) => {
       var layer = null;
       var patch = null;
       if (data.format === 'point') {
