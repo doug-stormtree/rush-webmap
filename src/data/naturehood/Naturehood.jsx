@@ -55,7 +55,7 @@ const Naturehood = {
   mapData: [
     {
       title: "Pollinators",
-      patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
+      description: 'Greater Victoria/Saanich Peninsula Pollinator Map. Where are the natural areas and gardens that support pollinators in this region?',
       data: Pollinators,
       format: 'point',
       property: "icon",

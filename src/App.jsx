@@ -107,6 +107,7 @@ function WebMap() {
         flex='1'
         direction='row'
         h='100%'
+        minH='0'
       >
         <MapView
           flex='1'
@@ -117,7 +118,7 @@ function WebMap() {
           <LeafletControlGeocoder />
           <MapData question={activeQuestion} />
         </MapView>
-        <LegendPane flex='0' />
+        <LegendPane flex='0' activeQuestion={activeQuestion} />
       </Flex>
       <QuestionMenuBar
         flex='0'
@@ -125,9 +126,8 @@ function WebMap() {
         setActiveQuestion={setActiveQuestion}
       />
       <ContentPane
-        flex='4'
+        flex='0'
         maxH='30%'
-        marginTop='auto'
         openFlag={openContentFlag}
         setOpenFlag={setOpenContentFlag}
         question={activeQuestion}
