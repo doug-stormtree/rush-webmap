@@ -31,15 +31,16 @@ const EatLocal = {
   mapData: [
     {
       title: "Food Security",
+      description: "RUSH Regional Food Security Resource Map. Created by Ege Kaymaz.",
       data: FoodSecurity,
       format: 'point',
       property: "Type",
       propertyMap: {
-        "Business": {icon:(<Business />),fill:"#2e67b1"},
-        "NGO": {icon:(<NGO />),fill:"#2e67b1" },
-        "Student Led": {icon:(<School />),fill:"#ff6432" },
-        "Grass Roots": {icon:(<EcoJustice />),fill:"#ff6432"},
-        "Government": {icon:(<Government />),fill:"#ff6432" },
+        "Business": {icon:(<Business />),fill:"#2e67b1",legendText:"Business"},
+        "NGO": {icon:(<NGO />),fill:"#2e67b1", legendText:"NGO"},
+        "Student Led": {icon:(<School />),fill:"#ff6432", legendText:"Student Led"},
+        "Grass Roots": {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"},
+        "Government": {icon:(<Government />),fill:"#ff6432" , legendText:"Government"},
       }
     },
   ],

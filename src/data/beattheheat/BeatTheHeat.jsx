@@ -39,7 +39,7 @@ const BeatTheHeat = {
   mapData: [
     {
       title: 'Heat Domes',
-      patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
+      description: 'Areas vulnerable to Heat Dome effects.',
       data: HeatDomes,
       format: 'polygon',
       style: {
@@ -57,13 +57,13 @@ const BeatTheHeat = {
     },
     {
       title: "Air Conditioned Buildings",
-      patch: '<div style="width: 1em; height: 1em; background: #ae163e;"></div>',
+      description: 'Public air conditioned buildings that may provide relief during heat waves.',
       data: AC_Buildings,
       format: 'point',
       property: "Type",
       propertyMap: {
-        "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000'},
-        "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000'},
+        "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000', legendText: 'Community Centre'},
+        "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000', legendText: 'Library'},
       }
     },
   ],
