@@ -6,7 +6,12 @@ import {
   Routes,
   useParams,
 } from 'react-router-dom';
-import { ChakraProvider, Flex, useBoolean } from '@chakra-ui/react';
+import {
+  useBoolean,
+  useBreakpointValue,
+  ChakraProvider,
+  Flex,
+} from '@chakra-ui/react';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
@@ -14,7 +19,7 @@ import { MapData } from './components/MapData';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
 import QuestionMenuBar from './components/QuestionMenuBar';
-import LegendPane from './components/LegendPane';
+import { LegendPane } from './components/Legend';
 import { latLng } from 'leaflet';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -97,6 +102,12 @@ function WebMap() {
     return `${currHost}/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
   }
 
+  // Handle Legend Display on Small Screens
+  const smallDisplay = useBreakpointValue({
+    lg: false,
+    base: true,
+  },{ssr:false, fallback:true});
+
   return (
     <Flex
     direction='column'
@@ -118,7 +129,10 @@ function WebMap() {
           <LeafletControlGeocoder />
           <MapData question={activeQuestion} />
         </MapView>
-        <LegendPane flex='0' activeQuestion={activeQuestion} />
+        { smallDisplay
+          ? null
+          : <LegendPane flex='0' activeQuestion={activeQuestion} />
+        }
       </Flex>
       <QuestionMenuBar
         flex='0'

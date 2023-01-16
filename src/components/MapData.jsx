@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { Button, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
+import { LegendDrawer } from './Legend';
 import { useMapLayerStore } from '../data/Questions';
-import { Button, useBreakpointValue } from '@chakra-ui/react';
 
 export const MapData = ({ question }) => {
   const map = useMap();
@@ -33,15 +34,23 @@ export const MapData = ({ question }) => {
     base: true,
   }, {ssr:false, fallback:true});
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
+
   // Render Legend Control
   return (
     <>{
       smallDisplay ? (
         <Control position='topright'>
-          <Button
-          >
+          <Button ref={btnRef} onClick={onOpen}>
             Legend
           </Button>
+          <LegendDrawer
+            activeQuestion={question}
+            btnRef={btnRef}
+            isOpen={isOpen}
+            onClose={onClose}
+          />
         </Control>
       ) : null
     }</>
