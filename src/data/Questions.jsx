@@ -112,7 +112,7 @@ const layerMap = produce(new Map(), draft => {
         });
         legendPatch = pointLegendPatch(mapDataLayer);
       } else if (mapDataLayer.format === 'polygon') {
-        mapLayer = L.geoJSON(mapDataLayer.data, mapDataLayer.style);
+        mapLayer = L.geoJSON(mapDataLayer.data, {style: mapDataLayer.style});
         legendPatch = polygonLegendPatch(mapDataLayer);
       }
       draft.set(qKey + index,
