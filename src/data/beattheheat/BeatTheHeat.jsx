@@ -1,3 +1,4 @@
+import { pointToIconByProperty } from '../LeafletStyleHelpers';
 import * as HeatDomes from './HeatDomes.json';
 import * as AC_Buildings from './AC_Buildings.json';
 import image from './BeatTheHeat.jpg';
@@ -42,18 +43,21 @@ const BeatTheHeat = {
       description: 'Areas vulnerable to Heat Dome effects.',
       data: HeatDomes,
       format: 'polygon',
-      style: {
-        opacity: 0.5,
-        color: 'rgba(189,17,20,1.0)',
-        dashArray: '',
-        lineCap: 'butt',
-        lineJoin: 'miter',
-        weight: 1.0,
-        fill: true,
-        fillOpacity: 0.7,
-        fillColor: 'rgba(189,17,20,1.0)',
-        interactive: true
+      options: {
+        style: {
+          opacity: 0.5,
+          color: 'rgba(189,17,20,1.0)',
+          dashArray: '',
+          lineCap: 'butt',
+          lineJoin: 'miter',
+          weight: 1.0,
+          fill: true,
+          fillOpacity: 0.7,
+          fillColor: 'rgba(189,17,20,1.0)',
+          interactive: true
+        }
       }
+      
     },
     {
       title: "Air Conditioned Buildings",
@@ -64,6 +68,12 @@ const BeatTheHeat = {
       propertyMap: {
         "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000', legendText: 'Community Centre'},
         "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000', legendText: 'Library'},
+      },
+      options: {
+        pointToLayer: (f,l) => pointToIconByProperty(f, l, "Type", {
+          "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000', legendText: 'Community Centre'},
+          "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000', legendText: 'Library'},
+        })
       }
     },
   ],

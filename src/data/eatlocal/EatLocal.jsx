@@ -1,3 +1,4 @@
+import { pointToIconByProperty } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import * as FoodSecurity from './FoodSecurity.json';
 import { ReactComponent as EcoJustice } from './Eco-justice organization.svg';
@@ -41,6 +42,15 @@ const EatLocal = {
         "Student Led": {icon:(<School />),fill:"#ff6432", legendText:"Student Led"},
         "Grass Roots": {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"},
         "Government": {icon:(<Government />),fill:"#ff6432" , legendText:"Government"},
+      },
+      options: {
+        pointToLayer: (f,l) => pointToIconByProperty(f, l, "Type", {
+          "Business": {icon:(<Business />),fill:"#2e67b1",legendText:"Business"},
+          "NGO": {icon:(<NGO />),fill:"#2e67b1", legendText:"NGO"},
+          "Student Led": {icon:(<School />),fill:"#ff6432", legendText:"Student Led"},
+          "Grass Roots": {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"},
+          "Government": {icon:(<Government />),fill:"#ff6432" , legendText:"Government"},
+        })
       }
     },
   ],
