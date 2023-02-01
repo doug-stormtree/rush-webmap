@@ -110,7 +110,7 @@ export const LegendItem = ({ layerId }) => {
         <FormLabel mb='0' textOverflow='ellipsis'>{layer.title}</FormLabel>
         <Spacer />
         {layer.format === 'polygon'
-          ? <LegendPatchPolygon fill={layer.style.fillColor} />
+          ? <LegendPatchPolygon fill={layer.options.style.fillColor} />
           : isOpen
             ? null
             : <LegendPatchPoints pointClasses={layer.propertyMap} />
