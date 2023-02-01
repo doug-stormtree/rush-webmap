@@ -25,8 +25,8 @@ const Footprint = {
       format: 'polygon',
       style: function (feature) {
         return {
-          opacity: 0.5,
-          color: 'rgba(189,17,20,1.0)',
+          opacity: 0.7,
+          color: getColor(feature.properties.CarbonByArea),
           dashArray: '',
           lineCap: 'butt',
           lineJoin: 'miter',
