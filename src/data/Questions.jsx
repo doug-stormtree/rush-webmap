@@ -71,19 +71,3 @@ export const useMapLayerStore = create((set) => ({
       })
     ),
 }));
-
-/*
-      var mapLayer = null;
-      var legendPatch = null;
-      if (mapDataLayer.format === 'point') {
-        mapLayer = L.geoJSON(mapDataLayer.data, {
-          pointToLayer: (f,l) => L.marker(l, {
-            icon: featureIconByProperty(f, mapDataLayer.property, mapDataLayer.propertyMap)
-          })
-        });
-        legendPatch = pointLegendPatch(mapDataLayer);
-      } else if (mapDataLayer.format === 'polygon') {
-        mapLayer = L.geoJSON(mapDataLayer.data, mapDataLayer.style);
-        legendPatch = polygonLegendPatch(mapDataLayer);
-      }
-*/
