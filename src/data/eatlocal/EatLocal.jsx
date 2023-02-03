@@ -1,4 +1,5 @@
-import { pointToIconByProperty } from '../LeafletStyleHelpers';
+import { point } from 'leaflet';
+import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import * as FoodSecurity from './FoodSecurity.json';
 import { ReactComponent as EcoJustice } from './Eco-justice organization.svg';
@@ -50,7 +51,13 @@ const EatLocal = {
           "Student Led": {icon:(<School />),fill:"#ff6432", legendText:"Student Led"},
           "Grass Roots": {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"},
           "Government": {icon:(<Government />),fill:"#ff6432" , legendText:"Government"},
-        })
+        }),
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(
+            f.properties.Name,
+            f.properties.description,
+            ), {offset: point(4,2)});
+        }
       }
     },
   ],

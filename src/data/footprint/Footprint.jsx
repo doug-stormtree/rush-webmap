@@ -1,3 +1,5 @@
+import { point } from 'leaflet';
+import { mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import * as CRD_Municipal_CarbonBudgets from './CRD_Municipal_CarbonBudgets.json';
 
@@ -37,6 +39,9 @@ const Footprint = {
             fillColor: getColor(feature.properties.CarbonBudg),
             interactive: true
           }
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(f.properties.ABRVN, f.properties.CarbonBudg.toString() + ' tons CO² remaining budget.'), {offset: point(0,8)});
         }
       }
     },

@@ -1,4 +1,5 @@
-import { pointToIconByProperty } from '../LeafletStyleHelpers';
+import { point } from 'leaflet';
+import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import birdlife from './birdlife.jpg';
 import * as Pollinators from './Pollinators.json';
@@ -116,7 +117,10 @@ const Naturehood = {
           '5ca7bff9ecd8490100caba16': { icon: (<IconX />), fill: '#089848', stroke: '#089848', legendText: "Autumn Leaves" },
           '5ca7bff9ecd8490100caba17': { icon: (<IconY />), fill: '#089848', stroke: '#089848', legendText: "Public Forest or Natural Area" },
           '5ca7bffaecd8490100caba18': { icon: (<IconZ />), fill: '#089848', stroke: '#089848', legendText: "Garden" },
-        })
+        }),
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(f.properties.name, f.properties.description[0]), {offset: point(4,2)});
+        }
       }
     },
   ],
