@@ -1,4 +1,5 @@
-import { pointToIconByProperty } from '../LeafletStyleHelpers';
+import { point } from 'leaflet';
+import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import * as HeatDomes from './HeatDomes.json';
 import * as AC_Buildings from './AC_Buildings.json';
 import image from './BeatTheHeat.jpg';
@@ -40,7 +41,7 @@ const BeatTheHeat = {
   mapData: [
     {
       title: 'Heat Domes',
-      description: 'Areas vulnerable to Heat Dome effects.',
+      description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." These areas are particularly vulnerable to heat dome effects, storing and accumulating heat with low capacity for cooling.',
       data: HeatDomes,
       format: 'polygon',
       options: {
@@ -55,9 +56,11 @@ const BeatTheHeat = {
           fillOpacity: 0.7,
           fillColor: 'rgba(189,17,20,1.0)',
           interactive: true
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent('Heat Dome', 'This area is predicted to be vulnerable to trapping extreme heat.'), {offset: point(0,8)});
         }
       }
-      
     },
     {
       title: "Air Conditioned Buildings",
@@ -73,7 +76,13 @@ const BeatTheHeat = {
         pointToLayer: (f,l) => pointToIconByProperty(f, l, "Type", {
           "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000', legendText: 'Community Centre'},
           "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000', legendText: 'Library'},
-        })
+        }),
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(
+            f.properties['Name of Place'],
+            f.properties.Type + ': ' + f.properties.Address
+            ), {offset: point(0,8)});
+        }
       }
     },
   ],
