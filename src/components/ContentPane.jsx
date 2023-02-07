@@ -39,8 +39,9 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
         <Flex
           h='100%'
           w='100%'
+          maxW='4xl'
           gap='10px'
-          direction={contentDirection}
+          direction='column'
           overflow={outerOverflow}
         >
           <TextPane flex='1' content={Questions.get(question).learn}/>

@@ -19,7 +19,7 @@ import {
 import InitiativeButton from './InitiativeButton';
 
 export default function ActPane({content}) {
-  const showButton = useBreakpointValue({ lg: false, base: true });
+  const showButton = useBreakpointValue({ lg: false, base: false });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
@@ -56,22 +56,25 @@ export default function ActPane({content}) {
 }
 
 function ListPane({content, ...props}) {
+  //<Heading mb={1} textAlign='center'>Act</Heading>
   return (
     <Box {...props} px={2}>
-      <Heading mb={1} textAlign='center'>Act</Heading>
       <ActionsList content={content} />
     </Box>
   )
 }
 
 function ActionsList({content}) {
-  return (
-    <>
-      <OrderedList mb="1em">
+  /*
+  <OrderedList mb="1em">
         {content.list.map(item =>
           <ListItem key={item}>{item}</ListItem>
         )}
       </OrderedList>
+      */
+  return (
+    <>
+      
       <InitiativeList initiatives={content.initiatives} />
     </>
   )
