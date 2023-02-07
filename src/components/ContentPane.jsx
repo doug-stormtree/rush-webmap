@@ -15,8 +15,6 @@ import Questions from '../data/Questions';
 import ActPane from './ActPane';
 
 export default function ContentPane({openFlag, setOpenFlag, question, ...props}) {
-  const contentDirection = useBreakpointValue({ lg: 'row', base: 'column' });
-  const outerOverflow = useBreakpointValue({ lg: 'auto', base: 'auto' });
   const contentTitle = useBreakpointValue({ lg: Questions.get(question).question, base: Questions.get(question).title})
   return (
     <VStack
@@ -39,13 +37,15 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
         <Flex
           h='100%'
           w='100%'
-          maxW='4xl'
           gap='10px'
           direction='column'
-          overflow={outerOverflow}
+          overflow='auto'
+          alignItems='center'
         >
-          <TextPane flex='1' content={Questions.get(question).learn}/>
-          <ActPane content={Questions.get(question).act} />
+          <Box maxW='4xl'>
+            <TextPane content={Questions.get(question).learn}/>
+            <ActPane content={Questions.get(question).act} />
+          </Box>
         </Flex>
       ) : null}
     </VStack>
