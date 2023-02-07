@@ -1,62 +1,18 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import {
-  useBreakpointValue,
-  useDisclosure,
   Box,
-  Button,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
   Flex,
-  Heading,
-  ListItem,
-  OrderedList,
   Text,
 } from '@chakra-ui/react';
 import InitiativeButton from './InitiativeButton';
 
 export default function ActPane({content}) {
-  const showButton = useBreakpointValue({ lg: false, base: false });
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef();
-
-  return showButton 
-    ? (
-      <>
-        <Flex direction='row' justify='center'>
-          <Button
-            ref={btnRef}
-            onClick={onOpen}
-            w='50%'
-            colorScheme='blue'
-          >Act</Button>
-        </Flex>
-        <Drawer
-          isOpen={isOpen}
-          placement='bottom'
-          onClose={onClose}
-          finalFocusRef={btnRef}
-        >
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader>Act</DrawerHeader>
-            <DrawerBody>
-              <ActionsList content={content}/>
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
-      </>
-    ) : (
-      <ListPane flex='1' content={content}/>
-    )
+  return (
+    <ListPane flex='1' content={content}/>
+  )
 }
 
 function ListPane({content, ...props}) {
-  //<Heading mb={1} textAlign='center'>Act</Heading>
   return (
     <Box {...props} px={2}>
       <ActionsList content={content} />
@@ -65,13 +21,6 @@ function ListPane({content, ...props}) {
 }
 
 function ActionsList({content}) {
-  /*
-  <OrderedList mb="1em">
-        {content.list.map(item =>
-          <ListItem key={item}>{item}</ListItem>
-        )}
-      </OrderedList>
-      */
   return (
     <>
       
