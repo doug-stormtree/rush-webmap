@@ -19,7 +19,6 @@ import {
   TerritoryAcknowledgement,
   RushMissionStatement
 } from '../data/TextContent';
-import logos_4xl from '../images/RUSH_Logos_4xl.png';
 import logos_xl from '../images/RUSH_Logos_xl.png';
 
 // Check first visit outside component
@@ -29,10 +28,6 @@ export default function LandingModalButton(props) {
   const { isOpen, onOpen, onClose } = useDisclosure({
     defaultIsOpen: isFirstVisit
   });
-  const logos = useBreakpointValue({
-    xl: logos_4xl,
-    base: logos_xl,
-  })
   const isCentered = useBreakpointValue({
     xl: true,
     md: false,
@@ -70,7 +65,7 @@ export default function LandingModalButton(props) {
             </Stack>
           </ModalBody>
           <ModalFooter>
-            <Image src={logos} />
+            <Image src={logos_xl} />
           </ModalFooter>
         </ModalContent>
       </Modal>
