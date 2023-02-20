@@ -21,7 +21,15 @@ export default function QuestionMenuBar({
   });
 
   return (
-    <Flex minH='140px' p='10px' gap='10px' overflowY='hidden' overflowX='auto'>
+    <Flex
+      minH='140px'
+      py='10px'
+      gap='10px'
+      overflowY='hidden'
+      overflowX='auto'
+      _before={{ content:'""', margin: 'auto' }}
+      _after={{ content:'""', margin: 'auto' }}
+    >
       {questionButtons}
     </Flex>
   )
