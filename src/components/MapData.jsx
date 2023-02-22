@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { Button, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
-import * as L from 'leaflet';
+import 'leaflet/dist/leaflet';
+import 'leaflet-kmz';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
 import { LegendDrawer } from './Legend';
 import { useMapLayerStore } from '../data/Questions';
+const L = window.L;
 
 export const MapData = ({ question }) => {
   const map = useMap();
@@ -17,6 +19,10 @@ export const MapData = ({ question }) => {
     // Add Satellite Basemap
     const bmSat = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
     map.addLayer(bmSat);
+
+    // TEST: Add LittleFreeLibraries
+    var kmz = L.kmzLayer().addTo(map);
+    kmz.load(process.env.PUBLIC_URL + '/libraries.kmz')
   
     layers.forEach(el => {
       if (el.active) map.addLayer(el.layer);
