@@ -1,6 +1,7 @@
 import { point } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import * as HeatDomes from './HeatDomes.json';
+import * as Parks from './CRD_Parks.json';
 import * as AC_Buildings from './AC_Buildings.json';
 import image from './BeatTheHeat.jpg';
 import { ReactComponent as CommunityCtrIcon } from './cc.svg';
@@ -40,8 +41,27 @@ const BeatTheHeat = {
   },
   mapData: [
     {
+      title: 'Parks',
+      description: 'These are the designated parks within the CRD. Greenspace has many benefits, including providing shade, cleaning the air, and reducing noise. While plants help draw harmful greenhouse gases from the atmosphere, the soil processes the gases. Soil processes greenhouse gases at a rate of 2:1 compared to plants. The partnership between soil and the atmosphere is key to having a healthy climate. Nature is also great for your physical and mental wellbeing.',
+      data: Parks,
+      format: 'polygon',
+      options: {
+        style: {
+          stroke: false,
+          fill: true,
+          opacity: 0.5,
+          fillOpacity: 0.7,
+          fillColor: 'rgba(140,175,74,1.0)',
+          interactive: true,
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(f.properties['Name'], f.properties['Type'] + ' with an area of ' + (f.properties['Shape.STArea()']/100000).toFixed(2) + ' km²'), {offset: point(0,8)});
+        }
+      }
+    },
+    {
       title: 'Heat Domes',
-      description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." These areas are particularly vulnerable to heat dome effects, storing and accumulating heat with low capacity for cooling.',
+      description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." The heat islands on this map are some areas within the CRD that have experienced the most significant increases in average summer surface temperature from 2018 to 2021. Using the satellite imagery, you can see the relationship between heat island distance and canopy vegetation, roof area and parking lots.',
       data: HeatDomes,
       format: 'polygon',
       options: {
