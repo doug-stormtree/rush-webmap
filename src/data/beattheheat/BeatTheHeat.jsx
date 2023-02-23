@@ -4,6 +4,7 @@ import * as HeatDomes from './HeatDomes.json';
 import * as Parks from './CRD_Parks.json';
 import * as AC_Buildings from './AC_Buildings.json';
 import * as Water_Fountains from './VictoriaDrinkingFountains.json';
+import * as Links from './BeatTheHeat_Links.json';
 import image from './BeatTheHeat.jpg';
 import { ReactComponent as CommunityCtrIcon } from './cc.svg';
 import { ReactComponent as LibraryIcon } from './lib.svg';
@@ -43,6 +44,25 @@ const BeatTheHeat = {
   },
   mapData: [
     {
+      title: 'Local Initiatives',
+      description: 'Learn more from these area specific community mapping initiatives by clicking one of these areas on the map and following the link.',
+      data: Links,
+      format: 'polygon',
+      options: {
+        style: {
+          stroke: false,
+          fill: true,
+          opacity: 0.5,
+          fillOpacity: 0.4,
+          fillColor: 'rgba(253,218,13,1.0)',
+          interactive: true,
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(f.properties['Name'], f.properties['Description'], f.properties['URL'], 'Click here to view the ' + f.properties['Name']), {offset: point(0,8)});
+        }
+      }
+    },
+    {
       title: 'Parks',
       description: 'These are the designated parks within the CRD. Greenspace has many benefits, including providing shade, cleaning the air, and reducing noise. While plants help draw harmful greenhouse gases from the atmosphere, the soil processes the gases. Soil processes greenhouse gases at a rate of 2:1 compared to plants. The partnership between soil and the atmosphere is key to having a healthy climate. Nature is also great for your physical and mental wellbeing.',
       data: Parks,
@@ -63,7 +83,7 @@ const BeatTheHeat = {
     },
     {
       title: 'Heat Domes',
-      description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." The heat islands on this map are some areas within the CRD that have experienced the most significant increases in average summer surface temperature from 2018 to 2021. Using the satellite imagery, you can see the relationship between heat island distance and canopy vegetation, roof area and parking lots. The heat island data here was created by students Gillian Voss and Riley Sondergard at the UVic Map Shop.',
+      description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." The heat islands on this map are some areas within the CRD that have experienced the most significant increases in average summer surface temperature from 2018 to 2021. Using the satellite imagery, you can see the relationship between heat island distance and canopy vegetation, roof area and parking lots. This heat island map was created by UVic geography student Gillian Voss at the UVic Map Shop.',
       data: HeatDomes,
       format: 'polygon',
       options: {
