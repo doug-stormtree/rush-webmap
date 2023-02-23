@@ -29,6 +29,7 @@ export const Legend = ({ activeQuestion }) => {
       legendEntries.push(<LegendItem key={key} layerId={key} mb={1} />);
     }
   }
+  legendEntries.reverse();
 
   return (
     <>
@@ -46,7 +47,7 @@ export const LegendPane = ({ activeQuestion }) => {
       overflowY='scroll'
       boxShadow='inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC'
     >
-      <Heading size='md' align='center' >Legend</Heading>
+      <Heading size='md' align='center' mb={2}>Legend</Heading>
       <Legend activeQuestion={activeQuestion} />
     </Box>
   )
