@@ -3,9 +3,11 @@ import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import * as HeatDomes from './HeatDomes.json';
 import * as Parks from './CRD_Parks.json';
 import * as AC_Buildings from './AC_Buildings.json';
+import * as Water_Fountains from './VictoriaDrinkingFountains.json';
 import image from './BeatTheHeat.jpg';
 import { ReactComponent as CommunityCtrIcon } from './cc.svg';
 import { ReactComponent as LibraryIcon } from './lib.svg';
+import { ReactComponent as WaterIcon } from './water.svg';
 import NorthPark from './NorthPark1.jpg';
 import ClimateAtlas from './CA-logo-colour-whitetext-EN.png';
 
@@ -61,7 +63,7 @@ const BeatTheHeat = {
     },
     {
       title: 'Heat Domes',
-      description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." The heat islands on this map are some areas within the CRD that have experienced the most significant increases in average summer surface temperature from 2018 to 2021. Using the satellite imagery, you can see the relationship between heat island distance and canopy vegetation, roof area and parking lots.',
+      description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." The heat islands on this map are some areas within the CRD that have experienced the most significant increases in average summer surface temperature from 2018 to 2021. Using the satellite imagery, you can see the relationship between heat island distance and canopy vegetation, roof area and parking lots. The heat island data here was created by students Gillian Voss and Riley Sondergard at the UVic Map Shop.',
       data: HeatDomes,
       format: 'polygon',
       options: {
@@ -89,19 +91,50 @@ const BeatTheHeat = {
       format: 'point',
       property: "Type",
       propertyMap: {
-        "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000', legendText: 'Community Centre'},
-        "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000', legendText: 'Library'},
+        "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'},
+        "Library": {icon: (<LibraryIcon />), fill: '#36F', stroke: '#36F', legendText: 'Library'},
       },
       options: {
         pointToLayer: (f,l) => pointToIconByProperty(f, l, "Type", {
-          "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#000', stroke: '#000', legendText: 'Community Centre'},
-          "Library": {icon: (<LibraryIcon />), fill: '#000', stroke: '#000', legendText: 'Library'},
+          "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'},
+          "Library": {icon: (<LibraryIcon />), fill: '#36F', stroke: '#36F', legendText: 'Library'},
         }),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
             f.properties['Name of Place'],
             f.properties.Type + ': ' + f.properties.Address
-            ), {offset: point(0,8)});
+            ), {offset: point(4.5,2)});
+        }
+      }
+    },
+    {
+      title: 'Drinking Fountains',
+      description: 'Public drinking water fountains in the City of Victoria',
+      data: Water_Fountains,
+      format: 'point',
+      property: 'FountainType',
+      propertyMap: {
+        "drinking fountain": {
+          icon: (<WaterIcon/>),
+          fill: '#36F',
+          stroke: '#36F',
+          legendText: 'Drinking Fountain',
+        }
+      },
+      options: {
+        pointToLayer: (f,l) => pointToIconByProperty(f, l, "FountainType", {
+          "drinking fountain": {
+            icon: (<WaterIcon/>),
+            fill: '#36F',
+            stroke: '#36F',
+            legendText: 'Drinking Fountain',
+          }
+        }),
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(
+            f.properties['LocationName'],
+            f.properties.OwnerNotes + ' Drinking Fountain'
+            ), {offset: point(4.5,2)});
         }
       }
     },
