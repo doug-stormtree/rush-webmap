@@ -73,9 +73,11 @@ const MenuCard = defineStyleConfig({
 const QuestionButton = defineStyleConfig({
   baseStyle: {
     bg: "#333",
+    transition: "transform .1s",
     borderRadius: "xl",
     color: "#FFF",
     _hover: {
+      transform: "scale(1.10)",
       color: "#DDD",
     },
   },
@@ -93,7 +95,7 @@ const QuestionButton = defineStyleConfig({
 const theme = extendTheme({
   colors: {
     rush: {
-      50:  "#F2F1E3",
+      50: "#F2F1E3",
       100: "#E5E3C7",
       200: "#D8D5AB",
       300: "#CCC88F",
