@@ -27,17 +27,20 @@ const Footprint = {
       format: 'polygon',
       options: {
         style: function (feature) {
-          return {
+          const baseStyle = {
             opacity: 0.7,
-            color: getColor(feature.properties.CarbonBudg),
             dashArray: '',
             lineCap: 'butt',
             lineJoin: 'miter',
             weight: 1.0,
             fill: true,
             fillOpacity: 0.7,
-            fillColor: getColor(feature.properties.CarbonBudg),
             interactive: true
+          }
+          return {
+            ...baseStyle,
+            color: getColor(feature.properties.CarbonBudg),
+            fillColor: getColor(feature.properties.CarbonBudg),
           }
         },
         onEachFeature: (f,l) => {
