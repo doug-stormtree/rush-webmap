@@ -152,9 +152,9 @@ function WebMap() {
 
 function validateParams(params) {
   const valid = {
-    question: params?.question && params.question in Questions
+    question: params?.question && Questions.has(params.question)
       ? params.question
-      : 'beattheheat',
+      : Questions.keys().next().value,
     zoom: params?.zoom && !Number.isNaN(parseInt(params.zoom))
       ? parseInt(params.zoom)
       : DEFAULT_ZOOM,
