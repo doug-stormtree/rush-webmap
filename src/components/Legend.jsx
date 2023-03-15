@@ -2,7 +2,6 @@ import React from 'react';
 import {
   useDisclosure,
   Avatar,
-  AvatarGroup,
   Box,
   Drawer,
   DrawerBody,
@@ -13,6 +12,8 @@ import {
   Flex,
   FormLabel,
   Heading,
+  HStack,
+  Icon,
   IconButton,
   Spacer,
   Switch,
@@ -78,17 +79,27 @@ export const LegendDrawer = ({ activeQuestion, btnRef, isOpen, onClose }) => {
 
 export const LegendPatchPoints = ({ pointClasses }) => {
   return (
-    <AvatarGroup size='sm' max={2} spacing='-0.5rem'>
-      {Object.keys(pointClasses).map(key => 
-        <Avatar
-          key={key}
-          icon={pointClasses[key]?.icon}
-          fill={pointClasses[key]?.fill}
-          stroke={pointClasses[key]?.stroke}
-          bg='gray.200'
-        />
-      )}
-    </AvatarGroup>
+    <HStack spacing='-0.5rem'>
+      {Object.keys(pointClasses).map((key, index) => {
+        const maxDisplay = 2;
+        if (index > maxDisplay) {
+          return undefined;
+        } else {
+          return (
+            <Avatar
+              key={key}
+              size='sm'
+              showBorder='true'
+              bg='gray.200'
+              icon={pointClasses[key]?.icon}
+              fill={pointClasses[key]?.fill}
+              stroke={pointClasses[key]?.stroke}
+              zIndex={2-index}
+            />
+          )
+        }
+      })}
+    </HStack>
   );
 }
 
