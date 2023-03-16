@@ -14,7 +14,6 @@ import {
   Heading,
   HStack,
   IconButton,
-  Spacer,
   Switch,
   Text,
 } from '@chakra-ui/react';
