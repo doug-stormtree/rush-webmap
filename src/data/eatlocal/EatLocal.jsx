@@ -8,6 +8,14 @@ import { ReactComponent as NGO } from './Green enterprise.svg';
 import { ReactComponent as School } from './Green school.svg';
 import { ReactComponent as Business } from './Local business.svg';
 
+const styleMap_FoodSecurity = new Map([
+  ["Business", {icon:(<Business />),fill:"#2e67b1",legendText:"Business"}],
+  ["NGO", {icon:(<NGO />),fill:"#2e67b1", legendText:"NGO"}],
+  ["Student Led", {icon:(<School />),fill:"#ff6432", legendText:"Student Led"}],
+  ["Grass Roots", {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"}],
+  ["Government", {icon:(<Government />),fill:"#ff6432" , legendText:"Government"}],
+]);
+
 const EatLocal = {
   title: "Eat Local?",
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
@@ -35,23 +43,17 @@ const EatLocal = {
       title: "Food Security",
       description: "RUSH Regional Food Security Resource Map. Created by Ege Kaymaz.",
       data: FoodSecurity,
-      format: 'point',
+      shape: 'point',
+      symbology: 'classified',
       property: "Type",
-      propertyMap: {
-        "Business": {icon:(<Business />),fill:"#2e67b1",legendText:"Business"},
-        "NGO": {icon:(<NGO />),fill:"#2e67b1", legendText:"NGO"},
-        "Student Led": {icon:(<School />),fill:"#ff6432", legendText:"Student Led"},
-        "Grass Roots": {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"},
-        "Government": {icon:(<Government />),fill:"#ff6432" , legendText:"Government"},
-      },
+      styleMap: styleMap_FoodSecurity,
       options: {
-        pointToLayer: (f,l) => pointToIconByProperty(f, l, "Type", {
-          "Business": {icon:(<Business />),fill:"#2e67b1",legendText:"Business"},
-          "NGO": {icon:(<NGO />),fill:"#2e67b1", legendText:"NGO"},
-          "Student Led": {icon:(<School />),fill:"#ff6432", legendText:"Student Led"},
-          "Grass Roots": {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"},
-          "Government": {icon:(<Government />),fill:"#ff6432" , legendText:"Government"},
-        }),
+        pointToLayer: (f,l) => pointToIconByProperty(
+          f,
+          l,
+          "Type",
+          styleMap_FoodSecurity
+        ),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
             f.properties.Name,

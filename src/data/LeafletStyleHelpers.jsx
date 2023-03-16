@@ -6,7 +6,7 @@ import { VStack, Heading, Text, Link } from "@chakra-ui/react";
 // mapData to Leaflet helper function
 export const pointToIconByProperty = (feature, latlng, property, propertyMap) => {
   if (property in feature.properties) {
-    const icon = propertyMap[feature.properties[property]];
+    const icon = propertyMap.get(feature.properties[property]);
     const marker = (
       <div style={{
         borderRadius: '100%',
@@ -29,6 +29,15 @@ export const pointToIconByProperty = (feature, latlng, property, propertyMap) =>
     });
   }
   return L.marker(latlng);
+}
+
+export const getStyleMapColor = (key, styleMap) => {
+  if (styleMap.has(key)) {
+    return styleMap.get(key).color;
+  } else {
+    console.log(`getStyleMapColor: styleMap has no key '${key}'`);
+    return '#FFF';
+  }
 }
 
 // Leaflet Popup Content
