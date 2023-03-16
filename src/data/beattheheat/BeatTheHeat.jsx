@@ -12,6 +12,20 @@ import { ReactComponent as WaterIcon } from './water.svg';
 import NorthPark from './NorthPark1.jpg';
 import ClimateAtlas from './CA-logo-colour-whitetext-EN.png';
 
+const styleMap_AC_Buildings = new Map([
+  ["Community Centre", {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'}],
+  ["Library", {icon: (<LibraryIcon />), fill: '#36F', stroke: '#36F', legendText: 'Library'}],
+]);
+
+const styleMap_Water_Fountains = new Map([
+  ["drinking fountain", {
+    icon: (<WaterIcon/>),
+    fill: '#36F',
+    stroke: '#36F',
+    legendText: 'Drinking Fountain',
+  }],
+]);
+
 const BeatTheHeat = {
   title: "Beat the Heat?",
   question: "How can I keep myself and the ecosystem cool & hydrated?",
@@ -47,7 +61,8 @@ const BeatTheHeat = {
       title: 'Local Initiatives',
       description: 'Learn more from these area specific community mapping initiatives by clicking one of these areas on the map and following the link.',
       data: Links,
-      format: 'polygon',
+      shape: 'polygon',
+      symbology: 'single',
       options: {
         style: {
           stroke: false,
@@ -66,7 +81,8 @@ const BeatTheHeat = {
       title: 'Parks',
       description: 'These are the designated parks within the CRD. Greenspace has many benefits, including providing shade, cleaning the air, and reducing noise. While plants help draw harmful greenhouse gases from the atmosphere, the soil processes the gases. Soil processes greenhouse gases at a rate of 2:1 compared to plants. The partnership between soil and the atmosphere is key to having a healthy climate. Nature is also great for your physical and mental wellbeing.',
       data: Parks,
-      format: 'polygon',
+      shape: 'polygon',
+      symbology: 'single',
       options: {
         style: {
           stroke: false,
@@ -85,7 +101,8 @@ const BeatTheHeat = {
       title: 'Heat Domes',
       description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." The heat islands on this map are some areas within the CRD that have experienced the most significant increases in average summer surface temperature from 2018 to 2021. Using the satellite imagery, you can see the relationship between heat island distance and canopy vegetation, roof area and parking lots. This heat island map was created by UVic geography student Gillian Voss at the UVic Map Shop.',
       data: HeatDomes,
-      format: 'polygon',
+      shape: 'polygon',
+      symbology: 'single',
       options: {
         style: {
           opacity: 0.5,
@@ -108,17 +125,16 @@ const BeatTheHeat = {
       title: "Air Conditioned Buildings",
       description: 'Public air conditioned buildings that may provide relief during heat waves.',
       data: AC_Buildings,
-      format: 'point',
-      property: "Type",
-      propertyMap: {
-        "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'},
-        "Library": {icon: (<LibraryIcon />), fill: '#36F', stroke: '#36F', legendText: 'Library'},
-      },
+      shape: 'point',
+      symbology: 'classified',
+      styleMap: styleMap_AC_Buildings,
       options: {
-        pointToLayer: (f,l) => pointToIconByProperty(f, l, "Type", {
-          "Community Centre": {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'},
-          "Library": {icon: (<LibraryIcon />), fill: '#36F', stroke: '#36F', legendText: 'Library'},
-        }),
+        pointToLayer: (f,l) => pointToIconByProperty(
+          f,
+          l,
+          "Type",
+          styleMap_AC_Buildings
+        ),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
             f.properties['Name of Place'],
@@ -131,25 +147,16 @@ const BeatTheHeat = {
       title: 'Drinking Fountains',
       description: 'Public drinking water fountains in the City of Victoria',
       data: Water_Fountains,
-      format: 'point',
-      property: 'FountainType',
-      propertyMap: {
-        "drinking fountain": {
-          icon: (<WaterIcon/>),
-          fill: '#36F',
-          stroke: '#36F',
-          legendText: 'Drinking Fountain',
-        }
-      },
+      shape: 'point',
+      symbology: 'classified',
+      styleMap: styleMap_Water_Fountains,
       options: {
-        pointToLayer: (f,l) => pointToIconByProperty(f, l, "FountainType", {
-          "drinking fountain": {
-            icon: (<WaterIcon/>),
-            fill: '#36F',
-            stroke: '#36F',
-            legendText: 'Drinking Fountain',
-          }
-        }),
+        pointToLayer: (f,l) => pointToIconByProperty(
+          f,
+          l,
+          "FountainType",
+          styleMap_Water_Fountains
+        ),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
             f.properties['LocationName'],

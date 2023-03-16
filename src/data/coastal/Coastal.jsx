@@ -1,11 +1,26 @@
 import { point } from 'leaflet';
-import { mapPopupContent } from '../LeafletStyleHelpers';
+import { getStyleMapColor, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import climateSalmon from './climate-salmon.png';
 import forageFish from './forage-fish.png';
 import savingOrcas from './saving-orcas.jpg';
 import * as CRDInundation from './CRDInundation.json';
 import * as ShorelineSensitivity from './ShorelineSensitivity.json';
+
+const styleMap_CRDInundation = new Map([
+  ["0",   {legendText: '0.0 m', color: '#1E44D3'}],
+  ["0.5", {legendText: '0.5 m', color: '#5177E1'}],
+  ["1",   {legendText: '1.0 m', color: '#81A4EE'}],
+  ["2",   {legendText: '2.0 m', color: '#C6DBFA'}]
+]);
+
+const styleMap_ShorelineSensitivity = new Map([
+  ["1", {legendText: 'very low', color: '#2b83ba'}],
+  ["2", {legendText: 'low', color: '#abdda4'}],
+  ["3", {legendText: 'moderate', color: '#ffffbf'}],
+  ["4", {legendText: 'high', color: '#fdae61'}],
+  ["5", {legendText: 'very high', color: '#d7191c'}]
+]);
 
 const Coastal = {
   title: "Protect the Coast?",
@@ -46,7 +61,9 @@ const Coastal = {
       title: 'Coastal Flood Inundation Scenarios',
       description: 'The Capital Regional District (CRD) retained Associated Engineering, DHI and Westmar Advisors to undertake the Capital Region Coastal Flood Inundation Mapping Project (the project) in 2019 -2021. On behalf of local government and other regional stakeholders, staff worked closely with an inter-municipal and multi-disciplinary project team to complete the Regional Coastal Flood Inundation Project in order to better understand regional impacts from coastal storm flooding due to sea level rise and tsunamis. Modeled scenarios show the higher high water large tide (HHWLT) levels for a 0.0m, 0.5m, 1.0m, and 2.0m relative sea level rise (RSLR), respectively.',
       data: CRDInundation,
-      format: 'polygon',
+      shape: 'line',
+      symbology: 'classified',
+      styleMap: styleMap_CRDInundation,
       options: {
         style: function (feature) {
           const baseStyle = {
@@ -57,7 +74,7 @@ const Coastal = {
           }
           return {
             ...baseStyle,
-            color: getCRDInundationColor(feature.properties.RSLR),
+            color: getStyleMapColor(feature.properties.RSLR, styleMap_CRDInundation),
           }
         },
         onEachFeature: (f,l) => {
@@ -73,7 +90,9 @@ const Coastal = {
       title: 'Shoreline Sensitivity',
       description: 'BC Parks developed a model that independently rates marine and terrestrial segments of the British Columbia coastline according to their sensitivity to sea level rise, then spatially combines the ratings to build a map of relative shoreline sensitivity. Ratings were developed using an existing biogeographic land classification dataset (Broad Ecosystem Inventory), and previously rated sensitivity of coastal and marine feature classes (ShoreZone), modified to account for the effects of slope exposure and sediment mobility.',
       data: ShorelineSensitivity,
-      format: 'polygon',
+      shape: 'line',
+      symbology: 'classified',
+      styleMap: styleMap_ShorelineSensitivity,
       options: {
         style: function (feature) {
           const baseStyle = {
@@ -84,7 +103,7 @@ const Coastal = {
           }
           return {
             ...baseStyle,
-            color: getShorelineSensitivityColor(feature.properties.SENSI_FINA),
+            color: getStyleMapColor(String(feature.properties.SENSI_FINA), styleMap_ShorelineSensitivity),
           }
         },
         onEachFeature: (f,l) => {
@@ -92,7 +111,7 @@ const Coastal = {
             mapPopupContent(
               'BC Parks Shoreline Sensitivity Rating',
               'This shoreline has ' + 
-                getShorelineSensitivityDesc(f.properties.SENSI_FINA) +
+                styleMap_ShorelineSensitivity.get(String(f.properties.SENSI_FINA)).legendText +
                 ' sensitivity to sea level rise.',
               ),
             {offset: point(0,8)});
@@ -102,31 +121,3 @@ const Coastal = {
   ],
 };
 export default Coastal;
-
-function getCRDInundationColor(val) {
-  return  val === "0"   ? '#1E44D3' :
-          val === "0.5" ? '#5177E1' :
-          val === "1"   ? '#81A4EE' :
-          val === "2"   ? '#C6DBFA' :
-                          '#FFF';
-}
-
-function getShorelineSensitivityColor(val) {
-  const colArray = ['#2b83ba','#abdda4','#ffffbf','#fdae61','#d7191c']
-  return (Number.isInteger(val) && val >= 1 && val <= 5)
-    ? colArray[val - 1]
-    : '#000';
-}
-
-function getShorelineSensitivityDesc(val) {
-  const descArray = [
-    'very low',
-    'low',
-    'moderate',
-    'high',
-    'very high'
-  ]
-  return (Number.isInteger(val) && val >= 1 && val <= 5)
-    ? descArray[val - 1]
-    : 'unknown';
-}
