@@ -1,5 +1,5 @@
 import { point } from 'leaflet';
-import { getStyleMapColor, mapPopupContent } from '../LeafletStyleHelpers';
+import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import climateSalmon from './climate-salmon.png';
 import forageFish from './forage-fish.png';
@@ -74,7 +74,11 @@ const Coastal = {
           }
           return {
             ...baseStyle,
-            color: getStyleMapColor(feature.properties.RSLR, styleMap_CRDInundation),
+            color: getStyleMapProperty(
+              'color',
+              feature.properties.RSLR,
+              styleMap_CRDInundation
+            ),
           }
         },
         onEachFeature: (f,l) => {
@@ -103,7 +107,11 @@ const Coastal = {
           }
           return {
             ...baseStyle,
-            color: getStyleMapColor(String(feature.properties.SENSI_FINA), styleMap_ShorelineSensitivity),
+            color: getStyleMapProperty(
+              'color',
+              String(feature.properties.SENSI_FINA),
+              styleMap_ShorelineSensitivity
+            ),
           }
         },
         onEachFeature: (f,l) => {

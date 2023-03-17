@@ -31,9 +31,9 @@ export const pointToIconByProperty = (feature, latlng, property, propertyMap) =>
   return L.marker(latlng);
 }
 
-export const getStyleMapColor = (key, styleMap) => {
+export const getStyleMapProperty = (property, key, styleMap) => {
   if (styleMap.has(key)) {
-    return styleMap.get(key).color;
+    return styleMap.get(key)[property];
   } else {
     console.log(`getStyleMapColor: styleMap has no key '${key}'`);
     return '#FFF';
