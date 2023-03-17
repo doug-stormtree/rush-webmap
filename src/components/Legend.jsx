@@ -115,7 +115,8 @@ export const LegendItem = ({ layerId }) => {
       { isOpen
         ? <LegendItemDetails
             description={layer.description}
-            classes={layer.styleMap ?? undefined}
+            shape={layer.shape}
+            styleMap={layer.styleMap ?? undefined}
           />
         : null
       }
@@ -123,15 +124,17 @@ export const LegendItem = ({ layerId }) => {
   );
 }
 
-const LegendItemDetails = ({ description, classes }) => {
+const LegendItemDetails = ({ description, shape, styleMap }) => {
   return (
     <Flex direction='column' gap={2} marginInlineStart={3} mb={3}>
       <Text>{description}</Text>
-      {classes ? [...classes.values()].map((val) => 
+      {styleMap ? [...styleMap.values()].map((val) => 
         <Flex key={val.legendText} direction='row' alignItems='center' >
-          { val.icon
-              ? <LegendPatchPoint style={val} flex='0'/>
-              : <LegendPatchPolygon style={val} flex='0'/>
+          { shape === 'point'
+              ? <SinglePatchPoint style={val} flex='0'/>
+              : shape === 'line'
+                ? <SinglePatchLine style={val} flex='0'/>
+                : <SinglePatchPolygon style={val} flex='0'/>
           }
           <Text marginInline={2} flex='1'>{val.legendText}</Text>
         </Flex>
@@ -146,18 +149,20 @@ const LegendPatch = ({ layerId }) => {
 
   if (layer.symbology === 'classified') {
     return layer.shape === 'point' ? (
-      <MultiPoint styleMap={layer.styleMap} />
+      <ClassifiedPatchPoint styleMap={layer.styleMap} />
     ) : (
-      <MultiRect styleMap={layer.styleMap} />
+      <ClassifiedPatchPolygon styleMap={layer.styleMap} />
     )
   }
 
-  return layer.shape === 'polygon'
-    ? <LegendPatchPolygon style={layer.options.style} />
-    : undefined;
+  return layer.shape === 'point'
+    ? <SinglePatchPoint style={layer.options.style} />
+    : layer.shape === 'line'
+      ? <SinglePatchLine style={layer.options.style} />
+      : <SinglePatchPolygon style={layer.options.style} />
 }
 
-export const LegendPatchPoint = ({ style }) => {
+const SinglePatchPoint = ({ style }) => {
   return (
     <Avatar
       size='sm'
@@ -170,14 +175,14 @@ export const LegendPatchPoint = ({ style }) => {
   );
 }
 
-const MultiPoint = ({ styleMap }) => {
+const ClassifiedPatchPoint = ({ styleMap }) => {
   const styles = [...styleMap.values()].slice(0,2);
   return (
     <HStack spacing={'-0.5rem'}>
       {styles.map((s, index) => {
         const { legendText, ...restStyle } = s;
         return (
-          <LegendPatchPoint
+          <SinglePatchPoint
             key={legendText}
             style={restStyle}
             zIndex={2-index}
@@ -188,9 +193,9 @@ const MultiPoint = ({ styleMap }) => {
   )
 }
 
-export const LegendPatchPolygon = ({ style }) => {
+const SinglePatchPolygon = ({ style }) => {
   return (
-    <Rectangle
+    <PolygonPatchSVG
       fill={style?.fillColor ?? undefined}
       stroke={style?.color ?? undefined}
       dashed={style?.dashArray ? true : false}
@@ -198,7 +203,7 @@ export const LegendPatchPolygon = ({ style }) => {
   )
 }
 
-const Rectangle = ({ fill, stroke, dashed = false }) => (
+const PolygonPatchSVG = ({ fill, stroke, dashed = false }) => (
   <svg width="45" height="27" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect
       x="0"
@@ -215,7 +220,7 @@ const Rectangle = ({ fill, stroke, dashed = false }) => (
   </svg>
 )
 
-const MultiRect = ({ styleMap }) => {
+const ClassifiedPatchPolygon = ({ styleMap }) => {
   const styles = [...styleMap.values()].slice(0,5);
   return (
     <HStack spacing='0'>
@@ -224,10 +229,39 @@ const MultiRect = ({ styleMap }) => {
           <div key={s.legendText} style={{
             width: (45 / styles.length) + 'px',
             height: '27px',
-            background: s.color
+            background: s.fillColor ?? s.color ?? '#BBB'
           }} />
         )
       })}
     </HStack>
   )
 }
+
+const SinglePatchLine = ({ style }) => {
+  return (
+    <LinePatchSVG
+      fill={style?.fillColor ?? undefined}
+      stroke={style?.color ?? undefined}
+      dashed={style?.dashArray ? true : false}
+    />
+  )
+}
+
+const LinePatchSVG = ({ fill, stroke, dashed = false }) => (
+  <svg width="45" height="27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line
+      x1="0"
+      x2="45"
+      y1="13.5"
+      y2="13.5"
+      width="45"
+      height="27"
+      strokeWidth="3"
+      strokeLinecap="butt"
+      fill={fill}
+      stroke={stroke}
+      strokeDashoffset={dashed ? "3" : undefined}
+      strokeDasharray={dashed ? "6 3" : undefined}
+    />
+  </svg>
+)

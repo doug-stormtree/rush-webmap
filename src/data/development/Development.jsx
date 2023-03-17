@@ -1,5 +1,5 @@
 import { point } from 'leaflet';
-import { getStyleMapColor, mapPopupContent } from '../LeafletStyleHelpers';
+import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import * as ALR from './AgriculturalLandReserve.json';
 import * as Municipalities from './Municipalities.json';
@@ -9,9 +9,9 @@ import * as BCTransitRoutes from './BCTransitRoutes.json';
 import * as CRDBikeMap from './CRDBikeMap.json';
 
 const styleMap_SpeciesAtRisk = new Map([
-  ["Red",    {legendText: 'Red List', color: '#F00'}],
-  ["Blue",   {legendText: 'Blue List', color: '#00F'}],
-  ["Yellow", {legendText: 'Yellow List', color: '#FF0'}],
+  ["Red",    {legendText: 'Red List', fillColor: '#F00'}],
+  ["Blue",   {legendText: 'Blue List', fillColor: '#00F'}],
+  ["Yellow", {legendText: 'Yellow List', fillColor: '#FF0'}],
 ]);
 
 const styleMap_CRDBikeMap = new Map([
@@ -125,7 +125,8 @@ const Development = {
           }
           return {
             ...baseStyle,
-            fillColor: getStyleMapColor(
+            fillColor: getStyleMapProperty(
+                'fillColor',
                 feature.properties.BC_LIST,
                 styleMap_SpeciesAtRisk
               ),
@@ -145,7 +146,7 @@ const Development = {
       title: 'BC Transit Bus Routes',
       description: 'The bus transportation routes offered by BC Transit. Some routes shown may be alternate or infrequently operated schedules.',
       data: BCTransitRoutes,
-      shape: 'polygon',
+      shape: 'line',
       symbology: 'single',
       options: {
         style: {
@@ -169,7 +170,7 @@ const Development = {
       title: 'CRD Bike Map',
       description: 'The CRD Bike Map represents the cycling network throughout the region as informed by the Pedestrian and Cycling Master Plan, a key part of the Regional Transportation Plan. Encouraging cycling contributes to the vision for our communities as established in our Regional Growth Strategy.',
       data: CRDBikeMap,
-      shape: 'polygon',
+      shape: 'line',
       symbology: 'classified',
       styleMap: styleMap_CRDBikeMap,
       options: {
@@ -182,7 +183,8 @@ const Development = {
           }
           return {
             ...baseStyle,
-            color: getStyleMapColor(
+            color: getStyleMapProperty(
+                'color',
                 feature.properties.BkMapCarto,
                 styleMap_CRDBikeMap
               ),
