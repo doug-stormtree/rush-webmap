@@ -71,4 +71,10 @@ export const useMapLayerStore = create((set) => ({
         layer.active = !layer.active;
       })
     ),
+  setLayerData: (layerId, leafletLayer) =>
+    set(
+      produce((state) => {
+        state.layers.get(layerId).layer = leafletLayer;
+      })
+    )
 }));
