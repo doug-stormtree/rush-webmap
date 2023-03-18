@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
@@ -9,39 +9,42 @@ import { useMapLayerStore } from '../data/Questions';
 export const MapData = ({ question }) => {
   const map = useMap();
   const layers = useMapLayerStore((state) => state.layers);
+  const setLayerData = useMapLayerStore((state) => state.setLayerData);
   const setQuestionLayersActive = useMapLayerStore(
     (state) => state.setQuestionLayersActive
   );
-  
-  const layerDataMap = new Map();
-  const bmSat = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
+  const [basemap, setBasemap] = useState(
+    L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}")
+  );
 
   useEffect(() => {
     // Add Satellite Basemap
-    if (!map.hasLayer(bmSat)) map.addLayer(bmSat);
+    if (!map.hasLayer(basemap)) map.addLayer(basemap);
   
-    layers.forEach((value, key) => {
-      if (value.active) {
-        if (layerDataMap.has(key)) {
-          map.addLayer(layerDataMap.get(key));
+    layers.forEach((el, key) => {
+      if (el.active) {
+        if (el.layer) {
+          map.addLayer(el.layer);
         } else {
-          fetch(value.data)
+          fetch(el.data)
             .then((response) => response.json())
             .then((data) => {
               const mapLayer = L.geoJSON(
                 data,
-                value.options,
+                el.options,
               );
-              layerDataMap.set(key, mapLayer);
-              map.addLayer(layerDataMap.get(key));
+              setLayerData(key, mapLayer)
+              map.addLayer(mapLayer);
             })
         }
       }
     });
     return () => {
-      layerDataMap.forEach(layer => map.removeLayer(layer));
+      layers.forEach(el => {
+        if (el.layer) map.removeLayer(el.layer);
+      });
     };
-  }, [map, layers, bmSat, layerDataMap]);
+  }, [map, layers, setLayerData, basemap]);
 
   useEffect(() => setQuestionLayersActive(question),
     [question, setQuestionLayersActive]);
