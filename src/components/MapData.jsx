@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
