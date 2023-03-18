@@ -1,7 +1,7 @@
 import { point } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
-import * as FoodSecurity from './FoodSecurity.json';
+import FoodSecurity from './FoodSecurity.geojson';
 import { ReactComponent as EcoJustice } from './Eco-justice organization.svg';
 import { ReactComponent as Government } from './Government office.svg';
 import { ReactComponent as NGO } from './Green enterprise.svg';

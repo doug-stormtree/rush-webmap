@@ -2,7 +2,7 @@ import { point } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import birdlife from './birdlife.jpg';
-import * as Pollinators from './Pollinators.json';
+import Pollinators from './Pollinators.geojson';
 import { ReactComponent as IconA } from './5c311b3537407e1f05ac3946.svg';
 import { ReactComponent as IconB } from './5c312b3c37407e1f05ac3950.svg';
 import { ReactComponent as IconC } from './5c312ca837407e1f05ac3952.svg';

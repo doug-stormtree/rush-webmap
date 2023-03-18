@@ -35,13 +35,14 @@ const layerMap = produce(new Map(), draft => {
     q.mapData.forEach((mapDataLayer, index) => {
       draft.set(qKey + index,
         { 
-          active: true,
+          active: false,
           question: qKey,
           ...mapDataLayer,
+          /*
           layer: L.geoJSON(
             mapDataLayer.data,
             mapDataLayer.options,
-          ),
+          ),*/
         });
     });
   });

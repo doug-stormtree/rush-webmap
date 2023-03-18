@@ -12,17 +12,34 @@ export const MapData = ({ question }) => {
   const setQuestionLayersActive = useMapLayerStore(
     (state) => state.setQuestionLayersActive
   );
+  
+  const layerDataMap = new Map();
+  const bmSat = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
 
   useEffect(() => {
     // Add Satellite Basemap
-    const bmSat = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
-    map.addLayer(bmSat);
+    if (!map.hasLayer(bmSat)) map.addLayer(bmSat);
   
-    layers.forEach(el => {
-      if (el.active) map.addLayer(el.layer);
+    layers.forEach((value, key) => {
+      if (value.active) {
+        if (layerDataMap.has(key)) {
+          map.addLayer(layerDataMap.get(key));
+        } else {
+          fetch(value.data)
+            .then((response) => response.json())
+            .then((data) => {
+              const mapLayer = L.geoJSON(
+                data,
+                value.options,
+              );
+              layerDataMap.set(key, mapLayer);
+              map.addLayer(layerDataMap.get(key));
+            })
+        }
+      }
     });
     return () => {
-      layers.forEach(el => map.removeLayer(el.layer));
+      layerDataMap.forEach(layer => map.removeLayer(layer));
     };
   }, [map, layers]);
 

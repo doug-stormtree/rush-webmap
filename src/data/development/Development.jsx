@@ -1,12 +1,12 @@
 import { point } from 'leaflet';
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
-import * as ALR from './AgriculturalLandReserve.json';
-import * as Municipalities from './Municipalities.json';
-import * as SpeciesAtRisk from './SpeciesAtRisk.json';
-import * as Parks from './CRD_Parks.json';
-import * as BCTransitRoutes from './BCTransitRoutes.json';
-import * as CRDBikeMap from './CRDBikeMap.json';
+import ALR from './AgriculturalLandReserve.geojson';
+import Municipalities from './Municipalities.geojson';
+import SpeciesAtRisk from './SpeciesAtRisk.geojson';
+import Parks from './CRD_Parks.geojson';
+import BCTransitRoutes from './BCTransitRoutes.geojson';
+import CRDBikeMap from './CRDBikeMap.geojson';
 
 const styleMap_SpeciesAtRisk = new Map([
   ["Red",    {legendText: 'Red List', fillColor: '#F00'}],
