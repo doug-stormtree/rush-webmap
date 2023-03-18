@@ -6,15 +6,14 @@ import Control from 'react-leaflet-custom-control';
 import { LegendDrawer } from './Legend';
 import { useMapLayerStore } from '../data/Questions';
 
+const basemap = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
+
 export const MapData = ({ question }) => {
   const map = useMap();
   const layers = useMapLayerStore((state) => state.layers);
   const setLayerData = useMapLayerStore((state) => state.setLayerData);
   const setQuestionLayersActive = useMapLayerStore(
     (state) => state.setQuestionLayersActive
-  );
-  const [basemap, setBasemap] = useState(
-    L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}")
   );
 
   useEffect(() => {
@@ -44,7 +43,7 @@ export const MapData = ({ question }) => {
         if (el.layer) map.removeLayer(el.layer);
       });
     };
-  }, [map, layers, setLayerData, basemap]);
+  }, [map, layers, setLayerData]);
 
   useEffect(() => setQuestionLayersActive(question),
     [question, setQuestionLayersActive]);

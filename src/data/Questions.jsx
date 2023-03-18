@@ -1,6 +1,5 @@
 import produce, { enableMapSet } from 'immer';
 import create from 'zustand';
-import * as L from 'leaflet';
 
 import BeatTheHeat from './beattheheat/BeatTheHeat';
 import EatLocal from './eatlocal/EatLocal';
