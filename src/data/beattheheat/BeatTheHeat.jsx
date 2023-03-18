@@ -1,10 +1,10 @@
 import { point } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import * as HeatDomes from './HeatDomes.json';
-import * as Parks from './CRD_Parks.json';
-import * as AC_Buildings from './AC_Buildings.json';
-import * as Water_Fountains from './VictoriaDrinkingFountains.json';
-import * as Links from './BeatTheHeat_Links.json';
+import HeatDomes from './HeatDomes.geojson';
+import Parks from './CRD_Parks.geojson';
+import AC_Buildings from './AC_Buildings.geojson';
+import Water_Fountains from './VictoriaDrinkingFountains.geojson';
+import Links from './BeatTheHeat_Links.geojson';
 import image from './BeatTheHeat.jpg';
 import { ReactComponent as CommunityCtrIcon } from './cc.svg';
 import { ReactComponent as LibraryIcon } from './lib.svg';

@@ -1,7 +1,7 @@
 import { point } from 'leaflet';
 import { mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
-import * as CRD_Municipal_CarbonBudgets from './CRD_Municipal_CarbonBudgets.json';
+import CRD_Municipal_CarbonBudgets from './CRD_Municipal_CarbonBudgets.geojson';
 
 const Footprint = {
   title: 'Light Footprint?',

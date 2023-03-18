@@ -4,8 +4,8 @@ import image from './image.jpg';
 import climateSalmon from './climate-salmon.png';
 import forageFish from './forage-fish.png';
 import savingOrcas from './saving-orcas.jpg';
-import * as CRDInundation from './CRDInundation.json';
-import * as ShorelineSensitivity from './ShorelineSensitivity.json';
+import CRDInundation from './CRDInundation.geojson';
+import ShorelineSensitivity from './ShorelineSensitivity.geojson';
 
 const styleMap_CRDInundation = new Map([
   ["0",   {legendText: '0.0 m', color: '#1E44D3'}],
