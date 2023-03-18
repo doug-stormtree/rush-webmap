@@ -41,7 +41,7 @@ export const MapData = ({ question }) => {
     return () => {
       layerDataMap.forEach(layer => map.removeLayer(layer));
     };
-  }, [map, layers]);
+  }, [map, layers, bmSat, layerDataMap]);
 
   useEffect(() => setQuestionLayersActive(question),
     [question, setQuestionLayersActive]);
