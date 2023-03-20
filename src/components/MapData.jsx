@@ -22,9 +22,10 @@ export const MapData = ({ question }) => {
   
     layers.forEach((el, key) => {
       if (el.active) {
-        if (el.layer) {
+        if (el.layer instanceof L.GeoJSON) {
           map.addLayer(el.layer);
-        } else {
+        } else if (el.layer === undefined) {
+          setLayerData(key, {status: 'loading'});
           fetch(el.data)
             .then((response) => response.json())
             .then((data) => {
@@ -32,15 +33,14 @@ export const MapData = ({ question }) => {
                 data,
                 el.options,
               );
-              setLayerData(key, mapLayer)
-              map.addLayer(mapLayer);
+              setLayerData(key, mapLayer);
             })
         }
       }
     });
     return () => {
       layers.forEach(el => {
-        if (el.layer) map.removeLayer(el.layer);
+        if (el.layer instanceof L.Layer) map.removeLayer(el.layer);
       });
     };
   }, [map, layers, setLayerData]);
