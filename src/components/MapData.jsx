@@ -19,25 +19,36 @@ export const MapData = ({ question }) => {
   useEffect(() => {
     // Add Satellite Basemap
     if (!map.hasLayer(basemap)) map.addLayer(basemap);
-  
+    
+    const layerKeys = [];
+    const layerPromises = [];
     layers.forEach((el, key) => {
       if (el.active) {
         if (el.layer instanceof L.GeoJSON) {
           map.addLayer(el.layer);
         } else if (el.layer === undefined) {
-          setLayerData(key, {status: 'loading'});
-          fetch(el.data)
-            .then((response) => response.json())
-            .then((data) => {
-              const mapLayer = L.geoJSON(
-                data,
-                el.options,
-              );
-              setLayerData(key, mapLayer);
-            })
+          setLayerData(key, 'loading');
+          layerKeys.push(key);
+          layerPromises.push(
+            fetch(el.data).then((response) => response.json())
+          );
         }
       }
     });
+
+    Promise.allSettled(layerPromises)
+      .then((results) => results.forEach((result, index) => {
+        if (result.status === 'fulfilled') {
+          const mapLayer = L.geoJSON(
+            result.value,
+            layers.get(layerKeys[index]).options,
+          );
+          setLayerData(layerKeys[index], mapLayer);
+        } else {
+          setLayerData(layerKeys[index], undefined);
+        }
+      }));
+
     return () => {
       layers.forEach(el => {
         if (el.layer instanceof L.Layer) map.removeLayer(el.layer);
