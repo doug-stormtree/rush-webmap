@@ -3,6 +3,7 @@ import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import birdlife from './birdlife.jpg';
 import Pollinators from './Pollinators.geojson';
+import StewardshipGroups from './StewardshipGroups.geojson';
 import { ReactComponent as IconA } from './5c311b3537407e1f05ac3946.svg';
 import { ReactComponent as IconB } from './5c312b3c37407e1f05ac3950.svg';
 import { ReactComponent as IconC } from './5c312ca837407e1f05ac3952.svg';
@@ -103,6 +104,31 @@ const Naturehood = {
               f.properties.name,
               f.properties.description[0]
             ), {offset: point(4,2)});
+        }
+      }
+    },
+    {
+      title: 'Stewardship Groups',
+      description: 'Stewardship groups are volunteer-based community organizations that actively support the environmental health and wellbeing of a specific region, park, or watershed through monitoring programs, invasive species management, public outreach, and governmental advocacy.',
+      data: StewardshipGroups,
+      shape: 'polygon',
+      symbology: 'single',
+      options: {
+        style: {
+          stroke: true,
+          color: '#477EFF',
+          fill: true,
+          fillOpacity: 0.7,
+          fillColor: 'rgba(0, 120, 160, 255)',
+          interactive: true,
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(
+            mapPopupContent(
+              f.properties.Group,
+              `The ${f.properties['Group']} advocates for preserving the ecosystems of the ${f.properties['FocusLoc']} area. Learn more and support their work at:`,
+              f.properties['URL']),
+            {offset: point(0,8)});
         }
       }
     },
