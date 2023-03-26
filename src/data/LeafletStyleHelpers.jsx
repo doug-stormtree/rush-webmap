@@ -54,7 +54,7 @@ const MapPopup = ({title, desc, link, linkText}) => {
     <VStack>
       <Heading size='xs'><b>{title}</b></Heading>
       <Text>{desc}</Text>
-      {link ? <Link href={link} isExternal>{linkText}</Link> : null}
+      {link ? <Link href={link} isExternal>{linkText ?? link}</Link> : null}
     </VStack>
   )
 }
