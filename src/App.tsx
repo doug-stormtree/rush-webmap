@@ -1,4 +1,3 @@
-
 import React, { createContext, useRef, useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
@@ -61,7 +60,7 @@ function App() {
 
 export default App;
 
-export const ShareURLContext = createContext();
+//export const ShareURLContext = createContext();
 
 function WebMap() {
   // Fix window height to viewport on web and mobile
@@ -106,7 +105,7 @@ function WebMap() {
   const smallDisplay = useBreakpointValue({
     lg: false,
     base: true,
-  },{ssr:false, fallback:true});
+  },{ssr:false, fallback:'true'});
 
   return (
     <Flex
