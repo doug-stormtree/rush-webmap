@@ -1,4 +1,4 @@
-import { point } from 'leaflet';
+import * as L from 'leaflet';
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
 import climateSalmon from './climate-salmon.png';
@@ -20,6 +20,14 @@ const styleMap_ShorelineSensitivity = new Map([
   ["3", {legendText: 'moderate', color: '#ffffbf'}],
   ["4", {legendText: 'high', color: '#fdae61'}],
   ["5", {legendText: 'very high', color: '#d7191c'}]
+]);
+
+const styleMap_BED_AS_Sensitivity = new Map([
+  ["1", {legendText: 'very low', color: '#00b547'}],
+  ["2", {legendText: 'low', color: '#81d53e'}],
+  ["3", {legendText: 'moderate', color: '#fdff00'}],
+  ["4", {legendText: 'high', color: '#ffbe00'}],
+  ["5", {legendText: 'very high', color: '#ff0000'}]
 ]);
 
 const Coastal = {
@@ -87,7 +95,7 @@ const Coastal = {
               'Capital Region Coastal Flood Inundation',
               'Scenario of ' + f.properties.RSLR + 'm Relative Sea Level Rise (RSLR), this line represents the Higher High Water Large Tide (HHWLT) level.',
               ),
-            {offset: point(0,8)});
+            {offset: L.point(0,8)});
         }
       }
     },{
@@ -122,10 +130,17 @@ const Coastal = {
                 styleMap_ShorelineSensitivity.get(String(f.properties.SENSI_FINA)).legendText +
                 ' sensitivity to sea level rise.',
               ),
-            {offset: point(0,8)});
+            {offset: L.point(0,8)});
         }
       }
-    },
+    },{
+      title: 'Aquifer Susceptibility',
+      description: '',
+      layer: L.tileLayer(process.env.PUBLIC_URL + 'BED_AS_Tiles/{z}/{x}/{y}.png'),
+      shape: 'tile',
+      symbology: 'classified',
+      styleMap: styleMap_BED_AS_Sensitivity,
+    }
   ],
 };
 export default Coastal;

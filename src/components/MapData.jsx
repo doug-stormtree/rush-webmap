@@ -24,7 +24,7 @@ export const MapData = ({ question }) => {
     const layerPromises = [];
     layers.forEach((el, key) => {
       if (el.active) {
-        if (el.layer instanceof L.GeoJSON) {
+        if (el.layer instanceof L.Layer) {
           map.addLayer(el.layer);
         } else if (el.layer === undefined) {
           setLayerData(key, 'loading');
