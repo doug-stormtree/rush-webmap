@@ -122,6 +122,11 @@ const theme = extendTheme({
       defaultProps: {
       }
     },
+    Link: {
+      baseStyle: {
+        color: 'teal.500'
+      }
+    }
   }
 });
 export default theme;

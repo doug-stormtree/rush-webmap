@@ -14,6 +14,7 @@ import {
   Heading,
   HStack,
   IconButton,
+  Link,
   Switch,
   Text,
 } from '@chakra-ui/react';
@@ -103,7 +104,7 @@ export const LegendItem = ({ layerId }) => {
           display='-webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;'
           whiteSpace='normal'
         >{layer.title}</FormLabel>
-        <LegendPatch layerId={layerId} flex='0'/>
+        <LegendPatch layerId={layerId} flex='0' />
         <IconButton
           variant='ghost'
           fontSize='20px'
@@ -126,21 +127,41 @@ export const LegendItem = ({ layerId }) => {
 
 const LegendItemDetails = ({ description, shape, styleMap }) => {
   return (
-    <Flex direction='column' gap={2} marginInlineStart={3} mb={3}>
-      <Text>{description}</Text>
-      {styleMap ? [...styleMap.values()].map((val) => 
-        <Flex key={val.legendText} direction='row' alignItems='center' >
-          { shape === 'point'
-              ? <SinglePatchPoint style={val} flex='0'/>
-              : shape === 'line'
-                ? <SinglePatchLine style={val} flex='0'/>
-                : <SinglePatchPolygon style={val} flex='0'/>
-          }
-          <Text marginInline={2} flex='1'>{val.legendText}</Text>
-        </Flex>
-      ) : null }
+    <Flex direction='column' gap='2' my='2' marginInlineStart='3' mb='3'>
+      {styleMap ? 
+        <Flex direction='column' gap='1' mx='2' p='2' bgColor='gray.100' borderRadius='lg'>
+          {[...styleMap.values()].map((val) => 
+            <Flex key={val.legendText} direction='row' alignItems='center' >
+              { shape === 'point'
+                  ? <SinglePatchPoint style={val} flex='0' />
+                  : shape === 'line'
+                    ? <SinglePatchLine style={val} flex='0' />
+                    : <SinglePatchPolygon style={val} flex='0' />
+              }
+              <Text marginInline={2} flex='1'>{val.legendText}</Text>
+            </Flex>
+          )}
+        </Flex> : null }
+      <LegendItemDescription description={description} />
     </Flex>
   );
+}
+
+const LegendItemDescription = ({ description }) => {
+  if (typeof description === 'string' || description instanceof String)
+    return <Text>{description}</Text>;
+  if (Array.isArray(description)) {
+    const components = description.map((item, index) => {
+      switch (item.type) {
+        case 'link':
+          return <Link isExternal key={index} href={item.url}>{item.text}</Link>
+        default:
+          return <Text key={index}>{item.content}</Text>;
+      }
+    });
+    return <>{components}</>;
+  }
+  return null;
 }
 
 // Legend Patch Components
