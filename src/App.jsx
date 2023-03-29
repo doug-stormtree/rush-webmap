@@ -141,7 +141,7 @@ function WebMap() {
       />
       <ContentPane
         flex='0'
-        maxH='30%'
+        maxH='25%'
         openFlag={openContentFlag}
         setOpenFlag={setOpenContentFlag}
         question={activeQuestion}
