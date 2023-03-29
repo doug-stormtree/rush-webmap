@@ -15,19 +15,19 @@ const styleMap_CRDInundation = new Map([
 ]);
 
 const styleMap_ShorelineSensitivity = new Map([
-  ["1", {legendText: 'very low', color: '#2b83ba'}],
-  ["2", {legendText: 'low', color: '#abdda4'}],
-  ["3", {legendText: 'moderate', color: '#ffffbf'}],
-  ["4", {legendText: 'high', color: '#fdae61'}],
-  ["5", {legendText: 'very high', color: '#d7191c'}]
+  ["1", {legendText: 'Very Low', color: '#2b83ba'}],
+  ["2", {legendText: 'Low', color: '#abdda4'}],
+  ["3", {legendText: 'Moderate', color: '#ffffbf'}],
+  ["4", {legendText: 'High', color: '#fdae61'}],
+  ["5", {legendText: 'Very High', color: '#d7191c'}]
 ]);
 
-const styleMap_AS_Sensitivity = new Map([
-  ["1", {legendText: 'very low', fillColor: '#00b547'}],
-  ["2", {legendText: 'low', fillColor: '#81d53e'}],
-  ["3", {legendText: 'moderate', fillColor: '#fdff00'}],
-  ["4", {legendText: 'high', fillColor: '#ffbe00'}],
-  ["5", {legendText: 'very high', fillColor: '#ff0000'}]
+const styleMap_AquiferSusceptibility = new Map([
+  ["1", {legendText: 'Very Low', fillColor: '#00b547'}],
+  ["2", {legendText: 'Low', fillColor: '#81d53e'}],
+  ["3", {legendText: 'Moderate', fillColor: '#fdff00'}],
+  ["4", {legendText: 'High', fillColor: '#ffbe00'}],
+  ["5", {legendText: 'Very High', fillColor: '#ff0000'}]
 ]);
 
 const Coastal = {
@@ -108,6 +108,7 @@ const Coastal = {
       data: ShorelineSensitivity,
       shape: 'line',
       symbology: 'classified',
+      legendTitle: 'Sensitivity to Sea-level Rise',
       styleMap: styleMap_ShorelineSensitivity,
       options: {
         style: function (feature) {
@@ -155,7 +156,8 @@ const Coastal = {
         ),
       shape: 'tile',
       symbology: 'classified',
-      styleMap: styleMap_AS_Sensitivity,
+      legendTitle: 'Risk of Sea Water Intrusion',
+      styleMap: styleMap_AquiferSusceptibility,
     },{
       title: 'Sea to Groundwater Risk (Sediment)',
       description: [
@@ -174,7 +176,8 @@ const Coastal = {
         ),
       shape: 'tile',
       symbology: 'classified',
-      styleMap: styleMap_AS_Sensitivity,
+      legendTitle: 'Risk of Sea Water Intrusion',
+      styleMap: styleMap_AquiferSusceptibility,
     }
   ],
 };
