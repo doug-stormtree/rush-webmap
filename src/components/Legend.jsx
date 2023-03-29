@@ -114,27 +114,24 @@ export const LegendItem = ({ layerId }) => {
         />
       </Flex>
       { isOpen
-        ? <LegendItemDetails
-            description={layer.description}
-            shape={layer.shape}
-            styleMap={layer.styleMap ?? undefined}
-          />
+        ? <LegendItemDetails layer={layer} />
         : null
       }
     </>
   );
 }
 
-const LegendItemDetails = ({ description, shape, styleMap }) => {
+const LegendItemDetails = ({ layer }) => {
   return (
     <Flex direction='column' gap='2' my='2' marginInlineStart='3' mb='3'>
-      {styleMap ? 
+      {layer.styleMap ? 
         <Flex direction='column' gap='1' mx='2' p='2' bgColor='gray.100' borderRadius='lg'>
-          {[...styleMap.values()].map((val) => 
+          { layer.legendTitle ? <Heading size='sm'>{layer.legendTitle}</Heading> : null }
+          {[...layer.styleMap.values()].map((val) => 
             <Flex key={val.legendText} direction='row' alignItems='center' >
-              { shape === 'point'
+              { layer.shape === 'point'
                   ? <SinglePatchPoint style={val} flex='0' />
-                  : shape === 'line'
+                  : layer.shape === 'line'
                     ? <SinglePatchLine style={val} flex='0' />
                     : <SinglePatchPolygon style={val} flex='0' />
               }
@@ -142,7 +139,7 @@ const LegendItemDetails = ({ description, shape, styleMap }) => {
             </Flex>
           )}
         </Flex> : null }
-      <LegendItemDescription description={description} />
+      <LegendItemDescription description={layer.description} />
     </Flex>
   );
 }
