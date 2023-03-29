@@ -112,6 +112,7 @@ const theme = extendTheme({
     Button: {
       variants: {
         nav: {
+          fontWeight: 'normal',
           _hover: {
             color: 'rush.200'
           }
