@@ -2,7 +2,7 @@ import React from 'react';
 import {
   useBreakpointValue,
   useDisclosure,
-  IconButton,
+  Button,
   Image,
   Modal,
   ModalBody,
@@ -35,15 +35,11 @@ export default function LandingModalButton(props) {
   })
   return (
     <>
-      <IconButton
+      <Button
         variant='nav'
-        icon={<FaRegQuestionCircle />}
-        onClick={onOpen} 
-        {...props}
-      >
-        {props.children}
-      </IconButton>
-
+        rightIcon={<FaRegQuestionCircle />}
+        onClick={onOpen}
+      >About</Button>
       <Modal 
         isOpen={isOpen}
         onClose={onClose}

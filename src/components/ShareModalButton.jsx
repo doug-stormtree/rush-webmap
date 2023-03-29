@@ -5,7 +5,6 @@ import {
   Button,
   Flex,
   Icon,
-  IconButton,
   Input,
   Modal,
   ModalBody,
@@ -25,14 +24,14 @@ export default function ShareModalButton(props) {
 
   return (
     <>
-      <IconButton
+      <Button
         variant='nav'
-        icon={<FiShare />}
+        rightIcon={<FiShare />}
         onClick={() => {
           onOpen();
           setUrl(props.getShareURL());
         }}
-      />
+      >Share</Button>
       <Modal
         isCentered
         isOpen={isOpen}
