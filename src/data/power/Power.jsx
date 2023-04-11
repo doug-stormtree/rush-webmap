@@ -4,16 +4,10 @@ const Power = {
   title: "Power this place?",
   question: "Power this place?",
   image: image,
-  learn: {
-    text: [
-      "Lorem.",
-    ],
-    initiatives: [],
-  },
+  description: [
+    {type: 'p', content: "Lorem."},
+  ],
   act: {
-    list: [
-      "Lorem.",
-    ],
     initiatives: [],
   },
   mapData: [],

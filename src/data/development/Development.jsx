@@ -26,16 +26,10 @@ const Development = {
   title: "Development?",
   question: "Development a good idea?",
   image: image,
-  learn: {
-    text: [
-      "Lorem.",
-    ],
-    initiatives: [],
-  },
+  description: [
+    {type: 'p', content: "Lorem."},
+  ],
   act: {
-    list: [
-      "Lorem.",
-    ],
     initiatives: [],
   },
   mapData: [

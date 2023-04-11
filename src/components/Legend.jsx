@@ -14,12 +14,12 @@ import {
   Heading,
   HStack,
   IconButton,
-  Link,
   Switch,
   Text,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import { useMapLayerStore } from '../data/Questions';
+import FormattedText from './FormattedText';
 
 // Legend Component
 //   Builds list of LegendItem components for active question layers.
@@ -148,15 +148,7 @@ const LegendItemDescription = ({ description }) => {
   if (typeof description === 'string' || description instanceof String)
     return <Text>{description}</Text>;
   if (Array.isArray(description)) {
-    const components = description.map((item, index) => {
-      switch (item.type) {
-        case 'link':
-          return <Link isExternal key={index} href={item.url}>{item.text}</Link>
-        default:
-          return <Text key={index}>{item.content}</Text>;
-      }
-    });
-    return <>{components}</>;
+    <FormattedText textArray={description} />
   }
   return null;
 }

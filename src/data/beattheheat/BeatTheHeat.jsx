@@ -30,27 +30,21 @@ const BeatTheHeat = {
   title: "Beat the Heat?",
   question: "How can I keep myself and the ecosystem cool & hydrated?",
   image: image,
-  learn: {
-    text: [
-      "All life is vulnerable to extreme heat. Heat islands and heat waves happen as average global temperatures rise, and hotter pockets of air move inland. The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Notice the relationship between heat island areas, green space and dark or paved surfaces. Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%. Breezes and closeness to water also affect temperature.",
-      "Prolonged heat dries out landscapes, increases risk of fires, can shorten growing seasons for farmers and create conditions for viruses and bacteria to thrive. While plants cool the area and drawdown harmful greenhouse gases from the atmosphere, the soil processes the gases at a rate of 2:1 compared to plants. The partnership between soil and the atmosphere is key to having a healthy climate. Taking action to mange temperature and moisture in our neighbourhoods is a key to climate action.",
-    ],
-  },
+  description: [
+    {type: 'p', content: "All life is vulnerable to extreme heat. Heat islands and heat waves happen as average global temperatures rise, and hotter pockets of air move inland. The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Notice the relationship between heat island areas, green space and dark or paved surfaces. Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%. Breezes and closeness to water also affect temperature."},
+    {type: 'p', content: "Prolonged heat dries out landscapes, increases risk of fires, can shorten growing seasons for farmers and create conditions for viruses and bacteria to thrive. While plants cool the area and drawdown harmful greenhouse gases from the atmosphere, the soil processes the gases at a rate of 2:1 compared to plants. The partnership between soil and the atmosphere is key to having a healthy climate. Taking action to mange temperature and moisture in our neighbourhoods is a key to climate action."},
+  ],
   act: {
-    list: [
-      "Drink plenty of water and stay cool! Seek out green spaces, shade, water bodies or air-conditioned buildings.",
-      "Grow your garden! Create shade in your own living spaces.",
-      "Ask your municipality for more green space and less pavement.",
-      "Limit your carbon footprint! Biking, carpooling and taking the bus are some of the easiest ways to reduce your carbon footprint and live sustainably.",
-    ],
     initiatives: [
-      { 
+      {
         title: "North Park Heatwave Map",
+        description: "The North Park Heatwave Map was created by Tenaya Lynx, Julia Frasher, Riley Sondergaard during their Community Based Participatory Reseach Class, Geography, University of Victoria. They consulted community members and organizations to identify areas of relief, concern and risk resulting in a map that the community can use to orient and help during a heatwave and also to advocate for improvements to infrastructure and services.",
         image: NorthPark,
         link: "https://www.google.com/maps/d/viewer?mid=12YLjmNqss6nHrcWQYYgK0ffl8JqkYaKd&ll=48.431337468326106%2C-123.35707554999999&z=16",
       },
-      { 
+      {
         title: "Climate Atlas of Canada",
+        description: "The Climate Atlas of Canada combines climate science, mapping, and storytelling together with Indigenous Knowledges and community-based research and video to inspire awareness and action.",
         image: ClimateAtlas,
         link: "https://climateatlas.ca/",
       },
