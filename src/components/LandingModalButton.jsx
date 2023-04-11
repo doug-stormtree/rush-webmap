@@ -44,7 +44,7 @@ export default function LandingModalButton(props) {
         isOpen={isOpen}
         onClose={onClose}
         isCentered={isCentered}
-        closeOnOverlayClick='false'
+        closeOnOverlayClick={false}
         size={{
           xl: "4xl",
           md: "xl",
