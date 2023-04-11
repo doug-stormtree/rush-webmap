@@ -1,6 +1,7 @@
 import { point } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
+import OurFoodFuture from './OurFoodFuture.png';
 import FoodSecurity from './FoodSecurity.geojson';
 import { ReactComponent as EcoJustice } from './Eco-justice organization.svg';
 import { ReactComponent as Government } from './Government office.svg';
@@ -20,23 +21,18 @@ const EatLocal = {
   title: "Eat Local?",
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
   image: image,
-  learn: {
-    text: [
-      "Lorem.",
-    ],
+  description: [
+    {type: 'p', content: "Lorem."},
+  ],
+  act: {
     initiatives: [
       {
         title: "Our Food Future",
-        image: undefined,
+        image: OurFoodFuture,
         link: "https://biomimicryfrontiers.com/our-food-future",
+        description: "Biomimicry reminds us that there is no waste out in nature, and to truly imitate nature, we must eliminate waste. Biomimicry Frontiers was brought into the Our Food Future initiative to frame the project from a biomimetic lens and to use the opportunity to build circular businesses, while simultaneously providing advisory services."
       },
     ],
-  },
-  act: {
-    list: [
-      "Lorem.",
-    ],
-    initiatives: [],
   },
   mapData: [
     {

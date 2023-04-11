@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   AspectRatio,
+  Box,
   Image,
   LinkBox,
   LinkOverlay,
@@ -10,17 +11,22 @@ import {
 export default function InitiativeButton({initiative}) {
   return (
     <AspectRatio ratio={1} w="120px">
-      <LinkBox
-        borderRadius="xl"
-        bg="#333"
-      >
+      <LinkBox borderRadius="xl">
         <Image
           src={initiative.image}
           objectFit="cover"
           minW="100%"
           minH="100%"
-          opacity="0.9"
         />
+        <Box style={{
+          content: '""',
+          position: 'absolute',
+          left: '0',
+          top: '0',
+          width: '100%',
+          height: '100%',
+          backgroundImage: "linear-gradient( to bottom, hsla(0, 0%, 35.29%, 0) 0%, hsla(0, 0%, 34.53%, 0.034375) 16.36%, hsla(0, 0%, 32.42%, 0.125) 33.34%, hsla(0, 0%, 29.18%, 0.253125) 50.1%, hsla(0, 0%, 24.96%, 0.4) 65.75%, hsla(0, 0%, 19.85%, 0.546875) 79.43%, hsla(0, 0%, 13.95%, 0.675) 90.28%, hsla(0, 0%, 7.32%, 0.765625) 97.43%, hsla(0, 0%, 0%, 0.8) 100% )",
+        }}/>
         <LinkOverlay href={initiative.link}>
           <Text
             position="absolute"
@@ -28,7 +34,7 @@ export default function InitiativeButton({initiative}) {
             left="0.5em"
             as="b"
             color="#FFF"
-            textShadow="0 1px 0 black"
+            textShadow="0 0 1px #333"
           >
             {initiative.title}
           </Text>

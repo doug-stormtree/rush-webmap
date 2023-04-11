@@ -64,17 +64,12 @@ const Naturehood = {
   title: "Neighbourhood to Naturehood?",
   question: "What is the Nature of this place?",
   image: image,
-  learn: {
-    text: [
-      "Where are the natural areas and gardens that support pollinators in this region?",
-      "Learn more or contribute sites to the map at https://new.opengreenmap.org/browse/sites?map=621fe03eba477f0100989741.",
-    ],
-    initiatives: [],
-  },
+  description: [
+    {type: 'p', content: "Where are the natural areas and gardens that support pollinators in this region?"},
+    {type: 'p', content: "Learn more or contribute sites to the map at:"},
+    {type: 'link', content: "https://new.opengreenmap.org/browse/sites?map=621fe03eba477f0100989741", url: "https://new.opengreenmap.org/browse/sites?map=621fe03eba477f0100989741"},
+  ],
   act: {
-    list: [
-      "Lorem.",
-    ],
     initiatives: [
       {
         title: "BirdLife International",

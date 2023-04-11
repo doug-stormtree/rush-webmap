@@ -7,12 +7,12 @@ import {
   IconButton,
   Spacer,
   StackDivider,
-  Text,
   VStack
 } from '@chakra-ui/react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import Questions from '../data/Questions';
 import ActPane from './ActPane';
+import FormattedText from './FormattedText';
 
 export default function ContentPane({openFlag, setOpenFlag, question, ...props}) {
   const contentTitle = useBreakpointValue({ lg: Questions.get(question).question, base: Questions.get(question).title})
@@ -43,21 +43,13 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
           alignItems='center'
         >
           <Box maxW='4xl'>
-            <TextPane content={Questions.get(question).learn}/>
+            <Box pb='0.5em'>
+              <FormattedText textArray={Questions.get(question).description} />
+            </Box>
             <ActPane content={Questions.get(question).act} />
           </Box>
         </Flex>
       ) : null}
     </VStack>
-  )
-}
-
-function TextPane({content, ...props}) {
-  return (
-    <Box {...props} pe={2}>
-      {content.text.map(p =>
-        <Text key={p} mb="1em">{p}</Text>
-      )}
-    </Box>
   )
 }

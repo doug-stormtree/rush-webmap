@@ -34,15 +34,11 @@ const Coastal = {
   title: "Protect the Coast?",
   question: "Am I vulnerable to sea level rise, tsunamis, storm surges?",
   image: image,
-  learn: {
-    text: [
-      "Lorem.",
-    ],
-  },
+  description: [
+    {type: 'p', content: "Extreme water events and sea level rise will increase with the amount of greenhouse gases in the atmosphere because the greenhouse gases impact temperatures around the globe.  Hotter and more polluted atmosphere can melt ice caps and change the way air moves across the surface of the planet."},
+    {type: 'p', content: "By looking at the health of the shoreline and what the ground is made of, we can find places that need more eel grass or sediment to improve and protect the area."},
+  ],
   act: {
-    list: [
-      "Lorem.",
-    ],
     initiatives: [
       {
         title: "Climate Action for Salmon",
@@ -67,7 +63,10 @@ const Coastal = {
   mapData: [
     {
       title: 'Coastal Flood Inundation Scenarios',
-      description: 'The Capital Regional District (CRD) retained Associated Engineering, DHI and Westmar Advisors to undertake the Capital Region Coastal Flood Inundation Mapping Project (the project) in 2019 -2021. On behalf of local government and other regional stakeholders, staff worked closely with an inter-municipal and multi-disciplinary project team to complete the Regional Coastal Flood Inundation Project in order to better understand regional impacts from coastal storm flooding due to sea level rise and tsunamis. Modeled scenarios show the higher high water large tide (HHWLT) levels for a 0.0m, 0.5m, 1.0m, and 2.0m relative sea level rise (RSLR), respectively.',
+      description: [
+        {type: 'p', content: 'The Capital Regional District (CRD) retained Associated Engineering, DHI and Westmar Advisors to undertake the Capital Region Coastal Flood Inundation Mapping Project (the project) in 2019 -2021. On behalf of local government and other regional stakeholders, staff worked closely with an inter-municipal and multi-disciplinary project team to complete the Regional Coastal Flood Inundation Project in order to better understand regional impacts from coastal storm flooding due to sea level rise and tsunamis. Modeled scenarios show the higher high water large tide (HHWLT) levels for a 0.0m, 0.5m, 1.0m, and 2.0m relative sea level rise (RSLR), respectively.'},
+        {type: 'link', content: 'Capital Regional District, 2021. Capital Region Coastal Flood Inundation Mapping Project Summary, Version 2.0. Victoria.', url: 'https://www.crd.bc.ca/docs/default-source/climate-action-pdf/reports/2020-sea-level-mapping-project/coastal-flood-inundation-mapping-project-summary.pdf'},
+      ],
       data: CRDInundation,
       shape: 'line',
       symbology: 'classified',
@@ -103,7 +102,7 @@ const Coastal = {
       description: [
         {type: 'p', content:'BC Parks developed a model that independently rates marine and terrestrial segments of the British Columbia coastline according to their sensitivity to sea level rise, then spatially combines the ratings to build a map of relative shoreline sensitivity.'},
         {type: 'p', content:'Ratings were developed using an existing biogeographic land classification dataset (Broad Ecosystem Inventory), and previously rated sensitivity of coastal and marine feature classes (ShoreZone), modified to account for the effects of slope exposure and sediment mobility.'},
-        {type: 'link', text:'Biffard, D., Stevens, T., Rao, A., and Woods, B., 2014. BC Parks Shoreline Sensitivity Model. Province of British Columbia, Victoria.', url:'https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=42825'},
+        {type: 'link', content:'Biffard, D., Stevens, T., Rao, A., and Woods, B., 2014. BC Parks Shoreline Sensitivity Model. Province of British Columbia, Victoria.', url:'https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=42825'},
       ],
       data: ShorelineSensitivity,
       shape: 'line',
@@ -146,7 +145,7 @@ const Coastal = {
         {type:'p', content:'Learn more about these models by reading the report here:'},
         {
           type:'link',
-          text:'Western Water Associates Ltd (Sivak, T. and M. Wei), 2021. GIS Modelling of Sea Water Intrusion Risk along British Columbia’s Coast. Water Science Series WSS2021-06, Province of British Columbia, Victoria.',
+          content:'Western Water Associates Ltd (Sivak, T. and M. Wei), 2021. GIS Modelling of Sea Water Intrusion Risk along British Columbia’s Coast. Water Science Series WSS2021-06, Province of British Columbia, Victoria.',
           url:'https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=59164'
         }
       ],
@@ -166,7 +165,7 @@ const Coastal = {
         {type:'p', content:'Learn more about these models by reading the report here:'},
         {
           type:'link',
-          text:'Western Water Associates Ltd (Sivak, T. and M. Wei), 2021. GIS Modelling of Sea Water Intrusion Risk along British Columbia’s Coast. Water Science Series WSS2021-06, Province of British Columbia, Victoria.',
+          content:'Western Water Associates Ltd (Sivak, T. and M. Wei), 2021. GIS Modelling of Sea Water Intrusion Risk along British Columbia’s Coast. Water Science Series WSS2021-06, Province of British Columbia, Victoria.',
           url:'https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=59164'
         }
       ],
