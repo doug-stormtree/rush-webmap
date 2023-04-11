@@ -10,7 +10,9 @@ const CircularEcon = {
   question: 'How can I participate in circular economies?',
   image: image,
   description: [
-    {type: 'p', content: "Lorem."},
+    {type: 'p', content: "The Government of Canada defines the circular economy as retaining and recovering as much value as possible from resources through reuse, repair, refurbishment, remanufacture, or recycling existing products and materials. Innovative approaches to resource use and product lifespan reduces pressure on our environment and benefits the economy as a whole."},
+    {type: 'p', content: "Learn more from the initiatives below, or at:"},
+    {type: 'link', content: 'https://www.canada.ca/en/services/environment/conservation/sustainability/circular-economy.html', url: 'https://www.canada.ca/en/services/environment/conservation/sustainability/circular-economy.html'}
   ],
   act: {
     initiatives: [
