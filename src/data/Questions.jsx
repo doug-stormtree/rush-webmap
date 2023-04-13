@@ -47,7 +47,7 @@ const layerMap = produce(new Map(), draft => {
   });
 });
 
-export const useMapLayerStore = create((set) => ({
+export const useMapLayerStore = create((set, get) => ({
   layers: layerMap,
   setQuestionLayersActive: (question) =>
     set(
@@ -75,5 +75,6 @@ export const useMapLayerStore = create((set) => ({
       produce((state) => {
         state.layers.get(layerId).layer = leafletLayer;
       })
-    )
+    ),
+  layersLoading: () => [...get().layers].some((l) => l[1].layer === 'loading')
 }));
