@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
-import { Button, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import React, { useEffect } from 'react';
+import { useBreakpointValue } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
-import { LegendDrawer } from './Legend';
+import { LegendDrawerButton } from './Legend';
 import { useMapLayerStore } from '../data/Questions';
 
 const basemap = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
@@ -16,38 +16,29 @@ export const MapData = ({ question }) => {
     (state) => state.setQuestionLayersActive
   );
 
+  // Effect adds all active layers to the map, fetching their data in necessary.
   useEffect(() => {
     // Add Satellite Basemap
     if (!map.hasLayer(basemap)) map.addLayer(basemap);
     
-    const layerKeys = [];
-    const layerPromises = [];
     layers.forEach((el, key) => {
       if (el.active) {
         if (el.layer instanceof L.Layer) {
           map.addLayer(el.layer);
         } else if (el.layer === undefined) {
           setLayerData(key, 'loading');
-          layerKeys.push(key);
-          layerPromises.push(
-            fetch(el.data).then((response) => response.json())
-          );
+          fetch(el.data)
+            .then((response) => response.json())
+            .then((geoJSON) => {
+              const mapLayer = L.geoJSON(
+                geoJSON,
+                layers.get(key).options,
+              );
+              setLayerData(key, mapLayer);
+            });
         }
       }
     });
-
-    Promise.allSettled(layerPromises)
-      .then((results) => results.forEach((result, index) => {
-        if (result.status === 'fulfilled') {
-          const mapLayer = L.geoJSON(
-            result.value,
-            layers.get(layerKeys[index]).options,
-          );
-          setLayerData(layerKeys[index], mapLayer);
-        } else {
-          setLayerData(layerKeys[index], undefined);
-        }
-      }));
 
     return () => {
       layers.forEach(el => {
@@ -56,6 +47,8 @@ export const MapData = ({ question }) => {
     };
   }, [map, layers, setLayerData]);
 
+  // Effect on Question change sets all child layers active, 
+  // deactivates all others.
   useEffect(() => setQuestionLayersActive(question),
     [question, setQuestionLayersActive]);
 
@@ -64,23 +57,12 @@ export const MapData = ({ question }) => {
     base: true,
   }, {ssr:false, fallback:true});
 
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef();
-
-  // Render Legend Control
+  // Render Legend Control on small displays.
   return (
     <>{
       smallDisplay ? (
         <Control position='topright'>
-          <Button ref={btnRef} onClick={onOpen}>
-            Legend
-          </Button>
-          <LegendDrawer
-            activeQuestion={question}
-            btnRef={btnRef}
-            isOpen={isOpen}
-            onClose={onClose}
-          />
+          <LegendDrawerButton activeQuestion={question} />
         </Control>
       ) : null
     }</>
