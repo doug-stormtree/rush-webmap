@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   useDisclosure,
   Avatar,
   Box,
+  Button,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -21,9 +22,63 @@ import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import { useMapLayerStore } from '../data/Questions';
 import FormattedText from './FormattedText';
 
-// Legend Component
+// Wraps Legend in a Box for large screen sizes.
+export const LegendPane = ({ activeQuestion }) => {
+  return (
+    <Box
+    w='lg'
+      p={4}
+      pe={2}
+      overflowY='scroll'
+      boxShadow='inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC'
+      >
+      <Heading size='md' align='center' mb={2}>Legend</Heading>
+      <LegendList activeQuestion={activeQuestion} />
+    </Box>
+  )
+}
+
+// Wraps Legend in a collapsible Drawer for small screen sizes.
+export const LegendDrawerButton = ({ activeQuestion }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
+  const layersLoading = useMapLayerStore((state) => state.layersLoading());
+
+  return (
+    <>
+      <Button
+        ref={btnRef}
+        onClick={onOpen}
+        isLoading={layersLoading}
+        loadingText='Legend'
+      >
+        {'Legend'}
+      </Button>
+      <Drawer
+        isOpen={isOpen}
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        placement='right'
+        size='sm'
+        >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>
+            <Heading size='md' align='center' >Legend</Heading>
+          </DrawerHeader>
+          <DrawerBody>
+            <LegendList activeQuestion={activeQuestion} />
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
+    </>
+  )
+}
+
+// LegendList Component
 //   Builds list of LegendItem components for active question layers.
-export const Legend = ({ activeQuestion }) => {
+const LegendList = ({ activeQuestion }) => {
   const layers = useMapLayerStore((state) => state.layers);
   const legendEntries = [];
   for (const key of layers.keys()) {
@@ -37,46 +92,6 @@ export const Legend = ({ activeQuestion }) => {
     <>
       {legendEntries}
     </>
-  )
-}
-
-// Wraps Legend in a Box for large screen sizes.
-export const LegendPane = ({ activeQuestion }) => {
-  return (
-    <Box
-      w='lg'
-      p={4}
-      pe={2}
-      overflowY='scroll'
-      boxShadow='inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC'
-    >
-      <Heading size='md' align='center' mb={2}>Legend</Heading>
-      <Legend activeQuestion={activeQuestion} />
-    </Box>
-  )
-}
-
-// Wraps Legend in a collapsible Drawer for small screen sizes.
-export const LegendDrawer = ({ activeQuestion, btnRef, isOpen, onClose }) => {
-  return (
-    <Drawer
-      isOpen={isOpen}
-      onClose={onClose}
-      finalFocusRef={btnRef}
-      placement='right'
-      size='sm'
-    >
-      <DrawerOverlay />
-      <DrawerContent>
-        <DrawerCloseButton />
-        <DrawerHeader>
-          <Heading size='md' align='center' >Legend</Heading>
-        </DrawerHeader>
-        <DrawerBody>
-          <Legend activeQuestion={activeQuestion} />
-        </DrawerBody>
-      </DrawerContent>
-    </Drawer>
   )
 }
 
@@ -103,7 +118,7 @@ export const LegendItem = ({ layerId }) => {
           textOverflow='ellipsis'
           display='-webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;'
           whiteSpace='normal'
-        >{layer.title}</FormLabel>
+        >{layer.layer === 'loading' ? "Loading..." : layer.title}</FormLabel>
         <LegendPatch layerId={layerId} flex='0' />
         <IconButton
           variant='ghost'
