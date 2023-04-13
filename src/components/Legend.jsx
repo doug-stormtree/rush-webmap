@@ -15,6 +15,7 @@ import {
   Heading,
   HStack,
   IconButton,
+  Spinner,
   Switch,
   Text,
 } from '@chakra-ui/react';
@@ -52,7 +53,7 @@ export const LegendDrawerButton = ({ activeQuestion }) => {
         isLoading={layersLoading}
         loadingText='Legend'
       >
-        {'Legend'}
+        Legend
       </Button>
       <Drawer
         isOpen={isOpen}
@@ -105,11 +106,20 @@ export const LegendItem = ({ layerId }) => {
   return (
     <>
       <Flex direction='row' alignItems='center' gap={2}>
-        <Switch
-          isChecked={layer.active}
-          onChange={(e) => toggleLayerActive(layerId)}
-          flex='0'
-        />
+        {layer.layer === 'loading' //|| parseInt(layerId.slice(-1)) % 2 === 0
+          ? <Spinner
+              color='blue.500'
+              emptyColor='gray.200'
+              speed='1s'
+              thickness='4px'
+              marginInline='5px'
+            />
+          : <Switch
+              isChecked={layer.active}
+              onChange={(e) => toggleLayerActive(layerId)}
+              flex='0'
+            />
+        }
         <FormLabel
           m='0'
           maxH='2.9rem'
@@ -118,7 +128,7 @@ export const LegendItem = ({ layerId }) => {
           textOverflow='ellipsis'
           display='-webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;'
           whiteSpace='normal'
-        >{layer.layer === 'loading' ? "Loading..." : layer.title}</FormLabel>
+        >{layer.layer === 'loading' ? 'Loading...' : layer.title}</FormLabel>
         <LegendPatch layerId={layerId} flex='0' />
         <IconButton
           variant='ghost'
