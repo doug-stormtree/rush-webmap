@@ -81,8 +81,11 @@ const Naturehood = {
   },
   mapData: [
     {
-      title: "Pollinators",
-      description: 'Greater Victoria/Saanich Peninsula Pollinator Map. Where are the natural areas and gardens that support pollinators in this region?',
+      title: "G.V.S.P. Pollinators Map",
+      description: [
+        {type:'p', content: 'Greater Victoria / Saanich Peninsula Pollinator Map. Where are the natural areas and gardens that support pollinators in this region?'},
+        {type:'link', content: 'Learn more and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=621fe03eba477f0100989741'}
+      ],
       data: Pollinators,
       shape: 'point',
       symbology: 'classified',
@@ -104,7 +107,12 @@ const Naturehood = {
     },
     {
       title: 'Stewardship Groups',
-      description: 'Stewardship groups are volunteer-based community organizations that actively support the environmental health and wellbeing of a specific region, park, or watershed through monitoring programs, invasive species management, public outreach, and governmental advocacy.',
+      description: [
+        {type: 'p', content: 'Stewardship groups are volunteer-based community organizations that actively support the environmental health and wellbeing of a specific region, park, or watershed through monitoring programs, invasive species management, public outreach, and governmental advocacy.'},
+        {type: 'p', content: 'In addition to those shown on the map, the following groups work throughout the Capital Regional District:'},
+        {type: 'link', content: 'Greater Victoria Green Team', url: 'https://greenteamscanada.ca/our-green-teams/greater-victoria-green-team/'},
+        {type: 'link', content: 'Habitat Aquisition Trust', url: 'https://hat.bc.ca/volunteer'}
+      ],
       data: StewardshipGroups,
       shape: 'polygon',
       symbology: 'single',
