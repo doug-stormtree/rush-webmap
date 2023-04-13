@@ -173,7 +173,7 @@ const LegendItemDescription = ({ description }) => {
   if (typeof description === 'string' || description instanceof String)
     return <Text>{description}</Text>;
   if (Array.isArray(description)) {
-    <FormattedText textArray={description} />
+    return <FormattedText textArray={description} />;
   }
   return null;
 }
