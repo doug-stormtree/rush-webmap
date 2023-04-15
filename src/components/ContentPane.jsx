@@ -42,7 +42,7 @@ export default function ContentPane({openFlag, setOpenFlag, question, ...props})
           overflow='auto'
           alignItems='center'
         >
-          <Box maxW='4xl'>
+          <Box maxW='6xl'>
             <Box pb='0.5em'>
               <FormattedText textArray={Questions.get(question).description} />
             </Box>
