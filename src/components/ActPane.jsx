@@ -35,7 +35,7 @@ function InitiativeList({initiatives}) {
       direction="column"
       gap="10px"
       margin="auto"
-      maxW='2xl'
+      maxW='3xl'
       mb='1em'
     >
       {initiatives.map((item, index) =>
