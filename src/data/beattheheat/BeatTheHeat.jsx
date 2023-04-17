@@ -1,4 +1,4 @@
-import { point } from 'leaflet';
+import { point, tileLayer } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import HeatDomes from './HeatDomes.geojson';
 import Parks from './CRD_Parks.geojson';
@@ -24,6 +24,15 @@ const styleMap_Water_Fountains = new Map([
     stroke: '#36F',
     legendText: 'Drinking Fountain',
   }],
+]);
+
+const styleMap_TreeCoverage2005 = new Map([
+  ["1", {legendText: '0 - 5', fillColor: 'rgb(233, 255, 189)'}],
+  ["2", {legendText: '>5 - 10', fillColor: 'rgb(209, 255, 115)'}],
+  ["3", {legendText: '>10 - 25', fillColor: 'rgb(170, 255, 0)'}],
+  ["4", {legendText: '>25 - 50', fillColor: 'rgb(152, 230, 0)'}],
+  ["5", {legendText: '>50 - 75', fillColor: 'rgb(112, 168, 0)'}],
+  ["6", {legendText: '>75 - 100', fillColor: 'rgb(76, 115, 0)'}],
 ]);
 
 const BeatTheHeat = {
@@ -56,6 +65,26 @@ const BeatTheHeat = {
     ],
   },
   mapData: [
+    {
+      title: 'Tree Coverage (2005)',
+      description: [
+        {type:'p', content:'Estimated 2005 Tree Cover Percentage. The data have been created on behalf of the Urban Forest Stewardship Initiative (UFSI), a program of Habitat Acquisition Trust (HAT) by Caslys Consulting Ltd.'},
+        {type:'p', content:'Learn more and compare with other years by reading the report here:'},
+        {
+          type:'link',
+          content:'Caslys Consulting Ltd., 2013. Capital Regional District Land Cover Mapping 1986, 2005 and 2011 Summary Report. Capital Regional District, Victoria.',
+          url:'https://hat.bc.ca/s/CRD_2011_land_cover_EXECUTIVE_summary.pdf'
+        }
+      ],
+      layer: tileLayer(
+        '/TC05_Tiles/{z}/{x}/{y}.png',
+        { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.4 }
+        ),
+      shape: 'tile',
+      symbology: 'classified',
+      legendTitle: 'Percentage of Tree Cover',
+      styleMap: styleMap_TreeCoverage2005,
+    },
     {
       title: 'Local Initiatives',
       description: 'Learn more from these area specific community mapping initiatives by clicking one of these areas on the map and following the link.',
