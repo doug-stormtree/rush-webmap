@@ -10,7 +10,7 @@ import { ReactComponent as CommunityCtrIcon } from './cc.svg';
 import { ReactComponent as LibraryIcon } from './lib.svg';
 import { ReactComponent as WaterIcon } from './water.svg';
 import NorthPark from './NorthPark1.jpg';
-import ClimateAtlas from './CA-logo-colour-whitetext-EN.png';
+import ClimateAtlas from './ClimateAtlas.png';
 
 const styleMap_AC_Buildings = new Map([
   ["Community Centre", {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'}],
@@ -27,11 +27,11 @@ const styleMap_Water_Fountains = new Map([
 ]);
 
 const styleMap_TreeCoverage2005 = new Map([
-  ["1", {legendText: '0 - 5', fillColor: 'rgb(233, 255, 189)'}],
-  ["2", {legendText: '>5 - 10', fillColor: 'rgb(209, 255, 115)'}],
-  ["3", {legendText: '>10 - 25', fillColor: 'rgb(170, 255, 0)'}],
-  ["4", {legendText: '>25 - 50', fillColor: 'rgb(152, 230, 0)'}],
-  ["5", {legendText: '>50 - 75', fillColor: 'rgb(112, 168, 0)'}],
+  ["1", {legendText: '0 - 5', fillColor: 'rgb(200, 38, 0)'}],
+  ["2", {legendText: '>5 - 10', fillColor: 'rgb(177, 70, 0)'}],
+  ["3", {legendText: '>10 - 25', fillColor: 'rgb(152, 89, 0)'}],
+  ["4", {legendText: '>25 - 50', fillColor: 'rgb(126, 101, 0)'}],
+  ["5", {legendText: '>50 - 75', fillColor: 'rgb(101, 110, 0)'}],
   ["6", {legendText: '>75 - 100', fillColor: 'rgb(76, 115, 0)'}],
 ]);
 
