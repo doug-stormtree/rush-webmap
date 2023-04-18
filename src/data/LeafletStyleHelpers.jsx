@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import ReactDOMServer from "react-dom/server";
 import * as L from 'leaflet';
-import { VStack, Heading, Text, Link } from "@chakra-ui/react";
+import { VStack, Heading, Text, Link, Image } from "@chakra-ui/react";
 
 // mapData to Leaflet helper function
 export const pointToIconByProperty = (feature, latlng, property, propertyMap) => {
@@ -41,19 +41,20 @@ export const getStyleMapProperty = (property, key, styleMap) => {
 }
 
 // Leaflet Popup Content
-export const mapPopupContent = (title, desc, link = null, linkText = null) => {
+export const mapPopupContent = (title, desc, link = null, linkText = null, imageURL = null) => {
   if (!title && !desc) return;
   var div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<MapPopup title={title} desc={desc} link={link} linkText={linkText} />);
+  root.render(<MapPopup title={title} desc={desc} link={link} linkText={linkText} imageURL={imageURL} />);
   return div;
 }
 
-const MapPopup = ({title, desc, link, linkText}) => {
+const MapPopup = ({title, desc, link, linkText, imageURL}) => {
   return (
     <VStack>
       <Heading size='xs'><b>{title}</b></Heading>
       <Text>{desc}</Text>
+      {imageURL ? <Image src={imageURL} alt={title}/> : null}
       {link ? <Link href={link} isExternal>{linkText ?? link}</Link> : null}
     </VStack>
   )
