@@ -27,13 +27,14 @@ import FormattedText from './FormattedText';
 export const LegendPane = ({ activeQuestion }) => {
   return (
     <Box
-    w='lg'
+      maxW='md'
+      minW='md'
       p={4}
       pe={2}
       overflowY='scroll'
       boxShadow='inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC'
       >
-      <Heading size='md' align='center' mb={2}>Legend</Heading>
+      <LegendHeader />
       <LegendList activeQuestion={activeQuestion} />
     </Box>
   )
@@ -66,13 +67,22 @@ export const LegendDrawerButton = ({ activeQuestion }) => {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>
-            <Heading size='md' align='center' >Legend</Heading>
+            <LegendHeader />
           </DrawerHeader>
           <DrawerBody>
             <LegendList activeQuestion={activeQuestion} />
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+    </>
+  )
+}
+
+const LegendHeader = () => {
+  return (
+    <>
+      <Heading size='lg' align='center'>Legend</Heading>
+      <Text fontSize='sm' align='right' my='2' me='14px'>Click here for information about each layer ⤵</Text>
     </>
   )
 }
