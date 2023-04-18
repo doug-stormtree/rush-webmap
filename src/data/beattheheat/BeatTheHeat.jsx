@@ -28,11 +28,11 @@ const styleMap_Water_Fountains = new Map([
 
 const styleMap_TreeCoverage2005 = new Map([
   ["1", {legendText: '0 - 5', fillColor: 'rgb(200, 38, 0)'}],
-  ["2", {legendText: '>5 - 10', fillColor: 'rgb(177, 70, 0)'}],
-  ["3", {legendText: '>10 - 25', fillColor: 'rgb(152, 89, 0)'}],
-  ["4", {legendText: '>25 - 50', fillColor: 'rgb(126, 101, 0)'}],
-  ["5", {legendText: '>50 - 75', fillColor: 'rgb(101, 110, 0)'}],
-  ["6", {legendText: '>75 - 100', fillColor: 'rgb(76, 115, 0)'}],
+  ["2", {legendText: '>5 - 10', fillColor: 'rgb(156, 70, 0)'}],
+  ["3", {legendText: '>10 - 25', fillColor: 'rgb(112, 102, 0)'}],
+  ["4", {legendText: '>25 - 50', fillColor: 'rgb(79, 101, 5)'}],
+  ["5", {legendText: '>50 - 75', fillColor: 'rgb(39, 84, 16)'}],
+  ["6", {legendText: '>75 - 100', fillColor: 'rgb(0, 68, 27)'}],
 ]);
 
 const BeatTheHeat = {
@@ -78,7 +78,7 @@ const BeatTheHeat = {
       ],
       layer: tileLayer(
         '/TC05_Tiles/{z}/{x}/{y}.png',
-        { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.4 }
+        { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.5 }
         ),
       shape: 'tile',
       symbology: 'classified',
@@ -113,12 +113,17 @@ const BeatTheHeat = {
       symbology: 'single',
       options: {
         style: {
-          stroke: false,
-          fill: true,
-          opacity: 0.5,
-          fillOpacity: 0.7,
-          fillColor: 'rgba(140,175,74,1.0)',
           interactive: true,
+          stroke: true,
+          weight: 2,
+          dashArray: '',
+          lineCap: 'butt',
+          lineJoin: 'miter',
+          opacity: 0.5,
+          color: 'rgb(115,144,60)',
+          fill: true,
+          fillOpacity: 0.7,
+          fillColor: 'rgb(140,175,74)',
         },
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(f.properties['Name'], f.properties['Type'] + ' with an area of ' + (f.properties['Shape.STArea()']/100000).toFixed(2) + ' km²'), {offset: point(0,8)});
@@ -138,10 +143,10 @@ const BeatTheHeat = {
           dashArray: '',
           lineCap: 'butt',
           lineJoin: 'miter',
-          weight: 1.0,
+          weight: 2,
           fill: true,
           fillOpacity: 0.7,
-          fillColor: 'rgba(189,17,20,1.0)',
+          fillColor: '#FF2226',
           interactive: true
         },
         onEachFeature: (f,l) => {
