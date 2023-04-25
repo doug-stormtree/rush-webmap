@@ -9,7 +9,7 @@ export default function FormattedText({ textArray }) {
     }
     switch (item.type) {
       case 'link':
-        return <Link {...sharedStyles} isExternal href={item.url ?? "#"}>{item.content}</Link>
+        return <Text><Link {...sharedStyles} isExternal href={item.url ?? "#"}>{item.content}</Link></Text>
       case 'h1':
         return <Heading {...sharedStyles}>{item.content}</Heading>
       case 'h2':
