@@ -11,6 +11,7 @@ import { ReactComponent as LibraryIcon } from './lib.svg';
 import { ReactComponent as WaterIcon } from './water.svg';
 import NorthPark from './NorthPark1.jpg';
 import ClimateAtlas from './ClimateAtlas.png';
+import TwoBillionTrees from './2BT.png';
 
 const styleMap_AC_Buildings = new Map([
   ["Community Centre", {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'}],
@@ -41,12 +42,17 @@ const BeatTheHeat = {
   image: image,
   description: [
     {type: 'h2', content: 'Comparison'},
-    {type: 'p', content: 'The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Notice the relationship between heat island areas, green space and dark or paved surfaces.'},
-    {type: 'p', content: 'Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%. Trees, bushes and plants cool the area and drawdown harmful greenhouse gases from the atmosphere. The soil does the work of processing the gases at a rate of 2:1 compared to plants. The partnership between trees, soil, water and the atmosphere is key to having a healthy climate.  The Global Deal for Nature concludes that we need to Protect at least 30% of the planet by 2030 and many urban areas including Saanich have committed to at least 30% urban forest cover so that ecosystems continue to harbour an abundance of species, and provide services essential for human life, including carbon sequestration.'},
+    {type: 'p', content: 'The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Tree coverage shows the areas where more vegetation is needed. Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%.  Hard pavement does not allow the land to breathe and regulate the atmosphere. Cool buildings, parks and drinking fountains can provide essential relief. Notice the relationship between heat island areas, green space and dark or paved surfaces.'},
     {type: 'h2', content: 'Problem'},
-    {type: 'p', content: 'All life is vulnerable to extreme heat. Prolonged heat dries out landscapes, increases risk of fires, can shorten growing seasons for farmers and create conditions for viruses and bacteria to thrive.'},
+    {type: 'p', content: 'All life is vulnerable to extreme heat.  Prolonged heat dries out landscapes,  increases risk of fires, can shorten growing seasons for farmers and create conditions for viruses and bacteria to thrive.  High temperatures also impacts biodiversity by drying out habitats or directly increasing body temperatures. 70% of human sudden deaths recorded in BC during the heat wave of 2021 were due to extreme temperatures.¹'},
     {type: 'h2', content: 'Solution'},
-    {type: 'p', content: 'Taking action to mange temperature and moisture in our neighbourhoods is a key to climate action.  While ocean breezes can cool neighbourhoods closer to the shore,  making more room for trees, plants and soil will support a good microclimate consistently. Decreasing dark non-draining pavement and increasing space for Nature provides many benefits including managing temperature, keeping things moist and recharging the water table, supporting birds and pollinators, increasing property values and enhancing a sense of beauty and wellbeing. Use this map to identify places that need attention, ways to stay cool and protect your community from extreme heat.'},
+    {type: 'p', content: 'While ocean breezes can cool neighbourhoods closer to the shore,  making more room for trees, plants and soil will support a cool microclimate consistently. Trees, bushes and plants cool the area and draw down harmful greenhouse gases from the atmosphere. The soil does the work of processing the gases at a rate of 2:1 compared to plants.²'},
+    {type: 'p', content: 'The Global Deal for Nature concludes that we need to protect at least 30% of the planet by 2030³ and many urban areas including Saanich have committed to at least 30% urban forest cover so that ecosystems continue to harbour an abundance of species, and provide services essential for human life, including carbon sequestration. The partnership between trees, soil, water and the atmosphere is key to having a healthy climate.  Encourage your municipality to increase permeable surfaces and adopt a policy of at least 30% canopy cover.'},
+    {type: 'p', content: 'Decreasing dark non-draining pavement and increasing space for Nature provides many benefits including managing temperature, keeping things moist and recharging the water table, supporting birds and pollinators, increasing property values and enhancing a sense of beauty and wellbeing.'},
+    {type: 'p', content: 'Support community groups working in restoration and taking care of each other. Taking action to manage temperature and moisture in our neighbourhoods is a key to climate action. Use this map to identify places that need attention, ways to stay cool and protect your community from extreme heat.'},
+    {type: 'link', content: '1. CBC News, "70% of sudden deaths recorded during B.C. heat wave were due to extreme temperatures, coroner confirms," July 29, 2021.', url: "https://www.cbc.ca/news/canada/british-columbia/bc-heat-dome-sudden-deaths-570-1.6122316"},
+    {type: 'link', content: '2. Claudia Rivera Cárdenas, Anne-Marie Daniel, "How does nature regulate atmospheric composition?: Formaldehyde removal from air," Proc. SPIE 11586, Bioinspiration, Biomimetics, and Bioreplication XI, 1158609, March 22, 2021.', url: "https://doi.org/10.1117/12.2579919"},
+    {type: 'link', content: '2. Nicole Schwab, Kristin Rechberger, "We need to protect 30% of the planet by 2030. This is how we can do it," World Economic Forum, April 22, 2019.', url: "https://doi.org/10.1117/12.2579919"},
   ],
   act: {
     initiatives: [
@@ -61,6 +67,12 @@ const BeatTheHeat = {
         description: "The Climate Atlas of Canada combines climate science, mapping, and storytelling together with Indigenous Knowledges and community-based research and video to inspire awareness and action.",
         image: ClimateAtlas,
         link: "https://climateatlas.ca/",
+      },
+      {
+        title: "2 Billion Trees Program",
+        description: "The 2 Billion Trees (2BT) program aims to motivate and support new tree planting projects. Over a period of 10 years, by 2031, up to $3.2 billion will be invested in tree planting efforts to support provinces, territories, third-party organizations (for-profit and not-for profit) and Indigenous organizations to plant two billion trees across Canada.",
+        image: TwoBillionTrees,
+        link: "https://www.canada.ca/en/campaign/2-billion-trees/2-billion-trees-program.html",
       },
     ],
   },
