@@ -4,6 +4,8 @@ import image from './image.jpg';
 import climateSalmon from './climate-salmon.png';
 import forageFish from './forage-fish.png';
 import savingOrcas from './saving-orcas.jpg';
+import seaChange from './SeaChange.png';
+import seaLevelRise from './SeaLevelRiseCA.png';
 import CRDInundation from './CRDInundation.geojson';
 import ShorelineSensitivity from './ShorelineSensitivity.geojson';
 
@@ -35,11 +37,30 @@ const Coastal = {
   question: "Am I vulnerable to sea level rise, tsunamis, storm surges?",
   image: image,
   description: [
-    {type: 'p', content: "Extreme water events and sea level rise will increase with the amount of greenhouse gases in the atmosphere because the greenhouse gases impact temperatures around the globe.  Hotter and more polluted atmosphere can melt ice caps and change the way air moves across the surface of the planet."},
-    {type: 'p', content: "By looking at the health of the shoreline and what the ground is made of, we can find places that need more eel grass or sediment to improve and protect the area."},
+    {type: 'h2', content: 'Comparison'},
+    {type: 'p', content: 'Knowing where sea level rise is likely to happen should inform our development and decisions about urban planning. Extreme water events and sea level rise will increase with the amount of greenhouse gases in the atmosphere because the greenhouse gases impact temperatures around the globe.  Hotter and more polluted atmosphere can melt ice caps and change the way air moves across the surface of the planet.'},
+    {type: 'p', content: 'By looking at the health of the shoreline and what the ground is made of, we can find places that need more eel grass or sediment to improve and protect the area.'},
+    {type: 'list', content: [
+      'Clean off boats, paddleboards and kayaks when you finish with them, especially before visiting a new place, to avoid introducing invasive species into the ecosystem.',
+      'Do not litter and dispose of waste properly. Plastic bags can be mistaken for jellyfish and eaten by turtles.',
+      'Use mooring buoys instead of anchoring. By using mooring buoys, you can avoid pulling up eelgrass beds and damaging sensitive ecosystems.',
+      'Use designated pump out stations for boat sewage. This pollution will contaminate and harm marine ecosystems.',
+    ]}
   ],
   act: {
     initiatives: [
+      {
+        title: "SeaChange Marine Conservation Society",
+        link: "https://www.seachangesociety.com",
+        image: seaChange,
+        description: "SeaChange takes action on marine conservation and restoration spills across the Salish Sea. SeaChange works with volunteers, community groups and First Nations to map, monitor and restore eelgrass habitat. SeaChange collaborates to help governments make better decisions about the fate of shorelines and nearshores.",
+      },
+      {
+        title: "Sea Level Rise",
+        link: "https://sealevelrise.ca/map.html",
+        image: seaLevelRise,
+        description: "Connect with coastal stakeholders across the country through this interactive map, which allows you to identify and share your observations and experiences with sea-level rise impacts along Canada's coastline.",
+      },
       {
         title: "Climate Action for Salmon",
         link: "https://storymaps.arcgis.com/stories/9a1164af036041638e75df5cb02bb15a",
