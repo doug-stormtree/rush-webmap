@@ -266,7 +266,7 @@ const PolygonPatchSVG = ({ fill, stroke, dashed = false }) => (
 )
 
 const ClassifiedPatchPolygon = ({ styleMap }) => {
-  const styles = [...styleMap.values()].slice(0,5);
+  const styles = [...styleMap.values()].slice(0,6);
   return (
     <HStack spacing='0'>
       {styles.map((s) => {
