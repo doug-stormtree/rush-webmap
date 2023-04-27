@@ -40,6 +40,10 @@ export const getStyleMapProperty = (property, key, styleMap) => {
   }
 }
 
+export const getStyleMapKeyFromContinuousValue = (value, styleMap) => {
+  return [...styleMap.keys()].sort((a,b)=>a-b).find(e => e >= value);
+};
+
 // Leaflet Popup Content
 export const mapPopupContent = (title, desc, link = null, linkText = null, imageURL = null) => {
   if (!title && !desc) return;
