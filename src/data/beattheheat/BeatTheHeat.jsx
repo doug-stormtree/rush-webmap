@@ -52,7 +52,7 @@ const BeatTheHeat = {
     {type: 'p', content: 'Support community groups working in restoration and taking care of each other. Taking action to manage temperature and moisture in our neighbourhoods is a key to climate action. Use this map to identify places that need attention, ways to stay cool and protect your community from extreme heat.'},
     {type: 'link', content: '1. CBC News, "70% of sudden deaths recorded during B.C. heat wave were due to extreme temperatures, coroner confirms," July 29, 2021.', url: "https://www.cbc.ca/news/canada/british-columbia/bc-heat-dome-sudden-deaths-570-1.6122316"},
     {type: 'link', content: '2. Claudia Rivera Cárdenas, Anne-Marie Daniel, "How does nature regulate atmospheric composition?: Formaldehyde removal from air," Proc. SPIE 11586, Bioinspiration, Biomimetics, and Bioreplication XI, 1158609, March 22, 2021.', url: "https://doi.org/10.1117/12.2579919"},
-    {type: 'link', content: '2. Nicole Schwab, Kristin Rechberger, "We need to protect 30% of the planet by 2030. This is how we can do it," World Economic Forum, April 22, 2019.', url: "https://doi.org/10.1117/12.2579919"},
+    {type: 'link', content: '3. Nicole Schwab, Kristin Rechberger, "We need to protect 30% of the planet by 2030. This is how we can do it," World Economic Forum, April 22, 2019.', url: "https://doi.org/10.1117/12.2579919"},
   ],
   act: {
     initiatives: [
