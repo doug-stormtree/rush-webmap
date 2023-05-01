@@ -19,7 +19,7 @@ const CircularEcon = {
     {type: 'p', content: 'We can practice one of Nature’s key design principles by treating waste as a resource.  This can range from a treasure hunt at yard sales to shopping from businesses that have a zero waste strategy and commitment to climate action and social justice.  For every $100 spent at a local business, its estimated that $68 stays in the community.¹'},
     {type: 'p', content: "BC is a leader in take back programs' known as Extended Producer Responsibility (EPR) which require producers to account for the lifecycle of the products and packaging they sell.² From medications to batteries to packaging and paint, our community is well set up for a high level of recycling and reuse. Consult the Recycling Council of BC website if you don't know what to do with something. Support developments that co-locate buildings and businesses that can use each other's waste heat and energy."},
     {type: 'p', content: 'By treating waste as a resource, we:'},
-    {type: 'list', content: [
+    {type: 'ul', content: [
       'improve the local economy,',
       'create a stronger community,',
       'avoid pollution and greenhouse gas emissions from transportation,',
