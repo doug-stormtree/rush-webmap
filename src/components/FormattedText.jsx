@@ -1,5 +1,12 @@
 import React from 'react';
-import { Heading, Link, Text, VStack } from '@chakra-ui/react';
+import {
+  Heading,
+  Link,
+  ListItem,
+  OrderedList,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 export default function FormattedText({ textArray }) {
   const components = textArray.map((item, index) => {
@@ -15,9 +22,13 @@ export default function FormattedText({ textArray }) {
       case 'h2':
         return <Heading {...sharedStyles} size='md'>{item.content}</Heading>
       case 'list':
-        return <VStack {...sharedStyles} ps='2em' align='left' spacing='0.5em'>{
-            item.content.map((v,i) => <Text key={i}>{`${i+1}. ${v}`}</Text>)
-          }</VStack>
+        return <OrderedList {...sharedStyles} ps='2em'>{
+            item.content.map((v,i) => <ListItem key={i}>{v}</ListItem>)
+          }</OrderedList>
+      case 'ul':
+        return <UnorderedList {...sharedStyles} ps='2em'>{
+            item.content.map((v,i) => <ListItem key={i}>{v}</ListItem>)
+          }</UnorderedList>
       default:
         return <Text {...sharedStyles}>{item.content}</Text>
     }
