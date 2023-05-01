@@ -4,8 +4,8 @@ import {
   getStyleMapProperty,
   getStyleMapKeyFromContinuousValue
 } from '../LeafletStyleHelpers';
-import image from './image.jpg';
-import ClimateEmg from './ClimateEmergecy.jpg';
+import image from './LightFootprint.png';
+import ClimateEmg from './ClimateEmergencyReportCard.png';
 import GovCan from './GovCan.png';
 import GoElectric from './GoElectric.png';
 import CRDLocalGovGHG from './CRDLocalGovGHG.geojson';

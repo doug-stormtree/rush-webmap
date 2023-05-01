@@ -1,7 +1,8 @@
 import { point } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import image from './image.jpg';
-import birdlife from './birdlife.jpg';
+import image from './Naturehood.png';
+import birdlife from './Birdlife.png';
+import CRDEducational from './CRDEducational.png';
 import Pollinators from './Pollinators.geojson';
 import StewardshipGroups from './StewardshipGroups.geojson';
 import { ReactComponent as IconA } from './5c311b3537407e1f05ac3946.svg';
@@ -65,9 +66,13 @@ const Naturehood = {
   question: "What is the Nature of this place?",
   image: image,
   description: [
-    {type: 'p', content: "Where are the natural areas and gardens that support pollinators in this region?"},
-    {type: 'p', content: "Learn more or contribute sites to the map at:"},
-    {type: 'link', content: "https://new.opengreenmap.org/browse/sites?map=621fe03eba477f0100989741", url: "https://new.opengreenmap.org/browse/sites?map=621fe03eba477f0100989741"},
+    {type: 'h2', content: 'Comparison'},
+    {type: 'p', content: 'The blue polygons mark areas where communities are actively restoring watersheds and natural spaces to bring back the smooth functioning of the ecosystem. Click on the play buttons to learn more about the work being done. The icons represent natural features and gardens that are good for pollinators like bees, butterflies, birds and snails. These areas are being plotted to track how well pollinator habitats are connected to make sure Nature has enough space and range for a healthy populations and food sources.'},
+    {type: 'h2', content: 'Problem'},
+    {type: 'p', content: 'Pollinators are essential to our food production and pollination relies on the health of our wild ecosystems to happen. Many of our pollinators are facing extinction around the globe due to development and fragmentation of habitat, the absence of the food they need, pesticide use (neonicotinoids), invasive species, general pollution and climate change.  Watersheds have been altered by human settlement affecting the key corridors that naturally are home to these creatures.  The "concrete jungle" is more likely to create poverty and impact the health of the area. A 2022 Nature Canada Report revealed that the percentage of tree canopy is much lower in low-income and racialized neighbourhoods.¹ In October 2022, Vancouver Island’s chief medical officer, Dr. Reka Gustafson says she wants to tackle mental health and track how climate change is making these inequities more pronounced.²'},
+    {type: 'h2', content: 'Solution'},
+    {type: 'p', content: 'We are Nature and a healthy ecosystem means a better health outlook for everyone. Transforming the concrete jungle into a smooth running urban ecosystem means good food, clean water, fresh air, a good soundscape and a sense of wellbeing for everyone.  Research shows that being in Nature and the sounds of Nature create wellbeing but there is also a warning that the less we are around Nature, the less we care and become less likely to protect our life-support systems.'},
+    {type: 'p', content: 'Plant and plot your pollinator garden. Support community groups in their work to extend the reach of ecosystems and heal watersheds. Let Nature know you care and you’ll feel the love right back atcha.'},
   ],
   act: {
     initiatives: [
@@ -76,6 +81,12 @@ const Naturehood = {
         image: birdlife,
         link: "https://www.birdlife.org/what-we-do/",
         description: "BirdLife International's mission is to conserve birds, their habitats, and global biodiversity, working with people toward sustainability in the use of natural resources."
+      },
+      {
+        title: 'CRD Educational Resources',
+        image: CRDEducational,
+        link: 'https://www.crd.bc.ca/education/school-programs/education-resources#tab-5',
+        description: 'The Capital Regional District has published a number of identification charts and fact sheets about the living things that can be found in our regional parks. Follow the link to learn about local mosses, seaweeds, lichens, shoreline birds and more!'
       }
     ],
   },

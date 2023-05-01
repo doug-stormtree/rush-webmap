@@ -1,11 +1,12 @@
 import * as L from 'leaflet';
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import image from './image.jpg';
-import climateSalmon from './climate-salmon.png';
-import forageFish from './forage-fish.png';
-import savingOrcas from './saving-orcas.jpg';
+import image from './ProtectTheCoast.png';
+import climateSalmon from './ClimateActionSalmon.png';
+import forageFish from './ForageFishSalishSea.png';
+import savingOrcas from './SavingOrcas.png';
 import seaChange from './SeaChange.png';
-import seaLevelRise from './SeaLevelRiseCA.png';
+import seaLevelRise from './SeaLevelRise.png';
+import surfrider from './Surfrider.png';
 import CRDInundation from './CRDInundation.geojson';
 import ShorelineSensitivity from './ShorelineSensitivity.geojson';
 
@@ -62,6 +63,12 @@ const Coastal = {
         description: "Connect with coastal stakeholders across the country through this interactive map, which allows you to identify and share your observations and experiences with sea-level rise impacts along Canada's coastline.",
       },
       {
+        title: 'Surfrider',
+        link: 'https://canada.surfrider.org/',
+        image: surfrider,
+        description: 'Surfrider Foundation Canada is dedicated to the protection and enjoyment of the ocean, beaches, and waves, for all people, through a powerful activist network.'
+      },
+      {
         title: "Climate Action for Salmon",
         link: "https://storymaps.arcgis.com/stories/9a1164af036041638e75df5cb02bb15a",
         image: climateSalmon,
@@ -77,7 +84,7 @@ const Coastal = {
         title: "Saving Orcas",
         link: "https://elc.uvic.ca/publications/saving-orcas/",
         image: savingOrcas,
-        description: "Saving Orcas by Protecting Fish Spawning Beaches. Report prepared for the World Wildlife Fund Canada providing law reform recommendations for protecting forage fish populations and Southern Resident orcas."
+        description: "Saving Orcas by Protecting Fish Spawning Beaches. Report prepared for the World Wildlife Fund Canada providing law reform recommendations for protecting forage fish populations and Southern Resident orcas. Produced by the Environmental Law Society at the University of Victoria."
       }
     ],
   },

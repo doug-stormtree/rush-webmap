@@ -5,13 +5,13 @@ import Parks from './CRD_Parks.geojson';
 import AC_Buildings from './AC_Buildings.geojson';
 import Water_Fountains from './VictoriaDrinkingFountains.geojson';
 import Links from './BeatTheHeat_Links.geojson';
-import image from './BeatTheHeat.jpg';
+import image from './BeatTheHeat.png';
 import { ReactComponent as CommunityCtrIcon } from './cc.svg';
 import { ReactComponent as LibraryIcon } from './lib.svg';
 import { ReactComponent as WaterIcon } from './water.svg';
-import NorthPark from './NorthPark1.jpg';
+import NorthPark from './NorthPark.png';
 import ClimateAtlas from './ClimateAtlas.png';
-import TwoBillionTrees from './2BT.png';
+import TwoBillionTrees from './2BillionTrees.png';
 
 const styleMap_AC_Buildings = new Map([
   ["Community Centre", {icon: (<CommunityCtrIcon />), fill: '#36F', stroke: '#36F', legendText: 'Community Centre'}],
@@ -53,6 +53,7 @@ const BeatTheHeat = {
     {type: 'link', content: '1. CBC News, "70% of sudden deaths recorded during B.C. heat wave were due to extreme temperatures, coroner confirms," July 29, 2021.', url: "https://www.cbc.ca/news/canada/british-columbia/bc-heat-dome-sudden-deaths-570-1.6122316"},
     {type: 'link', content: '2. Claudia Rivera Cárdenas, Anne-Marie Daniel, "How does nature regulate atmospheric composition?: Formaldehyde removal from air," Proc. SPIE 11586, Bioinspiration, Biomimetics, and Bioreplication XI, 1158609, March 22, 2021.', url: "https://doi.org/10.1117/12.2579919"},
     {type: 'link', content: '3. Nicole Schwab, Kristin Rechberger, "We need to protect 30% of the planet by 2030. This is how we can do it," World Economic Forum, April 22, 2019.', url: "https://doi.org/10.1117/12.2579919"},
+    {type: 'link', content: 'Cover photo by DESIGNECOLOGIST on Unsplash, July 20, 2021. Red sun over Toronto during wildfire season.', url: 'https://unsplash.com/photos/Y1CLEQZX-jc'}
   ],
   act: {
     initiatives: [

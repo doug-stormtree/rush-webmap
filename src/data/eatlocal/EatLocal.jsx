@@ -1,6 +1,7 @@
 import { point } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import image from './image.jpg';
+import image from './EatLocal.png';
+import IyeCreative from './IyéCreative.png';
 import OurFoodFuture from './OurFoodFuture.png';
 import FoodSecurity from './FoodSecurity.geojson';
 import { ReactComponent as EcoJustice } from './Eco-justice organization.svg';
@@ -22,10 +23,21 @@ const EatLocal = {
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
   image: image,
   description: [
-    {type: 'p', content: "Lorem."},
+    {type: 'h2', content: 'Comparison'},
+    {type: 'p', content: 'ALR lands in production. Watershed health. Green space. Processing plants. Local foods initiatives/markets.'},
+    {type: 'h2', content: 'Problem'},
+    {type: 'p', content: 'Three days food supply on the island in an emergency.  Watersheds overwhelmed by agricultural runoff and road runoff.  Biodiveristy is key to food security. cultural harvesting interrupted by watershed health and improper application of conservation policy. Access to fresh cultural foods.'},
+    {type: 'h2', content: 'Solution'},
+    {type: 'p', content: 'Support local foods.'},
   ],
   act: {
     initiatives: [
+      {
+        title: 'Iyé Creative',
+        image: IyeCreative,
+        link: 'https://www.iyeherstories.com/',
+        description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.'
+      },
       {
         title: "Our Food Future",
         image: OurFoodFuture,

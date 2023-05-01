@@ -1,5 +1,5 @@
-import image from './image.jpg';
-import projectZero from './ProjectZero.jpg';
+import image from './CircularEconomy.png';
+import projectZero from './ProjectZero.png';
 import sIPP from './SIPP.png';
 import zeroWasteVictoria from './ZeroWasteVictoria.png';
 import recycleCBC from './RecycleCBC.png';
@@ -7,12 +7,27 @@ import bcGreenBusiness from './BCGreenBusiness.png';
 
 const CircularEcon = {
   title: 'Circular Economy?',
-  question: 'How can I participate in circular economies?',
+  question: 'How can I close the loop on waste?',
   image: image,
   description: [
-    {type: 'p', content: "The Government of Canada defines the circular economy as retaining and recovering as much value as possible from resources through reuse, repair, refurbishment, remanufacture, or recycling existing products and materials. Innovative approaches to resource use and product lifespan reduces pressure on our environment and benefits the economy as a whole."},
-    {type: 'p', content: "Learn more from the initiatives below, or at:"},
-    {type: 'link', content: 'https://www.canada.ca/en/services/environment/conservation/sustainability/circular-economy.html', url: 'https://www.canada.ca/en/services/environment/conservation/sustainability/circular-economy.html'}
+    {type: 'h2', content: 'Comparison'},
+    {type: 'p', content: 'Landfill vs. Depot Value lost, value gained. Asset impacted creatures and place. Multiple risks. Where does it go? Lost value. Waste volumes and toxic sites vs. recycling reuse and Green Biz.'},
+    {type: 'h2', content: 'Problem'},
+    {type: 'p', content: 'Trash and pollution end up in watersheds and the ocean. Landfills are reaching capacity and emit powerful GHGs.'},
+    {type: 'h2', content: 'Opportunity'},
+    {type: 'p', content: 'Biochar.'},
+    {type: 'p', content: 'We can practice one of Nature’s key design principles by treating waste as a resource.  This can range from a treasure hunt at yard sales to shopping from businesses that have a zero waste strategy and commitment to climate action and social justice.  For every $100 spent at a local business, its estimated that $68 stays in the community.¹'},
+    {type: 'p', content: "BC is a leader in take back programs' known as Extended Producer Responsibility (EPR) which require producers to account for the lifecycle of the products and packaging they sell.² From medications to batteries to packaging and paint, our community is well set up for a high level of recycling and reuse. Consult the Recycling Council of BC website if you don't know what to do with something. Support developments that co-locate buildings and businesses that can use each other's waste heat and energy."},
+    {type: 'p', content: 'By treating waste as a resource, we:'},
+    {type: 'list', content: [
+      'improve the local economy,',
+      'create a stronger community,',
+      'avoid pollution and greenhouse gas emissions from transportation,',
+      'divert waste from the landfill,',
+      'reduce stress on our environment,',
+      'encourage innovation,',
+      'and invest in health and wellbeing.'
+    ]},
   ],
   act: {
     initiatives: [
