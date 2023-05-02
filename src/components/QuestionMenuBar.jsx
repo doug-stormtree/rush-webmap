@@ -4,7 +4,7 @@ import QuestionButton from './QuestionButton';
 import Questions from '../data/Questions';
 
 export default function QuestionMenuBar({
-  activeQuestion, setActiveQuestion
+  activeQuestion, setActiveQuestion, style
 }) {
   const questionButtons = [];
   Questions.forEach((q,k) => {
@@ -29,6 +29,7 @@ export default function QuestionMenuBar({
       overflowX='auto'
       _before={{ content:'""', margin: 'auto' }}
       _after={{ content:'""', margin: 'auto' }}
+      {...style}
     >
       {questionButtons}
     </Flex>
