@@ -9,10 +9,12 @@ import {
 import {
   useBoolean,
   useBreakpointValue,
-  Box,
   ChakraProvider,
+  Box,
   Flex,
+  IconButton,
 } from '@chakra-ui/react';
+import { FaChevronUp } from 'react-icons/fa';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
@@ -161,6 +163,14 @@ function WebMap() {
         openFlag={openContentFlag}
         setOpenFlag={setOpenContentFlag}
         question={activeQuestion}
+      />
+      <IconButton
+        icon={<FaChevronUp />}
+        position='sticky'
+        bottom='16px'
+        left='calc(100% - 56px)'
+        zIndex='2'
+        onClick={() => window.scrollTo({top:0,behavior:'smooth'})}
       />
     </Box>
   );
