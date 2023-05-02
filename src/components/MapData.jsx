@@ -53,7 +53,7 @@ export const MapData = ({ question }) => {
     [question, setQuestionLayersActive]);
 
   const smallDisplay = useBreakpointValue({
-    lg: false,
+    xl: false,
     base: true,
   }, {ssr:false, fallback:true});
 

@@ -27,13 +27,11 @@ import FormattedText from './FormattedText';
 export const LegendPane = ({ activeQuestion }) => {
   return (
     <Box
-      maxW='md'
-      minW='md'
+      w='lg'
       p={4}
       pe={2}
       overflowY='scroll'
-      boxShadow='inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC'
-      >
+    >
       <LegendHeader />
       <LegendList activeQuestion={activeQuestion} />
     </Box>

@@ -9,6 +9,7 @@ import {
 import {
   useBoolean,
   useBreakpointValue,
+  Box,
   ChakraProvider,
   Flex,
 } from '@chakra-ui/react';
@@ -104,21 +105,28 @@ function WebMap() {
 
   // Handle Legend Display on Small Screens
   const smallDisplay = useBreakpointValue({
-    lg: false,
+    xl: false,
     base: true,
   },{ssr:false, fallback:true});
 
   return (
-    <Flex
-    direction='column'
-    h={vh}
+    <Box
+      minH={vh}
     >
-      <NavBar flex='0' getShareURL={getShareURL}/>
+      <NavBar
+        h='40px'
+        position='sticky'
+        top='0px'
+        zIndex='3'
+        boxShadow='0px 0px 8px 2px #888'
+        getShareURL={getShareURL}
+      />
       <Flex
-        flex='1'
+        h={`calc(0.6 * ${vh})`}
+        position='sticky'
+        top='40px'
         direction='row'
-        h='100%'
-        minH='0'
+        zIndex='0'
       >
         <MapView
           flex='1'
@@ -135,18 +143,26 @@ function WebMap() {
         }
       </Flex>
       <QuestionMenuBar
-        flex='0'
+        style={{
+          backgroundColor:'white',
+          position:'sticky',
+          top:'40px',
+          zIndex:'2',
+          //borderRadius:'16px 16px 0 0',
+          boxShadow:'0px 0px 8px 2px #888'
+        }}
         activeQuestion={activeQuestion}
         setActiveQuestion={setActiveQuestion}
       />
       <ContentPane
-        flex='0'
-        maxH='25%'
+        backgroundColor='white'
+        position='relative'
+        zIndex='1'
         openFlag={openContentFlag}
         setOpenFlag={setOpenContentFlag}
         question={activeQuestion}
       />
-    </Flex>
+    </Box>
   );
 }
 
