@@ -119,7 +119,7 @@ function WebMap() {
         h='40px'
         position='sticky'
         top='0px'
-        zIndex='3'
+        zIndex='10'
         boxShadow='0px 0px 8px 2px #888'
         getShareURL={getShareURL}
       />
@@ -149,7 +149,7 @@ function WebMap() {
           backgroundColor:'white',
           position:'sticky',
           top:'40px',
-          zIndex:'2',
+          zIndex:'9',
           //borderRadius:'16px 16px 0 0',
           boxShadow:'0px 0px 8px 2px #888'
         }}
@@ -159,7 +159,7 @@ function WebMap() {
       <ContentPane
         backgroundColor='white'
         position='relative'
-        zIndex='1'
+        zIndex='8'
         openFlag={openContentFlag}
         setOpenFlag={setOpenContentFlag}
         question={activeQuestion}
@@ -169,7 +169,7 @@ function WebMap() {
         position='sticky'
         bottom='16px'
         left='calc(100% - 56px)'
-        zIndex='2'
+        zIndex='10'
         onClick={() => window.scrollTo({top:0,behavior:'smooth'})}
       />
     </Box>
