@@ -91,7 +91,7 @@ function WebMap() {
   const map = useRef(null);
   // Function to invalidate Leaflet map size
   const invalidateMap = () => { 
-    if (map.current) map.current.invalidateSize(); 
+    if (map.current) map.current.invalidateSize();
   }
   useEffect(invalidateMap, [openContentFlag, activeQuestion, vh]);
 
@@ -124,11 +124,11 @@ function WebMap() {
         getShareURL={getShareURL}
       />
       <Flex
-        h={`calc(0.6 * ${vh})`}
+        h={`60vh`}
         position='sticky'
         top='40px'
         direction='row'
-        zIndex='0'
+        //zIndex='-1'
       >
         <MapView
           flex='1'
@@ -158,19 +158,19 @@ function WebMap() {
       />
       <ContentPane
         backgroundColor='white'
-        position='relative'
-        zIndex='8'
+        position='sticky'
         openFlag={openContentFlag}
         setOpenFlag={setOpenContentFlag}
         question={activeQuestion}
       />
       <IconButton
         icon={<FaChevronUp />}
+        onClick={() => window.scrollTo({top:0,behavior:'smooth'})}
+        aria-label='scroll to top'
+        title='Scroll to top'
         position='sticky'
         bottom='16px'
         left='calc(100% - 56px)'
-        zIndex='10'
-        onClick={() => window.scrollTo({top:0,behavior:'smooth'})}
       />
     </Box>
   );
