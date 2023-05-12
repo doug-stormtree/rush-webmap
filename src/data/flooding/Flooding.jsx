@@ -22,7 +22,7 @@ const Flooding = {
   image: image,
   description: [
     {type: 'h2', content: "Comparison"},
-    {type: 'p', content: 'Impermeable surfaces, sea level rise, watersheds, rain gardens, restoration groups and restoration sites, green spaces (wetlands, forests), soil type.'},
+    {type: 'p', content: 'Sea level rise, watersheds, raingardens.'},
     {type: 'h2', content: 'Problem'},
     {type: 'p', content: 'As our atmosphere and oceans get warmer, the seasons, cloud patterns and ocean currents change, which in turn affects how much rain and snow we get and when. Too much rain or snow can cause erosion and the collapse of land areas, flood our communities, damage infrastructure and back up sewer systems.'},
     {type: 'p', content: 'In 2021, the atmospheric rivers brought so much water to BC that the land could not absorb it fast enough. This created intense flooding and resulted in damages that cost over 1 billion dollars in federal disaster aid and harmed the quality of life for people, animals, ecosystems.¹ Many communities were displaced and the food production industry that operates in southern BC was severely impacted. Investigations revealed that we knew our infrastructure and built environment were vulnerable but did not prioritize it.'},
@@ -34,7 +34,8 @@ const Flooding = {
     {type: 'list', content: [
       'Avoid using pesticides, especially chemical slug bait that can poison snakes (which eat the slugs).',
       'Keep manure piles away from creek and stream beds to avoid adding too many nutrients (nitrogen) to the watershed, decreasing oxygen levels.',
-    ]}
+    ]},
+    {type: 'link', content: '1. The Canadian Press, "Federal disaster aid program for 2021 B.C. floods now tops $1 billion," The Abbotsford News, February 23, 2023.', url: 'https://www.abbynews.com/news/federal-disaster-aid-program-for-2021-b-c-floods-now-tops-1-billion/'},
   ],
   act: {
     initiatives: [
@@ -42,7 +43,7 @@ const Flooding = {
         title: "Rain Gardens",
         image: rainGardenStoryMapImage,
         link: "https://storymaps.arcgis.com/stories/bade971de06f4502af700ecb844f3fb5",
-        description: "A rain garden is any landscaping that absorbs and filters rainwater runoff from a nearby impervious surface, which is any surface that does not allow water infiltration, such as a roof, driveway, parking lot or street. Learn more in this StoryMap created by UVic Community Mapping students."
+        description: "A rain garden is any landscaping that absorbs and filters rainwater runoff from a nearby impervious surface, which is any surface that does not allow water infiltration, such as a roof, driveway, parking lot or street. Learn more in this StoryMap created by UVic Community Mapping students Jared Leary, Aiden Foxcroft, Grace Long, and Olivia Graham."
       },
       {
         title: 'Watersheds BC',
