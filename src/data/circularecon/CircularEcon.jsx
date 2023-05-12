@@ -117,7 +117,7 @@ const CircularEcon = {
           l.bindPopup(mapPopupContent(
             f.properties['Name'],
             image=<HartlandPie />,
-            ), {offset: point(4.5,2)});
+            ), {offset: point(0,-72)});
         }
       }
     },
