@@ -7,7 +7,6 @@ import {
   useParams,
 } from 'react-router-dom';
 import {
-  useBoolean,
   useBreakpointValue,
   ChakraProvider,
   Box,
