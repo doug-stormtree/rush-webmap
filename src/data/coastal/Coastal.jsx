@@ -7,6 +7,8 @@ import savingOrcas from './SavingOrcas.png';
 import seaChange from './SeaChange.png';
 import seaLevelRise from './SeaLevelRise.png';
 import surfrider from './Surfrider.png';
+import engageNBS from './EngageNBS.png';
+import ibcNBS from './IbcNBS.png';
 import CRDInundation from './CRDInundation.geojson';
 import ShorelineSensitivity from './ShorelineSensitivity.geojson';
 import HardShorelines from './HardShorelines.geojson'
@@ -45,8 +47,13 @@ const Coastal = {
   image: image,
   description: [
     {type: 'h2', content: 'Comparison'},
-    {type: 'p', content: 'Knowing where sea level rise is likely to happen should inform our development and decisions about urban planning. Extreme water events and sea level rise will increase with the amount of greenhouse gases in the atmosphere because the greenhouse gases impact temperatures around the globe.  Hotter and more polluted atmosphere can melt ice caps and change the way air moves across the surface of the planet.'},
-    {type: 'p', content: 'By looking at the health of the shoreline and what the ground is made of, we can find places that need more eel grass or sediment to improve and protect the area.'},
+    {type: 'p', content: 'By comparing sea level rise scenarios, coastal sensitivity ratings and the potential for salt water to get into the groundwater table, we can identify the places that need  our attention now.  If we can plan and protect, then we can adapt our built environment to be more resilient and robust into the future.'},
+    {type: 'h2', content: 'Problem'},
+    {type: 'p', content: 'Our community conversations and decisions about housing and development must be  informed by potential sea level rise and climate risk data. The frequency of extreme water events and sea level rise will increase relative to greenhouse gases in the atmosphere which trap heat around the globe.  Hotter and more polluted atmosphere can melt ice caps and change the way air moves across the surface of the planet.  If we don’t consider the potential impacts of sea level on the land and the water table, we risk flooding we are not prepared for and a fresh water scarcity.'},
+    {type: 'h2', content: 'Solution'},
+    {type: 'p', content: 'Eel grass, bull kelp and coral reefs are all natural models that contribute to a resilient coast line in a variety of ways. Nature-based solutions (NBS) is a term used for strategic natural infrastructure that copies and amplifies Nature’s designs in places that are vulnerable. This form of development which includes restoration and conservation of natural systems can inform better insurance rates and property values (Learn more about Nature-based Insurance Solutions below in the initiatives).'},
+    {type: 'p', content: 'Integrating NBS has many benefits including: mitigating storm surges, managing flood risks, carbon drawdown, supporting biodiversity, the food web and a resilient coast line. The health of the shoreline and the water table are important considerations in protecting communities in the face of climate change. Please see the Initiatives section below for more information on Nature-based solutions.'},
+    {type: 'p', content: 'What can I do:'},
     {type: 'list', content: [
       'Clean off boats, paddleboards and kayaks when you finish with them, especially before visiting a new place, to avoid introducing invasive species into the ecosystem.',
       'Do not litter and dispose of waste properly. Plastic bags can be mistaken for jellyfish and eaten by turtles.',
@@ -57,22 +64,34 @@ const Coastal = {
   act: {
     initiatives: [
       {
+        title: "Engage with Nature-based Solutions",
+        link: "https://www.engagewithnbs.ca/",
+        image: engageNBS,
+        description: "Engage with Nature-Based Solutions is a new initiative to support communities who apply nature-based solutions to their local lands and waters. Nature-based solutions support the health of natural systems, while addressing societal challenges.",
+      },
+      {
         title: "SeaChange Marine Conservation Society",
         link: "https://www.seachangesociety.com",
         image: seaChange,
         description: "SeaChange takes action on marine conservation and restoration spills across the Salish Sea. SeaChange works with volunteers, community groups and First Nations to map, monitor and restore eelgrass habitat. SeaChange collaborates to help governments make better decisions about the fate of shorelines and nearshores.",
       },
       {
-        title: "Sea Level Rise",
-        link: "https://sealevelrise.ca/map.html",
-        image: seaLevelRise,
-        description: "Connect with coastal stakeholders across the country through this interactive map, which allows you to identify and share your observations and experiences with sea-level rise impacts along Canada's coastline.",
+        title: "Insurance Bureau of Canada",
+        link: "http://www.ibc.ca/on/disaster/nature-based-solutions",
+        image: ibcNBS,
+        description: "A Nature-based Insurance Solution (NBIS) is an insurance framework that provides financial compensation or reimbursement against losses derived from damage to a natural asset – such as wetland, forest, beach, or other natural structure – based on predetermined risks coverage limits.",
       },
       {
         title: 'Surfrider',
         link: 'https://canada.surfrider.org/',
         image: surfrider,
         description: 'Surfrider Foundation Canada is dedicated to the protection and enjoyment of the ocean, beaches, and waves, for all people, through a powerful activist network.'
+      },
+      {
+        title: "Sea Level Rise",
+        link: "https://sealevelrise.ca/map.html",
+        image: seaLevelRise,
+        description: "Connect with coastal stakeholders across the country through this interactive map, which allows you to identify and share your observations and experiences with sea-level rise impacts along Canada's coastline.",
       },
       {
         title: "Climate Action for Salmon",

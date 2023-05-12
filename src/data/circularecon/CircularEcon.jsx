@@ -23,13 +23,14 @@ const CircularEcon = {
   image: image,
   description: [
     {type: 'h2', content: 'Comparison'},
-    {type: 'p', content: 'Landfill vs. Depot Value lost, value gained. Asset impacted creatures and place. Multiple risks. Where does it go? Lost value. Waste volumes and toxic sites vs. recycling reuse and Green Biz.'},
+    {type: 'p', content: 'This map shows the lost value in volumes of waste materials going to the landfill or that we are paying to dispose of outside the region as compared to the places we can turn waste into a resource and create circular systems to gain value.  Facilities are identified for safe and productive disposal of common materials so that value can be redeemed which reduces harmful gases and pollutants from entering the soil, air and water.'},
     {type: 'h2', content: 'Problem'},
-    {type: 'p', content: 'Trash and pollution end up in watersheds and the ocean. Landfills are reaching capacity and emit powerful GHGs.'},
-    {type: 'h2', content: 'Opportunity'},
-    {type: 'p', content: 'Biochar.'},
-    {type: 'p', content: 'We can practice one of Nature’s key design principles by treating waste as a resource.  This can range from a treasure hunt at yard sales to shopping from businesses that have a zero waste strategy and commitment to climate action and social justice.  For every $100 spent at a local business, its estimated that $68 stays in the community.¹'},
-    {type: 'p', content: "BC is a leader in take back programs' known as Extended Producer Responsibility (EPR) which require producers to account for the lifecycle of the products and packaging they sell.² From medications to batteries to packaging and paint, our community is well set up for a high level of recycling and reuse. Consult the Recycling Council of BC website if you don't know what to do with something. Support developments that co-locate buildings and businesses that can use each other's waste heat and energy."},
+    {type: 'p', content: 'Trash and pollution end up in watersheds and the ocean.  Landfills are reaching capacity and emit powerful GHG’s. When materials are mixed during disposal it is more difficult to regain the value of the material later.  New materials generally have a higher green house gas footprint from sourcing, processing/manufacturing and transportation. Communities. organizations and businesses often pay for disposal and also lose the potential value of keeping things in circulation.  About 340,000 tonnes of plastic items and packaging were thrown away in 2019 in BC and 40% of plastic is used only once.¹'},
+    {type: 'h2', content: 'Solution'},
+    {type: 'p', content: 'We can practice one of Nature’s key design principles by treating waste as a resource.  This can range from a treasure hunt at yard sales to shopping from businesses that have a zero waste strategy and commitment to climate action and social justice.  Municipalities are also now empowered to ban plastic bags and single use plastics without provincial approval - a change lead by Esquimalt, Saanich and Victoria.'},
+    {type: 'p', content: 'BC is a leader in "take back programs" known as Extended Producer Responsibility (EPR) which  require producers to account for the lifecycle of the products and packaging they sell.  From medications to batteries to packaging and paint, our community is well set up for a high level of recycling and reuse.  BC’s EPR programs currently recapture 315,000 tonnes of plastics found in various products.²'},
+    {type: 'p', content: 'Consult the Recycling Council of BC website (linked in the initiatives below) if you don’t know what to do with something.'},
+    {type: 'p', content: 'Integrated Resource Recovery is a name for developments that co-locate buildings and businesses that can use each other’s waste heat, materials & energy. Some municipalities around the world have created local biogas fuel sources that are owned and operated by the local government creating a level of autonomy and sustainability that is impressive and practical.³'},
     {type: 'p', content: 'By treating waste as a resource, we:'},
     {type: 'ul', content: [
       'improve the local economy,',
@@ -40,6 +41,9 @@ const CircularEcon = {
       'encourage innovation,',
       'and invest in health and wellbeing.'
     ]},
+    {type: 'link', content: '1. "Reducing plastic waste, pollution a shared responsibility," BC Gov News, Ministry of Environment and Climate Change Strategy, February 12, 2021.', url: 'https://news.gov.bc.ca/releases/2021ENV0014-000263'},
+    {type: 'link', content: '2. "Turning used plastic into new opportunity," BC Gov News, Ministry of Environment and Climate Change Strategy, May 19, 2021.', url: 'https://news.gov.bc.ca/releases/2021ENV0037-000955'},
+    {type: 'link', content: '3. "Karpalund Biogas Plant, Kristianstad," UN Climate Technology Centre & Network, accessed May 11, 2023.', url: 'https://www.ctc-n.org/products/karpalund-biogas-plant-kristianstad'},
   ],
   act: {
     initiatives: [

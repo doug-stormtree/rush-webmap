@@ -1,6 +1,7 @@
 import { point } from 'leaflet';
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './image.jpg';
+import engageNBS from './EngageNBS.png';
 import ALR from './AgriculturalLandReserve.geojson';
 import Municipalities from './Municipalities.geojson';
 import SpeciesAtRisk from './SpeciesAtRisk.geojson';
@@ -17,10 +18,22 @@ const Development = {
   question: "Development a good idea?",
   image: image,
   description: [
-    {type: 'p', content: "Lorem."},
+    {type: 'h2', content: "Comparison"},
+    {type: 'p', content: 'The map shows how well municipalities are meeting a 30% target of urban forest cover to support temperature regulation, noise buffering, biodiversity, moisture retention, carbon drawdown, wellbeing, and property values.  The location and access of aquifers is important in protecting community water security. Ecosystem types help to inform the landscape design choices to connect ecosystems for better performance of natural assets and resilience to climate events. Watersheds and stormwater infrastructure  highlight opportunities for restoration.  Transportation routes support mobility between work and home.'},
+    {type: 'h2', content: "Problem"},
+    {type: 'p', content: 'Affordable housing that is in proximity to workplaces is a top priority for governments to action because it reduces green house gases, makes life more affordable and accommodates the diversity of generations that makes a community stable and able to take care of itself. Unfortunately affordable housing is often located in areas that are vulnerable to a variety of environmental factors and developers are under pressure to deliver on a budget and timeline that does not promote innovation and improvement in the resilience of the surrounding area. The insurance industry feels the costs of the realities of climate change in the payouts after fires, floods, earthquakes, etc.... Many homeowners are seeing their insurance rates rising with the frequency of climate related disasters.'},
+    {type: 'h2', content: "Solution"},
+    {type: 'p', content: 'Nature-based Insurance Solutions are a growing trend in the insurance industry of acknowledging the value of ecosystem features like forests, wetlands, eelgrass & kelp beds and reefs in buffering environmental stresses like extreme wind, water and temperature.  By enhancing the function and scope of the local ecosystem when re-developing an area, multiple benefits and savings are possible.  Increasing native vegetation and canopy cover can increase property values, regulate neighbourhood temperature, buffer noise as well as attracting biodiversity and carbon credits. Restoring watersheds can also improve property values while providing cost savings in storm water infrastructure. By harmonizing natural and built features, developers are  securing the long-term wellbeing of communities through ecological connectivity that creates resilience to climate change.'},
   ],
   act: {
-    initiatives: [],
+    initiatives: [
+      {
+        title: "Engage with Nature-based Solutions",
+        link: "https://www.engagewithnbs.ca/",
+        image: engageNBS,
+        description: "Engage with Nature-Based Solutions is a new initiative to support communities who apply nature-based solutions to their local lands and waters. Nature-based solutions support the health of natural systems, while addressing societal challenges.",
+      },
+    ],
   },
   mapData: [
     {

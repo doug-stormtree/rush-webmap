@@ -9,7 +9,11 @@ const Culture = {
   image: image,
   description: [
     {type: 'h2', content: "Comparison"},
-    {type: 'p', content: 'Where can we learn about and engage with the cultures of this place? Where are there arts & culture opportunities?'},
+    {type: 'p', content: 'Connection between people and places. Public art, walking zones, public parks, fountains, squares, maker spaces, art galleries, commemorative art markers, community centers, co-working spaces, repurposed abondoned or empty spaces, community gardens, walking tours.'},
+    {type: 'h2', content: "Problem"},
+    {type: 'p', content: 'Having something to do, places to go, people to see within walking distance.'},
+    {type: 'h2', content: "Solution"},
+    {type: 'p', content: 'Place-making is an international movement. Gathering spaces. Community mapping. Moblity, safety, intergenerational.'},
   ],
   act: {
     initiatives: [
