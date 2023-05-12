@@ -77,9 +77,6 @@ function WebMap() {
     }
   });
   
-  // Content Pane Collapse State
-  const [openContentFlag, setOpenContentFlag] = useBoolean(true);
-  
   // Check route params and set defaults
   const params = useParams();
   const { question, zoom, center } = validateParams(params);
@@ -93,7 +90,7 @@ function WebMap() {
   const invalidateMap = () => { 
     if (map.current) map.current.invalidateSize();
   }
-  useEffect(invalidateMap, [openContentFlag, activeQuestion, vh]);
+  useEffect(invalidateMap, [activeQuestion, vh]);
 
   // Function to get map state for URL sharing mode
   const getShareURL = () => {
@@ -159,8 +156,6 @@ function WebMap() {
       <ContentPane
         backgroundColor='white'
         position='sticky'
-        openFlag={openContentFlag}
-        setOpenFlag={setOpenContentFlag}
         question={activeQuestion}
       />
       <IconButton
