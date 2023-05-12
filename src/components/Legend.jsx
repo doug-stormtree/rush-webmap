@@ -199,7 +199,7 @@ const LegendPatch = ({ layerId }) => {
   }
 
   return layer.shape === 'point'
-    ? <SinglePatchPoint style={layer.options.style} />
+    ? <SinglePatchPoint style={layer.icon} />
     : layer.shape === 'line'
       ? <SinglePatchLine style={layer.options.style} />
       : <SinglePatchPolygon style={layer.options.style} />
