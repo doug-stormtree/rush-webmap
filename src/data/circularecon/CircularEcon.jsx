@@ -1,9 +1,18 @@
+import { point } from 'leaflet';
+import { pointToIcon, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './CircularEconomy.png';
 import projectZero from './ProjectZero.png';
 import sIPP from './SIPP.png';
 import zeroWasteVictoria from './ZeroWasteVictoria.png';
 import recycleCBC from './RecycleCBC.png';
 import bcGreenBusiness from './BCGreenBusiness.png';
+import { ReactComponent as RecyclingIcon } from './Recycling.svg';
+import RecyclingDepots from './RecyclingDepots.geojson';
+
+const RecyclingIconStyle = {
+  fill: 'rgb(15,86,229)',
+  icon: <RecyclingIcon />
+}
 
 const CircularEcon = {
   title: 'Circular Economy?',
@@ -63,6 +72,26 @@ const CircularEcon = {
       }
     ],
   },
-  mapData: [],
+  mapData: [
+    {
+      title: 'Recycling Depots',
+      description: 'Find where you can recycle a wide range of household materials in your neighbourhood. Visit the website of the specific depot to confirm what is accepted there by clicking on it.',
+      data: RecyclingDepots,
+      shape: 'point',
+      symbology: 'single',
+      icon: RecyclingIconStyle,
+      options: {
+        pointToLayer: (f,l) => pointToIcon(l, RecyclingIconStyle),
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(
+            f.properties['Name'],
+            f.properties['Address'],
+            f.properties['URL'],
+            f.properties['URL']
+            ), {offset: point(4.5,2)});
+        }
+      }
+    },
+  ],
 };
 export default CircularEcon;
