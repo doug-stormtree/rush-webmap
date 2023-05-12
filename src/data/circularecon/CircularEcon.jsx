@@ -1,4 +1,5 @@
-import { point } from 'leaflet';
+import ReactDOMServer from "react-dom/server";
+import { point, marker, divIcon } from 'leaflet';
 import { pointToIcon, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './CircularEconomy.png';
 import projectZero from './ProjectZero.png';
@@ -7,7 +8,9 @@ import zeroWasteVictoria from './ZeroWasteVictoria.png';
 import recycleCBC from './RecycleCBC.png';
 import bcGreenBusiness from './BCGreenBusiness.png';
 import { ReactComponent as RecyclingIcon } from './Recycling.svg';
+import { ReactComponent as HartlandPie } from './HartlandPie.svg';
 import RecyclingDepots from './RecyclingDepots.geojson';
+import HartlandLandfill from './HartlandPie.geojson';
 
 const RecyclingIconStyle = {
   fill: 'rgb(15,86,229)',
@@ -88,6 +91,32 @@ const CircularEcon = {
             f.properties['Address'],
             f.properties['URL'],
             f.properties['URL']
+            ), {offset: point(4.5,2)});
+        }
+      }
+    },
+    {
+      title: 'Hartland Landfill',
+      description: 'Overall Waste Composition 2022',
+      data: HartlandLandfill,
+      shape: 'point',
+      symbology: 'single',
+      icon: { icon: <HartlandPie /> },
+      options: {
+        pointToLayer: (f,l) => {
+          return marker(l, {
+            icon: divIcon({
+              className: "",
+              iconSize: [256, 256],
+              iconAnchor: [128, 128],
+              html: ReactDOMServer.renderToString(<HartlandPie />),
+            })
+          })
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(
+            f.properties['Name'],
+            image=<HartlandPie />,
             ), {offset: point(4.5,2)});
         }
       }

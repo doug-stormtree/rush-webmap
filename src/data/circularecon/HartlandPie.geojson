@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "name": "Hartland Pie Chart",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4269" } },
+  "features": [
+  { "type": "Feature", "properties": { "Name": "Heartland Landfill Overall Waste Composition" }, "geometry": { "type": "Point", "coordinates": [ -123.463609, 48.537568 ] } }
+  ]
+  }
+  
