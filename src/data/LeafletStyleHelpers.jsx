@@ -7,7 +7,7 @@ import { VStack, Heading, Text, Link, Image } from "@chakra-ui/react";
 export const pointToIconByProperty = (feature, latlng, property, propertyMap) => {
   if (property in feature.properties) {
     const icon = propertyMap.get(feature.properties[property]);
-    return pointToIcon(latlng, icon);
+    return pointToIcon(latlng, icon ?? {fill:'#000',stroke:'#000',icon:null});
   }
   return L.marker(latlng);
 }
