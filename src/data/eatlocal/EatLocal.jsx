@@ -4,6 +4,7 @@ import image from './EatLocal.png';
 import IyeCreative from './IyeCreative.png';
 import OurFoodFuture from './OurFoodFuture.png';
 import FoodSecurity from './FoodSecurity.geojson';
+import ALR from '../development/AgriculturalLandReserve.geojson';
 import { ReactComponent as EcoJustice } from './Eco-justice organization.svg';
 import { ReactComponent as Government } from './Government office.svg';
 import { ReactComponent as NGO } from './Green enterprise.svg';
@@ -55,6 +56,30 @@ const EatLocal = {
     ],
   },
   mapData: [
+    {
+      title: 'Agricultural Land Reserve',
+      description: 'The spatial representation for the boundary of an Agricultural Land Reserve (ALR), which is a parcel of land, based on soil and climate, deemed necessary to be maintained for agricultural use. The data gets updated four times a year, at the end of: Jan, Apr, Jul and Oct. It is also available on the ALC’s website: https://www.alc.gov.bc.ca/alr-maps/',
+      data: ALR,
+      shape: 'polygon',
+      symbology: 'single',
+      options: {
+        style: {
+          stroke: false,
+          fill: true,
+          fillOpacity: 0.7,
+          fillColor: 'rgba(112,130,56,1.0)',
+          interactive: true,
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(
+            mapPopupContent(
+              'Agriculutural Land Reserve',
+              'A parcel of land, based on soil and climate, deemed necessary to be maintained for agricultural use.',
+              ),
+            {offset: point(0,8)});
+        }
+      }
+    },
     {
       title: "Food Security",
       description: "RUSH Regional Food Security Resource Map. Created by Ege Kaymaz.",
