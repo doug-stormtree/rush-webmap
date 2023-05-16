@@ -55,6 +55,10 @@ function App() {
             path="/q/:question/z/:zoom/c/:center"
             element={<WebMap />}
           />
+          <Route
+            path="/q/:question"
+            element={<WebMap />}
+          />
         </Routes>
       </Router>
     </ChakraProvider>
