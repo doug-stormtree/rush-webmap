@@ -13,12 +13,8 @@ import BCTransitRoutes from './BCTransitRoutes.geojson';
 import CRDBikeMap from './CRDBikeMap.geojson';
 
 const styleMap_GHG = new Map([
-  [-15,  {fillColor: '#2b83ba', color: 'rgb(130,130,130)', legendText: '> 15% Reduction'}],
-  [-7.5, {fillColor: '#91cba8', color: 'rgb(130,130,130)', legendText: '7.5 - 15% Reduction'}],
-  [0,    {fillColor: '#ddf1b4', color: 'rgb(130,130,130)', legendText: '0 - 7.5% Reduction'}],
-  [7.5,  {fillColor: '#fedf99', color: 'rgb(130,130,130)', legendText: '0 - 7.5% Increase'}],
-  [15,   {fillColor: '#f59053', color: 'rgb(130,130,130)', legendText: '7.5 - 15% Increase'}],
-  [100,  {fillColor: '#d7191c', color: 'rgb(130,130,130)', legendText: '> 15% Increase'}]
+  [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
+  [100,  {fillColor: 'rgb(248,56,8)', color: 'rgb(130,130,130)', legendText: 'Increase'}]
 ]);
 
 const styleMap_CRDBikeMap = new Map([
@@ -81,7 +77,7 @@ const Footprint = {
       format: 'polygon',
       symbology: 'classified',
       styleMap: styleMap_GHG,
-      legendTitle: '% Change GHG Emission 2007 to 2020',
+      legendTitle: 'Emissions in 2020 compared to 2007',
       options: {
         style: function (feature) {
           const baseStyle = {
@@ -91,9 +87,9 @@ const Footprint = {
             dashArray: '',
             lineCap: 'butt',
             lineJoin: 'miter',
-            weight: 4,
+            weight: 3,
             fill: true,
-            fillOpacity: 0.7,
+            fillOpacity: 0.3,
             interactive: true
           }
           return {
@@ -110,8 +106,12 @@ const Footprint = {
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGov,
-              f.properties.GHGEmissionsChange.toFixed(1) + '% change in GHG emissions from 2007 to 2020.'
+              `${Math.abs(f.properties.GHGEmissionsChange).toFixed(1)}% ${f.properties.GHGEmissionsChange > 0 ? 'increase' : 'reduction'} in GHG emissions from 2007 to 2020.`
             ), {offset: point(0,8)});
+            l.on({
+              mouseover: (e) => e.target.setStyle({ fillOpacity: 0.6 }),
+              mouseout: (e) => e.target.setStyle({ fillOpacity: 0.3 })
+            });
         }
       }
     },
@@ -129,7 +129,7 @@ const Footprint = {
             stroke: true,
             fill: false,
             interactive: true,
-            weight: 4,
+            weight: 3,
           }
           return {
             ...baseStyle,
@@ -162,8 +162,8 @@ const Footprint = {
           opacity: 0.9,
           fill: false,
           interactive: true,
-          color: 'rgba(28, 78, 136, 255)',
-          weight: 4,
+          color: 'rgb(18, 144, 201)',
+          weight: 3,
         },
         onEachFeature: (f,l) => {
           l.bindPopup(
