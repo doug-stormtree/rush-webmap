@@ -24,10 +24,11 @@ export default function NavBar(props) {
         <Link 
           href='https://forms.gle/rB1WaaLcUmEjxmMr8'
           isExternal
-          color='grey.800'
+          color='orange.500'
         >
           <Button
-            rightIcon={<FiMessageSquare />}
+            rightIcon={<FiMessageSquare strokeWidth='4'/>}
+            fontWeight='extrabold'
           >Feedback</Button>
         </Link>
         <ShareModalButton getShareURL={getShareURL} />
