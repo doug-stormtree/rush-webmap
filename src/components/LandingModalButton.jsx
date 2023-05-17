@@ -36,7 +36,6 @@ export default function LandingModalButton(props) {
   return (
     <>
       <Button
-        variant='nav'
         rightIcon={<FaRegQuestionCircle />}
         onClick={onOpen}
       >About</Button>

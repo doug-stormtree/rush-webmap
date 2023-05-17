@@ -25,7 +25,6 @@ export default function ShareModalButton(props) {
   return (
     <>
       <Button
-        variant='nav'
         rightIcon={<FiShare />}
         onClick={() => {
           onOpen();
