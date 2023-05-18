@@ -18,7 +18,7 @@ export const MapMarker = (props) => {
       margin: props.margin ?? 'auto',
       padding: '3px',
       borderRadius: '100%',
-      backgroundColor: props.bgColor ?? 'rgba(227,232,240,0.8)',
+      backgroundColor: props.bgColor,
       fill: props.fill,
       stroke: props.stroke,
       width: (props.size) + 'px',
@@ -27,7 +27,7 @@ export const MapMarker = (props) => {
   )
 }
 
-export const pointToIcon = (latlng, iconStyle, size = 32, backgroundColor) => {
+export const pointToIcon = (latlng, iconStyle, size = 32, backgroundColor = 'rgba(227,232,240,0.8)') => {
   return L.marker(latlng, {
     icon: L.divIcon({
       className: "",
