@@ -5,9 +5,8 @@ import watershedsBC from './WatershedsBC.png';
 import crdWatershedsMap from './CRDWatershedMap.png';
 import Watersheds from './CRDWatersheds.geojson';
 import RainGardens from './1000RainGardens.geojson';
-import RestorationSites from './RestorationSites.geojson';
 import { ReactComponent as WaterIcon } from '../beattheheat/water.svg';
-import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
+import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const styleMap_RainGardens = new Map([
   ["0", {
@@ -104,33 +103,6 @@ const Flooding = {
       }
     },
     {
-      title: 'Restoration Sites',
-      description: [
-        {type: 'p', content: "Mapping restoration sites as described by Peninsula Streams Society for the RUSH Initiative."},
-        {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=644acbf92af3a50100a0f0bc'},
-      ],
-      data: RestorationSites,
-      shape: 'point',
-      symbology: 'classified',
-      styleMap: styleMap_RainGardens,
-      options: {
-        pointToLayer: (f,l) => pointToIcon(l, {icon: <img src={`https://new.opengreenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}/>}),
-        onEachFeature: (f,l) => {
-          const imageURL = f.properties.pictures[0]
-            ? `https://new.opengreenmap.org/api-v1/pictures/${f.properties.pictures[0]}/picture/sm`
-            : null;
-          
-          l.bindPopup(mapPopupContent(
-              f.properties.name,
-              '',
-              `https://new.opengreenmap.org/browse/sites/${f.properties._id}`,
-              'Show More at OpenGreenMap.org',
-              imageURL
-            ), {offset: point(0,-6)});
-        }
-      },
-    },
-    {
       title: '1000 Rain Gardens',
       description: [
         {type: 'p', content: "This is the map for the Friends of Bowker Creek and Peninsula Streams Society '1000 Rain Gardens' mapping project!"},
@@ -157,13 +129,14 @@ const Flooding = {
           l.bindPopup(mapPopupContent(
               f.properties.name,
               '',
-              `https://new.opengreenmap.org/browse/sites/${f.properties._id}`,
+              `https://https://new.opengreenmap.org/browse/sites/${f.properties._id}`,
               'Show More at OpenGreenMap.org',
               imageURL
-            ), {offset: point(0,-6)});
+            ), {offset: point(4,2)});
         }
       },
     },
+
   ],
 };
 export default Flooding;
