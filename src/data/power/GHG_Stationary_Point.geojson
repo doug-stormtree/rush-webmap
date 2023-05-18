@@ -1,0 +1,23 @@
+{
+"type": "FeatureCollection",
+"name": "GHG_Stationary_Point",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "LocalGov": "Juan de Fuca Electoral Area", "LocalGovShort": "Juan de Fuca", "StationaryChange": 22.7 }, "geometry": { "type": "Point", "coordinates": [ -123.77262, 48.3934 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "Southern Gulf Islands Electoral Area", "LocalGovShort": "Southern Gulf Islands", "StationaryChange": -3.1 }, "geometry": { "type": "Point", "coordinates": [ -123.28104, 48.77898 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "City of Colwood", "LocalGovShort": "Colwood", "StationaryChange": 16.0 }, "geometry": { "type": "Point", "coordinates": [ -123.49389, 48.42344 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "City of Langford", "LocalGovShort": "Langford", "StationaryChange": 55.9 }, "geometry": { "type": "Point", "coordinates": [ -123.50463, 48.45001 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "District of Highlands", "LocalGovShort": "Highlands", "StationaryChange": 26.2 }, "geometry": { "type": "Point", "coordinates": [ -123.51242, 48.48128 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "District of Metchosin", "LocalGovShort": "Metchosin", "StationaryChange": -3.0 }, "geometry": { "type": "Point", "coordinates": [ -123.53525, 48.37961 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "District of North Saanich", "LocalGovShort": "North Saanich", "StationaryChange": 11.2 }, "geometry": { "type": "Point", "coordinates": [ -123.4327, 48.65624 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "District of Sooke", "LocalGovShort": "Sooke", "StationaryChange": 42.6 }, "geometry": { "type": "Point", "coordinates": [ -123.73116, 48.38249 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "City of Victoria", "LocalGovShort": "Victoria", "StationaryChange": -10.6 }, "geometry": { "type": "Point", "coordinates": [ -123.36493, 48.42833 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "District of Central Saanich", "LocalGovShort": "Central Saanich", "StationaryChange": 4.7 }, "geometry": { "type": "Point", "coordinates": [ -123.42043, 48.59459 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "District of Oak Bay", "LocalGovShort": "Oak Bay", "StationaryChange": 12.2 }, "geometry": { "type": "Point", "coordinates": [ -123.31695, 48.42613 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "District of Saanich", "LocalGovShort": "Saanich", "StationaryChange": -3.4 }, "geometry": { "type": "Point", "coordinates": [ -123.37644, 48.45944 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "Township of Esquimalt", "LocalGovShort": "Esquimalt", "StationaryChange": 0.0 }, "geometry": { "type": "Point", "coordinates": [ -123.41357, 48.42993 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "Town of Sidney", "LocalGovShort": "Sidney", "StationaryChange": 8.1 }, "geometry": { "type": "Point", "coordinates": [ -123.39844, 48.65058 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "Town of View Royal", "LocalGovShort": "View Royal", "StationaryChange": 16.2 }, "geometry": { "type": "Point", "coordinates": [ -123.43432, 48.45181 ] } },
+{ "type": "Feature", "properties": { "LocalGov": "Salt Spring Island Local Trust Area", "LocalGovShort": "Salt Spring Island", "StationaryChange": 1.4 }, "geometry": { "type": "Point", "coordinates": [ -123.51886, 48.86263 ] } }
+]
+}
