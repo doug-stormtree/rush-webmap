@@ -12,26 +12,28 @@ export const pointToIconByProperty = (feature, latlng, property, propertyMap) =>
   return L.marker(latlng);
 }
 
-export const pointToIcon = (latlng, {fill, stroke, icon}, size = 32, backgroundColor = 'rgba(227,232,240,0.8)') => {
-  const marker = (
+export const MapMarker = (props) => {
+  return (
     <div style={{
-      borderRadius: '100%',
-      backgroundColor: backgroundColor,
-      fill: fill,
-      stroke: stroke,
+      margin: props.margin ?? 'auto',
       padding: '3px',
-      margin: 'auto',
-      width: size + 'px',
-      height: size + 'px',
-    }}>{icon}</div>
+      borderRadius: '100%',
+      backgroundColor: props.bgColor ?? 'rgba(227,232,240,0.8)',
+      fill: props.fill,
+      stroke: props.stroke,
+      width: (props.size) + 'px',
+      height: (props.size) + 'px',
+    }}>{props.icon}</div>
   )
+}
 
+export const pointToIcon = (latlng, iconStyle, size = 32, backgroundColor) => {
   return L.marker(latlng, {
     icon: L.divIcon({
       className: "",
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2],
-      html: ReactDOMServer.renderToString(marker),
+      html: ReactDOMServer.renderToString(<MapMarker {...iconStyle} size={size} bgColor={backgroundColor} />),
     })
   });
 }
