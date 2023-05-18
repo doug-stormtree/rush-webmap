@@ -1,14 +1,17 @@
 import { point } from 'leaflet';
 import {
-  mapPopupContent,
   getStyleMapProperty,
-  getStyleMapKeyFromContinuousValue
+  getStyleMapKeyFromContinuousValue,
+  mapPopupContent,
+  pointToIcon,
 } from '../LeafletStyleHelpers';
+import EmissionsIcon from '../../components/EmissionsIcon';
 import image from './LightFootprint.png';
 import ClimateEmg from './ClimateEmergencyReportCard.png';
 import GovCan from './GovCan.png';
 import GoElectric from './GoElectric.png';
 import CRDLocalGovGHG from './CRDLocalGovGHG.geojson';
+import GHGOnRoadPoint from './GHG_OnRoad_Point.geojson';
 import BCTransitRoutes from './BCTransitRoutes.geojson';
 import CRDBikeMap from './CRDBikeMap.geojson';
 
@@ -63,9 +66,27 @@ const Footprint = {
   },
   mapData: [
     {
-      title: 'Greenhouse Gas Emissions',
+      noLegend: true,
+      data: GHGOnRoadPoint,
+      options: {
+        pointToLayer: (f,l) => pointToIcon(l, {
+          fill: null,
+          stroke: null,
+          icon: <EmissionsIcon percentGHG={f.properties.OnRoadTransportationChange} />
+        }, 64, null),
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(
+              f.properties.LocalGov,
+              `${Math.abs(f.properties.OnRoadTransportationChange).toFixed(1)}% ${f.properties.OnRoadTransportationChange > 0 ? 'increase' : 'reduction'} in on-road transportation GHG emissions from 2007 to 2020.`
+            ), {offset: point(0,8)});
+        }
+      },
+    },
+    {
+      title: 'Greenhouse Gas Emissions (On-road Transportation)',
       description: [
-        {type:'p', content:'The Capital Regional District (CRD) has established 2007 as a baseline year where the total greenhouse gas (GHG) emissions were calculated. The most recent reporting year was 2020, and this map layer shows which CRD member governments have reduced or increased their total 2020 emissions compared to 2007.'},
+        {type:'p', content:'The Capital Regional District (CRD) has established 2007 as a baseline year where the greenhouse gas (GHG) emissions were calculated. The most recent reporting year was 2020, and this map layer shows which CRD member governments have reduced or increased their on-road transportation 2020 emissions compared to 2007.'},
+        {type:'p', content:'The GHGs released to the atmosphere to be reported in the Transportation Sector are those from combustion of fuels in journeys by on-road, railway, waterborne navigation, aviation, and off-road. GHG emissions are produced directly by the combustion of fuel, and indirectly using grid-supplied electricity.'},
         {type:'p', content:'Learn more about the local sources of GHGs by reading the reports here:'},
         {
           type:'link',
@@ -97,7 +118,7 @@ const Footprint = {
             fillColor: getStyleMapProperty(
                 'fillColor',
                 getStyleMapKeyFromContinuousValue(
-                  feature.properties.GHGEmissionsChange,
+                  feature.properties.OnRoadTransportationChange,
                   styleMap_GHG),
                 styleMap_GHG
               ),
@@ -106,12 +127,12 @@ const Footprint = {
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGov,
-              `${Math.abs(f.properties.GHGEmissionsChange).toFixed(1)}% ${f.properties.GHGEmissionsChange > 0 ? 'increase' : 'reduction'} in GHG emissions from 2007 to 2020.`
+              `${Math.abs(f.properties.OnRoadTransportationChange).toFixed(1)}% ${f.properties.OnRoadTransportationChange > 0 ? 'increase' : 'reduction'} in on-road transportation GHG emissions from 2007 to 2020.`
             ), {offset: point(0,8)});
-            l.on({
-              mouseover: (e) => e.target.setStyle({ fillOpacity: 0.6 }),
-              mouseout: (e) => e.target.setStyle({ fillOpacity: 0.3 })
-            });
+          l.on({
+            mouseover: (e) => e.target.setStyle({ fillOpacity: 0.6 }),
+            mouseout: (e) => e.target.setStyle({ fillOpacity: 0.3 })
+          });
         }
       }
     },

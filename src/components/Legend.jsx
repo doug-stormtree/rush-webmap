@@ -91,7 +91,7 @@ const LegendList = ({ activeQuestion }) => {
   const layers = useMapLayerStore((state) => state.layers);
   const legendEntries = [];
   for (const key of layers.keys()) {
-    if (layers.get(key).question === activeQuestion) {
+    if (!layers.get(key).noLegend && layers.get(key).question === activeQuestion) {
       legendEntries.push(<LegendItem key={key} layerId={key} mb={1} />);
     }
   }
