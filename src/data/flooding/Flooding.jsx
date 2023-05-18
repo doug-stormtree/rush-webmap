@@ -6,7 +6,8 @@ import crdWatershedsMap from './CRDWatershedMap.png';
 import Watersheds from './CRDWatersheds.geojson';
 import RainGardens from './1000RainGardens.geojson';
 import RestorationSites from './RestorationSites.geojson';
-import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
+import { ReactComponent as WaterIcon } from '../beattheheat/water.svg';
+import { mapPopupContent, pointToIcon, MapMarker } from '../LeafletStyleHelpers';
 
 const styleMap_RainGardens = new Map([
   ['641b6ff089e06d0100e0cf1d', {
@@ -158,10 +159,7 @@ const Flooding = {
       symbology: 'classified',
       styleMap: styleMap_RestorationSites,
       options: {
-        pointToLayer: (f,l) => pointToIcon(l, {icon: <img 
-            src={`https://new.opengreenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}
-            alt={styleMap_RestorationSites.get(f.properties.icons[0]).legendText}
-          />}),
+        pointToLayer: (f,l) => pointToIcon(l, {icon: <img src={`https://new.opengreenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}/>}),
         onEachFeature: (f,l) => {
           const imageURL = f.properties.pictures[0]
             ? `https://new.opengreenmap.org/api-v1/pictures/${f.properties.pictures[0]}/picture/sm`
