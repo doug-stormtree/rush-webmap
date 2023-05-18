@@ -214,6 +214,7 @@ const SinglePatchPoint = ({ style }) => {
       icon={style.icon}
       fill={style.fill}
       stroke={style.stroke}
+      src={style.src}
     />
   );
 }

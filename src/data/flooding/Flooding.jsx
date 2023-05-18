@@ -7,16 +7,61 @@ import Watersheds from './CRDWatersheds.geojson';
 import RainGardens from './1000RainGardens.geojson';
 import RestorationSites from './RestorationSites.geojson';
 import { ReactComponent as WaterIcon } from '../beattheheat/water.svg';
-import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
+import { mapPopupContent, pointToIcon, MapMarker } from '../LeafletStyleHelpers';
 
 const styleMap_RainGardens = new Map([
-  ["0", {
-    icon: (<WaterIcon/>),
-    fill: '#36F',
-    stroke: '#36F',
-    legendText: '',
+  ['641b6ff089e06d0100e0cf1d', {
+    src: `https://new.opengreenmap.org/api-v1/icons/641b6ff089e06d0100e0cf1d/image/value`,
+    legendText: 'Rain Garden'
   }],
-]);
+  ['641b716b89e06d0100e0cf2c', {
+    src: `https://new.opengreenmap.org/api-v1/icons/641b716b89e06d0100e0cf2c/image/value`,
+    legendText: 'Bioswale'
+  }],
+  ['641b714889e06d0100e0cf24', {
+    src: `https://new.opengreenmap.org/api-v1/icons/641b714889e06d0100e0cf24/image/value`,
+    legendText: 'Curb Cut'
+  }],
+])
+
+const styleMap_RestorationSites = new Map([
+  ['5ebee86cd060db010045ee3c', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ebee86cd060db010045ee3c/image/value`,
+    legendText: 'Protected / Restored Habitat'
+  }],
+  ['5ca7bff1ecd8490100caba0b', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ca7bff1ecd8490100caba0b/image/value`,
+    legendText: 'Aquatic Habitat'
+  }],
+  ['5ca7bfeaecd8490100cab9f3', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ca7bfeaecd8490100cab9f3/image/value`,
+    legendText: 'Waterfront or Riverside Park'
+  }],
+  ['5ca7bfe8ecd8490100cab9ee', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ca7bfe8ecd8490100cab9ee/image/value`,
+    legendText: 'Water Feature'
+  }],
+  ['5ca7bff4ecd8490100caba0f', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ca7bff4ecd8490100caba0f/image/value`,
+    legendText: 'Significant Habitat'
+  }],
+  ['5ca7bfe7ecd8490100cab9ec', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ca7bfe7ecd8490100cab9ec/image/value`,
+    legendText: 'Wetlands'
+  }],
+  ['5ca7bfc1ecd8490100cab983', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ca7bfc1ecd8490100cab983/image/value`,
+    legendText: 'Greenhouse Gas Reduction'
+  }],
+  ['5f036d59352b920100f4b7f1', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5f036d59352b920100f4b7f1/image/value`,
+    legendText: 'People of Place - Indigenous Culture'
+  }],
+  ['5ca7bfececd8490100cab9fc', {
+    src: `https://new.opengreenmap.org/api-v1/icons/5ca7bfececd8490100cab9fc/image/value`,
+    legendText: 'Canoe or Kayak Site'
+  }],
+])
 
 const Flooding = {
   title: 'Protect from Flooding?',
@@ -112,7 +157,7 @@ const Flooding = {
       data: RestorationSites,
       shape: 'point',
       symbology: 'classified',
-      styleMap: styleMap_RainGardens,
+      styleMap: styleMap_RestorationSites,
       options: {
         pointToLayer: (f,l) => pointToIcon(l, {icon: <img src={`https://new.opengreenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}/>}),
         onEachFeature: (f,l) => {
