@@ -5,7 +5,7 @@ import {
   mapPopupContent,
   pointToIcon,
 } from '../LeafletStyleHelpers';
-import EmissionsIcon from '../../components/EmissionsIcon';
+import { GHGBuildingIcon } from '../../components/EmissionsIcon';
 import CRDLocalGovGHG from '../footprint/CRDLocalGovGHG.geojson';
 import image from './PowerThisPlace.png';
 import bcSustainableEnergy from './BCSustainableEnergy.png';
@@ -107,9 +107,9 @@ const Power = {
         pointToLayer: (f,l) => pointToIcon(l, {
             fill: null,
             stroke: null,
-            icon: <EmissionsIcon percentGHG={f.properties.StationaryChange} />
+            icon: <GHGBuildingIcon percentGHG={f.properties.StationaryChange} />
           }, 
-          Math.min(Math.abs(f.properties.StationaryChange) + 40, 80),
+          Math.min(Math.abs(f.properties.StationaryChange) + 50, 100),
           null),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
