@@ -69,6 +69,7 @@ const Coastal = {
     {type: 'link', content: '3. Nature’s potential to help reduce flood risks (2020) The Nature Conservancy. (Accessed: 21 May 2023).', url: 'https://www.nature.org/en-us/what-we-do/our-priorities/tackle-climate-change/climate-change-stories/natures-potential-reduce-flood-risks/'},
     {type: 'link', content: '4. Canada, S. (2021) Government of Canada - Natural Climate Solutions Fund, Natural Climate Solutions - Canada.ca. (Accessed: 21 May 2023).', url: 'https://www.canada.ca/en/campaign/natural-climate-solutions.html'},
     {type: 'link', content: '5. Society, T.E.L.C. and Sandborn, C. (2020) BC must act to protect spawning beaches, Environmental Law Centre | If it matters to BC’s environment, we’re on it. (Accessed: 21 May 2023).', url: 'https://elc.uvic.ca/protect-spawning-beaches/ '},
+    {type: 'p', content: 'Cover Photo by Ken Josephson.'},
   ],
   act: {
     initiatives: [
