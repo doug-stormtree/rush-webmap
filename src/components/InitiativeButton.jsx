@@ -9,6 +9,9 @@ import {
 } from '@chakra-ui/react';
 
 export default function InitiativeButton({initiative}) {
+  const longestWordLength = initiative.title
+    .split(/\s/).reduce((acc,s) => s.length > acc ? s.length : acc, 0);
+  
   return (
     <AspectRatio ratio={1} w="120px">
       <LinkBox borderRadius="xl">
@@ -38,9 +41,11 @@ export default function InitiativeButton({initiative}) {
                 position="absolute"
                 bottom="0.5em"
                 left="0.5em"
+                width="calc(100% - 1em)"
                 as="b"
                 color="#FFF"
                 textShadow="0 0 1px #333"
+                fontSize={longestWordLength > 12 ? 'sm' : 'md'}
               >
                 {initiative.title}
               </Text>
