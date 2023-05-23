@@ -2,6 +2,7 @@ import image from './CultureCompass.png';
 import WSANECEnvironmentalOrgs from './WSANECEnvironmentalOrgs.png';
 import NativeLandDigital from './NativeLandDigital.png';
 import LittleFreeLibraries from './LittleFreeLibraries.png';
+import tRCC from './TRCC.png';
 
 const Culture = {
   title: "Culture Compass?",
@@ -38,6 +39,12 @@ const Culture = {
         link: 'https://victoriaplacemaking.ca/little-free-libraries/',
         description: 'Little Free Libraries is a popular DIY community concept, where unique homemade book exchange boxes are made freely available in front of homes and businesses for the enjoyment of neighbours and visitors. Learn more and find a map to over 700 of these libraries in the CRD at the Greater Victoria Placemaking Society.'
       },
+      {
+        title: 'Truth and Reconciliation Calls to Action',
+        image: tRCC,
+        link: 'https://ehprnh2mwo3.exactdn.com/wp-content/uploads/2021/01/Calls_to_Action_English2.pdf',
+        description: 'In order to redress the legacy of residential schools and advance the process of Canadian reconciliation, the Truth and Reconciliation Commission makes the following calls to action...'
+      }
     ],
   },
   mapData: [],
