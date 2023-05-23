@@ -7,7 +7,6 @@ import {
 } from '../LeafletStyleHelpers';
 import EmissionsIcon from '../../components/EmissionsIcon';
 import CRDLocalGovGHG from '../footprint/CRDLocalGovGHG.geojson';
-import GHGStationaryPoint from './GHG_Stationary_Point.geojson';
 import image from './PowerThisPlace.png';
 import bcSustainableEnergy from './BCSustainableEnergy.png';
 import reBuildInitiative from './ReBuildInitiative.png';
@@ -63,25 +62,6 @@ const Power = {
   },
   mapData: [
     {
-      noLegend: true,
-      data: GHGStationaryPoint,
-      options: {
-        pointToLayer: (f,l) => pointToIcon(l, {
-          fill: null,
-          stroke: null,
-          icon: <EmissionsIcon percentGHG={f.properties.StationaryChange} />
-        }, 
-        Math.min(Math.abs(f.properties.StationaryChange) + 40, 80),
-        null),
-        onEachFeature: (f,l) => {
-          l.bindPopup(mapPopupContent(
-              f.properties.LocalGov,
-              `${Math.abs(f.properties.StationaryChange).toFixed(1)}% ${f.properties.StationaryChange > 0 ? 'increase' : 'reduction'} in Stationary (Residential and Commercial Buildings) GHG emissions from 2007 to 2020.`
-            ), {offset: point(0,8)});
-        }
-      },
-    },
-    {
       title: 'Greenhouse Gas Emissions (Stationary)',
       description: [
         {type:'p', content:'The Capital Regional District (CRD) has established 2007 as a baseline year where the total greenhouse gas (GHG) emissions were calculated. The most recent reporting year was 2020, and this map layer shows which CRD member governments have reduced or increased their Stationary 2020 emissions compared to 2007.'},
@@ -123,10 +103,18 @@ const Power = {
               ),
           }
         },
+        // pointToLayer only for point features (City Halls)
+        pointToLayer: (f,l) => pointToIcon(l, {
+            fill: null,
+            stroke: null,
+            icon: <EmissionsIcon percentGHG={f.properties.StationaryChange} />
+          }, 
+          Math.min(Math.abs(f.properties.StationaryChange) + 40, 80),
+          null),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGov,
-              `${Math.abs(f.properties.StationaryChange).toFixed(1)}% ${f.properties.StationaryChange > 0 ? 'increase' : 'reduction'} in Stationary (Residential and Commercial Buildings) GHG emissions from 2007 to 2020.`
+              `${Math.abs(f.properties.StationaryChange).toFixed(1)}% ${f.properties.StationaryChange > 0 ? 'increase' : 'reduction'} in Stationary (Residential and Commercial Buildings) GHG emissions in 2020 compared to 2007 levels.`
             ), {offset: point(0,8)});
           l.on({
             mouseover: (e) => e.target.setStyle({ fillOpacity: 0.6 }),
