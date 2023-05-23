@@ -70,7 +70,9 @@ const Power = {
           fill: null,
           stroke: null,
           icon: <EmissionsIcon percentGHG={f.properties.StationaryChange} />
-        }, 64, null),
+        }, 
+        Math.min(Math.abs(f.properties.StationaryChange) + 40, 80),
+        null),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGov,

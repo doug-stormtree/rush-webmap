@@ -73,7 +73,7 @@ const Footprint = {
           fill: null,
           stroke: null,
           icon: <EmissionsIcon percentGHG={f.properties.OnRoadTransportationChange} />
-        }, 64, null),
+        }, Math.min(Math.abs(f.properties.OnRoadTransportationChange) + 40, 80), null),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGov,
