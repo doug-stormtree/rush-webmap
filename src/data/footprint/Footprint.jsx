@@ -5,7 +5,7 @@ import {
   mapPopupContent,
   pointToIcon,
 } from '../LeafletStyleHelpers';
-import EmissionsIcon from '../../components/EmissionsIcon';
+import { GHGCarIcon } from '../../components/EmissionsIcon';
 import image from './LightFootprint.png';
 import ClimateEmg from './ClimateEmergencyReportCard.png';
 import GovCan from './GovCan.png';
@@ -110,8 +110,8 @@ const Footprint = {
         pointToLayer: (f,l) => pointToIcon(l, {
           fill: null,
           stroke: null,
-          icon: <EmissionsIcon percentGHG={f.properties.OnRoadTransportationChange} />
-        }, Math.min(Math.abs(f.properties.OnRoadTransportationChange) + 40, 80), null),
+          icon: <GHGCarIcon percentGHG={f.properties.OnRoadTransportationChange} />
+        }, Math.min(Math.abs(f.properties.OnRoadTransportationChange) + 50, 100), null),
         onEachFeature: (f,l) => {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGov,
