@@ -123,10 +123,22 @@ function WebMap() {
         boxShadow='0px 0px 8px 2px #888'
         getShareURL={getShareURL}
       />
+      <QuestionMenuBar
+        style={{
+          backgroundColor:'white',
+          position:'sticky',
+          top:'40px',
+          zIndex:'9',
+          //borderRadius:'16px 16px 0 0',
+          boxShadow:'0px 0px 8px 2px #888'
+        }}
+        activeQuestion={activeQuestion}
+        setActiveQuestion={setActiveQuestion}
+      />
       <Flex
         h={`60vh`}
         position='sticky'
-        top='40px'
+        top='180px'
         direction='row'
         //zIndex='-1'
       >
@@ -144,21 +156,12 @@ function WebMap() {
           : <LegendPane flex='0' activeQuestion={activeQuestion} />
         }
       </Flex>
-      <QuestionMenuBar
-        style={{
-          backgroundColor:'white',
-          position:'sticky',
-          top:'40px',
-          zIndex:'9',
-          //borderRadius:'16px 16px 0 0',
-          boxShadow:'0px 0px 8px 2px #888'
-        }}
-        activeQuestion={activeQuestion}
-        setActiveQuestion={setActiveQuestion}
-      />
       <ContentPane
         backgroundColor='white'
         position='sticky'
+        style={{
+          boxShadow:'0px 0px 8px 2px #888'
+        }}
         question={activeQuestion}
       />
       <IconButton
