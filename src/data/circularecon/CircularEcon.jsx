@@ -101,7 +101,7 @@ const CircularEcon = {
         {
           type:'link',
           content:'1. City of Victoria. "Single-use Items." Accessed May 26, 2023.',
-          link:'https://www.victoria.ca/EN/main/residents/waste-reduction/single-use-items.html'
+          url:'https://www.victoria.ca/EN/main/residents/waste-reduction/single-use-items.html'
         }
       ],
       data: SingleUsePlastics,
