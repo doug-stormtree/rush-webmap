@@ -71,20 +71,9 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
   return (
     <VStack>
       <Heading size='xs'><b>{title}</b></Heading>
-      <Text textAlign='justify'>{desc}</Text>
+      <Text>{desc}</Text>
       {imageURL ? <Image src={imageURL} alt={title}/> : null}
-      {link ? (
-        <Link 
-          href={link}
-          isExternal
-          width='100%'
-          overflow='hidden'
-          whiteSpace='nowrap'
-          textOverflow='ellipsis'
-        >
-          {linkText ?? link}
-        </Link>
-      ) : null}
+      {link ? <Link href={link} isExternal>{linkText ?? link}</Link> : null}
     </VStack>
   )
 }
