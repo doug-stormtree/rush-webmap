@@ -51,13 +51,6 @@ export const getStyleMapKeyFromContinuousValue = (value, styleMap) => {
   return [...styleMap.keys()].sort((a,b)=>a-b).find(e => e >= value);
 };
 
-export const geoDateToLocaleString = (dateString) => {
-  const dateParts = dateString.split('-');
-  dateParts[1] = dateParts[1] - 1; // 0 indexing on months
-  const d = new Date(...dateParts);
-  return d.toLocaleDateString(undefined, { dateStyle: 'full' });
-}
-
 // Leaflet Popup Content
 export const mapPopupContent = (title, desc, link = null, linkText = null, imageURL = null) => {
   if (!title && !desc) return;
