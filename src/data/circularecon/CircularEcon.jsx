@@ -139,10 +139,11 @@ const CircularEcon = {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGovShort,
               f.properties.ImplementationDate === null
-                ? `There are no single-use items bylaws currently in effect in the ${f.properties.LocalGov}.`
+                ? "There are no Single-use Items bylaws currently in effect in the "
+                  + f.properties.LocalGov
                 : `The ${
                     f.properties.LocalGov
-                  } bylaw for single-use items took effect on ${
+                  } bylaw for Single-use Items took effect on ${
                     geoDateToLocaleString(f.properties.ImplementationDate)
                   }. Paper checkout bags must cost $${
                     f.properties.PaperBagFee.toFixed(2)
@@ -150,7 +151,7 @@ const CircularEcon = {
                     f.properties.ReusableBagFee.toFixed(2)
                   }. Single-use straws and food containers are ${
                     f.properties.StrawBan ? 'also' : 'not'
-                  } banned. Read the bylaw here:`,
+                  } banned.`,
                   f.properties.URL
             ), {offset: point(0,8)});
           l.on({
