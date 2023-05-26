@@ -1,6 +1,6 @@
 import ReactDOMServer from "react-dom/server";
 import { point, marker, divIcon } from 'leaflet';
-import { geoDateToLocaleString, getStyleMapProperty, mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
+import { pointToIcon, mapPopupContent } from '../LeafletStyleHelpers';
 import image from './CircularEconomy.png';
 import projectZero from './ProjectZero.png';
 import sIPP from './SIPP.png';
@@ -11,13 +11,6 @@ import { ReactComponent as RecyclingIcon } from './Recycling.svg';
 import { ReactComponent as HartlandPie } from './HartlandPie.svg';
 import RecyclingDepots from './RecyclingDepots.geojson';
 import HartlandLandfill from './HartlandPie.geojson';
-import SingleUsePlastics from './SingleUsePlastics.geojson';
-
-const styleMap_SUP = new Map([
-  ["None", {fillColor: 'rgb(90,90,90)', color: 'rgb(130,130,130)', legendText: 'No Bylaws'}],
-  ["Bags", {fillColor: 'rgb(0,120,120)', color: 'rgb(130,130,130)', legendText: 'Checkout Bags'}],
-  ["BSC", {fillColor: 'rgb(120,0,120)', color: 'rgb(130,130,130)', legendText: 'Bags, Straws, Containers'}]
-]);
 
 const RecyclingIconStyle = {
   fill: 'rgb(15,86,229)',
@@ -87,80 +80,6 @@ const CircularEcon = {
     ],
   },
   mapData: [
-    {
-      title: 'Single-use Item Bylaws',
-      description: [
-        {type:'p', content:'Single-use items are products designed to be used once and then thrown away. Examples include checkout bags, straws, stir-sticks, and take-away food containers.'},
-        {type: 'p', content: 'Every day, Victoria residents throw away over 75,000 single-use items.¹'},
-        {type:'p', content:'Click the map within a given municipality to learn about their bylaws, or the B.C. Government keeps a comprehensive list of municipal bylaws at the link below:'},
-        {
-          type:'link',
-          content:'Ministry of Environment and Climate Change. Municipal Bylaws for Single-Use Plastics - Province of British Columbia.',
-          url:'https://www2.gov.bc.ca/gov/content/environment/waste-management/zero-waste/municipal-plastics-bylaws#participating-municipalities'
-        },
-        {
-          type:'link',
-          content:'1. City of Victoria. "Single-use Items." Accessed May 26, 2023.',
-          link:'https://www.victoria.ca/EN/main/residents/waste-reduction/single-use-items.html'
-        }
-      ],
-      data: SingleUsePlastics,
-      format: 'polygon',
-      symbology: 'classified',
-      styleMap: styleMap_SUP,
-      options: {
-        style: function (feature) {
-          const baseStyle = {
-            stroke: true,
-            opacity: 0.5,
-            color: 'rgb(130,130,130)',
-            dashArray: '',
-            lineCap: 'butt',
-            lineJoin: 'miter',
-            weight: 3,
-            fill: true,
-            fillOpacity: 0.2,
-            interactive: true
-          }
-          return {
-            ...baseStyle,
-            fillColor: getStyleMapProperty(
-                'fillColor',
-                feature.properties.ImplementationDate === null
-                  ? "None"
-                  : feature.properties.StrawBan === false
-                    ? "Bags"
-                    : "BSC",
-                styleMap_SUP
-              ),
-          }
-        },
-        onEachFeature: (f,l) => {
-          l.bindPopup(mapPopupContent(
-              f.properties.LocalGovShort,
-              f.properties.ImplementationDate === null
-                ? "There are no Single-use Items bylaws currently in effect in the "
-                  + f.properties.LocalGov
-                : `The ${
-                    f.properties.LocalGov
-                  } bylaw for Single-use Items took effect on ${
-                    geoDateToLocaleString(f.properties.ImplementationDate)
-                  }. Paper checkout bags must cost $${
-                    f.properties.PaperBagFee.toFixed(2)
-                  } and reusable bags must cost $${
-                    f.properties.ReusableBagFee.toFixed(2)
-                  }. Single-use straws and food containers are ${
-                    f.properties.StrawBan ? 'also' : 'not'
-                  } banned.`,
-                  f.properties.URL
-            ), {offset: point(0,8)});
-          l.on({
-            mouseover: (e) => e.target.setStyle({ fillOpacity: 0.7 }),
-            mouseout: (e) => e.target.setStyle({ fillOpacity: 0.2 })
-          });
-        }
-      }
-    },
     {
       title: 'Recycling Depots',
       description: 'Find where you can recycle a wide range of household materials in your neighbourhood. Visit the website of the specific depot to confirm what is accepted there by clicking on it.',
