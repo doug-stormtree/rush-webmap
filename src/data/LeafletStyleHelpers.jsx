@@ -88,3 +88,7 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
     </VStack>
   )
 }
+
+// Open Green Map
+export const ogmIconLink = (id) =>
+  `https://new.opengreenmap.org/api-v1/icons/${id}/image/value`
