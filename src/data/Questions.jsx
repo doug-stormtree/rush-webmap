@@ -1,31 +1,24 @@
 import produce, { enableMapSet } from 'immer';
 import create from 'zustand';
 
-import BeatTheHeat from './beattheheat/BeatTheHeat';
-import EatLocal from './eatlocal/EatLocal';
-import Naturehood from './naturehood/Naturehood';
-import Coastal from './coastal/Coastal';
-import Power from './power/Power';
-import Footprint from './footprint/Footprint';
-import Culture from './culture/Culture';
-import Development from './development/Development';
-import Flooding from './flooding/Flooding';
-import CircularEcon from './circularecon/CircularEcon';
-
 // Enable Immer MapSet
 enableMapSet();
 
 const questionMap = new Map([
-  ['beattheheat', BeatTheHeat],
-  ['eatlocal', EatLocal],
-  ['naturehood', Naturehood],
-  ['coastal', Coastal],
-  ['power', Power],
-  ['footprint', Footprint],
-  ['culture', Culture],
-  ['development', Development],
-  ['flooding', Flooding],
-  ['circularecon', CircularEcon],
+  ['beat-the-heat', require('./BeatTheHeat').default],
+  ['circular-economy', require('./CircularEcon').default],
+  ['culture-compass', require('./Culture').default],
+  ['development', require('./Development').default],
+  ['eat-local', require('./EatLocal').default],
+  ['help-with-change', require('./HelpWithChange').default],
+  ['light-footprint', require('./Footprint').default],
+  ['local-to-global', require('./LocalToGlobal').default],
+  ['neighbourhood-to-naturehood', require('./Naturehood').default],
+  ['power-this-place', require('./Power').default],
+  ['protect-from-flooding', require('./Flooding').default],
+  ['protect-the-coast', require('./Coastal').default],
+  ['sense-of-peace', require('./SenseOfPeace').default],
+  ['wood-wide-web', require('./WoodWideWeb').default],
 ]);
 export default questionMap;
 
