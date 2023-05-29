@@ -3,10 +3,10 @@ import { getStyleMapProperty, mapPopupContent } from './LeafletStyleHelpers';
 // SVG
 
 const styleMap_CarbonSeq = new Map([
-  ['Wetland',    {fillColor: '#225ea8', legendText: 'Wetland', subText: ['471.5 tC02e/ha','3.3 tC02e/ha/year']}],
-  ['Grassland',  {fillColor: '#41b6c4', legendText: 'Grassland', subText: ['205.7 tC02e/ha','2.6 tC02e/ha/year']}],
-  ['Forestland', {fillColor: '#a1dab4', legendText: 'Forestland', subText: ['224.1 tC02e/ha','1.8 tC02e/ha/year']}],
-  ['Cropland',   {fillColor: '#ffffcc', legendText: 'Cropland', subText: ['239.8 tC02e/ha','0.4 tC02e/ha/year']}],
+  ['Wetland',    {fillColor: '#225ea8', legendText: 'Wetland', subText: ['471.5 tC02e per hectare','3.3 tC02e per hectare per year']}],
+  ['Grassland',  {fillColor: '#41b6c4', legendText: 'Grassland', subText: ['205.7 tC02e per hectare','2.6 tC02e per hectare per year']}],
+  ['Forestland', {fillColor: '#a1dab4', legendText: 'Forestland', subText: ['224.1 tC02e per hectare','1.8 tC02e per hectare per year']}],
+  ['Cropland',   {fillColor: '#ffffcc', legendText: 'Cropland', subText: ['239.8 tC02e per hectare','0.4 tC02e per hectare per year']}],
 ]);
 
 const WoodWideWeb = {
