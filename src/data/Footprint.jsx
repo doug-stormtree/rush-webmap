@@ -11,11 +11,6 @@ import BCTransitRoutes from './geojson/BCTransitRoutes.geojson';
 import CRDBikeMap from './geojson/CRDBikeMap.geojson';
 // SVG
 import { GHGCarIcon } from '../components/EmissionsIcon';
-// PNG
-import image from './png/LightFootprint.png';
-import ClimateEmg from './png/ClimateEmergencyReportCard.png';
-import GovCan from './png/GovCan.png';
-import GoElectric from './png/GoElectric.png';
 
 const styleMap_GHG = new Map([
   [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
@@ -33,7 +28,7 @@ const styleMap_CRDBikeMap = new Map([
 const Footprint = {
   title: 'Light Footprint?',
   question: 'Self-propelled "Light Footprint" Travel',
-  image: image,
+  image: require('./png/LightFootprint.png'),
   description: [
     {type: 'h2', content: "Comparison"},
     {type: 'p', content: 'The Capital Regional District (CRD) has set a 61% reduction target for greenhouse gas (GHG) emissions from 2007 levels. On-road transportation represented 39.2% of total GHG emissions for 2020.¹ The coloured in regions of the map shows the change, either increased or reduced, in GHG emissions for each CRD member government between 2007 and 2020. The lines highlight some of the current "Light Footprint" travel options, using bus and bicycle routes. Is your neighbourhood served by "Light" travel options? Are there opportunities for GHG reduction?'},
@@ -49,21 +44,28 @@ const Footprint = {
       {
         title: 'BC Climate Emergency Report Card',
         description: "The BC Climate Emergency Campaign has published a December 2022 Progress Report on the BC government's progress implementing ten urgent climate actions. These actions were called for in an open letter signed by a growing coalition of organizations that represent over two million British Columbians.",
-        image: ClimateEmg,
+        image: require('./png/ClimateEmergencyReportCard.png'),
         link: 'https://bcclimateemergency.ca/report-card'
       },
       {
         title: 'GC Climate & Environment Funding',
         description: 'Funding offered by the Government of Canada through various Grants and Contributions programs. Eligible groups, organizations and individuals can apply for support of projects that protect or conserve our natural environment.',
-        image: GovCan,
+        image: require('./png/GovCan.png'),
         link: 'https://www.canada.ca/en/environment-climate-change/services/environmental-funding.html'
       },
       {
         title: 'CleanBC Go Electric',
         description: 'Buying an electric vehicle is more affordable than ever. You can apply for rebates on eligible cars, SUVs, trucks and vans and get rebates on charging stations, too.',
-        image: GoElectric,
+        image: require('./png/GoElectric.png'),
         link: 'https://goelectricbc.gov.bc.ca/personal-rebate-offers/passenger-vehicle-rebates/'
-      }
+      },
+      {
+        title: 'South Island Climate Action Network',
+        description: '"The South Island Climate Action Network (SI-CAN) is a network of organizations on Vancouver Island. SI-CAN shares information about efforts to address the climate emergency and works toward effective climate action by local, provincial and federal governments."',
+        image: require('./png/SICAN.png'),
+        noText: true,
+        link: 'https://siclimateactionnetwork.wordpress.com/'
+      },
     ],
   },
   mapData: [
