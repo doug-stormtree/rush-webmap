@@ -9,10 +9,6 @@ import { ReactComponent as Government } from './svg/Government office.svg';
 import { ReactComponent as NGO } from './svg/Green enterprise.svg';
 import { ReactComponent as School } from './svg/Green school.svg';
 import { ReactComponent as Business } from './svg/Local business.svg';
-// PNG
-import image from './png/EatLocal.png';
-import IyeCreative from './png/IyeCreative.png';
-import OurFoodFuture from './png/OurFoodFuture.png';
 
 const styleMap_FoodSecurity = new Map([
   ["Business", {icon:(<Business />),fill:"#2e67b1",legendText:"Business"}],
@@ -25,7 +21,7 @@ const styleMap_FoodSecurity = new Map([
 const EatLocal = {
   title: "Eat Local?",
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
-  image: image,
+  image: require('./png/EatLocal.png'),
   description: [
     {type: 'h2', content: 'Comparison'},
     {type: 'p', content: '33% of food waste overall entering the Hartland Landfill is avoidable or donatable.¹ The RUSH Regional Food Security Resource Map highlights businesses, NGOs, Student led, grassroots and government initiatives that promote access to fresh and affordable food.  Restaurants and stores with cultural foods are identified. Local food production potential is shown as Agricultural land Reserve (ALR) designated areas, community gardens and orchards.  Farms with box programs (CSA) will  be identified as well as farms growing cultural fruits and vegetables. Seafood harvesting sites with policy guidelines help focus local interest. A growing list of general food processing plants and local and licensed abattoirs are identified for harvesting and preserving. Food production is dependent on the health of our pollinator communities (birds, bees and insects), Compare the ratio of wildlands, parks and gardens to agricultural spaces.'},
@@ -33,7 +29,7 @@ const EatLocal = {
     {type: 'h2', content: 'Problem'},
     {type: 'p', content: 'Of the food imported to Canada, fruits and vegetables incur the most food miles and therefore emissions in the amount of 3.3 million metric tonnes of CO2.¹ The BC Alliance for Healthy Living Society found that 1/3 of the BC population said that healthy food was not affordable.² Cultural foods are often hard to access through food banks.'},
     {type: 'p', content: 'Farming is a difficult business with the price of land and access to tools and processing facilities. Only 50% of ALR land is in production³ and only 10% of food consumed in the CRD is produced here⁴. In an emergency our food supply chain can be severely compromised and expensive. With a growing population come development pressures on agricultural land and green spaces.'},
-    {type: 'link', content: '1. Kissinger, Meidad, 2012. International trade related food miles - The case of Canada. Food Policy, 37(2).', url: 'https://doi.org/10.1016/j.foodpol.2012.01.002'},
+    {type: 'link', content: '1. Meidad Kissinger, 2012. International trade related food miles - The case of Canada. Food Policy, 37(2).', url: 'https://doi.org/10.1016/j.foodpol.2012.01.002'},
     {type: 'link', content: '2. Public Health Association of BC, 2021. Food Access Across British Columbia. Victoria, BC.', url: 'https://phabc.org/presentation/food-access-across-bc/'},
     {type: 'link', content: '3. Capital Regional District. Regional Foodlands Access Program, Feasibility Study and Business Case. Victoria, BC.', url: 'https://www.crd.bc.ca/docs/default-source/regional-planning-pdf/food-agriculture/crd-foodlandaccess-execsumm.pdf?sfvrsn=8e5bc7ca_4'},
     {type: 'link', content: '4. Cinda Chavich, "A Deep Dive on Vancouver Island Food Security," Douglas Magazine, October 13, 2020.', url: 'https://www.douglasmagazine.com/a-deep-dive-on-vancouver-island-food-security/'},
@@ -46,13 +42,13 @@ const EatLocal = {
     initiatives: [
       {
         title: 'Iyé Creative',
-        image: IyeCreative,
+        image: require('./png/IyeCreative.png'),
         link: 'https://www.iyeherstories.com/',
         description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.'
       },
       {
         title: "Our Food Future",
-        image: OurFoodFuture,
+        image: require('./png/OurFoodFuture.png'),
         link: "https://biomimicryfrontiers.com/our-food-future",
         description: "Biomimicry reminds us that there is no waste out in nature, and to truly imitate nature, we must eliminate waste. Biomimicry Frontiers was brought into the Our Food Future initiative to frame the project from a biomimetic lens and to use the opportunity to build circular businesses, while simultaneously providing advisory services."
       },
