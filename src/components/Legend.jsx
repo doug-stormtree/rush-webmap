@@ -161,14 +161,17 @@ const LegendItemDetails = ({ layer }) => {
         <Flex direction='column' gap='1' mx='2' p='2' bgColor='gray.100' borderRadius='lg'>
           { layer.legendTitle ? <Heading size='sm'>{layer.legendTitle}</Heading> : null }
           {[...layer.styleMap.values()].map((val) => 
-            <Flex key={val.legendText} direction='row' alignItems='center' >
+            <Flex key={val.legendText} direction='row' alignItems='flex-start' >
               { layer.shape === 'point'
                   ? <SinglePatchPoint style={val} flex='0' />
                   : layer.shape === 'line'
                     ? <SinglePatchLine style={val} flex='0' />
                     : <SinglePatchPolygon style={val} flex='0' />
               }
-              <Text marginInline={2} flex='1'>{val.legendText}</Text>
+              <Flex flex='1' marginInline={2} direction='column' alignItems='flex-start'>
+                <Text>{val.legendText}</Text>
+                { val.subText?.map((text) => <Text marginInline={4} fontSize='sm' fontWeight='semibold'>{text}</Text>) }
+              </Flex>
             </Flex>
           )}
         </Flex> : null }
