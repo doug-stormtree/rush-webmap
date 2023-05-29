@@ -1,11 +1,7 @@
-// GeoJSON
-// SVG
-// PNG
-
 const LocalToGlobal = {
   title: "Local to Global?",
   question: "Think cosmically act locally?",
-  image: require('./png/LocalToGlobal.png'),
+  image: require('./png/NASAEarth.png'),
   description: [
     {type: 'h2', content: 'Comparison'},
     {type: 'p', content: 'Energy consumption and GHGs per province and sector. Per capita emissions around the world. Connectivity and gaps of global ecosystems. Migration routes?'},
