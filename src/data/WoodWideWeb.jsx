@@ -1,5 +1,13 @@
-// GeoJSON
+import { point } from 'leaflet';
+import { getStyleMapProperty, mapPopupContent } from './LeafletStyleHelpers';
 // SVG
+
+const styleMap_CarbonSeq = new Map([
+  ['Wetland',    {fillColor: '#225ea8', legendText: 'Wetland', subText: ['471.5 tC02e/ha','3.3 tC02e/ha/year']}],
+  ['Grassland',  {fillColor: '#41b6c4', legendText: 'Grassland', subText: ['205.7 tC02e/ha','2.6 tC02e/ha/year']}],
+  ['Forestland', {fillColor: '#a1dab4', legendText: 'Forestland', subText: ['224.1 tC02e/ha','1.8 tC02e/ha/year']}],
+  ['Cropland',   {fillColor: '#ffffcc', legendText: 'Cropland', subText: ['239.8 tC02e/ha','0.4 tC02e/ha/year']}],
+]);
 
 const WoodWideWeb = {
   title: "Wood Wide Web?",
@@ -59,17 +67,58 @@ const WoodWideWeb = {
       },
     ],
   },
-  mapData: [],
+  mapData: [
+    {
+      title: 'Carbon Sequestration',
+      description: [
+        {type:'p', content:'Land use represents a significant factor in the climate change equation. Approximately 75% of the Earth’s ice-free land was affected by human use by 2015.¹ Croplands cleared and used for human agriculture cover between 12-14% of the global ice-free surface.¹ Reducing the actual human greenhouse gas (GHG) emissions to pre-industrial levels, or even to meet targets for "well below" 2°C of warming, would be impossible considering dietary needs alone.¹𝄒² Therefore achieving "net zero" GHG emissions will require mitigation plans that include large land-based sequestration, the absorption and storage of GHGs in forests, wetlands, and soils. Land cover types have different potential for storing carbon, measured in "tonnes of carbon dioxide equivalent" (tC02e) per hectare (ha), and speeds at which they accumulate that carbon, reported in tC02e/ha/year. Ecosystem connectivity is important to consider as well, as greater biodiversity can improve these potentials.'},
+        {
+          type:'link',
+          content:'1. IPCC, 2019. Framing and Context. In Climate Change and Land: an IPCC special report on climate change, desertification, land degradation, sustainable land management, food security, and greenhouse gas fluxes in terrestrial ecosystems.',
+          url:'https://www.ipcc.ch/srccl/chapter/chapter-1/'
+        },
+        {
+          type:'link',
+          content:'2. "Carbon Calculator Methodology," District of Saanich. Accessed May 29, 2023.',
+          url:'https://www.saanich.ca/EN/main/community/sustainable-saanich/climate-change/carbon-fund-calculator/carbon-calculator-methodology.html'
+        },
+      ],
+      data: require('./geojson/CRDLandCoverNoJDF.geojson'),
+      format: 'polygon',
+      symbology: 'classified',
+      styleMap: styleMap_CarbonSeq,
+      legendTitle: 'IPCC Land Cover Class',
+      options: {
+        style: function (f) {
+          const baseStyle = {
+            stroke: false,
+            opacity: 0.5,
+            color: 'rgb(130,130,130)',
+            dashArray: '',
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            weight: 3,
+            fill: true,
+            fillOpacity: 0.7,
+            interactive: true
+          }
+          return {
+            ...baseStyle,
+            fillColor: getStyleMapProperty(
+                'fillColor',
+                f.properties.LandCoverClass,
+                styleMap_CarbonSeq
+              ),
+          }
+        },
+        onEachFeature: (f,l) => {
+          l.bindPopup(mapPopupContent(
+              `Carbon Sequestration: ${f.properties.LandCoverClass}`,
+              `One hectare of ${f.properties.LandCoverClass} is potentially storing ${f.properties['EF']} tonnes of carbon dioxide equivalent (tC02e) of greenhouse gasses (GHGs) and can sequester ${f.properties['EF_PerYear']} tC02e each year. Converting developed, cleared, or disturbed lands to ${f.properties.LandCoverClass} can add to the total regional sequestration by up to ${f.properties['EF_PerYear']} tC02e per hectare converted per year. Where do you see opportunities to restore our ${f.properties.LandCoverClass}s?`
+            ), {offset: point(0,8)});
+        }
+      }
+    },
+  ],
 };
 export default WoodWideWeb;
-
-/*
-{type: 'h2', content: "Comparison"},
-{type: 'p', content: 'Free and accessible places and ways to get a sense of community and belonging. Public art, walking zones, public parks, fountains, squares, maker spaces, art galleries, commemorative art markers, community centers, co-working spaces, repurposed abondoned or empty spaces, community gardens, walking tours.'},
-{type: 'h2', content: "Problem"},
-{type: 'p', content: 'The UN Declaration on the Rights of Indigenous Peoples is only recently being applied by governments in Canada to show more respect, care, and recognition of the autonomy and sovereignty of Indigenous communities. Hardly a century ago European settlers empowered by their governments took over lands and resources in BC and tried to eliminate the original people and culture of this place. Healing from these extreme acts of oppression does not happen easily or quickly without practical changes in the way our governments,  communities and individuals live and work together.'},
-{type: 'p', content: 'Global problems like climate change and war are forcing people to abandon their homes and families to seek better opportunities but risking a sense of belonging in the process. Creating a culture of reconciliation with Indigenous communities and a warmth of welcome for people fleeing other forms of oppression is crucial.'},
-{type: 'h2', content: "Solution"},
-{type: 'p', content: 'The Truth and Reconciliation Commission of Canada created 94 calls to action to guide meaningful steps towards reconciliation. Respecting days of observance (Red Dress Day - MMIWG2S - May 5, National Indigenous Peoples Day - June 21,  National Truth and Reconciliation Day - September 30), Indigenous leadership, knowledge and stewardship of this land opens a way of understanding how to work with Nature here in a way that is reciprocal and creates abundance.  It is not only about cultural appreciation but honouring rights and bringing integrity to working together.'},
-{type: 'link', content: 'According to Gallup, a true culture of belonging happens when people appreciate what you bring to the community, people seek meaningful relationships and, differences between people are appreciated.', url: 'https://www.gallup.com/workplace/395102/drives-culture-belonging.aspx'}
-*/
