@@ -44,8 +44,8 @@ export default function InitiativeButton({initiative}) {
                 width="calc(100% - 1em)"
                 as="b"
                 color="#FFF"
-                textShadow="0 0 1px #333"
-                fontSize={longestWordLength > 12 ? 'sm' : 'md'}
+                textShadow="0 0 3px #222"
+                fontSize={longestWordLength > 11 ? 'sm' : 'md'}
               >
                 {initiative.title}
               </Text>
