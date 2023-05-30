@@ -200,7 +200,7 @@ const BeatTheHeat = {
           interactive: true
         },
         onEachFeature: (f,l) => {
-          l.bindPopup(mapPopupContent('Heat Dome', 'This area is predicted to be vulnerable to trapping extreme heat.'), {offset: point(0,8)});
+          l.bindPopup(mapPopupContent('Heat Dome', 'This area is predicted to be vulnerable to trapping extreme heat. How much tree canopy is needed to mitigate this? Are there any options to reduce pavement here?', 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf', 'Do these communities meet the 3-30-300 equity test?'), {offset: point(0,8)});
         }
       }
     },
