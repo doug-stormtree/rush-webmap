@@ -1,16 +1,13 @@
-import { point } from 'leaflet';
 import {
   getStyleMapProperty,
   getStyleMapKeyFromContinuousValue,
   mapPopupContent,
   pointToIcon,
+  pointToIconByProperty,
 } from './LeafletStyleHelpers';
-// GeoJSON
-import CRDLocalGovGHG from './geojson/CRDLocalGovGHG.geojson';
-import BCTransitRoutes from './geojson/BCTransitRoutes.geojson';
-import CRDBikeMap from './geojson/CRDBikeMap.geojson';
 // SVG
 import { GHGCarIcon } from '../components/EmissionsIcon';
+import { ReactComponent as WaterIcon } from './svg/water.svg';
 
 const styleMap_GHG = new Map([
   [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
@@ -24,6 +21,11 @@ const styleMap_CRDBikeMap = new Map([
   ["SR1", {legendText: 'Shared Streets', color: 'rgba(236, 136, 29, 255)'}],
   ["DC" , {legendText: 'Difficult Connections', color: 'rgba(211, 18, 69, 255)'}]
 ]);
+
+const styleMap_TransportHubs = new Map([
+  ['Ferry',   {icon: <WaterIcon />, legendText: 'Ferry Terminal'}],
+  ['Airport', {icon: <WaterIcon />, legendText: 'Airport'}],
+])
 
 const Footprint = {
   title: 'Light Footprint?',
@@ -81,7 +83,7 @@ const Footprint = {
           url:'https://www.crd.bc.ca/about/data/climate-change'
         }
       ],
-      data: CRDLocalGovGHG,
+      data: require('./geojson/CRDLocalGovGHG.geojson'),
       format: 'polygon',
       symbology: 'classified',
       styleMap: styleMap_GHG,
@@ -121,10 +123,16 @@ const Footprint = {
           l.bindPopup(mapPopupContent(
               f.properties.LocalGov,
               `${Math.abs(f.properties.OnRoadTransportationChange).toFixed(1)}% ${f.properties.OnRoadTransportationChange > 0 ? 'increase' : 'reduction'} in on-road transportation GHG emissions in 2020 compared to 2007 levels.`
-            ), {offset: point(0,8)});
+            ), {offset: [0,8]});
           l.on({
-            mouseover: (e) => e.target.setStyle({ fillOpacity: 0.6 }),
-            mouseout: (e) => e.target.setStyle({ fillOpacity: 0.3 })
+            mouseover: (e) => {
+              if (typeof e.target.setStyle === 'function')
+                  e.target.setStyle({ fillOpacity: 0.6 })
+              },
+            mouseout: (e) => {
+              if (typeof e.target.setStyle === 'function')
+                e.target.setStyle({ fillOpacity: 0.3 })
+              }
           });
         }
       }
@@ -132,7 +140,7 @@ const Footprint = {
     {
       title: 'CRD Bike Map',
       description: 'The CRD Bike Map represents the cycling network throughout the region as informed by the Pedestrian and Cycling Master Plan, a key part of the Regional Transportation Plan. Encouraging cycling contributes to the vision for our communities as established in our Regional Growth Strategy.',
-      data: CRDBikeMap,
+      data: require('./geojson/CRDBikeMap.geojson'),
       shape: 'line',
       symbology: 'classified',
       styleMap: styleMap_CRDBikeMap,
@@ -160,14 +168,14 @@ const Footprint = {
               'CRD Bike Map',
               f.properties.Label,
               ),
-            {offset: point(0,8)});
+            {offset: [0,8]});
         }
       }
     },
     {
       title: 'BC Transit Bus Routes',
       description: 'The bus transportation routes offered by BC Transit. Some routes shown may be alternate or infrequently operated schedules.',
-      data: BCTransitRoutes,
+      data: require('./geojson/BCTransitRoutes.geojson'),
       shape: 'line',
       symbology: 'single',
       options: {
@@ -185,10 +193,39 @@ const Footprint = {
               'Route ' + f.properties.Route,
               f.properties.RouteName,
               ),
-            {offset: point(0,8)});
+            {offset: [0,8]});
         }
       }
     },
+    {
+      title: 'Major Transportation Hubs',
+      description: '',
+      data: require('./geojson/GHGTransportHubs.geojson'),
+      shape: 'point',
+      symbology: 'classified',
+      styleMap: styleMap_TransportHubs,
+      options: {
+        pointToLayer: (f,l) => pointToIconByProperty(
+          f,
+          l,
+          "Icon",
+          styleMap_TransportHubs
+        ),
+        onEachFeature: (f,l) => {
+          l.bindPopup(
+            mapPopupContent(
+              f.properties['Name'],
+              ''
+            ), {
+              offset: [0,-2],
+              autoPan: false,
+              autoClose: false,
+              minWidth: 200
+            });
+          l.on('add', (e) => e.target.openPopup());
+        }
+      }
+    }
   ],
 };
 export default Footprint;
