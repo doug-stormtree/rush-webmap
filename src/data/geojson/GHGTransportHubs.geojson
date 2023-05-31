@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "name": "GHGTransportHubs",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4269"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "BC Ferries",
+        "Icon": "Ferry"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41078,
+          48.69364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Victoria International Airport",
+        "Icon": "Airport"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.42889,
+          48.64798
+        ]
+      }
+    }
+  ]
+}
