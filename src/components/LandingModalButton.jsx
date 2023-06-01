@@ -36,8 +36,9 @@ export default function LandingModalButton(props) {
   return (
     <>
       <Button
-        rightIcon={<FaRegQuestionCircle />}
+        rightIcon={<FaRegQuestionCircle strokeWidth='4' />}
         onClick={onOpen}
+        fontWeight='medium'
       >About</Button>
       <Modal 
         isOpen={isOpen}
