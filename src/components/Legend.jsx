@@ -160,8 +160,8 @@ const LegendItemDetails = ({ layer }) => {
       {layer.styleMap ? 
         <Flex direction='column' gap='1' mx='2' p='2' bgColor='gray.100' borderRadius='lg'>
           { layer.legendTitle ? <Heading size='sm'>{layer.legendTitle}</Heading> : null }
-          {[...layer.styleMap.values()].map((val) => 
-            <Flex key={val.legendText} direction='row' alignItems='flex-start' >
+          {[...layer.styleMap.entries()].map(([key, val]) => 
+            <Flex key={val?.legendText ?? key} direction='row' alignItems='flex-start' >
               { layer.shape === 'point'
                   ? <SinglePatchPoint style={val} flex='0' />
                   : layer.shape === 'line'
