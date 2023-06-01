@@ -169,7 +169,7 @@ const LegendItemDetails = ({ layer }) => {
                     : <SinglePatchPolygon style={val} flex='0' />
               }
               <Flex flex='1' marginInline={2} direction='column' alignItems='flex-start'>
-                <Text>{val.legendText}</Text>
+                <Text>{val?.legendText ?? key}</Text>
                 { val.subText?.map((text) => <Text marginInline={4} fontSize='sm' fontWeight='semibold'>{text}</Text>) }
               </Flex>
             </Flex>
