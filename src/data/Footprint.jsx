@@ -214,7 +214,7 @@ const Footprint = {
         ),
         onEachFeature: (f,l) => {
           l.bindPopup(
-            (f.properties.Name == "BC Ferries"
+            (f.properties.Name === "BC Ferries"
               ? `<img src="${require('./png/BCFerriesGHGEmissions.png')}" /><img src="${require('./png/Top6EmittingBCFerriesRoutes.png')}" />`
               : `<img src="${require('./png/VictoriaInternationalAirportGHGEmissions.png')}" />`
             ),
