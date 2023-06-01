@@ -7,7 +7,8 @@ import {
 } from './LeafletStyleHelpers';
 // SVG
 import { GHGCarIcon } from '../components/EmissionsIcon';
-import { ReactComponent as WaterIcon } from './svg/water.svg';
+import { ReactComponent as WaterIcon } from './svg/WaterTransport.svg';
+import { ReactComponent as AirportIcon } from './svg/Airport.svg';
 
 const styleMap_GHG = new Map([
   [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
@@ -23,8 +24,8 @@ const styleMap_CRDBikeMap = new Map([
 ]);
 
 const styleMap_TransportHubs = new Map([
-  ['Ferry',   {icon: <WaterIcon />, legendText: 'Ferry Terminal'}],
-  ['Airport', {icon: <WaterIcon />, legendText: 'Airport'}],
+  ['Ferry',   {icon: <WaterIcon />, fill: 'rgb(13,101,149)', legendText: 'Ferry Terminal'}],
+  ['Airport', {icon: <AirportIcon />, fill: 'rgb(100,186,50)', legendText: 'Airport'}],
 ])
 
 const Footprint = {
@@ -213,14 +214,16 @@ const Footprint = {
         ),
         onEachFeature: (f,l) => {
           l.bindPopup(
-            mapPopupContent(
-              f.properties['Name'],
-              ''
-            ), {
+            (f.properties.Name == "BC Ferries"
+              ? `<img src="${require('./png/BCFerriesGHGEmissions.png')}" /><img src="${require('./png/Top6EmittingBCFerriesRoutes.png')}" />`
+              : `<img src="${require('./png/VictoriaInternationalAirportGHGEmissions.png')}" />`
+            ),
+            {
               offset: [0,-2],
               autoPan: false,
               autoClose: false,
-              minWidth: 200
+              minWidth: 400,
+              maxWidth: 400
             });
           l.on('add', (e) => e.target.openPopup());
         }
