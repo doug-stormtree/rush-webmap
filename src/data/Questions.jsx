@@ -8,7 +8,6 @@ const questionMap = new Map([
   ['beat-the-heat', require('./BeatTheHeat').default],
   ['circular-economy', require('./CircularEcon').default],
   ['culture-compass', require('./Culture').default],
-  ['development', require('./Development').default],
   ['eat-local', require('./EatLocal').default],
   ['help-with-change', require('./HelpWithChange').default],
   ['light-footprint', require('./Footprint').default],
@@ -19,6 +18,7 @@ const questionMap = new Map([
   ['protect-the-coast', require('./Coastal').default],
   ['sense-of-peace', require('./SenseOfPeace').default],
   ['wood-wide-web', require('./WoodWideWeb').default],
+  ['development', require('./Development').default],
 ]);
 export default questionMap;
 
