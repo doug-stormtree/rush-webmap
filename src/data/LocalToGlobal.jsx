@@ -17,23 +17,55 @@ const LocalToGlobal = {
   act: {
     initiatives: [
       {
+        title: 'One Planet City Challenge',
+        noText: true,
+        description: 'The One Planet City Challenge is an invitation to every local government on the planet to show the world what climate action looks like in their community and the difference it makes.',
+        link: 'https://wwf.panda.org/projects/one_planet_cities/one_planet_city_challenge/',
+        image: require('./png/OnePlanetCity.png')
+      },
+      {
         title: 'One Planet Saanich',
-        description: 'One Planet Saanich engages schools, businesses and community groups to create their own One Planet Action Plans. The cohort includes schools, a church, a rowing club, local businesses, developers, community networks and others listed below. The District of Saanich is part of the Greater Victoria Regional District and is an active partner in this initiative. One Planet Saanich was initiated in 2018 as part of a global project that brought together 4 communities (Canada, Denmark, South Africa, UK).',
+        description: 'As an early adopter, One Planet Saanich is engaging across sectors and generations in the Saanich community through training, meet-ups, the One Planet Student Challenge, apps, events, and resources since 2018.',
         link: 'https://oneplanetbc.com/one-planet-saanich/',
         image: require('./png/OnePlanetBC.png')
       },
       {
+        title: 'Project Drawdown',
+        noText: true,
+        description: 'This ever-evolving collection of strategies for reversing global warming in the next 30 years draws on the world’s top talent in analyzing solutions that are available now, scalable, financially feasible, measurable, and have a net positive impact.',
+        link: 'https://www.drawdown.org/solutions',
+        image: require('./png/ProjectDrawdown.png')
+      },
+      {
         title: 'Global Alliance for the Rights of Nature',
-        description: '"It is the recognition that our ecosystems – including trees, oceans, animals, mountains – have rights just as human beings have rights. Rights of Nature is about balancing what is good for human beings against what is good for other species, what is good for the planet as a world. It is the holistic recognition that all life, all ecosystems on our planet are deeply intertwined. Rather than treating nature as property under the law, rights of nature acknowledges that nature in all its life forms has the right to exist, persist, maintain and regenerate its vital cycles."',
+        description: 'This network of individuals and organizations is a growing alliance with the goal of legally recognizing, respecting and enforcing that Nature has rights to exist, persist, maintain and regenerate its vital cycles.',
         link: 'https://www.garn.org/rights-of-nature/',
         image: require('./png/GlobalAllianceNatureRights.png')
       },
       {
+        title: 'Territories of Life',
+        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
+        link: 'https://report.territoriesoflife.org/',
+        image: require('./png/TerritoriesOfLife.png')
+      },
+      {
+        title: '1.5-Degree Lifestyles',
+        description: 'The goal of the Hot or Cool Institute is to provide policy-makers and communities with the facts that support hard decisions and new lifestyle strategies that match the limits of the planet.',
+        link: 'https://hotorcool.org/1-5-degree-lifestyles-report/',
+        image: require('./png/1p5DegreeLifestyles.png')
+      },
+      {
         title: 'West Coast Climate Action Network',
-        description: '"The West Coast Climate Action Network strives to unite the multitude of climate change organizations, groups, and initiatives in British Columbia whose members share a deep concern about the global climate emergency and who wish to see more urgent, rapid action. We work to serve, support, amplify and promote their work, and to take whatever further actions we deem necessary to help end the global climate emergency."',
+        description: 'This network brings together individuals and organizations in BC with a deep concern about the climate emergenecy and a desire to take collective action.',
         link: 'https://westcoastclimateaction.ca/',
         image: require('./png/WestCoastClimateAction.png')
-      }
+      },
+      {
+        title: 'Convention on Conservation of Migratory Species',
+        description: 'The Convention on the Conservation of Migratory Species of Wild Animals is an organization dedicated to creating global connectivity of ecosystems and habitats for the migration of wild species around the planet with the deep understanding that this action maintains life support systems and the vital functions of the planet as a living entity that benefits all species.',
+        link: 'https://www.cms.int/en/topics/ecological-connectivity',
+        image: require('./png/ConventionMigratorySpecies.png')
+      },
     ],
   },
   mapData: [],
