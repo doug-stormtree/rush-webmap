@@ -223,14 +223,14 @@ const SinglePatchPoint = ({ style }) => {
 }
 
 const ClassifiedPatchPoint = ({ styleMap }) => {
-  const styles = [...styleMap.values()].slice(0,2);
+  const styles = [...styleMap.entries()].slice(0,2);
   return (
     <HStack spacing={'-0.5rem'}>
-      {styles.map((s, index) => {
-        const { legendText, ...restStyle } = s;
+      {styles.map(([key, style], index) => {
+        const { legendText, ...restStyle } = style;
         return (
           <SinglePatchPoint
-            key={legendText}
+            key={legendText ?? key}
             style={restStyle}
             zIndex={2-index}
           />
@@ -268,15 +268,15 @@ const PolygonPatchSVG = ({ fill, stroke, dashed = false }) => (
 )
 
 const ClassifiedPatchPolygon = ({ styleMap }) => {
-  const styles = [...styleMap.values()].slice(0,6);
+  const styles = [...styleMap.entries()].slice(0,6);
   return (
     <HStack spacing='0'>
-      {styles.map((s) => {
+      {styles.map(([key, style]) => {
         return (
-          <div key={s.legendText} style={{
+          <div key={style.legendText ?? key} style={{
             width: (45 / styles.length) + 'px',
             height: '27px',
-            background: s.fillColor ?? s.color ?? '#BBB'
+            background: style.fillColor ?? style.color ?? '#BBB'
           }} />
         )
       })}
