@@ -71,7 +71,7 @@ const Naturehood = {
   act: {
     initiatives: [
       {
-        title: 'Habitat Aquisition Trust',
+        title: 'Habitat Acquisition Trust',
         description: 'Habitat Acquisition Trust (HAT) runs several Species at Risk Programs: "On Southern Vancouver Island, the increase in urbanization and loss of habitat has lead to many species at risk in our region. HAT works to protect and improve habitat for many of these species, and though we wish we could help them all we only run programs from a few of them."',
         link: 'https://hat.bc.ca/wildlife',
         image: require('./png/HAT.png')
@@ -236,7 +236,7 @@ const Naturehood = {
         {type: 'p', content: 'Stewardship groups are volunteer-based community organizations that actively support the environmental health and wellbeing of a specific region, park, or watershed through monitoring programs, invasive species management, public outreach, and governmental advocacy.'},
         {type: 'p', content: 'In addition to those shown on the map, the following groups work throughout the Capital Regional District:'},
         {type: 'link', content: 'Greater Victoria Green Team', url: 'https://greenteamscanada.ca/our-green-teams/greater-victoria-green-team/'},
-        {type: 'link', content: 'Habitat Aquisition Trust', url: 'https://hat.bc.ca/volunteer'}
+        {type: 'link', content: 'Habitat Acquisition Trust', url: 'https://hat.bc.ca/volunteer'}
       ],
       data: StewardshipGroups,
       shape: 'polygon',

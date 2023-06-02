@@ -1,11 +1,5 @@
 import { point, tileLayer } from 'leaflet';
 import { pointToIconByProperty, mapPopupContent } from './LeafletStyleHelpers';
-// GeoJSON
-import HeatDomes from './geojson/HeatDomes.geojson';
-import Parks from './geojson/CRD_Parks.geojson';
-import AC_Buildings from './geojson/AC_Buildings.geojson';
-import Water_Fountains from './geojson/VictoriaDrinkingFountains.geojson';
-import Links from './geojson/BeatTheHeat_Links.geojson';
 // SVG
 import { ReactComponent as CommunityCtrIcon } from './svg/cc.svg';
 import { ReactComponent as LibraryIcon } from './svg/lib.svg';
@@ -60,9 +54,9 @@ const BeatTheHeat = {
     initiatives: [
       {
         title: "North Park Heatwave Map",
-        description: "The North Park Heatwave Map was created by Tenaya Lynx, Julia Frasher, Riley Sondergaard during their Community Based Participatory Reseach Class, Geography, University of Victoria. They consulted community members and organizations to identify areas of relief, concern and risk resulting in a map that the community can use to orient and help during a heatwave and also to advocate for improvements to infrastructure and services.",
+        description: "The North Park Heatwave Map was created by Tenaya Lynx, Julia Frasher, Riley Sondergaard during their Community Based Participatory Research Class, Geography, University of Victoria. This StoryMap by Riley Sondergaard goes into more depth and shows the feedback process with community members and organizations to identify areas of relief, concern and risk resulting in a map that the community can use to orient and help during a heatwave and also to advocate for improvements to infrastructure and services.",
         image: require('./png/NorthPark.png'),
-        link: "https://www.google.com/maps/d/viewer?mid=12YLjmNqss6nHrcWQYYgK0ffl8JqkYaKd&ll=48.431337468326106%2C-123.35707554999999&z=16",
+        link: "https://storymaps.arcgis.com/stories/1b18c6ccd6414b2cb74216847022df19",
       },
       {
         title: "Climate Atlas of Canada",
@@ -138,7 +132,7 @@ const BeatTheHeat = {
     {
       title: 'Local Initiatives',
       description: 'Learn more from these area specific community mapping initiatives by clicking one of these areas on the map and following the link.',
-      data: Links,
+      data: require('./geojson/BeatTheHeat_Links.geojson'),
       shape: 'polygon',
       symbology: 'single',
       options: {
@@ -158,7 +152,7 @@ const BeatTheHeat = {
     {
       title: 'Parks',
       description: 'These are the designated parks within the CRD. Greenspace has many benefits, including providing shade, cleaning the air, and reducing noise. While plants help draw harmful greenhouse gases from the atmosphere, the soil processes the gases. Soil processes greenhouse gases at a rate of 2:1 compared to plants. The partnership between soil and the atmosphere is key to having a healthy climate. Nature is also great for your physical and mental wellbeing.',
-      data: Parks,
+      data: require('./geojson/CRD_Parks.geojson'),
       shape: 'polygon',
       symbology: 'single',
       options: {
@@ -183,7 +177,7 @@ const BeatTheHeat = {
     {
       title: 'Heat Domes',
       description: 'NOAA defines a heat dome as a climate event when "high-pressure circulation in the atmosphere acts like a dome or cap, trapping heat at the surface and favoring the formation of a heat wave." The heat islands on this map are some areas within the CRD that have experienced the most significant increases in average summer surface temperature from 2018 to 2021. Using the satellite imagery, you can see the relationship between heat island distance and canopy vegetation, roof area and parking lots. This heat island map was created by UVic geography student Gillian Voss at the UVic Map Shop.',
-      data: HeatDomes,
+      data: require('./geojson/HeatDomes.geojson'),
       shape: 'polygon',
       symbology: 'single',
       options: {
@@ -207,7 +201,7 @@ const BeatTheHeat = {
     {
       title: "Air Conditioned Buildings",
       description: 'Public air conditioned buildings that may provide relief during heat waves.',
-      data: AC_Buildings,
+      data: require('./geojson/AC_Buildings.geojson'),
       shape: 'point',
       symbology: 'classified',
       styleMap: styleMap_AC_Buildings,
@@ -229,7 +223,7 @@ const BeatTheHeat = {
     {
       title: 'Drinking Fountains',
       description: 'Public drinking water fountains in the City of Victoria',
-      data: Water_Fountains,
+      data: require('./geojson/VictoriaDrinkingFountains.geojson'),
       shape: 'point',
       symbology: 'classified',
       styleMap: styleMap_Water_Fountains,
