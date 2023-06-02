@@ -1,16 +1,6 @@
 import { icon, marker, point } from 'leaflet';
 import { getStyleMapProperty, mapPopupContent, pointToIcon } from './LeafletStyleHelpers';
-// GeoJSON
-import Watersheds from './geojson/CRDWatersheds.geojson';
-import RainGardens from './geojson/1000RainGardens.geojson';
-import RestorationSites from './geojson/RestorationSites.geojson';
-import CRDInundation from './geojson/CRDInundation.geojson';
 // SVG
-// PNG
-import image from './png/ProtectFromFlooding.png';
-import rainGardenStoryMapImage from './png/RainGardenStoryMap.png';
-import watershedsBC from './png/WatershedsBC.png';
-import crdWatershedsMap from './png/CRDWatershedMap.png';
 
 const styleMap_RainGardens = new Map([
   ['641b6ff089e06d0100e0cf1d', {
@@ -76,7 +66,7 @@ const styleMap_CRDInundation = new Map([
 const Flooding = {
   title: 'Protect from Flooding?',
   question: 'How can communities manage water for maximum benefit?',
-  image: image,
+  image: require('./png/ProtectFromFlooding.png'),
   description: [
     {type: 'h2', content: "Comparison"},
     {type: 'p', content: 'Sea level rise, watersheds, raingardens.'},
@@ -98,22 +88,36 @@ const Flooding = {
     initiatives: [
       {
         title: "Rain Gardens",
-        image: rainGardenStoryMapImage,
+        image: require('./png/RainGardenStoryMap.png'),
         link: "https://storymaps.arcgis.com/stories/bade971de06f4502af700ecb844f3fb5",
         description: "A rain garden is any landscaping that absorbs and filters rainwater runoff from a nearby impervious surface, which is any surface that does not allow water infiltration, such as a roof, driveway, parking lot or street. Learn more in this StoryMap created by UVic Community Mapping students Jared Leary, Aiden Foxcroft, Grace Long, and Olivia Graham."
       },
       {
+        title: 'Peninsula Streams & Shorelines',
+        noText: true,
+        image: require('./png/PeninsulaStreams.png'),
+        link: 'https://peninsulastreams.ca/',
+        description: '"We restore and protect aquatic ecosystems throughout Greater Victoria."'
+      },
+      {
         title: 'Watersheds BC',
-        image: watershedsBC,
+        image: require('./png/WatershedsBC.png'),
         link: 'https://watershedsbc.ca/',
         description: 'A dedicated resource hub to provide local leaders with knowledge, skills, and support to deliver effective watershed management and governance in their communities. Watersheds BC emerged in response to this need.'
       },
       {
         title: 'CRD Watersheds Map',
-        image: crdWatershedsMap,
+        image: require('./png/CRDWatershedMap.png'),
         link: 'https://www.crd.bc.ca/docs/default-source/es-watersheds-pdf/regional-watershed-maps/watershedscrdoverview400dpired.pdf?sfvrsn=5d837aca_2',
         description: 'A PDF Map of the watershed boundaries within the Capital Regional District. Warning: large file size.'
       },
+      {
+        title: 'The 1000 Rain Gardens Project',
+        noText: true,
+        image: require('./png/FriendsOfBowkerCreek.png'),
+        link: 'https://bowkercreek.org/1000-rain-gardens/',
+        description: 'The 1000 Rain Gardens Project: "Making Bowker Creek healthy again requires that people send much more rainwater into the earth and much less into the storm drains. Wherever we live, work or go to school in Bowker Creek’s valley, the 1000 Rain Gardens Project aims to help us manage rainwater better. The project partners Friends of Bowker Creek Society with Peninsula Streams Society (PSS). The PSS initiative, the Rain Gardens in Headwaters Program, will multiply rain gardens throughout Greater Victoria, starting here in Bowker Creek’s valley. The 1000 Rain Gardens project provides a vital first step and proving ground for the wider program."'
+      }
     ],
   },
   mapData: [
@@ -125,7 +129,7 @@ const Flooding = {
         {type: 'link', content: '1. GeoBC, 2010. "Freshwater Atlas User Guide." Integrated Land Management Bureau, Victoria, BC. ', url: 'https://www2.gov.bc.ca/assets/gov/data/geographic/topography/fwa/fwa_user_guide.pdf'},
         {type: 'link', content: '2. NOAA. "What is a watershed?" Accessed: May 15, 2023.', url: 'https://oceanservice.noaa.gov/facts/watershed.html'},
       ],
-      data: Watersheds,
+      data: require('./geojson/CRDWatersheds.geojson'),
       shape: 'polygon',
       symbology: 'single',
       options: {
@@ -164,7 +168,7 @@ const Flooding = {
         {type: 'p', content: 'The Capital Regional District (CRD) retained Associated Engineering, DHI and Westmar Advisors to undertake the Capital Region Coastal Flood Inundation Mapping Project (the project) in 2019 -2021. On behalf of local government and other regional stakeholders, staff worked closely with an inter-municipal and multi-disciplinary project team to complete the Regional Coastal Flood Inundation Project in order to better understand regional impacts from coastal storm flooding due to sea level rise and tsunamis. Modeled scenarios show the higher high water large tide (HHWLT) levels for a 0.0m, 0.5m, 1.0m, and 2.0m relative sea level rise (RSLR), respectively.'},
         {type: 'link', content: 'Capital Regional District, 2021. Capital Region Coastal Flood Inundation Mapping Project Summary, Version 2.0. Victoria.', url: 'https://www.crd.bc.ca/docs/default-source/climate-action-pdf/reports/2020-sea-level-mapping-project/coastal-flood-inundation-mapping-project-summary.pdf'},
       ],
-      data: CRDInundation,
+      data: require('./geojson/CRDInundation.geojson'),
       shape: 'line',
       symbology: 'classified',
       styleMap: styleMap_CRDInundation,
@@ -201,7 +205,7 @@ const Flooding = {
         {type: 'p', content: "Mapping restoration sites as described by Peninsula Streams Society for the RUSH Initiative."},
         {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=644acbf92af3a50100a0f0bc'},
       ],
-      data: RestorationSites,
+      data: require('./geojson/RestorationSites.geojson'),
       shape: 'point',
       symbology: 'classified',
       styleMap: styleMap_RestorationSites,
@@ -231,7 +235,7 @@ const Flooding = {
         {type: 'p', content: "This is the map for the Friends of Bowker Creek and Peninsula Streams Society '1000 Rain Gardens' mapping project!"},
         {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=63e6939eabcc260100514352'},
       ],
-      data: RainGardens,
+      data: require('./geojson/1000RainGardens.geojson'),
       shape: 'point',
       symbology: 'classified',
       styleMap: styleMap_RainGardens,

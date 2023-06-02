@@ -12,7 +12,7 @@
       "type": "Feature",
       "properties": {
         "Name": "North Park Heatwave Map",
-        "Description": "A community map of the North Park neighbourhood showing assets, concerns, and opportunities for dealing with heatwave events in the future. Created by UVic geography student Riley Sondergaard.",
+        "Description": "A community map of the North Park neighbourhood showing assets, concerns, and opportunities for dealing with heatwave events in the future. Created by UVic geography students Tenaya Lynx, Julia Frasher, Riley Sondergaard.",
         "URL": "https://www.google.com/maps/d/viewer?mid=12YLjmNqss6nHrcWQYYgK0ffl8JqkYaKd&ll=48.431337468326106%2C-123.35707554999999&z=16"
       },
       "geometry": {
