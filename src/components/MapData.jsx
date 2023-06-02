@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useBreakpointValue } from '@chakra-ui/react';
+import { useBreakpointValue, Center, Heading } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
@@ -59,12 +59,32 @@ export const MapData = ({ question }) => {
 
   // Render Legend Control on small displays.
   return (
-    <>{
-      smallDisplay ? (
-        <Control position='topright'>
-          <LegendDrawerButton activeQuestion={question} />
-        </Control>
-      ) : null
-    }</>
+    <>
+      { smallDisplay ? (
+          <Control position='topright'>
+            <LegendDrawerButton activeQuestion={question} />
+          </Control>
+        ) : null }
+      { [...layers.values()].filter((l) => l.question === question).length === 0 ? (
+        <Center style={{
+          position: 'absolute',
+          margin: 'auto',
+          left: '0',
+          top: '0',
+          width: '100%',
+          height: '100%',
+          zIndex: '9000',
+          backgroundColor: 'rgba(20,20,20,0.4)'
+        }}>
+          <Heading
+            size='2xl'
+            color="#FFF"
+            textShadow="0 0 3px #222"
+          >
+            Coming Soon
+          </Heading>
+        </Center>
+      ) : null }
+    </>
   );
 }
