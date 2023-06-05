@@ -1,3 +1,5 @@
+import L from 'leaflet';
+import 'leaflet-layerjson';
 import {
   getStyleMapProperty,
   getStyleMapKeyFromContinuousValue,
@@ -9,6 +11,12 @@ import {
 import { GHGCarIcon } from '../components/EmissionsIcon';
 import { ReactComponent as WaterIcon } from './svg/WaterTransport.svg';
 import { ReactComponent as AirportIcon } from './svg/Airport.svg';
+import { ReactComponent as RecyclingIcon } from './svg/Recycling.svg';
+
+const RecyclingIconStyle = {
+  fill: 'rgb(15,86,229)',
+  icon: <RecyclingIcon />
+}
 
 const styleMap_GHG = new Map([
   [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
@@ -197,6 +205,26 @@ const Footprint = {
             {offset: [0,8]});
         }
       }
+    },
+    {
+      title: 'EV Charging Stations',
+      description: '',
+      layer: L.layerJSON({
+        url: "https://api.openchargemap.io/v3/poi/?output=geojson&countrycode=CA&maxresults=3000&compact=false&camelcase=true&verbose=false&includecomments=true&key=ca66f44f-646d-4f64-98ec-639b924d2839&boundingbox=({lat1}%2C{lon1})%2C({lat2}%2C{lon2})",
+        propertyItems: 'features',
+        propertyLoc: 'geometry.coordinates',
+        locAsGeoJSON: true,
+        caching: true,
+        cacheId: function(data, latlng) {
+          return data.properties.name || latlng.toString();
+        },
+        buildPopup: function(data, marker) {
+          return data.properties.name || null;
+        }
+      }),
+      shape: 'point',
+      symbology: 'single',
+      icon: RecyclingIconStyle,
     },
     {
       title: 'Major Transportation Hubs',
