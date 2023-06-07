@@ -12,13 +12,10 @@ import {
   ModalHeader,
   ModalOverlay,
   Stack,
-  Text,
 } from '@chakra-ui/react';
 import { FaRegQuestionCircle } from 'react-icons/fa';
-import {
-  TerritoryAcknowledgement,
-  RushMissionStatement
-} from '../data/TextContent';
+import FormattedText from './FormattedText';
+import { AboutPageText } from '../data/TextContent';
 import logos_xl from '../images/RUSH_Logos_xl.png';
 
 // Check first visit outside component
@@ -57,8 +54,7 @@ export default function LandingModalButton(props) {
           <ModalCloseButton />
           <ModalBody>
             <Stack spacing='1em'>
-              <Text>{ TerritoryAcknowledgement }</Text>
-              <Text>{ RushMissionStatement }</Text>
+              <FormattedText textArray={AboutPageText} />
             </Stack>
           </ModalBody>
           <ModalFooter>
