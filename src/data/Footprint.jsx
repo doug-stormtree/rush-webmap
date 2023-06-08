@@ -11,12 +11,7 @@ import {
 import { GHGCarIcon } from '../components/EmissionsIcon';
 import { ReactComponent as WaterIcon } from './svg/WaterTransport.svg';
 import { ReactComponent as AirportIcon } from './svg/Airport.svg';
-import { ReactComponent as RecyclingIcon } from './svg/Recycling.svg';
-
-const RecyclingIconStyle = {
-  fill: 'rgb(15,86,229)',
-  icon: <RecyclingIcon />
-}
+import { ReactComponent as EVIcon } from './svg/CarEV.svg';
 
 const styleMap_GHG = new Map([
   [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
@@ -34,6 +29,12 @@ const styleMap_CRDBikeMap = new Map([
 const styleMap_TransportHubs = new Map([
   ['Ferry',   {icon: <WaterIcon />, fill: 'rgb(13,101,149)', legendText: 'Ferry Terminal'}],
   ['Airport', {icon: <AirportIcon />, fill: 'rgb(100,186,50)', legendText: 'Airport'}],
+])
+
+const styleMap_OpenChargeMap = new Map([
+  ['1', {icon: <EVIcon />, fill: 'rgb(7,72,174)', legendText: 'Level 1 (<2 kW)'}],
+  ['2', {icon: <EVIcon />, fill: 'rgb(130,173,70)', legendText: 'Level 2 (2 - 40 kW)'}],
+  ['3', {icon: <EVIcon />, fill: 'rgb(253,106,33)', legendText: 'Level 3 (>40 kW)', subText: ['Fast Charger']}],
 ])
 
 const Footprint = {
@@ -208,23 +209,40 @@ const Footprint = {
     },
     {
       title: 'EV Charging Stations',
-      description: '',
+      description: [
+        {type: 'p', content: 'Charging station data provided by Open Charge Map.'},
+        {type: 'link', content: 'View detailed charging station information, contribute to the map, and learn more about the project here.', url: 'https://openchargemap.org/site'}
+      ],
+      legendTitle: 'Charging Level (Speed)',
       layer: L.layerJSON({
-        url: "https://api.openchargemap.io/v3/poi/?output=geojson&countrycode=CA&maxresults=3000&compact=false&camelcase=true&verbose=false&includecomments=true&key=ca66f44f-646d-4f64-98ec-639b924d2839&boundingbox=({lat1}%2C{lon1})%2C({lat2}%2C{lon2})",
+        url: "https://api.openchargemap.io/v3/poi/?output=geojson&countrycode=CA&usagetypeid=1&statustypeid=50&maxresults=3000&compact=false&camelcase=true&verbose=false&includecomments=true&key=ca66f44f-646d-4f64-98ec-639b924d2839&boundingbox=({lat1}%2C{lon1})%2C({lat2}%2C{lon2})",
         propertyItems: 'features',
+        propertyTitle: 'properties.name',
         propertyLoc: 'geometry.coordinates',
+        updateOutBounds: '',
         locAsGeoJSON: true,
+        precision: 5,
         caching: true,
         cacheId: function(data, latlng) {
-          return data.properties.name || latlng.toString();
+          return data.id || latlng.toString();
         },
-        buildPopup: function(data, marker) {
-          return data.properties.name || null;
-        }
+        dataToMarker: function(data, latlng) {
+          return pointToIconByProperty(
+            data,
+            latlng,
+            "level",
+            styleMap_OpenChargeMap)
+            .bindPopup(
+              mapPopupContent(
+                data.properties.name,
+                data.properties.connectionType
+              )
+            )
+        },
       }),
       shape: 'point',
-      symbology: 'single',
-      icon: RecyclingIconStyle,
+      symbology: 'classified',
+      styleMap: styleMap_OpenChargeMap,
     },
     {
       title: 'Major Transportation Hubs',
