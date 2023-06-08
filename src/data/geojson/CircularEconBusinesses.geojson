@@ -1,0 +1,742 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.363998847257,
+          48.43210448274863
+        ]
+      },
+      "properties": {
+        "id": "6474c0e87fa0fd0100e40201",
+        "name": "Climate Wave Coffee",
+        "icons": [
+          "5ca7bfbdecd8490100cab979",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Climate Wave Coffee"
+          },
+          {
+            "type": "p",
+            "content": "Climate Wave Coffee is a sustainable coffee consulting business specializing in research and analysis of the Global Coffee Value Chain to strategize and execute sustainable solutions. The company aims to reverse global warming by transforming monoculture coffee farms into biodiversity-rich, climate-friendly coffee forests worldwide."
+          },
+          {
+            "type": "p",
+            "content": "Climate Wave Coffee has developped Climate Wave Standard to ensure that every step of their production is truely sustainable. The Climate Wave Standards consider the needs of various stakeholders within coffee production, all working towards dynamic, sustainable solutions for the future of coffee."
+          },
+          {
+            "type": "link",
+            "content": "Source:https://climatewave.ca/ CLIMATE WAVE COFFEE®",
+            "url": "https://climatewave.ca/"
+          }
+        ],
+        "pictures": [
+          "6474c273261bc10100e28d95"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3679276609218,
+          48.42684459370687
+        ]
+      },
+      "properties": {
+        "id": "6474c893261bc10100e28d9a",
+        "name": "Rise Consignment",
+        "icons": [
+          "5ca7bfb8ecd8490100cab973",
+          "5ca7bfbcecd8490100cab976",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Rise Consignment"
+          },
+          {
+            "type": "p",
+            "content": "We want to harness the amazing sense of community in the Victoria area and create something new - a way for individuals and small businesses to come together and celebrate themselves through shopping, unique events, and collaborations. Rise is committed to giving back to the community, helping break fashion barriers, and contributing to both circular fashion and a circular economy!"
+          },
+          {
+            "type": "p",
+            "content": "Building community through fashion, this local consignment store adds value to unwanted pieces and finds them a loving home."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://www.riseconsignment.ca/about-us",
+            "url": "https://www.riseconsignment.ca/about-us"
+          }
+        ],
+        "pictures": [
+          "6474c9b4261bc10100e28d9e"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.5032643739121,
+          48.45219333119318
+        ]
+      },
+      "properties": {
+        "id": "6474cee2261bc10100e28e00",
+        "name": "Habitat For Humanity Victoria ReStore - Westshore",
+        "icons": [
+          "5ca7bfb8ecd8490100cab973",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Habitat For Humanity Victoria ReStore - Westshore"
+          },
+          {
+            "type": "p",
+            "content": "Habitat ReStore is a social enterprise retailer that accepts and resells donations of new and used furniture, applicances, décor, and home improvement building materials. All profits from our operations fund Habitat for Humanity."
+          },
+          {
+            "type": "p",
+            "content": "Restores have diverted 1 billion pounds of landfill bound items since 1991. By reselling these donations, Habitat for Humanities Restores fund the charitable work of Habitat for Humanity."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://habitat.ca/en/restore",
+            "url": "https://habitat.ca/en/restore"
+          }
+        ],
+        "pictures": [
+          "6476114a7fa0fd0100e4025e"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3665999375356,
+          48.45355506003168
+        ]
+      },
+      "properties": {
+        "id": "6474cf4c261bc10100e28e01",
+        "name": "Habitat For Humanity Victoria ReStore - Uptown",
+        "icons": [
+          "5ca7bfb8ecd8490100cab973",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Habitat For Humanity Victoria ReStore - Uptown"
+          },
+          {
+            "type": "p",
+            "content": "\"Habitat ReStore is a social enterprise retailer that accepts and resells donations of new and used furniture, applicances, décor, and home improvement building materials. All profits from our operations fund Habitat for Humanity.\""
+          },
+          {
+            "type": "p",
+            "content": "Restores have diverted 1 billion pounds of landfill bound items since 1991. By reselling these donations, Habitat for Humanities Restores fund the charitable work of Habitat for Humanity."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://habitat.ca/en/restore",
+            "url": "https://habitat.ca/en/restore"
+          }
+        ],
+        "pictures": [
+          "6476116701427f0100892754"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3534500336435,
+          48.4238963534858
+        ]
+      },
+      "properties": {
+        "id": "6474d0ff01427f010089270f",
+        "name": "The Velvet Crease",
+        "icons": [
+          "5ca7bfb8ecd8490100cab973",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "The Velvet Crease"
+          },
+          {
+            "type": "p",
+            "content": "Local consignment store reselling vintage and designer items"
+          }
+        ],
+        "pictures": [
+          "647766577fa0fd0100e402a1"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3131304003091,
+          48.42693379794606
+        ]
+      },
+      "properties": {
+        "id": "6474d1bb01427f0100892710",
+        "name": "Turnabout",
+        "icons": [
+          "5ca7bfb8ecd8490100cab973",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Turnabout"
+          },
+          {
+            "type": "p",
+            "content": "Turnabout is about community. Each shop is filled with items brought from people living in the community, staff live local and shoppers become familiar friends. We encourage and support many organizations by offering a higher commission rate on their fundraising consignment accounts. We donate items and we participate in events, fashion shows and fundraising drives. "
+          },
+          {
+            "type": "p",
+            "content": "Local consignment store reselling vintage and designer items."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://turnabout.com/pages/community © TURNABOUT LUXURY RESALE",
+            "url": "https://turnabout.com/pages/community"
+          }
+        ],
+        "pictures": [
+          "647768037fa0fd0100e402a8"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3680172661515,
+          48.42751384878684
+        ]
+      },
+      "properties": {
+        "id": "6474d2db7fa0fd0100e40235",
+        "name": "Flavour Upstairs",
+        "icons": [
+          "5ca7bfb8ecd8490100cab973",
+          "5ca7bfbcecd8490100cab976",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Flavour Upstairs"
+          },
+          {
+            "type": "p",
+            "content": "Local consignment and clothing store"
+          }
+        ],
+        "pictures": [
+          "647768f101427f01008927a5"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3582285532579,
+          48.42230301110692
+        ]
+      },
+      "properties": {
+        "id": "6476098f261bc10100e28e26",
+        "name": "Sequoia Coastal Coffee",
+        "icons": [
+          "6067a9efa4eddf0100334b68",
+          "5ca7bfbcecd8490100cab976",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Sequoia Coastal Coffee"
+          },
+          {
+            "type": "p",
+            "content": "Sequoia Coastal Coffee seeks to provide carefully crafted goods to share with others that  celebrate the rich natural and human environment of Vancouver Island, while engaging mindfully with the community and the environment, in a location steeped with history and culture.</i>"
+          },
+          {
+            "type": "p",
+            "content": "Sequoia Coastal Coffee creates a community space nourished by locally-sourced products, with the goal of celebrating Vancouver Island's bounty."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://sequoiacoffee.ca/",
+            "url": "https://sequoiacoffee.ca/"
+          }
+        ],
+        "pictures": [
+          "647769a57fa0fd0100e402af"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3523234,
+          48.42987527811975
+        ]
+      },
+      "properties": {
+        "id": "64760a9f01427f010089273b",
+        "name": "Cold Comfort Ice Cream",
+        "icons": [
+          "6067a9efa4eddf0100334b68",
+          "5ca7bfbdecd8490100cab979",
+          "5ca7bfbcecd8490100cab976",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Cold Comfort Ice Cream"
+          },
+          {
+            "type": "p",
+            "content": "\"We have been “Doing whatever the hell we feel like since 2010”: making high-density, superior quality ice cream that tastes incredible. We incorporate seasonal local fruits, herbs, and local spirits, ciders and beer into our concoctions.\""
+          },
+          {
+            "type": "p",
+            "content": "\"In 2021 we proudly achieved our GOLD certification from the Vancouver Island Green Business Initiative and received the Ocean Friendly Business Status from Surfrider Foundation. We are looking forward to working towards reducing our carbon footprint further and are committed to putting our personal values into everything we do.\""
+          },
+          {
+            "type": "link",
+            "content": "Source: https://www.coldcomfort.ca/about",
+            "url": "https://www.coldcomfort.ca/about"
+          }
+        ],
+        "pictures": [
+          "64760c0901427f0100892747"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.413225253367,
+          48.59387476282936
+        ]
+      },
+      "properties": {
+        "id": "64760e5201427f010089274b",
+        "name": "Brentwood Auto & Metal Recyclers",
+        "icons": [
+          "5ca7bfc0ecd8490100cab981",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Brentwood Auto & Metal Recyclers"
+          },
+          {
+            "type": "p",
+            "content": "Environmentally friendly recycling company offering free vehicle removal and large load pickup service."
+          }
+        ],
+        "pictures": [
+          "64776cc901427f01008927b3"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3681468130196,
+          48.45168626288388
+        ]
+      },
+      "properties": {
+        "id": "64760fcd01427f010089274d",
+        "name": "Schnitzer Steel",
+        "icons": [
+          "5ca7bfc0ecd8490100cab981",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Schnitzer Steel"
+          },
+          {
+            "type": "p",
+            "content": "At Schnitzer, sustainability is at the core of what we do. By recycling metals, we are diverting and reusing millions of tons of materials each year that might otherwise be destined for landfills. The ferrous and nonferrous metals we process are utilized to manufacture new metal-based products, conserving natural resources and significantly reducing greenhouse gas emissions."
+          },
+          {
+            "type": "p",
+            "content": "Environmentally friendly recycling company offering free vehicle removal and large load pickup service."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://www.schnitzersteel.com/company/sustainability Schnitzer Steel Industries, Inc.",
+            "url": "https://www.schnitzersteel.com/company/sustainability"
+          }
+        ],
+        "pictures": [
+          "64776faf261bc10100e28e7e"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4330457960346,
+          48.50750450134318
+        ]
+      },
+      "properties": {
+        "id": "647610287fa0fd0100e40259",
+        "name": "Williams Scrap Iron & Metal Victoria",
+        "icons": [
+          "5ca7bfc0ecd8490100cab981",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Williams Scrap Iron & Metal Victoria"
+          },
+          {
+            "type": "p",
+            "content": "Williams Scrap Iron & Metals is a family-owned and operated metal recycling company based in Victoria. Established in 1960, we have over 60 years of experience in metal collection and recycling. We buy scrap material, including both ferrous and non-ferrous metals and pay you a generous amount as per the current market rates, unlike large corporate companies who try to buy metals at cheap prices and maximize profits. Our team abides by all the rules and regulations of the state regarding scrap collection to ensure environmental safety"
+          },
+          {
+            "type": "p",
+            "content": "Environmentally friendly recycling company offering free vehicle removal and large load pickup service."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://www.williamsscrapmetal.ca/",
+            "url": "https://www.williamsscrapmetal.ca/"
+          }
+        ],
+        "pictures": [
+          "64776fea261bc10100e28e85"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.6942943765085,
+          48.39036320774159
+        ]
+      },
+      "properties": {
+        "id": "647610797fa0fd0100e4025a",
+        "name": "Sooke Total Auto Recycling",
+        "icons": [
+          "5ca7bfc0ecd8490100cab981",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Sooke Total Auto Recycling"
+          },
+          {
+            "type": "p",
+            "content": "\"Sooke Total Auto Recycling has been in business for over 25 years. We operate an environmentally responsible auto recycling facility that is Gold Star Approved by Environment Canada. In our yard you'll find over 200 domestic and imported vehicles ready to be pulled for parts. We also purchase scrap cars and trucks.\""
+          },
+          {
+            "type": "p",
+            "content": "Environmentally friendly recycling company offering free vehicle removal and large load pickup service."
+          },
+          {
+            "type": "p",
+            "content": "Source: Sooke Auto Recycling"
+          }
+        ],
+        "pictures": [
+          "647770c701427f01008927c2"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.5014263241203,
+          49.12102468659786
+        ]
+      },
+      "properties": {
+        "id": "64776d8c01427f01008927bb",
+        "name": "Pan-Insula Disposal",
+        "icons": [
+          "5ca7bfc0ecd8490100cab981",
+          "5ca7bfbcecd8490100cab976",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Pan-Insula Disposal"
+          },
+          {
+            "type": "p",
+            "content": "The sister company to Brentwood Auto and Metal Recyclers, Pan-Insula Disposal specializes in recycling and responsibly disposing of household waste."
+          }
+        ],
+        "pictures": [
+          "64776eb97fa0fd0100e402bd"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3648706168648,
+          48.42794081771434
+        ]
+      },
+      "properties": {
+        "id": "647771f17fa0fd0100e402ce",
+        "name": "Grove Outdoors",
+        "icons": [
+          "5ca7bfb8ecd8490100cab973",
+          "5ca7bfbeecd8490100cab97b",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Grove Outdoors"
+          },
+          {
+            "type": "p",
+            "content": "The easiest way to live more sustainably is by using what you already have, this becomes difficult when bodies change, passions dry up, or you need to upgrade. By recycling your lightly used gear you are saving an item from being discarded into landfills. Additionally, buying used goods decreases the need for unnecessary new materials to be produced. Grove's consignment model helps us stay committed to providing an affordable and sustainable shopping method that reduces each customer's ecological footprint."
+          },
+          {
+            "type": "p",
+            "content": "With the goal of making playing in nature all the more accessible, Grove Outdoors recycles and resells gear, reducing landfill waste and helping people have the tools they need to connect to nature."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://grove-outdoors.com/pages/company-values",
+            "url": "https://grove-outdoors.com/pages/company-values"
+          }
+        ],
+        "pictures": [
+          "647772f101427f01008927c9"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3491198329097,
+          48.42963620491803
+        ]
+      },
+      "properties": {
+        "id": "6477736e7fa0fd0100e402cf",
+        "name": "Compost Education Centre",
+        "icons": [
+          "5ca7bfdfecd8490100cab9d1",
+          "6067aafab709040100c13c98",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Compost Education Centre"
+          },
+          {
+            "type": "p",
+            "content": "The Compost Education Centre reconnects people, young and old, to simple, land based, resiliency practices. Everyday we strive to cultivate resilient communities, which enable the land and all living beings to thrive."
+          },
+          {
+            "type": "p",
+            "content": "The Compost Education Center hosting composting workshops, offers volunteer oppurtunities, and reconnects people to a reciprocal relationship with the land."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://compost.bc.ca/",
+            "url": "https://compost.bc.ca/"
+          }
+        ],
+        "pictures": [
+          "6477739001427f01008927d0"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.6522821182008,
+          48.7827931511824
+        ]
+      },
+      "properties": {
+        "id": "647776f7261bc10100e28e97",
+        "name": "Cow-Op.ca",
+        "icons": [
+          "6067a8ada4eddf0100334b64",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Cow-Op.ca"
+          },
+          {
+            "type": "p",
+            "content": "A farmers market meets the internet for convenient year-round shopping at the Cow-op. We are a non-profit farmer and food processor co-operative with an online marketplace of locally grown and harvested food, featuring a variety of produce, meats, eggs, fruit, baking and more all grown or produced throughout the Cowichan Region. This is a convenient system for food producers and customers alike, as the farmers save time and buyers are able to shop from their computer year-round while directly supporting local family farms and businesses."
+          },
+          {
+            "type": "p",
+            "content": "Cow-Op.ca does that work to connect consumers to locally-sourced food, bridging the gap between the land and its inhabitants."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://cow-op.ca/about/ ©2019-2022 Cowichan Valley Co-operative Marketplace",
+            "url": "https://cow-op.ca/about/"
+          }
+        ],
+        "pictures": [
+          "6477780c7fa0fd0100e402de"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3353875283702,
+          48.42807131665869
+        ]
+      },
+      "properties": {
+        "id": "64777ba301427f01008927db",
+        "name": "SUPPLY Victoria Creative Reuse Center",
+        "icons": [
+          "5ca7bfe6ecd8490100cab9e6",
+          "5ca7bfbeecd8490100cab97b",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "SUPPLY Victoria Creative Reuse Center"
+          },
+          {
+            "type": "p",
+            "content": "\"SUPPLY Victoria Creative Reuse Centre is a registered Society that redistributes used art, office, and school supplies through their low-cost used supply store and programs and offers creative reuse classes to youth and adults.\""
+          },
+          {
+            "type": "p",
+            "content": "Mission: To divert materials from the landfill and put them into the hands of artists, students, and teachers in order to craft a more sustainable, creative, and inclusive Victoria."
+          },
+          {
+            "type": "p",
+            "content": "\"Vision: To accelerate the adoption of sustainability in Victoria by supplying the materials and knowledge to integrate sustainable thinking into the creative process.\""
+          },
+          {
+            "type": "link",
+            "content": "Source: https://supplyvictoria.ca/pages/about",
+            "url": "https://supplyvictoria.ca/pages/about"
+          }
+        ],
+        "pictures": [
+          "6478a1d2261bc10100e28ebd"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3862480328005,
+          48.4322474130697
+        ]
+      },
+      "properties": {
+        "id": "6478bc1b261bc10100e28ed1",
+        "name": "Soap for Hope Canada",
+        "icons": [
+          "5ca7bfbeecd8490100cab97b",
+          "5ca7bfbcecd8490100cab976",
+          "5c312ab437407e1f05ac394f"
+        ],
+        "description": [
+          {
+            "type": "h2",
+            "content": "Soap for Hope Canada"
+          },
+          {
+            "type": "p",
+            "content": "\"We collect and repurpose hotel hygiene products, linens, and lost & found which would otherwise end up in landfills. We transform these discarded products and distribute them to people in need.\"</i>"
+          },
+          {
+            "type": "p",
+            "content": "Soap for Hope Canada repurposed digarded hygene products from hotels. These products are then transformed and redistributed to support the health and dignity of people in need."
+          },
+          {
+            "type": "link",
+            "content": "Source: https://www.soapforhopecanada.ca/",
+            "url": "https://www.soapforhopecanada.ca/"
+          }
+        ],
+        "pictures": [
+          "6478bd2001427f010089280b"
+        ]
+      }
+    }
+  ]
+}
