@@ -1,8 +1,10 @@
 import { point } from 'leaflet';
-import { pointToIconByProperty, mapPopupContent } from './LeafletStyleHelpers';
-// GeoJSON
-import ALR from './geojson/AgriculturalLandReserve.geojson';
-import FoodSecurity from './geojson/FoodSecurity.geojson';
+import {
+  mapPopupContent,
+  ogmIconLink,
+  pointToIcon,
+  pointToIconByProperty
+} from './LeafletStyleHelpers';
 // SVG
 import { ReactComponent as EcoJustice } from './svg/Eco-justice organization.svg';
 import { ReactComponent as Government } from './svg/Government office.svg';
@@ -16,6 +18,11 @@ const styleMap_FoodSecurity = new Map([
   ["Student Led", {icon:(<School />),fill:"#ff6432", legendText:"Student Led"}],
   ["Grass Roots", {icon:(<EcoJustice />),fill:"#ff6432", legendText:"Grass Roots"}],
   ["Government", {icon:(<Government />),fill:"#ff6432" , legendText:"Government"}],
+]);
+
+const styleMap_CulturalFoods = new Map([
+  ["648371c5cea704010006d25a",{ src: ogmIconLink("648371c5cea704010006d25a"), legendText: 'Cultural Food Store' }],
+  ["648373224be73a0100d13a32",{ src: ogmIconLink("648373224be73a0100d13a32"), legendText: 'Cultural Food Restaurant' }],
 ]);
 
 const EatLocal = {
@@ -58,7 +65,7 @@ const EatLocal = {
     {
       title: 'Agricultural Land Reserve',
       description: 'The spatial representation for the boundary of an Agricultural Land Reserve (ALR), which is a parcel of land, based on soil and climate, deemed necessary to be maintained for agricultural use. The data gets updated four times a year, at the end of: Jan, Apr, Jul and Oct. It is also available on the ALC’s website: https://www.alc.gov.bc.ca/alr-maps/',
-      data: ALR,
+      data: require('./geojson/AgriculturalLandReserve.geojson'),
       shape: 'polygon',
       symbology: 'single',
       options: {
@@ -82,7 +89,7 @@ const EatLocal = {
     {
       title: "Food Security",
       description: "RUSH Regional Food Security Resource Map. Created by Ege Kaymaz.",
-      data: FoodSecurity,
+      data: require('./geojson/FoodSecurity.geojson'),
       shape: 'point',
       symbology: 'classified',
       property: "Type",
@@ -101,6 +108,40 @@ const EatLocal = {
             ), {offset: point(4,2)});
         }
       }
+    },
+    {
+      title: 'Cultural Foods',
+      description: [
+        {type: 'p', content: "Locations of stores and restaurants that provide access to Cultural Foods."},
+        {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=64836448cea704010006d251'},
+        {type: 'p', content: 'Based on the Greater Victoria Cultural Food Community Map by UVic Community Mapping students in collaboration with Iyé Creative'},
+        {type: 'link', content: 'Learn about Cultural Food access in Greater Victoria from their StoryMap.', url: 'https://storymaps.arcgis.com/stories/06ee241047d8455bbb02230f453f2edc'},
+      ],
+      data: require('./geojson/CulturalFoods.geojson'),
+      shape: 'point',
+      symbology: 'classified',
+      styleMap: styleMap_CulturalFoods,
+      options: {
+        pointToLayer: (f,l) => pointToIcon(l, {icon: <img
+            width="26px"
+            height="26px"
+            src={`https://new.opengreenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}
+            alt={styleMap_CulturalFoods.get(f.properties.icons[0])?.legendText ?? ''}
+          />}),
+        onEachFeature: (f,l) => {
+          const imageURL = f.properties.pictures[0]
+            ? `https://new.opengreenmap.org/api-v1/pictures/${f.properties.pictures[0]}/picture/sm`
+            : null;
+          
+          l.bindPopup(mapPopupContent(
+              f.properties.name,
+              f.properties?.description?.blocks.filter((b) => b.type === "paragraph")[0]?.data.text ?? '',
+              `https://new.opengreenmap.org/browse/sites/${f.properties.id}`,
+              'Show More at OpenGreenMap.org',
+              imageURL
+            ), {offset: point(0,-6)});
+        }
+      },
     },
   ],
 };
