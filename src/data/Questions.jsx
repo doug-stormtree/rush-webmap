@@ -1,5 +1,5 @@
 import produce, { enableMapSet } from 'immer';
-import { create}  from 'zustand';
+import { create }  from 'zustand';
 
 // Enable Immer MapSet
 enableMapSet();
@@ -44,7 +44,9 @@ export const useMapLayerStore = create((set, get) => ({
     set(
       produce((state) => {
         state.layers.forEach((layer, key) => {
-          layer.active = (layer.questions.some((q) => q.key === question));
+          layer.active = (
+            layer.questions?.some((q) => q.key === question) ?? false
+          );
         })
       })
     ),
