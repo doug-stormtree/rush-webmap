@@ -29,7 +29,8 @@ const layer = {
   legendTitle: 'Risk of Sea Water Intrusion',
   styleMap: styleMap,
   questions: [
-    { key: 'protect-the-coast', group: 'default' }
+    { key: 'protect-the-coast', group: 'default', active: true },
+    { key: 'development', group: 'Water', active: false },
   ]
 }
 

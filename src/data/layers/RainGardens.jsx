@@ -50,7 +50,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: 'default' },
+    { key: 'protect-from-flooding', group: 'default', active: true },
+    { key: 'development', group: 'Water', active: false },
   ]
 }
 

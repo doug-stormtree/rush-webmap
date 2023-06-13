@@ -20,7 +20,7 @@ const layer = {
       url:'https://hat.bc.ca/s/CRD_2011_land_cover_EXECUTIVE_summary.pdf'
     }
   ],
-  layer: tileLayer(
+  leafletLayer: tileLayer(
     '/TC05_Tiles/{z}/{x}/{y}.png',
     { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.5 }
     ),
@@ -29,7 +29,8 @@ const layer = {
   legendTitle: 'Percentage of Tree Cover',
   styleMap: styleMap_TreeCoverage2005,
   questions: [
-    { key: 'beat-the-heat', group: 'default' },
+    { key: 'beat-the-heat', group: 'default', active: true },
+    { key: 'development', group: 'Nature', active: false },
   ]
 }
 

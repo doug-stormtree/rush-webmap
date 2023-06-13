@@ -58,7 +58,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'wood-wide-web', group: 'default' }
+    { key: 'wood-wide-web', group: 'default', active: true },
+    { key: 'development', group: 'Nature', active: false },
   ]
 }
 

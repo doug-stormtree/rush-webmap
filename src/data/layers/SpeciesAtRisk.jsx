@@ -40,7 +40,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'development', group: 'default' }
+    { key: 'development', group: 'Nature', active: false },
   ]
 }
 

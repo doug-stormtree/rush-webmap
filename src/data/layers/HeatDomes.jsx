@@ -28,7 +28,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', group: 'default' },
+    { key: 'beat-the-heat', group: 'default', active: true },
+    { key: 'development', group: 'Nature', active: false },
   ]
 }
 

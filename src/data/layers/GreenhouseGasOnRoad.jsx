@@ -77,7 +77,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'light-footprint', group: 'default' }
+    { key: 'light-footprint', group: 'default', active: true },
+    { key: 'development', group: 'Energy', active: false },
   ]
 }
 
