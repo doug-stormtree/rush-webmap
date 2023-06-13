@@ -89,13 +89,11 @@ const LegendHeader = () => {
 //   Builds list of LegendItem components for active question layers.
 const LegendList = ({ activeQuestion }) => {
   const layers = useMapLayerStore((state) => state.layers);
-  const legendEntries = [];
-  for (const key of layers.keys()) {
-    if (!layers.get(key).noLegend && layers.get(key).question === activeQuestion) {
-      legendEntries.push(<LegendItem key={key} layerId={key} mb={1} />);
-    }
-  }
-  legendEntries.reverse();
+
+  const legendEntries = [...layers.entries()]
+    .filter(([key, layer]) => !layer.noLegend && 
+      layer.questions.some((q) => q.key === activeQuestion))
+    .map(([key, layer]) => <LegendItem key={key} layerId={key} mb={1} />)
 
   return (
     <>

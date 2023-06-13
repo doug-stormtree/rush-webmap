@@ -1,5 +1,5 @@
 import produce, { enableMapSet } from 'immer';
-import create from 'zustand';
+import { create}  from 'zustand';
 
 // Enable Immer MapSet
 enableMapSet();
@@ -22,21 +22,19 @@ const questionMap = new Map([
 ]);
 export default questionMap;
 
+// Import all layer modules
+const layerCache = {};
+function importAll(r) {
+  r.keys().forEach((key) => (layerCache[key] = r(key).default))
+}
+importAll(require.context('./layers/', true, /\.jsx$/));
+
 const layerMap = produce(new Map(), draft => {
-  questionMap.forEach((q, qKey) => {
-    q.mapData.forEach((mapDataLayer, index) => {
-      draft.set(qKey + index,
-        { 
-          active: false,
-          question: qKey,
-          ...mapDataLayer,
-          /*
-          layer: L.geoJSON(
-            mapDataLayer.data,
-            mapDataLayer.options,
-          ),*/
-        });
-    });
+  Object.keys(layerCache).forEach((key) => {
+    draft.set(key, {
+      active: false,
+      ...layerCache[key]
+    })
   });
 });
 
@@ -46,7 +44,7 @@ export const useMapLayerStore = create((set, get) => ({
     set(
       produce((state) => {
         state.layers.forEach((layer, key) => {
-          layer.active = (layer.question === question);
+          layer.active = (layer.questions.some((q) => q.key === question));
         })
       })
     ),
