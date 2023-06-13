@@ -1,7 +1,8 @@
 const EatLocal = {
+  key: 'eat-local',
   title: "Eat Local?",
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
-  image: require('./png/EatLocal.png'),
+  image: require('../png/EatLocal.png'),
   description: [
     {type: 'h2', content: 'Comparison'},
     {type: 'p', content: '33% of food waste overall entering the Hartland Landfill is avoidable or donatable.¹ The RUSH Regional Food Security Resource Map highlights businesses, NGOs, Student led, grassroots and government initiatives that promote access to fresh and affordable food.  Restaurants and stores with cultural foods are identified. Local food production potential is shown as Agricultural land Reserve (ALR) designated areas, community gardens and orchards.  Farms with box programs (CSA) will  be identified as well as farms growing cultural fruits and vegetables. Seafood harvesting sites with policy guidelines help focus local interest. A growing list of general food processing plants and local and licensed abattoirs are identified for harvesting and preserving. Food production is dependent on the health of our pollinator communities (birds, bees and insects), Compare the ratio of wildlands, parks and gardens to agricultural spaces.'},
@@ -22,13 +23,13 @@ const EatLocal = {
     initiatives: [
       {
         title: 'Iyé Creative',
-        image: require('./png/IyeCreative.png'),
+        image: require('../png/IyeCreative.png'),
         link: 'https://www.iyeherstories.com/',
         description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.'
       },
       {
         title: "Our Food Future",
-        image: require('./png/OurFoodFuture.png'),
+        image: require('../png/OurFoodFuture.png'),
         link: "https://biomimicryfrontiers.com/our-food-future",
         description: "Biomimicry reminds us that there is no waste out in nature, and to truly imitate nature, we must eliminate waste. Biomimicry Frontiers was brought into the Our Food Future initiative to frame the project from a biomimetic lens and to use the opportunity to build circular businesses, while simultaneously providing advisory services."
       },

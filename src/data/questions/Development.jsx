@@ -1,7 +1,8 @@
 const Development = {
+  key: 'development',
   title: "Development?",
   question: "Development a good idea?",
-  image: require('./png/Development.png'),
+  image: require('../png/Development.png'),
   description: [
     {type: 'h2', content: "Comparison"},
     {type: 'p', content: 'The map shows how well municipalities are meeting a 30% target of urban forest cover to support temperature regulation, noise buffering, biodiversity, moisture retention, carbon drawdown, wellbeing, and property values.  The location and access of aquifers is important in protecting community water security. Ecosystem types help to inform the landscape design choices to connect ecosystems for better performance of natural assets and resilience to climate events. Watersheds and stormwater infrastructure  highlight opportunities for restoration.  Transportation routes support mobility between work and home.'},
@@ -30,32 +31,32 @@ const Development = {
       {
         title: 'Engage with Nature-based Solutions',
         link: 'https://www.engagewithnbs.ca/',
-        image: require('./png/EngageNBS.png'),
+        image: require('../png/EngageNBS.png'),
         description: '"Nature-based solutions support the health of natural systems, while addressing societal challenges. The design of these solutions are based on our planet’s natural systems, working with, and for, nature. They increase climate-resilient natural capital (such as wetlands and forests) and provide ecosystem services (such as water filtration). Communities can use nature-based solutions to support the resiliency of our climate, environment, and human society. Engage with Nature-Based Solutions is a new initiative to support communities who apply nature-based solutions to their local lands and waters. We acknowledge and take inspiration from Indigenous peoples, whose cultures and traditions support healthy ecosystems and the interconnection and importance of all living things."',
       },
       {
         title: 'Natural Assets Intiative',
         link: 'https://mnai.ca/',
-        image: require('./png/NaturalAssetsInitiative.png'),
+        image: require('../png/NaturalAssetsInitiative.png'),
         description: '"The Natural Assets Initiative (NAI) is changing the way municipalities deliver everyday services, increasing the quality and resilience of infrastructure at lower costs and reduced risk. The NAI team provides scientific, economic and municipal expertise to support and guide local governments in identifying, valuing and accounting for natural assets in their financial planning and asset management programs and developing leading-edge, sustainable and climate-resilient infrastructure. NAI teams up with local governments to develop resilient, long-term infrastructure alternatives at substantial savings. NAI employs practical strategies to value nature’s ability to provide municipal services and to incorporate this information into mainstream asset management systems. With increasing ease in measuring and valuing natural assets the NAI approach is straightforward and transferable."',
       },
       {
         title: 'Nature Canada Report: Tree Equity',
         description: '"...the 3-30-300 rule, which states that everyone should be able to see at least three trees from their home, that all neighbourhoods should have at least a 30% tree canopy, and that all residents should have a greenspace of at least one hectare within 300 metres of where they live. While this principle can help substantially in advancing tree equity, we need to go further. In this report, Nature Canada proposes that equitable access should be thought of in terms of three variables—proximity to urban trees and forests, urban forest quality and the governance of urban forests."',
         link: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf',
-        image: require('./png/NatureCanadaReport.png'),
+        image: require('../png/NatureCanadaReport.png'),
       },
       {
         title: 'Canadian Climate Institute: Indigenomics',
         description: '"Indigenous Peoples live the long-term cumulative effects of climate change from within an inherent sense of place that is directly connected to identity. Some of these effects include rising sea levels, leading to increased salination of freshwater, which results in needing to adapt to the effects of a significant decrease in food security and access to traditional medicines, amongst other impacts. Indigenous knowledge systems offer a critical foundation for localized, community-based adaptation and mitigation actions that work to fundamentally sustain the resilience of social-ecological systems locally, regionally, and globally."',
         link: 'https://climateinstitute.ca/publications/indigenomics/',
-        image: require('./png/CCCIndigenomics.png'),
+        image: require('../png/CCCIndigenomics.png'),
       },
       {
         title: 'Making Room: A Transitional Tiny Home Community',
         description: '"This Esri story map is a Community-based Participatory Research (CBPR) project through UNESCO K4C Salish Sea Hub & the University of Victoria’s (UVic) Geography Department. It was created in partnership with the Greater Victoria Coalition to End Homelessness (GVCEH), Island Health, and UVic instructors Ken Josephson and Dr. Crystal Tremblay. This story map is simultaneously a place of awareness and a call to action regarding houselessness and the importance of site-supportive transitional housing. The authors aim to have this map be a center point for resources, information, and stories. While their story is situated in Victoria, British Columbia, they hope the success of the Making Room: A Transitional Tiny Home Community will inspire other similar projects and help break the cycle of houselessness."',
         link: 'https://storymaps.arcgis.com/stories/14aeb7c901e04cc59272745e7a538994',
-        image: require('./png/MakingRoom.png'),
+        image: require('../png/MakingRoom.png'),
       }
     ],
   }
