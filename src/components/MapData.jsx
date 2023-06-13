@@ -65,7 +65,7 @@ export const MapData = ({ question }) => {
             <LegendDrawerButton activeQuestion={question} />
           </Control>
         ) : null }
-      { [...layers.values()].filter((l) => l.question === question).length === 0 ? (
+      { [...layers.values()].some((layer) => layer.questions.some((q) => q.key === question)) ? null : (
         <Center style={{
           position: 'absolute',
           margin: 'auto',
@@ -84,7 +84,7 @@ export const MapData = ({ question }) => {
             Coming Soon
           </Heading>
         </Center>
-      ) : null }
+      )}
     </>
   );
 }
