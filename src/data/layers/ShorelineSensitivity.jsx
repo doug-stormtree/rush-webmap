@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 
 const styleMap = new Map([
@@ -46,7 +45,7 @@ const layer = {
             styleMap.get(String(f.properties.SENSI_FINA)).legendText +
             ' sensitivity to sea level rise.',
           ),
-        {offset: point(0,8)});
+        {offset: [0,8]});
     }
   },
   questions: [

@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const layer = {
@@ -26,7 +25,7 @@ const layer = {
         f.properties['Name'],
         f.properties['Type'] + ' with an area of ' +
           (f.properties['Shape.STArea()']/100000).toFixed(2) + ' km²'
-      ), {offset: point(0,8)});
+      ), {offset: [0,8]});
     }
   },
   questions: [

@@ -1,4 +1,3 @@
-import { point } from "leaflet";
 import { getStyleMapProperty, mapPopupContent } from "../LeafletStyleHelpers";
 
 const styleMap = new Map([
@@ -37,7 +36,7 @@ const layer = {
           f.properties.ENG_NM,
           'Scientific name: ' + f.properties.SCI_NM + ' is found on the B.C. ' + f.properties.BC_LIST + ' list.'
           ),
-        {offset: point(0,8)});
+        {offset: [0,8]});
     }
   },
   questions: [

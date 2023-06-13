@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const layer = {
@@ -22,7 +21,7 @@ const layer = {
         f.properties['Description'],
         f.properties['URL'],
         'Click here to view the ' + f.properties['Name']),
-        {offset: point(0,8)});
+        {offset: [0,8]});
     }
   },
   questions: [

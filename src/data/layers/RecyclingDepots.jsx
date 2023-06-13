@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
 import { ReactComponent as RecyclingIcon } from '../svg/Recycling.svg';
 
@@ -22,7 +21,7 @@ const layer = {
         f.properties['Address'],
         f.properties['URL'],
         f.properties['URL']
-        ), {offset: point(0,-6)});
+        ), {offset: [0,-6]});
     }
   },
   questions: [

@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const layer = {
@@ -34,7 +33,7 @@ const layer = {
             ? `This watershed is not associated with a named stream by GeoBC. Its Freshwater Atlas Code is ${f.properties.Name}. Its area is ${f.properties.Hectares} hectares.`
             : f.properties.Name + ' Watershed encloses an area of ' + f.properties.Hectares + ' hectares.',
           ),
-        {offset: point(0,8)});
+        {offset: [0,8]});
       l.on({
         mouseover: (e) => e.target.setStyle({ fillOpacity: 0.7 }),
         mouseout: (e) => e.target.setStyle({ fillOpacity: 0 })

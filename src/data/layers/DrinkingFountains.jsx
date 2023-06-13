@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent, pointToIconByProperty } from '../LeafletStyleHelpers';
 import { ReactComponent as WaterIcon } from '../svg/water.svg';
 
@@ -29,7 +28,7 @@ const layer = {
       l.bindPopup(mapPopupContent(
         f.properties['LocationName'],
         f.properties.OwnerNotes + ' Drinking Fountain'
-        ), {offset: point(4.5,2)});
+        ), {offset: [4.5,2]});
     }
   },
   questions: [

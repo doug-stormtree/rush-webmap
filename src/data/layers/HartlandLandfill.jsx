@@ -2,7 +2,6 @@ import ReactDOMServer from 'react-dom/server';
 import {
   divIcon,
   marker,
-  point,
 } from "leaflet";
 import { mapPopupContent } from "../LeafletStyleHelpers";
 import { ReactComponent as HartlandPie } from '../svg/HartlandPie.svg';
@@ -29,7 +28,7 @@ const layer = {
       l.bindPopup(mapPopupContent(
         f.properties['Name'],
         <HartlandPie />,
-        ), {offset: point(0,-72)});
+        ), {offset: [0,-72]});
     }
   },
   questions: [

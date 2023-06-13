@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const layer = {
@@ -22,7 +21,7 @@ const layer = {
           f.properties.ADMIN_AREA_ABBREVIATION,
           f.properties.ADMIN_AREA_NAME,
           ),
-        {offset: point(0,8)});
+        {offset: [0,8]});
     }
   },
   questions: [

@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
 
 const styleMap = new Map([
@@ -66,7 +65,7 @@ const layer = {
           `https://new.opengreenmap.org/browse/sites/${f.properties._id}`,
           'Show More at OpenGreenMap.org',
           imageURL
-        ), {offset: point(0,-6)});
+        ), {offset: [0,-6]});
     }
   },
   questions: [

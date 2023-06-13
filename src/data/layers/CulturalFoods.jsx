@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent, ogmIconLink, pointToIcon } from '../LeafletStyleHelpers';
 
 const styleMap_CulturalFoods = new Map([
@@ -36,7 +35,7 @@ const layer = {
           `https://new.opengreenmap.org/browse/sites/${f.properties._id}`,
           'Show More at OpenGreenMap.org',
           imageURL
-        ), {offset: point(0,-6)});
+        ), {offset: [0,-6]});
     }
   },
   questions: [

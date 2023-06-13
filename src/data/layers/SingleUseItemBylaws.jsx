@@ -1,4 +1,3 @@
-import { point } from "leaflet";
 import {
   mapPopupContent,
   geoDateToLocaleString,
@@ -76,7 +75,7 @@ const layer = {
                 f.properties.StrawBan ? 'also' : 'not'
               } banned. Read the bylaw here:`,
               f.properties.URL
-        ), {offset: point(0,8)});
+        ), {offset: [0,8]});
       l.on({
         mouseover: (e) => e.target.setStyle({ fillOpacity: 0.7 }),
         mouseout: (e) => e.target.setStyle({ fillOpacity: 0.2 })
