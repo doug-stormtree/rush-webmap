@@ -73,7 +73,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'power-this-place', group: 'default' },
+    { key: 'power-this-place', group: 'default', active: true },
+    { key: 'development', group: 'Energy', active: false },
   ]
 }
 

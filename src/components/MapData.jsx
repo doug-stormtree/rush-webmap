@@ -12,33 +12,27 @@ export const MapData = ({ question }) => {
   const map = useMap();
   const layers = useMapLayerStore((state) => state.layers);
   const getLeafletLayer = useMapLayerStore((state) => state.getLeafletLayer);
-  const setQuestionLayersActive = useMapLayerStore(
-    (state) => state.setQuestionLayersActive
-  );
 
-  // Effect adds all active layers to the map, fetching their data in necessary.
+  // Effect adds all active layers to the map, fetching their data if necessary.
   useEffect(() => {
+    if (map === undefined) return;
+
     // Add Satellite Basemap
     if (!map.hasLayer(basemap)) map.addLayer(basemap);
     
     layers.forEach((el, key) => {
-      if (el.active) {
+      if (el.questions.some((q) => (q.key === question) && q.active)) {
         const leafletLayer = getLeafletLayer(key);
-        if (leafletLayer instanceof L.Layer) map.addLayer(el.layer);
+        if (leafletLayer instanceof L.Layer) map.addLayer(leafletLayer);
       }
     });
 
     return () => {
       layers.forEach(el => {
-        if (el.layer instanceof L.Layer) map.removeLayer(el.layer);
+        if (el.leafletLayer instanceof L.Layer) map.removeLayer(el.leafletLayer);
       });
     };
-  }, [map, layers, getLeafletLayer]);
-
-  // Effect on Question change sets all child layers active, 
-  // deactivates all others.
-  useEffect(() => setQuestionLayersActive(question),
-    [question, setQuestionLayersActive]);
+  }, [map, layers, question, getLeafletLayer]);
 
   const smallDisplay = useBreakpointValue({
     xl: false,

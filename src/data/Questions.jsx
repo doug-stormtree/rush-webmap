@@ -2,6 +2,9 @@ import produce, { enableMapSet } from 'immer';
 import { create }  from 'zustand';
 import { geoJSON } from 'leaflet';
 
+// Constant value for loading state
+const LOADING = 'loading';
+
 // Enable Immer MapSet
 enableMapSet();
 
@@ -37,6 +40,15 @@ const layerMap = produce(new Map(), draft => {
 
 export const useMapLayerStore = create((set, get) => ({
   layers: layerMap,
+  getLayers: (question, activeOnly = false) => {
+    const layerEntries = [...get().layers.entries()];
+    return (question || activeOnly) 
+    ? layerEntries.filter((l) => 
+    (!question || l.questions.some((q) => q.key === question)) && 
+    (!activeOnly || l.active))
+    : layerEntries
+  },
+  getLayerIds: (question, activeOnly = false) => get().getLayers(question, activeOnly).map((l) => l[0]),
   // Layer Active Flag State
   setQuestionLayersActive: (question) =>
     set(
@@ -48,31 +60,36 @@ export const useMapLayerStore = create((set, get) => ({
         })
       })
     ),
-  setLayerActive: (layerId, active = true) =>
+  setLayerActive: (layerId, question, active = true) =>
     set(
       produce((state) => {
-        state.layers.get(layerId).active = active;
+        state.layers.get(layerId).questions.forEach((q) => {
+          if (q.key === question) q.active = active;
+        });
       })
     ),
-  toggleLayerActive: (layerId) =>
+  toggleLayerActive: (layerId, question) =>
     set(
       produce((state) => {
         const layer = state.layers.get(layerId);
-        layer.active = !layer.active;
+        const layerQs = layer.questions.filter((q) => q.key === question);
+        layerQs.forEach((q) => q.active = !layerQs.some((q) => q.active));
       })
     ),
   // Layer Leaflet Object
   setLayerData: (layerId, leafletLayer) =>
     set(
       produce((state) => {
-        state.layers.get(layerId).layer = leafletLayer;
+        state.layers.get(layerId).leafletLayer = leafletLayer;
       })
     ),
-  layersLoading: () => [...get().layers].some((l) => l[1].layer === 'loading'),
+  layersLoading: () => get().layers.values().some(
+    (l) => l.leafletLayer === LOADING
+  ),
   getLeafletLayer: (layerId) => {
     const layer = get().layers.get(layerId);
-    if (layer.layer === undefined) {
-      get().setLayerData(layerId, 'loading');
+    if (layer.leafletLayer === undefined) {
+      get().setLayerData(layerId, LOADING);
       fetch(layer.data)
         .then((response) => response.json())
         .then((json) => {
@@ -83,6 +100,6 @@ export const useMapLayerStore = create((set, get) => ({
           get().setLayerData(layerId, mapLayer);
         });
     }
-    return layer.layer;
+    return layer.leafletLayer;
   }
 }));

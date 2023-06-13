@@ -50,7 +50,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', group: 'default' }
+    { key: 'circular-economy', group: 'default', active: true },
+    { key: 'development', group: 'Community', active: false },
   ]
 }
 

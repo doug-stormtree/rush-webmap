@@ -49,7 +49,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-the-coast', group: 'default' },
+    { key: 'protect-the-coast', group: 'default', active: true },
+    { key: 'development', group: 'Water', active: false },
   ]
 }
 

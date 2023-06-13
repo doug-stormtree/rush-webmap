@@ -24,8 +24,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'development', group: 'default' },
-    { key: 'eat-local', group: 'default' },
+    { key: 'eat-local', group: 'default', active: true },
+    { key: 'development', group: 'Nature', active: false },
   ]
 }
 

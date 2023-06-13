@@ -36,7 +36,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'eat-local', group: 'default' },
+    { key: 'eat-local', group: 'default', active: true },
+    { key: 'development', group: 'Community', active: false },
   ]
 }
 

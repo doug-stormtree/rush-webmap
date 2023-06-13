@@ -90,21 +90,44 @@ const LegendHeader = () => {
 const LegendList = ({ activeQuestion }) => {
   const layers = useMapLayerStore((state) => state.layers);
 
-  const legendEntries = [...layers.entries()]
+  const legendEntries = new Map();
+  
+  [...layers.entries()]
     .filter(([key, layer]) => !layer.noLegend && 
       layer.questions?.some((q) => q.key === activeQuestion))
-    .map(([key, layer]) => <LegendItem key={key} layerId={key} mb={1} />)
+    .forEach(([key, layer]) => {
+      const legendGroup = layer.questions.find((q) => q.key === activeQuestion).group;
+      const groupEntries = legendEntries.get(legendGroup) ?? [];
+      groupEntries.push(<LegendItem key={key} layerId={key} question={activeQuestion} mb={1} />);
+      legendEntries.set(legendGroup, groupEntries);
+    });
+  
+  const legendComponents = legendEntries.has('default') 
+    ? [<LegendGroup key='default'>{legendEntries.get('default')}</LegendGroup>]
+    : []
+  legendEntries.delete('default');
+  [...legendEntries.keys()].sort().forEach((key) => legendComponents.push(<LegendGroup key={key} title={key}>{legendEntries.get(key)}</LegendGroup>))
 
   return (
     <>
-      {legendEntries}
+      {legendComponents}
+    </>
+  )
+}
+
+// LegendGroup Component
+const LegendGroup = ({ title, children }) => {
+  return (
+    <>
+      {title && <Heading size='sm'>{title}</Heading>}
+      {children}
     </>
   )
 }
 
 // LegendItem Component
 //   A single legend entry row with toggle, name, patch, and learn more button.
-export const LegendItem = ({ layerId }) => {
+export const LegendItem = ({ layerId, question }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const layer = useMapLayerStore((state) => state.layers.get(layerId));
   const toggleLayerActive = useMapLayerStore((state) => state.toggleLayerActive);
@@ -112,7 +135,7 @@ export const LegendItem = ({ layerId }) => {
   return (
     <>
       <Flex direction='row' alignItems='center' gap={2}>
-        {layer.layer === 'loading' //|| parseInt(layerId.slice(-1)) % 2 === 0
+        {layer.leafletLayer === 'loading' //|| parseInt(layerId.slice(-1)) % 2 === 0
           ? <Spinner
               color='blue.500'
               emptyColor='gray.200'
@@ -121,8 +144,8 @@ export const LegendItem = ({ layerId }) => {
               marginInline='5px'
             />
           : <Switch
-              isChecked={layer.active}
-              onChange={(e) => toggleLayerActive(layerId)}
+              isChecked={layer.questions.some((q) => q.key === question && q.active === true)}
+              onChange={(e) => toggleLayerActive(layerId, question)}
               flex='0'
             />
         }
@@ -134,7 +157,7 @@ export const LegendItem = ({ layerId }) => {
           textOverflow='ellipsis'
           display='-webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;'
           whiteSpace='normal'
-        >{layer.layer === 'loading' ? 'Loading...' : layer.title}</FormLabel>
+        >{layer.leafletLayer === 'loading' ? 'Loading...' : layer.title}</FormLabel>
         <LegendPatch layerId={layerId} flex='0' />
         <IconButton
           variant='ghost'

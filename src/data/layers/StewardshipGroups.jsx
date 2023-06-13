@@ -30,7 +30,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', group: 'default' },
+    { key: 'neighbourhood-to-naturehood', group: 'default', active: true },
+    { key: 'development', group: 'Nature', active: false },
   ]
 }
 
