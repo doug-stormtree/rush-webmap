@@ -11,7 +11,7 @@ const basemap = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}")
 export const MapData = ({ question }) => {
   const map = useMap();
   const layers = useMapLayerStore((state) => state.layers);
-  const setLayerData = useMapLayerStore((state) => state.setLayerData);
+  const getLeafletLayer = useMapLayerStore((state) => state.getLeafletLayer);
   const setQuestionLayersActive = useMapLayerStore(
     (state) => state.setQuestionLayersActive
   );
@@ -23,20 +23,8 @@ export const MapData = ({ question }) => {
     
     layers.forEach((el, key) => {
       if (el.active) {
-        if (el.layer instanceof L.Layer) {
-          map.addLayer(el.layer);
-        } else if (el.layer === undefined) {
-          setLayerData(key, 'loading');
-          fetch(el.data)
-            .then((response) => response.json())
-            .then((geoJSON) => {
-              const mapLayer = L.geoJSON(
-                geoJSON,
-                layers.get(key).options,
-              );
-              setLayerData(key, mapLayer);
-            });
-        }
+        const leafletLayer = getLeafletLayer(key);
+        if (leafletLayer instanceof L.Layer) map.addLayer(el.layer);
       }
     });
 
@@ -45,7 +33,7 @@ export const MapData = ({ question }) => {
         if (el.layer instanceof L.Layer) map.removeLayer(el.layer);
       });
     };
-  }, [map, layers, setLayerData]);
+  }, [map, layers, getLeafletLayer]);
 
   // Effect on Question change sets all child layers active, 
   // deactivates all others.

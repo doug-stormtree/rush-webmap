@@ -1,5 +1,6 @@
 import produce, { enableMapSet } from 'immer';
 import { create }  from 'zustand';
+import { geoJSON } from 'leaflet';
 
 // Enable Immer MapSet
 enableMapSet();
@@ -36,6 +37,7 @@ const layerMap = produce(new Map(), draft => {
 
 export const useMapLayerStore = create((set, get) => ({
   layers: layerMap,
+  // Layer Active Flag State
   setQuestionLayersActive: (question) =>
     set(
       produce((state) => {
@@ -59,11 +61,28 @@ export const useMapLayerStore = create((set, get) => ({
         layer.active = !layer.active;
       })
     ),
+  // Layer Leaflet Object
   setLayerData: (layerId, leafletLayer) =>
     set(
       produce((state) => {
         state.layers.get(layerId).layer = leafletLayer;
       })
     ),
-  layersLoading: () => [...get().layers].some((l) => l[1].layer === 'loading')
+  layersLoading: () => [...get().layers].some((l) => l[1].layer === 'loading'),
+  getLeafletLayer: (layerId) => {
+    const layer = get().layers.get(layerId);
+    if (layer.layer === undefined) {
+      get().setLayerData(layerId, 'loading');
+      fetch(layer.data)
+        .then((response) => response.json())
+        .then((json) => {
+          const mapLayer = geoJSON(
+            json,
+            layer.options,
+          );
+          get().setLayerData(layerId, mapLayer);
+        });
+    }
+    return layer.layer;
+  }
 }));
