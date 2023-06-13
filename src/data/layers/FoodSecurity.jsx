@@ -1,4 +1,3 @@
-import { point } from "leaflet";
 import { mapPopupContent, pointToIconByProperty } from "../LeafletStyleHelpers";
 import { ReactComponent as EcoJustice } from '../svg/Eco-justice organization.svg';
 import { ReactComponent as Government } from '../svg/Government office.svg';
@@ -33,7 +32,7 @@ const layer = {
       l.bindPopup(mapPopupContent(
         f.properties.Name,
         f.properties.description,
-        ), {offset: point(4,2)});
+        ), {offset: [4,2]});
     }
   },
   questions: [

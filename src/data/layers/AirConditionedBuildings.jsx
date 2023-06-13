@@ -1,4 +1,3 @@
-import { point } from "leaflet";
 import { mapPopupContent, pointToIconByProperty } from "../LeafletStyleHelpers";
 import { ReactComponent as CommunityCtrIcon } from '../svg/cc.svg';
 import { ReactComponent as LibraryIcon } from '../svg/lib.svg';
@@ -26,7 +25,7 @@ const layer = {
       l.bindPopup(mapPopupContent(
         f.properties['Name of Place'],
         f.properties.Type + ': ' + f.properties.Address
-        ), {offset: point(4.5,2)});
+        ), {offset: [4.5,2]});
     }
   },
   questions: [

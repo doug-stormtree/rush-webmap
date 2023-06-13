@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 
 const styleMap = new Map([
@@ -41,7 +40,7 @@ const layer = {
           'Capital Region Coastal Flood Inundation',
           'Scenario of ' + f.properties.RSLR + 'm Relative Sea Level Rise (RSLR), this line represents the Higher High Water Large Tide (HHWLT) level.',
           ),
-        {offset: point(0,8)});
+        {offset: [0,8]});
     }
   },
   questions: [

@@ -1,4 +1,3 @@
-import { point } from 'leaflet';
 import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const layer = {
@@ -21,7 +20,7 @@ const layer = {
           'Agriculutural Land Reserve',
           'A parcel of land, based on soil and climate, deemed necessary to be maintained for agricultural use.',
           ),
-        {offset: point(0,8)});
+        {offset: [0,8]});
     }
   },
   questions: [
