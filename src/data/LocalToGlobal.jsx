@@ -68,6 +68,5 @@ const LocalToGlobal = {
       },
     ],
   },
-  mapData: [],
 };
 export default LocalToGlobal;

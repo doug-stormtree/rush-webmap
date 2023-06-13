@@ -1,6 +1,3 @@
-// GeoJSON
-// SVG
-
 const Culture = {
   title: "Culture Compass?",
   question: "Culture compass?",
@@ -45,7 +42,6 @@ const Culture = {
         description: 'In order to redress the legacy of residential schools and advance the process of Canadian reconciliation, the Truth and Reconciliation Commission makes the following calls to action...'
       }
     ],
-  },
-  mapData: [],
+  }
 };
 export default Culture;

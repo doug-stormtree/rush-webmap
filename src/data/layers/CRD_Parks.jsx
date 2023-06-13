@@ -31,6 +31,7 @@ const layer = {
   },
   questions: [
     { key: 'beat-the-heat', group: 'default' },
+    { key: 'development', group: 'default' }
   ]
 }
 

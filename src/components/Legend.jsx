@@ -92,7 +92,7 @@ const LegendList = ({ activeQuestion }) => {
 
   const legendEntries = [...layers.entries()]
     .filter(([key, layer]) => !layer.noLegend && 
-      layer.questions.some((q) => q.key === activeQuestion))
+      layer.questions?.some((q) => q.key === activeQuestion))
     .map(([key, layer]) => <LegendItem key={key} layerId={key} mb={1} />)
 
   return (
