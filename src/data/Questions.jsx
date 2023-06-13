@@ -12,7 +12,7 @@ questionContext.keys().forEach((qcKey) => {
   questions.push([key, rest]);
 });
 questions = questions.sort();
-questions.push(...questions.splice(questions.findIndex(v => v[0] == 'development'), 1));
+questions.push(...questions.splice(questions.findIndex(v => v[0] === 'development'), 1));
 const questionMap = new Map(questions);
 questions = undefined;
 export default questionMap;
