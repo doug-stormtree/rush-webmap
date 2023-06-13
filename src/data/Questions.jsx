@@ -4,22 +4,17 @@ import { create }  from 'zustand';
 // Enable Immer MapSet
 enableMapSet();
 
-const questionMap = new Map([
-  ['beat-the-heat', require('./BeatTheHeat').default],
-  ['circular-economy', require('./CircularEcon').default],
-  ['culture-compass', require('./Culture').default],
-  ['eat-local', require('./EatLocal').default],
-  ['help-with-change', require('./HelpWithChange').default],
-  ['light-footprint', require('./Footprint').default],
-  ['local-to-global', require('./LocalToGlobal').default],
-  ['neighbourhood-to-naturehood', require('./Naturehood').default],
-  ['power-this-place', require('./Power').default],
-  ['protect-from-flooding', require('./Flooding').default],
-  ['protect-the-coast', require('./Coastal').default],
-  ['sense-of-peace', require('./SenseOfPeace').default],
-  ['wood-wide-web', require('./WoodWideWeb').default],
-  ['development', require('./Development').default],
-]);
+// Import all question modules
+var questions = [];
+const questionContext = require.context('./questions/', false, /\.jsx$/);
+questionContext.keys().forEach((qcKey) => {
+  const {key, ...rest} = questionContext(qcKey).default;
+  questions.push([key, rest]);
+});
+questions = questions.sort();
+questions.push(...questions.splice(questions.findIndex(v => v[0] == 'development'), 1));
+const questionMap = new Map(questions);
+questions = undefined;
 export default questionMap;
 
 // Import all layer modules
@@ -29,6 +24,7 @@ function importAll(r) {
 }
 importAll(require.context('./layers/', true, /\.jsx$/));
 
+// Create mapLayerStore
 const layerMap = produce(new Map(), draft => {
   Object.keys(layerCache).forEach((key) => {
     draft.set(key, {

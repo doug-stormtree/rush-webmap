@@ -1,7 +1,8 @@
 const Culture = {
+  key: 'culture-compass',
   title: "Culture Compass?",
   question: "Culture compass?",
-  image: require('./png/CultureCompass.png'),
+  image: require('../png/CultureCompass.png'),
   description: [
     {type: 'h2', content: "Comparison"},
     {type: 'p', content: 'Free and accessible places and ways to get a sense of community and belonging. Public art, walking zones, public parks, fountains, squares, maker spaces, art galleries, commemorative art markers, community centers, co-working spaces, repurposed abondoned or empty spaces, community gardens, walking tours.'},
@@ -19,25 +20,25 @@ const Culture = {
     initiatives: [
       {
         title: 'W̱SÁNEĆ Peninsula Environmental Organizations',
-        image: require('./png/WSANECEnvironmentalOrgs.png'),
+        image: require('../png/WSANECEnvironmentalOrgs.png'),
         link: 'https://storymaps.arcgis.com/stories/5239fadd726c462da56ebcbe231c57be',
         description: 'There are many people & organizations across the Saanich Peninsula working towards healthier ecosystems and connected communities across municipal boundaries. Learn about their work in this StoryMap created by UVic Community Mapping students Evan Gerbrecht, Casey Lake, Samantha Denton, Ethan Heckrodt with direction from the Saanich Peninsula Environmental Coalition.'
       },
       {
         title: 'Native Land Digital',
-        image: require('./png/NativeLandDigital.png'),
+        image: require('../png/NativeLandDigital.png'),
         link: 'https://native-land.ca/',
         description: 'Native Land Digital strives to create and foster conversations about the history of colonialism, Indigenous ways of knowing, and settler-Indigenous relations, through educational resources such as their map and Territory Acknowledgement Guide. They strive to go beyond old ways of talking about Indigenous people and to develop a platform where Indigenous communities can represent themselves and their histories on their own terms.'
       },
       {
         title: 'Little Free Libraries',
-        image: require('./png/LittleFreeLibraries.png'),
+        image: require('../png/LittleFreeLibraries.png'),
         link: 'https://victoriaplacemaking.ca/little-free-libraries/',
         description: 'Little Free Libraries is a popular DIY community concept, where unique homemade book exchange boxes are made freely available in front of homes and businesses for the enjoyment of neighbours and visitors. Learn more and find a map to over 700 of these libraries in the CRD at the Greater Victoria Placemaking Society.'
       },
       {
         title: 'Truth and Reconciliation Calls to Action',
-        image: require('./png/TRCC.png'),
+        image: require('../png/TRCC.png'),
         link: 'https://ehprnh2mwo3.exactdn.com/wp-content/uploads/2021/01/Calls_to_Action_English2.pdf',
         description: 'In order to redress the legacy of residential schools and advance the process of Canadian reconciliation, the Truth and Reconciliation Commission makes the following calls to action...'
       }

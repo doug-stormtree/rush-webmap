@@ -1,7 +1,8 @@
 const BeatTheHeat = {
+  key: 'beat-the-heat',
   title: "Beat the Heat?",
   question: "How can I keep myself and the ecosystem cool & hydrated?",
-  image: require('./png/BeatTheHeat.png'),
+  image: require('../png/BeatTheHeat.png'),
   description: [
     {type: 'h2', content: 'Comparison'},
     {type: 'p', content: 'The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Tree coverage shows the areas where more vegetation is needed. Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%.  Hard pavement does not allow the land to breathe and regulate the atmosphere. Cool buildings, parks and drinking fountains can provide essential relief. Notice the relationship between heat island areas, green space and dark or paved surfaces.'},
@@ -25,56 +26,56 @@ const BeatTheHeat = {
       {
         title: "North Park Heatwave Map",
         description: "The North Park Heatwave Map was created by Tenaya Lynx, Julia Frasher, Riley Sondergaard during their Community Based Participatory Research Class, Geography, University of Victoria. This StoryMap by Riley Sondergaard goes into more depth and shows the feedback process with community members and organizations to identify areas of relief, concern and risk resulting in a map that the community can use to orient and help during a heatwave and also to advocate for improvements to infrastructure and services.",
-        image: require('./png/NorthPark.png'),
+        image: require('../png/NorthPark.png'),
         link: "https://storymaps.arcgis.com/stories/1b18c6ccd6414b2cb74216847022df19",
       },
       {
         title: "Climate Atlas of Canada",
         description: "The Climate Atlas of Canada combines climate science, mapping, and storytelling together with Indigenous Knowledges and community-based research and video to inspire awareness and action.",
-        image: require('./png/ClimateAtlas.png'),
+        image: require('../png/ClimateAtlas.png'),
         link: "https://climateatlas.ca/",
       },
       {
         title: "2 Billion Trees Program",
         description: "The 2 Billion Trees (2BT) program aims to motivate and support new tree planting projects. Over a period of 10 years, by 2031, up to $3.2 billion will be invested in tree planting efforts to support provinces, territories, third-party organizations (for-profit and not-for profit) and Indigenous organizations to plant two billion trees across Canada.",
-        image: require('./png/2BillionTrees.png'),
+        image: require('../png/2BillionTrees.png'),
         link: "https://www.canada.ca/en/campaign/2-billion-trees/2-billion-trees-program.html",
       },
       {
         title: 'Nature Canada Report: Tree Equity',
         description: '"...the 3-30-300 rule, which states that everyone should be able to see at least three trees from their home, that all neighbourhoods should have at least a 30% tree canopy, and that all residents should have a greenspace of at least one hectare within 300 metres of where they live. While this principle can help substantially in advancing tree equity, we need to go further. In this report, Nature Canada proposes that equitable access should be thought of in terms of three variables—proximity to urban trees and forests, urban forest quality and the governance of urban forests."',
         link: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf',
-        image: require('./png/NatureCanadaReport.png'),
+        image: require('../png/NatureCanadaReport.png'),
       },
       {
         title: 'Urban Forest Canopy in CRD',
         description: '"The Urban Forest Stewardship Initiative (UFSI) is a program of Habitat Acquisition Trust (HAT). It is a partnership of individuals, organizations and governments dedicated to the conservation, restoration and sustainable use of Greater Victoria’s urban forest. Urban forests are treed landscapes found within a community. They include old-growth remnants, backyard fruit trees, urban parks and trail systems, Garry oak meadows, and treed boulevards. The challenge within Greater Victoria is that the population rate is estimated to increase by 33% over the next 20 years which emphasizes the need to increase the awareness of the benefits of urban forest, and the importance of implementing land use planning initiatives to promote the sustainable development of the region. A critical step in the process is the development of an urban forest stewardship strategy, however, very little information exists related to the characteristics and amount of urban forest and impervious surface within the region. As a result, the UFSI identified the need to map the urban forest in Greater Victoria for two time periods – 1986 and 2005. " - Report. This study was redone in 2020 . If you know where it is, please let RUSH know through the feedback form or email connect@whatstherush.ca',
         link: 'https://static1.squarespace.com/static/5e3c5b7e5460c55405a6d4d6/t/61bbd35f3486620f41b2aacf/1639699301418/UFSI+mapping+report+exec+sum.pdf',
-        image: require('./png/UrbanForestStewardship.png')
+        image: require('../png/UrbanForestStewardship.png')
       },
       {
         title: 'Firesmoke Canada',
         description: '"...the Canadian portal for information about wildland fire weather and smoke. From here you can access the BlueSky Canada smoke forecasts, fire weather forecasts, fire information, and the BlueSky Playground. The Weather Forecast Research Team at the University of British Columbia produces these research forecasts with support from multiple agencies. These tools and data serve professionals in the air quality, health & safety, emergency management, and science & research communities as well as the public. We are also a community of practice that advances policies, plans & organizations to address wildland fire and smoke issues."',
         link: 'https://firesmoke.ca',
-        image: require('./png/FiresmokeCanada.png')
+        image: require('../png/FiresmokeCanada.png')
       },
       {
         title: '30% by 2030',
         description: '"The federal government has set the goal of conserving 30 percent of Canada’s land and water by 2030, because science shows that nature needs our help in order to reverse the decline in biodiversity, better fight climate change, and maintain a strong, sustainable economy."',
         link: 'https://www.canada.ca/en/environment-climate-change/news/2022/12/government-of-canada-recognizing-federal-land-and-water-to-contribute-to-30-by-30-nature-conservation-goals.html',
-        image: require('./png/30by30.png')
+        image: require('../png/30by30.png')
       },
       {
         title: 'The Global Deal for Nature',
         description: '"The last global targets, set in 2010, were simply not ambitious enough, and we have seen the consequences. According to the Living Planet Report (2020) in the past few decades, animal populations have declined by 68%, one-fifth of the Amazon rainforest has been destroyed, and we’ve lost one-half of the world’s shallow water coral reefs. The Protected Planet Report (2020) shows that only about 17% of the world’s lands and 8% of the world’s oceans are now formally protected."...“A Global Deal for Nature: Guiding Principles, Milestones, and Targets" that explains why protecting half the Earth is needed, and presents a science-driven plan to save the diversity and abundance of life on Earth. It builds upon many scientific proposals for protecting key biodiversity areas and the latest climate science, calling for a milestone of at least 30% of lands protected by 2030 with an additional 20% in climate stabilization areas. It is also the first to include land, freshwater, and marine ecoregions"',
         link: '',
-        image: require('./png/GlobalDealForNature.png')
+        image: require('../png/GlobalDealForNature.png')
       },
       {
         title: 'World Economic Forum: 2030',
         description: '"At a time when the world is grappling with meeting the Paris Climate Agreement and trying to prevent the sixth mass extinction on Earth, an international team of scientists has published a way forward - a Global Deal for Nature. The science-backed plan, published in Science Advances, proposes ambitious targets for the conservation of nature as the most effective pathway to address the extinction crisis and help us avert catastrophic climate change, before it’s too late. The deal calls for 30% of the planet to be protected by 2030, with an additional 20% to be maintained or restored to a natural state and designated as climate stabilization areas."',
         link: 'https://www.weforum.org/agenda/2019/04/why-protect-30-planet-2030-global-deal-nature-conservation/',
-        image: require('./png/WorldEconomicForum.png')
+        image: require('../png/WorldEconomicForum.png')
       },
     ],
   }

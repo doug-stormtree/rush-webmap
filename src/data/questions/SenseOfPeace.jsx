@@ -1,7 +1,8 @@
 const SenseOfPeace = {
+  key: 'sense-of-peace',
   title: "Sense of Peace?",
   question: "Sense of Peace?",
-  image: require('./png/SenseOfPeace.png'),
+  image: require('../png/SenseOfPeace.png'),
   description: [
     {type: 'h2', content: 'Comparison'},
     {type: 'p', content: 'Public parks and beaches are places for everyone and anyone to appreciate Nature, enjoy, relax.  Spiritual centers can offer spaces with familiar mindfulness practices that create a sense of peace and community.  Health centres are connected to networks of resources and people who can help with mental, physical and emotional stress.  Legal aid and services for underrepresented people are important in establishing safety and  the ability to create a quality of life. Recreation centres offer places to play, challenge and develop different abilities.  Fountains can provide a healing sound and are often in public gathering places where a pause to become present and observe is possible.  Public washrooms support human digestion and dignity.'},

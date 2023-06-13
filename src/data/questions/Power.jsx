@@ -1,7 +1,8 @@
 const Power = {
+  key: 'power-this-place',
   title: "Power this place?",
   question: "How to plan for local and sustainable energy in the long run?",
-  image: require('./png/PowerThisPlace.png'),
+  image: require('../png/PowerThisPlace.png'),
   description: [
     {type: 'h2', content: 'Comparison'},
     {type: 'p', content: 'Distances that power is transported. GHG emissions CRD buidlings & industry. Where are the opportunities for off grid.'},
@@ -41,19 +42,19 @@ const Power = {
       {
         title: 'BC Sustainable Energy',
         link: 'https://bcsea.org/',
-        image: require('./png/BCSustainableEnergy.png'),
+        image: require('../png/BCSustainableEnergy.png'),
         description: 'BC Sustainable Energy Association is a network of action takers supporting sustainable energy policy, innovation, and education in British Columbia.',
       },
       {
         title: 'The ReBuild Initiative',
         link: 'https://rebuild.uvic.ca/',
-        image: require('./png/ReBuildInitiative.png'),
+        image: require('../png/ReBuildInitiative.png'),
         description: 'Reducing energy use in existing buildings is key to avoiding catastrophic climate change. Better computer models of how our buildings are performing are needed to give robust design solutions and evidence-based policies. Data-driven methods that use machine-learning have great potential as our buildings provide lots of data, but little is currently used for reducing emissions. The ReBuild Initiative is an industry-government-academia consortium that will undertake 16 projects that encompass the breadth and complexity of the challenge, each co-designed with a partner organization to apply specific areas of research to meet their needs.'
       },
       {
         title: 'Greener Homes Grant',
         link: 'https://www.nrcan.gc.ca/energy-efficiency/homes/canada-greener-homes-initiative/canada-greener-homes-grant/canada-greener-homes-grant/23441',
-        image: require('./png/GreenerHomesGrant.png'),
+        image: require('../png/GreenerHomesGrant.png'),
         description: 'The Government of Canada wants to help Canadians make where they live more energy efficient. The Canada Greener Homes Initiative will help homeowners save money, create new jobs across Canada for energy advisors and fight climate change.'
       },
     ],
