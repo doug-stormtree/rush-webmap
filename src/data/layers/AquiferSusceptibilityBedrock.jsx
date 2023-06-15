@@ -20,7 +20,7 @@ const layer = {
       url:'https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=59164'
     }
   ],
-  layer: tileLayer(
+  leafletLayer: tileLayer(
     '/BED_AS_Tiles/{z}/{x}/{y}.png',
     { minNativeZoom: 8, maxNativeZoom: 14, opacity: 0.4 }
     ),
