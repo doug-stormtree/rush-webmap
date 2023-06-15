@@ -81,7 +81,7 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
           overflow='hidden'
           whiteSpace='nowrap'
           textOverflow='ellipsis'
-          textSize='16px'
+          fontSize='16px'
         >
           {linkText ?? link}
         </Link>

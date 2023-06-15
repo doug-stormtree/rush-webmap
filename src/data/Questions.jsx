@@ -83,7 +83,7 @@ export const useMapLayerStore = create((set, get) => ({
         state.layers.get(layerId).leafletLayer = leafletLayer;
       })
     ),
-  layersLoading: () => get().layers.values().some(
+  layersLoading: () => [...get().layers.values()].some(
     (l) => l.leafletLayer === LOADING
   ),
   getLeafletLayer: (layerId) => {
