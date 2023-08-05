@@ -1,6 +1,5 @@
 import {
   mapPopupContent,
-  geoDateToLocaleString,
   getStyleMapProperty
 } from "../LeafletStyleHelpers";
 
