@@ -8,11 +8,12 @@ import {
   VStack
 } from '@chakra-ui/react';
 import Questions from '../data/Questions';
-import ActPane from './ActPane';
+import InitiativeCard from './InitiativeCard';
 import FormattedText from './FormattedText';
 
 export default function ContentPane({question, ...props}) {
   const contentTitle = useBreakpointValue({ lg: Questions.get(question).question, base: Questions.get(question).title})
+  const initiatives = Questions.get(question).act.initiatives;
   return (
     <VStack
       divider={<StackDivider borderWidth='2px' borderColor='WhiteAlpha.700' />}
@@ -36,7 +37,21 @@ export default function ContentPane({question, ...props}) {
           <Box pb='0.5em'>
             <FormattedText textArray={Questions.get(question).description} />
           </Box>
-          <ActPane content={Questions.get(question).act} />
+          <Flex
+            direction="column"
+            gap="10px"
+            margin="auto"
+            maxW='3xl'
+            mb='1em'
+          >
+            {initiatives.map((item, index) =>
+              <InitiativeCard
+                key={item.title}
+                initiative={item}
+                flip={index%2===0}
+              />
+            )}
+          </Flex>
         </Box>
       </Flex>
     </VStack>
