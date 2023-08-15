@@ -34,7 +34,10 @@ export default function ContentPane({question, ...props}) {
         overflow='auto'
         alignItems='center'
       >
-        <Box maxW='6xl' px='60px'>
+        <Box
+          maxW='6xl'
+          px={{base: '12px', md:'60px'}}
+        >
           <Box pb='2em'>
             <FormattedText textArray={Questions.get(question).description} />
           </Box>
