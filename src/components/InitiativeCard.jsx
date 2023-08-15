@@ -7,6 +7,7 @@ import {
 } from '@chakra-ui/react';
 
 export default function InitiativeCard({initiative, flip = false}) {
+
   return (
     <Box
       borderWidth='1px'
@@ -16,30 +17,31 @@ export default function InitiativeCard({initiative, flip = false}) {
       <Image
         src={initiative.image}
         alt={initiative.title}
-        boxSize='200px'
         fit='cover'
-        float={flip ? 'right' : 'left'}
-        marginRight={flip ? '0' : '5'}
-        marginLeft={flip ? '5' : '0'}
-        borderBottomRightRadius={flip ? '0' : 'xl'}
-        borderBottomLeftRadius={flip ? 'xl' : '0'}
+        height='200px'
+        width={{base: '100%', md: '200px'}}
+        float={{md: flip ? 'right' : 'left'}}
+        marginRight={{md: flip ? '0' : '5'}}
+        marginLeft={{md: flip ? '5' : '0'}}
+        borderBottomRightRadius={{md: flip ? '0' : 'xl'}}
+        borderBottomLeftRadius={{md: flip ? 'xl' : '0'}}
       />
 
       <Heading
-        as='h2'
+        as='h4'
         size='md'
         noOfLines={1}
-        paddingTop='3'
         marginBottom='2'
-        paddingRight={flip ? '0' : '5'}
-        paddingLeft={flip ? '5' : '0'}
+        paddingTop={{base: '5', md: '3'}}
+        paddingRight={{base: '5', md: flip ? '0' : '5'}}
+        paddingLeft={{base: '5', md: flip ? '5' : '0'}}
       >
         {initiative.title}
       </Heading>
 
       <Text
-        marginBottom='3'
         marginX='5'
+        marginBottom={{base: '4', md: '3'}}
       >
         {initiative.description}
       </Text>
