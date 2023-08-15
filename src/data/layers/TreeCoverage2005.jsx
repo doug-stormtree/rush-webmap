@@ -30,6 +30,7 @@ const layer = {
   styleMap: styleMap_TreeCoverage2005,
   questions: [
     { key: 'beat-the-heat', group: 'default', active: true },
+    { key: 'neighbourhood-to-naturehood', group: 'default', active: false },
     { key: 'development', group: 'Nature', active: false },
   ]
 }
