@@ -5,6 +5,7 @@ import {
   Flex,
   Heading,
   StackDivider,
+  Text,
   VStack
 } from '@chakra-ui/react';
 import Questions from '../data/Questions';
@@ -34,24 +35,34 @@ export default function ContentPane({question, ...props}) {
         alignItems='center'
       >
         <Box maxW='6xl' px='60px'>
-          <Box pb='0.5em'>
+          <Box pb='2em'>
             <FormattedText textArray={Questions.get(question).description} />
           </Box>
-          <Flex
-            direction="column"
-            gap="10px"
+
+          <Box
+            maxW='3xl' 
             margin="auto"
-            maxW='3xl'
             mb='1em'
           >
-            {initiatives.map((item, index) =>
-              <InitiativeCard
-                key={item.title}
-                initiative={item}
-                flip={index%2===0}
-              />
-            )}
-          </Flex>
+            <Heading as='h2' size='lg' mb='0.1em'>
+              Good Stuff To Check Out
+            </Heading>
+            <Text fontSize='sm' mb='1em'>
+              We've noticed these movers and shakers working on solutions.
+            </Text>
+            <Flex
+              direction="column"
+              gap="10px"
+            >
+              {initiatives.map((item, index) =>
+                <InitiativeCard
+                  key={item.title}
+                  initiative={item}
+                  flip={index%2===0}
+                />
+              )}
+            </Flex>
+          </Box>
         </Box>
       </Flex>
     </VStack>
