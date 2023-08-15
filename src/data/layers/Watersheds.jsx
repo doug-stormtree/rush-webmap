@@ -42,6 +42,7 @@ const layer = {
   },
   questions: [
     { key: 'protect-from-flooding', group: 'default', active: true },
+    { key: 'neighbourhood-to-naturehood', group: 'default', active: false },
     { key: 'development', group: 'Water', active: false },
   ]
 }
