@@ -1,15 +1,16 @@
 import React from 'react';
 import {
-  Box,
-  Image,
   Heading,
+  Image,
+  LinkBox,
+  LinkOverlay,
   Text,
 } from '@chakra-ui/react';
 
 export default function InitiativeCard({initiative, flip = false}) {
 
   return (
-    <Box
+    <LinkBox
       borderWidth='1px'
       borderRadius='xl'
       overflow='hidden'
@@ -36,7 +37,9 @@ export default function InitiativeCard({initiative, flip = false}) {
         paddingRight={{base: '5', md: flip ? '0' : '5'}}
         paddingLeft={{base: '5', md: flip ? '5' : '0'}}
       >
-        {initiative.title}
+        <LinkOverlay href={initiative.link} isExternal>
+          {initiative.title}
+        </LinkOverlay>
       </Heading>
 
       <Text
@@ -45,6 +48,6 @@ export default function InitiativeCard({initiative, flip = false}) {
       >
         {initiative.description}
       </Text>
-    </Box>
+    </LinkBox>
   );
 }
