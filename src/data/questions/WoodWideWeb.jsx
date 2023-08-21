@@ -32,7 +32,7 @@ const WoodWideWeb = {
         image: require('../png/Placeholder.png')
       },
       {
-        title: 'Soil Factsheet: BC Min. of Agriculture',
+        title: 'Soil Factsheet: BC Ministry of Agriculture',
         link: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/agricultural-land-and-environment/soil-nutrients/613100-1_soil_compaction.pdf',
         description: '"Soil compaction refers to the disruption and reduction of the large pores within the soil. The presence of excess soil moisture at the time of any field operation is the main factor leading to soil compaction. Once a soil is compacted, the bulk density and the strength of the soil are increased. For construction purposes, a compacted soil is ideal but under normal crop production, a compacted soil can be a serious problem. Penetration into the soil by tillage implements and crop roots is restricted. The movement of air and water through the soil is hampered causing the soil to remain wet and cool long into the growing season"',
         image: require('../png/Placeholder.png')
@@ -40,14 +40,20 @@ const WoodWideWeb = {
       {
         title: 'BC Big Tree Registry',
         link: 'https://bigtrees.forestry.ubc.ca/bc-bigtree-registry/',
-        description: 'The BC BigTree Registry is maintained by the BC BigTree Committee and supported by the Faculty of Forestry at the University of British Columbia. It’s an evolving project whose mandate is "To identify, describe, monitor, and conserve the largest trees of each species within British Columbia, and to educate and enlist the help of its citizens in this task."',
+        description: 'The BC BigTree Registry is maintained by the BC Big Tree Committee and supported by the Faculty of Forestry at the University of British Columbia. It\'s an evolving project whose mandate is "To identify, describe, monitor, and conserve the largest trees of each species within British Columbia, and to educate and enlist the help of its citizens in this task."',
         image: require('../png/BigTreeRegistry.png')
+      },
+      {
+        title: 'Territories of Life',
+        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
+        link: 'https://report.territoriesoflife.org/',
+        image: require('../png/TerritoriesOfLife.png')
       },
       {
         title: 'Co-Designing Urban Carbon Sink Parks',
         link: 'https://www.frontiersin.org/articles/10.3389/fenvs.2021.672468/full',
         description: '"In order to achieve the goals of carbon (C) neutrality within next 20 year, municipalities worldwide need to increasingly apply negative emission technologies. We focus on the main principles of urban demonstration areas using biochars for C sequestration and explore the lessons learned from a co-creation process of one such park, Hyväntoivonpuisto in Helsinki, Finland. Demonstration sites of urban C sinks in public parks must be safe, visible and scientifically sound for reliable and cost-effective verification of carbon sequestration. We find that different interests can be arbitrated and that synergy that emerges from co-creation of urban C sink parks between stakeholders (scientists, city officials, companies, and citizens) can result in demo areas with maximized potential for impact, dissemination and consideration of principles of scientific experimentation."',
-        image: require('../png/Placeholder.png')
+        image: require('../png/UrbanCarbonSinkParks.png')
       },
       {
         title: 'Coastal Douglas Fir Conservation Partnership',

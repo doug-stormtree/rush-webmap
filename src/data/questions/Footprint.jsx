@@ -40,6 +40,24 @@ const Footprint = {
         noText: true,
         link: 'https://siclimateactionnetwork.wordpress.com/'
       },
+      {
+        title: 'BC Hydro EV',
+        description: '"The BC Hydro EV network currently has over 70 fast charging stations across B.C., and there are more on the way. We operate mainly 50kW DC fast chargers, but you’ll also find some 25kW “mini” fast chargers and Level 2 chargers at select stations. Most stations currently have a single DC fast charger but as usage grows, we’re upgrading stations with a second fast charger."',
+        image: require('../png/BCHydro.png'),
+        link: 'https://electricvehicles.bchydro.com/charge/public-charging/our-fast-charging-network'
+      },
+      {
+        title: 'Chargepoint',
+        description: '"We\'re leading the charge. Actually, we started it. You\'d think after creating the world\'s largest and most open EV charging network we\'d be satisfied, but you\'d be wrong. The way we see it, there\'s still much more we can do—together. Join us in getting all people and goods moving on electricity."',
+        image: require('../png/Chargepoint.png'),
+        link: 'https://www.chargepoint.com/en-ca'
+      },
+      {
+        title: 'Plug In BC',
+        description: '"Supporting the uptake of electric vehicles in British Columbia. We provide a hub of information and incentive programs for consumers and fleets to go electric."',
+        image: require('../png/PlugInBC.png'),
+        link: 'https://pluginbc.ca'
+      },
     ],
   },
 };

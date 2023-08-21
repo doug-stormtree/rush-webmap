@@ -57,7 +57,7 @@ const LocalToGlobal = {
       },
       {
         title: 'West Coast Climate Action Network',
-        description: 'This network brings together individuals and organizations in BC with a deep concern about the climate emergenecy and a desire to take collective action.',
+        description: 'This network brings together individuals and organizations in BC with a deep concern about the climate emergency and a desire to take collective action.',
         link: 'https://westcoastclimateaction.ca/',
         image: require('../png/WestCoastClimateAction.png')
       },

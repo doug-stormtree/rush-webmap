@@ -1,7 +1,7 @@
 const HelpWithChange = {
   key: 'help-with-change',
   title: "Help with Change",
-  question: "Who can I contact to express my thoughts on these issues?",
+  question: "Who can help me make the change I want to see?",
   image: require('../png/HelpWithChange.png'),
   description: [
   ],
