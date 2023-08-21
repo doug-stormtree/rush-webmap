@@ -1,6 +1,6 @@
 const SenseOfPeace = {
   key: 'sense-of-peace',
-  title: "Sense of Peace?",
+  title: "Sense of Peace",
   question: "Sense of Peace?",
   image: require('../png/SenseOfPeace.png'),
   description: [

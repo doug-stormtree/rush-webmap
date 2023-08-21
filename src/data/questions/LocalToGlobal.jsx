@@ -1,6 +1,6 @@
 const LocalToGlobal = {
   key: 'local-to-global',
-  title: "Local to Global?",
+  title: "Local to Global",
   question: "Think cosmically act locally?",
   image: require('../png/NASAEarth.png'),
   description: [

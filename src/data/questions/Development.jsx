@@ -1,6 +1,6 @@
 const Development = {
   key: 'development',
-  title: "Development?",
+  title: "Development",
   question: "Development a good idea?",
   image: require('../png/Development.png'),
   description: [

@@ -1,6 +1,6 @@
 const WoodWideWeb = {
   key: 'wood-wide-web',
-  title: "Wood Wide Web?",
+  title: "Wood Wide Web",
   question: "Restoring & protecting connectivity of Nature's network?",
   image: require('../png/WoodWideWeb.png'),
   description: [

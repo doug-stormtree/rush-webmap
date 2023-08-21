@@ -1,6 +1,6 @@
 const Flooding = {
   key: 'protect-from-flooding',
-  title: 'Protect from Flooding?',
+  title: 'Protect from Flooding',
   question: 'How can communities manage water for maximum benefit?',
   image: require('../png/ProtectFromFlooding.png'),
   description: [

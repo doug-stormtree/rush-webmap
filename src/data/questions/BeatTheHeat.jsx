@@ -1,6 +1,6 @@
 const BeatTheHeat = {
   key: 'beat-the-heat',
-  title: "Beat the Heat?",
+  title: "Beat the Heat",
   question: "How can I keep myself and the ecosystem cool & hydrated?",
   image: require('../png/BeatTheHeat.png'),
   description: [

@@ -1,6 +1,6 @@
 const Footprint = {
   key: 'light-footprint',
-  title: 'Light Footprint?',
+  title: 'Light Footprint',
   question: 'Self-propelled "Light Footprint" Travel',
   image: require('../png/LightFootprint.png'),
   description: [

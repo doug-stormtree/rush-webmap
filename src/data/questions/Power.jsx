@@ -1,6 +1,6 @@
 const Power = {
   key: 'power-this-place',
-  title: "Power this place?",
+  title: "Power this Place",
   question: "How to plan for local and sustainable energy in the long run?",
   image: require('../png/PowerThisPlace.png'),
   description: [

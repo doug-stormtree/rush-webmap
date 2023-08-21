@@ -1,6 +1,6 @@
 const CircularEcon = {
   key: 'circular-economy',
-  title: 'Circular Economy?',
+  title: 'Circular Economy',
   question: 'How can I close the loop on waste?',
   image: require('../png/CircularEconomy.png'),
   description: [
