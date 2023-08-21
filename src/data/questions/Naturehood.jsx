@@ -1,6 +1,6 @@
 const Naturehood = {
   key: 'neighbourhood-to-naturehood',
-  title: "Neighbourhood to Naturehood?",
+  title: "Neighbourhood to Naturehood",
   question: "What is the Nature of this place?",
   image: require('../png/Naturehood.png'),
   description: [

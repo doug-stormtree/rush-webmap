@@ -1,6 +1,6 @@
 const Culture = {
   key: 'culture-compass',
-  title: "Culture Compass?",
+  title: "Culture Compass",
   question: "Culture compass?",
   image: require('../png/CultureCompass.png'),
   description: [

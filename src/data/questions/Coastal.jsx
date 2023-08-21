@@ -1,6 +1,6 @@
 const Coastal = {
   key: 'protect-the-coast',
-  title: "Protect the Coast?",
+  title: "Protect the Coast",
   question: "Am I vulnerable to sea level rise, tsunamis, storm surges?",
   image: require('../png/ProtectTheCoast.png'),
   description: [

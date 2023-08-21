@@ -1,6 +1,6 @@
 const EatLocal = {
   key: 'eat-local',
-  title: "Eat Local?",
+  title: "Eat Local",
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
   image: require('../png/EatLocal.png'),
   description: [
