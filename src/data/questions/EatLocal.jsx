@@ -1,6 +1,6 @@
 const EatLocal = {
   key: 'eat-local',
-  title: "Eat Local",
+  title: "Eat Local?",
   question: "Farm to Table to Fertilizer. Delicious at a short distance?",
   image: require('../png/EatLocal.png'),
   description: [
@@ -22,16 +22,16 @@ const EatLocal = {
   act: {
     initiatives: [
       {
-        title: 'Iyé Creative',
-        image: require('../png/IyeCreative.png'),
-        link: 'https://www.iyeherstories.com/',
-        description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.'
-      },
-      {
         title: "Our Food Future",
         image: require('../png/OurFoodFuture.png'),
         link: "https://biomimicryfrontiers.com/our-food-future",
         description: "Biomimicry reminds us that there is no waste out in nature, and to truly imitate nature, we must eliminate waste. Biomimicry Frontiers was brought into the Our Food Future initiative to frame the project from a biomimetic lens and to use the opportunity to build circular businesses, while simultaneously providing advisory services."
+      },
+      {
+        title: 'Iyé Creative',
+        image: require('../png/IyeCreative.png'),
+        link: 'https://www.iyeherstories.com/',
+        description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.'
       },
     ],
   }

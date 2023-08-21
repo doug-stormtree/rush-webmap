@@ -32,7 +32,7 @@ const Development = {
         title: 'Engage with Nature-based Solutions',
         link: 'https://www.engagewithnbs.ca/',
         image: require('../png/EngageNBS.png'),
-        description: '"Nature-based solutions support the health of natural systems, while addressing societal challenges. The design of these solutions are based on our planet’s natural systems, working with, and for, nature. They increase climate-resilient natural capital (such as wetlands and forests) and provide ecosystem services (such as water filtration). Communities can use nature-based solutions to support the resiliency of our climate, environment, and human society. Engage with Nature-Based Solutions is a new initiative to support communities who apply nature-based solutions to their local lands and waters. We acknowledge and take inspiration from Indigenous peoples, whose cultures and traditions support healthy ecosystems and the interconnection and importance of all living things."',
+        description: 'Engage with Nature-Based Solutions is a Canadian initiative working to support communities that apply nature-based solutions to their local lands and waters. We acknowledge and take inspiration from Indigenous peoples, whose cultures and traditions support healthy ecosystems and the interconnection and importance of all living things.',
       },
       {
         title: 'Natural Assets Intiative',
@@ -42,7 +42,7 @@ const Development = {
       },
       {
         title: 'Nature Canada Report: Tree Equity',
-        description: '"...the 3-30-300 rule, which states that everyone should be able to see at least three trees from their home, that all neighbourhoods should have at least a 30% tree canopy, and that all residents should have a greenspace of at least one hectare within 300 metres of where they live. While this principle can help substantially in advancing tree equity, we need to go further. In this report, Nature Canada proposes that equitable access should be thought of in terms of three variables—proximity to urban trees and forests, urban forest quality and the governance of urban forests."',
+        description: 'This report outlines the need for "the 3-30-300 rule" to support universal well-being across Canada\'s cities. Everybody should be able to see 3 trees from their home. Neighbourhoods should have a minimum of 30% canopy cover and access to a greenspace of one hectare minimum which is less than 300 meters from home.',
         link: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf',
         image: require('../png/NatureCanadaReport.png'),
       },
@@ -54,10 +54,16 @@ const Development = {
       },
       {
         title: 'Making Room: A Transitional Tiny Home Community',
-        description: '"This Esri story map is a Community-based Participatory Research (CBPR) project through UNESCO K4C Salish Sea Hub & the University of Victoria’s (UVic) Geography Department. It was created in partnership with the Greater Victoria Coalition to End Homelessness (GVCEH), Island Health, and UVic instructors Ken Josephson and Dr. Crystal Tremblay. This story map is simultaneously a place of awareness and a call to action regarding houselessness and the importance of site-supportive transitional housing. The authors aim to have this map be a center point for resources, information, and stories. While their story is situated in Victoria, British Columbia, they hope the success of the Making Room: A Transitional Tiny Home Community will inspire other similar projects and help break the cycle of houselessness."',
+        description: '"This Esri story map is a Community-based Participatory Research (CBPR) project through UNESCO K4C Salish Sea Hub & the University of Victoria\'s (UVic) Geography Department. It was created in partnership with the Greater Victoria Coalition to End Homelessness (GVCEH), Island Health, and UVic instructors Ken Josephson and Dr. Crystal Tremblay. This story map is simultaneously a place of awareness and a call to action regarding houselessness and the importance of site-supportive transitional housing. The authors aim to have this map be a center point for resources, information, and stories. While their story is situated in Victoria, British Columbia, they hope the success of the Making Room: A Transitional Tiny Home Community will inspire other similar projects and help break the cycle of houselessness."',
         link: 'https://storymaps.arcgis.com/stories/14aeb7c901e04cc59272745e7a538994',
         image: require('../png/MakingRoom.png'),
-      }
+      },
+      {
+        title: "South Island Prosperity Partnership",
+        description: "The South Island Prosperity Partnership (SIPP) is an alliance of over 70 public and private-sector partners in Greater Victoria, including 11 local governments, nine First Nations, three post-secondary institutions, nine industry associations and nonprofits, and more than 30 major employers. SIPP works to bolster our region\'s economic and social prosperity. This will happen by catalyzing the creation of high-quality, household-sustaining jobs, so that more families can afford to live, work and build a life here.",
+        link: "https://southislandprosperity.ca/who-is-sipp/",
+        image: require('../png/SIPP.png'),
+      },
     ],
   }
 };

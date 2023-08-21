@@ -46,7 +46,7 @@ const Naturehood = {
         image: require('../png/Connectivity.png')
       },
       {
-        title: 'G. Victoria NatureHood: Nature in the City Map',
+        title: 'Greater Victoria NatureHood: Nature in the City Map',
         link: 'https://experience.arcgis.com/experience/b360590fbbb44966952c0cfe240d65c4',
         description: '"This map is a guide to help connect you with the amazing places and nearby nature found in Greater Victoria. Learn about the Greater Victoria NatureHood initiative, ecosystems and biodiversity, waterways and watersheds, riparian zones, and some of the species of plants and animals found in the region."',
         image: require('../png/NatureInTheCity.png')
@@ -54,7 +54,7 @@ const Naturehood = {
       {
         title: 'Greater Victoria Greenbelt Society',
         link: 'https://www.marylakeconnections.ca/greater-victoria-greenbelt-society/',
-        description: '“Mission: To foster respect for nature and promote the protection of natural areas for the benefit of all future generations through environmental conservation, restoration, education, and cultural activities in alliance with local First Nations" The Greater Victoria Greenbelt Society’s current project is the W̱MÍYEŦEN Nature Sanctuary (formerly Mary Lake).',
+        description: '“Mission: To foster respect for nature and promote the protection of natural areas for the benefit of all future generations through environmental conservation, restoration, education, and cultural activities in alliance with local First Nations" The Greater Victoria Greenbelt Society\'s current project is the W̱MÍYEŦEN Nature Sanctuary (formerly Mary Lake).',
         image: require('../png/Placeholder.png')
       },
       {
@@ -64,22 +64,22 @@ const Naturehood = {
         image: require('../png/Placeholder.png')
       },
       {
-        title: 'Nature Canada Report on Tree Equity',
+        title: 'Nature Canada Report: Tree Equity',
         link: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf',
         description: '"The majority of Canadian municipalities have published urban tree cover targets—for example, the City of Toronto has committed to achieving 40% urban forest canopy cover by 2050. While laudable, such city-wide targets do not address equity of access for different communities and neighborhoods. A better approach is the 3-30-300 rule, which states that everyone should be able to see at least three trees from their home, that all neighbourhoods should have at least a 30% tree canopy, and that all residents should have a greenspace of at least one hectare within 300 metres of where they live. While this principle can help substantially in advancing tree equity, we need to go further. In this report, Nature Canada proposes that equitable access should be thought of in terms of three variables—proximity to urban trees and forests, urban forest quality and the governance of urban forests."',
-        image: require('../png/Placeholder.png')
-      },
-      {
-        title: "BirdLife International",
-        image: require('../png/Birdlife.png'),
-        link: "https://www.birdlife.org/what-we-do/",
-        description: "BirdLife International's mission is to conserve birds, their habitats, and global biodiversity, working with people toward sustainability in the use of natural resources."
+        image: require('../png/NatureCanadaReport.png')
       },
       {
         title: 'CRD Educational Resources',
         image: require('../png/CRDEducational.png'),
         link: 'https://www.crd.bc.ca/education/school-programs/education-resources#tab-5',
         description: 'The Capital Regional District has published a number of identification charts and fact sheets about the living things that can be found in our regional parks. Follow the link to learn about local mosses, seaweeds, lichens, shoreline birds and more!'
+      },
+      {
+        title: "BirdLife International",
+        image: require('../png/Birdlife.png'),
+        link: "https://www.birdlife.org/what-we-do/",
+        description: "BirdLife International's mission is to conserve birds, their habitats, and global biodiversity, working with people toward sustainability in the use of natural resources."
       },
       {
         title: 'Colquitz Storymap',
