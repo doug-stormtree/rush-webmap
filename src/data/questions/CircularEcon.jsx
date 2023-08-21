@@ -89,7 +89,7 @@ const CircularEcon = {
         image: require('../png/OutOfSight.png'),
       },
       {
-        title: 'Explore Circular Economy Initiatives',
+        title: 'Canada: Explore Circular Economy Initiatives',
         description: 'This Government of Canada webpage summarizes and links to all the initiatives available federally that support circular economy efforts across the provinces, territories, and internationally.',
         link: 'https://www.canada.ca/en/services/environment/conservation/sustainability/circular-economy/circular-economy-initiatives.html',
         image: require('../png/CanadaCircularEcon.png'),
