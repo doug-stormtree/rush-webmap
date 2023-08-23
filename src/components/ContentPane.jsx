@@ -46,7 +46,9 @@ function DescriptionComponent({ title, subtitle, description }) {
   return (
     <Flex
       direction='column'
-      maxW='3xl'
+      maxW='4xl'
+      paddingInline='6'
+      paddingBottom='6'
     >
       <Heading size='lg' mb='0.125em'>{title}</Heading>
       <Text
@@ -64,6 +66,7 @@ function InitiativesList({ initiatives }) {
   return (
     <Box
       maxW='3xl'
+      paddingInline='6'
     >
       <Heading as='h2' size='lg' mb='0.125em'>
         Good Stuff To Check Out
