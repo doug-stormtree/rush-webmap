@@ -1,73 +1,88 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
-  useBreakpointValue,
   Box,
   Flex,
   Heading,
-  StackDivider,
   Text,
-  VStack
 } from '@chakra-ui/react';
 import Questions from '../data/Questions';
 import InitiativeCard from './InitiativeCard';
 import FormattedText from './FormattedText';
 
-export default function ContentPane({question, ...props}) {
-  const contentTitle = useBreakpointValue({ lg: Questions.get(question).question, base: Questions.get(question).title})
-  const initiatives = Questions.get(question).act.initiatives;
+export default function ContentPane({ question, ...props }) {
+  // question content
+  const [content, setContent] = useState({});
+  const [initiatives, setInitiatives] = useState([]);
+
+  useEffect(() => {
+    if (!question) return;
+    const questionContent = Questions.get(question);
+    setContent({
+      title: questionContent.title,
+      subtitle: questionContent.question,
+      description: questionContent.description,
+    });
+    setInitiatives(questionContent.act.initiatives);
+    return () => {
+      setContent({});
+      setInitiatives([]);
+    }
+  }, [ question ]);
+
   return (
-    <VStack
-      divider={<StackDivider borderWidth='2px' borderColor='WhiteAlpha.700' />}
-      spacing={4}
-      p={4}
-      bg='WhiteAlpha.100'
+    <Flex
+      flexFlow='row wrap'
+      justifyContent='space-evenly'
+      paddingTop='6'
       {...props}
     >
-      <Flex justifyContent='center' w='100%'>
-        <Heading size='lg'>{contentTitle}</Heading>
-      </Flex>
-      <Flex
-        h='100%'
-        w='100%'
-        gap='10px'
-        direction='column'
-        overflow='auto'
-        alignItems='center'
-      >
-        <Box
-          maxW='6xl'
-          px={{base: '12px', md:'60px'}}
-        >
-          <Box pb='2em'>
-            <FormattedText textArray={Questions.get(question).description} />
-          </Box>
+      <DescriptionComponent {...content} />
+      <InitiativesList initiatives={initiatives} />
+    </Flex>
+  )
+}
 
-          <Box
-            maxW='3xl' 
-            margin="auto"
-            mb='1em'
-          >
-            <Heading as='h2' size='lg' mb='0.1em'>
-              Good Stuff To Check Out
-            </Heading>
-            <Text fontSize='sm' mb='1em'>
-              We've noticed these movers and shakers working on solutions.
-            </Text>
-            <Flex
-              direction="column"
-              gap="10px"
-            >
-              {initiatives.map((item, index) =>
-                <InitiativeCard
-                  key={item.title}
-                  initiative={item}
-                  flip={index%2===0}
-                />
-              )}
-            </Flex>
-          </Box>
-        </Box>
+function DescriptionComponent({ title, subtitle, description }) {
+  return (
+    <Flex
+      direction='column'
+      maxW='3xl'
+    >
+      <Heading size='lg' mb='0.125em'>{title}</Heading>
+      <Text
+        as='h3'
+        mb='6'
+      >
+        {subtitle}
+      </Text>
+      <FormattedText textArray={description ?? []} />
+    </Flex>
+  )
+}
+
+function InitiativesList({ initiatives }) {
+  return (
+    <Box
+      maxW='3xl'
+    >
+      <Heading as='h2' size='lg' mb='0.125em'>
+        Good Stuff To Check Out
+      </Heading>
+      <Text as='h3' mb='6'>
+        We've noticed these movers and shakers working on solutions.
+      </Text>
+      <Flex
+        direction="column"
+        gap="10px"
+      >
+        {initiatives.map((item, index) =>
+          <InitiativeCard
+            key={item.title}
+            initiative={item}
+            flip={index%2===0}
+          />
+        )}
       </Flex>
-    </VStack>
+    </Box>
   )
 }
