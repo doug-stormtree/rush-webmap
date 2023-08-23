@@ -1,4 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOffLayersName } from '../TextContent';
 
 const layer = {
   title: 'Agricultural Land Reserve',
@@ -24,7 +25,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'eat-local', group: 'default', active: true },
+    { key: 'eat-local', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Nature', active: false },
   ]
 }

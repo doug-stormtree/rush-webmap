@@ -1,4 +1,5 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOnLayersName } from '../TextContent';
 
 const styleMap = new Map([
   ['Cliff', { fillColor: 'rgb(156,156,156)' }],
@@ -77,7 +78,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', group: 'default', active: true },
+    { key: 'neighbourhood-to-naturehood', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Nature', active: false },
   ]
 }

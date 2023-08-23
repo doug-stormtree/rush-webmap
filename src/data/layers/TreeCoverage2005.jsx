@@ -1,4 +1,5 @@
 import { tileLayer } from 'leaflet';
+import { StartOffLayersName, StartOnLayersName } from '../TextContent';
 
 const styleMap_TreeCoverage2005 = new Map([
   ["1", {legendText: '0 - 5', fillColor: 'rgb(200, 38, 0)'}],
@@ -29,8 +30,8 @@ const layer = {
   legendTitle: 'Percentage of Tree Cover',
   styleMap: styleMap_TreeCoverage2005,
   questions: [
-    { key: 'beat-the-heat', group: 'default', active: true },
-    { key: 'neighbourhood-to-naturehood', group: 'default', active: false },
+    { key: 'beat-the-heat', group: StartOnLayersName, active: true },
+    { key: 'neighbourhood-to-naturehood', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Nature', active: false },
   ]
 }

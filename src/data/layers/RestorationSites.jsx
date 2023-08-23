@@ -1,4 +1,5 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
+import { StartOffLayersName } from '../TextContent';
 
 const styleMap = new Map([
   ['5ebee86cd060db010045ee3c', {
@@ -69,7 +70,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: 'default', active: true },
+    { key: 'protect-from-flooding', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Nature', active: false },
   ]
 }

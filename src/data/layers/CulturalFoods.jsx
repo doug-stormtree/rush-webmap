@@ -1,4 +1,5 @@
 import { mapPopupContent, ogmIconLink, pointToIcon } from '../LeafletStyleHelpers';
+import { StartOnLayersName } from '../TextContent';
 
 const styleMap_CulturalFoods = new Map([
   ["648371c5cea704010006d25a",{ src: ogmIconLink("648371c5cea704010006d25a"), legendText: 'Cultural Food Store' }],
@@ -39,7 +40,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'eat-local', group: 'default', active: true },
+    { key: 'eat-local', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Community', active: false },
   ]
 }

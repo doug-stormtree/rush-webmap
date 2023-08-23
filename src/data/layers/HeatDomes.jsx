@@ -1,4 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOnLayersName } from '../TextContent';
 
 const layer = {
   title: 'Heat Domes',
@@ -28,7 +29,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', group: 'default', active: true },
+    { key: 'beat-the-heat', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Nature', active: false },
   ]
 }

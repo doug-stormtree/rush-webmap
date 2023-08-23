@@ -4,3 +4,6 @@ export const AboutPageText = [
   {type: 'p', content: 'We want to change the critical questions that get asked in planning meetings.  How is a development proposal an opportunity to increase resilience to climate-related events? How can we support neighbourhoods to adapt and thrive in changing conditions? If we extend and connect the ecosystem features across the urban landscape, what are all the benefits people would feel? How can we work with Nature to create a quality of life for all?'},
   {type: 'p', content: 'This is a tool for people to connect habitats, restore watersheds, feel a sense of belonging, and start conversations that lead to a brighter future.  Please use the feedback button to let us know what you think and any suggestions you have.'},
 ];
+
+export const StartOnLayersName = '1Starting Place';
+export const StartOffLayersName = '2Deeper Connections';

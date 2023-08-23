@@ -1,4 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOffLayersName } from '../TextContent';
 
 const layer = {
   title: 'Parks',
@@ -29,7 +30,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', group: 'default', active: true },
+    { key: 'beat-the-heat', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Nature', active: false },
   ]
 }

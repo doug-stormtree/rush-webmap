@@ -1,5 +1,6 @@
 import { icon, marker } from 'leaflet';
 import { mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOnLayersName } from '../TextContent';
 
 const styleMap = new Map([
   ['641b6ff089e06d0100e0cf1d', {
@@ -50,7 +51,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: 'default', active: true },
+    { key: 'protect-from-flooding', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Water', active: false },
   ]
 }
