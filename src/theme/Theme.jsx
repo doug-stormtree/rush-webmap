@@ -128,6 +128,15 @@ const theme = extendTheme({
         color: 'teal.500'
       }
     }
+  },
+  fonts: {
+    subHeading: `'Raleway', sans-serif`,
+  },
+  textStyles: {
+    h3: {
+      'font-family': 'var(--chakra-fonts-subHeading)',
+      'font-size': '1rem',
+    }
   }
 });
 export default theme;
