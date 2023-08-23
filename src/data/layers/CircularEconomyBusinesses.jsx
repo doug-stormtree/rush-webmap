@@ -3,6 +3,7 @@ import {
   ogmIconLink,
   pointToIcon,
 } from '../LeafletStyleHelpers';
+import { StartOnLayersName } from '../TextContent';
 
 const styleMap = new Map([
   ["5ca7bfb8ecd8490100cab973",{ src: ogmIconLink("5ca7bfb8ecd8490100cab973"), legendText: 'Reuse Shop or Market' }],
@@ -50,7 +51,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', group: 'default', active: true },
+    { key: 'circular-economy', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Community', active: false },
   ]
 }

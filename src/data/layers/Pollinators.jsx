@@ -1,4 +1,5 @@
 import { mapPopupContent, pointToIcon, ogmIconLink } from "../LeafletStyleHelpers";
+import { StartOnLayersName } from "../TextContent";
 
 const styleMap = new Map([
   ['5c311b3537407e1f05ac3946', { src: ogmIconLink('5c311b3537407e1f05ac3946'), legendText: "SDG 3 - Good Health and Well Being" }],
@@ -57,7 +58,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', group: 'default', active: true },
+    { key: 'neighbourhood-to-naturehood', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Nature', active: false },
   ]
 }

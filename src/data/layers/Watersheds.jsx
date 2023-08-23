@@ -1,4 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOffLayersName, StartOnLayersName } from '../TextContent';
 
 const layer = {
   title: 'Watersheds',
@@ -41,8 +42,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: 'default', active: true },
-    { key: 'neighbourhood-to-naturehood', group: 'default', active: false },
+    { key: 'protect-from-flooding', group: StartOnLayersName, active: true },
+    { key: 'neighbourhood-to-naturehood', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Water', active: false },
   ]
 }

@@ -1,4 +1,5 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOffLayersName } from '../TextContent';
 
 const styleMap = new Map([
   ["1", {legendText: 'Very Low', color: '#feebe2'}],
@@ -49,7 +50,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-the-coast', group: 'default', active: true },
+    { key: 'protect-the-coast', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Water', active: false },
   ]
 }

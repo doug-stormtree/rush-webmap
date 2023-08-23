@@ -119,7 +119,7 @@ const LegendList = ({ activeQuestion }) => {
 const LegendGroup = ({ title, children }) => {
   return (
     <>
-      {title && <Heading size='sm'>{title}</Heading>}
+      {title && <Heading size='sm'>{title.replace(/[0-9]/g,'')}</Heading>}
       {children}
     </>
   )

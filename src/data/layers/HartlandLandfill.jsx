@@ -5,6 +5,7 @@ import {
 } from "leaflet";
 import { mapPopupContent } from "../LeafletStyleHelpers";
 import { ReactComponent as HartlandPie } from '../svg/HartlandPie.svg';
+import { StartOnLayersName } from '../TextContent';
 
 const layer = {
   title: 'Hartland Landfill',
@@ -32,7 +33,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', group: 'default', active: true },
+    { key: 'circular-economy', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

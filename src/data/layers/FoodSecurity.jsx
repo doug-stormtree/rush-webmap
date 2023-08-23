@@ -1,4 +1,5 @@
 import { mapPopupContent, pointToIconByProperty } from "../LeafletStyleHelpers";
+import { StartOnLayersName } from "../TextContent";
 import { ReactComponent as EcoJustice } from '../svg/Eco-justice organization.svg';
 import { ReactComponent as Government } from '../svg/Government office.svg';
 import { ReactComponent as NGO } from '../svg/Green enterprise.svg';
@@ -36,7 +37,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'eat-local', group: 'default', active: true },
+    { key: 'eat-local', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Community', active: false },
   ]
 }

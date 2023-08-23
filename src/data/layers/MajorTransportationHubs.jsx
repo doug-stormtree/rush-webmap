@@ -1,6 +1,7 @@
 import { pointToIconByProperty } from '../LeafletStyleHelpers';
 import { ReactComponent as WaterIcon } from '../svg/WaterTransport.svg';
 import { ReactComponent as AirportIcon } from '../svg/Airport.svg';
+import { StartOnLayersName } from '../TextContent';
 
 const styleMap_TransportHubs = new Map([
   ['Ferry',   {icon: <WaterIcon />, fill: 'rgb(13,101,149)', legendText: 'Ferry Terminal'}],
@@ -38,7 +39,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'light-footprint', groups: 'default', active: true },
+    { key: 'light-footprint', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

@@ -1,4 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
+import { StartOffLayersName } from '../TextContent';
 
 const layer = {
   title: 'BC Transit Bus Routes',
@@ -25,7 +26,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'light-footprint', group: 'default', active: true },
+    { key: 'light-footprint', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Civic', active: false },
   ]
 }
