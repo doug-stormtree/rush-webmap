@@ -20,7 +20,7 @@ export default function ContentPane({ question, ...props }) {
     setContent({
       title: questionContent.title,
       subtitle: questionContent.question,
-      description: questionContent.description,
+      description: questionContent.description_new ?? questionContent.description,
     });
     setInitiatives(questionContent.act.initiatives);
     return () => {
