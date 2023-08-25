@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Box,
   Heading,
   Link,
   ListItem,
@@ -29,6 +30,8 @@ export default function FormattedText({ textArray }) {
         return <UnorderedList {...sharedStyles} ps='2em'>{
             item.content.map((v,i) => <ListItem key={i}>{v}</ListItem>)
           }</UnorderedList>
+      case 'spacer':
+        return <Box width='100%' height='2rem' />
       default:
         return <Text {...sharedStyles}>{item.content}</Text>
     }
