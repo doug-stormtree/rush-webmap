@@ -79,15 +79,6 @@ const QuestionButton = defineStyleConfig({
       color: "#DDD",
     },
   },
-  variants: {
-    default: {},
-    selected: {
-      color: "#9A9"
-    },
-  },
-  defaultProps: {
-    variant: "default"
-  }
 })
 
 const theme = extendTheme({

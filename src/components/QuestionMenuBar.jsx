@@ -1,6 +1,6 @@
-import { Flex } from '@chakra-ui/react';
 import React from 'react';
-import QuestionButton from './QuestionButton';
+import { Flex } from '@chakra-ui/react';
+import QuestionCard from './QuestionCard';
 import Questions from '../data/Questions';
 
 export default function QuestionMenuBar({
@@ -9,13 +9,14 @@ export default function QuestionMenuBar({
   const questionButtons = [];
   Questions.forEach((q,k) => {
     questionButtons.push(
-      <QuestionButton
+      <QuestionCard
         key={k}
-        image={q.image}
+        imageURL={q.image}
         title={q.title}
+        subtitle={q.question}
         onClick={() => {
           setActiveQuestion(k);}}
-        variant={k === activeQuestion ? 'selected' : 'default'}
+        selected={k === activeQuestion}
       />
     )
   });
