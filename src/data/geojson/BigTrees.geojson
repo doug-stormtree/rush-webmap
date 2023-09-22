@@ -1,0 +1,4184 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33007,
+          48.49285
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "tree_code": "A04",
+        "site_number": "",
+        "genus": "Pseudotsuga",
+        "species": "menziesii",
+        "botanical_name": "Pseudotsuga menziesii",
+        "common_name": "Douglas-fir",
+        "CBH": 2.85,
+        "date_m": "19-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.30789,
+          48.44035
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "tree_code": "A09",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "robur",
+        "botanical_name": "Quercus robur",
+        "common_name": "English Oak",
+        "CBH": 4.93,
+        "date_m": "19-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.30508,
+          48.43138
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "tree_code": "A10",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "saccharinum",
+        "botanical_name": "Acer saccharinium",
+        "common_name": "Silver Maple",
+        "CBH": 4,
+        "date_m": "19-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47769,
+          48.67282
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "tree_code": "A13",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "thunbergii",
+        "botanical_name": "Pinus thunbergii",
+        "common_name": "Japanese Black Pine",
+        "CBH": 3.2,
+        "date_m": "19-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41614,
+          48.67556
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "tree_code": "A16",
+        "site_number": "",
+        "genus": "Sequoiadendron",
+        "species": "giganteum",
+        "botanical_name": "Sequoiadendron giganteum",
+        "common_name": "Giant Sequoia",
+        "CBH": 6.03,
+        "date_m": "20-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41593,
+          48.67565
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "tree_code": "A17",
+        "site_number": "",
+        "genus": "Sequoiadendron",
+        "species": "giganteum",
+        "botanical_name": "Sequoiadendron giganteum",
+        "common_name": "Giant Sequoia",
+        "CBH": 6.95,
+        "date_m": "20-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.48029,
+          48.6768
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "tree_code": "A18",
+        "site_number": "",
+        "genus": "Pseudotsuga",
+        "species": "menziesii",
+        "botanical_name": "Pseudotsuga menziesii",
+        "common_name": "Douglas-fir",
+        "CBH": 5.4,
+        "date_m": "21-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.48029,
+          48.6768
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "tree_code": "A19",
+        "site_number": "",
+        "genus": "Thuja",
+        "species": "plicata",
+        "botanical_name": "Thuja plicata",
+        "common_name": "Western Redcedar",
+        "CBH": 4.8,
+        "date_m": "21-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41772,
+          48.62237
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "tree_code": "A20",
+        "site_number": 7357,
+        "genus": "Quercus",
+        "species": "dentata",
+        "botanical_name": "Quercus dentata",
+        "common_name": "Daimyo oak",
+        "CBH": 2.5,
+        "date_m": "21-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41776,
+          48.62262
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "tree_code": "A21",
+        "site_number": "",
+        "genus": "Platanus",
+        "species": "orientalis",
+        "botanical_name": "Platanus orientalis",
+        "common_name": "Oriental Plane Tree",
+        "CBH": 5.75,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41587,
+          48.62265
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "tree_code": "A23",
+        "site_number": 7988,
+        "genus": "Platanus",
+        "species": "orientalis",
+        "botanical_name": "Platanus orientalis",
+        "common_name": "Oriental Plane Tree",
+        "CBH": 5.25,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4156,
+          48.62268
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "tree_code": "A24",
+        "site_number": 7989,
+        "genus": "Platanus",
+        "species": "orientalis",
+        "botanical_name": "Platanus orientalis",
+        "common_name": "Oriental Plane Tree",
+        "CBH": 4.9,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41441,
+          48.62263
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "tree_code": "A25",
+        "site_number": 8090,
+        "genus": "Carpinus",
+        "species": "betulus",
+        "botanical_name": "Carpinus betulus",
+        "common_name": "European Hornbeam",
+        "CBH": 4.9,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41752,
+          48.62173
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "tree_code": "A28",
+        "site_number": "",
+        "genus": "Pseudotsuga",
+        "species": "menziesii",
+        "botanical_name": "Pseudotsuga menziesii",
+        "common_name": "Douglas-fir",
+        "CBH": 5.9,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41828,
+          48.62267
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "tree_code": "A29",
+        "site_number": "",
+        "genus": "Platanus",
+        "species": "orientalis",
+        "botanical_name": "Platanus orientalis",
+        "common_name": "Oriental Plane Tree",
+        "CBH": 3.85,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41791,
+          48.62214
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "tree_code": "A30",
+        "site_number": 7360,
+        "genus": "Cedrus",
+        "species": "libani",
+        "botanical_name": "Cedrus libani",
+        "common_name": "Lebanon Cedar",
+        "CBH": 4,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41518,
+          48.62204
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "tree_code": "A32",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "grandis",
+        "botanical_name": "Abies grandis",
+        "common_name": "Grand fir",
+        "CBH": 4,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4152,
+          48.62208
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "tree_code": "A33",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "grandis",
+        "botanical_name": "Abies grandis",
+        "common_name": "Grand fir",
+        "CBH": 3.25,
+        "date_m": "23-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.44505,
+          48.655
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "tree_code": "A34",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "robur",
+        "botanical_name": "Quercus robur",
+        "common_name": "English Oak",
+        "CBH": 1.6,
+        "date_m": "28-Jan-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.45498,
+          48.59641
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "tree_code": "A36",
+        "site_number": "",
+        "genus": "Cedrus",
+        "species": "atlantica",
+        "botanical_name": "Cedrus atlantica",
+        "common_name": "Atlas Cedar",
+        "CBH": 3.1,
+        "date_m": "19-Feb-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.45498,
+          48.59641
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "tree_code": "A36",
+        "site_number": "",
+        "genus": "Cedrus",
+        "species": "atlantica",
+        "botanical_name": "Cedrus atlantica",
+        "common_name": "Atlas Cedar",
+        "CBH": 3.1,
+        "date_m": "19-Feb-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41641,
+          48.64572
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "tree_code": "A38",
+        "site_number": "",
+        "genus": "Ulmus",
+        "species": "glabra",
+        "botanical_name": "Ulmus glabra camperdownii",
+        "common_name": "Camperdown Elm",
+        "CBH": 1.35,
+        "date_m": "19-Feb-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41796,
+          48.62207
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "tree_code": "A41",
+        "site_number": 7344,
+        "genus": "Pinus",
+        "species": "densiflora",
+        "botanical_name": "Pinus densiflora Umbraculifera",
+        "common_name": "Japanese Red Pine",
+        "CBH": 1.6,
+        "date_m": "20-Feb-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41734,
+          48.62191
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "tree_code": "A42",
+        "site_number": 7861,
+        "genus": "Thujopsis",
+        "species": "dolabrata",
+        "botanical_name": "Thujopsis dolabrata",
+        "common_name": "Hiba arborvitae",
+        "CBH": 1.5,
+        "date_m": "16-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41743,
+          48.6219
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "tree_code": "A43",
+        "site_number": 7851,
+        "genus": "Abies",
+        "species": "nordmaniana",
+        "botanical_name": "Abies nordmanniana",
+        "common_name": "Caucasian Fir",
+        "CBH": 3.45,
+        "date_m": "16-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41676,
+          48.62254
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "tree_code": "A45",
+        "site_number": 6610,
+        "genus": "Picea",
+        "species": "orientalis",
+        "botanical_name": "Picea orientalis",
+        "common_name": "Oriental Spruce",
+        "CBH": 1.6,
+        "date_m": "22-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41667,
+          48.62262
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "tree_code": "A46",
+        "site_number": 8401,
+        "genus": "Pinus",
+        "species": "sylvestris",
+        "botanical_name": "Pinus sylvestris Fastigiata",
+        "common_name": "Scotch Sentinel Pine",
+        "CBH": 1,
+        "date_m": "22-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.28411,
+          48.45453
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "tree_code": "A48",
+        "site_number": "0379-00",
+        "genus": "Alnus",
+        "species": "ruba",
+        "botanical_name": "Alnus ruba",
+        "common_name": "Red Alder",
+        "CBH": 2.45,
+        "date_m": "23-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.27918,
+          48.45122
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "tree_code": "A49",
+        "site_number": "0258-00",
+        "genus": "Quercus",
+        "species": "garryana",
+        "botanical_name": "Quercus garriana",
+        "common_name": "Garry Oak",
+        "CBH": 3.1,
+        "date_m": "23-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.27949,
+          48.45107
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "tree_code": "A50",
+        "site_number": "",
+        "genus": "Cupressus",
+        "species": "macrocarpa",
+        "botanical_name": "Cupressus macrocarpa",
+        "common_name": "Monterey Cypress",
+        "CBH": 3.55,
+        "date_m": "23-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4627,
+          48.59241
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "tree_code": "A61",
+        "site_number": "0328-00",
+        "genus": "Quercus",
+        "species": "garryana",
+        "botanical_name": "Quercus garriana",
+        "common_name": "Garry Oak",
+        "CBH": 5.05,
+        "date_m": "27-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.46295,
+          48.5924
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "tree_code": "A62",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "ponderosa",
+        "botanical_name": "Pinus ponderosa",
+        "common_name": "Ponderosa Pine",
+        "CBH": 3.25,
+        "date_m": "27-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.46292,
+          48.59218
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "tree_code": "A63",
+        "site_number": "",
+        "genus": "Cedrus",
+        "species": "atlantica",
+        "botanical_name": "Cedrus atlantica",
+        "common_name": "Atlas Cedar",
+        "CBH": 3.85,
+        "date_m": "27-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.46292,
+          48.59218
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "tree_code": "A63",
+        "site_number": "",
+        "genus": "Cedrus",
+        "species": "atlantica",
+        "botanical_name": "Cedrus atlantica",
+        "common_name": "Atlas Cedar",
+        "CBH": 3.85,
+        "date_m": "27-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.39892,
+          48.65034
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "tree_code": "A65",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "platanoides",
+        "botanical_name": "Acer platanoides",
+        "common_name": "Norway Maple",
+        "CBH": 1.4,
+        "date_m": "28-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33036,
+          48.46093
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "tree_code": "A66",
+        "site_number": "0436-01",
+        "genus": "Pinus",
+        "species": "jeffreyi",
+        "botanical_name": "Pinus jeffreyi",
+        "common_name": "Jeffrey Pine",
+        "CBH": 3.2,
+        "date_m": "02-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33036,
+          48.46094
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "tree_code": "A67",
+        "site_number": "0436-02",
+        "genus": "Sequoia",
+        "species": "sempervirens",
+        "botanical_name": "Sequoia sempervirens",
+        "common_name": "Coast Redwood",
+        "CBH": 3.2,
+        "date_m": "02-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3135,
+          48.4621
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "tree_code": "A68",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "saccharinum",
+        "botanical_name": "Acer saccharinium",
+        "common_name": "Silver Maple",
+        "CBH": 1.9,
+        "date_m": "03-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3132,
+          48.4622
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "tree_code": "A69",
+        "site_number": "",
+        "genus": "Paulowinia",
+        "species": "tomentosa",
+        "botanical_name": "Paulowinia tomentosa",
+        "common_name": "Empress Tree",
+        "CBH": 0.95,
+        "date_m": "03-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.297,
+          48.4634
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "tree_code": "A72",
+        "site_number": "0399-00   #7",
+        "genus": "Acer",
+        "species": "macrophyllum",
+        "botanical_name": "Acer Macrophyllum",
+        "common_name": "Bigleaf Maple",
+        "CBH": 8.05,
+        "date_m": "07-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.29635,
+          48.46407
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "tree_code": "A73",
+        "site_number": "0447-00",
+        "genus": "Taxus",
+        "species": "brevifolia",
+        "botanical_name": "Taxus brevifolia",
+        "common_name": "Pacific Yew",
+        "CBH": 1.35,
+        "date_m": "07-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.297,
+          48.4669
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "tree_code": "A74",
+        "site_number": "",
+        "genus": "Sequoia",
+        "species": "sempervirens",
+        "botanical_name": "Sequoia sempervirens",
+        "common_name": "Coast Redwood",
+        "CBH": 4.57,
+        "date_m": "07-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.37294,
+          48.5296
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "tree_code": "A75",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "negundo",
+        "botanical_name": "Acer negundo",
+        "common_name": "Boxelder",
+        "CBH": 0.8,
+        "date_m": "07-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41626,
+          48.62269
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "tree_code": "A76",
+        "site_number": 8466,
+        "genus": "Fagus",
+        "species": "sylvatica",
+        "botanical_name": "Fagus sylvatica Rohanii",
+        "common_name": "Cutleaf Purple Beech",
+        "CBH": 1.85,
+        "date_m": "07-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41543,
+          48.62175
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "tree_code": "A77",
+        "site_number": 7868,
+        "genus": "Fraxinus",
+        "species": "americana",
+        "botanical_name": "Fraxinus Americana",
+        "common_name": "White Ash",
+        "CBH": 1.6,
+        "date_m": "07-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31583,
+          48.45993
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "tree_code": "A80",
+        "site_number": "",
+        "genus": "Betula",
+        "species": "nigra",
+        "botanical_name": "Betula nigra",
+        "common_name": "River Birch",
+        "CBH": 0.75,
+        "date_m": "08-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31611,
+          48.46063
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "tree_code": "A81",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "Japonicum",
+        "botanical_name": "Acer japonicum 'Aconitifolium",
+        "common_name": "Downey Japanese Maple",
+        "CBH": 0.6,
+        "date_m": "08-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31468,
+          48.46165
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "tree_code": "A82",
+        "site_number": "",
+        "genus": "Parrotia",
+        "species": "persica",
+        "botanical_name": "Parrotia persica",
+        "common_name": "Persian Ironwood",
+        "CBH": 1.4,
+        "date_m": "08-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34362,
+          48.4117
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "tree_code": "A83",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "rubra",
+        "botanical_name": "Quercus rubra",
+        "common_name": "Red Oak",
+        "CBH": 1.25,
+        "date_m": "19-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35759,
+          48.41115
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "tree_code": "A86",
+        "site_number": "",
+        "genus": "Populus",
+        "species": "balsamifera",
+        "botanical_name": "Populus balsamifera",
+        "common_name": "Black Cottonwood",
+        "CBH": 4.65,
+        "date_m": "16-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35759,
+          48.41115
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "tree_code": "A86",
+        "site_number": "",
+        "genus": "Populus",
+        "species": "trichocarpa",
+        "botanical_name": "Populus balsamifera",
+        "common_name": "Black Cottonwood",
+        "CBH": 4.65,
+        "date_m": "16-Apr-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31534,
+          48.46097
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "tree_code": "A87",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "rubra",
+        "botanical_name": "Quercus rubra",
+        "common_name": "Red Oak",
+        "CBH": 2.3,
+        "date_m": "18-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3166,
+          48.4606
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "tree_code": "A88",
+        "site_number": "",
+        "genus": "Davidia",
+        "species": "involucrata",
+        "botanical_name": "Davidia involucrata",
+        "common_name": "Dove Tree",
+        "CBH": 1.15,
+        "date_m": "18-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41514,
+          48.62167
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "tree_code": "A92",
+        "site_number": 7870,
+        "genus": "Betula",
+        "species": "pendula",
+        "botanical_name": "Betula alba",
+        "common_name": "Silver Birch",
+        "CBH": 1.5,
+        "date_m": "25-May-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.32224,
+          48.49021
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "tree_code": "A93",
+        "site_number": "",
+        "genus": "Arbutus",
+        "species": "menziesii",
+        "botanical_name": "Arbutus menziesii",
+        "common_name": "Arbutus",
+        "CBH": 5,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31232,
+          48.49028
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "tree_code": "A94",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "robur",
+        "botanical_name": "Quercus robur",
+        "common_name": "English Oak",
+        "CBH": 1.75,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.29951,
+          48.46498
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "tree_code": "A95",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "macrophyllum",
+        "botanical_name": "Acer Macrophyllum",
+        "common_name": "Bigleaf Maple",
+        "CBH": 2.65,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.28154,
+          48.45963
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "tree_code": "A96",
+        "site_number": "",
+        "genus": "Populus",
+        "species": "balsamifera",
+        "botanical_name": "Populus balsamifera trichocarpa",
+        "common_name": "Black Cottonwood",
+        "CBH": 9.5,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.28154,
+          48.45963
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "tree_code": "A96",
+        "site_number": "",
+        "genus": "Populus",
+        "species": "trichocarpa",
+        "botanical_name": "Populus balsamifera trichocarpa",
+        "common_name": "Black Cottonwood",
+        "CBH": 9.5,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.29469,
+          48.44688
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "tree_code": "A97",
+        "site_number": "",
+        "genus": "Trachycarpus",
+        "species": "fortunei",
+        "botanical_name": "Trachycarpus fortunei",
+        "common_name": "Chinese Windmill Palm",
+        "CBH": 0.7,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.29428,
+          48.44576
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "tree_code": "A98",
+        "site_number": "",
+        "genus": "Sequoiadendron",
+        "species": "giganteum",
+        "botanical_name": "Sequoiadendron giganteum pendulum",
+        "common_name": "Weeping Sequoia",
+        "CBH": 2.5,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.29431,
+          48.44412
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "tree_code": "A100",
+        "site_number": "",
+        "genus": "Ulmus",
+        "species": "glabra",
+        "botanical_name": "Ulmus glabra camperdownii",
+        "common_name": "Camperdown Elm",
+        "CBH": 1.6,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.29417,
+          48.444
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "tree_code": "A101",
+        "site_number": "",
+        "genus": "Sequoiadendron",
+        "species": "giganteum",
+        "botanical_name": "Sequoiadendron giganteum",
+        "common_name": "Giant Sequoia",
+        "CBH": 5.9,
+        "date_m": "16-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.37152,
+          48.41833
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "tree_code": "A102",
+        "site_number": "",
+        "genus": "Ulmus",
+        "species": "americana",
+        "botanical_name": "Ulmus americana",
+        "common_name": "American Elm",
+        "CBH": 4.35,
+        "date_m": "20-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35812,
+          48.50229
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "tree_code": "A103",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "nigra",
+        "botanical_name": "Pinus nigra",
+        "common_name": "Austrian pine",
+        "CBH": 1.45,
+        "date_m": "21-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33813,
+          48.41079
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "tree_code": "A104",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "nigra",
+        "botanical_name": "Pinus nigra",
+        "common_name": "Austrian pine",
+        "CBH": 1.82,
+        "date_m": "21-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34129,
+          48.41154
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "tree_code": "A105",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "thunbergii",
+        "botanical_name": "Pinus thunbergii",
+        "common_name": "Japanese Black Pine",
+        "CBH": 2.2,
+        "date_m": "21-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33767,
+          48.47051
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "tree_code": "A106",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "strobus",
+        "botanical_name": "Pinus strobus",
+        "common_name": "Eastern White Pine",
+        "CBH": 0.85,
+        "date_m": "23-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.338,
+          48.4704
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "tree_code": "A107",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "radiata",
+        "botanical_name": "Pinis radiata",
+        "common_name": "Monterey Pine",
+        "CBH": 1.4,
+        "date_m": "23-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33771,
+          48.4705
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "tree_code": "A108",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "radiata",
+        "botanical_name": "Pinis radiata",
+        "common_name": "Monterey Pine",
+        "CBH": 2.92,
+        "date_m": "23-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3378,
+          48.4705
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "tree_code": "A110",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "monticola",
+        "botanical_name": "Pinus montecola",
+        "common_name": "Western White Pine",
+        "CBH": 1.1,
+        "date_m": "27-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3376,
+          48.47048
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "tree_code": "A111",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "ponderosa",
+        "botanical_name": "Pinus ponderosa",
+        "common_name": "Ponderosa Pine",
+        "CBH": 0.65,
+        "date_m": "27-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41704,
+          48.62259
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "tree_code": "A114",
+        "site_number": 8417,
+        "genus": "Picea",
+        "species": "abies",
+        "botanical_name": "Picea abies",
+        "common_name": "Norway Spruce",
+        "CBH": 2.23,
+        "date_m": "28-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34101,
+          48.41083
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "tree_code": "A115",
+        "site_number": 334,
+        "genus": "Pinus",
+        "species": "ponderosa",
+        "botanical_name": "Pinus ponderosa",
+        "common_name": "Ponderosa Pine",
+        "CBH": 3.25,
+        "date_m": "30-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.40213,
+          48.48833
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "tree_code": "A116",
+        "site_number": 2,
+        "genus": "Sequoiadendron",
+        "species": "giganteum",
+        "botanical_name": "Sequoiadendron giganteum",
+        "common_name": "Giant Sequoia",
+        "CBH": 6.9,
+        "date_m": "07-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.40883,
+          48.42203
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "tree_code": "A117",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "ponderosa",
+        "botanical_name": "Pinus ponderosa",
+        "common_name": "Ponderosa Pine",
+        "CBH": 3.35,
+        "date_m": "07-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41453,
+          48.42295
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "tree_code": "A118",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "ponderosa",
+        "botanical_name": "Pinus ponderosa",
+        "common_name": "Ponderosa Pine",
+        "CBH": 2.7,
+        "date_m": "07-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36579,
+          48.41548
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "tree_code": "A119",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "jeffreyi",
+        "botanical_name": "Pinus jeffreyi",
+        "common_name": "Jeffrey Pine",
+        "CBH": 2.3,
+        "date_m": "07-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35025,
+          48.42572
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "tree_code": "A120",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "campestre",
+        "botanical_name": "Acer campestre",
+        "common_name": "Hedge Maple",
+        "CBH": 1.25,
+        "date_m": "10-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35851,
+          48.50166
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "tree_code": "A122",
+        "site_number": "",
+        "genus": "Populus",
+        "species": "angustifolia",
+        "botanical_name": "Populus angustifolia",
+        "common_name": "Narrowleaf Cottonwood",
+        "CBH": 1.73,
+        "date_m": "11-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3643,
+          48.41235
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "tree_code": "A123",
+        "site_number": "",
+        "genus": "Sequoiadendron",
+        "species": "giganteum",
+        "botanical_name": "Sequoiadendron giganteum",
+        "common_name": "Giant Sequoia",
+        "CBH": 8.4,
+        "date_m": "12-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33908,
+          48.42761
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "tree_code": "A125",
+        "site_number": "",
+        "genus": "Koelreuteria",
+        "species": "bipinnata",
+        "botanical_name": "Koelreuteria paniculata",
+        "common_name": "Golden Rain-tree",
+        "CBH": 0.9,
+        "date_m": "22-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33908,
+          48.42761
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "tree_code": "A125",
+        "site_number": "",
+        "genus": "Koelreuteria",
+        "species": "paniculata",
+        "botanical_name": "Koelreuteria paniculata",
+        "common_name": "Golden Rain-tree",
+        "CBH": 0.9,
+        "date_m": "22-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33962,
+          48.42667
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "tree_code": "A126",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "coulteri",
+        "botanical_name": "Pinus coulteri",
+        "common_name": "Coulter Pine",
+        "CBH": 2.32,
+        "date_m": "22-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36046,
+          48.42192
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "tree_code": "A127",
+        "site_number": "",
+        "genus": "Ailanthus",
+        "species": "atissima",
+        "botanical_name": "Ailanthus atissima",
+        "common_name": "Tree-of-Heaven",
+        "CBH": 1.78,
+        "date_m": "22-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.52426,
+          48.38901
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "tree_code": "A128",
+        "site_number": "",
+        "genus": "Arbutus",
+        "species": "menziesii",
+        "botanical_name": "Arbutus menziesii",
+        "common_name": "Arbutus",
+        "CBH": 4.43,
+        "date_m": "30-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "",
+          ""
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "tree_code": "A129",
+        "site_number": "",
+        "genus": "Arbutus",
+        "species": "menziesii",
+        "botanical_name": "Arbutus menziesii",
+        "common_name": "Arbutus",
+        "CBH": 4.2,
+        "date_m": "30-Aug-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41561,
+          48.62216
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "tree_code": "A133",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "saccharum",
+        "botanical_name": "Acer saccharum",
+        "common_name": "Sugar Maple",
+        "CBH": 3,
+        "date_m": "01-Sep-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.32541,
+          48.45688
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "tree_code": "A135",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "jeffreyi",
+        "botanical_name": "Pinus jeffreyi",
+        "common_name": "Jeffrey Pine",
+        "CBH": 3.37,
+        "date_m": "07-Sep-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.32027,
+          48.41444
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "tree_code": "A136",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "garryana",
+        "botanical_name": "Quercus garriana",
+        "common_name": "Garry Oak",
+        "CBH": 5.67,
+        "date_m": "08-Feb-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.42139,
+          48.60861
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "tree_code": "A139",
+        "site_number": "",
+        "genus": "Arbutus",
+        "species": "menziesii",
+        "botanical_name": "Arbutus menziesii",
+        "common_name": "Arbutus",
+        "CBH": 6.85,
+        "date_m": "23-Feb-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36444,
+          48.41194
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "tree_code": "A141",
+        "site_number": "",
+        "genus": "Prunus",
+        "species": "subhirtella",
+        "botanical_name": "Prunus subhirtella 'Autumnalis'",
+        "common_name": "Autumn Cherry",
+        "CBH": 0.55,
+        "date_m": "26-Feb-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3322,
+          48.4188
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "tree_code": "A142",
+        "site_number": "",
+        "genus": "Prunus",
+        "species": "cerasifera",
+        "botanical_name": "Prunus cerastifera 'Lindsayiae'",
+        "common_name": "Lindsay Plum",
+        "CBH": 2.37,
+        "date_m": "27-Feb-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.44444,
+          48.65528
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "tree_code": "A145",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "garryana",
+        "botanical_name": "Quercus garriana",
+        "common_name": "Garry Oak",
+        "CBH": 4.45,
+        "date_m": "29-Feb-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.44444,
+          48.65556
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "tree_code": "A146",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "garryana",
+        "botanical_name": "Quercus garriana",
+        "common_name": "Garry Oak",
+        "CBH": 4.55,
+        "date_m": "29-Feb-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "",
+          ""
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "tree_code": "A147",
+        "site_number": "",
+        "genus": "Quercus",
+        "species": "garryana",
+        "botanical_name": "Quercus garriana",
+        "common_name": "Garry Oak",
+        "CBH": 4.55,
+        "date_m": "29-Feb-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3431,
+          48.4314
+        ]
+      },
+      "properties": {
+        "id": 153,
+        "tree_code": "A149",
+        "site_number": "",
+        "genus": "Prunus",
+        "species": "X yedoensis",
+        "botanical_name": "Prunus X yedoensis",
+        "common_name": "Yoshino Cherry",
+        "CBH": 1.55,
+        "date_m": "17-Mar-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3575,
+          48.4147
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "tree_code": "A150",
+        "site_number": "",
+        "genus": "Prunus",
+        "species": "sargentii",
+        "botanical_name": "Prunus sargentii",
+        "common_name": "Sargent's Cherry",
+        "CBH": 0.36,
+        "date_m": "17-Mar-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.365,
+          48.4133
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "tree_code": "A152",
+        "site_number": "",
+        "genus": "Prunus",
+        "species": "subhirtella",
+        "botanical_name": "Prunus subhirtella autumnalis",
+        "common_name": "Autumn Cherry",
+        "CBH": 0.6,
+        "date_m": "18-Mar-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3375,
+          48.4111
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "tree_code": "A153",
+        "site_number": 665,
+        "genus": "Abies",
+        "species": "homolepis",
+        "botanical_name": "Abies homolepis",
+        "common_name": "Nikko fir",
+        "CBH": 1.32,
+        "date_m": "07-Apr-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35763,
+          48.50228
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "tree_code": "A155",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "strobus",
+        "botanical_name": "Pinus strobus Pendula",
+        "common_name": "Weeping White Pine",
+        "CBH": 0.43,
+        "date_m": "24-Apr-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.463,
+          48.5925
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "tree_code": "A156",
+        "site_number": "",
+        "genus": "Robinia",
+        "species": "pseudoacacia",
+        "botanical_name": "Robinia pseudoacacia",
+        "common_name": "Black Locust",
+        "CBH": 2.76,
+        "date_m": "23-May-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3578,
+          48.5023
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "tree_code": "A158",
+        "site_number": "",
+        "genus": "Juniperus",
+        "species": "chinensis",
+        "botanical_name": "Junipeus chinensis chinensis",
+        "common_name": "Chinese Juniper",
+        "CBH": 0.66,
+        "date_m": "14-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4179,
+          48.6226
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "tree_code": "A169",
+        "site_number": 6426,
+        "genus": "Juniperus",
+        "species": "chinensis",
+        "botanical_name": "Juniperus chinensis Olympia",
+        "common_name": "Chinese Juniper",
+        "CBH": 0.53,
+        "date_m": "27-Jun-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4176,
+          48.6227
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "tree_code": "A170",
+        "site_number": 10475,
+        "genus": "Juniperus",
+        "species": "rigida",
+        "botanical_name": "Juniperus squamata \"Meyeri",
+        "common_name": "Juniper",
+        "CBH": 0.43,
+        "date_m": "27-Jun-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4176,
+          48.6227
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "tree_code": "A170",
+        "site_number": 10475,
+        "genus": "Juniperus",
+        "species": "communis",
+        "botanical_name": "Juniperus squamata \"Meyeri",
+        "common_name": "Juniper",
+        "CBH": 0.43,
+        "date_m": "27-Jun-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4176,
+          48.6227
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "tree_code": "A170",
+        "site_number": 10475,
+        "genus": "Juniperus",
+        "species": "californica",
+        "botanical_name": "Juniperus squamata \"Meyeri",
+        "common_name": "Juniper",
+        "CBH": 0.43,
+        "date_m": "27-Jun-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41462,
+          48.62253
+        ]
+      },
+      "properties": {
+        "id": 175,
+        "tree_code": "A171",
+        "site_number": 14419,
+        "genus": "Picea",
+        "species": "abies",
+        "botanical_name": "Picea abies \"Pumila",
+        "common_name": "Norway Spruce",
+        "CBH": 1.6,
+        "date_m": "27-Jun-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4414,
+          48.4522
+        ]
+      },
+      "properties": {
+        "id": 179,
+        "tree_code": "A174",
+        "site_number": "",
+        "genus": "Juniperus",
+        "species": "scopulorum",
+        "botanical_name": "Juniperus scopulorum",
+        "common_name": "Rocky Mountain Juniper",
+        "CBH": 2.46,
+        "date_m": "04-Jul-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4414,
+          48.4522
+        ]
+      },
+      "properties": {
+        "id": 180,
+        "tree_code": "A175",
+        "site_number": "",
+        "genus": "Juniperus",
+        "species": "scopulorum",
+        "botanical_name": "Juniperus scopulorum",
+        "common_name": "Rocky Mountain Juniper",
+        "CBH": 2.8,
+        "date_m": "04-Jul-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.6794,
+          48.989
+        ]
+      },
+      "properties": {
+        "id": 181,
+        "tree_code": "A176",
+        "site_number": "",
+        "genus": "Arbutus",
+        "species": "menziesii",
+        "botanical_name": "Arbutus menziesii",
+        "common_name": "Arbutus",
+        "CBH": 6.49,
+        "date_m": "08-Jul-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41775,
+          48.62206
+        ]
+      },
+      "properties": {
+        "id": 187,
+        "tree_code": "A179",
+        "site_number": 7346,
+        "genus": "Cedrus",
+        "species": "atlantica",
+        "botanical_name": "Cedrus atlantica",
+        "common_name": "Atlas Cedar",
+        "CBH": 2.17,
+        "date_m": "27-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41775,
+          48.62206
+        ]
+      },
+      "properties": {
+        "id": 187,
+        "tree_code": "A179",
+        "site_number": 7346,
+        "genus": "Cedrus",
+        "species": "atlantica",
+        "botanical_name": "Cedrus atlantica",
+        "common_name": "Atlas Cedar",
+        "CBH": 2.17,
+        "date_m": "27-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41787,
+          48.62217
+        ]
+      },
+      "properties": {
+        "id": 189,
+        "tree_code": "A181",
+        "site_number": 7361,
+        "genus": "Cedrus",
+        "species": "libani",
+        "botanical_name": "Cedrus libani",
+        "common_name": "Lebanon Cedar",
+        "CBH": 3.89,
+        "date_m": "27-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41768,
+          48.62221
+        ]
+      },
+      "properties": {
+        "id": 193,
+        "tree_code": "A185",
+        "site_number": 7856,
+        "genus": "Cryptomeria",
+        "species": "japonica",
+        "botanical_name": "Cryptomeria joshino-sugi",
+        "common_name": "Japanese cryptomeria",
+        "CBH": 0.41,
+        "date_m": "27-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41768,
+          48.62219
+        ]
+      },
+      "properties": {
+        "id": 194,
+        "tree_code": "A186",
+        "site_number": 7857,
+        "genus": "Cedrus",
+        "species": "libani",
+        "botanical_name": "Cedrus libani",
+        "common_name": "Lebanon Cedar",
+        "CBH": 1.85,
+        "date_m": "27-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41757,
+          48.62209
+        ]
+      },
+      "properties": {
+        "id": 195,
+        "tree_code": "A187",
+        "site_number": 7849,
+        "genus": "Abies",
+        "species": "cephalonica",
+        "botanical_name": "Abies cephalonica",
+        "common_name": "Greek Fir",
+        "CBH": 2.69,
+        "date_m": "27-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41773,
+          48.62178
+        ]
+      },
+      "properties": {
+        "id": 198,
+        "tree_code": "A190",
+        "site_number": 8585,
+        "genus": "Picea",
+        "species": "sitchensis",
+        "botanical_name": "Picea sitchensis",
+        "common_name": "Sitka Spruce",
+        "CBH": 2.17,
+        "date_m": "27-Dec-16"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41751,
+          48.6226
+        ]
+      },
+      "properties": {
+        "id": 203,
+        "tree_code": "A195",
+        "site_number": 9150,
+        "genus": "Pinus",
+        "species": "sylvestris",
+        "botanical_name": "Pinus sylvestris 'Fastigiata'",
+        "common_name": "Scotch Pine",
+        "CBH": 1.16,
+        "date_m": "23-Jan-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41727,
+          48.62261
+        ]
+      },
+      "properties": {
+        "id": 207,
+        "tree_code": "A199",
+        "site_number": 6447,
+        "genus": "Picea",
+        "species": "abies",
+        "botanical_name": "Picea abies 'Gregoryana Veitchii'",
+        "common_name": "Norway Spruce",
+        "CBH": 1.55,
+        "date_m": "23-Jan-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41727,
+          48.62261
+        ]
+      },
+      "properties": {
+        "id": 208,
+        "tree_code": "A200",
+        "site_number": 8444,
+        "genus": "Picea",
+        "species": "omorika",
+        "botanical_name": "Picea Omorika 'Nana'",
+        "common_name": "Serbian Spruce",
+        "CBH": 0.9,
+        "date_m": "23-Jan-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41573,
+          48.62201
+        ]
+      },
+      "properties": {
+        "id": 220,
+        "tree_code": "A212",
+        "site_number": 7875,
+        "genus": "Quercus",
+        "species": "gambelii",
+        "botanical_name": "Quercus gambelii",
+        "common_name": "Gambel oak",
+        "CBH": 2.25,
+        "date_m": "10-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41563,
+          48.62177
+        ]
+      },
+      "properties": {
+        "id": 221,
+        "tree_code": "A213",
+        "site_number": 7867,
+        "genus": "Ulmus",
+        "species": "americana",
+        "botanical_name": "Ulmus Americana",
+        "common_name": "American Elm",
+        "CBH": 2.6,
+        "date_m": "10-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41546,
+          48.62171
+        ]
+      },
+      "properties": {
+        "id": 222,
+        "tree_code": "A214",
+        "site_number": 7868,
+        "genus": "Fraxinus",
+        "species": "americana",
+        "botanical_name": "Fraxinus Americana",
+        "common_name": "White Ash",
+        "CBH": 1.6,
+        "date_m": "10-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41535,
+          48.62188
+        ]
+      },
+      "properties": {
+        "id": 223,
+        "tree_code": "A215",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "macrophyllum",
+        "botanical_name": "Acer macrophyllum",
+        "common_name": "Bigleaf Maple",
+        "CBH": 5.05,
+        "date_m": "10-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41515,
+          48.6217
+        ]
+      },
+      "properties": {
+        "id": 226,
+        "tree_code": "A218",
+        "site_number": 7870,
+        "genus": "Betula",
+        "species": "pendula",
+        "botanical_name": "Betula alba",
+        "common_name": "Silver Birch",
+        "CBH": 1.48,
+        "date_m": "11-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.46777,
+          48.56077
+        ]
+      },
+      "properties": {
+        "id": 227,
+        "tree_code": "A219",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "macrophyllum",
+        "botanical_name": "Acer Macrophyllum",
+        "common_name": "Bigleaf Maple",
+        "CBH": 5.8,
+        "date_m": "16-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41405,
+          48.6219
+        ]
+      },
+      "properties": {
+        "id": 231,
+        "tree_code": "A223",
+        "site_number": "0202",
+        "genus": "Quercus",
+        "species": "lobata",
+        "botanical_name": "Quercus lobata",
+        "common_name": "Valley Oak",
+        "CBH": 0.38,
+        "date_m": "16-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41388,
+          48.62157
+        ]
+      },
+      "properties": {
+        "id": 233,
+        "tree_code": "A225",
+        "site_number": 1021,
+        "genus": "Sequoiadendron",
+        "species": "giganteum",
+        "botanical_name": "Sequoiadendron giganteum",
+        "common_name": "Giant Sequoia",
+        "CBH": 0.51,
+        "date_m": "21-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41615,
+          48.6225
+        ]
+      },
+      "properties": {
+        "id": 237,
+        "tree_code": "A229",
+        "site_number": 15164,
+        "genus": "Chamaecyparis",
+        "species": "pisifera",
+        "botanical_name": "Chamaecyparis pisifera ‘Filifera Aurea’",
+        "common_name": "Sawara cypress",
+        "CBH": 0.51,
+        "date_m": "26-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41606,
+          48.62252
+        ]
+      },
+      "properties": {
+        "id": 238,
+        "tree_code": "A230",
+        "site_number": 8431,
+        "genus": "Juniperus",
+        "species": "chinensis",
+        "botanical_name": "Juniperus chinensis Pfitzeriana variegata",
+        "common_name": "Chinese Juniper",
+        "CBH": 0.24,
+        "date_m": "26-Feb-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.22559,
+          48.66203
+        ]
+      },
+      "properties": {
+        "id": 240,
+        "tree_code": "A232",
+        "site_number": "",
+        "genus": "Picea",
+        "species": "sitchensis",
+        "botanical_name": "Picea sitchensis",
+        "common_name": "Sitka Spruce",
+        "CBH": 11.9,
+        "date_m": "30-Mar-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.24698,
+          48.47522
+        ]
+      },
+      "properties": {
+        "id": 247,
+        "tree_code": "A239",
+        "site_number": "",
+        "genus": "Picea",
+        "species": "sitchensis",
+        "botanical_name": "Picea sitchensis",
+        "common_name": "Sitka Spruce",
+        "CBH": 7.55,
+        "date_m": "09-Apr-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33786,
+          48.41052
+        ]
+      },
+      "properties": {
+        "id": 248,
+        "tree_code": "A240",
+        "site_number": 1241,
+        "genus": "Pinus",
+        "species": "thunbergii",
+        "botanical_name": "Pinus thunbergii",
+        "common_name": "Japanese Black Pine",
+        "CBH": 0.97,
+        "date_m": "18-Jul-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33727,
+          48.41051
+        ]
+      },
+      "properties": {
+        "id": 249,
+        "tree_code": "A241",
+        "site_number": 1286,
+        "genus": "Abies",
+        "species": "cephalonica",
+        "botanical_name": "Abies cephalonica",
+        "common_name": "Greek fir",
+        "CBH": 2.68,
+        "date_m": "18-Jul-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36679,
+          48.41248
+        ]
+      },
+      "properties": {
+        "id": 250,
+        "tree_code": "A242",
+        "site_number": 580,
+        "genus": "Abies",
+        "species": "homolepis",
+        "botanical_name": "Abies homolepis",
+        "common_name": "Nikko fir",
+        "CBH": 2.15,
+        "date_m": "19-Oct-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36348,
+          48.446
+        ]
+      },
+      "properties": {
+        "id": 252,
+        "tree_code": "A244",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "flexilis",
+        "botanical_name": "Pinus flexilis",
+        "common_name": "Limber Pine",
+        "CBH": 2.72,
+        "date_m": "29-Nov-17"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3164,
+          48.46058
+        ]
+      },
+      "properties": {
+        "id": 253,
+        "tree_code": "A245",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "wallichiana",
+        "botanical_name": "Pinus wallichiana",
+        "common_name": "Bhutan pine",
+        "CBH": 0.61,
+        "date_m": "15-Feb-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3164,
+          48.46058
+        ]
+      },
+      "properties": {
+        "id": 253,
+        "tree_code": "A245",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "wallichiana",
+        "botanical_name": "Pinus wallichiana",
+        "common_name": "Bhutan pine",
+        "CBH": 0.61,
+        "date_m": "15-Feb-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31674,
+          48.4504
+        ]
+      },
+      "properties": {
+        "id": 254,
+        "tree_code": "A246",
+        "site_number": 2643,
+        "genus": "Abies",
+        "species": "grandis",
+        "botanical_name": "Abies grandis",
+        "common_name": "Grand fir",
+        "CBH": 2.96,
+        "date_m": "24-Feb-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31599,
+          48.46017
+        ]
+      },
+      "properties": {
+        "id": 255,
+        "tree_code": "A247",
+        "site_number": "",
+        "genus": "Cedrus",
+        "species": "brevifolia",
+        "botanical_name": "Cedrus brevifolia",
+        "common_name": "Cyprus Cedar",
+        "CBH": 0.87,
+        "date_m": "24-Feb-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33848,
+          48.41161
+        ]
+      },
+      "properties": {
+        "id": 257,
+        "tree_code": "A249",
+        "site_number": 499,
+        "genus": "Abies",
+        "species": "nordmaniana",
+        "botanical_name": "Abies nordmanniana",
+        "common_name": "Caucasian fir",
+        "CBH": 1.62,
+        "date_m": "04-Jul-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33731,
+          48.4111
+        ]
+      },
+      "properties": {
+        "id": 259,
+        "tree_code": "A251",
+        "site_number": 1312,
+        "genus": "Abies",
+        "species": "cephalonica",
+        "botanical_name": "Abies cephalonica",
+        "common_name": "Greek fir",
+        "CBH": 2.64,
+        "date_m": "04-Jul-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36568,
+          48.41243
+        ]
+      },
+      "properties": {
+        "id": 260,
+        "tree_code": "A252",
+        "site_number": 589,
+        "genus": "Abies",
+        "species": "nordmaniana",
+        "botanical_name": "Abies nordmanniana",
+        "common_name": "Caucasian fir",
+        "CBH": 2.33,
+        "date_m": "04-Jul-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.45054,
+          48.64853
+        ]
+      },
+      "properties": {
+        "id": 261,
+        "tree_code": "A253",
+        "site_number": 170,
+        "genus": "Abies",
+        "species": "pinsapo",
+        "botanical_name": "Abies pinsapo",
+        "common_name": "Spanish fir",
+        "CBH": 2.4,
+        "date_m": "08-Nov-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.5354,
+          48.52008
+        ]
+      },
+      "properties": {
+        "id": 263,
+        "tree_code": "A255",
+        "site_number": "",
+        "genus": "Arbutus",
+        "species": "menziesii",
+        "botanical_name": "Arbutus menziesii",
+        "common_name": "Arbutus",
+        "CBH": 3.62,
+        "date_m": "09-Sep-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36264,
+          48.41234
+        ]
+      },
+      "properties": {
+        "id": 265,
+        "tree_code": "A256",
+        "site_number": 428,
+        "genus": "Abies",
+        "species": "homolepis",
+        "botanical_name": "Abies homolepis",
+        "common_name": "Nikko fir",
+        "CBH": 2.23,
+        "date_m": "04-Jul-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.40315,
+          48.57256
+        ]
+      },
+      "properties": {
+        "id": 266,
+        "tree_code": "A257",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "pinsapo",
+        "botanical_name": "Abies pinsapo",
+        "common_name": "Spanish fir",
+        "CBH": 2.26,
+        "date_m": "05-Feb-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34022,
+          48.41164
+        ]
+      },
+      "properties": {
+        "id": 267,
+        "tree_code": "A258",
+        "site_number": 354,
+        "genus": "Abies",
+        "species": "cephalonica",
+        "botanical_name": "Abies cephalonica",
+        "common_name": "Greek fir",
+        "CBH": 3.08,
+        "date_m": "28-Feb-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34023,
+          48.41172
+        ]
+      },
+      "properties": {
+        "id": 268,
+        "tree_code": "A259",
+        "site_number": 384,
+        "genus": "Abies",
+        "species": "homolepis",
+        "botanical_name": "Abies homolepis",
+        "common_name": "Nikko fir",
+        "CBH": 1.5,
+        "date_m": "28-Feb-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34013,
+          48.41169
+        ]
+      },
+      "properties": {
+        "id": 269,
+        "tree_code": "A260",
+        "site_number": 401,
+        "genus": "Abies",
+        "species": "amabilis",
+        "botanical_name": "Abies amabilis",
+        "common_name": "Amabilis fir",
+        "CBH": 1.98,
+        "date_m": "28-Feb-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.36245,
+          48.4125
+        ]
+      },
+      "properties": {
+        "id": 270,
+        "tree_code": "A261",
+        "site_number": 425,
+        "genus": "Abies",
+        "species": "homolepis",
+        "botanical_name": "Abies homolepis",
+        "common_name": "Nikko fir",
+        "CBH": 2.15,
+        "date_m": "04-Jul-18"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3396,
+          48.4398
+        ]
+      },
+      "properties": {
+        "id": 271,
+        "tree_code": "A262",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "balsamea",
+        "botanical_name": "Abies balsamea",
+        "common_name": "Balsam fir",
+        "CBH": 0.68,
+        "date_m": "12-Mar-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4739,
+          48.4348
+        ]
+      },
+      "properties": {
+        "id": 272,
+        "tree_code": "A263",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "cephalonica",
+        "botanical_name": "Abies cephalonica",
+        "common_name": "Greek fir",
+        "CBH": 2.18,
+        "date_m": "12-Mar-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3392,
+          48.41159
+        ]
+      },
+      "properties": {
+        "id": 273,
+        "tree_code": "A264",
+        "site_number": 458,
+        "genus": "Abies",
+        "species": "cephalonica",
+        "botanical_name": "Abies cephalonica",
+        "common_name": "Greek fir",
+        "CBH": 3.02,
+        "date_m": "29-Mar-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33711,
+          48.41061
+        ]
+      },
+      "properties": {
+        "id": 274,
+        "tree_code": "A265",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "homolepis",
+        "botanical_name": "Abies homolepis",
+        "common_name": "Nikko fir",
+        "CBH": 1.26,
+        "date_m": "29-Mar-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34259,
+          48.42093
+        ]
+      },
+      "properties": {
+        "id": 275,
+        "tree_code": "A266",
+        "site_number": 252,
+        "genus": "Abies",
+        "species": "homolepis",
+        "botanical_name": "Abies homolepis",
+        "common_name": "Nikko fir",
+        "CBH": 2.24,
+        "date_m": "29-Mar-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33787,
+          48.41137
+        ]
+      },
+      "properties": {
+        "id": 282,
+        "tree_code": "A273",
+        "site_number": 1252,
+        "genus": "Pinus",
+        "species": "strobus",
+        "botanical_name": "Pinus strobus",
+        "common_name": "Eastern White Pine",
+        "CBH": 2.86,
+        "date_m": "03-Jul-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33902,
+          48.41095
+        ]
+      },
+      "properties": {
+        "id": 284,
+        "tree_code": "A275",
+        "site_number": 452,
+        "genus": "Pinus",
+        "species": "strobus",
+        "botanical_name": "Pinus strobus",
+        "common_name": "Eastern White Pine",
+        "CBH": 2.45,
+        "date_m": "03-Jul-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33886,
+          48.41083
+        ]
+      },
+      "properties": {
+        "id": 285,
+        "tree_code": "A276",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "strobus",
+        "botanical_name": "Pinus strobus",
+        "common_name": "Eastern White Pine",
+        "CBH": 1.82,
+        "date_m": "03-Jul-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.45711,
+          48.64383
+        ]
+      },
+      "properties": {
+        "id": 287,
+        "tree_code": "A278",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "radiata",
+        "botanical_name": "Pinus radiata",
+        "common_name": "Monterey Pine",
+        "CBH": 4.29,
+        "date_m": "16-Jul-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4571,
+          48.6439
+        ]
+      },
+      "properties": {
+        "id": 288,
+        "tree_code": "A279",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "pinsapo",
+        "botanical_name": "Abies pinsapo",
+        "common_name": "Spanish fir",
+        "CBH": 1.55,
+        "date_m": "16-Jul-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47769,
+          48.67269
+        ]
+      },
+      "properties": {
+        "id": 289,
+        "tree_code": "A280",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.325,
+        "date_m": "05-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47767,
+          48.67268
+        ]
+      },
+      "properties": {
+        "id": 290,
+        "tree_code": "A281",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.55,
+        "date_m": "05-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47772,
+          48.67271
+        ]
+      },
+      "properties": {
+        "id": 291,
+        "tree_code": "A282",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.78,
+        "date_m": "05-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4774,
+          48.67281
+        ]
+      },
+      "properties": {
+        "id": 292,
+        "tree_code": "A283",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.59,
+        "date_m": "05-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47719,
+          48.67326
+        ]
+      },
+      "properties": {
+        "id": 293,
+        "tree_code": "A284",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.2,
+        "date_m": "05-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47763,
+          48.67274
+        ]
+      },
+      "properties": {
+        "id": 294,
+        "tree_code": "A285",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.65,
+        "date_m": "12-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47766,
+          48.67288
+        ]
+      },
+      "properties": {
+        "id": 295,
+        "tree_code": "A286",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.92,
+        "date_m": "12-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47776,
+          48.67296
+        ]
+      },
+      "properties": {
+        "id": 296,
+        "tree_code": "A287",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.5,
+        "date_m": "12-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4773,
+          48.67297
+        ]
+      },
+      "properties": {
+        "id": 297,
+        "tree_code": "A288",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.79,
+        "date_m": "12-Aug-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47788,
+          48.6726
+        ]
+      },
+      "properties": {
+        "id": 298,
+        "tree_code": "A289",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.48,
+        "date_m": "25-Sep-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47765,
+          48.67278
+        ]
+      },
+      "properties": {
+        "id": 299,
+        "tree_code": "A290",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.43,
+        "date_m": "25-Sep-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47755,
+          48.67274
+        ]
+      },
+      "properties": {
+        "id": 300,
+        "tree_code": "A291",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.3,
+        "date_m": "25-Sep-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47769,
+          48.67282
+        ]
+      },
+      "properties": {
+        "id": 301,
+        "tree_code": "A292",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 1.25,
+        "date_m": "25-Sep-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3438,
+          48.40952
+        ]
+      },
+      "properties": {
+        "id": 303,
+        "tree_code": "A294",
+        "site_number": 724,
+        "genus": "Pinus",
+        "species": "thunbergii",
+        "botanical_name": "Pinus thunbergii",
+        "common_name": "Japanese Black Pine",
+        "CBH": 0.71,
+        "date_m": "21-Nov-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34412,
+          48.40964
+        ]
+      },
+      "properties": {
+        "id": 304,
+        "tree_code": "A295",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "thunbergii",
+        "botanical_name": "Pinus thunbergii",
+        "common_name": "Japanese Black Pine",
+        "CBH": 1.03,
+        "date_m": "21-Nov-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35016,
+          48.44937
+        ]
+      },
+      "properties": {
+        "id": 307,
+        "tree_code": "A298",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "wallichiana",
+        "botanical_name": "Pinus wallichiana",
+        "common_name": "Bhutan pine",
+        "CBH": 1.07,
+        "date_m": "08-Dec-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34118,
+          48.41027
+        ]
+      },
+      "properties": {
+        "id": 312,
+        "tree_code": "A303",
+        "site_number": 914,
+        "genus": "Pinus",
+        "species": "nigra",
+        "botanical_name": "Pinus nigra",
+        "common_name": "Austrian pine",
+        "CBH": 1.72,
+        "date_m": "14-Dec-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33767,
+          48.47016
+        ]
+      },
+      "properties": {
+        "id": 313,
+        "tree_code": "A109",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "banksiana",
+        "botanical_name": "Pinus banksiana",
+        "common_name": "Jack Pine",
+        "CBH": 0.7,
+        "date_m": "27-Jul-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3764,
+          48.42594
+        ]
+      },
+      "properties": {
+        "id": 316,
+        "tree_code": "A306",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "banksiana",
+        "botanical_name": "Pinus banksiana",
+        "common_name": "Jack Pine",
+        "CBH": 0.52,
+        "date_m": "26-Dec-19"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.34134,
+          48.43822
+        ]
+      },
+      "properties": {
+        "id": 317,
+        "tree_code": "A307",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "flexilis",
+        "botanical_name": "Pinus flexilis",
+        "common_name": "Limber Pine",
+        "CBH": 1.78,
+        "date_m": "23-Jan-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41824,
+          48.43028
+        ]
+      },
+      "properties": {
+        "id": 318,
+        "tree_code": "A308",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "monticola",
+        "botanical_name": "Pinus montecola",
+        "common_name": "Western White Pine",
+        "CBH": 2.78,
+        "date_m": "01-Feb-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.3334,
+          48.43776
+        ]
+      },
+      "properties": {
+        "id": 319,
+        "tree_code": "A309",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "numidica",
+        "botanical_name": "Abies numidica",
+        "common_name": "Algerian fir",
+        "CBH": 2.1,
+        "date_m": "31-Mar-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.48169,
+          48.42984
+        ]
+      },
+      "properties": {
+        "id": 328,
+        "tree_code": "A318",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "macrophyllum",
+        "botanical_name": "Acer macrophyllum",
+        "common_name": "Bigleaf Maple",
+        "CBH": 6.35,
+        "date_m": "04-Jul-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.4816,
+          48.42969
+        ]
+      },
+      "properties": {
+        "id": 329,
+        "tree_code": "A319",
+        "site_number": "",
+        "genus": "Acer",
+        "species": "macrophyllum",
+        "botanical_name": "Acer macrophyllum",
+        "common_name": "Bigleaf Maple",
+        "CBH": 5.3,
+        "date_m": "04-Jul-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.47024,
+          48.54584
+        ]
+      },
+      "properties": {
+        "id": 330,
+        "tree_code": "A320",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "amabilis",
+        "botanical_name": "Abies amabilis",
+        "common_name": "Amabilis Fir",
+        "CBH": 3.19,
+        "date_m": "06-Jul-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.59881,
+          48.66989
+        ]
+      },
+      "properties": {
+        "id": 332,
+        "tree_code": "A322",
+        "site_number": "",
+        "genus": "Picea",
+        "species": "sitchensis",
+        "botanical_name": "Picea sitchensis",
+        "common_name": "Sitka Spruce",
+        "CBH": 11.3,
+        "date_m": "13-Jul-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.31701,
+          48.46012
+        ]
+      },
+      "properties": {
+        "id": 333,
+        "tree_code": "A323",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "grandis",
+        "botanical_name": "Abies grandis",
+        "common_name": "Grand fir",
+        "CBH": 3.08,
+        "date_m": "15-Jul-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.44642,
+          48.48454
+        ]
+      },
+      "properties": {
+        "id": 342,
+        "tree_code": "A326",
+        "site_number": "",
+        "genus": "Pseudotsuga",
+        "species": "menziesii",
+        "botanical_name": "Pseudotsuga menziesii",
+        "common_name": "Douglas-fir",
+        "CBH": 9.21,
+        "date_m": "24-Aug-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.69447,
+          48.65798
+        ]
+      },
+      "properties": {
+        "id": 343,
+        "tree_code": "A327",
+        "site_number": "",
+        "genus": "Picea",
+        "species": "sitchensis",
+        "botanical_name": "Picea sitchensis",
+        "common_name": "Sitka Spruce",
+        "CBH": 10,
+        "date_m": "30-Aug-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.68791,
+          48.6662
+        ]
+      },
+      "properties": {
+        "id": 345,
+        "tree_code": "A329",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "amabilis",
+        "botanical_name": "Abies amabilis",
+        "common_name": "Amabilis Fir",
+        "CBH": 4.07,
+        "date_m": "30-Sep-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.78186,
+          48.63049
+        ]
+      },
+      "properties": {
+        "id": 346,
+        "tree_code": "A330",
+        "site_number": "",
+        "genus": "Abies",
+        "species": "grandis",
+        "botanical_name": "Abies grandis",
+        "common_name": "Grand Fir",
+        "CBH": 5.01,
+        "date_m": "09-Sep-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33782,
+          48.41087
+        ]
+      },
+      "properties": {
+        "id": 348,
+        "tree_code": "A332",
+        "site_number": 1261,
+        "genus": "Pinus",
+        "species": "nigra",
+        "botanical_name": "Pinus nigra",
+        "common_name": "Austrian pine",
+        "CBH": 1.18,
+        "date_m": "17-Mar-21"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.61691,
+          48.62614
+        ]
+      },
+      "properties": {
+        "id": 351,
+        "tree_code": "A335",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "monticola",
+        "botanical_name": "Pinus montecola",
+        "common_name": "Western White Pine",
+        "CBH": 3.08,
+        "date_m": "29-Mar-21"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.40963,
+          48.60254
+        ]
+      },
+      "properties": {
+        "id": 352,
+        "tree_code": "A336",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "radiata",
+        "botanical_name": "Pinus radiata",
+        "common_name": "Monterey Pine",
+        "CBH": 2.23,
+        "date_m": "21-May-21"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.33824,
+          48.41081
+        ]
+      },
+      "properties": {
+        "id": 353,
+        "tree_code": "A337",
+        "site_number": 1237,
+        "genus": "Pinus",
+        "species": "nigra",
+        "botanical_name": "Pinus nigra",
+        "common_name": "Austrian pine",
+        "CBH": 2.34,
+        "date_m": "28-May-21"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.35311,
+          48.46355
+        ]
+      },
+      "properties": {
+        "id": 357,
+        "tree_code": "A59",
+        "site_number": "",
+        "genus": "Pinus",
+        "species": "parviflora",
+        "botanical_name": "Pinus parviflora",
+        "common_name": "Japanese White Pine",
+        "CBH": 0.9,
+        "date_m": "27-Mar-15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.41523,
+          48.62269
+        ]
+      },
+      "properties": {
+        "id": 359,
+        "tree_code": "A340",
+        "site_number": 15498,
+        "genus": "Pinus",
+        "species": "jeffreyi",
+        "botanical_name": "Pinus jeffrei",
+        "common_name": "Jeffrey Pine",
+        "CBH": 1,
+        "date_m": "07-Feb-22"
+      }
+    }
+  ]
+}
