@@ -13,16 +13,18 @@ export const pointToIconByProperty = (feature, latlng, property, propertyMap) =>
 }
 
 export const MapMarker = (props) => {
+  const padding = 3;
   return (
     <div style={{
       margin: props.margin ?? 'auto',
-      padding: '3px',
+      padding: (padding) + 'px',
       borderRadius: '100%',
       backgroundColor: props.bgColor,
       fill: props.fill,
       stroke: props.stroke,
       width: (props.size) + 'px',
       height: (props.size) + 'px',
+      fontSize: (props.size - padding - padding) + 'px',
     }}>{props.icon}</div>
   )
 }
@@ -68,10 +70,15 @@ export const mapPopupContent = (title, desc, link = null, linkText = null, image
 }
 
 const MapPopup = ({title, desc, link, linkText, imageURL}) => {
+  const descItems = Array.isArray(desc) ? desc : [ desc ]
   return (
-    <VStack>
+    <VStack align='flex-start'>
       <Heading size='sm' fontSize='20px'><b>{title}</b></Heading>
-      <Text textAlign='justify' fontSize='16px'>{desc}</Text>
+      { descItems.map((desc, index) => 
+        <Text key={'desc'+index} fontSize='16px'>
+          {desc}
+        </Text>
+      )}
       {imageURL ? <Image src={imageURL} alt={title}/> : null}
       {link ? (
         <Link 
