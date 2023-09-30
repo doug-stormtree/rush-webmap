@@ -40,7 +40,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 

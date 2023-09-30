@@ -26,7 +26,7 @@ const layer = {
   },
   questions: [
     { key: 'eat-local', group: StartOffLayersName, active: false },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 

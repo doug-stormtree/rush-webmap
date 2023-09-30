@@ -1,25 +1,44 @@
 const LocalToGlobal = {
   key: 'local-to-global',
   title: "Local to Global",
-  question: "Think cosmically act locally?",
+  question: "This spinning ball of hot rock covered with a web of life is your call to consciousness. Be the change you want to see in the world.",
   image: require('../png/NASAEarth.png'),
-  description: [
-    {type: 'h2', content: 'Comparison'},
-    {type: 'p', content: 'Energy consumption and GHGs per province and sector. Per capita emissions around the world. Connectivity and gaps of global ecosystems. Migration routes?'},
-    {type: 'h2', content: 'Problem'},
-    {type: 'p', content: 'Southern Vancouver Island is a traditional wintering ground for the lək̓ʷəŋən (Lekwungen) and W̱SÁNEĆ peoples because it was bountiful and protected.  Vancouver Island is still considered lush by comparison to other parts of the world but it seems that this sense of abundance can create the impression for some that Nature can handle logging the old growth trees or installing salmon farms are appropriate interventions. In fact, development pressures from population increases this Coastal Douglas Fir ecosystem is considered critically endangered and has suffered greatly from recent climate change events and resource extraction/interventions.¹'},
-    {type: 'h2', content: 'Solution'},
-    {type: 'p', content: 'Conserving and protecting the natural environment here should be a key focus in contributing to a more stable climate and playing our part as global citizens. Temperate forests are a net carbon sink, typically containing roughly 100 metric tons of carbon per hectare.²'},
-    {type: 'p', content: 'Restoring our fish bearing streams will support salmon populations which are a keystone species for the west coast of North America meaning that the food web relies on healthy populations. Our participation and support of the food web is mission critical.'},
-    {type: 'p', content: 'BC is also a hotbed of innovation with programs and businesses to facilitate all forms of climate action. Rather than being complacent in the quality of life Nature offers up everyday, we have the opportunity to be a node of health and resilience that the world’s human built and natural systems can connect to and rely on.'},
-    {type: 'link', content: '1. Lewis Akenji et al., 2021. 1.5-Degree Lifestyles: Towards A Fair Consumption Space for All. Hot or Cool Institute, Berlin.', url: 'https://hotorcool.org/1-5-degree-lifestyles-report/'},
-    {type: 'link', content: '2. Rattan Lal and Klaus Lorenz, 2012. Carbon sequestration in temperate forests. In Recarbonization of the Biosphere, pp. 187-201. Springer Netherlands.', url: 'https://doi.org/10.1007/978-94-007-4159-1_9'}
+  description_new: [
+    {type: 'h2', content: 'You can rest easy if...'},
+    {type: 'ul', content: [
+      'the salmon are returning, the whales are healthy and you see vegetation on both sides of the shoreline.',
+      'you hear several different birds in several trees outside your window and several of your friends can hang out at your favorite local.',
+      'you know who to call and where to go to deal with invasive species',
+      'neighbourhoods are making greenways & blueways a priority for all around well-being, biodiversity, carbon drawdown and climate resilience.',
+      'every renovation and development increases wellbeing through material choice, facilitates community through place-making design and features nature-base solutions.',
+      'your municipality’s travel footprint re: greenhouse gases (GHGs) is getting smaller and yours is too. You can get where you need to go without relying on dinosaur technology.',
+      'your municipality’s GHGs from fossil fuel power consumption is reducing and you have ways of powering your life that are fossil free.',
+      'the businesses you need collaborate with each other and share resources to create their products and services. This keeps money and value in the community via the circular economy.',
+      'you see all genders and cultures represented in leadership positions across industries.',
+    ]},
+    {type: 'h2', content: 'Answer the wake up call if...'},
+    {type: 'ul', content: [
+      'the watershed you live in flows through pipes, deep and bare ditches, and across concrete making it unlive-able for a fish.',
+      'you don’t hear birds, see trees or have friends close by to hang with.',
+      'you see a lot of invasive plants like ivy, broom, laurel and daphne and the bullfrogs (picture poop-ups) are a lot bigger than you remember them.',
+      'every reno and development means less Nature. The result looks like plastic and it goes up before you even knew it was in the works.',
+      'you see on the map that your municipality’s travel footprint is increasing and you haven’t figured out lighter footprint travel yourself.',
+      'you see on the map that your municipality’s power footprint is increasing and you haven’t figured out lighter footprint travel yourself.',
+      'all the people in local leadership positions look and sound the same.',
+    ]},
+    {type: 'spacer'},
+    {type: 'h2', content: 'Make your move. Think cosmically, act locally.'},
+    {type: 'ul', content: [
+      'Southern Vancouver Island is a traditional wintering ground for the lək̓ʷəŋən (Lekwungen) and W̱SÁNEĆ peoples because it was bountiful and protected. Vancouver Island is still considered lush by comparison to other parts of the world, but this sense of abundance can create the impression that Nature will handle it when humans intervene with old growth logging or salmon farms. In fact, our Coastal Douglas Fir ecosystem is considered critically endangered as a result of development pressures, recent climate change events, and resource extraction/interventions.',
+      'Conserving and protecting the local natural environment should be a key focus in contributing to a more stable climate and playing our part as global citizens. Our temperate forests are a net carbon sink, typically containing roughly 100 metric tons of carbon per hectare.',
+      'Restoring our fish-bearing streams will support populations of salmon that are a keystone species for the west coast of North America. The food web relies on healthy salmon - and our support of the food web is mission critical.',
+      'BC is also a hotbed of innovation with programs and businesses to facilitate all forms of climate action. Rather than being complacent in the quality of life Nature offers up everyday, we have the opportunity to be a node of health and resilience that the world’s human built and natural systems can connect to and rely on.',
+    ]},
   ],
   act: {
     initiatives: [
       {
         title: 'One Planet City Challenge',
-        noText: true,
         description: 'The One Planet City Challenge is an invitation to every local government on the planet to show the world what climate action looks like in their community and the difference it makes.',
         link: 'https://wwf.panda.org/projects/one_planet_cities/one_planet_city_challenge/',
         image: require('../png/OnePlanetCity.png')
@@ -32,7 +51,6 @@ const LocalToGlobal = {
       },
       {
         title: 'Project Drawdown',
-        noText: true,
         description: 'This ever-evolving collection of strategies for reversing global warming in the next 30 years draws on the world’s top talent in analyzing solutions that are available now, scalable, financially feasible, measurable, and have a net positive impact.',
         link: 'https://www.drawdown.org/solutions',
         image: require('../png/ProjectDrawdown.png')

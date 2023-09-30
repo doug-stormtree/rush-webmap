@@ -1,4 +1,4 @@
-import { mapPopupContent } from '../LeafletStyleHelpers';
+import { mapPopupContent, setStyleIfSupported } from '../LeafletStyleHelpers';
 import { StartOffLayersName, StartOnLayersName } from '../TextContent';
 
 const layer = {
@@ -36,8 +36,8 @@ const layer = {
           ),
         {offset: [0,8]});
       l.on({
-        mouseover: (e) => e.target.setStyle({ fillOpacity: 0.7 }),
-        mouseout: (e) => e.target.setStyle({ fillOpacity: 0 })
+        mouseover: (e) => setStyleIfSupported(e, { fillOpacity: 0.7 }),
+        mouseout: (e) => setStyleIfSupported(e, { fillOpacity: 0 }),
       });
     }
   },

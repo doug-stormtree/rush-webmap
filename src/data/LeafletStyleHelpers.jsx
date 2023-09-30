@@ -100,3 +100,8 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
 // Open Green Map
 export const ogmIconLink = (id) =>
   `https://new.opengreenmap.org/api-v1/icons/${id}/image/value`
+
+// Mouseover setStyle
+export const setStyleIfSupported = (e, style) => {
+  if (e && e.target && 'setStyle' in e.target) e.target.setStyle(style)
+}

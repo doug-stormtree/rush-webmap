@@ -3,6 +3,7 @@ import {
   getStyleMapProperty,
   mapPopupContent,
   pointToIcon,
+  setStyleIfSupported,
 } from "../LeafletStyleHelpers";
 import { GHGBuildingIcon } from '../../components/EmissionsIcon';
 import { StartOnLayersName } from "../TextContent";
@@ -68,8 +69,8 @@ const layer = {
           `${Math.abs(f.properties.StationaryChange).toFixed(1)}% ${f.properties.StationaryChange > 0 ? 'increase' : 'reduction'} in Stationary (Residential and Commercial Buildings) GHG emissions in 2020 compared to 2007 levels.`
         ), {offset: [0,8]});
       l.on({
-        mouseover: (e) => e.target.setStyle({ fillOpacity: 0.6 }),
-        mouseout: (e) => e.target.setStyle({ fillOpacity: 0.3 })
+        mouseover: (e) => setStyleIfSupported(e, { fillOpacity: 0.6 }),
+        mouseout: (e) => setStyleIfSupported(e, { fillOpacity: 0.3 }),
       });
     }
   },

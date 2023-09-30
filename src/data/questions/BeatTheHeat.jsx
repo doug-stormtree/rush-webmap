@@ -21,10 +21,11 @@ const BeatTheHeat = {
     {type: 'spacer'},
     {type: 'h2', content: 'Make your move. Create a cool climate.'},
     {type: 'ul', content: [
-      'Figure out whether your community meets the tree equity rule and call your municipality if it doesn’t. Extending and connecting natural spaces across urban landscapes will help keep us cool and moist.',
-      'Identify large areas of pavement that radiate heat.  Talk to your municipal leaders about better options including permeable or light coloured pavement, and to create more shading in those spaces.',
+      'Figure out whether your home meets the tree equity standard. Extending and connecting natural spaces across urban landscapes will help keep us cool and moist.',
+      'If you can see 3 trees from your window, use your open greenmap account to plot them on the map using the my 3 trees icon.',
+      'Identify large areas of pavement that radiate heat. Talk to your municipal leaders about better options including permeable or light coloured pavement, and to create more shading in those spaces.',
       'Stay on the sidewalk to avoid compacting soil. Healthy loose soil processes harmful greenhouse gasses twice as much as plants do. The partnership between trees, soil and the atmosphere is key to a healthy climate.',
-      'Re-invent your yard.  Create multiple layers of greenery for shade, habitat, moisture, and to turn greenhouse gasses into beautiful plants and food.  Introduce a variety of plants to keep your ecosystem working even in the hot months that are tough on grass.',
+      'Re-invent your yard. Create multiple layers of greenery for shade, habitat, moisture, and to turn greenhouse gasses into beautiful plants and food. Introduce a variety of plants to keep your ecosystem working even in the hot months that are tough on grass.',
       'Keep the shoreline shaded to protect the creatures of the intertidal zone from dying of heat. These water-filtering creatures clean and maintain the water quality in the ocean every day, free of charge. We humans don’t know how to provide this service, nor could we afford to provide it on the scale at which it naturally occurs.',
       'Advocate for your community to increase public green spaces and cooling architecture.',
     ]},
@@ -35,24 +36,6 @@ const BeatTheHeat = {
     {type: 'p', content: 'Research shows that communities with a lower income in Canada’s largest cities don’t have access to as much green space. This means more stress and mental health challenges that make it even harder to make ends meet and makes folks more vulnerable to heat events.'},
     {type: 'p', content: 'This same research points to the 3-30-300 standard. The Global Deal for Nature concludes that we need to protect at least 30% of the planet by 2030. Saanich is on board, having committed to at least 30% urban forest cover.'},
     {type: 'p', content: 'While ocean breezes can cool neighbourhoods closer to the shore, making more space for Nature and decreasing dark non-draining pavement will support a cool microclimate consistently.'},
-  ],
-  description: [
-    {type: 'h2', content: 'Comparison'},
-    {type: 'p', content: 'The red polygons show areas with significant increases in average summer surface temperature from 2018 to 2021 within the CRD. Tree coverage shows the areas where more vegetation is needed. Urban centres with dark pavement can absorb the heat and re-emit it at a rate of 95%.  Hard pavement does not allow the land to breathe and regulate the atmosphere. Cool buildings, parks and drinking fountains can provide essential relief. Notice the relationship between heat island areas, green space and dark or paved surfaces.'},
-    {type: 'h2', content: 'Problem'},
-    {type: 'p', content: 'All life is vulnerable to extreme heat.  Prolonged heat dries out landscapes,  increases risk of fires, can shorten growing seasons for farmers and create conditions for viruses and bacteria to thrive.  High temperatures also impacts biodiversity by drying out habitats or directly increasing body temperatures. 70% of human sudden deaths recorded in BC during the heat wave of 2021 were due to extreme temperatures.¹'},
-    {type: 'p', content: 'Research shows that communities with a lower income in Canada\'s largest cities don\'t have access to as much greenspace impacting their sense of well being and making them more vulnerable to heat events.²'},
-    {type: 'h2', content: 'Solution'},
-    {type: 'p', content: 'This same research sets the 3-30-300 standard meaning, "everyone should be able to see at least three trees from their home, that all neighbourhoods should have at least a 30% tree canopy, and that all residents should have a greenspace of at least one hectare within 300 metres of where they live."²'},
-    {type: 'p', content: 'While ocean breezes can cool neighbourhoods closer to the shore,  making more room for trees, plants and soil will support a cool microclimate consistently. Trees, bushes and plants cool the area and draw down harmful greenhouse gases from the atmosphere. The soil does the work of processing the gases at a rate of 2:1 compared to plants.³'},
-    {type: 'p', content: 'The Global Deal for Nature concludes that we need to Protect at least 30% of the planet by 2030⁴ and many urban areas including Saanich have committed to at least 30% urban forest cover so that ecosystems continue to harbour an abundance of species, and provide services essential for human life, including carbon sequestration. The partnership between trees, soil, water and the atmosphere is key to having a healthy climate.  Encourage your municipality to increase permeable surfaces and adopt a policy of at least 30% canopy cover.'},
-    {type: 'p', content: 'Decreasing dark non-draining pavement and increasing space for Nature provides many benefits including managing temperature, keeping things moist and recharging the water table, supporting birds and pollinators, increasing property values and enhancing a sense of beauty and wellbeing.'},
-    {type: 'p', content: 'Support community groups working in restoration and taking care of each other. Taking action to manage temperature and moisture in our neighbourhoods is a key to climate action. Use this map to identify places that need attention, ways to stay cool and protect your community from extreme heat.'},
-    {type: 'link', content: '1. CBC News, "70% of sudden deaths recorded during B.C. heat wave were due to extreme temperatures, coroner confirms," July 29, 2021.', url: "https://www.cbc.ca/news/canada/british-columbia/bc-heat-dome-sudden-deaths-570-1.6122316"},
-    {type: 'link', content: '2. Erin Whittingham, Vilbert Vabi, Sharmeena Lalloo, and Saleena Hak, 2022. Canada\'s Urban Forests: Bringing the Canopy to All. Nature Canada.', url: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf'},
-    {type: 'link', content: '3. Claudia Rivera Cárdenas, Anne-Marie Daniel, "How does nature regulate atmospheric composition?: Formaldehyde removal from air," Proc. SPIE 11586, Bioinspiration, Biomimetics, and Bioreplication XI, 1158609, March 22, 2021.', url: "https://doi.org/10.1117/12.2579919"},
-    {type: 'link', content: '4. Nicole Schwab, Kristin Rechberger, "We need to protect 30% of the planet by 2030. This is how we can do it," World Economic Forum, April 22, 2019.', url: "https://doi.org/10.1117/12.2579919"},
-    {type: 'link', content: 'Cover photo by DESIGNECOLOGIST on Unsplash, July 20, 2021. Red sun over Toronto during wildfire season.', url: 'https://unsplash.com/photos/Y1CLEQZX-jc'}
   ],
   act: {
     initiatives: [
@@ -85,6 +68,12 @@ const BeatTheHeat = {
         description: 'This report shows the change in canopy from 1986 to 2005 in the Greater Victoria Area - a study led by the Habiatat Aquisition Trust. The goal was to grow awareness of the quality and importance of the urban forest to support sustainable planning. This study was redone in 2020. If you know where it is, please let RUSH know through the feedback form or email connect@whatstherush.ca',
         link: 'https://static1.squarespace.com/static/5e3c5b7e5460c55405a6d4d6/t/61bbd35f3486620f41b2aacf/1639699301418/UFSI+mapping+report+exec+sum.pdf',
         image: require('../png/UrbanForestStewardship.png')
+      },
+      {
+        title: 'A Hot Topic - Understanding heat vulnerability in the CRD',
+        description: 'Follow the research collaboration between the The University of Victoria and the Capital Regional District to learn more about how the 2021 heat dome event affected vulnerable populations. Through community based participatory research methods they are continuing to inquire about how to support communities.',
+        link: 'https://storymaps.com/stories/989b03cc3bc042fa8d7fc6e80c712464',
+        image: require('../png/AHotTopic.png')
       },
       {
         title: 'Firesmoke Canada',

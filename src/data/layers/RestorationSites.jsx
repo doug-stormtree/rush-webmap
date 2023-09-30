@@ -71,7 +71,7 @@ const layer = {
   },
   questions: [
     { key: 'protect-from-flooding', group: StartOffLayersName, active: false },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 

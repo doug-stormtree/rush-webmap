@@ -1,6 +1,7 @@
 import {
   mapPopupContent,
-  getStyleMapProperty
+  getStyleMapProperty,
+  setStyleIfSupported,
 } from "../LeafletStyleHelpers";
 import { StartOffLayersName } from "../TextContent";
 
@@ -66,8 +67,8 @@ const layer = {
           f.properties.AQUIFER_DETAILS_URL
         ), {offset: [0,8]});
       l.on({
-        mouseover: (e) => e.target.setStyle({ fillOpacity: 0.7 }),
-        mouseout: (e) => e.target.setStyle({ fillOpacity: 0.3 })
+        mouseover: (e) => setStyleIfSupported(e, { fillOpacity: 0.7 }),
+        mouseout: (e) => setStyleIfSupported(e, { fillOpacity: 0.3 })
       });
     }
   },

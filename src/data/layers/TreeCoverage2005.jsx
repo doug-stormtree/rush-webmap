@@ -32,7 +32,7 @@ const layer = {
   questions: [
     { key: 'beat-the-heat', group: StartOnLayersName, active: true },
     { key: 'neighbourhood-to-naturehood', group: StartOffLayersName, active: false },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 
