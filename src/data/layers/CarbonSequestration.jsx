@@ -60,7 +60,7 @@ const layer = {
   },
   questions: [
     { key: 'wood-wide-web', group: StartOnLayersName, active: true },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 

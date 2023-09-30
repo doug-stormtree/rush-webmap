@@ -1,4 +1,8 @@
-import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
+import {
+  getStyleMapProperty,
+  mapPopupContent,
+  setStyleIfSupported
+} from '../LeafletStyleHelpers';
 import { StartOnLayersName } from '../TextContent';
 
 const styleMap = new Map([
@@ -66,20 +70,14 @@ const layer = {
           f.properties.Location
         ), {offset: [0,8]});
       l.on({
-        mouseover: (e) => {
-          if (typeof e.target.setStyle === 'function')
-              e.target.setStyle({ fillOpacity: 1.0 })
-          },
-        mouseout: (e) => {
-          if (typeof e.target.setStyle === 'function')
-            e.target.setStyle({ fillOpacity: 0.7 })
-          }
+        mouseover: (e) => setStyleIfSupported(e, { fillOpacity: 1.0 }),
+        mouseout: (e) => setStyleIfSupported(e, { fillOpacity: 0.7 }),
       });
     }
   },
   questions: [
     { key: 'neighbourhood-to-naturehood', group: StartOnLayersName, active: true },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 

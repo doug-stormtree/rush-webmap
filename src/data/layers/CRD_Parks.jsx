@@ -31,7 +31,7 @@ const layer = {
   },
   questions: [
     { key: 'beat-the-heat', group: StartOffLayersName, active: false },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 

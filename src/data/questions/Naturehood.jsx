@@ -23,6 +23,7 @@ const Naturehood = {
     {type: 'spacer'},
     {type: 'h2', content: 'Make your move. Turn the concrete jungle into a thriving urban ecosystem.'},
     {type: 'ul', content: [
+      'Use your open greenmap account to plot your own pollinator garden to connect pollinator habitats and secure the food system.',
       'Get outside. You are Nature.',
       'Plot and plant your own pollinator garden to connect pollinator habitats and secure the food system.',
       'Extend the reach of the closest ecosystem by planting native species in pots or in the ground.',
@@ -38,16 +39,6 @@ const Naturehood = {
     {type: 'p', content: 'Pollinators are essential for food production on Vancouver Island, and pollination relies on the health of our wild ecosystems. Many pollinators are facing extinction around the globe due to development and fragmentation of habitat, absence of food, pesticides (neonicotinoids), invasive species, general pollution and climate change. Human settlement has altered watersheds affecting the key corridors that are home to these creatures.'},
     {type: 'p', content: 'The concrete jungle is more likely to create poverty and impact human health too. A 2022 Nature Canada Report revealed that the percentage of tree canopy is much lower in low-income and racialized neighbourhoods. In October 2022, Vancouver Island’s chief medical officer, Dr. Reka Gustafson says she wants to tackle mental health and track how climate change is making these inequities more pronounced. Learn about the clear link between the quality of the Naturehood and your long-term health. Show Nature some love and let the sights, sounds, scents and sensations work their healing magic for you.'},
     {type: 'p', content: 'Help pollinate the world with kindness.  Support community groups that are working to re-green the concrete jungle and take care of the folks who live there.'},
-  ],
-  description: [
-    {type: 'h2', content: 'Comparison'},
-    {type: 'p', content: 'The blue polygons mark areas where communities are actively restoring watersheds and natural spaces to bring back the smooth functioning of the ecosystem. Click on the play buttons to learn more about the work being done. The icons represent natural features and gardens that are good for pollinators like bees, butterflies, birds and snails. These areas are being plotted to track how well pollinator habitats are connected to make sure Nature has enough space and range for a healthy populations and food sources.'},
-    {type: 'h2', content: 'Problem'},
-    {type: 'p', content: 'Pollinators are essential to our food production and pollination relies on the health of our wild ecosystems to happen. Many of our pollinators are facing extinction around the globe due to development and fragmentation of habitat, the absence of the food they need, pesticide use (neonicotinoids), invasive species, general pollution and climate change.  Watersheds have been altered by human settlement affecting the key corridors that naturally are home to these creatures.  The "concrete jungle" is more likely to create poverty and impact the health of the area. A 2022 Nature Canada Report revealed that the percentage of tree canopy is much lower in low-income and racialized neighbourhoods.¹ In October 2022, Vancouver Island’s chief medical officer, Dr. Reka Gustafson says she wants to tackle mental health and track how climate change is making these inequities more pronounced.²'},
-    {type: 'h2', content: 'Solution'},
-    {type: 'p', content: 'We are Nature and a healthy ecosystem means a better health outlook for everyone. Transforming the concrete jungle into a smooth running urban ecosystem means good food, clean water, fresh air, a good soundscape and a sense of wellbeing for everyone. Plant and plot your pollinator garden. Support community groups in their work to extend the reach of ecosystems and heal watersheds.  Let Nature know you care and you’ll feel the love right back atcha.'},
-    {type: 'link', content: '1. Erin Whittingham, Vilbert Vabi, Sharmeena Lalloo, and Saleena Hak, 2022. Canada’s Urban Forests: Bringing the Canopy to All. Nature Canada.', url: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf'},
-    {type: 'link', content: '2. Jake Romphf. "Island Health’s new top medical officer eyes toxic drug crisis, health inequities," Vancouver Island Free Daily, September 29, 2022.', url: 'https://www.vancouverislandfreedaily.com/news/island-healths-new-top-medical-officer-eyes-toxic-drug-crisis-health-inequities/'}
   ],
   act: {
     initiatives: [
@@ -84,13 +75,13 @@ const Naturehood = {
       {
         title: 'Greater Victoria NatureHood: Nature in the City Map',
         link: 'https://experience.arcgis.com/experience/b360590fbbb44966952c0cfe240d65c4',
-        description: '"This map is a guide to help connect you with the amazing places and nearby nature found in Greater Victoria. Learn about the Greater Victoria NatureHood initiative, ecosystems and biodiversity, waterways and watersheds, riparian zones, and some of the species of plants and animals found in the region."',
+        description: 'Use this digital map to help you navigate natural places in Greater Victoria. Learn about the Greater Victoria NatureHood initiative, ecosystems and biodiversity, waterways and watersheds, riparian zones, and some of the species of plants and animals found in the region.',
         image: require('../png/NatureInTheCity.png')
       },
       {
         title: 'Greater Victoria Greenbelt Society',
         link: 'https://www.marylakeconnections.ca/greater-victoria-greenbelt-society/',
-        description: '“Mission: To foster respect for nature and promote the protection of natural areas for the benefit of all future generations through environmental conservation, restoration, education, and cultural activities in alliance with local First Nations" The Greater Victoria Greenbelt Society\'s current project is the W̱MÍYEŦEN Nature Sanctuary (formerly Mary Lake).',
+        description: 'The mission of the Greater Victoria Greenbelt Society is “to foster respect for nature and promote the protection of natural areas for the benefit of all future generations through environmental conservation, restoration, education, and cultural activities in alliance with local First Nations." The GVGS’s current project is the W̱MÍYEŦEN Nature Sanctuary (formerly Mary Lake), a special conserved area  with nature house and programs focused on nature and ecology.',
         image: require('../png/Placeholder.png')
       },
       {
@@ -102,7 +93,7 @@ const Naturehood = {
       {
         title: 'Nature Canada Report: Tree Equity',
         link: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf',
-        description: '"The majority of Canadian municipalities have published urban tree cover targets—for example, the City of Toronto has committed to achieving 40% urban forest canopy cover by 2050. While laudable, such city-wide targets do not address equity of access for different communities and neighborhoods. A better approach is the 3-30-300 rule, which states that everyone should be able to see at least three trees from their home, that all neighbourhoods should have at least a 30% tree canopy, and that all residents should have a greenspace of at least one hectare within 300 metres of where they live. While this principle can help substantially in advancing tree equity, we need to go further. In this report, Nature Canada proposes that equitable access should be thought of in terms of three variables—proximity to urban trees and forests, urban forest quality and the governance of urban forests."',
+        description: 'This report outlines the need for "the 3-30-300 rule" to support universal well-being across Canada\'s cities. Everybody should be able to see 3 trees from their home. Neighbourhoods should have a minimum of 30% canopy cover and access to a greenspace of one hectare minimum which is less than 300 meters from home.',
         image: require('../png/NatureCanadaReport.png')
       },
       {
@@ -120,9 +111,27 @@ const Naturehood = {
       {
         title: 'Colquitz Storymap',
         link: 'https://storymaps.arcgis.com/stories/e884cb42946a46d1800e90a692eca278',
-        description: '"The (ongoing) Colquitz River restoration project, launched by  Peninsula Streams  and the  District of Saanich  in 2019, aims to restore ecological integrity and resilience to this urban watershed system in what is now called Saanich, British Columbia, Canada." This story was developed in partnership with Peninsula Streams Society, Engage with Nature-Based Solutions, and UVic Community Mapping students Langley Chan, Olivia Gatrell, Zacc Lavigne, and Nabila Kazmi.',
+        description: 'The Colquitz Storymap beautifully depicts the ongoing Colquitz River restoration project, launched by Peninsula Streams and the  District of Saanich in 2019. Interact with the map to learn about how the renewed health of the stream, as indicated by the return of native species including coho salmon, coastal cutthroat trout, otters and grey blue herons. Volunteer at native planting parties in the watershed to help ensure these positive changes continue and endure.',
+        image: require('../png/ColquitzRiver.png')
+      },
+      {
+        title: 'Gorge Stewardship Centre',
+        link: 'https://stewardshipcentrebc.ca/esquimalt-gorge-park-gs-demonstration-site/',
+        description: 'The Stewardship Centre for BC promotes and delivers stewardship education, and champions science-based stewardship practices for land and water in BC. As part of the Resilient Coasts for Salmon (RC4S) project, the Stewardship Centre for BC is partnered with community groups, the CRD, and the Songhees Nation and Esquimalt Nations to use a nature-based approach in restoring the ecological and cultural values of the Esquimalt Gorge Park shoreline.',
         image: require('../png/Placeholder.png')
-      }
+      },
+      {
+        title: 'Greater Victoria Green Team',
+        link: 'https://greenteamscanada.ca/our-green-teams/greater-victoria-green-team/',
+        description: 'The Greater Victoria Green Team has worked since 2014 to connect people and nature for the well-being of all. There are plenty of opportunities for volunteers to get their hands dirty with the Green Team. Projects include removal of invasive plants and native planting; picking up litter from shorelines, creeks and parks; trail building and maintainence; and tending vegetable gardens on educational farms.',
+        image: require('../png/GVGreenTeam.png')
+      },
+      {
+        title: 'Satinflower Nurseries',
+        link: 'https://satinflower.ca/',
+        description: 'Satinflower Nurseries connects people with nature by providing native plants, seeds, and expertise in growing them. The plants and seeds they provide are native to a variety of habitats in the Victoria area, including meadows, woodlands, forests, wetlands, and beaches. Satinflower specializes in the restoration and ecology of Garry oak ecosystems, and meadowscaping - the transformation of lawns to meadows that become much-needed patches of habitat for migratory pollinators.',
+        image: require('../png/SatinflowerNurseries.png')
+      },
     ],
   }
 };

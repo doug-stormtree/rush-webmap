@@ -26,6 +26,7 @@ const Footprint = {
     {type: 'spacer'},
     {type: 'h2', content: 'Make your move. Arrive in style with light footprint travel.'},
     {type: 'ul', content: [
+      'Use your open green map account to plot well lit bus stops, bike lanes and other safe travel features on the map.',
       'Find your flow to save time, money and energy.  Do your errands with a friend and cut your emissions in half.',
       'Shop close to home or get local delivery.',
       'Join a car-share program.',
@@ -39,16 +40,6 @@ const Footprint = {
     {type: 'p', content: 'When mass transit or personal power options are not available, electric vehicles offer another solution. Based on the emissions estimate in the 2020 CRD report, EVs deliver approximately 5.7 times as much power per unit of GHG emitted indirectly through the use of grid-supplied electricity over gasoline combustion.'},
     {type: 'p', content: 'The Capital Regional District (CRD) has set a 61% reduction target for greenhouse gas (GHG) emissions from 2007 levels. On-road transportation represented 39.2% of total GHG emissions for 2020. The coloured regions of the map shows the change, either increased or reduced, in GHG emissions for each CRD member government between 2007 and 2020. The lines highlight some of the current "Light Footprint" travel options, using bus and bicycle routes.'},
   ],
-  description: [
-    {type: 'h2', content: "Comparison"},
-    {type: 'p', content: 'The Capital Regional District (CRD) has set a 61% reduction target for greenhouse gas (GHG) emissions from 2007 levels. On-road transportation represented 39.2% of total GHG emissions for 2020.¹ The coloured in regions of the map shows the change, either increased or reduced, in GHG emissions for each CRD member government between 2007 and 2020. The lines highlight some of the current "Light Footprint" travel options, using bus and bicycle routes. Is your neighbourhood served by "Light" travel options? Are there opportunities for GHG reduction?'},
-    {type: 'h2', content: 'Problem'},
-    {type: 'p', content: 'Greenhouse gas (GHG) emissions pose a substantial risk to the future life and well being of people worldwide. Many governments have set substantial goals for immediate reduction of emissions, while scientists assert that our natural systems have already been overburdened.²'},
-    {type: 'h2', content: 'Solution'},
-    {type: 'p', content: 'Transportation is the largest sector of GHG emissions for the region. Reducing the use of single-occupancy vehicles is an important component of managing GHGs. Where mass transit or personal power options are not available, electric vehicles offer another solution. Based on the emissions estimate in the 2020 CRD report, EVs deliver approximately 5.7 times as much power per unit of GHG emitted indirectly through the use of grid-supplied electricity over gasoline combustion.³'},
-    {type: 'link', content: '1,2. Stantec Consulting Ltd., 2021. Capital Regional District - Municipalities and Electoral Areas: 2007 Base Year and 2020 Reporting Year Energy & GHG Emissions Inventory. Capital Regional District, Victoria.', url: "https://www.crd.bc.ca/docs/default-source/climate-action-pdf/reports/2020-crd-ghgmembermunicipality.pdf?sfvrsn=2716ebcd_2"},
-    {type: 'link', content: '3,4. Stantec Consulting Ltd., 2021. Capital Regional District 2020 GPC BASIC+ Community Greenhouse Gas (GHG) Emissions Inventory Report. Capital Regional District, Victoria.', url: "https://www.crd.bc.ca/docs/default-source/climate-action-pdf/reports/2020-crd-ghg-inventorystudy.pdf?sfvrsn=5b16ebcd_2"},
-  ],
   act: {
     initiatives: [
       {
@@ -58,7 +49,7 @@ const Footprint = {
         link: 'https://bcclimateemergency.ca/report-card'
       },
       {
-        title: 'GC Climate & Environment Funding',
+        title: 'Environment & Climate Change Canada Funding',
         description: 'Funding offered by the Government of Canada through various Grants and Contributions programs. Eligible groups, organizations and individuals can apply for support of projects that protect or conserve our natural environment.',
         image: require('../png/GovCan.png'),
         link: 'https://www.canada.ca/en/environment-climate-change/services/environmental-funding.html'
@@ -71,26 +62,26 @@ const Footprint = {
       },
       {
         title: 'South Island Climate Action Network',
-        description: '"The South Island Climate Action Network (SI-CAN) is a network of organizations on Vancouver Island. SI-CAN shares information about efforts to address the climate emergency and works toward effective climate action by local, provincial and federal governments."',
+        description: 'SI-CAN is a network of volunteers, citizens, and professionals on Southern Vancouver Island concerned with the climate emergency. SI-CAN shares useful information and urges businesses, individuals, and governments throughout the region towards best-practices to reduce emissions and strengthen carbon sinks.',
         image: require('../png/SICAN.png'),
         noText: true,
         link: 'https://siclimateactionnetwork.wordpress.com/'
       },
       {
         title: 'BC Hydro EV',
-        description: '"The BC Hydro EV network currently has over 70 fast charging stations across B.C., and there are more on the way. We operate mainly 50kW DC fast chargers, but you’ll also find some 25kW “mini” fast chargers and Level 2 chargers at select stations. Most stations currently have a single DC fast charger but as usage grows, we’re upgrading stations with a second fast charger."',
+        description: 'The BC Hydro EV network currently has over 70 fast charging stations across B.C., with more on the way. This handy webpage tells you everything you need to know about using the charge stations, and maps out the EV network so you know where you’ll find 50kW DC fast chargers, 25kW “mini” fast chargers, and Level 2 chargers.',
         image: require('../png/BCHydro.png'),
         link: 'https://electricvehicles.bchydro.com/charge/public-charging/our-fast-charging-network'
       },
       {
         title: 'Chargepoint',
-        description: '"We\'re leading the charge. Actually, we started it. You\'d think after creating the world\'s largest and most open EV charging network we\'d be satisfied, but you\'d be wrong. The way we see it, there\'s still much more we can do—together. Join us in getting all people and goods moving on electricity."',
+        description: 'Chargepoint created the world’s largest and most open EV charging network, and is “leading the charge” on pioneering new ways to make electric mobility an easy choice for all people and goods.',
         image: require('../png/Chargepoint.png'),
         link: 'https://www.chargepoint.com/en-ca'
       },
       {
         title: 'Plug In BC',
-        description: '"Supporting the uptake of electric vehicles in British Columbia. We provide a hub of information and incentive programs for consumers and fleets to go electric."',
+        description: 'Plug In BC provides a hub of super practical information and incentive programs to support consumers and fleets in BC to go electric.',
         image: require('../png/PlugInBC.png'),
         link: 'https://pluginbc.ca'
       },

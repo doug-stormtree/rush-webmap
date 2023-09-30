@@ -59,7 +59,7 @@ const layer = {
   },
   questions: [
     { key: 'neighbourhood-to-naturehood', group: StartOnLayersName, active: true },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'development', group: 'Greenspace', active: false },
   ]
 }
 

@@ -3,6 +3,7 @@ import {
   getStyleMapProperty,
   mapPopupContent,
   pointToIcon,
+  setStyleIfSupported,
 } from '../LeafletStyleHelpers';
 import { GHGCarIcon } from '../../components/EmissionsIcon';
 import { StartOnLayersName } from '../TextContent';
@@ -66,14 +67,8 @@ const layer = {
           `${Math.abs(f.properties.OnRoadTransportationChange).toFixed(1)}% ${f.properties.OnRoadTransportationChange > 0 ? 'increase' : 'reduction'} in on-road transportation GHG emissions in 2020 compared to 2007 levels.`
         ), {offset: [0,8]});
       l.on({
-        mouseover: (e) => {
-          if (typeof e.target.setStyle === 'function')
-              e.target.setStyle({ fillOpacity: 0.6 })
-          },
-        mouseout: (e) => {
-          if (typeof e.target.setStyle === 'function')
-            e.target.setStyle({ fillOpacity: 0.3 })
-          }
+        mouseover: (e) => setStyleIfSupported(e, { fillOpacity: 0.6 }),
+        mouseout: (e) => setStyleIfSupported(e, { fillOpacity: 0.3 })
       });
     }
   },
