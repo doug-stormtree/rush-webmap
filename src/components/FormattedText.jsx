@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Box,
   Heading,
+  Image,
   Link,
   ListItem,
   OrderedList,
@@ -12,7 +13,7 @@ import {
 export default function FormattedText({ textArray }) {
   const components = textArray.map((item, index) => {
     const sharedStyles = {
-      key: index,
+      key: (item.content ?? item.type).slice(0,3) + index,
       pb: '0.5em',
     }
     switch (item.type) {
@@ -32,6 +33,8 @@ export default function FormattedText({ textArray }) {
           }</UnorderedList>
       case 'spacer':
         return <Box width='100%' height='2rem' />
+      case 'image':
+        return <Image py='1em' src={item.url} />
       default:
         return <Text {...sharedStyles}>{item.content}</Text>
     }
