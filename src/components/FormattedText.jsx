@@ -32,9 +32,9 @@ export default function FormattedText({ textArray }) {
             item.content.map((v,i) => <ListItem key={i}>{v}</ListItem>)
           }</UnorderedList>
       case 'spacer':
-        return <Box width='100%' height='2rem' />
+        return <Box {...sharedStyles} width='100%' height='1.5rem' />
       case 'image':
-        return <Image py='1em' src={item.url} />
+        return <Image {...sharedStyles} py='1em' src={item.url} />
       default:
         return <Text {...sharedStyles}>{item.content}</Text>
     }
