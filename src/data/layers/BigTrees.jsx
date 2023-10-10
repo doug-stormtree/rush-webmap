@@ -41,7 +41,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'wood-wide-web', StartOnLayersName, active: true },
+    { key: 'wood-wide-web', group: StartOnLayersName, active: true },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }
