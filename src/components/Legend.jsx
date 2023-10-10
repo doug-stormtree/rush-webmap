@@ -191,7 +191,7 @@ const LegendItemDetails = ({ layer }) => {
               }
               <Flex flex='1' marginInline={2} direction='column' alignItems='flex-start'>
                 <Text>{val?.legendText ?? key}</Text>
-                { val.subText?.map((text) => <Text marginInline={4} fontSize='sm' fontWeight='semibold'>{text}</Text>) }
+                { val.subText?.map((text) => <Text key={text} marginInline={4} fontSize='sm' fontWeight='semibold'>{text}</Text>) }
               </Flex>
             </Flex>
           )}
