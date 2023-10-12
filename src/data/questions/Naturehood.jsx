@@ -39,6 +39,7 @@ const Naturehood = {
     {type: 'p', content: 'Pollinators are essential for food production on Vancouver Island, and pollination relies on the health of our wild ecosystems. Many pollinators are facing extinction around the globe due to development and fragmentation of habitat, absence of food, pesticides (neonicotinoids), invasive species, general pollution and climate change. Human settlement has altered watersheds affecting the key corridors that are home to these creatures.'},
     {type: 'p', content: 'The concrete jungle is more likely to create poverty and impact human health too. A 2022 Nature Canada Report revealed that the percentage of tree canopy is much lower in low-income and racialized neighbourhoods. In October 2022, Vancouver Island’s chief medical officer, Dr. Reka Gustafson says she wants to tackle mental health and track how climate change is making these inequities more pronounced. Learn about the clear link between the quality of the Naturehood and your long-term health. Show Nature some love and let the sights, sounds, scents and sensations work their healing magic for you.'},
     {type: 'p', content: 'Help pollinate the world with kindness.  Support community groups that are working to re-green the concrete jungle and take care of the folks who live there.'},
+    {type: 'image', url: require('../png/Infographic_PollinatorPathways_min.png')},
   ],
   act: {
     initiatives: [

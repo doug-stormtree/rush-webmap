@@ -50,7 +50,7 @@ const WoodWideWeb = {
     {type: 'p', content: 'It is important to find out who is responsible for planning and looking after trees in urban areas. Now, with the combination of pollution, increasing population and now climate change, there is a lot of pressure on urban areas. It is really important to look after the health of these trees because they are now stressed.'},
     {type: 'p', content: 'Research shows that anyone who spends at least 2 hours in Nature a week can improve their mental, emotional and physical health. Nature can boost your confidence immune system and brainpower.'},
     {type: 'p', content: 'Science is still catching up with what Indigenous people have known forever which is that we are made of the same stuff and we are all related. Lets keep Nature close and our connection strong.'},
-    {type: 'image', url: require('../png/MotherTrees_min.png')},
+    {type: 'image', url: require('../png/Infographic_MotherTrees_min.png')},
   ],
   act: {
     initiatives: [
