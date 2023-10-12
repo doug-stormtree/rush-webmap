@@ -34,7 +34,7 @@ const Culture = {
       '        Red Dress Day - MMIWG2S - May 5',
       '        National Indigenous Peoples Day - June 21',
       '        National Truth and Reconciliation Day - September 30',
-      '    Know the name of the original peoples whose traditional territory you are on. Take care of the ecosystem so the indigenous way of life is possible.',
+      '    Know the name of the original peoples whose traditional territory you are on. Take care of the ecosystem so the Indigenous way of life is possible.',
       '    Read the Truth and Reconciliation Commission of Canada Calls to Action.',
       'Set up a Little Free Library or Seed Bank and register it with the Greater Victoria Place-making Network.',
       'Find out what is happening in your local community centres and support local art exhibitions, music festivals, and cultural celebrations.',
@@ -65,13 +65,13 @@ const Culture = {
         title: 'Native Land Digital',
         image: require('../png/NativeLandDigital.png'),
         link: 'https://native-land.ca/',
-        description: 'Native Land Digital strives to create and foster conversations about the history of colonialism, Indigenous ways of knowing, and settler-Indigenous relations, through educational resources such as their map and Territory Acknowledgement Guide. They strive to go beyond old ways of talking about Indigenous people and to develop a platform where Indigenous communities can represent themselves and their histories on their own terms.'
+        description: 'Native Land Digital strives to create and foster conversations about the history of colonialism, Indigenous ways of knowing, and settler-Indigenous relations, through educational resources such as their map and Territory Acknowledgement Guide. Native Land Digital reaches beyond old ways of talking about Indigenous people and to develop a platform where Indigenous communities can represent themselves and their histories on their own terms.'
       },
       {
         title: 'Truth and Reconciliation Report',
         image: require('../png/TRCC.png'),
         link: 'https://ehprnh2mwo3.exactdn.com/wp-content/uploads/2021/01/Calls_to_Action_English2.pdf',
-        description: 'With a mandate to inform Canadians about the legacy of the Indian Residential Schools system, in these reports the The Truth and Reconciliation Commission (TRC) documented the truth of Survivors, their families, communities and others personally affected by the residential school experience. June 2015, the TRC released its findings along with 94 "calls to action" regarding reconciliation between Canadians and Indigenous Peoples.'
+        description: 'With a mandate to inform Canadians about the legacy of the Indian Residential Schools system, in these reports the The Truth and Reconciliation Commission (TRC) documents the truth of Survivors, their families, communities, and others personally affected by the residential school experience. June 2015, the TRC released its findings along with 94 "calls to action" regarding reconciliation between Canadians and Indigenous Peoples.'
       }
     ],
   }

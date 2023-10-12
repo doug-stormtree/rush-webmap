@@ -6,7 +6,7 @@ const Coastal = {
   description_new: [
     {type: 'h2', content: 'You can stand your ground if...'},
     {type: 'ul', content: [
-      'Melting ice caps are neither sweet nor refreshing when it comes to sea level rise. Find out if your coast and drinking water supply is at risk.',
+      'The coastal sensitivity rating is low. This means that the shoreline ecosystem near you is in good shape.',
       'Sea level rise is projected to be less than 0.5m. This means your area is not as likely to be eroded by coastal inundation.',
       'Your risk of saltwater intrusion shows green on the map. This means that the ground you are standing on is not likely to let saltwater seep into the aquifer/water table.',
       'The shoreline is naturalized with plenty of land and marine vegetation to buffer storm surges and shift sands to adapt to changing conditions.',

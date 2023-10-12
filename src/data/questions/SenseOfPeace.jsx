@@ -43,6 +43,18 @@ const SenseOfPeace = {
   ],
   act: {
     initiatives: [
+      {
+        title: 'Human Nature Counselling Society',
+        link: 'https://humannaturecounselling.ca/who-we-are/',
+        image: require('../png/HumanNatureCounselling.png'),
+        description: 'The Human Nature Counselling Society specialize in supporting children, youth, and families through Nature-Based Therapy. Nature-based Therapy incorporates one’s relationship with the natural world into counselling that "strives towards the reciprocal healing of both humans and their larger ecological home.” Nature-Based Therapy may appeal to people who have exhausted more traditional, office-based clinical services, and/or who are looking for an approach that speaks to their passion and interest for the natural world.'
+      },
+      {
+        title: 'Forest Bathing Victoria - Shinrin-Yoku',
+        link: 'https://forestbathingvictoria.com/',
+        image: require('../png/ForestBathing.png'),
+        description: 'Forest Bathing, or Shinrin-Yoku, is a wellness practice that comes from Japanese preventative and restorative medicine. It involves consciously moving through natural places with gratitude, openness, keen sensory engagement and at a pace that soothes the mind and body. Visit this site to find out about guided Forest Bathing in the Victoria region.'
+      },
     ],
   },
 };
