@@ -80,7 +80,7 @@ const WoodWideWeb = {
       },
       {
         title: 'Territories of Life',
-        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
+        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of Indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
         link: 'https://report.territoriesoflife.org/',
         image: require('../png/TerritoriesOfLife.png')
       },

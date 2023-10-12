@@ -2,7 +2,7 @@ import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const layer = {
   title: 'Local Initiatives',
-  description: 'Learn more from these area specific community mapping initiatives by clicking one of these areas on the map and following the link.',
+  description: 'Learn more from these area-specific community mapping initiatives by clicking one of these areas on the map and following the link.',
   data: require('../geojson/BeatTheHeat_Links.geojson'),
   shape: 'polygon',
   symbology: 'single',

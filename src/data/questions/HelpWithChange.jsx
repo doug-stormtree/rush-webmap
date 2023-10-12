@@ -49,7 +49,7 @@ const HelpWithChange = {
         title: 'NatuR&D',
         image: require('../png/NatuRD.png'),
         link: 'https://naturnd.com/collaborate/',
-        description: 'NatuR&D exists to help people create a life of choices that support their health in concert with the planet\'s. We work with communities to facilitate conversations about their concerns to create solutions that fit the charater and scope of the issues as they see them. Working with Nature is our best chance for long-term and even, short-term resilience.  We help you spot the opportunities to create a system that is connected, protected, and able to adapt to changing conditions. Work with NatuR&D to give your ecosystem, your economy and your community\'s future a boost.',
+        description: 'NatuR&D exists to help people create a life of choices that support their health in concert with the planet\'s. We work with communities to facilitate conversations about their concerns to create solutions that fit the charater and scope of the issues as they see them. Working with Nature is our best chance for long-term and even short-term resilience.  We help you spot the opportunities to create a system that is connected, protected, and able to adapt to changing conditions. Work with NatuR&D to give your ecosystem, your economy and your community\'s future a boost.',
       },
       {
         title: 'Vancouver Island and Coastal Communities Climate Leadership Plan',
@@ -61,7 +61,7 @@ const HelpWithChange = {
         title: 'City of Victoria - Volunteering',
         image: require('../png/CityOfVictoria.png'),
         link: 'https://www.victoria.ca/EN/main/residents/public-safety/emergency-preparedness-victoriaready/volunteer-with-us.html',
-        description: 'The City of Victoria is putting out the call for volunteers to join their Emergency Support Servies (ESS) Team. ESS is a Provincial Government program for local authorities and Indigenous governments to deliver and coordinate essential services to the public during an emergency. ESS provides short-term, basic support to those impacted by emergencies ranging from a single house fire to extreme weather, tsunami, or earthquakes. Volunteer placements currently include positions in Cyclist Response and Auxiliary Communications. No experience necessary.  Free training is provided and volunteers gain valuable experience in public safety, and the opportunity to help out in an emergency.',
+        description: 'The City of Victoria is putting out the call for volunteers to join their Emergency Support Servies (ESS) Team. ESS is a Provincial Government program for local authorities and Indigenous governments to deliver and coordinate essential services to the public during an emergency. ESS provides short-term, basic support to those impacted by emergencies ranging from a single house fire to extreme weather, tsunami, or earthquakes. Check out the wide range of available volunteer placements. No experience necessary. Free training is provided and volunteers gain valuable experience in public safety, and the opportunity to help out in an emergency.',
       },
       {
         title: 'Beacon Community Services',
