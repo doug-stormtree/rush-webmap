@@ -1,5 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { StartOffLayersName } from '../TextContent';
+import { StartOnLayersName, StartOffLayersName } from '../TextContent';
 
 const layer = {
   title: 'Parks',
@@ -32,6 +32,7 @@ const layer = {
   questions: [
     { key: 'beat-the-heat', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Greenspace', active: false },
+    { key: 'sense-of-peace', group: StartOnLayersName, active: true },
   ]
 }
 
