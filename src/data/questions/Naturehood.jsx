@@ -44,6 +44,12 @@ const Naturehood = {
   act: {
     initiatives: [
       {
+        title: 'Activate your Neighbourhood',
+        description: 'This Tactical Guide to help you re-imagine, re-think and re-purpose the spaces in your neighbourhood to support and encourage physical activity and social connections is funded by the federal public health agency and created by Canada Parks and Recreation.',
+        link: 'https://activateyourneighbourhood.ca/',
+        image: require('../png/ActivateYourNeighbourhood.png')
+      },
+      {
         title: 'Habitat Acquisition Trust',
         description: 'Habitat Acquisition Trust (HAT) runs several Species at Risk Programs: "On Southern Vancouver Island, the increase in urbanization and loss of habitat has lead to many species at risk in our region. HAT works to protect and improve habitat for many of these species, and though we wish we could help them all we only run programs from a few of them."',
         link: 'https://hat.bc.ca/wildlife',
@@ -57,7 +63,7 @@ const Naturehood = {
       },
       {
         title: 'Quadra Cedar Hill Community Association',
-        description: 'The mission of QCHCA is to be an advocate and trusted resource for sustainability, vibrancy and engagement in our community.',
+        description: 'The mission of QCHCA is to be an advocate and trusted resource for sustainability, vibrancy and engagement in our community. Through its Climate Action initiative, the community is undertaking pollinator mapping, urban food farming and tree canopy initiatives and an annual going-greener event.',
         link: 'https://qchca.org/',
         image: require('../png/QuadraCedarHill.png')
       },
@@ -79,12 +85,14 @@ const Naturehood = {
         description: 'Use this digital map to help you navigate natural places in Greater Victoria. Learn about the Greater Victoria NatureHood initiative, ecosystems and biodiversity, waterways and watersheds, riparian zones, and some of the species of plants and animals found in the region.',
         image: require('../png/NatureInTheCity.png')
       },
+      /*
       {
         title: 'Greater Victoria Greenbelt Society',
         link: 'https://www.marylakeconnections.ca/greater-victoria-greenbelt-society/',
         description: 'The mission of the Greater Victoria Greenbelt Society is “to foster respect for nature and promote the protection of natural areas for the benefit of all future generations through environmental conservation, restoration, education, and cultural activities in alliance with local First Nations." The GVGS’s current project is the W̱MÍYEŦEN Nature Sanctuary (formerly Mary Lake), a special conserved area  with nature house and programs focused on nature and ecology.',
         image: require('../png/Placeholder.png')
       },
+      */
       {
         title: 'Friends of Maltby Lake Watershed Society',
         link: 'https://maltbylake.com/',

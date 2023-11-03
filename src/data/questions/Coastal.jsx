@@ -63,7 +63,6 @@ const Coastal = {
       },
       {
         title: 'Peninsula Streams & Shorelines',
-        noText: true,
         image: require('../png/PeninsulaStreams.png'),
         link: 'https://peninsulastreams.ca/',
         description: 'Peninsula Streams & Shorelines guides communities in organizing to restore and protect the watersheds and shorelines in this region. Their current upstream projects include working with communities and organizations to install rain gardens to manage excess water and mitigate toxic runoff risks to fish. Downstream focus projects include identifying and restoring forage fish beaches that are the foundation of the marine food web. If you want to be the change that tips the scales towards healthy waters, this is the place to skill up. From Headwaters to deep waters, PSS wants to hear your concerns and help your community take action.'
@@ -76,10 +75,15 @@ const Coastal = {
       },
       {
         title: "SeaChange Marine Conservation Society",
-        noText: true,
         link: "https://www.seachangesociety.com",
         image: require('../png/SeaChange.png'),
         description: "SeaChange supports communities in healing their coastline through educational, restoration and conservation from Haida Gwaii to Boundary Bay. From eelgrass planting to shoreline mapping and monitoring to school field work days, SeaChange creates practical opportunities for people to take action on coastal health.",
+      },
+      {
+        title: "South Coast Ship Watch Alliance",
+        link: "https://nofreighteranchorages.ca/",
+        image: require('../png/NoFreighter.png'),
+        description: "This organization advocates alongside First Nations to eliminate tanker anchorage and instead invest in technology to reduces ship congestion.",
       },
       {
         title: "Nature-based Solutions - Insurance Bureau of Canada",

@@ -35,7 +35,7 @@ const BeatTheHeat = {
     {type: 'p', content: 'High temperatures also threaten biodiversity by drying out habitats and directly increasing the body temperatures of the critters who live there. 70% of human sudden deaths recorded in BC during the heat wave of 2021 were due to extreme temperatures.'},
     {type: 'p', content: 'Research shows that communities with a lower income in Canada’s largest cities don’t have access to as much green space. This means more stress and mental health challenges that make it even harder to make ends meet and makes folks more vulnerable to heat events.'},
     {type: 'p', content: 'This same research points to the 3-30-300 standard. The Global Deal for Nature concludes that we need to protect at least 30% of the planet by 2030. Saanich is on board, having committed to at least 30% urban forest cover.'},
-    {type: 'p', content: 'While ocean breezes can cool neighbourhoods closer to the shore, making more space for Nature and decreasing dark non-draining pavement will support a cool microclimate consistently.'},
+    {type: 'p', content: 'While ocean breezes can cool neighbourhoods closer to the shore, making more space for Nature and decreasing dark non-draining pavement will support a cool microclimate consistently. Where high density development is needed, attention must still be paid to the presence of vegetation and permeable surfaces to keep the neighbourhood cool, protected from extreme water events, and with enough habitat for biodiversity which in turn promotes community wellbeing through lower stress levels.'},
   ],
   act: {
     initiatives: [

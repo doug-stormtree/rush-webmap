@@ -38,10 +38,16 @@ const LocalToGlobal = {
   act: {
     initiatives: [
       {
-        title: 'One Planet City Challenge',
-        description: 'The One Planet City Challenge is an invitation to every local government on the planet to show the world what climate action looks like in their community and the difference it makes.',
+        title: 'Community Health & Climate Change - VCH',
+        description: 'This ArcGIS storymap created by Vancouver Coastal Health shows climate hazards across BC\'s Lower mainland with help interpreting the hazard data.',
+        link: 'https://storymaps.arcgis.com/stories/7bf7141bb6fd41fb9b61a02cfbc61ecd',
+        image: require('../png/VancouverCoastalHealth.png')
+      },
+      {
+        title: 'Community Health & Climate Change - Interior Health',
+        description: 'Mapping Exposure, Sensitivity, and Adaptive Capacity to Four Health-Related Climate Hazards in BC\'s Interior.',
         link: 'https://wwf.panda.org/projects/one_planet_cities/one_planet_city_challenge/',
-        image: require('../png/OnePlanetCity.png')
+        image: require('../png/InteriorHealth.png')
       },
       {
         title: 'One Planet Saanich',

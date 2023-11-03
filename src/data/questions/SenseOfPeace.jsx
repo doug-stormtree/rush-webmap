@@ -44,6 +44,12 @@ const SenseOfPeace = {
   act: {
     initiatives: [
       {
+        title: 'Vital Signs Victoria',
+        link: 'https://victoriafoundation.bc.ca/wp-content/uploads/2023/10/EMBARGOED-Victoria-Foundation-2023-Vital-Signs_WEB.pdf',
+        image: require('../png/VitalSigns.png'),
+        description: 'The 18th Vitality report for this area is funded by the Victoria Foundation.  Here you will find a compilation of feedback from residents and regional data sources in an annual community check-up format with a grade on vitality relative to various areas from gender equality to transportation to arts and culture. The Victoria Foundation produces the report to connect philanthropy to community needs and opportunities. For more information, visit communityfoundations.ca/vitalsigns.'
+      },
+      {
         title: 'Human Nature Counselling Society',
         link: 'https://humannaturecounselling.ca/who-we-are/',
         image: require('../png/HumanNatureCounselling.png'),
