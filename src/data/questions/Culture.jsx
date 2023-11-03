@@ -50,6 +50,12 @@ const Culture = {
   act: {
     initiatives: [
       {
+        title: 'W̱SÁNEĆ Leadership Council - Settler Resources',
+        image: 'https://wsanec.com/wp-content/uploads/2019/04/WLC-logo-colour-500px-min.png',
+        link: 'https://wsanec.com/learn-settlers/',
+        description: 'Resources for settlers who are interested in allyship. Here you will find information on significant initiatives and ways you can help. The reason territorial acknowledgements are needed and how to prepare one. Reading lists and ways to donate to accelerate progress.'
+      },
+      {
         title: 'W̱SÁNEĆ Peninsula Environmental Organizations',
         image: require('../png/WSANECEnvironmentalOrgs.png'),
         link: 'https://storymaps.arcgis.com/stories/5239fadd726c462da56ebcbe231c57be',
@@ -72,7 +78,19 @@ const Culture = {
         image: require('../png/TRCC.png'),
         link: 'https://ehprnh2mwo3.exactdn.com/wp-content/uploads/2021/01/Calls_to_Action_English2.pdf',
         description: 'With a mandate to inform Canadians about the legacy of the Indian Residential Schools system, in these reports the The Truth and Reconciliation Commission (TRC) documents the truth of Survivors, their families, communities, and others personally affected by the residential school experience. June 2015, the TRC released its findings along with 94 "calls to action" regarding reconciliation between Canadians and Indigenous Peoples.'
-      }
+      },
+      {
+        title: 'STEAM Ecosystem BC',
+        image: 'https://steamecosystembc.ca/wp-content/uploads/2021/09/STEAM-Ecosystem-BC.png',
+        link: 'https://steamecosystembc.ca/',
+        description: 'STEAM Ecosystem BC Association is a non-profit, community-led response to accelerate the growth of STEAM literacy in British Columbia. This growing network brings together organizations from across multiple sectors (industry, education, government, business, non-profits) to ensure all learners have equal access to educational resources and opportunities in our communities.'
+      },
+      {
+        title: 'RUSH Culture Compass Storymap',
+        image: require('../png/Placeholder.png'),
+        link: 'https://storymaps.arcgis.com/stories/ba28ad0ffcbf431482d26e552593c54f',
+        description: 'This is an open map that highlights the rich cultural resources of the Victoria region.  It was created by three UVic students and supported by the  RUSH Initiative . The purpose of this StoryMap is to track places of culture and belonging and find places where people are finding cultural connections and exploring" cultural meaning."'
+      },
     ],
   }
 };

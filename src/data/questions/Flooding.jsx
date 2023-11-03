@@ -34,11 +34,14 @@ const Flooding = {
     ]},
     {type: 'spacer'},
     {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'Our bodies and the surface of the planet are ~70% water. We depend on the water cycle to redistribute water around the planet so that we have enough to drink, clean and water the land.'},
-    {type: 'p', content: 'Climate change is altering this natural flow.  Too much precipitation at one time leads to coastal flooding, backs up sewer systems, and floods urban communities.'},
-    {type: 'p', content: 'In 2021, atmospheric rivers brought so much water to BC that the land could not absorb it fast enough. The intense flooding resulted in damages that cost over 1 billion dollars in federal disaster aid. Many communities were displaced and southern BC’s food production industry was devastated.'},
-    {type: 'p', content: 'Proper stormwater management planning is a key part of the solution but, we need to ensure that our built infrastructure is working with the “natural infrastructure” that watersheds, wetlands, forests and coastal ecosystems provide. Copying Nature’s strategies for managing water is also known as designing nature-based solutions.'},
-    {type: 'p', content: 'Rain gardens reduce the amount of toxins from entering creeks and oceans through the storm sewage system. They also replenish the natural underground water supply that seeps gradually into creeks to keep them flowing clean and cool even during summer dry spells. Rain gardens mimic nature’s own “timed-release” system for maintaining healthy water levels for salmon (not too much, not too little).'},
+    {type: 'p', content: 'Our bodies and the surface of the planet are ~70% water. We depend on the water cycle to redistribute water around the planet so that we have enough to drink, clean and water the land. Climate change is altering this natural flow. Too much precipitation at one time leads to coastal flooding, backs up sewer systems, and floods urban communities. In 2021, atmospheric rivers brought so much water to BC that the land could not absorb it fast enough. The intense flooding resulted in damages that cost over 1 billion dollars in federal disaster aid. Many communities were displaced and southern BC’s food production industry was devastated.'},
+    {type: 'p', content: 'Proper stormwater management planning is a key part of the solution but, we need to ensure that our built infrastructure is working with the “natural infrastructure" that watersheds, wetlands, forests and coastal ecosystems provide. To protect communities from flooding we need to work with the water cycle and retain it where it falls by creating ways for it to be absorbed. This can happen through natural spaces, raingardens, laneway infiltrations, and bioswales. Copying Nature’s strategies for managing water is also known as designing nature-based solutions. Stormwater infrastructure design used to be mostly about drainage and getting the water off the land but, the practice is now evolving to create better infiltration, storage, and water recycling solutions.'},
+    {type: 'p', content: 'When we overuse water resources the water table drops.  Water scarcity is becoming a serious problem in many communities and the islands are already feeling it in this region. Even a small change in the level of the water table can become a big problem over a few years. Forests are key in recharging the aquifer as they capture, filter, store, and maintain healthy water levels. In the city, we can increase impermeable surfaces with paving stones, gravel, oyster shell hash, and natural materials like mulch.'},
+    {type: 'p', content: 'We also need to ensure that the aquifers can be recharged and this depends on having surfaces that drain which can be hard to come by in a concrete jungle.  Fish returning in the fall to their natal streams rely on the streams being recharged with groundwater. At that time of year it is the only source of water that is cool, clean and clear. For this recharge to occur, the water table levels need to be healthy. Cool, clean and clear water must be maintained throughout the year for the salmon and other lifecycles to persist.  This happens best when we allow the natural vegetation that grows in an alongside watersheds to thrive. These zones are called riparian areas and are crucial in holding onto watershed banks during extreme inundation events and keeping the water table healthy and cool in drier spells.'},
+    {type: 'p', content: 'Rain gardens mimic nature’s own “timed-release” system for maintaining healthy water levels for salmon (not too much, not too little). They also reduce the rate of toxins entering creeks and the ocean through the stormwater system. Rain gardens replenish the natural underground water supply by allowing it to seep gradually into creeks and keep them flowing even during summer dry spells. Slowing down the flow of water stops erosion all along the watershed.'},
+    {type: 'p', content: 'The City of Vancouver is beginning to use a strategy called laneway infiltration. Without changing the look and function of the laneways, this strategy creates better draining and infiltration of the water table. The compacted dirt and rock is replaced with a gravel bed of various rock sizes and topped with a stable permeable surface. This lets air and water move through the ground amplifying recharge, filtration and even carbon drawdown. It also helps protect communities from flooding communities where sea level rise is projected to occur.'},
+    {type: 'p', content: 'This region has many natural springs that must be taken into account when planning for development. This natural sources of clean water have been key to human and non- human survival over millions of years. Our water is protected through the Groundwater Protection Regulation and the Water Sustainability Act but we lack the funding and tools to do the kind of monitoring that is needed. By taking simple actions and understanding why you should care, our aquifers can be protected through community conscience.'},
+    {type: 'p', content: 'Watersheds cross municipal and territorial boundaries. The Saanich Peninsual Environmental Coalition created a bioregional framework for municipalities that underscores the need for community perspectives, interjurisdictional collaboration, and ecosystem integrity. The goal is to encourage municipalities to work across boundaries in securing the health of all communities. The Cascadia Bioregional Movement seeks to heal the planet through stewardship of riversheds across the world.'},
   ],
   act: {
     initiatives: [
@@ -50,7 +53,6 @@ const Flooding = {
       },
       {
         title: 'Peninsula Streams & Shorelines',
-        noText: true,
         image: require('../png/PeninsulaStreams.png'),
         link: 'https://peninsulastreams.ca/',
         description: 'Peninsula Streams & Shorelines guides communities in organizing to restore and protect the watersheds and shorelines in this region. Their current upstream projects include working with communities and organizations to install rain gardens to manage excess water and mitigate toxic runoff risks to fish. Downstream focus projects include identifying and restoring forage fish beaches that are the foundation of the marine food web. If you want to be the change that tips the scales towards healthy waters, this is the place to skill up. From Headwaters to deep waters, PSS wants to hear your concerns and help your community take action.'
@@ -62,10 +64,22 @@ const Flooding = {
         description: 'A dedicated resource hub to provide local leaders with knowledge, skills, and support to deliver effective watershed management and governance in their communities. Watersheds BC emerged in response to this need.'
       },
       {
+        title: 'The Groundwater Project',
+        image: 'https://gw-project.org/wp-content/uploads/2020/08/logo_300x300_a.png',
+        link: 'https://gw-project.org/',
+        description: 'Free and online learning resources to make it possible for anyone to understand the issues when it comes to groundwater. This NGO has many collaborators and has its roots in growing Hydrologists without Borders.'
+      },
+      {
         title: 'CRD Watersheds Map',
         image: require('../png/CRDWatershedMap.png'),
         link: 'https://www.crd.bc.ca/docs/default-source/es-watersheds-pdf/regional-watershed-maps/watershedscrdoverview400dpired.pdf?sfvrsn=5d837aca_2',
         description: 'A PDF Map of the watershed boundaries within the Capital Regional District. Warning: large file size.'
+      },
+      {
+        title: 'Saanich Peninsula Environmental Coalition',
+        image: require('../png/SPEC.png'),
+        link: 'https://saanichpeninsula.ca/',
+        description: 'In respectful collaboration with the W̱SÁNEĆ Nation, the municipalities of Central Saanich, North Saanich and Sidney, the Saanich Peninsula Environmental Coalition is working to integrate the principles and strategies of a bioregional framework into municipal OCPs. Thinking and planning in terms of bioregions - as opposed to political or administrative regions - will better support the overall health of the environment and, by extension, the diversity of human cultures and interests in that bioregion. Through the bioregional lens, the Coalition recommends policy change and invites public response and engagement to develop a stronger, more comprehensive, and citizen-approved approach to ecological sustainability.'
       },
       {
         title: 'The 1000 Rain Gardens Project',

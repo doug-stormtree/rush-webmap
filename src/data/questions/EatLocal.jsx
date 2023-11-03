@@ -55,6 +55,36 @@ const EatLocal = {
         link: 'https://www.iyeherstories.com/',
         description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.'
       },
+      {
+        title: 'Greater Victoria Cultural Food Community Map',
+        image: require('../png/Placeholder.png'),
+        link: 'https://storymaps.arcgis.com/stories/06ee241047d8455bbb02230f453f2edc',
+        description: 'The Greater Victoria Cultural Food Community Map illustrates many ways in which food is a critical component of cultural well-being. The Map emphasizes that while Cultural foods help individuals maintain a sense of belonging and identity, there is a lack of culturally relevant foods being grown and sold at affordable prices in the Victoria and Saanich regions for IBPOC, refugees, and community members experiencing marginalization. The Map recommends allocating more resources towards the local production of culturally appropriate foods, as well as to cultural food events and other avenues to help folks navigate the local food scene.'
+      },
+      {
+        title: 'BC Farmers’ Market - Food coupons',
+        image: require('../png/BCFarmersMarket.png'),
+        link: 'https://bcfarmersmarket.org/coupon-program/where-it-operates/',
+        description: 'The Farmers’ Market Nutrition Coupon Program is "a healthy eating initiative that supports farmers’ markets and strengthens food security across British Columbia." Community partner organizations provide coupons to lower-income families, pregnant people and seniors. These coupons can be spent at all participating member farmers’ markets. Households enrolled in the program may receive $27/week in coupons for up to 16 weeks. Get in touch with your local community partner (identified on the website) to access coupons. There is high demand and limited funding for this program across BC, and capacity will vary from partner to partner.'
+      },
+      {
+        title: 'Cascadia Seaweed',
+        image: require('../png/CascadiaSeaweed.png'),
+        link: 'https://www.cascadiaseaweed.com/about-us-4-0',
+        description: 'Cultivated kelp provides a nature-based solution to climate change and food security. Cascadia Seaweed cultivates local species of seaweed on low-impact ocean farms in partnership with coastal First Nations, harvests the seaweed, and manufactures products for land-based farmers. Cascadia operations use biological solutions to increase food production, mitigate climate change, improve ocean ecosystems, and advance Indigenous reconciliation.  Cascadia describes their operation as "sustainable aquaculture supporting regenerative agriculture — a circular system where every touch point makes a positive impact."'
+      },
+      {
+        title: 'Capital Region Food & Agriculture Initiatives Roundtable',
+        image: require('../png/CRFAIR.png'),
+        link: 'http://www.crfair.ca/',
+        description: 'The Capital Region Food and Agricultural Initiatives Roundtable (CRFAIR) works to mobilize and connect efforts to develop healthy, equitable and sustainable food systems in the Capital Region. CRFAIR acts as a regional backbone organization, and offers a range of services to community organizations, government, and industry.'
+      },
+      {
+        title: 'Cowichan Green Community',
+        image: require('../png/CowichanGreen.png'),
+        link: 'https://cowichangreencommunity.org/all-locations/',
+        description: 'The Cowichan Green Communities local farm map features producers across Vancouver Island dedicated to adding value to their ecosystems and improving food security.'
+      },
     ],
   }
 };
