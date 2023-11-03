@@ -18,6 +18,7 @@ export default function InitiativeButton({initiative}) {
         <Image
           src={initiative.image}
           alt={initiative.title}
+          fallbackSrc={require('../data/png/Placeholder.png')}
           objectFit="cover"
           minW="100%"
           minH="100%"
