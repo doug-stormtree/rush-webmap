@@ -1,5 +1,4 @@
 import { getStyleMapProperty, mapPopupContent } from "../LeafletStyleHelpers";
-import { StartOnLayersName } from "../TextContent";
 
 const styleMap_CarbonSeq = new Map([
   ['Wetland',    {fillColor: '#225ea8', legendText: 'Wetland', subText: ['471.5 tC02e per hectare','3.3 tC02e per hectare per year']}],
@@ -59,7 +58,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'wood-wide-web', group: StartOnLayersName, active: true },
+    { key: 'wood-wide-web', group: 'Deeper Roots', active: true },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }
