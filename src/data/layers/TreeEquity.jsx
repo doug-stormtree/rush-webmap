@@ -11,6 +11,8 @@ const styleMap = new Map([
   ["5ca7bff5ecd8490100caba11",{ src: ogmIconLink("5ca7bff5ecd8490100caba11"), legendText: 'Native Forest or Plants'}],
 ]);
 
+
+
 const layer = {
   title: 'Tree Equity Community Map',
   description: [
@@ -24,10 +26,11 @@ const layer = {
     {type: 'link', content: 'Identifying Conifer Trees', url: 'https://tidcf.nrcan.gc.ca/en/trees/identification/conifers'},
     {type: 'link', content: 'Measuring Tree Circumference - BC BigTree Registry', url: 'https://bigtreesreg.sites.olt.ubc.ca/files/2014/04/BC-BigTree-Field-Package.pdf#page=7'},
   ],
-  data: require('../geojson/TreeEquity.geojson'),
+  data: 'https://new.opengreenmap.org/api-v1/features?format=geojson&edit=false&map=65205f220ea614010052cd1a',
   shape: 'point',
   symbology: 'classified',
-  styleMap: styleMap,
+  styleMap: undefined,
+  ogmMapId: '65205f220ea614010052cd1a',
   options: {
     pointToLayer: (f,l) => pointToIcon(l, {icon: f.properties.icons.length > 0 ?
       <img
@@ -58,3 +61,4 @@ const layer = {
 }
 
 export default layer;
+
