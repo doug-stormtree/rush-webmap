@@ -60,7 +60,7 @@ const layer = {
       fill: null,
       stroke: null,
       icon: <GHGCarIcon percentGHG={f.properties.OnRoadTransportationChange} />
-    }, Math.min(Math.abs(f.properties.OnRoadTransportationChange) + 50, 100), null),
+    }, Math.min(Math.abs(f.properties.OnRoadTransportationChange) + 50, 100), 0, null),
     onEachFeature: (f,l) => {
       l.bindPopup(mapPopupContent(
           f.properties.LocalGov,

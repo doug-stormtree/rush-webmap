@@ -62,6 +62,7 @@ const layer = {
         icon: <GHGBuildingIcon percentGHG={f.properties.StationaryChange} />
       }, 
       Math.min(Math.abs(f.properties.StationaryChange) + 50, 100),
+      0,
       null),
     onEachFeature: (f,l) => {
       l.bindPopup(mapPopupContent(
