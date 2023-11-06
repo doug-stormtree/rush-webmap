@@ -16,7 +16,6 @@ export const pointToIconByProperty = (feature, latlng, property, propertyMap) =>
 export const MapMarker = (props) => {
   return (
     <div style={{
-      overflow: 'hidden',
       padding: (props.padding) + 'px',
       borderRadius: '100%',
       backgroundColor: props.bgColor,
