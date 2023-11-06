@@ -20,7 +20,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
-import { useMapLayerStore } from '../data/Questions';
+import { useMapLayerStore, LOADING } from '../data/Questions';
 import FormattedText from './FormattedText';
 
 // Wraps Legend in a Box for large screen sizes.
@@ -135,7 +135,7 @@ export const LegendItem = ({ layerId, question }) => {
   return (
     <>
       <Flex direction='row' alignItems='center' gap={2}>
-        {layer.leafletLayer === 'loading' //|| parseInt(layerId.slice(-1)) % 2 === 0
+        {layer.leafletLayer === LOADING
           ? <Spinner
               color='blue.500'
               emptyColor='gray.200'
@@ -157,7 +157,7 @@ export const LegendItem = ({ layerId, question }) => {
           textOverflow='ellipsis'
           display='-webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;'
           whiteSpace='normal'
-        >{layer.leafletLayer === 'loading' ? 'Loading...' : layer.title}</FormLabel>
+        >{layer.leafletLayer === LOADING ? 'Loading...' : layer.title}</FormLabel>
         <LegendPatch layerId={layerId} flex='0' />
         <IconButton
           variant='ghost'
@@ -168,34 +168,37 @@ export const LegendItem = ({ layerId, question }) => {
         />
       </Flex>
       { isOpen
-        ? <LegendItemDetails layer={layer} />
+        ? <LegendItemDetails layerId={layerId} />
         : null
       }
     </>
   );
 }
 
-const LegendItemDetails = ({ layer }) => {
+const LegendItemDetails = ({ layerId }) => {
+  const layer = useMapLayerStore((state) => state.layers.get(layerId))
+  const styleMap = useMapLayerStore((state) => state.getLayerStyleMap(layerId))
+
   return (
     <Flex direction='column' gap='2' my='2' marginInlineStart='3' mb='3'>
-      {layer.styleMap ? 
-        <Flex direction='column' gap='1' mx='2' p='2' bgColor='gray.100' borderRadius='lg'>
-          { layer.legendTitle ? <Heading size='sm'>{layer.legendTitle}</Heading> : null }
-          {[...layer.styleMap.entries()].map(([key, val]) => 
-            <Flex key={val?.legendText ?? key} direction='row' alignItems='flex-start' >
-              { layer.shape === 'point'
-                  ? <SinglePatchPoint style={val} flex='0' />
-                  : layer.shape === 'line'
-                    ? <SinglePatchLine style={val} flex='0' />
-                    : <SinglePatchPolygon style={val} flex='0' />
-              }
-              <Flex flex='1' marginInline={2} direction='column' alignItems='flex-start'>
-                <Text>{val?.legendText ?? key}</Text>
-                { val.subText?.map((text) => <Text key={text} marginInline={4} fontSize='sm' fontWeight='semibold'>{text}</Text>) }
-              </Flex>
+      {styleMap instanceof Map && styleMap.size > 0 ?
+      <Flex direction='column' gap='1' mx='2' p='2' bgColor='gray.100' borderRadius='lg'>
+        {layer.legendTitle ? <Heading size='sm'>{layer.legendTitle}</Heading> : null }
+        {[...styleMap.entries()].map(([key, val]) => 
+          <Flex key={val?.legendText ?? key} direction='row' alignItems='center' >
+            { layer.shape === 'point'
+                ? <SinglePatchPoint style={val} flex='0' />
+                : layer.shape === 'line'
+                  ? <SinglePatchLine style={val} flex='0' />
+                  : <SinglePatchPolygon style={val} flex='0' />
+            }
+            <Flex flex='1' marginInline={2} direction='column' alignItems='flex-start'>
+              <Text>{val?.legendText ?? key}</Text>
+              { val.subText?.map((text) => <Text key={text} marginInline={4} fontSize='sm' fontWeight='semibold'>{text}</Text>) }
             </Flex>
-          )}
-        </Flex> : null }
+          </Flex>
+        )}
+      </Flex> : null }
       <LegendItemDescription description={layer.description} />
     </Flex>
   );
@@ -212,13 +215,14 @@ const LegendItemDescription = ({ description }) => {
 
 // Legend Patch Components
 const LegendPatch = ({ layerId }) => {
-  const layer = useMapLayerStore((state) => state.layers.get(layerId));
+  const layer = useMapLayerStore((state) => state.layers.get(layerId))
+  const styleMap = useMapLayerStore((state) => state.getLayerStyleMap(layerId))
 
   if (layer.symbology === 'classified') {
     return layer.shape === 'point' ? (
-      <ClassifiedPatchPoint styleMap={layer.styleMap} />
+      <ClassifiedPatchPoint styleMap={styleMap} />
     ) : (
-      <ClassifiedPatchPolygon styleMap={layer.styleMap} />
+      <ClassifiedPatchPolygon styleMap={styleMap} />
     )
   }
 
