@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import ReactDOMServer from "react-dom/server";
 import * as L from 'leaflet';
 import { VStack, Heading, Text, Link, Image } from "@chakra-ui/react";
+import sanitizeHtml from 'sanitize-html';
 
 // mapData to Leaflet helper function
 export const pointToIconByProperty = (feature, latlng, property, propertyMap) => {
@@ -76,7 +77,7 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
       <Heading size='sm' fontSize='20px'><b>{title}</b></Heading>
       { descItems.map((desc, index) => 
         <Text key={'desc'+index} fontSize='16px'>
-          {desc}
+          {sanitizeHtml(desc, {allowedAttributes: {}, allowedTags: []})}
         </Text>
       )}
       {imageURL ? <Image src={imageURL} alt={title}/> : null}

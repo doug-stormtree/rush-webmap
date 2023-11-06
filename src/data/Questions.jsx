@@ -1,9 +1,10 @@
 import produce, { enableMapSet } from 'immer';
 import { create }  from 'zustand';
 import { geoJSON } from 'leaflet';
+import { ogmIconLink } from './LeafletStyleHelpers';
 
 // Constant value for loading state
-const LOADING = 'loading';
+export const LOADING = 'loading';
 
 // Enable Immer MapSet
 enableMapSet();
@@ -31,15 +32,23 @@ importAll(require.context('./layers/', true, /\.jsx$/));
 // Create mapLayerStore
 const layerMap = produce(new Map(), draft => {
   Object.keys(layerCache).forEach((key) => {
+    const {styleMap, ...layerAttrs} = layerCache[key]
     draft.set(key, {
       active: false,
-      ...layerCache[key]
+      ...layerAttrs
     })
   });
 });
 
+const layerStylesMap = produce(new Map(), draft => {
+  Object.keys(layerCache).forEach((key) => {
+    draft.set(key, layerCache[key].styleMap)
+  })
+})
+
 export const useMapLayerStore = create((set, get) => ({
   layers: layerMap,
+  layerStyles: layerStylesMap,
   getLayers: (question, activeOnly = false) => {
     const layerEntries = [...get().layers.entries()];
     return (question || activeOnly) 
@@ -101,5 +110,39 @@ export const useMapLayerStore = create((set, get) => ({
         });
     }
     return layer.leafletLayer;
+  },
+  // Layer Legend Style Map
+  setLayerStyleMap: (layerId, styleMap) =>
+    set(
+      produce((state) => {
+        state.layerStyles.set(layerId, styleMap);
+      })
+    ),
+  getLayerStyleMap: (layerId) => {
+    const styleMap = get().layerStyles.get(layerId)
+    const ogmMapId = get().layers.get(layerId).ogmMapId
+    if (styleMap === undefined) {
+      if (ogmMapId === undefined) {
+        const newMap = new Map([])
+        get().setLayerStyleMap(layerId, newMap)
+        return newMap
+      }
+      // Fetch OGM Icons
+      fetch(`https://new.opengreenmap.org/api-v1/icons?withoutAttributes=true&edit=false&map=${ogmMapId}`)
+        .then((response) => response.json())
+        .then((json) => {
+          get().setLayerStyleMap(layerId, new Map(json.icons
+              .sort((a,b) => a.name > b.name ? 1 : a.name < b.name ? -1 : 0)
+              .map((s) => {
+                return [s._id, { src: ogmIconLink(s._id), legendText: s.name}]
+              })
+            ))
+        })
+      // Return loading state
+      const loadingMap = new Map([['',{legendText:'Loading...'}]])
+      get().setLayerStyleMap(layerId, loadingMap)
+      return loadingMap
+    }
+    return styleMap;
   }
 }));
