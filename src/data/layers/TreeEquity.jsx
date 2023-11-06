@@ -1,17 +1,5 @@
-import { mapPopupContent, ogmIconLink, pointToIcon } from '../LeafletStyleHelpers';
+import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
 import { StartOnLayersName } from '../TextContent';
-
-const styleMap = new Map([
-  ["65133faf6f5ec60100966b95",{ src: ogmIconLink("65133faf6f5ec60100966b95"), legendText: 'Big Tree - Broad Leaf' }],
-  ["65133fed6f5ec60100966b99",{ src: ogmIconLink("65133fed6f5ec60100966b99"), legendText: 'Big Tree - Conifer'}],
-  ["6513400e91223601005e4ca0",{ src: ogmIconLink("6513400e91223601005e4ca0"), legendText: 'Three Trees'}],
-  ["5c311b3537407e1f05ac3946",{ src: ogmIconLink("5c311b3537407e1f05ac3946"), legendText: 'SDG 3 - Good Health and Well Being'}],
-  ["5c312ca837407e1f05ac3952",{ src: ogmIconLink("5c312ca837407e1f05ac3952"), legendText: 'SDG 15 - Life on Land'}],
-  ["5ca7bff9ecd8490100caba14",{ src: ogmIconLink("5ca7bff9ecd8490100caba14"), legendText: 'Special Tree'}],
-  ["5ca7bff5ecd8490100caba11",{ src: ogmIconLink("5ca7bff5ecd8490100caba11"), legendText: 'Native Forest or Plants'}],
-]);
-
-
 
 const layer = {
   title: 'Tree Equity Community Map',
@@ -37,7 +25,7 @@ const layer = {
         width="26px"
         height="26px"
         src={`https://new.opengreenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}
-        alt={styleMap.get(f.properties.icons[0])?.legendText ?? ''}
+        alt={f.properties?.name ?? ''}
       /> : null
     }),
     onEachFeature: (f,l) => {
@@ -61,4 +49,3 @@ const layer = {
 }
 
 export default layer;
-
