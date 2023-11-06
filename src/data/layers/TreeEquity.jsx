@@ -1,4 +1,4 @@
-import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
+import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
 import { StartOnLayersName } from '../TextContent';
 
 const layer = {
@@ -14,11 +14,10 @@ const layer = {
     {type: 'link', content: 'Identifying Conifer Trees', url: 'https://tidcf.nrcan.gc.ca/en/trees/identification/conifers'},
     {type: 'link', content: 'Measuring Tree Circumference - BC BigTree Registry', url: 'https://bigtreesreg.sites.olt.ubc.ca/files/2014/04/BC-BigTree-Field-Package.pdf#page=7'},
   ],
-  data: 'https://new.opengreenmap.org/api-v1/features?format=geojson&edit=false&map=65205f220ea614010052cd1a',
+  data: ogmFeaturesLink('65205f220ea614010052cd1a'),
+  ogmMapId: '65205f220ea614010052cd1a',
   shape: 'point',
   symbology: 'classified',
-  styleMap: undefined,
-  ogmMapId: '65205f220ea614010052cd1a',
   options: {
     pointToLayer: (f,l) => pointToIcon(l, {icon: f.properties.icons.length > 0 ?
       <img

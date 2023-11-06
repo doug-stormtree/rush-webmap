@@ -14,29 +14,28 @@ export const pointToIconByProperty = (feature, latlng, property, propertyMap) =>
 }
 
 export const MapMarker = (props) => {
-  const padding = 3;
   return (
     <div style={{
-      margin: props.margin ?? 'auto',
-      padding: (padding) + 'px',
+      overflow: 'hidden',
+      padding: (props.padding) + 'px',
       borderRadius: '100%',
       backgroundColor: props.bgColor,
       fill: props.fill,
       stroke: props.stroke,
       width: (props.size) + 'px',
       height: (props.size) + 'px',
-      fontSize: (props.size - padding - padding) + 'px',
+      fontSize: (props.size - props.padding - props.padding) + 'px',
     }}>{props.icon}</div>
   )
 }
 
-export const pointToIcon = (latlng, iconStyle, size = 32, backgroundColor = 'rgba(227,232,240,0.8)') => {
+export const pointToIcon = (latlng, iconStyle, size = 32, padding = 3, backgroundColor = 'rgba(227,232,240,0.8)') => {
   return L.marker(latlng, {
     icon: L.divIcon({
       className: "",
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2],
-      html: ReactDOMServer.renderToString(<MapMarker {...iconStyle} size={size} bgColor={backgroundColor} />),
+      html: ReactDOMServer.renderToString(<MapMarker {...iconStyle} size={size} padding={padding} bgColor={backgroundColor} />),
     })
   });
 }
@@ -101,6 +100,9 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
 // Open Green Map
 export const ogmIconLink = (id) =>
   `https://new.opengreenmap.org/api-v1/icons/${id}/image/value`
+
+export const ogmFeaturesLink = (id) =>
+  `https://new.opengreenmap.org/api-v1/features?format=geojson&edit=false&map=${id}`
 
 // Mouseover setStyle
 export const setStyleIfSupported = (e, style) => {
