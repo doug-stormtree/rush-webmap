@@ -3,7 +3,8 @@ import ReactDOMServer from "react-dom/server";
 import * as L from 'leaflet';
 import { VStack, Heading, Text, Link, Image } from "@chakra-ui/react";
 import sanitizeHtml from 'sanitize-html';
-
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 // mapData to Leaflet helper function
 export const pointToIconByProperty = (feature, latlng, property, propertyMap) => {
   if (property in feature.properties) {
@@ -60,15 +61,34 @@ export const geoDateToLocaleString = (dateString) => {
 }
 
 // Leaflet Popup Content
-export const mapPopupContent = (title, desc, link = null, linkText = null, imageURL = null) => {
+export const mapPopupContent = (
+  title,
+  desc,
+  link = null,
+  linkText = null,
+  imageURL = null,
+  audioURL = null,
+  audioText = null,
+) => {
   if (!title && !desc) return;
   var div = document.createElement('div');
   const root = createRoot(div);
-  root.render(<MapPopup title={title} desc={desc} link={link} linkText={linkText} imageURL={imageURL} />);
+  root.render(
+    <MapPopup
+      title={title}
+      desc={desc}
+      link={link}
+      linkText={linkText}
+      imageURL={imageURL}
+      audioURL={audioURL}
+      audioText={audioText}
+    />);
   return div;
 }
 
-const MapPopup = ({title, desc, link, linkText, imageURL}) => {
+const MapPopup = (
+  {title, desc, link, linkText, imageURL, audioURL, audioText}
+) => {
   const descItems = Array.isArray(desc) ? desc : [ desc ]
   return (
     <VStack align='flex-start'>
@@ -78,7 +98,11 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
           {sanitizeHtml(desc, {allowedAttributes: {}, allowedTags: []})}
         </Text>
       )}
-      {imageURL ? <Image src={imageURL} alt={title}/> : null}
+      {imageURL ? (
+        <a href={imageURL} target='_blank' rel='noreferrer'>
+          <Image src={imageURL} alt={title} />
+        </a>
+      ) : null}
       {link ? (
         <Link 
           href={link}
@@ -92,6 +116,20 @@ const MapPopup = ({title, desc, link, linkText, imageURL}) => {
           {linkText ?? link}
         </Link>
       ) : null}
+      {audioURL ? (
+        <AudioPlayer
+          src={audioURL}
+          header={audioText}
+          volume={0.5}
+          preload='metadata'
+          loop={true}
+          showJumpControls={false}
+          customControlsSection={['MAIN_CONTROLS','VOLUME_CONTROLS']}
+          hasDefaultKeyBindings={false}
+          layout='horizontal'
+          style={{ width: '100%', minWidth: '400px' }}
+        />
+      ) : null }
     </VStack>
   )
 }
