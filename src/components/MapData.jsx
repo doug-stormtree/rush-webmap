@@ -6,8 +6,6 @@ import Control from 'react-leaflet-custom-control';
 import { LegendDrawerButton } from './Legend';
 import { useMapLayerStore } from '../data/Questions';
 
-const basemap = L.tileLayer("http://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}");
-
 export const MapData = ({ question }) => {
   const map = useMap();
   const layers = useMapLayerStore((state) => state.layers);
@@ -16,9 +14,6 @@ export const MapData = ({ question }) => {
   // Effect adds all active layers to the map, fetching their data if necessary.
   useEffect(() => {
     if (map === undefined) return;
-
-    // Add Satellite Basemap
-    if (!map.hasLayer(basemap)) map.addLayer(basemap);
     
     layers.forEach((el, key) => {
       if (el.questions.some((q) => (q.key === question) && q.active)) {
@@ -70,3 +65,4 @@ export const MapData = ({ question }) => {
     </>
   );
 }
+export default MapData;
