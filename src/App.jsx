@@ -17,7 +17,8 @@ import { FaChevronUp } from 'react-icons/fa';
 import ContentPane from './components/ContentPane';
 import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
-import { MapData } from './components/MapData';
+import MapData from './components/MapData';
+import MapBasemap from './components/MapBasemap';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
 import QuestionMenuBar from './components/QuestionMenuBar';
@@ -149,6 +150,7 @@ function WebMap() {
           center={center}
         >
           <LeafletControlGeocoder />
+          <MapBasemap />
           <MapData question={activeQuestion} />
         </MapView>
         { smallDisplay
