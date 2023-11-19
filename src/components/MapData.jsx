@@ -37,11 +37,9 @@ export const MapData = ({ question }) => {
   // Render Legend Control on small displays.
   return (
     <>
-      { smallDisplay ? (
-          <Control position='topright'>
-            <LegendDrawerButton activeQuestion={question} />
-          </Control>
-        ) : null }
+      <Control position='topright'>
+        {smallDisplay ? <LegendDrawerButton activeQuestion={question} /> : null}
+      </Control>
       { [...layers.values()].some((layer) => layer.questions.some((q) => q.key === question)) ? null : (
         <Center style={{
           position: 'absolute',
