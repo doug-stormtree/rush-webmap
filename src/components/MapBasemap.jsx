@@ -73,7 +73,10 @@ export const MapBasemap = () => {
         <img
           src='/google_on_non_white.png'
           alt='Google'
-          style={{padding: '0 0 0.5em 0'}}
+          style={{
+            margin: '0 0 -10px -10px',
+            padding: '0 0 0.5em 0.5em'
+          }}
         />
       </Control>
     </>
@@ -124,6 +127,7 @@ const AttributionControl = () => {
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
+          margin: '0 -10px -10px 0',
           padding: '0.2em',
           gap: '0.4em',
           maxWidth: '80vw',
