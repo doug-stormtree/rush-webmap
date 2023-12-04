@@ -114,7 +114,7 @@ export const PlacesAutocomplete = () => {
 
   const inputWidth = useBreakpointValue({
     md: '500px',
-    base: 'calc(100vw - 20px)',
+    base: `calc(100vw - 20px - ${window.innerWidth - document.documentElement.clientWidth}px)`,
   }, {ssr:false, fallback:true});
   
   return (
