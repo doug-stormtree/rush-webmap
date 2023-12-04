@@ -14,5 +14,6 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RUSH_WEBAPP }}'
-          REACT_APP_GOOGLE_PLACES_KEY: '${{ secrets.REACT_APP_GOOGLE_PLACES_KEY }}'
           projectId: rush-webapp
+        env:
+          REACT_APP_GOOGLE_PLACES_KEY: '${{ secrets.REACT_APP_GOOGLE_PLACES_KEY }}'
