@@ -7,6 +7,8 @@ jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
+    env:
+      REACT_APP_GOOGLE_PLACES_KEY: '${{ secrets.REACT_APP_GOOGLE_PLACES_KEY }}'
     steps:
       - uses: actions/checkout@v3.4.0
       - run: npm ci && npm run build
@@ -15,5 +17,3 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RUSH_WEBAPP }}'
           projectId: rush-webapp
-        env:
-          REACT_APP_GOOGLE_PLACES_KEY: '${{ secrets.REACT_APP_GOOGLE_PLACES_KEY }}'
