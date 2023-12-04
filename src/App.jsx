@@ -28,6 +28,7 @@ import { latLng } from 'leaflet';
 import { initializeApp } from "firebase/app";
 // Questions
 import Questions from './data/Questions';
+import { PlacesAutocomplete } from './components/PlacesAutocomplete';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -149,7 +150,8 @@ function WebMap() {
           zoom={zoom}
           center={center}
         >
-          <LeafletControlGeocoder />
+          {/* <LeafletControlGeocoder /> */}
+          <PlacesAutocomplete />
           <MapBasemap />
           <MapData question={activeQuestion} />
         </MapView>
