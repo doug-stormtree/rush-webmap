@@ -15,7 +15,6 @@ import {
 } from '@chakra-ui/react';
 import { FaChevronUp } from 'react-icons/fa';
 import ContentPane from './components/ContentPane';
-import LeafletControlGeocoder from './components/LeafletControlGeocoder';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
 import MapData from './components/MapData';
 import MapBasemap from './components/MapBasemap';
@@ -150,7 +149,6 @@ function WebMap() {
           zoom={zoom}
           center={center}
         >
-          {/* <LeafletControlGeocoder /> */}
           <PlacesAutocomplete />
           <MapBasemap />
           <MapData question={activeQuestion} />
