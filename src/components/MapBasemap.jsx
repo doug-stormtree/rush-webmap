@@ -135,7 +135,6 @@ const fetchViewAttr = (view, session, setAttr, stale = false) => {
       if (attr === ATTR_LOADING) return
       setAttr(attr)
     } else {
-      console.log('Fetching attr: ' + view.key)
       // Set loading to prevent duplicate fetches
       attrMap.set(view.key, ATTR_LOADING)
 
@@ -153,7 +152,6 @@ const fetchViewAttr = (view, session, setAttr, stale = false) => {
         .then(res => res.json())
         .then(res => {
           attrMap.set(view, res.copyright) // Cache response
-          console.log(stale)
           if (!stale) setAttr(res.copyright)
         })
     }

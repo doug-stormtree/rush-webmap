@@ -1,6 +1,6 @@
 import React from "react";
 import { latLng } from "leaflet";
-import { MapContainer } from "react-leaflet";
+import { MapContainer, ZoomControl } from "react-leaflet";
 
 export const DEFAULT_CENTER = latLng([48.46557, -123.314736]);
 export const DEFAULT_ZOOM = 12;
@@ -14,7 +14,9 @@ export default function MapView(props) {
       scrollWheelZoom={true}
       style={props.style}
       closePopupOnClick={false}
+      zoomControl={false}
     >
+      <ZoomControl position='bottomleft' />
       {props.children}
     </MapContainer>
   );
