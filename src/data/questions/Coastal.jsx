@@ -50,6 +50,12 @@ const Coastal = {
   act: {
     initiatives: [
       {
+        title: 'Exploring Hard & Soft Shorelines',
+        link: 'https://storymaps.arcgis.com/stories/dd4b238376ad48d58f90e7cfa1f68820',
+        image: require('../png/HardShorelines.png'),
+        description: 'Changing the way a shoreline naturally operates can have big impacts on how water behaves when it meets the land. As climate change worsens, developers, homeowners and governments need to reconsider the last century\'s tendency to install a wall to protect us from the sea. Learn more in this StoryMap created by UVic Community Mapping students.',
+      },
+      {
         title: 'Cetus Research and Conservation Society',
         link: 'https://www.cetussociety.org/',
         image: require('../png/CetusSociety.png'),
