@@ -179,7 +179,7 @@ const Coastal = {
       {
         title: 'ECOncrete',
         link: 'https://econcretetech.com/',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/ECOncrete.png'),
         description: 'ECOncrete finds Nature-based Solutions for marine construction. This interdisciplinary science-based company blends biologists, ecologists, environmental engineers, designers, and concrete technology specialists, all on a mission to leverage science for building a future where marine ecosystems and infrastructure work symbiotically. ECOncrete’s versatile applications can be integrated in any marine infrastructure from coastal protection to waterfronts and offshore applications.  Their patented solution encourages biological recruitment, increases carbon sequestration and improves water quality. Visit their website to explore ECOncrete’s worldwide projects, and imagine the whole lot of good this company could do for coastal health in our region too.',
       },
     ],

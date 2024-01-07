@@ -63,7 +63,7 @@ const Culture = {
       },
       {
         title: 'W̱SÁNEĆ Lands Trust Society',
-        image: require('../png/Placeholder.png'),
+        image: 'https://wsanec.com/wp-content/uploads/2019/04/WLC-logo-colour-500px-min.png',
         link: 'https://wsanec.com/w̱sanec-lands-trust/',
         description: 'The W̱SÁNEĆ Lands Trust Society (WLTS) is a collaboration of several W̱SÁNEĆ Communities, working to partner with more W̱SÁNEĆ organizations.  WLTS provides a place for colonized land to be returned to the W̱SÁNEĆ people. The primary goals are to help future generations of W̱SÁNEĆ access land for cultural purposes, to positively impact the environment through W̱SÁNEĆ stewardship, and to seek land back for collaborative projects such as community housing and economic development initiatives.  The WLTS will achieve these goals by providing a place for land to be held collectively, across the W̱SÁNEĆ Bands, and by making land return and the provision of financial support easier for private donors.'
       },
@@ -93,7 +93,7 @@ const Culture = {
       },
       {
         title: 'RUSH Culture Compass Storymap',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/RUSHCultureCompass.png'),
         link: 'https://storymaps.arcgis.com/stories/ba28ad0ffcbf431482d26e552593c54f',
         description: 'This is an open map that highlights the rich cultural resources of the Victoria region.  It was created by three UVic students and supported by the  RUSH Initiative . The purpose of this StoryMap is to track places of culture and belonging and find places where people are finding cultural connections and exploring" cultural meaning."'
       },

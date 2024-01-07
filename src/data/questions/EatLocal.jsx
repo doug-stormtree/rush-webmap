@@ -57,7 +57,7 @@ const EatLocal = {
       },
       {
         title: 'Greater Victoria Cultural Food Community Map',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/GVCulturalFoodMap.png'),
         link: 'https://storymaps.arcgis.com/stories/06ee241047d8455bbb02230f453f2edc',
         description: 'The Greater Victoria Cultural Food Community Map illustrates many ways in which food is a critical component of cultural well-being. The Map emphasizes that while Cultural foods help individuals maintain a sense of belonging and identity, there is a lack of culturally relevant foods being grown and sold at affordable prices in the Victoria and Saanich regions for IBPOC, refugees, and community members experiencing marginalization. The Map recommends allocating more resources towards the local production of culturally appropriate foods, as well as to cultural food events and other avenues to help folks navigate the local food scene.'
       },
@@ -87,25 +87,25 @@ const EatLocal = {
       },
       {
         title: 'Foodlands Trust Business Case - CRD',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/CRDFoodlands.png'),
         link: 'https://www.crd.bc.ca/docs/default-source/regional-planning-pdf/food-agriculture/foodlands-trust-business-case-february-2022.pdf',
         description: 'This 2022 business case seeks to understand the challenges and opportunities related to a Foodland Trust Incubator Program in the CRD. The aim of Foodland Trust is to increase access to agricultural land and provide start-up support for aspiring farmers, as well as to contribute to local food security. There are only a handful of incubator programs in Canada, including two in the capital region - Haliburton Community Farm in Saanich and Sandown Centre in North Saanich. Moving forward, the CRD and its partners intend to engage with neighbouring First Nations in decision making of the Foodland Trust, and invite them to incorporate traditional and Indigenous food systems on the parcels.'
       },
       {
         title: 'FED Urban Agriculture',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/FEDUrbanAgriculture.png'),
         link: 'https://www.get-fed.ca/my-fed-farm',
         description: 'FED is a registered charity that partners with growers, restaurants, and others to transform the southern Van Isle cityscape into a vibrant foodscape. FED engages in advocacy and education as well as tackling the awesome dirty work of creating urban food gardens. FED projects include My FED Farm which provides free garden kits and support to vulnerable populations; the Urban Learning Garden in the courtyard of the downtown branch of the GVPL. Check out this site to find videos and resources to learn to grow your own food, as well as everything you need to know about starting a community garden.'
       },
       {
         title: 'Food Rescue Project',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/FoodRescueProject.png'),
         link: 'https://victoriafoundation.bc.ca/food-rescue-project/',
         description: 'The Food Rescue Project recovers and redistributes fresh food to food insecure communities in the CRD.  Since March 2017, the project has been collecting over 2,000kg of fresh food daily and distributing it through a network of more than 50 organizations including non-profits, First Nations and public schools. The Food Rescue Project estimates that it nourishes about 35,000 people monthly with good food that otherwise would be destined for the landfill.'
       },
       {
         title: 'Vancouver Island\'s 100-Mile Diet',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/VanIsland100MileDiet.png'),
         link: 'https://bcfarmsandfood.com/vancouver-island-farms-local-food-map/',
         description: 'BC Farms & Food created this interactive farm map to connect people with locally grown foods in 16 Vancouver Island regions. This map guides users to farm stands, u-picks, CSA farm box programs and farmers markets, and highlights farms that offer tours, workshops, wine tasting, earth-to-table restaurants, events and overnight farm stays.'
       },
