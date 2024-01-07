@@ -62,6 +62,12 @@ const Culture = {
         description: 'There are many people & organizations across the Saanich Peninsula working towards healthier ecosystems and connected communities across municipal boundaries. Learn about their work in this StoryMap created by UVic Community Mapping students Evan Gerbrecht, Casey Lake, Samantha Denton, Ethan Heckrodt with direction from the Saanich Peninsula Environmental Coalition.'
       },
       {
+        title: 'W̱SÁNEĆ Lands Trust Society',
+        image: require('../png/Placeholder.png'),
+        link: 'https://wsanec.com/w̱sanec-lands-trust/',
+        description: 'The W̱SÁNEĆ Lands Trust Society (WLTS) is a collaboration of several W̱SÁNEĆ Communities, working to partner with more W̱SÁNEĆ organizations.  WLTS provides a place for colonized land to be returned to the W̱SÁNEĆ people. The primary goals are to help future generations of W̱SÁNEĆ access land for cultural purposes, to positively impact the environment through W̱SÁNEĆ stewardship, and to seek land back for collaborative projects such as community housing and economic development initiatives.  The WLTS will achieve these goals by providing a place for land to be held collectively, across the W̱SÁNEĆ Bands, and by making land return and the provision of financial support easier for private donors.'
+      },
+      {
         title: 'Little Free Libraries',
         image: require('../png/LittleFreeLibraries.png'),
         link: 'https://victoriaplacemaking.ca/little-free-libraries/',

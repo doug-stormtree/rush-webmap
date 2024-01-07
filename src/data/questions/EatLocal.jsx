@@ -1,6 +1,6 @@
 const EatLocal = {
   key: 'eat-local',
-  title: "Eat Local?",
+  title: "Eat Local",
   question: "Find your flow from farm-to-fork-to-fertilizer. Chowing locally-grown means a lighter footprint and flippin’ food security.",
   image: require('../png/EatLocal.png'),
   description_new: [
@@ -84,6 +84,48 @@ const EatLocal = {
         image: require('../png/CowichanGreen.png'),
         link: 'https://cowichangreencommunity.org/all-locations/',
         description: 'The Cowichan Green Communities local farm map features producers across Vancouver Island dedicated to adding value to their ecosystems and improving food security.'
+      },
+      {
+        title: 'Foodlands Trust Business Case - CRD',
+        image: require('../png/Placeholder.png'),
+        link: 'https://www.crd.bc.ca/docs/default-source/regional-planning-pdf/food-agriculture/foodlands-trust-business-case-february-2022.pdf',
+        description: 'This 2022 business case seeks to understand the challenges and opportunities related to a Foodland Trust Incubator Program in the CRD. The aim of Foodland Trust is to increase access to agricultural land and provide start-up support for aspiring farmers, as well as to contribute to local food security. There are only a handful of incubator programs in Canada, including two in the capital region - Haliburton Community Farm in Saanich and Sandown Centre in North Saanich. Moving forward, the CRD and its partners intend to engage with neighbouring First Nations in decision making of the Foodland Trust, and invite them to incorporate traditional and Indigenous food systems on the parcels.'
+      },
+      {
+        title: 'FED Urban Agriculture',
+        image: require('../png/Placeholder.png'),
+        link: 'https://www.get-fed.ca/my-fed-farm',
+        description: 'FED is a registered charity that partners with growers, restaurants, and others to transform the southern Van Isle cityscape into a vibrant foodscape. FED engages in advocacy and education as well as tackling the awesome dirty work of creating urban food gardens. FED projects include My FED Farm which provides free garden kits and support to vulnerable populations; the Urban Learning Garden in the courtyard of the downtown branch of the GVPL. Check out this site to find videos and resources to learn to grow your own food, as well as everything you need to know about starting a community garden.'
+      },
+      {
+        title: 'Food Rescue Project',
+        image: require('../png/Placeholder.png'),
+        link: 'https://victoriafoundation.bc.ca/food-rescue-project/',
+        description: 'The Food Rescue Project recovers and redistributes fresh food to food insecure communities in the CRD.  Since March 2017, the project has been collecting over 2,000kg of fresh food daily and distributing it through a network of more than 50 organizations including non-profits, First Nations and public schools. The Food Rescue Project estimates that it nourishes about 35,000 people monthly with good food that otherwise would be destined for the landfill.'
+      },
+      {
+        title: 'Vancouver Island\'s 100-Mile Diet',
+        image: require('../png/Placeholder.png'),
+        link: 'https://bcfarmsandfood.com/vancouver-island-farms-local-food-map/',
+        description: 'BC Farms & Food created this interactive farm map to connect people with locally grown foods in 16 Vancouver Island regions. This map guides users to farm stands, u-picks, CSA farm box programs and farmers markets, and highlights farms that offer tours, workshops, wine tasting, earth-to-table restaurants, events and overnight farm stays.'
+      },
+      {
+        title: 'Community Food Hub',
+        image: require('../png/Placeholder.png'),
+        link: 'https://www.victoriacommunityfoodhub.com/',
+        description: 'The Victoria Community Food Hub Society (VCFHS) works to strengthen the local food system, build community, and alleviate poverty and hunger by providing access to healthy food for all.'
+      },
+      {
+        title: 'Sandown Centre for Regenerative Agriculture',
+        image: require('../png/Placeholder.png'),
+        link: 'https://www.sandowncentre.com/',
+        description: 'The Sandown Centre for Regenerative Agriculture operates 83 acres made up of farmland, forest, wetlands, meadows, and community gardens. Sandown serves as a demonstration site and works with farmers, researchers, and community members to develop best practices in regenerative agriculture.'
+      },
+      {
+        title: 'TOPSOIL',
+        image: require('../png/Placeholder.png'),
+        link: 'https://www.topsoileatlocal.com/',
+        description: 'TOPSOIL is a great example of innovative urban agriculture. TOPSOIL transforms unused urban spaces – like rooftops, or vacant blocks awaiting development – into productive and profitable agricultural growing areas to support a sustainable, hyper-local food economy. TOPSOIL uses "innovative, light-footprint gardening technology" like geotextile planter containers to grow a variety of fruit, veggies, salad greens and herbs right in the heart of Victoria. The harvest is sold direct to restaurants and the local community.'
       },
     ],
   }

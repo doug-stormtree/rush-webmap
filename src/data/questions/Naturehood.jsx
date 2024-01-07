@@ -141,6 +141,18 @@ const Naturehood = {
         description: 'Satinflower Nurseries connects people with nature by providing native plants, seeds, and expertise in growing them. The plants and seeds they provide are native to a variety of habitats in the Victoria area, including meadows, woodlands, forests, wetlands, and beaches. Satinflower specializes in the restoration and ecology of Garry oak ecosystems, and meadowscaping - the transformation of lawns to meadows that become much-needed patches of habitat for migratory pollinators.',
         image: require('../png/SatinflowerNurseries.png')
       },
+      {
+        title: 'The Power of Nature for Mental Health and Well-Being',
+        link: 'https://www.csla-aapc.ca/sites/csla-aapc.ca/files/Nature%20Note%20EN.pdf',
+        description: 'This paper from the Canadian Society of Landscape Architects’ Human Health and Wellbeing Committee highlights the benefits nature has on mental health.  In Canada, programs like PaRx and Prescri-Nature enable healthcare professionals to prescribe spending time in nature.  However, accelerating urbanization can make access to greenspaces a challenge for many. Landscape architects will continue to play an active role in contributing to the health and well-being of Canadians by making natural spaces more accessible to all.',
+        image: require('../png/Placeholder.png')
+      },
+      {
+        title: 'The Dawn Chorus',
+        link: 'https://explore.dawn-chorus.org/',
+        description: 'The Dawn Chorus project maps a massive collection of birdsong, collected from around the world in May 2020.  Michael Gorman, a bird lover in Germany, initiated this project in what he recognized to be an "extraordinary acoustic moment” - the pandemic had reduced ground and air traffic, and humans were making a fraction of the noise they usually do, making birdsong much easier to hear. He inspired thousands worldwide to get outside, listen, hold up their smartphones and press record. These recordings are now shared on this global sounds map which captures a unique moment in human history through the songs of birds. The map also provides an invaluable resource for understanding the global state of bird biodiversity. The Dawn Chorus team is exploring future collaborations with sound artists - let’s listen for what’s to come!',
+        image: require('../png/Placeholder.png')
+      },
     ],
   }
 };
