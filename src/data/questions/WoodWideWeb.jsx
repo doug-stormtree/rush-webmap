@@ -96,6 +96,12 @@ const WoodWideWeb = {
         description: 'The Coastal Douglas-fir Conservation Partnership (CDFCP) promotes the conservation and stewardship of the Coastal Douglas-fir and associated ecosystems in south-western BC. Visit the site to learn about the unique ecosystems occurring within our Coastal Douglas-fir Moist Maritime Biogeoclimatic Zone, and to find out about the CDFCPs 30-year strategy for conserving these ecosystems.',
         image: require('../png/CoastalDouglasFir.png')
       },
+      {
+        title: 'STAND.earth',
+        link: 'https://stand.earth/about/',
+        description: 'Stand.earth began over 20 years ago on the frontlines defending old-growth forests in BC. They are now a growing and diverse team demanding transformational change in three key impact areas: Protecting Forests, Moving Beyond Fossil Fuels, and Reinventing Cities and Transportation. Stand.earth strategies range from grassroots events and building networks, to investigative research and media campaigns. Check out this site to be inspired by powerful Stand.earth results stories, and meet Spencer, Stand.earth\'s “cup monster” who helped get Starbucks to work faster towards a 100% recyclable to-go cup.',
+        image: require('../png/CoastalDouglasFir.png')
+      },
     ],
   },
 };
