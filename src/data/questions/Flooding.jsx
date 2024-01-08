@@ -88,16 +88,16 @@ const Flooding = {
         description: 'The 1000 Rain Gardens Project: "Making Bowker Creek healthy again requires that people send much more rainwater into the earth and much less into the storm drains. Wherever we live, work or go to school in Bowker Creek\'s valley, the 1000 Rain Gardens Project aims to help us manage rainwater better. The project partners Friends of Bowker Creek Society with Peninsula Streams Society (PSS). The PSS initiative, the Rain Gardens in Headwaters Program, will multiply rain gardens throughout Greater Victoria, starting here in Bowker Creek\'s valley. The 1000 Rain Gardens project provides a vital first step and proving ground for the wider program."'
       },
       {
-        title: 'Colquitz Storymap',
+        title: 'Colquitz River Restoration Storymap',
         link: 'https://storymaps.arcgis.com/stories/e884cb42946a46d1800e90a692eca278',
         description: '"The (ongoing) Colquitz River restoration project, launched by Peninsula Streams and the District of Saanich in 2019, aims to restore ecological integrity and resilience to this urban watershed system in what is now called Saanich, British Columbia, Canada." This story was developed in partnership with Peninsula Streams Society, Engage with Nature-Based Solutions, and UVic Community Mapping students Langley Chan, Olivia Gatrell, Zacc Lavigne, and Nabila Kazmi.',
-        image: require('../png/Placeholder.png')
+        image: require('../png/ColquitzRiverRestoration.png')
       },
       {
         title: 'Rainwater Rewards Program',
         link: 'https://www.victoria.ca/home-property/utilities/stormwater-management/rainwater-rewards-program',
         description: 'This incentive program that encourages City of Victoria residents, businesses and institutional properties to use rain was a resource and helping developed watersheds mimic the function of natural systems. Rebates and ongoing credits are available for the cost of installing approved rainwater management methods from cisterns and rain gardens to permeable paving and green roofs. Check out this website to learn more and apply.',
-        image: require('../png/Placeholder.png')
+        image: require('../png/RainwaterProgram.png')
       },
     ],
   }

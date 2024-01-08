@@ -64,13 +64,13 @@ const WoodWideWeb = {
         title: 'Indigenous Protected & Conserved Areas',
         link: 'https://conservation-reconciliation.ca/about-ipcas',
         description: 'The 2018 We Rise Together Report defines IPCAs as "lands and waters where Indigenous governments have the primary role in protecting and conserving ecosystems through Indigenous laws, governance and knowledge systems.” More than 60 IPCAs are now led by Indigenous Peoples from coast-to-coast-to-coast, and there is growing recognition that IPCAs andIndigenous-led conservation will have a critical role in achieving Canada’s climate change and biodiversity targets.',
-        image: require('../png/Placeholder.png')
+        image: require('../png/IPCA.png')
       },
       {
         title: 'Soil Factsheet: BC Ministry of Agriculture',
         link: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/agricultural-land-and-environment/soil-nutrients/613100-1_soil_compaction.pdf',
         description: 'Soil compaction refers to "the disruption and reduction of the large pores within the soil” which makes it harder for plant roots to grow down into soil layers, and restricts the movement of air and water through the soil. This Factsheet, produced by the Ministry of Agriculture, describes various causes and effects of soil compaction, as well as how soil structure may be improved.',
-        image: require('../png/Placeholder.png')
+        image: require('../png/SoilFactsheet.png')
       },
       {
         title: 'BC Big Tree Registry',
@@ -100,7 +100,7 @@ const WoodWideWeb = {
         title: 'STAND.earth',
         link: 'https://stand.earth/about/',
         description: 'Stand.earth began over 20 years ago on the frontlines defending old-growth forests in BC. They are now a growing and diverse team demanding transformational change in three key impact areas: Protecting Forests, Moving Beyond Fossil Fuels, and Reinventing Cities and Transportation. Stand.earth strategies range from grassroots events and building networks, to investigative research and media campaigns. Check out this site to be inspired by powerful Stand.earth results stories, and meet Spencer, Stand.earth\'s “cup monster” who helped get Starbucks to work faster towards a 100% recyclable to-go cup.',
-        image: require('../png/CoastalDouglasFir.png')
+        image: require('../png/StandEarth.png')
       },
     ],
   },
