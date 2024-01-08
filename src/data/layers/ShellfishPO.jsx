@@ -1,4 +1,4 @@
-import { getStyleMapProperty, mapPopupContent, setStyleIfSupported } from '../LeafletStyleHelpers';
+import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import { StartOnLayersName } from '../TextContent';
 
 const styleMap = new Map([
