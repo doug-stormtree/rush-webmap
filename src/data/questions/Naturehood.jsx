@@ -97,7 +97,7 @@ const Naturehood = {
         title: 'Friends of Maltby Lake Watershed Society',
         link: 'https://maltbylake.com/',
         description: 'Maltby Lake is at the headwaters of the Tod Creek Watershed. The 21-acre near pristine water body is surrounded by 172 acres of relatively undisturbed forest and wetland. The property is an example of unspoiled lake and land ecosystems. The Friends of Maltby Lake Watershed Society is a registered BC non-profit society and Canadian Registered Charity established by BC environmental activists to: conserve the riparian, Garry Oak and coastal Douglas Fir ecosystems, the sensitive flora and fauna therein and the watershed ecosystems draining into and from, Maltby Lake; educate the public and relevant stakeholders to the importance of this delicate ecological and cultural landscape; and create wildlife corridors, generate habitat for native species, and to reduce pollution on Vancouver Island for the benefit and enjoyment of the public.',
-        image: require('../png/Placeholder.png')
+        image: require('../png/MaltbyLake.png')
       },
       {
         title: 'Nature Canada Report: Tree Equity',
@@ -127,7 +127,7 @@ const Naturehood = {
         title: 'Gorge Stewardship Centre',
         link: 'https://stewardshipcentrebc.ca/esquimalt-gorge-park-gs-demonstration-site/',
         description: 'The Stewardship Centre for BC promotes and delivers stewardship education, and champions science-based stewardship practices for land and water in BC. As part of the Resilient Coasts for Salmon (RC4S) project, the Stewardship Centre for BC is partnered with community groups, the CRD, and the Songhees Nation and Esquimalt Nations to use a nature-based approach in restoring the ecological and cultural values of the Esquimalt Gorge Park shoreline.',
-        image: require('../png/Placeholder.png')
+        image: require('../png/GorgeStewardshipCentre.png')
       },
       {
         title: 'Greater Victoria Green Team',
@@ -145,13 +145,13 @@ const Naturehood = {
         title: 'The Power of Nature for Mental Health and Well-Being',
         link: 'https://www.csla-aapc.ca/sites/csla-aapc.ca/files/Nature%20Note%20EN.pdf',
         description: 'This paper from the Canadian Society of Landscape Architects’ Human Health and Wellbeing Committee highlights the benefits nature has on mental health.  In Canada, programs like PaRx and Prescri-Nature enable healthcare professionals to prescribe spending time in nature.  However, accelerating urbanization can make access to greenspaces a challenge for many. Landscape architects will continue to play an active role in contributing to the health and well-being of Canadians by making natural spaces more accessible to all.',
-        image: require('../png/Placeholder.png')
+        image: require('../png/NatureForMentalHealth.png')
       },
       {
         title: 'The Dawn Chorus',
         link: 'https://explore.dawn-chorus.org/',
         description: 'The Dawn Chorus project maps a massive collection of birdsong, collected from around the world in May 2020.  Michael Gorman, a bird lover in Germany, initiated this project in what he recognized to be an "extraordinary acoustic moment” - the pandemic had reduced ground and air traffic, and humans were making a fraction of the noise they usually do, making birdsong much easier to hear. He inspired thousands worldwide to get outside, listen, hold up their smartphones and press record. These recordings are now shared on this global sounds map which captures a unique moment in human history through the songs of birds. The map also provides an invaluable resource for understanding the global state of bird biodiversity. The Dawn Chorus team is exploring future collaborations with sound artists - let’s listen for what’s to come!',
-        image: require('../png/Placeholder.png')
+        image: require('../png/DawnChorus.png')
       },
     ],
   }

@@ -130,7 +130,7 @@ const SenseOfPeace = {
       {
         title: 'UN Climate and Health Declaration',
         link: 'https://www.cop28.com/en/news/2023/12/Health-Declaration-delivering-breakthrough-moment-for-health-in-climate-talks#:~:text=The%20Declaration%20covers%20a%20range,for%20climate%20and%20health%20solutions',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/COP28UAE.png'),
         description: 'Signed by 123 countries, the Declaration covers a range of action areas at the nexus of climate and health, including building more climate-resilient health systems, strengthening cross-sectoral collaboration to reduce emissions and maximize the health benefits of climate action, and increasing finance for climate and health solutions.'
       },
     ],

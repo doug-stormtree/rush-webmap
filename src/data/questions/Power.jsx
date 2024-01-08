@@ -74,67 +74,69 @@ const Power = {
       {
         title: 'CleanBC Better Homes and Better Buildings',
         link: 'https://www2.gov.bc.ca/gov/content/industry/electricity-alternative-energy/energy-efficiency-conservation/programs',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/CleanBC.png'),
         description: 'The BetterHomesBC and BetterBuildingsBC websites are B.C.’s online hub for homeowners and businesses to access information, incentives and support to reduce energy use and greenhouse gas emissions in new and existing homes and buildings.'
       },
       {
         title: 'Net Zero Emissions by 2050',
         link: 'https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zero-emissions-2050.html',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/CanNetZero.png'),
         description: 'In an effort to avert the worst impacts of climate change, Canada has joined over 120 countries in committing to be net-zero emissions by 2050. Canada’s commitment is enshrined in The Canadian Net-Zero Emissions Accountability Act, which became law on June 29, 2021. The Act requires public participation and independent advice, and includes measures for transparency and accountability as the government works towards net-zero. Achieving net-zero emissions means our economy either emits no greenhouse gas emissions, or offsets its emissions through actions such as tree planting or capture carbon technologies.'
       },
       {
         title: '2022 Climate Change Accountability Report BC',
         link: 'https://www2.gov.bc.ca/assets/gov/environment/climate-change/action/cleanbc/2022-ccar/2022_climate_change_accountability_report.pdf',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/CleanBC.png'),
         description: 'The 2022 Climate Change Accountability Report details BC’s progress towards provincially legislated climate action targets during the previous year.  Annual reporting is a requirement under the Climate Change Accountability Act.'
       },
       {
         title: 'Kalunborg Symbiose',
         link: 'https://www.symbiosis.dk/en/',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/Kalundborg.png'),
         description: 'Kalundborg Denmark is home to an intergrated resource recovery system where industrial companies share excess resources of heat, energy and materials to save money and mitigate waste. The companies co-locate for resource exchange that has multiple benefits including reducing greenhouse gases.'
       },
       {
         title: 'CRD - Climate Action - Buildings',
         link: 'https://www.crd.bc.ca/education/climate-action/reducing-greenhouse-gas-emissions/buildings',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/CRDClimateBuildings.png'),
         description: 'This CRD program for homeowners provides free support for retrofits with help figuring out rebates, home energy consults, quote reviews, retrofit planning, etc...'
       },
       {
-        title: 'Top Uses of Piezoelectricity in Everyday Applications',
+        title: 'Top Everyday Uses of Piezoelectricity',
         link: 'https://www.americanpiezo.com/blog/top-uses-of-piezoelectricity-in-everyday-applications/',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/Piezoelectricity.png'),
         description: 'Piezoelectric technology converts the energy of movement into electricity. Dance floors, sidewalks, tiles and even heat vibrations can be transformed to power your everyday needs. Learn more in this quick summary.'
       },
       {
-        title: 'Energy Generation in Public Buildings Using Piezoelectric Flooring Tiles',
+        title: 'Energy Generation Using Piezoelectric Flooring Tiles',
         link: 'https://www.sciencedirect.com/science/article/abs/pii/S2210670721008210',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/PiezoFloor.png'),
         description: 'This case study of a core urban metro station in Egypt demonstrates the potential of piezoelectric flooring tiles for energy generation in public buildings.'
       },
       {
-        title: 'Vancouver Island Information & Statistics: Energy and Infrastructure',
+        title: 'Vancouver Island: Energy and Infrastructure',
         link: 'https://viea.ca/regional-statistic/energy-and-infrastructure/',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/VanIslandEconAlliance.png'),
         description: 'A reference for current metrics on energy and infrastructure on Vancouver Island.'
       },
       {
         title: 'Canada Energy Regulator - BC Energy Profile',
         link: 'https://www.cer-rec.gc.ca/en/data-analysis/energy-markets/provincial-territorial-energy-profiles/provincial-territorial-energy-profiles-british-columbia.html',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/BCEnergyProfile.png'),
         description: 'A reference for current metrics on energy and infrastructure in BC.'
       },
+      /*
       {
         title: 'Solar Rooftop Victoria',
         link: 'https://solarrooftop.victoria.ca/prod/public/',
         image: require('../png/Placeholder.png'),
         description: ''
       },
+      */
       {
         title: 'Team Power Smart',
         link: 'https://www.bchydro.com/powersmart/residential/team-power-smart.html?utm_source=promo&utm_medium=email&utm_content=start',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/BCHydro.png'),
         description: 'Team Power Smart is a BC Hydro Initiative to encourage BC households to make smart energy choices.  Join Team Power Smart to earn money for saving energy, win prizes, get rewards, tips and motivational success stories from the 200 000+ other members of your provincial team.'
       },
     ],
