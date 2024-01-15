@@ -64,49 +64,49 @@ const SenseOfPeace = {
       {
         title: 'LegalAidBC',
         link: 'https://legalaid.bc.ca/legal_aid/legalAidLocations#legalAidOffices',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/LegalAidBC.png'),
         description: 'Legal Aid BC is a source of general information about the law in this province, including publications that make understanding the law easier for non-lawyers. Legal Aid BC also offers free advice and representation from lawyers on matters including child protection, criminal law, immigration, mental health and prison law issues. Find out if you qualify, and apply by phone for free legal aid.'
       },
       {
         title: 'BC First Nations Justice Council',
         link: 'https://bcfnjc.com/indigenous-justice-centres-in-british-columbia/',
-        image: require('../png/Placeholder.png'),
+        image: 'https://bcfnjc.com/wp-content/uploads/2020/10/IJC-brown.png',
         description: 'Indigenous Justice Centres (IJCs) in BC provide culturally appropriate information, advice, support and representation directly to Indigenous people at the community level. IJCs focus primarily on criminal law and child protection issues (priorities set by First Nations leaders in BC). With the holistic understanding that justice issues do not exist in isolation, IJCs also facilitate client connections to supports such as housing, mental health and addictions treatment, and employment services.'
       },
       {
         title: 'Burden of Disease from Environmental Noise',
         link: 'https://www.who.int/publications/i/item/9789289002295',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/EnvironmentalNoise.png'),
         description: 'This publication summarizes the evidence on the relationship between environmental noise and health effects, including cardiovascular disease, cognitive impairment, sleep disturbance, tinnitus, and annoyance. For each one, the environmental burden of disease methodology, based on exposure–response relationship, exposure distribution, background prevalence of disease and disability weights of the outcome, is applied to calculate the burden of disease in terms of disability-adjusted life-years.'
       },
       {
         title: 'Power to Be',
         link: 'https://powertobe.ca/',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/PowerToBe.png'),
         description: 'Power To Be is a non-profit organization that creates access to nature for youth, families, and adults living with cognitive, physical, financial, and social barriers.'
       },
       {
         title: 'Victoria Immigrant and Refugee Center',
         link: 'https://www.vircs.bc.ca/',
-        image: require('../png/Placeholder.png'),
+        image: 'https://static.wixstatic.com/media/59f36a_4f3793a40d124b9488f456edbb5067b8~mv2.png/v1/fill/w_200,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/37.png',
         description: 'The Victoria Immigrant and Refugee Centre Society (VIRCS) is a non-profit organization that helps immigrants, refugees and new Canadian citizens settle and adapt into their new lives in the Greater Victoria Region. Find out about the wide range of services and resources provided by VIRCS, including ESL program classes, anti-racism initiatives, and a Newcomer’s Wraparound Support Program that supports our most vulnerable newcomers.'
       },
       {
         title: 'Our Place Society',
         link: 'https://www.ourplacesociety.com',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/OurPlace.png'),
         description: 'Our Place Society provides a sense of hope and belonging to Greater Victoria’s most vulnerable populations, including people struggling with homelessness, mental health challenges, substance use issues, the working poor, and impoverished elderly. The services offered by Our Place include meals, housing, hot showers, education, job skills, health care, addiction recovery services, donated clothing, counselling and outreach services, a storage facility.'
       },
       {
         title: 'Victoria Symphony',
         link: 'https://victoriasymphony.ca',
-        image: require('../png/Placeholder.png'),
+        image: 'https://victoriasymphony.ca/wp-content/uploads/2021/06/logo-stacked.png',
         description: 'Victoria Symphony brings the transformational power of music to the people of Victoria. In addition to concerts, the VS offers a range of community education and outreach programs that demonstrate its commitment to using music to build community.'
       },
       {
         title: 'Greater Victoria Placemaking Network',
         link: 'https://victoriaplacemaking.ca',
-        image: require('../png/Placeholder.png'),
+        image: 'https://victoriaplacemaking.ca/wp-content/uploads/2016/05/cropped-GVPMN-LOGO_2-1-1.png',
         description: 'Placemaking is the intentional process of bringing diverse community members together in great collaborations to create "great places” within our urban spaces. The One of the most popular initiatives of the GVPN is its Little Free Libraries. Visit the website for a map of existing libraries (over 700 to date!) and create your very own Little Free Library Bingo Card. Have fun!'
       },
       {
@@ -118,13 +118,13 @@ const SenseOfPeace = {
       {
         title: 'Queering the Map',
         link: 'https://www.queeringthemap.com',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/QueeringTheMap.png'),
         description: 'Queering the Map is a living archive that maps and preserves the histories and unfolding realities of queer life anywhere it happens—from park benches to the middle of the ocean.'
       },
       {
         title: 'BCHealthy Communities - PlanH',
         link: 'http://bchealthycommunities.ca/program/planh',
-        image: require('../png/Placeholder.png'),
+        image: 'https://bchealthycommunities.ca/wp-content/uploads/2022/11/PlanH_BCHC_FullColour.png.webp',
         description: 'BC Healthy Communities is a not-for-profit organization that provides a range of programs, services and resources aimed to promote thriving communities across the province. One BCHC initiative is the BC Age-friendly Communities Program that helps older adults to live active, engaged, independent lives. BC Healthy Communities and PlanH have amalgamated their two websites under one domain name – bchealthycommunities.ca – to simplify navigation and resource discovery so that community advocates can better serve their constituents with local health initiatives.'
       },
       {
