@@ -111,19 +111,19 @@ const EatLocal = {
       },
       {
         title: 'Community Food Hub',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/CommunityFoodHub.png'),
         link: 'https://www.victoriacommunityfoodhub.com/',
         description: 'The Victoria Community Food Hub Society (VCFHS) works to strengthen the local food system, build community, and alleviate poverty and hunger by providing access to healthy food for all.'
       },
       {
         title: 'Sandown Centre for Regenerative Agriculture',
-        image: require('../png/Placeholder.png'),
+        image: 'https://static.wixstatic.com/media/0fd4be_5e90dfb6e65b42808d5f1deaa6d11c53~mv2.png/v1/fill/w_810,h_274,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Sandown%20Centre%20Logo%20-%20Horizontal.png',
         link: 'https://www.sandowncentre.com/',
         description: 'The Sandown Centre for Regenerative Agriculture operates 83 acres made up of farmland, forest, wetlands, meadows, and community gardens. Sandown serves as a demonstration site and works with farmers, researchers, and community members to develop best practices in regenerative agriculture.'
       },
       {
         title: 'TOPSOIL',
-        image: require('../png/Placeholder.png'),
+        image: require('../png/TOPSOIL.png'),
         link: 'https://www.topsoileatlocal.com/',
         description: 'TOPSOIL is a great example of innovative urban agriculture. TOPSOIL transforms unused urban spaces – like rooftops, or vacant blocks awaiting development – into productive and profitable agricultural growing areas to support a sustainable, hyper-local food economy. TOPSOIL uses "innovative, light-footprint gardening technology" like geotextile planter containers to grow a variety of fruit, veggies, salad greens and herbs right in the heart of Victoria. The harvest is sold direct to restaurants and the local community.'
       },

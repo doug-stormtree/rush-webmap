@@ -18,7 +18,7 @@ export default function InitiativeCard({initiative, flip = false}) {
       <Image
         src={initiative.image}
         alt={initiative.title}
-        fit='cover'
+        fit='contain'
         height='200px'
         width={{base: '100%', md: '200px'}}
         float={{md: flip ? 'right' : 'left'}}
