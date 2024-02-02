@@ -1,4 +1,9 @@
 import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
+import '@fontsource/inter/700.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/raleway/500.css';
+import '@fontsource/raleway/700.css';
+import QuestionCard from './QuestionCardTheme';
 
 const NavBar = defineStyleConfig({
   baseStyle: {
@@ -109,6 +114,7 @@ const theme = extendTheme({
     NavBar,
     MenuCard,
     QuestionButton,
+    QuestionCard,
     Button: {
       variants: {
         nav: {
@@ -130,6 +136,8 @@ const theme = extendTheme({
     }
   },
   fonts: {
+    body: `'Inter', sans-serif`,
+    heading: `'Poppins', sans-serif`,
     subHeading: `'Raleway', sans-serif`,
   },
   textStyles: {
