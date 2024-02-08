@@ -5,7 +5,6 @@ import {
   useMultiStyleConfig
 } from '@chakra-ui/react'
 import { FaRegArrowAltCircleDown } from 'react-icons/fa'
-import FormattedText from './FormattedText'
 
 export default function QuestionCard({ question, onClick, variant }) {
   const styles = useMultiStyleConfig('QuestionCard', { variant })
@@ -21,7 +20,26 @@ export default function QuestionCard({ question, onClick, variant }) {
         <Box __css={styles.title}>{question.title}</Box>
         <Box __css={styles.subtitle}>{question.subtitle}</Box>
         <Box __css={styles.body}>
-          <FormattedText textArray={question.body} />
+          {
+            question.body.map((list, index) => {
+              return (
+                <Box key={index}>
+                  {list.heading}
+                  <ul style={{
+                    listStylePosition: 'outside',
+                    paddingInlineStart: '1.5rem',
+                  }}>
+                    {list.items.map((item, index) => {
+                      return (
+                        <li key={index} style={{
+                        }}>{item}</li>
+                      )
+                    })}
+                  </ul>
+                </Box>
+              )
+            })
+          }
         </Box>
         <Box __css={styles.footer}>
           <>Make your move</>

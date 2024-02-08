@@ -3,6 +3,30 @@ const Coastal = {
   title: "Protect the Coast",
   question: 'Melting ice caps are neither sweet nor refreshing when it comes to sea level rise. Find out if your coast and drinking water supply is at risk.',
   image: require('../png/ProtectTheCoast.png'),
+  sections: {
+    one: [
+      {
+        heading: 'You can stand your ground if...',
+        items: [
+          'The coastal sensitivity rating is low. This means that the shoreline ecosystem near you is in good shape.',
+          'Sea level rise is projected to be less than 0.5m. This means your area is not as likely to be eroded by coastal inundation.',
+          'Your risk of saltwater intrusion shows green on the map. This means that the ground you are standing on is not likely to let saltwater seep into the aquifer/water table.',
+          'The shoreline is naturalized with plenty of land and marine vegetation to buffer storm surges and shift sands to adapt to changing conditions.',
+          'Your municipality has a standard of 30m shoreline setbacks to give Nature enough room to sculpt sands and stones at the water\'s edge.',
+        ]
+      },
+      {
+        heading: 'Head for the hills if...',
+        items: [
+          'The coastal sensitivity rating is high. This means that the shoreline ecosystem is not in good shape.',
+          'Sea level rise is projected to be higher than 0.5m. This means that your area is vulnerable to coastal erosion and flooding.',
+          'The map shows your risk of salt water intrusion in the range of yellow to red. This means that there is a risk of the water table and aquifer turning from fresh to salty.',
+          'The shoreline is built up with concrete. Armouring or hardscaping creates a risk that storm surges will erode the shoreline behind and beneath it.',
+          'Your municipality has not planned for shoreline setbacks that leave ample room for Nature (or Jesus) to make things right.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'You can stand your ground if...'},
     {type: 'ul', content: [

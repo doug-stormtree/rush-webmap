@@ -3,6 +3,31 @@ const EatLocal = {
   title: "Eat Local",
   question: "Find your flow from farm-to-fork-to-fertilizer. Chowing locally-grown means a lighter footprint and flippin’ food security.",
   image: require('../png/EatLocal.png'),
+  sections: {
+    one: [
+      {
+        heading: 'Plenty of low-hanging fruit if...',
+        items: [
+          'you see ALR lands near you.',
+          'there are farmer’s markets and farms with CSA/box programs nearby so that you can buy directly from the folks who are growing your food.',
+          'you have access to a community garden plot for you and your neighbours to grow your own food and flowers.',
+          'groups are providing food banks and hampers to serve up free local food to those in need.',
+          'there are stores and restaurants offering a selection of locally-sourced and cultural foods.',
+          'you see greenways near agricultural spaces. These greenways become uninterrupted habitat for pollinators that are critical to local food production.',
+        ]
+      },
+      {
+        heading: 'It’s another can of beans if...',
+        items: [
+          'you don’t see any ALR lands near you.',
+          'you don’t see an easy way to buy direct from farmers.',
+          'there are no community garden plots for you to grow your own food.',
+          'your local stores and restaurants don’t support local farmers or have cultural food sections.',
+          'there aren’t connected greenways next to ALR lands.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'Plenty of low-hanging fruit if...'},
     {type: 'ul', content: [

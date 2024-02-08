@@ -28,6 +28,8 @@ import { initializeApp } from "firebase/app";
 // Questions
 import Questions from './data/Questions';
 import { PlacesAutocomplete } from './components/PlacesAutocomplete';
+import Sandbox from './components/Sandbox';
+import QuestionCardBar from './components/QuestionCardBar';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -59,6 +61,10 @@ function App() {
           <Route
             path="/q/:question"
             element={<WebMap />}
+          />
+          <Route
+            path="/sandbox"
+            element={<Sandbox />}
           />
         </Routes>
       </Router>
@@ -124,6 +130,7 @@ function WebMap() {
         boxShadow='0px 0px 8px 2px #888'
         getShareURL={getShareURL}
       />
+      {/*
       <QuestionMenuBar
         style={{
           backgroundColor:'white',
@@ -136,10 +143,11 @@ function WebMap() {
         activeQuestion={activeQuestion}
         setActiveQuestion={setActiveQuestion}
       />
+      */}
       <Flex
         h={`60vh`}
         position='sticky'
-        top='180px'
+        top='40px'
         direction='row'
         //zIndex='-1'
       >
@@ -149,15 +157,17 @@ function WebMap() {
           zoom={zoom}
           center={center}
         >
-          <PlacesAutocomplete />
+          {//<PlacesAutocomplete />
+          }
           <MapBasemap />
           <MapData question={activeQuestion} />
         </MapView>
-        { smallDisplay
+        {/* smallDisplay
           ? null
           : <LegendPane flex='0' activeQuestion={activeQuestion} />
-        }
+    */}
       </Flex>
+      <QuestionCardBar />
       <ContentPane
         backgroundColor='white'
         position='sticky'

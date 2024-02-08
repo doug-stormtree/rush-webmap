@@ -3,6 +3,33 @@ const Footprint = {
   title: 'Light Footprint',
   question: 'Fossil fuel travel is a fast track to climate change. Bypass the gas and explore multi-modal travel.',
   image: require('../png/LightFootprint.png'),
+  sections: {
+    one: [
+      {
+        heading: 'It’s a green light if...',
+        items: [
+          'BC transit operates many & frequent bus routes to the places you want to go.',
+          'there is an extensive network of bike paths linking your community with others.',
+          'it’s a quick and easy charge for your EV.',
+          'there are opportunities for car-sharing and the park and ride is full.',
+          'you feel the presence of a climate action group in your neighbourhood.',
+          'wifi is good enough to work from home and there is a co-working space nearby when you need something different.',
+          'your region is highlighted in blue which means it shows a decrease in on-road transportation 2020 emissions as compared to 2007.',
+        ]
+      },
+      {
+        heading: 'Pull the emergency brake if...',
+        items: [
+          'cycling feels unsafe or difficult.',
+          'busses are inconvenient and infrequent.',
+          'there aren’t many convenient fast charging stations for EV’s',
+          'car-sharing and car-pooling makes no sense.',
+          'your commute is killing your free time.',
+          'your region is highlighted in red which means it shows an increase in on-road transportation 2020 emissions as compared to 2007.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'It’s a green light if...'},
     {type: 'ul', content: [

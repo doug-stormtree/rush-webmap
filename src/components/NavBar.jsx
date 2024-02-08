@@ -7,14 +7,14 @@ import {
   Spacer,
   Text,
   useBreakpointValue,
-  useStyleConfig,
+  useMultiStyleConfig,
 } from '@chakra-ui/react';
 import { FiMessageSquare } from 'react-icons/fi';
 import LandingModalButton from './LandingModalButton';
 import ShareModalButton from './ShareModalButton';
 
 export default function NavBar(props) {
-  const styles = useStyleConfig('NavBar');
+  const styles = useMultiStyleConfig('NavBar');
   const { getShareURL, ...rest } = props;
 
   const pageTitle = useBreakpointValue({
@@ -23,8 +23,8 @@ export default function NavBar(props) {
   },{ssr:false, fallback:true});
 
   return (
-    <Box __css={styles} {...rest} >
-      <Text size="xl" m="auto 1em" fontWeight='medium'>{pageTitle}</Text>
+    <Box __css={styles.navbar} {...rest} >
+      <Box __css={styles.title}>{pageTitle}</Box>
       <Spacer />
       <ButtonGroup variant='nav' spacing='-2'>
         <Link 

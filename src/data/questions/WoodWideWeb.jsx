@@ -3,6 +3,32 @@ const WoodWideWeb = {
   title: "Wood Wide Web",
   question: "Your life support eco-system depends on the trees talking to each other. Pass it on.",
   image: require('../png/WoodWideWeb.png'),
+  sections: {
+    one: [
+      {
+        heading: 'The wood wide web is working if...',
+        items: [
+          'Big trees are still standing with room to breathe after development projects. These trees provide important homes for bats, bees and big birds of prey.',
+          'Trees and roots are surrounded by rich, loose soil and that let the microbiome transform atmospheric gasses into beautiful plants and food.',
+          'You see a community of trees who can share resources and communicate via mycelial networks underground. Older trees have more to share so they are identified as key contributors to the wood wide web on this map.',
+          'Infrastructure, transportation and shipping routes accommodate species migration routes and timing. Turtles, birds and whales have the range they need to thrive.',
+          'Your community celebrates key life cycle moments in plants, fish and birds.',
+          'There are eel grass and bull kelp beds to provide additional nurseries, nutrients and transition zones',
+        ]
+      },
+      {
+        heading: 'It’s decidedly disconnected if...',
+        items: [
+          'After developments, all you see are small new trees without room for their roots.',
+          'The soil you see is compacted and the roots are bare which means the soil and the atmosphere cannot make their exchange and mycelial networks cannot thrive.',
+          'The tree stands alone without a plant community.',
+          'Butterflies, birds, and fish return in smaller numbers or not at all.',
+          'People clear eel grass and bull kelp beds for boating or swimming, not knowing that they are destroying the food web in the process.',
+          'Your community is not making time to get to know that more-the-human community of creatures that is fighting the good fight for life.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'The wood wide web is working if...'},
     {type: 'ul', content: [

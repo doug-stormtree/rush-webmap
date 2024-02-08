@@ -3,6 +3,30 @@ const Naturehood = {
   title: "Neighbourhood to Naturehood",
   question: "Make the human-Nature connection for your health and inner peace. Live your best life in a Naturehood.",
   image: require('../png/Naturehood.png'),
+  sections: {
+    one: [
+      {
+        heading: 'You live in a Naturehood if...',
+        items: [
+          'your neighbourhood has at least 30% canopy cover for shade and habitat.',
+          'you see healthy plants native to the ecosystem in the neighbourhood and nearby parks.',
+          'stewardship groups are working in your community to monitor and support a healthy ecosystem.',
+          'you can see & hear birds and bees visiting the pollinator gardens all the way down your street, meaning the food web is working.',
+          'trees and roots are surrounded by rich, loose soil and plants that can transform atmospheric greenhouse gasses into more Nature.',
+        ]
+      },
+      {
+        heading: 'It’s a concrete jungle if...',
+        items: [
+          'your region has less than 30% canopy cover. This creates hot pockets and heat stress for you and Nature.',
+          'you can’t see 3 trees from your window, which means you don’t have habitat for all that good Nature stuff.',
+          'you don’t see flowering plants, which means pollinators are not finding food.',
+          'you see mostly dark pavement and hard dirt that will radiate heat and more road runoff carrying toxins into nearby watersheds.',
+          'there isn’t an active stewardship group in your area.  This may mean people aren’t prioritizing Naturehood in the neighbourhood.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'You live in a Naturehood if...'},
     {type: 'ul', content: [

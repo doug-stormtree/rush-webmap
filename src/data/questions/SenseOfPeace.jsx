@@ -3,6 +3,33 @@ const SenseOfPeace = {
   title: "Sense of Peace",
   question: "What did the buddhist say to the hot dog vendor? Make me one with everything...",
   image: require('../png/SenseOfPeace.png'),
+  sections: {
+    one: [
+      {
+        heading: 'Hakuna matata if...',
+        items: [
+          'there are safe public parks and greenspaces for everyone to appreciate, rest and relax.',
+          'there are spiritual centres to offer spaces for familiar mindfulness practices that create peace and community.',
+          'recreation centres offer places to play, challenge, and develop different abilities.',
+          'fountains offer healing soundscapes in public gathering places where a pause to become present is possible.',
+          'there are enough accessible and inclusive public washrooms to support human digestion and dignity.',
+          'health centres connect locals with resources to help with mental, physical, and emotional stress. Safe injection sites are easy to find.',
+          'there are legal aid and other services to support a quality of life for all including access to affordable housing, food, safety, employment, and community.',
+        ]
+      },
+      {
+        heading: 'Oy vey if...',
+        items: [
+          'you need to sit and take five, but it’s noisy, it’s stinky, it’s all pavement and everybody seems to be pounding it.',
+          'you see a lack of greenspace and a lot of stress and poverty.',
+          'you found a place to watch the waves, but somebody is watching you from their beach-front window... and they want you to move along.',
+          'you can’t find a patch of grass to lay your head down and cloud-gaze.',
+          'you are in transit and you can’t find a welcoming washroom or place for a shower.',
+          'you have a friend who needs more help than you can give, and you are coming up empty on organizations with the resources they need.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'Hakuna matata if...'},
     {type: 'ul', content: [

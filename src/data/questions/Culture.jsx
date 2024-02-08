@@ -3,6 +3,33 @@ const Culture = {
   title: "Culture Compass",
   question: "Culture clash happens on a crowded planet. Cultivate a vibe of respect and belonging for everyone.",
   image: require('../png/CultureCompass.png'),
+  sections: {
+    one: [
+      {
+        heading: 'Your community culture is vibing if...',
+        items: [
+          'there are free public gathering places like parks, squares and fountains.',
+          'you see public art.',
+          'Indigenous places of significance are marked and honoured.',
+          'you can get to greenspaces including parks and beach access points.',
+          'your neighbourhood has cultural spaces and facilities like galleries and libraries, recreation & community centres.',
+          'all of these spaces are a safe and accessible walk, roll, bike or bus ride from home.',
+        ]
+      },
+      {
+        heading: 'It’s a dangerous divide if...',
+        items: [
+          'there is no good place to hang with your gang.',
+          'everything you want to do costs money.',
+          'nobody knows whose traditional territory they are on.',
+          'everywhere nice is private property.',
+          'there’s only one kind of food available and it’s got no taste.',
+          'ways to expand your mind, feed your soul, or let off steam don’t exist nearby...',
+          '...and, even if they did, getting there is dodgy and takes forever.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'Your community culture is vibing if...'},
     {type: 'ul', content: [

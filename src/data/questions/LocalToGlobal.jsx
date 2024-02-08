@@ -3,6 +3,36 @@ const LocalToGlobal = {
   title: "Local to Global",
   question: "This spinning ball of hot rock covered with a web of life is your call to consciousness. Be the change you want to see in the world.",
   image: require('../png/NASAEarth.png'),
+  sections: {
+    one: [
+      {
+        heading: 'You can rest easy if...',
+        items: [
+          'the salmon are returning, the whales are healthy and you see vegetation on both sides of the shoreline.',
+          'you hear several different birds in several trees outside your window and several of your friends can hang out at your favorite local.',
+          'you know who to call and where to go to deal with invasive species',
+          'neighbourhoods are making greenways & blueways a priority for all around well-being, biodiversity, carbon drawdown and climate resilience.',
+          'every renovation and development increases wellbeing through material choice, facilitates community through place-making design and features nature-base solutions.',
+          'your municipality’s travel footprint re: greenhouse gases (GHGs) is getting smaller and yours is too. You can get where you need to go without relying on dinosaur technology.',
+          'your municipality’s GHGs from fossil fuel power consumption is reducing and you have ways of powering your life that are fossil free.',
+          'the businesses you need collaborate with each other and share resources to create their products and services. This keeps money and value in the community via the circular economy.',
+          'you see all genders and cultures represented in leadership positions across industries.',
+        ]
+      },
+      {
+        heading: 'Answer the wake up call if...',
+        items: [
+          'the watershed you live in flows through pipes, deep and bare ditches, and across concrete making it unlive-able for a fish.',
+          'you don’t hear birds, see trees or have friends close by to hang with.',
+          'you see a lot of invasive plants like ivy, broom, laurel and daphne and the bullfrogs (picture poop-ups) are a lot bigger than you remember them.',
+          'every reno and development means less Nature. The result looks like plastic and it goes up before you even knew it was in the works.',
+          'you see on the map that your municipality’s travel footprint is increasing and you haven’t figured out lighter footprint travel yourself.',
+          'you see on the map that your municipality’s power footprint is increasing and you haven’t figured out lighter footprint travel yourself.',
+          'all the people in local leadership positions look and sound the same.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'You can rest easy if...'},
     {type: 'ul', content: [

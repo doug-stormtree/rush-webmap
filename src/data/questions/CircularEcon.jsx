@@ -3,6 +3,29 @@ const CircularEcon = {
   title: 'Circular Economy',
   question: 'Shape up your triple bottom line. Close the loop on waste and eliminate the guilt with the garbage of consumerism.',
   image: require('../png/CircularEconomy.png'),
+  sections: {
+    one: [
+      {
+        heading: 'Your region is turning waste into a resource if...',
+        items: [
+          'you notice Circular Economy Businesses near you.',
+          'you see convenient places to recycle unwanted household materials and medications.',
+          'your municipality has a ban on plastic bags and single-use items, and businesses are on board.',
+          'you can find a convenient way to get rid of your stuff on the RCBC website.',
+          'when you arrive at the landfill with a truckload, you can easily dispose responsibly - and drive away feeling flush and free.',
+        ]
+      },
+      {
+        heading: 'It’s a vicious circle if...',
+        items: [
+          'when you shop or get take out, you end up with a bail of plastic and styrofoam that you don’t know what to do with.',
+          'your municipality doesn’t have a ban on single use items.',
+          'there are no convenient places to recycle or re-purpose your stuff.',
+          'when you arrive at the landfill with a truckload, you spend your day and empty your wallet sorting out how to dispose responsibly.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'Your region is turning waste into a resource if...'},
     {type: 'ul', content: [

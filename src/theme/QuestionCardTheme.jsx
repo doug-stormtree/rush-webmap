@@ -13,15 +13,13 @@ const helpers = createMultiStyleConfigHelpers([
 const QuestionCard = helpers.defineMultiStyleConfig({
   baseStyle: {
     card: {
+      pointerEvents: 'auto',
       position: 'relative',
       minWidth: '120px',
       borderRadius: 'xl',
       background: '#333',
       // text styling
       color: 'white',
-      _hover: {
-        color: '#BBB'
-      }
     },
     image: {
       width: '100%',
@@ -38,13 +36,14 @@ const QuestionCard = helpers.defineMultiStyleConfig({
       // text styling
       fontFamily: 'var(--chakra-fonts-heading)',
       fontSize: 'sm',
+      textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
     },
     subtitle: {
       display: 'none',
       // text styling
       fontFamily: 'var(--chakra-fonts-subHeading)',
       lineHeight: '130%',
-      textShadow: '0px 4px 4px rgba(0,0,0,0.4)',
+      textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
     },
     body: {
       display: 'none',
@@ -60,6 +59,9 @@ const QuestionCard = helpers.defineMultiStyleConfig({
       card: {
         height: '120px',
         width: '120px',
+        _hover: {
+          color: '#BBB'
+        }
       },
       title: {
         // positioning
@@ -117,7 +119,7 @@ const QuestionCard = helpers.defineMultiStyleConfig({
         borderRadius: 'inherit',
         padding: '1rem',
         paddingTop: '0.6rem',
-        background: 'linear-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,0) 120px, rgba(255,255,255,1) 300px, rgba(255,255,255,1)) 100%',
+        background: 'linear-gradient(rgba(255,255,255,0.8) 0, rgba(255,255,255,0.5) 180px, rgba(255,255,255,1) 320px, rgba(255,255,255,1)) 100%',
       },
       title: {
         // text styling

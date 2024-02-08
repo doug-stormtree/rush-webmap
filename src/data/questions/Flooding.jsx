@@ -3,6 +3,30 @@ const Flooding = {
   title: 'Protect from Flooding',
   question: 'It’s not that your pants are too short. Climate change is too big for our stormwater infrastructure and we need to right-size the situation.',
   image: require('../png/ProtectFromFlooding.png'),
+  sections: {
+    one: [
+      {
+        heading: 'You’ve got good flow if...',
+        items: [
+          'Your watershed has lots of trees, plants and bushes to hold the banks during high flows and to keep the water cool for fish.',
+          'Your watershed has a good variety of bugs and biodiversity, which is a sign of health.',
+          'There are fish in the watershed and salmon return each year. These are markers ecosystem connectivity and signs of good oxygen content, temperature and swim-ability.',
+          'You can follow its flow from source to sea. This means that your watershed is working by storing and filtering water, stabilizing banks, recharging the water table, and regulating the atmosphere.',
+          'Your local stewardship group is collaborating with local governments and First Nations to take care of your watershed.',
+          'There are multiple raingardens along the watershed to help prevent polluted road runoff from entering nearby streams.',
+        ]
+      },
+      {
+        heading: 'Get your gumboots ready if...',
+        items: [
+          'Your region has a lot of pavement and compacted soils which prevent water absorption.  Pollutants and trash flow directly into streams and creeks where they poison plants, birds, fish, frogs, and bugs.',
+          'The local stream looks more like a ditch connected by pipes, and water rushes through it quickly causing erosion.',
+          'There is no stewardship group taking care of it.',
+          'You don’t see any life in the watershed which means it’s ready for extreme water events.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'You’ve got good flow if...'},
     {type: 'ul', content: [

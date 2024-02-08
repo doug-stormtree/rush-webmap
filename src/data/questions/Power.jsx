@@ -3,6 +3,32 @@ const Power = {
   title: "Power this Place",
   question: "The lights are on but nobody’s home. Empower yourself to take charge.",
   image: require('../png/PowerThisPlace.png'),
+  sections: {
+    one: [
+      {
+        heading: 'It\'s buzzing with good energy if...',
+        items: [
+          'you see on the map that your municipality’s greenhouse gas footprint from stationary sources like buildings and construction equipment is going down.',
+          'you can access programs that give you a screaming deal on swapping out your oil heat to a heat pump.',
+          'landlords and homeowners have insulated the place you live to a high standard.',
+          'your municipality requires the highest level of Step Code in the construction and renovation of buildings.',
+          'you find that your neighbourhood is suitable for solar and you can get a special deal that makes cents when you purchase as a community.',
+          'your neighbourhood is designed with integrated resource recovery meaning it is heated or powered by a resource from another facility.',
+          'a future is fast approaching where your region is turning local poop into local power.',
+        ]
+      },
+      {
+        heading: 'Out of juice if...',
+        items: [
+          'you see on the map that your municipality’s greenhouse gas footprint from stationary sources like buildings and construction equipment is going up compared to 2007 levels.',
+          'your landlord won’t invest in your building and so reducing your energy footprint feels out of your control.',
+          'the energy retrofit program turns out to be a cash grab that’s not working in your favour.',
+          'your municipality is in cahoots with the developer in building a future that’s not gonna work for the grandkids.',
+          'community consultations and municipal meetings skip past sustainable energy considerations.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'It\'s buzzing with good energy if...'},
     {type: 'ul', content: [

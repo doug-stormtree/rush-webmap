@@ -5,20 +5,24 @@ const BeatTheHeat = {
   image: require('../png/BeatTheHeat.png'),
   sections: {
     one: [
-      {type: 'h3', content: 'You\'re cool if...'},
-      {type: 'ul', content: [
-        'when you pinpoint your location on the map, it is not in a red heat dome.',
-        'the pavement around you is permeable.',
-        'you have shady places of refuge, cool buildings, and drinking fountains nearby.',
-        'your area follows the tree equity rule.',
-      ]},
-      {type: 'h3', content: 'Start sweating if...'},
-      {type: 'ul', content: [
-        'when you pinpoint your location on the map, it is in a red heat dome.',
-        'there is lots of impermeable dark pavement around you that traps and radiates the sun\'s heat.',
-        'your region doesn’t offer cool places of refuge like air-conditioned buildings, shady parks, and drinking fountains.',
-        'your neighbourhood does not follow the tree equity rule.',
-      ]}
+      {
+        heading: 'You\'re cool if...',
+        items: [
+          'when you pinpoint your location on the map, it is not in a red heat dome.',
+          'the pavement around you is permeable.',
+          'you have shady places of refuge, cool buildings, and drinking fountains nearby.',
+          'your area follows the tree equity rule.',
+        ]
+      },
+      {
+        heading: 'Start sweating if...',
+        items: [
+          'when you pinpoint your location on the map, it is in a red heat dome.',
+          'there is lots of impermeable dark pavement around you that traps and radiates the sun\'s heat.',
+          'your region doesn’t offer cool places of refuge like air-conditioned buildings, shady parks, and drinking fountains.',
+          'your neighbourhood does not follow the tree equity rule.',
+        ]
+      },
     ]
   },
   description_new: [

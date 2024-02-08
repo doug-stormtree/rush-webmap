@@ -3,6 +3,41 @@ const Development = {
   title: "Development",
   question: "Property values hang in the balance with climate change - and your insurance broker knows it. Get a rider on ecosystem health.",
   image: require('../png/Development.png'),
+  sections: {
+    one: [
+      {
+        heading: 'Seal of approval if...',
+        items: [
+          'Civic/Infrastructure',
+          '  - watersheds and stormwater infrastructure highlight opportunities for restoration.',
+          '  - it is near transportation routes that support the commute between work and home.',
+          'Community',
+          '  - community gathering spaces are planned for every 30 homes.',
+          'Energy',
+          '  - buildings are clustered and feature “integrated resource recovery”',
+          '  - buildings meet the highest level of Step Code or LEED certification.',
+          'Greenspace',
+          '  - existing trees are protected and more are planted for 30%+ canopy cover. This means health and well-being, bank stabilization, noise and wind buffering, habitat for biodiversity, shade, and protection from seismic events.',
+          '  - native plantings are proposed to extend the reach of the closest ecosystem.',
+          '  - it includes landscape design choices that connect ecosystems. Ecological connectivity creates resilience to climate events.',
+          'Water',
+          '  - it protects community water security by considering the location and access of aquifers.',
+          '  - it maintains access to the aquifer in case of emergency.',
+          '  - it adds aquifer protection from saltwater intrusion.',
+          '  - it accounts for worst-case scenario sea level rise and includes raingardens and other Nature-Based Solutions to support the safe flow of water across the landscape.',
+        ]
+      },
+      {
+        heading: 'Seals your fate if...',
+        items: [
+          'it does not consider community water security, flooding, and sea level rise.',
+          'it fragments ecosystem connectivity limiting biodiversity, greenhouse gas drawdown and resilience to climate events.',
+          'it is situated to increase reliance on car travel leading to higher emissions.',
+          'there are no obvious places to gather and have fun.',
+        ]
+      },
+    ]
+  },
   description: [
     {type: 'h2', content: 'Seal of approval if...'},
     {type: 'ul', content: [

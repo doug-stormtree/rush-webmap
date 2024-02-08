@@ -4,13 +4,7 @@ import '@fontsource/poppins/700.css';
 import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
 import QuestionCard from './QuestionCardTheme';
-
-const NavBar = defineStyleConfig({
-  baseStyle: {
-    bg: '#FFF',
-    display: 'flex',
-  },
-});
+import NavBar from './NavBarTheme';
 
 const MenuCard = defineStyleConfig({
   baseStyle: {

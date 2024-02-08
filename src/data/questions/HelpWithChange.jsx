@@ -3,6 +3,32 @@ const HelpWithChange = {
   title: "Help with Change",
   question: "There is wisdom in the crowd and power in numbers. Find your folks and your levers for change here to make hope happen.",
   image: require('../png/HelpWithChange.png'),
+  sections: {
+    one: [
+      {
+        heading: 'Change is at your fingertips if...',
+        items: [
+          'there is an organization or initiative in your community that speaks to the problem you care about.',
+          'there are clear opportunities to get involved, with advocates and allies who make it their job to help you. Everywhere you look, you see symbols that say you belong.',
+          'climate initiatives and policies in your community show meaningful collaboration between government offices, businesses, community groups, and local First Nations.',
+          'the governments representing you have declared a climate emergency. They also have a clear plan that outlines ambitious environmental goals, with a track record of implementation.',
+          'existing initiatives are rooted in reconciliation and nation-to-nation relationships with Indigenous communities. They incorporate commitments to social equity, the wellbeing of future generations, and living in alignment with nature.',
+          'there are accessible services to get emergency help. Communities of care are well-established.',
+        ]
+      },
+      {
+        heading: 'The movement needs you more than ever if...',
+        items: [
+          'you don’t see an organization working on your problem and you cannot find an obvious starting point for action.',
+          'you cannot find allies and advocates, and the movement feels unwelcoming. You feel like you have to go it alone.',
+          'you’re seeing silos, duplicated efforts, people talking over each other.',
+          'your governments are conducting business as usual. Where environmental plans do exist, they lack real ambition and are all talk and no action.',
+          'there is no meaningful commitment – and action – towards reconciliation and equity goals. The initiatives do not represent the communities they serve.',
+          'help doesn\'t feel accessible. Your questions and requests go unanswered, or you’re given the run-around. Services are far away and have limited hours.',
+        ]
+      },
+    ]
+  },
   description_new: [
     {type: 'h2', content: 'Change is at your fingertips if...'},
     {type: 'ul', content: [
