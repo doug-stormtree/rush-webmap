@@ -44,7 +44,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
-const analytics = getAnalytics(app);
+const analytics = getAnalytics(app); // eslint-disable-line no-unused-vars
 
 function App() {
   return (
