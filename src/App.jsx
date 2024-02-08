@@ -25,6 +25,7 @@ import { LegendPane } from './components/Legend';
 import { latLng } from 'leaflet';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 // Questions
 import Questions from './data/Questions';
 import { PlacesAutocomplete } from './components/PlacesAutocomplete';
@@ -36,12 +37,14 @@ const firebaseConfig = {
   projectId: "rush-webapp",
   storageBucket: "rush-webapp.appspot.com",
   messagingSenderId: "475584087043",
-  appId: "1:475584087043:web:b7f77d9656f9721da37a36"
+  appId: "1:475584087043:web:b7f77d9656f9721da37a36",
+  measurementId: "G-F052FD5Y1T",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
+const analytics = getAnalytics(app);
 
 function App() {
   return (
