@@ -1,5 +1,5 @@
 import { tileLayer } from 'leaflet';
-import { StartOffLayersName, StartOnLayersName } from '../TextContent';
+import { StartOnLayersName } from '../TextContent';
 
 const styleMap = new Map([
   ["1", {legendText:   '0 - 20',   fillColor: 'rgb(198, 219, 235)'}],
