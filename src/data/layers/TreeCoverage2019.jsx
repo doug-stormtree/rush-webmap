@@ -13,17 +13,18 @@ const styleMap = new Map([
 const layer = {
   title: 'Tree Coverage (2019)',
   description: [
-    {type:'p', content:'Estimated 2005 Tree Cover Percentage. The data have been created on behalf of the Urban Forest Stewardship Initiative (UFSI), a program of Habitat Acquisition Trust (HAT) by Caslys Consulting Ltd.'},
-    {type:'p', content:'Learn more and compare with other years by reading the report here:'},
+    {type:'p', content:'Estimated 2019 Tree Cover Percentage. The data have been created on behalf of the Urban Forest Stewardship Initiative (UFSI), a program of Habitat Acquisition Trust (HAT), by Caslys Consulting Ltd.'},
+    {type:'p', content:'RUSH has chosen a diverging colour scheme to highlight areas that meet the 30% canopy cover goal set by Nature Canada. Notice the light yellow areas representing 20% to 30% canopy cover. These could be areas of opportunity for expanding tree equity into more neighbourhoods. Check out the Nature Canada report in the Initiatives section.'},
+    {type:'p', content:'Learn more about the project and methodology by reading the report here:'},
     {
       type:'link',
-      content:'Caslys Consulting Ltd., 2013. Capital Regional District Land Cover Mapping 1986, 2005 and 2011 Summary Report. Capital Regional District, Victoria.',
-      url:'https://hat.bc.ca/s/CRD_2011_land_cover_EXECUTIVE_summary.pdf'
+      content:'Caslys Consulting Ltd., 2021. Capital Regional District Urban Land Cover Classification 2017/2019 Summary Report. Capital Regional District, Victoria.',
+      url:'https://www.crd.bc.ca/docs/default-source/es-watersheds-pdf/land-cover/2021-land-cover-classification-report.pdf'
     }
   ],
   leafletLayer: tileLayer(
     '/CanopyCover19/{z}/{x}/{y}.png',
-    { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.5 }
+    { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.6 }
     ),
   shape: 'tile',
   symbology: 'classified',
