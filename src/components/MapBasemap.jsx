@@ -11,6 +11,7 @@ const API_SESSION_OPTS = {
   mapType: 'satellite',
   language: 'en-CA',
   region: 'CA',
+  layerTypes: [ 'layerRoadmap' ]
 }
 const API_TILE_PATH = "2dtiles/{z}/{x}/{y}"
 const API_ATTR_PATH = "viewport"
