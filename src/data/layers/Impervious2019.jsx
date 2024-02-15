@@ -13,6 +13,7 @@ const layer = {
   title: 'Impervious Surfaces (2019)',
   description: [
     {type:'p', content:'Estimated 2019 Impervious Surfaces Percentage. The data have been created on behalf of the Urban Forest Stewardship Initiative (UFSI), a program of Habitat Acquisition Trust (HAT), by Caslys Consulting Ltd.'},
+    {type:'p', content:'Impervious surfaces mainly comprise of pavement, buildings, and other artificial structures that prevent rainwater from infiltrating the soil below. This can result in urban flooding or excessive fast flowing water that erodes the landscape downstream.'},
     {type:'p', content:'Learn more about the project and methodology by reading the report here:'},
     {
       type:'link',
@@ -26,7 +27,7 @@ const layer = {
     ),
   shape: 'tile',
   symbology: 'classified',
-  legendTitle: 'Percentage of Tree Cover',
+  legendTitle: 'Percentage of Impervious Surfaces',
   styleMap: styleMap,
   questions: [
     { key: 'protect-from-flooding', group: StartOnLayersName, active: true },
