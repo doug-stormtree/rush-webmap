@@ -30,7 +30,7 @@ const layer = {
   legendTitle: 'Percentage of Tree Cover',
   styleMap: styleMap_TreeCoverage2005,
   questions: [
-    { key: 'beat-the-heat', group: StartOnLayersName, active: true },
+    { key: 'beat-the-heat', group: StartOnLayersName, active: false },
     { key: 'neighbourhood-to-naturehood', group: StartOffLayersName, active: false },
     { key: 'development', group: 'Greenspace', active: false },
   ]
