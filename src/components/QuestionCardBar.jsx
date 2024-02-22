@@ -1,54 +1,67 @@
 import { Flex } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import QuestionCard from './QuestionCard';
 import Questions from '../data/Questions';
 
-function rotateKeyToPosition(key, list, position = 2) {
-  const currPos = list.findIndex((el) => el.key === key)
-  if (!currPos) throw new Error('QuestionButtons does not contain: ' + key)
-  
-  const n = list.length;
-  position %= n;
-
-  const reverse = (list, start, end) => {
-    while (start < end) {
-      [list[start], list[end]] = [list[end], list[start]]
-      start++
-      end--
-    }
-  }
-
-  reverse(list, 0, n - 1)
-  reverse(list, 0, position - 1)
-  reverse(list, position, n - 1)
-
-  return list
-}
-
-export default function QuestionCardBar() {
-  const [activeQuestion, setActiveQuestion] = useState('beat-the-heat')
-
-  const questionButtons = [];
+function questionsInit(initActiveQuestion) {
+  const questionButtons = []
   Questions.forEach((q,k) => {
-    const question = {
+    questionButtons.push({
+      key: k,
+      active: k === initActiveQuestion,
+      expanded: true,
       image: q.image,
       title: q.title,
       subtitle: q.question,
       body: q.sections.one ?? q.description,
+    })
+  })
+  return questionButtons
+}
+
+const questionsReducer = (state, action) => {
+  const currentActive = state.findIndex((q) => q.active)
+  if (state[currentActive].key === action) {
+    const newState = [...state]
+    newState[currentActive].expanded = false
+    return newState
+  }
+
+  // generate a new state with only requested question active
+  const newState = []
+  state.forEach((q) => {
+    newState.push({
+      ...q,
+      active: q.key === action,
+      expanded: true,
+    })
+  })
+  // find the index of first active question in new state
+  let activeIndex = newState.findIndex((q) => q.active)
+  // if no active question found report error, return original state
+  if (activeIndex < 0) {
+    console.log('Invalid question to become active: ' + action)
+    return state
+  } else {
+    // rotate new active question left until it is second item
+    while (activeIndex > 1) {
+      newState.push(newState.shift())
+      activeIndex--
     }
-    questionButtons.push(
-      <QuestionCard
-        key={k}
-        question={question}
-        onClick={() => {
-          rotateKeyToPosition(k, questionButtons)
-          setActiveQuestion(k)
-        }}
-        variant={k === activeQuestion ? 'expanded' : 'button'}
-      />
-    )
-  });
-  console.log(questionButtons)
+    // if active question is first item, rotate right once
+    if (activeIndex === 0) {
+      newState.unshift(newState.pop())
+    }
+  }
+  return newState
+}
+
+export default function QuestionCardBar() {
+  const [questionState, questionDispatch] = useReducer(
+    questionsReducer,
+    'beat-the-heat',
+    questionsInit
+  )
 
   return (
     <Flex
@@ -67,7 +80,16 @@ export default function QuestionCardBar() {
         pointerEvents: 'none'
       }}
     >
-      {questionButtons}
+      {questionState?.map((q) => 
+        <QuestionCard
+          key={q.key}
+          question={q}
+          onClick={() => {
+            questionDispatch(q.key)
+          }}
+          variant={q.active ? q.expanded ? 'expanded' : 'wide' : 'button'}
+        />
+      )}
     </Flex>
   )
 }
