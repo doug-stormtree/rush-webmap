@@ -30,7 +30,7 @@ const layer = {
   legendTitle: 'Risk of Sea Water Intrusion',
   styleMap: styleMap,
   questions: [
-    { key: 'protect-the-coast', group: StartOnLayersName, active: true },
+    { key: 'protect-the-coast', group: StartOnLayersName, active: false },
     { key: 'development', group: 'Water', active: false },
   ]
 }
