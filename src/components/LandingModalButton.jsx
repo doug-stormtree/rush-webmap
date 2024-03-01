@@ -54,14 +54,14 @@ export default function LandingModalButton(props) {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader maxW='4xl'>Welcome to the RUSH Initiative Web Map</ModalHeader>
+          <ModalHeader maxW={parseInt(props.vh, 10) < 680 ? '2xl' : '4xl'}>Welcome to the RUSH Initiative Web Map</ModalHeader>
           <ModalCloseButton />
-          <ModalBody maxW='4xl'>
+          <ModalBody maxW={parseInt(props.vh, 10) < 680 ? '2xl' : '4xl'}>
             <Stack spacing='1em' overflowY='scroll' maxH='100%'>
               <FormattedText textArray={AboutPageText} />
             </Stack>
           </ModalBody>
-          <ModalFooter maxW='4xl'>
+          <ModalFooter maxW={parseInt(props.vh, 10) < 680 ? '2xl' : '4xl'}>
             <Image src={logos_xl} />
           </ModalFooter>
         </ModalContent>
