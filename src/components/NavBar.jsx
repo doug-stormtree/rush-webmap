@@ -38,7 +38,7 @@ export default function NavBar(props) {
           >Feedback</Button>
         </Link>
         <ShareModalButton getShareURL={getShareURL} />
-        <LandingModalButton />
+        <LandingModalButton vh={props.vh} />
       </ButtonGroup>
     </Box>
   )

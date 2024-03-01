@@ -42,22 +42,26 @@ export default function LandingModalButton(props) {
         onClose={onClose}
         isCentered={isCentered}
         closeOnOverlayClick={false}
-        size={{
-          xl: "4xl",
-          md: "xl",
-          base: "full",
-        }}
+        scrollBehavior='inside'
+        size={parseInt(props.vh, 10) < 780 
+          ? "full" 
+          : {
+            xl: "4xl",
+            md: "xl",
+            base: "full",
+          }
+        }
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Welcome to the RUSH Initiative Web Map</ModalHeader>
+          <ModalHeader maxW='4xl'>Welcome to the RUSH Initiative Web Map</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
+          <ModalBody maxW='4xl'>
             <Stack spacing='1em' overflowY='scroll' maxH='100%'>
               <FormattedText textArray={AboutPageText} />
             </Stack>
           </ModalBody>
-          <ModalFooter>
+          <ModalFooter maxW='4xl'>
             <Image src={logos_xl} />
           </ModalFooter>
         </ModalContent>
