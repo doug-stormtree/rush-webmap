@@ -23,7 +23,7 @@ const layer = {
   ],
   leafletLayer: tileLayer(
     '/Impervious19/{z}/{x}/{y}.png',
-    { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.6 }
+    { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.8 }
     ),
   shape: 'tile',
   symbology: 'classified',
