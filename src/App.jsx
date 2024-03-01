@@ -126,6 +126,7 @@ function WebMap() {
         zIndex='10'
         boxShadow='0px 0px 8px 2px #888'
         getShareURL={getShareURL}
+        vh={vh}
       />
       <QuestionMenuBar
         style={{

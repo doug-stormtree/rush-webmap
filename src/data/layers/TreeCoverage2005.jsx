@@ -24,7 +24,7 @@ const layer = {
   ],
   leafletLayer: tileLayer(
     '/TC05_Tiles/{z}/{x}/{y}.png',
-    { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.6 }
+    { minNativeZoom: 14, maxNativeZoom: 14, opacity: 0.3 }
     ),
   shape: 'tile',
   symbology: 'classified',
