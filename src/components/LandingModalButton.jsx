@@ -53,7 +53,7 @@ export default function LandingModalButton(props) {
           <ModalHeader>Welcome to the RUSH Initiative Web Map</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Stack spacing='1em'>
+            <Stack spacing='1em' overflowY='scroll' maxH='100%'>
               <FormattedText textArray={AboutPageText} />
             </Stack>
           </ModalBody>
