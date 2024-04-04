@@ -2,7 +2,7 @@ const Shelter = {
     key: 'shelter',
     title: "Seeking Shelter",
     question: "Shelter is your home, a park, your friends, an escape from sprawl, accessible, affordable and safe. What is shelter to you, and how can we make sure that nobody is left out in the cold?",
-    image: require('../png/Placeholder.png'),
+    image: require('../png/Shelter.png'),
     description_new: [
       {type: 'h2', content: 'Fortress found if...'},
       {type: 'ul', content: [
