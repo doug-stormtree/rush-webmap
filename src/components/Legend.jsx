@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   useDisclosure,
   Avatar,
@@ -15,20 +15,24 @@ import {
   Heading,
   HStack,
   IconButton,
+  Image,
+  Link,
+  Spacer,
   Spinner,
   Switch,
   Text,
+  Tooltip,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
+import FormattedText from './FormattedText';
 import { useMapLayerStore, LOADING } from '../data/Questions';
 import { LegendGroups } from '../data/TextContent';
-import FormattedText from './FormattedText';
 
 // Wraps Legend in a Box for large screen sizes.
 export const LegendPane = ({ activeQuestion }) => {
   return (
     <Box
-      w='lg'
+      w='2xl'
       p={4}
       pe={2}
       overflowY='scroll'
@@ -60,7 +64,7 @@ export const LegendDrawerButton = ({ activeQuestion }) => {
         onClose={onClose}
         finalFocusRef={btnRef}
         placement='right'
-        size='sm'
+        size='md'
         >
         <DrawerOverlay />
         <DrawerContent>
@@ -101,7 +105,11 @@ const LegendList = ({ activeQuestion }) => {
     .forEach(([key, layer]) => {
       const legendGroup = layer.questions.find((q) => q.key === activeQuestion).group;
       const groupEntries = legendEntries.get(legendGroup) ?? [];
-      groupEntries.push(<LegendItem key={key} layerId={key} question={activeQuestion} mb={1} />);
+      groupEntries.push(
+        layer?.ogmMapId
+        ? <LegendItemOGM key={key} layerId={key} question={activeQuestion} mb={1} />
+        : <LegendItem key={key} layerId={key} question={activeQuestion} mb={1} />
+      );
       legendEntries.set(legendGroup, groupEntries);
     });
   
@@ -109,7 +117,6 @@ const LegendList = ({ activeQuestion }) => {
   const legendGroupsWithPositions = Object.values(LegendGroups).filter(g => Number.isInteger(g?.position))
   // Make array of group keys, filtering out any with special positions
   const legendGroupsWithoutPositions = [...legendEntries.keys()].filter(k => !legendGroupsWithPositions.some(g => g.group === k)).sort()
-  console.log(legendGroupsWithoutPositions)
 
   // Splice in the keys with special positions
   legendGroupsWithPositions.forEach(g => legendGroupsWithoutPositions.splice(g.position - 1, 0, g.group))
@@ -215,11 +222,13 @@ const LegendItemDetails = ({ layerId }) => {
   );
 }
 
-const LegendItemDescription = ({ description }) => {
+const LegendItemDescription = ({ description, noOfLines = undefined }) => {
   if (typeof description === 'string' || description instanceof String)
-    return <Text>{description}</Text>;
+    return <Text noOfLines={noOfLines}>{description}</Text>;
   if (Array.isArray(description)) {
-    return <FormattedText textArray={description} />;
+    return noOfLines
+      ? <Text noOfLines={noOfLines}>{description[0].content}</Text>
+      : <FormattedText textArray={description} />;
   }
   return null;
 }
@@ -259,9 +268,9 @@ const SinglePatchPoint = ({ style }) => {
 }
 
 const ClassifiedPatchPoint = ({ styleMap }) => {
-  const styles = [...styleMap.entries()].slice(0,2);
+  const styles = [...styleMap.entries()].slice(0,3);
   return (
-    <HStack spacing={'-0.5rem'}>
+    <HStack spacing={'1'}>
       {styles.map(([key, style], index) => {
         const { legendText, ...restStyle } = style;
         return (
@@ -348,3 +357,125 @@ const LinePatchSVG = ({ fill, stroke, dashed = false }) => (
     />
   </svg>
 )
+
+// LegendItemOGM Component
+//   A single legend entry row for an OpenGreenMap layer.
+export const LegendItemOGM = ({ layerId, question }) => {
+  const { isOpen, onToggle } = useDisclosure();
+  const layer = useMapLayerStore((state) => state.layers.get(layerId));
+  const toggleLayerActive = useMapLayerStore((state) => state.toggleLayerActive);
+  const active = layer.questions.some((q) => q.key === question && q.active === true)
+
+  const [mapName, setMapName] = useState(layer.title)
+  const [team, setTeam] = useState({ name: 'Team', src: require('../data/png/Placeholder.png') })
+  useEffect(() => {
+    if (!layer?.ogmMapId) return;
+
+    // Fetch OGM Team Image
+    fetch(`https://new.opengreenmap.org/api-v1/maps/${layer.ogmMapId}`)
+      .then((response) => response.json())
+      .then((json) => {
+        const teamId = json.map?.visibility.team
+        const resMapName = json.map?.name
+        if (resMapName) setMapName(resMapName)
+        if (teamId) {
+          fetch(`https://new.opengreenmap.org/api-v1/teams/${teamId}`)
+            .then((response) => response.json())
+            .then((json) => {
+              const teamName = json.team?.name
+              const teamLogoId = json.team?.logo
+              if (teamName && teamLogoId) {
+                setTeam({
+                  name: teamName,
+                  src: `https://new.opengreenmap.org/api-v1/pictures/${teamLogoId}/picture`
+                })
+              }
+            })
+        }
+      })
+  }, [layer, mapName, setMapName, team, setTeam])
+
+  return (
+    <Flex
+      direction='column'
+      gap='8px'
+      padding='8px'
+      bgColor='gray.100'
+      borderRadius='lg'
+      boxShadow={isOpen ? undefined : 'inset 0px -24px 16px -16px hsla(0,0%,0%,.25)'}
+    >
+      {/* Map icons and toggle */}
+      <Flex direction='row' alignItems='center' justifyContent='space-between'>
+        <LegendPatch layerId={layerId} flex='0' />
+        <Spacer />
+        {layer.leafletLayer === LOADING
+          ? <Spinner
+              color='blue.500'
+              emptyColor='gray.200'
+              speed='1s'
+              thickness='4px'
+              marginInline='5px'
+            />
+          : <Switch
+              isChecked={active}
+              onChange={(e) => toggleLayerActive(layerId, question)}
+            >{ active ? 'On' : 'Off' }</Switch>
+        }
+      </Flex>
+      {/* Map title, team name, and team logo */}
+      <Flex direction='row' alignItems='bottom' justifyContent='space-between'>
+        <Flex direction='column' alignItems='left' justifyContent='flex-end'>
+          <Text
+            fontFamily='var(--chakra-fonts-subTitle)'
+            fontSize='sm'
+            fontWeight='light'
+            noOfLines={1}
+          >
+            {team.name}
+          </Text>
+          <Text
+            fontFamily='var(--chakra-fonts-title)'
+            fontSize='lg'
+            fontWeight='bold'
+            noOfLines={2}
+          >
+            {mapName}
+          </Text>
+        </Flex>
+        <Image
+          boxSize='100px'
+          objectFit='cover'
+          alt={team?.name ?? ''}
+          src={team?.src ?? ''}
+        />
+      </Flex>
+      {/* Description */}
+      <Box onClick={onToggle}>
+        <LegendItemDescription
+          description={layer.description}
+          noOfLines={isOpen ? undefined : 2}
+        />
+      </Box>
+      { isOpen ? (
+        <Flex direction='row' justifyContent='space-around' >
+          <Link
+            isDisabled={!layer?.ogmMapId}
+            href={`https://new.opengreenmap.org/browse/sites?map=${layer?.ogmMapId}`}
+            isExternal
+          >
+            <Button colorScheme='green'>Visit Campaign</Button>
+          </Link>
+          <Link
+            isDisabled={!layer?.ogmMapId}
+            href={`https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
+            isExternal
+          >
+            <Tooltip label='Will Require OpenGreenMap Account' placement='top' bg='orange.600' hasArrow>
+              <Button colorScheme='green' >Add a Feature</Button>
+            </Tooltip>
+          </Link>
+        </Flex>
+      ) : null }
+    </Flex>
+  )
+}

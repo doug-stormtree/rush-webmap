@@ -6,6 +6,7 @@
     "@chakra-ui/react": "^2.3.5",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@fontsource-variable/figtree": "^5.0.20",
     "@fontsource/raleway": "^5.0.8",
     "@googlemaps/js-api-loader": "^1.16.2",
     "@testing-library/jest-dom": "^5.16.5",
