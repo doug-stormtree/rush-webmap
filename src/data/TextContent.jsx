@@ -6,7 +6,7 @@ export const AboutPageText = [
 ];
 
 export const LegendGroups = {
-  StartOn: { group: 'Starting Place', position: 1 },
-  StartOff: { group: 'Deeper Connections', position: 2},
-  OGM: { group: 'Plot that Spot' },
+  StartOn: { group: 'Starting Place', position: 1, subheading: undefined },
+  StartOff: { group: 'Deeper Connections', position: 2, subheading: undefined},
+  OGM: { group: 'Plot that Spot', subheading: 'Connect the call to action by joining these community mapping projects powered by OpenGreenMap.' },
 }

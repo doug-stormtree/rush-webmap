@@ -136,12 +136,15 @@ const LegendList = ({ activeQuestion }) => {
 
 // LegendGroup Component
 const LegendGroup = ({ title, children }) => {
-  return children && children.length > 0 ? (
-    <VStack gap='2'>
-      {title && <Heading size='sm' width='100%'>{title}</Heading>}
+  const subheading = Object.values(LegendGroups).find(g => g.group === title)?.subheading
+
+  return children && children.length > 0 && (
+    <VStack gap='0'>
+      {title && <Text fontWeight='bold' size='sm' width='100%'>{title}</Text>}
+      {subheading && <Text>{subheading}</Text>}
       {children}
     </VStack>
-  ) : null
+  )
 }
 
 // LegendItem Component
@@ -399,11 +402,12 @@ export const LegendItemOGM = ({ layerId, question }) => {
 
   return (
     <Flex
+      marginTop='8px'
       direction='column'
       gap='8px'
       padding='8px'
       bgColor='gray.100'
-      borderRadius='lg'
+      borderRadius='xl'
       boxShadow={isOpen ? undefined : 'inset 0px -24px 16px -16px hsla(0,0%,0%,.25)'}
     >
       {/* Map icons and toggle */}
@@ -428,7 +432,6 @@ export const LegendItemOGM = ({ layerId, question }) => {
       <Flex direction='row' alignItems='bottom' justifyContent='space-between'>
         <Flex direction='column' alignItems='left' justifyContent='flex-end'>
           <Link
-            isDisabled={!team?.id}
             href={`https://new.opengreenmap.org/browse/teams/${team.id}`}
             isExternal
           >
@@ -477,14 +480,12 @@ export const LegendItemOGM = ({ layerId, question }) => {
       { isOpen ? (
         <Flex direction='row' justifyContent='space-around' >
           <Link
-            isDisabled={!layer?.ogmMapId}
             href={`https://new.opengreenmap.org/browse/sites?map=${layer?.ogmMapId}`}
             isExternal
           >
             <Button colorScheme='green'>Visit Campaign</Button>
           </Link>
           <Link
-            isDisabled={!layer?.ogmMapId}
             href={`https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
             isExternal
           >
