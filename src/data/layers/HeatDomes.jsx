@@ -1,5 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Heat Domes',
@@ -29,7 +29,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', group: StartOnLayersName, active: true },
+    { key: 'beat-the-heat', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

@@ -1,5 +1,5 @@
 import { mapPopupContent, pointToIcon, ogmFeaturesLink } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: '1000 Rain Gardens',
@@ -37,7 +37,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: StartOnLayersName, active: true },
+    { key: 'protect-from-flooding', active: true, ...LegendGroups.OGM },
     { key: 'development', group: 'Water', active: false },
   ]
 }

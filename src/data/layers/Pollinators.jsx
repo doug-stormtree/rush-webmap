@@ -1,5 +1,5 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from "../LeafletStyleHelpers";
-import { StartOnLayersName } from "../TextContent";
+import { LegendGroups } from "../TextContent";
 
 const layer = {
   title: "G.V.S.P. Pollinators Map",
@@ -35,7 +35,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', group: StartOnLayersName, active: true },
+    { key: 'neighbourhood-to-naturehood', active: true, ...LegendGroups.OGM },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

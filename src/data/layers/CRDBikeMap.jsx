@@ -1,5 +1,5 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ["T1" , {legendText: 'Paved Multi-Use Trails / Protected Bike Lanes', color: 'rgba(120, 162, 47, 255)'}],
@@ -44,7 +44,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'light-footprint', group: StartOnLayersName, active: true },
+    { key: 'light-footprint', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

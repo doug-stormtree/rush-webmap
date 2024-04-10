@@ -1,5 +1,5 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Cultural Foods',
@@ -37,7 +37,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'eat-local', group: StartOnLayersName, active: true },
+    { key: 'eat-local', active: true, ...LegendGroups.OGM },
     { key: 'development', group: 'Community', active: false },
   ]
 }

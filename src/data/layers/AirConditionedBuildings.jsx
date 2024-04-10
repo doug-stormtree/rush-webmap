@@ -1,5 +1,5 @@
 import { mapPopupContent, pointToIconByProperty } from "../LeafletStyleHelpers";
-import { StartOffLayersName } from "../TextContent";
+import { LegendGroups } from "../TextContent";
 import { ReactComponent as CommunityCtrIcon } from '../svg/cc.svg';
 import { ReactComponent as LibraryIcon } from '../svg/lib.svg';
 
@@ -30,7 +30,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', group: StartOffLayersName, active: false },
+    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

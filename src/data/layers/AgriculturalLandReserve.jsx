@@ -1,5 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { StartOffLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Agricultural Land Reserve',
@@ -25,7 +25,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'eat-local', group: StartOffLayersName, active: false },
+    { key: 'eat-local', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

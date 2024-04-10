@@ -6,7 +6,7 @@ import {
   setStyleIfSupported,
 } from '../LeafletStyleHelpers';
 import { GHGCarIcon } from '../../components/EmissionsIcon';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const styleMap_GHG = new Map([
   [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
@@ -73,7 +73,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'light-footprint', group: StartOnLayersName, active: true },
+    { key: 'light-footprint', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Energy', active: false },
   ]
 }

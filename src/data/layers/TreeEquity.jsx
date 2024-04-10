@@ -1,5 +1,5 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Tree Equity Community Map',
@@ -42,7 +42,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'wood-wide-web', group: StartOnLayersName, active: true },
+    { key: 'wood-wide-web', active: true, ...LegendGroups.OGM },
     { key: 'development', group: 'Community', active: false },
   ]
 }

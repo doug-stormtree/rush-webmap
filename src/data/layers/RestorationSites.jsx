@@ -1,5 +1,5 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
-import { StartOffLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Restoration Sites',
@@ -35,7 +35,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: StartOffLayersName, active: false },
+    { key: 'protect-from-flooding', active: false, ...LegendGroups.OGM },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

@@ -1,5 +1,5 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   [1,  {legendText: 'Biotoxin', fillColor: 'rgb(217,172,110)', color: 'rgb(228,144,43)'}],
@@ -77,7 +77,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-the-coast', group: StartOnLayersName, active: false },
+    { key: 'protect-the-coast', active: false, ...LegendGroups.StartOn },
     { key: 'development', group: 'Water', active: false },
   ]
 }

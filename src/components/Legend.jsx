@@ -21,6 +21,7 @@ import {
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import { useMapLayerStore, LOADING } from '../data/Questions';
+import { LegendGroups } from '../data/TextContent';
 import FormattedText from './FormattedText';
 
 // Wraps Legend in a Box for large screen sizes.
@@ -88,8 +89,10 @@ const LegendHeader = () => {
 // LegendList Component
 //   Builds list of LegendItem components for active question layers.
 const LegendList = ({ activeQuestion }) => {
+  // Get all layers
   const layers = useMapLayerStore((state) => state.layers);
 
+  // Start empty map for all legend groups
   const legendEntries = new Map();
   
   [...layers.entries()]
@@ -102,11 +105,19 @@ const LegendList = ({ activeQuestion }) => {
       legendEntries.set(legendGroup, groupEntries);
     });
   
-  const legendComponents = legendEntries.has('default') 
-    ? [<LegendGroup key='default'>{legendEntries.get('default')}</LegendGroup>]
-    : []
-  legendEntries.delete('default');
-  [...legendEntries.keys()].sort().forEach((key) => legendComponents.push(<LegendGroup key={key} title={key}>{legendEntries.get(key)}</LegendGroup>))
+  // Make array with groups that have special positions
+  const legendGroupsWithPositions = Object.values(LegendGroups).filter(g => Number.isInteger(g?.position))
+  // Make array of group keys, filtering out any with special positions
+  const legendGroupsWithoutPositions = [...legendEntries.keys()].filter(k => !legendGroupsWithPositions.some(g => g.group === k)).sort()
+  console.log(legendGroupsWithoutPositions)
+
+  // Splice in the keys with special positions
+  legendGroupsWithPositions.forEach(g => legendGroupsWithoutPositions.splice(g.position - 1, 0, g.group))
+  // Create a component for each group
+  const legendComponents = []
+  legendGroupsWithoutPositions.forEach(
+    (key) => legendComponents.push(<LegendGroup key={key} title={key}>{legendEntries.get(key)}</LegendGroup>)
+  )
 
   return (
     <>
@@ -119,7 +130,7 @@ const LegendList = ({ activeQuestion }) => {
 const LegendGroup = ({ title, children }) => {
   return (
     <>
-      {title && <Heading size='sm'>{title.replace(/[0-9]/g,'')}</Heading>}
+      {title && <Heading size='sm'>{title}</Heading>}
       {children}
     </>
   )
