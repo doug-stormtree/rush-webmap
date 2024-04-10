@@ -5,7 +5,6 @@ const layer = {
   title: 'Cultural Foods',
   description: [
     {type: 'p', content: "Locations of stores and restaurants that provide access to Cultural Foods."},
-    {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=64836448cea704010006d251'},
     {type: 'p', content: 'Based on the Greater Victoria Cultural Food Community Map by UVic Community Mapping students in collaboration with Iyé Creative.'},
     {type: 'link', content: 'Learn about Cultural Food access in Greater Victoria from their StoryMap.', url: 'https://storymaps.arcgis.com/stories/06ee241047d8455bbb02230f453f2edc'},
   ],

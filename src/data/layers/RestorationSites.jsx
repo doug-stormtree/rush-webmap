@@ -5,7 +5,6 @@ const layer = {
   title: 'Restoration Sites',
   description: [
     {type: 'p', content: "Mapping restoration sites as described by Peninsula Streams Society for the RUSH Initiative."},
-    {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=644acbf92af3a50100a0f0bc'},
   ],
   data: ogmFeaturesLink('644acbf92af3a50100a0f0bc'),
   ogmMapId: '644acbf92af3a50100a0f0bc',

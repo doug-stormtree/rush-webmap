@@ -5,7 +5,6 @@ const layer = {
   title: "G.V.S.P. Pollinators Map",
   description: [
     {type:'p', content: 'Greater Victoria / Saanich Peninsula Pollinator Map. Where are the natural areas and gardens that support pollinators in this region?'},
-    {type:'link', content: 'Learn more and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=621fe03eba477f0100989741'}
   ],
   data: ogmFeaturesLink('621fe03eba477f0100989741'),
   ogmMapId: '621fe03eba477f0100989741',
