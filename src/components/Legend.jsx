@@ -22,6 +22,7 @@ import {
   Switch,
   Text,
   Tooltip,
+  VStack,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import FormattedText from './FormattedText';
@@ -33,8 +34,8 @@ export const LegendPane = ({ activeQuestion }) => {
   return (
     <Box
       w='2xl'
-      p={4}
-      pe={2}
+      p='12px'
+      pe='4px'
       overflowY='scroll'
     >
       <LegendHeader />
@@ -135,12 +136,12 @@ const LegendList = ({ activeQuestion }) => {
 
 // LegendGroup Component
 const LegendGroup = ({ title, children }) => {
-  return (
-    <>
-      {title && <Heading size='sm'>{title}</Heading>}
+  return children && children.length > 0 ? (
+    <VStack gap='2'>
+      {title && <Heading size='sm' width='100%'>{title}</Heading>}
       {children}
-    </>
-  )
+    </VStack>
+  ) : null
 }
 
 // LegendItem Component
@@ -152,7 +153,7 @@ export const LegendItem = ({ layerId, question }) => {
 
   return (
     <>
-      <Flex direction='row' alignItems='center' gap={2}>
+      <Flex direction='row' alignItems='center' gap={2} width='100%'>
         {layer.leafletLayer === LOADING
           ? <Spinner
               color='blue.500'
@@ -367,7 +368,7 @@ export const LegendItemOGM = ({ layerId, question }) => {
   const active = layer.questions.some((q) => q.key === question && q.active === true)
 
   const [mapName, setMapName] = useState(layer.title)
-  const [team, setTeam] = useState({ name: 'Team', src: require('../data/png/Placeholder.png') })
+  const [team, setTeam] = useState({ name: '', id: null, src: require('../data/png/Placeholder.png') })
   useEffect(() => {
     if (!layer?.ogmMapId) return;
 
@@ -387,6 +388,7 @@ export const LegendItemOGM = ({ layerId, question }) => {
               if (teamName && teamLogoId) {
                 setTeam({
                   name: teamName,
+                  id: teamId,
                   src: `https://new.opengreenmap.org/api-v1/pictures/${teamLogoId}/picture`
                 })
               }
@@ -425,14 +427,20 @@ export const LegendItemOGM = ({ layerId, question }) => {
       {/* Map title, team name, and team logo */}
       <Flex direction='row' alignItems='bottom' justifyContent='space-between'>
         <Flex direction='column' alignItems='left' justifyContent='flex-end'>
-          <Text
-            fontFamily='var(--chakra-fonts-subTitle)'
-            fontSize='sm'
-            fontWeight='light'
-            noOfLines={1}
+          <Link
+            isDisabled={!team?.id}
+            href={`https://new.opengreenmap.org/browse/teams/${team.id}`}
+            isExternal
           >
-            {team.name}
-          </Text>
+            <Text
+              fontFamily='var(--chakra-fonts-subTitle)'
+              fontSize='sm'
+              fontWeight='light'
+              noOfLines={1}
+            >
+              {team.name}
+            </Text>
+          </Link>
           <Text
             fontFamily='var(--chakra-fonts-title)'
             fontSize='lg'
@@ -444,18 +452,28 @@ export const LegendItemOGM = ({ layerId, question }) => {
         </Flex>
         <Image
           boxSize='100px'
-          objectFit='cover'
+          objectFit='contain'
+          bgColor='white'
+          borderRadius='xl'
           alt={team?.name ?? ''}
           src={team?.src ?? ''}
         />
       </Flex>
       {/* Description */}
-      <Box onClick={onToggle}>
-        <LegendItemDescription
-          description={layer.description}
-          noOfLines={isOpen ? undefined : 2}
-        />
-      </Box>
+      <Tooltip
+        label='Click to Expand'
+        placement='top'
+        bg='green.600'
+        hasArrow
+        isDisabled={isOpen}
+      >
+        <Box onClick={onToggle}>
+          <LegendItemDescription
+            description={layer.description}
+            noOfLines={isOpen ? undefined : 2}
+          />
+        </Box>
+      </Tooltip>
       { isOpen ? (
         <Flex direction='row' justifyContent='space-around' >
           <Link
