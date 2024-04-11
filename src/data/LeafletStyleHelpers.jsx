@@ -69,6 +69,7 @@ export const mapPopupContent = (
   imageURL = null,
   audioURL = null,
   audioText = null,
+  warningText = null,
 ) => {
   if (!title && !desc) return;
   var div = document.createElement('div');
@@ -82,12 +83,13 @@ export const mapPopupContent = (
       imageURL={imageURL}
       audioURL={audioURL}
       audioText={audioText}
+      warningText={warningText}
     />);
   return div;
 }
 
 const MapPopup = (
-  {title, desc, link, linkText, imageURL, audioURL, audioText}
+  {title, desc, link, linkText, imageURL, audioURL, audioText, warningText}
 ) => {
   const descItems = Array.isArray(desc) ? desc : [ desc ]
   return (
@@ -98,12 +100,12 @@ const MapPopup = (
           {sanitizeHtml(desc, {allowedAttributes: {}, allowedTags: []})}
         </Text>
       )}
-      {imageURL ? (
+      {imageURL && (
         <a href={imageURL} target='_blank' rel='noreferrer'>
           <Image src={imageURL} alt={title} />
         </a>
-      ) : null}
-      {link ? (
+      )}
+      {link && (
         <Link 
           href={link}
           isExternal
@@ -115,8 +117,8 @@ const MapPopup = (
         >
           {linkText ?? link}
         </Link>
-      ) : null}
-      {audioURL ? (
+      )}
+      {audioURL && (
         <AudioPlayer
           src={audioURL}
           header={audioText}
@@ -129,7 +131,10 @@ const MapPopup = (
           layout='horizontal'
           style={{ width: '100%', minWidth: '400px' }}
         />
-      ) : null }
+      )}
+      {warningText && (
+        <Text fontSize='0.75rem'>{warningText}</Text>
+      )}
     </VStack>
   )
 }
