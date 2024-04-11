@@ -22,6 +22,7 @@
     "immer": "^9.0.17",
     "leaflet": "^1.9.1",
     "leaflet-layerjson": "^0.3.4",
+    "leaflet.markercluster": "^1.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-h5-audio-player": "^3.9.0",
