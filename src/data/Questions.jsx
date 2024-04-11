@@ -1,6 +1,7 @@
 import produce, { enableMapSet } from 'immer';
 import { create }  from 'zustand';
-import { geoJSON } from 'leaflet';
+import L from 'leaflet';
+import 'leaflet.markercluster';
 import { ogmIconLink } from './LeafletStyleHelpers';
 
 // Constant value for loading state
@@ -102,11 +103,16 @@ export const useMapLayerStore = create((set, get) => ({
       fetch(layer.data)
         .then((response) => response.json())
         .then((json) => {
-          const mapLayer = geoJSON(
-            json,
-            layer.options,
-          );
-          get().setLayerData(layerId, mapLayer);
+          const mapLayer = L.geoJSON(
+                json,
+                layer.options,
+              )
+          if (layer.cluster) {
+            const clusterLayer = L.markerClusterGroup(layer?.clusterOpts).addLayers(mapLayer)
+            get().setLayerData(layerId, clusterLayer);
+          } else {
+            get().setLayerData(layerId, mapLayer);
+          }
         });
     }
     return layer.leafletLayer;
