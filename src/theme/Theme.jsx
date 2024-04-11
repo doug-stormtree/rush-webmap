@@ -1,11 +1,24 @@
 import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
 import '@fontsource/raleway';
+import '@fontsource/poppins/100.css';
+import '@fontsource/poppins/200.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
 import '@fontsource-variable/figtree';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/aleo';
 
 const NavBar = defineStyleConfig({
   baseStyle: {
+    minHeight: '2.5rem',
     bg: '#FFF',
     display: 'flex',
+    alignItems: 'center',
   },
 });
 
@@ -132,8 +145,11 @@ const theme = extendTheme({
     }
   },
   fonts: {
+    brand: `'Poppins', sans-serif`,
     title: `'Figtree Variable', sans-serif`,
     subTitle: `'Raleway', sans-serif`,
+    inter: `'Inter Variable', sans-serif`,
+    aleo: `'Aleo Variable', serif`,
   },
   textStyles: {
     h3: {
