@@ -24,6 +24,11 @@ const layer = {
       content:'The Victoria Nikkei Cultural Society - Hanami :: 花見 (Cherry Blossom Viewing)',
       url:'https://www.vncs.ca/activities/hanami-%E8%8A%B1%E8%A6%8B-cherry-blossom-viewing/'
     },
+    {
+      type:'link',
+      content:'Contains information licensed under the Open Government Licence – City of Victoria.',
+      url:'https://opendata.victoria.ca/pages/open-data-licence'
+    },
   ],
   data: require('../geojson/CherryTrees.geojson'),
   shape: 'point',
