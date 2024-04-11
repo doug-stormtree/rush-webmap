@@ -147,7 +147,7 @@ function WebMap() {
       <Flex
         h={`60vh`}
         position='sticky'
-        top='180px'
+        top='11.25rem'
         direction='row'
         //zIndex='-1'
       >
