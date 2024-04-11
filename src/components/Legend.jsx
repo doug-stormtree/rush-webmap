@@ -120,7 +120,7 @@ const LegendList = ({ activeQuestion }) => {
   const legendGroupsWithoutPositions = [...legendEntries.keys()].filter(k => !legendGroupsWithPositions.some(g => g.group === k)).sort()
 
   // Splice in the keys with special positions
-  legendGroupsWithPositions.forEach(g => legendGroupsWithoutPositions.splice(g.position - 1, 0, g.group))
+  legendGroupsWithPositions.forEach(g => legendGroupsWithoutPositions.splice(g.position, 0, g.group))
   // Create a component for each group
   const legendComponents = []
   legendGroupsWithoutPositions.forEach(
