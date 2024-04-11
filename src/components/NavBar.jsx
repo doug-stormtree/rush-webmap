@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as ReactLink } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -18,13 +19,15 @@ export default function NavBar(props) {
   const { getShareURL, ...rest } = props;
 
   const pageTitle = useBreakpointValue({
-    xl: '[RUSH] Resilient Urban Systems & Habitat',
+    md: '[RUSH] Resilient Urban Systems & Habitat',
     base: '[RUSH]',
   },{ssr:false, fallback:true});
 
   return (
     <Box __css={styles} {...rest} >
-      <Text size="xl" m="auto 1em" fontWeight='medium'>{pageTitle}</Text>
+      <ReactLink to='/'>
+        <Text marginLeft='1em' size="xl" fontWeight='medium'>{pageTitle}</Text>
+      </ReactLink>
       <Spacer />
       <ButtonGroup variant='nav' spacing='-2'>
         <Link 
