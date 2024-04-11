@@ -125,7 +125,6 @@ function WebMap() {
       minH={vh}
     >
       <NavBar
-        h='40px'
         position='sticky'
         top='0px'
         zIndex='10'

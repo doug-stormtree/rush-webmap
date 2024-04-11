@@ -15,6 +15,7 @@ import '@fontsource-variable/aleo';
 
 const NavBar = defineStyleConfig({
   baseStyle: {
+    minHeight: '40px',
     bg: '#FFF',
     display: 'flex',
     alignItems: 'center',

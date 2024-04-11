@@ -17,7 +17,6 @@ export default function HomePage() {
     <Flex direction='column' minH='100vh'>
       <NavBar
         flex='0'
-        h='40px'
         position='sticky'
         top='0px'
         zIndex='10'
