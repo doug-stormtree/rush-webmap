@@ -136,7 +136,7 @@ function WebMap() {
         style={{
           backgroundColor:'white',
           position:'sticky',
-          top:'40px',
+          top:'2.5rem',
           zIndex:'9',
           //borderRadius:'16px 16px 0 0',
           boxShadow:'0px 0px 8px 2px #888'

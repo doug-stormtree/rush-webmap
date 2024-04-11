@@ -10,7 +10,7 @@ import {
   useBreakpointValue,
   useStyleConfig,
 } from '@chakra-ui/react';
-import { FiMessageSquare } from 'react-icons/fi';
+import { FiInstagram, FiMessageSquare } from 'react-icons/fi';
 import LandingModalButton from './LandingModalButton';
 import ShareModalButton from './ShareModalButton';
 
@@ -39,6 +39,15 @@ export default function NavBar(props) {
             rightIcon={<FiMessageSquare strokeWidth='4'/>}
             fontWeight='extrabold'
           >Feedback</Button>
+        </Link>
+        <Link
+          href='https://www.instagram.com/nature_rnd/'
+          isExternal
+        >
+          <Button
+            aria-label='@nature_rnd Instagram'
+            rightIcon={<FiInstagram />}
+          >Instagram</Button>
         </Link>
         <ShareModalButton getShareURL={getShareURL} />
         <LandingModalButton vh={props.vh} />
