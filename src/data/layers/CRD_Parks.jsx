@@ -1,5 +1,5 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { StartOnLayersName, StartOffLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Parks',
@@ -30,9 +30,9 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', group: StartOffLayersName, active: false },
+    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Greenspace', active: false },
-    { key: 'sense-of-peace', group: StartOnLayersName, active: true },
+    { key: 'sense-of-peace', active: true, ...LegendGroups.StartOn },
   ]
 }
 

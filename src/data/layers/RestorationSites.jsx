@@ -1,11 +1,10 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
-import { StartOffLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Restoration Sites',
   description: [
     {type: 'p', content: "Mapping restoration sites as described by Peninsula Streams Society for the RUSH Initiative."},
-    {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=644acbf92af3a50100a0f0bc'},
   ],
   data: ogmFeaturesLink('644acbf92af3a50100a0f0bc'),
   ogmMapId: '644acbf92af3a50100a0f0bc',
@@ -35,7 +34,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: StartOffLayersName, active: false },
+    { key: 'protect-from-flooding', active: false, ...LegendGroups.OGM },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

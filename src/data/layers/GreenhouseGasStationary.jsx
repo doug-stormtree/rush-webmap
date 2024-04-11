@@ -6,7 +6,7 @@ import {
   setStyleIfSupported,
 } from "../LeafletStyleHelpers";
 import { GHGBuildingIcon } from '../../components/EmissionsIcon';
-import { StartOnLayersName } from "../TextContent";
+import { LegendGroups } from "../TextContent";
 
 const styleMap = new Map([
   [0,    {fillColor: 'rgb(7,72,174)', color: 'rgb(130,130,130)', legendText: 'Reduction'}],
@@ -76,7 +76,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'power-this-place', group: StartOnLayersName, active: true },
+    { key: 'power-this-place', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Energy', active: false },
   ]
 }

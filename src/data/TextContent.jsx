@@ -5,5 +5,8 @@ export const AboutPageText = [
   {type: 'p', content: 'This is a tool for people to connect habitats, restore watersheds, feel a sense of belonging, and start conversations that lead to a brighter future.  Please use the feedback button to let us know what you think and any suggestions you have.'},
 ];
 
-export const StartOnLayersName = '1Starting Place';
-export const StartOffLayersName = '2Deeper Connections';
+export const LegendGroups = {
+  StartOn: { group: 'Starting Place', position: 0, subheading: undefined },
+  StartOff: { group: 'Deeper Connections', position: 1, subheading: undefined},
+  OGM: { group: 'Plot that Spot', position: 9999, subheading: 'Connect the call to action by joining these community mapping projects powered by OpenGreenMap.' },
+}

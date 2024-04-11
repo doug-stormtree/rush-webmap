@@ -1,11 +1,10 @@
 import { mapPopupContent, pointToIcon, ogmFeaturesLink } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: '1000 Rain Gardens',
   description: [
     {type: 'p', content: "This is the map for the Friends of Bowker Creek and Peninsula Streams Society '1000 Rain Gardens' mapping project!"},
-    {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=63e6939eabcc260100514352'},
   ],
   data: ogmFeaturesLink('63e6939eabcc260100514352'),
   ogmMapId: '63e6939eabcc260100514352',
@@ -37,7 +36,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: StartOnLayersName, active: true },
+    { key: 'protect-from-flooding', active: true, ...LegendGroups.OGM },
     { key: 'development', group: 'Water', active: false },
   ]
 }

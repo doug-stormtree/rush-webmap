@@ -3,13 +3,12 @@ import {
   ogmFeaturesLink,
   pointToIcon,
 } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Circular Economy Buisinesses',
   description: [
     {type: 'p', content: "This is a collection of reuse stores and other businesses engaged in the circular economy through reuse, sustainable practices, local food resources, and green education."},
-    {type: 'link', content: 'Visit and contribute to this project at OpenGreenMap.', url: 'https://new.opengreenmap.org/browse/sites?map=6474bbf4261bc10100e28d90'},
   ],
   data: ogmFeaturesLink('6474bbf4261bc10100e28d90'),
   ogmMapId: '6474bbf4261bc10100e28d90',
@@ -39,7 +38,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', group: StartOnLayersName, active: true },
+    { key: 'circular-economy', active: true, ...LegendGroups.OGM },
     { key: 'development', group: 'Community', active: false },
   ]
 }

@@ -3,7 +3,7 @@ import {
   mapPopupContent,
   setStyleIfSupported
 } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ['Cliff', { fillColor: 'rgb(156,156,156)' }],
@@ -76,7 +76,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', group: StartOnLayersName, active: true },
+    { key: 'neighbourhood-to-naturehood', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

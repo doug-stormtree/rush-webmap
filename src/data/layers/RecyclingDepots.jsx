@@ -1,5 +1,5 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 import { ReactComponent as RecyclingIcon } from '../svg/Recycling.svg';
 
 const RecyclingIconStyle = {
@@ -26,7 +26,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', group: StartOnLayersName, active: true },
+    { key: 'circular-economy', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

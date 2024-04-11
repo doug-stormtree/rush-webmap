@@ -1,5 +1,5 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import { StartOffLayersName, StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ["0",   {legendText: '0.0 m', color: '#1E44D3'}],
@@ -45,8 +45,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-the-coast', group: StartOnLayersName, active: true },
-    { key: 'protect-from-flooding', group: StartOffLayersName, active: false },
+    { key: 'protect-the-coast', active: true, ...LegendGroups.StartOn },
+    { key: 'protect-from-flooding', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Water', active: false },
   ]
 }

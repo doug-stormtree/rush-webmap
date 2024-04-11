@@ -1,4 +1,6 @@
 import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
+import '@fontsource/raleway';
+import '@fontsource-variable/figtree';
 
 const NavBar = defineStyleConfig({
   baseStyle: {
@@ -130,11 +132,12 @@ const theme = extendTheme({
     }
   },
   fonts: {
-    subHeading: `'Raleway', sans-serif`,
+    title: `'Figtree Variable', sans-serif`,
+    subTitle: `'Raleway', sans-serif`,
   },
   textStyles: {
     h3: {
-      'font-family': 'var(--chakra-fonts-subHeading)',
+      'font-family': 'var(--chakra-fonts-subTitle)',
       'font-size': '1rem',
     }
   }
