@@ -1,6 +1,19 @@
 import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
-import '@fontsource/inter/700.css';
+import '@fontsource-variable/aleo';
+import '@fontsource-variable/figtree';
+import '@fontsource-variable/inter';
+
+import '@fontsource/poppins/100.css';
+import '@fontsource/poppins/200.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
+
+import '@fontsource/raleway/400.css';
 import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
 import QuestionCard from './QuestionCardTheme';
@@ -130,13 +143,17 @@ const theme = extendTheme({
     }
   },
   fonts: {
+    brand: `'Poppins', sans-serif`,
+    title: `'Figtree Variable', sans-serif`,
     body: `'Inter', sans-serif`,
     heading: `'Poppins', sans-serif`,
-    subHeading: `'Raleway', sans-serif`,
+    subTitle: `'Raleway', sans-serif`,
+    inter: `'Inter Variable', sans-serif`,
+    aleo: `'Aleo Variable', serif`,
   },
   textStyles: {
     h3: {
-      'font-family': 'var(--chakra-fonts-subHeading)',
+      'font-family': 'var(--chakra-fonts-subTitle)',
       'font-size': '1rem',
     }
   }

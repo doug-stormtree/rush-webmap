@@ -25,11 +25,13 @@ import { LegendPane } from './components/Legend';
 import { latLng } from 'leaflet';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 // Questions
 import Questions from './data/Questions';
 import { PlacesAutocomplete } from './components/PlacesAutocomplete';
 import Sandbox from './components/Sandbox';
 import QuestionCardBar from './components/QuestionCardBar';
+import HomePage from './components/HomePage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -38,12 +40,14 @@ const firebaseConfig = {
   projectId: "rush-webapp",
   storageBucket: "rush-webapp.appspot.com",
   messagingSenderId: "475584087043",
-  appId: "1:475584087043:web:b7f77d9656f9721da37a36"
+  appId: "1:475584087043:web:b7f77d9656f9721da37a36",
+  measurementId: "G-F052FD5Y1T",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
+const analytics = getAnalytics(app); // eslint-disable-line no-unused-vars
 
 function App() {
   return (
@@ -52,14 +56,18 @@ function App() {
         <Routes>
           <Route
             path="/"
+            element={<HomePage />}
+          />
+          <Route
+            path="/app"
             element={<WebMap />}
           />
           <Route
-            path="/q/:question/z/:zoom/c/:center"
+            path="/app/q/:question/z/:zoom/c/:center"
             element={<WebMap />}
           />
           <Route
-            path="/q/:question"
+            path="/app/q/:question"
             element={<WebMap />}
           />
           <Route
@@ -109,7 +117,7 @@ function WebMap() {
     const center = map.current.getCenter();
     const lat = center.lat.toFixed(6);
     const lng = center.lng.toFixed(6);
-    return `${currHost}/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
+    return `${currHost}/app/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
   }
 
   // Handle Legend Display on Small Screens
@@ -123,19 +131,19 @@ function WebMap() {
       minH={vh}
     >
       <NavBar
-        h='40px'
         position='sticky'
         top='0px'
         zIndex='10'
         boxShadow='0px 0px 8px 2px #888'
         getShareURL={getShareURL}
+        vh={vh}
       />
       {/*
       <QuestionMenuBar
         style={{
           backgroundColor:'white',
           position:'sticky',
-          top:'40px',
+          top:'2.5rem',
           zIndex:'9',
           //borderRadius:'16px 16px 0 0',
           boxShadow:'0px 0px 8px 2px #888'
@@ -147,7 +155,7 @@ function WebMap() {
       <Flex
         h={`60vh`}
         position='sticky'
-        top='40px'
+        top='11.25rem'
         direction='row'
         //zIndex='-1'
       >

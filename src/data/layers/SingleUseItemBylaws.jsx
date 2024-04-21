@@ -3,7 +3,7 @@ import {
   geoDateToLocaleString,
   getStyleMapProperty
 } from "../LeafletStyleHelpers";
-import { StartOnLayersName } from "../TextContent";
+import { LegendGroups } from "../TextContent";
 
 const styleMap = new Map([
   ["None", {fillColor: 'rgb(90,90,90)', color: 'rgb(130,130,130)', legendText: 'No Bylaws'}],
@@ -84,7 +84,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', group: StartOnLayersName, active: true },
+    { key: 'circular-economy', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

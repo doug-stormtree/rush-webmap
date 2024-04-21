@@ -1,5 +1,5 @@
 import { getStyleMapProperty } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ['permeable', {legendText: 'Permeable', color: '#bd925a'}],
@@ -38,7 +38,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-the-coast', group: StartOnLayersName, active: true },
+    { key: 'protect-the-coast', active: false, ...LegendGroups.StartOn },
     { key: 'development', group: 'Water', active: false },
   ]
 }

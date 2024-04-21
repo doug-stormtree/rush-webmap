@@ -3,7 +3,7 @@ import {
   getStyleMapProperty,
   setStyleIfSupported,
 } from "../LeafletStyleHelpers";
-import { StartOffLayersName } from "../TextContent";
+import { LegendGroups } from "../TextContent";
 
 const styleMap = new Map([
   ["Bedrock", {fillColor: '#4A6FA5', color: 'rgb(130,130,130)', legendText: 'Bedrock'}],
@@ -73,7 +73,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-the-coast', group: StartOffLayersName, active: false },
+    { key: 'protect-the-coast', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Water', active: false },
   ]
 }

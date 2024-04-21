@@ -1,5 +1,5 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
-import { StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 import { GiPineTree } from "react-icons/gi";
 
 const styleMap = new Map([
@@ -41,7 +41,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'wood-wide-web', group: StartOnLayersName, active: true },
+    { key: 'wood-wide-web', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

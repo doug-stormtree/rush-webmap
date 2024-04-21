@@ -1,5 +1,5 @@
 import { mapPopupContent, setStyleIfSupported } from '../LeafletStyleHelpers';
-import { StartOffLayersName, StartOnLayersName } from '../TextContent';
+import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Watersheds',
@@ -42,8 +42,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-from-flooding', group: StartOnLayersName, active: true },
-    { key: 'neighbourhood-to-naturehood', group: StartOffLayersName, active: false },
+    { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
+    { key: 'neighbourhood-to-naturehood', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Water', active: false },
   ]
 }
