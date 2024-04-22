@@ -152,10 +152,6 @@ function WebMap() {
           <MapBasemap />
           <MapData />
         </MapView>
-        {/* smallDisplay
-          ? null
-          : <LegendPane flex='0' activeQuestion={activeQuestion} />
-    */}
       </Flex>
       <QuestionCardBar />
       <ContentPane

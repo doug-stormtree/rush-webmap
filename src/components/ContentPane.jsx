@@ -21,8 +21,8 @@ export default function ContentPane(props) {
     const questionContent = Questions.get(activeQuestion);
     setContent({
       title: questionContent.title,
-      subtitle: questionContent.question,
-      description: questionContent.description_new ?? questionContent.description,
+      subtitle: questionContent.sections.two.heading,
+      description: questionContent.sections.two.items.map(i => ({type: 'p', content: i})),
     });
     setInitiatives(questionContent.act.initiatives);
     return () => {

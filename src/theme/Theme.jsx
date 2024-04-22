@@ -107,6 +107,9 @@ const theme = extendTheme({
     global: {
       'html, body': {
         fontSize: '16px'
+      },
+      '.leaflet-top': {
+        top: '130px'
       }
     }
   },

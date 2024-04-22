@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useBreakpointValue, Center, Heading } from '@chakra-ui/react';
+import { Center, Heading } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
@@ -30,16 +30,11 @@ export const MapData = () => {
     };
   }, [map, layers, activeQuestion, getLeafletLayer]);
 
-  const smallDisplay = useBreakpointValue({
-    xl: false,
-    base: true,
-  }, {ssr:false, fallback:true});
-
   // Render Legend Control on small displays.
   return (
     <>
       <Control position='topright'>
-        {smallDisplay ? <LegendDrawerButton activeQuestion={activeQuestion} /> : null}
+        <LegendDrawerButton />
       </Control>
       { [...layers.values()].some((layer) => layer.questions.some((q) => q.key === activeQuestion)) ? null : (
         <Center style={{

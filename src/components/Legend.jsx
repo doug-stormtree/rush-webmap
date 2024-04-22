@@ -26,11 +26,11 @@ import {
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import FormattedText from './FormattedText';
-import { useMapLayerStore, LOADING } from '../data/Questions';
+import { useMapLayerStore, LOADING, useActiveQuestionStore } from '../data/Questions';
 import { LegendGroups } from '../data/TextContent';
 
 // Wraps Legend in a Box for large screen sizes.
-export const LegendPane = ({ activeQuestion }) => {
+export const LegendPane = () => {
   return (
     <Box
       w='2xl'
@@ -39,13 +39,13 @@ export const LegendPane = ({ activeQuestion }) => {
       overflowY='scroll'
     >
       <LegendHeader />
-      <LegendList activeQuestion={activeQuestion} />
+      <LegendList />
     </Box>
   )
 }
 
 // Wraps Legend in a collapsible Drawer for small screen sizes.
-export const LegendDrawerButton = ({ activeQuestion }) => {
+export const LegendDrawerButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   const layersLoading = useMapLayerStore((state) => state.layersLoading());
@@ -74,7 +74,7 @@ export const LegendDrawerButton = ({ activeQuestion }) => {
             <LegendHeader />
           </DrawerHeader>
           <DrawerBody>
-            <LegendList activeQuestion={activeQuestion} />
+            <LegendList />
           </DrawerBody>
         </DrawerContent>
       </Drawer>
@@ -93,7 +93,9 @@ const LegendHeader = () => {
 
 // LegendList Component
 //   Builds list of LegendItem components for active question layers.
-const LegendList = ({ activeQuestion }) => {
+const LegendList = () => {
+  // Get active question
+  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion);
   // Get all layers
   const layers = useMapLayerStore((state) => state.layers);
 
