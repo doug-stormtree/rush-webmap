@@ -1,90 +1,51 @@
 const Development = {
   key: 'development',
   title: "Development",
-  question: "Property values hang in the balance with climate change - and your insurance broker knows it. Get a rider on ecosystem health.",
+  question: "Does that development proposal spell positive change for my region?",
   image: require('../png/Development.png'),
   sections: {
     one: [
       {
         heading: 'Seal of approval if...',
         items: [
-          'Civic/Infrastructure',
-          '  - watersheds and stormwater infrastructure highlight opportunities for restoration.',
-          '  - it is near transportation routes that support the commute between work and home.',
-          'Community',
-          '  - community gathering spaces are planned for every 30 homes.',
-          'Energy',
-          '  - buildings are clustered and feature “integrated resource recovery”',
-          '  - buildings meet the highest level of Step Code or LEED certification.',
-          'Greenspace',
-          '  - existing trees are protected and more are planted for 30%+ canopy cover. This means health and well-being, bank stabilization, noise and wind buffering, habitat for biodiversity, shade, and protection from seismic events.',
-          '  - native plantings are proposed to extend the reach of the closest ecosystem.',
-          '  - it includes landscape design choices that connect ecosystems. Ecological connectivity creates resilience to climate events.',
-          'Water',
-          '  - it protects community water security by considering the location and access of aquifers.',
-          '  - it maintains access to the aquifer in case of emergency.',
-          '  - it adds aquifer protection from saltwater intrusion.',
-          '  - it accounts for worst-case scenario sea level rise and includes raingardens and other Nature-Based Solutions to support the safe flow of water across the landscape.',
+          'community gathering spaces are planned for every 30 homes.',
+          'buildings are clustered and feature “integrated resource recovery.”',
+          'it extends the reach of the closest ecosystem, existing trees are protected, it hits a target of 30%+ canopy cover.',
+          'it restores the nearby watershed and protects aquifers by maximizing permeable surface, keeping natural springs flowing and stopping saltwater intrusion.',
         ]
       },
       {
         heading: 'Seals your fate if...',
         items: [
-          'it does not consider community water security, flooding, and sea level rise.',
+          'it does not account for worst-case scenario sea level rise.',
+          'buildings fail to meet the highest level of Step Code.',
           'it fragments ecosystem connectivity limiting biodiversity, greenhouse gas drawdown and resilience to climate events.',
-          'it is situated to increase reliance on car travel leading to higher emissions.',
-          'there are no obvious places to gather and have fun.',
+          'it is situated to increase reliance on car travel.',
         ]
       },
-    ]
+    ],
+    two: {
+      heading: 'Property values hang in the balance with climate change - and your insurance broker knows it. Get a rider on ecosystem health.',
+      items: [
+        'What do you love about your neighbourhood? Where are the areas that need to be improved? Use your Open Green Map account to plot them.',
+        'Consider how any renovation or new construction can have a kick-back to Nature. Insist on 30% canopy cover for neighbourhoods.',
+        'Look for ways that Nature-based solutions can decrease community vulnerability to climate change and maintain property values.',
+        'Advocate for mixed-use developments to build community and a good economic outlook over time.',
+        'Flag the noise implications for the duration of the construction period.',
+        'Bring forward information on climate risks is as part of the public conversation, and ask the insurance representatives for their ideas.',
+        'Engage in conversations at the local level about whether developments are sacrificing quality for price. Participate in any way you can: by letter, meetings, social media, and talking to your neighbours and use RUSH maps to help.',
+      ]
+    },
+    three: {
+      items: [
+        'Developers are under pressure to deliver on budgets and timelines. The result can be short-sighted development which degrades the local ecosystems that, when healthy, make our communities strong and protect us from climate events. The insurance industry is feeling the costs in big payouts after fires, floods, earthquakes, and other extreme climate events. Many homeowners are seeing their insurance rates rising with the frequency of climate-related disasters.',
+        'The growing trend of Nature-based Insurance Solutions acknowledges the value of ecosystem features like forests, wetlands, eelgrass, kelp beds, and reefs in buffering environmental stresses of extreme wind, water, and temperature. By enhancing the function and scope of the local ecosystem when re-developing an area, benefits and savings are possible. Restoring watersheds can also improve property values while providing cost savings in stormwater infrastructure.',
+        'Affordable housing is desperately needed and, if done with key considerations for natural infrastructure, can be truly sustainable and supportive of climate justice. Lack of greenspaces affects temperature, drainage, windspeeds, and the general well-being of the ecosystem and folks who live in it. Increasing native vegetation and canopy cover can increase property values, regulate neighbourhood temperature, buffer noise, promote biodiversity, carbon drawdown qualifications and gain green building certifications. Where high density development is needed, attention must still be paid to the presence of vegetation and permeable surfaces to keep the neighbourhood cool, protected from extreme water events, and habitable to the biodiversity that promotes community wellbeing.',
+        'Communities that embrace all generations are more stable and able to take care of themselves and their environment over time. A short home-to-work commute enhances quality of life, is good for the local economy, keeps communities connected, and reduces greenhouse gas emissions.⁴ Multi-purpose developments lead to more rapid relationship building, and community vitality.',
+        'By harmonizing natural and human-built features, innovative developers can help secure the long-term well-being of communities through ecological connectivity that creates resilience to climate change.',
+      ]
+    },
   },
-  description: [
-    {type: 'h2', content: 'Seal of approval if...'},
-    {type: 'ul', content: [
-      'Civic/Infrastructure',
-      '  - watersheds and stormwater infrastructure highlight opportunities for restoration.',
-      '  - it is near transportation routes that support the commute between work and home.',
-      'Community',
-      '  - community gathering spaces are planned for every 30 homes.',
-      'Energy',
-      '  - buildings are clustered and feature “integrated resource recovery”',
-      '  - buildings meet the highest level of Step Code or LEED certification.',
-      'Greenspace',
-      '  - existing trees are protected and more are planted for 30%+ canopy cover. This means health and well-being, bank stabilization, noise and wind buffering, habitat for biodiversity, shade, and protection from seismic events.',
-      '  - native plantings are proposed to extend the reach of the closest ecosystem.',
-      '  - it includes landscape design choices that connect ecosystems. Ecological connectivity creates resilience to climate events.',
-      'Water',
-      '  - it protects community water security by considering the location and access of aquifers.',
-      '  - it maintains access to the aquifer in case of emergency.',
-      '  - it adds aquifer protection from saltwater intrusion.',
-      '  - it accounts for worst-case scenario sea level rise and includes raingardens and other Nature-Based Solutions to support the safe flow of water across the landscape.',
-    ]},
-    {type: 'h2', content: 'Seals your fate if...'},
-    {type: 'ul', content: [
-      'it does not consider community water security, flooding, and sea level rise.',
-      'it fragments ecosystem connectivity limiting biodiversity, greenhouse gas drawdown and resilience to climate events.',
-      'it is situated to increase reliance on car travel leading to higher emissions.',
-      'there are no obvious places to gather and have fun.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Align the design to heal your habitat.'},
-    {type: 'ul', content: [
-      'Use your open green map account to plot areas of concern and opportunity.',
-      'Consider how any renovation or new construction can have a kick-back to Nature.',
-      'Bring forward information on climate risks as part of the public conversation, and ask the insurance representatives for their ideas.',
-      'Engage in conversations at the local level about whether developments are sacrificing quality for price. Participate in any way you can: by letter, meetings, social media, and talking to your neighbours and use RUSH maps to help.',
-      'Look for ways that Nature-based solutions can decrease community vulnerability to climate change and maintain property values.',
-      'Advocate for mixed-use developments to build community and a good economic outlook over time.',
-      'Flag the noise implications for the duration of the construction period.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'Developers are under pressure to deliver on budgets and timelines. The result can be short-sighted development which degrades the local ecosystems that, when healthy, make our communities strong and protect us from climate events. The insurance industry is feeling the costs in big payouts after fires, floods, earthquakes, and other extreme climate events. Many homeowners are seeing their insurance rates rising with the frequency of climate-related disasters.'},
-    {type: 'p', content: 'The growing trend of Nature-based Insurance Solutions acknowledges the value of ecosystem features like forests, wetlands, eelgrass, kelp beds, and reefs in buffering environmental stresses of extreme wind, water, and temperature. By enhancing the function and scope of the local ecosystem when re-developing an area, benefits and savings are possible. Restoring watersheds can also improve property values while providing cost savings in stormwater infrastructure.'},
-    {type: 'p', content: 'Affordable housing is desperately needed and, if done with key considerations for natural infrastructure, can be truly sustainable and supportive of climate justice. Lack of greenspaces affects temperature, drainage, windspeeds, and the general well-being of the ecosystem and folks who live in it. Increasing native vegetation and canopy cover can increase property values, regulate neighbourhood temperature, buffer noise, promote biodiversity, carbon drawdown qualifications and gain green building certifications. Where high density development is needed, attention must still be paid to the presence of vegetation and permeable surfaces to keep the neighbourhood cool, protected from extreme water events, and habitable to the biodiversity that promotes community wellbeing.'},
-    {type: 'p', content: 'Communities that embrace all generations are more stable and able to take care of themselves and their environment over time. A short home-to-work commute enhances quality of life, is good for the local economy, keeps communities connected, and reduces greenhouse gas emissions. Multi-purpose developments lead to more rapid relationship building, and community vitality.'},
-    {type: 'p', content: 'By harmonizing natural and human-built features, innovative developers can help secure the long-term well-being of communities through ecological connectivity that creates resilience to climate change.'},
-  ],
   act: {
     initiatives: [
       {

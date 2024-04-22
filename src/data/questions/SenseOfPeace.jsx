@@ -6,68 +6,47 @@ const SenseOfPeace = {
   sections: {
     one: [
       {
-        heading: 'Hakuna matata if...',
+        heading: 'Hakuna Matata if...',
         items: [
-          'there are safe public parks and greenspaces for everyone to appreciate, rest and relax.',
-          'there are spiritual centres to offer spaces for familiar mindfulness practices that create peace and community.',
-          'recreation centres offer places to play, challenge, and develop different abilities.',
-          'fountains offer healing soundscapes in public gathering places where a pause to become present is possible.',
-          'there are enough accessible and inclusive public washrooms to support human digestion and dignity.',
+          'your neighbourhood meets the tree equity standard of 30% canopy cover.',
+          'there are safe public parks and greenspaces for everyone to appreciate, rest and relax. Fountains offer healing soundscapes for visitors.',
+          'there are spiritual centres nearby for familiar mindfulness practices that create peace and community.',
+          'recreation and community centres offer places to play, challenge, and develop different abilities.',
           'health centres connect locals with resources to help with mental, physical, and emotional stress. Safe injection sites are easy to find.',
-          'there are legal aid and other services to support a quality of life for all including access to affordable housing, food, safety, employment, and community.',
         ]
       },
       {
         heading: 'Oy vey if...',
         items: [
-          'you need to sit and take five, but it’s noisy, it’s stinky, it’s all pavement and everybody seems to be pounding it.',
-          'you see a lack of greenspace and a lot of stress and poverty.',
-          'you found a place to watch the waves, but somebody is watching you from their beach-front window... and they want you to move along.',
-          'you can’t find a patch of grass to lay your head down and cloud-gaze.',
+          'you can’t find a quiet patch of grass to take five. It’s noisy, it’s stinky, it’s all pavement and everybody seems to be pounding it.',
           'you are in transit and you can’t find a welcoming washroom or place for a shower.',
           'you have a friend who needs more help than you can give, and you are coming up empty on organizations with the resources they need.',
+          'you found a place to watch the waves, but somebody is watching you from their beach-front window… and they want you to move along.',
         ]
       },
-    ]
+    ],
+    two: {
+      heading: 'Create your Om at home: find and foster a sense of peace in your community.',
+      items: [
+        'Find your piece of paradise in your community. Consult the RUSH map for public access beaches and parks, big trees and drinking fountains.',
+        'Uphold dignity. Use your Open Green Map account to plot inclusive washrooms when you spot them.',
+        'Help others be in the zone. Plot benches and sweet spots to take a hot minute of pause with your Open Green Map account.',
+        'Get the Merlin app to help you hear the birds and get to know the bird community, and their habits and note the trees they call home.',
+        'You belong. Use the legend on the map to find the community groups and services that will make you feel at home. Plot the ones you know are missing.',
+        'We all need a village to make sense of life. Hug your friend and consult the legend to find help and resources.',
+        'Let your local government and community centre know when you see a gap in services.',
+      ]
+    },
+    three: {
+      items: [
+        'The saying, "It takes a village to raise a child" speaks to the way a community that knows each other can look out for everyone. Knowing your neighbour contributes to a sense of safety. Being able to access basic needs within walking distance contributes to a healthy lifestyle. Having safe and convenient transportation options lowers a community\'s greenhouse gas footprint. Accessible public spaces make a quality of life available to everyone which levels the playing field and creates community spirit.',
+        'Place-making is a name given to actions that help communities thrive. Gathering spaces, festivals and features that show the art, culture, and characteristics of a place all contribute to a sense of belonging and connection. Knowing how to access the services in our community allows us to help each other when situations seem impossible to solve.',
+        'The World Health Organization (WHO) has acknowledged that the common urban combination of noise and air pollution from traffic and construction has a negative impact on human health - including our overall sense of peace. Higher rates of stress, addiction, depression and poverty are linked to climate change issues.',
+        'Science now recognizes the central role that Nature plays in human wellbeing. Good air, soil, and water, as well as organic sounds and sights truly soothe our souls. Research finds health benefits across mental, physical, and emotional states as well as contributing to our sense of connection, belonging, and general well-being.',
+        'In these times of frequent natural disasters, news often reports the impressive ways that communities come together to support each other. This is an invitation to build a strong sense of community and belonging now to build rapid resilience in record time and be protected and connected in the climate emergency.',
+      ]
+    },
   },
-  description_new: [
-    {type: 'h2', content: 'Hakuna matata if...'},
-    {type: 'ul', content: [
-      'there are safe public parks and greenspaces for everyone to appreciate, rest and relax.',
-      'there are spiritual centres to offer spaces for familiar mindfulness practices that create peace and community.',
-      'recreation centres offer places to play, challenge, and develop different abilities.',
-      'fountains offer healing soundscapes in public gathering places where a pause to become present is possible.',
-      'there are enough accessible and inclusive public washrooms to support human digestion and dignity.',
-      'health centres connect locals with resources to help with mental, physical, and emotional stress. Safe injection sites are easy to find.',
-      'there are legal aid and other services to support a quality of life for all including access to affordable housing, food, safety, employment, and community.',
-    ]},
-    {type: 'h2', content: 'Oy vey if...'},
-    {type: 'ul', content: [
-      'you need to sit and take five, but it’s noisy, it’s stinky, it’s all pavement and everybody seems to be pounding it.',
-      'you see a lack of greenspace and a lot of stress and poverty.',
-      'you found a place to watch the waves, but somebody is watching you from their beach-front window... and they want you to move along.',
-      'you can’t find a patch of grass to lay your head down and cloud-gaze.',
-      'you are in transit and you can’t find a welcoming washroom or place for a shower.',
-      'you have a friend who needs more help than you can give, and you are coming up empty on organizations with the resources they need.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Create your Om at home: find and foster a sense of peace in your community.'},
-    {type: 'ul', content: [
-      'Find your piece of paradise in your community.  Consult the RUSH map for public access beaches and parks, big trees and drinking fountains.',
-      'Uphold dignity. Use your open greenmap account to plot inclusive washrooms when you spot them.',
-      'Help others be in the zone.  Plot benches and sweet spots to take a hot minute of pause with your open greenmap account.',
-      'Get the Merlin app to help you hear the birds and get to know the bird community, their habits and note the trees they call home.',
-      'You belong. Use the legend on the map to find the community groups and services that will make you feel at home. Plot the ones you know are missing.',
-      'We all need a village to make sense of life. Hug your friend and consult the legend to find help and resources.',
-      'Let your local government and community centre know when you see a gap in services.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'The saying, "It takes a village to raise a child" speaks to the way a community that knows each other can look out for everyone.  Knowing your neighbour contributes to a sense of safety.  Being able to access basic needs within walking distance contributes to a healthy lifestyle. Having safe and convenient transportation options lowers a community\'s greenhouse gas footprint. Accessible public spaces make a quality of life available to everyone which levels the playing field and creates community spirit.'},
-    {type: 'p', content: 'Place-making is a name given to actions that help communities thrive. Gathering spaces, festivals and features that show to the art, culture and characteristics of a place all contribute to a sense of belonging and connection. Knowing how to access the services in our community allows us to help each other when situations seem impossible to solve.'},
-    {type: 'p', content: 'A synthesis of health benefits of natural sounds and their distribution in national parks. The World Health Organization (WHO) has acknowledged that the common urban combination of noise and air pollution from traffic and construction has a negative impact on human health - including our overall sense of peace. Higher rates of stress, addiction, depression and poverty are linked to climate change issues.'},
-    {type: 'p', content: 'Science now recognizes the central role that Nature plays in human wellbeing. Good air, soil, and water, as well as organic sounds and sights truly soothe our souls. Research finds health benefits across mental, physical, and emotional states as well as contributing to our sense of connection, belonging, and general well-being.'},
-  ],
   act: {
     initiatives: [
       {

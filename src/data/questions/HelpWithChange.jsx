@@ -1,74 +1,52 @@
 const HelpWithChange = {
   key: 'help-with-change',
   title: "Help with Change",
-  question: "There is wisdom in the crowd and power in numbers. Find your folks and your levers for change here to make hope happen.",
+  question: "There is wisdom in the crowd and power in numbers. Discover where to find the folks that are making hope happen.",
   image: require('../png/HelpWithChange.png'),
   sections: {
     one: [
       {
         heading: 'Change is at your fingertips if...',
         items: [
-          'there is an organization or initiative in your community that speaks to the problem you care about.',
-          'there are clear opportunities to get involved, with advocates and allies who make it their job to help you. Everywhere you look, you see symbols that say you belong.',
-          'climate initiatives and policies in your community show meaningful collaboration between government offices, businesses, community groups, and local First Nations.',
-          'the governments representing you have declared a climate emergency. They also have a clear plan that outlines ambitious environmental goals, with a track record of implementation.',
-          'existing initiatives are rooted in reconciliation and nation-to-nation relationships with Indigenous communities. They incorporate commitments to social equity, the wellbeing of future generations, and living in alignment with nature.',
-          'there are accessible services to get emergency help. Communities of care are well-established.',
+          'there is an organization or initiative in your community that speaks to the problem you care about, and wants your help.',
+          'the governments representing you have declared a climate emergency. Planning and decision-making is done with a climate lens.',
+          'local events and communications demonstrate nation-to-nation relationships with Indigenous communities.',
+          'policies emerging across the region commitments to social equity and the wellbeing of future generations, by living in alignment with natural systems.',
         ]
       },
       {
         heading: 'The movement needs you more than ever if...',
         items: [
-          'you don’t see an organization working on your problem and you cannot find an obvious starting point for action.',
-          'you cannot find allies and advocates, and the movement feels unwelcoming. You feel like you have to go it alone.',
-          'you’re seeing silos, duplicated efforts, people talking over each other.',
-          'your governments are conducting business as usual. Where environmental plans do exist, they lack real ambition and are all talk and no action.',
-          'there is no meaningful commitment – and action – towards reconciliation and equity goals. The initiatives do not represent the communities they serve.',
-          'help doesn\'t feel accessible. Your questions and requests go unanswered, or you’re given the run-around. Services are far away and have limited hours.',
+          'you are being engaged as a community member but your questions and the things you care about aren\'t on the agenda or part of the info pack.',
+          'there is no meaningful collaboration between government offices, businesses, community groups, and local First Nations.',
+          'the problem is clear but the people behind the sign say the system won\'t let them do the logical next thing.',
+          'services for emergency help are hard to navigate and only result in temporary relief.',
         ]
       },
-    ]
+    ],
+    two: {
+      heading: 'Be the Change.',
+      items: [
+        'Identify your passion and find your purpose. There are many issues to tackle and action takes many forms.',
+        'Take collective action. Identify organizations or initiatives that align with your purpose and reach out to get involved. Volunteering can be a powerful tool against apathy.',
+        'If you see a gap, consider creating your own initiative and find people who will come along with you. Ask the question and find the resonance. Build relationships with allies and advocates across sectors and help break down silos. Identify funding opportunities to move your work forward.',
+        'Ensure all the work you do is justice-focused and rooted in Nature. Understand the perspectives of local Indigenous groups on environmental issues, and support Indigenous-led action.',
+        'As you take collective action, also identify opportunities to make change everyday. Eat less meat, opt for public transit, tend your pollinator-friendly garden, use a reusable mug. Any action – big or small – makes an impact.',
+        'Engage in the political process. Write to your representatives, sign petitions, and visit their offices. Make your voice heard in public meetings and participate in public consultation processes. Vote for environmental champions and support their campaigns.',
+        'Identify and show appreciation for the services that are there for you. Access them when you need them and help others do the same. Provide feedback when possible so they can be improved.',
+        'Stay informed on environment-related issues, big and small. Support media that tells the truth about our climate and biodiversity challenges. Balance out the doom and gloom with positive stories of climate wins. Share what inspires you with others.',
+      ]
+    },
+    three: {
+      items: [
+        'Over 50% of greenhouse gas emissions in Canada can be influenced by municipalities, highlighting the real opportunities that exist at the local level for environmental action. This starts with us as individuals. Every action counts, and the small steps we take give us agency.',
+        'But you don’t need to hold it together on your own. The most transformative actions are those that create new relationships and build networks and coalitions within and across communities. We each represent a piece to the puzzle, and we can make connections with those who make up our governments, businesses, and community organizations. Resilience comes from the strength of these connections, and the collective solutions that then emerge.',
+        'In a moment of crisis, we need accountable leadership. As we saw during the pandemic, governments provide essential services. They make funding available to community organizations, the fastest change-agents of society. Through policy and regulations, they require businesses to consider people and the planet, and support them in creating innovative solutions. Governments can build partnerships for impact and create public value. They get their platform from what matters to the public, giving us enormous power to shape decision-making, but only when we choose to make our voices heard. We need your voice... and we all need to choose again and again to keep on voicing, even when we may feel shocked into silence by discouraging news - like the Federal Court’s November 2023 decision to overturn Canada’s ban on harmful single-use plastics.',
+        'As we urgently move towards more sustainable ways of living, we have an opportunity to dismantle the systems that have caused harm and rebuild in ways that support thriving communities in alignment with the natural world. It is essential that we take our lead from Indigenous communities and their knowledge systems. Reconciliation and broader equity goals are possible when our environmental action is in line with our values.',
+        'The science of climate change and its impacts can be scary. It is easy to get caught up in despair. But hope is our most powerful tool, and by translating that hope into collective action, we set the course for a more positive future.',
+      ]
+    },
   },
-  description_new: [
-    {type: 'h2', content: 'Change is at your fingertips if...'},
-    {type: 'ul', content: [
-      'there is an organization or initiative in your community that speaks to the problem you care about.',
-      'there are clear opportunities to get involved, with advocates and allies who make it their job to help you. Everywhere you look, you see symbols that say you belong.',
-      'climate initiatives and policies in your community show meaningful collaboration between government offices, businesses, community groups, and local First Nations.',
-      'the governments representing you have declared a climate emergency. They also have a clear plan that outlines ambitious environmental goals, with a track record of implementation.',
-      'existing initiatives are rooted in reconciliation and nation-to-nation relationships with Indigenous communities. They incorporate commitments to social equity, the wellbeing of future generations, and living in alignment with nature.',
-      'there are accessible services to get emergency help. Communities of care are well-established.',
-    ]},
-    {type: 'h2', content: 'The movement needs you more than ever if...'},
-    {type: 'ul', content: [
-      'you don’t see an organization working on your problem and you cannot find an obvious starting point for action.',
-      'you cannot find allies and advocates, and the movement feels unwelcoming. You feel like you have to go it alone.',
-      'you’re seeing silos, duplicated efforts, people talking over each other.',
-      'your governments are conducting business as usual. Where environmental plans do exist, they lack real ambition and are all talk and no action.',
-      'there is no meaningful commitment – and action – towards reconciliation and equity goals. The initiatives do not represent the communities they serve.',
-      'help doesn\'t feel accessible. Your questions and requests go unanswered, or you’re given the run-around. Services are far away and have limited hours.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Be the Change.'},
-    {type: 'ul', content: [
-      'Educate yourself and find your purpose. There are many environmental issues to tackle and action takes many forms. Determine what you’re most passionate about and where you can apply your skills and experience.',
-      'Take collective action. Identify organizations or initiatives that align with your purpose and reach out to get involved. Volunteering can be a powerful tool against apathy.',
-      'If you see a gap, consider creating your own initiative and find people who will come along with you. Ask the question and find the resonance. Identify funding opportunities to move your work forward.',
-      'Ensure all the work you do is justice-focused and rooted in nature. Understand the perspectives of local Indigenous groups on environmental issues, and support Indigenous-led action.',
-      'As you take collective action, also identify opportunities to make change everyday. Eat less meat, opt for public transit, tend your pollinator-friendly garden, use a reusable mug. Any action – big or small – makes an impact.',
-      'Build relationships with allies and advocates across sectors and help break down silos. When governments, businesses, community organizations, and the public work together, there are real opportunities for systemic change.',
-      'Engage in the political process. Write to your representatives, sign petitions, and visit their offices. Make your voice heard in public meetings and participate in public consultation processes. Vote for environmental champions and support their campaigns.',
-      'Identify and show appreciation for the services that are there for you. Access them when you need them and help others do the same. Provide feedback when possible so they can be improved.',
-      'Stay informed on environment-related issues, big and small. Support media that tells the truth about our climate and biodiversity challenges. Balance out the doom and gloom with positive stories of climate wins. Share what inspires you with others.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'Over 50% of greenhouse gas emissions in Canada can be influenced by municipalities, highlighting the real opportunities that exist at the local level for environmental action. This starts with us as individuals. Every action counts, and the small steps we take give us agency.'},
-    {type: 'p', content: 'But you don’t need to hold it together on your own. The most transformative actions are those that create new relationships and build networks and coalitions within and across communities. We each represent a piece to the puzzle, and we can make connections with those who make up our governments, businesses, and community organizations. Resilience comes from the strength of these connections, and the collective solutions that then emerge.'},
-    {type: 'p', content: 'In a moment of crisis, we need accountable leadership. As we saw during the pandemic, governments provide essential services. They make funding available to community organizations, the fastest change-agents of society. Through policy and regulations, they require businesses to consider people and the planet, and support them in creating innovative solutions. Governments can build partnerships for impact and create public value. They get their platform from what matters to the public, giving us enormous power to shape decision-making, but only when we choose to make our voices heard. We need your voice... and we all need to choose again and again to keep on voicing, even when we may feel shocked into silence by discouraging news - like the Federal Court’s November 2023 decision to overturn Canada’s ban on harmful single-use plastics.'},
-    {type: 'p', content: 'As we urgently move towards more sustainable ways of living, we have an opportunity to dismantle the systems that have caused harm and rebuild in ways that support thriving communities in alignment with the natural world. It is essential that we take our lead from Indigenous communities and their knowledge systems. Reconciliation and broader equity goals are possible when our environmental action is in line with our values.'},
-    {type: 'p', content: 'The science of climate change and its impacts can be scary. It is easy to get caught up in despair. But hope is our most powerful tool, and by translating that hope into collective action, we set the course for a more positive future.'},
-  ],
   act: {
     initiatives: [
       {
