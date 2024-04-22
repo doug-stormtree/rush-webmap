@@ -4,10 +4,11 @@ import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
 import { LegendDrawerButton } from './Legend';
-import { useMapLayerStore } from '../data/Questions';
+import { useActiveQuestionStore, useMapLayerStore } from '../data/Questions';
 
-export const MapData = ({ question }) => {
+export const MapData = () => {
   const map = useMap();
+  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
   const layers = useMapLayerStore((state) => state.layers);
   const getLeafletLayer = useMapLayerStore((state) => state.getLeafletLayer);
 
@@ -16,7 +17,7 @@ export const MapData = ({ question }) => {
     if (map === undefined) return;
     
     layers.forEach((el, key) => {
-      if (el.questions.some((q) => (q.key === question) && q.active)) {
+      if (el.questions.some((q) => (q.key === activeQuestion) && q.active)) {
         const leafletLayer = getLeafletLayer(key);
         if (leafletLayer instanceof L.Layer) map.addLayer(leafletLayer);
       }
@@ -27,7 +28,7 @@ export const MapData = ({ question }) => {
         if (el.leafletLayer instanceof L.Layer) map.removeLayer(el.leafletLayer);
       });
     };
-  }, [map, layers, question, getLeafletLayer]);
+  }, [map, layers, activeQuestion, getLeafletLayer]);
 
   const smallDisplay = useBreakpointValue({
     xl: false,
@@ -38,9 +39,9 @@ export const MapData = ({ question }) => {
   return (
     <>
       <Control position='topright'>
-        {smallDisplay ? <LegendDrawerButton activeQuestion={question} /> : null}
+        {smallDisplay ? <LegendDrawerButton activeQuestion={activeQuestion} /> : null}
       </Control>
-      { [...layers.values()].some((layer) => layer.questions.some((q) => q.key === question)) ? null : (
+      { [...layers.values()].some((layer) => layer.questions.some((q) => q.key === activeQuestion)) ? null : (
         <Center style={{
           position: 'absolute',
           margin: 'auto',

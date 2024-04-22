@@ -25,7 +25,7 @@ import { latLng } from 'leaflet';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // Questions
-import Questions from './data/Questions';
+import Questions, { useActiveQuestionStore } from './data/Questions';
 import { PlacesAutocomplete } from './components/PlacesAutocomplete'; // eslint-disable-line no-unused-vars
 import Sandbox from './components/Sandbox';
 import QuestionCardBar from './components/QuestionCardBar';
@@ -98,7 +98,11 @@ function WebMap() {
   const { question, zoom, center } = validateParams(params);
 
   // Active Question State
-  const [activeQuestion, setActiveQuestion] = useState(question);
+  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
+  const setActiveQuestion = useActiveQuestionStore((state) => state.setActiveQuestion)
+  useEffect(() => {
+    setActiveQuestion(question)
+  }, [ params, question, setActiveQuestion ])
 
   // Leaflet map reference
   const map = useRef(null);
@@ -146,24 +150,20 @@ function WebMap() {
           {//<PlacesAutocomplete />
           }
           <MapBasemap />
-          <MapData question={activeQuestion} />
+          <MapData />
         </MapView>
         {/* smallDisplay
           ? null
           : <LegendPane flex='0' activeQuestion={activeQuestion} />
     */}
       </Flex>
-      <QuestionCardBar
-        activeQuestion={activeQuestion}
-        setActiveQuestion={setActiveQuestion}
-      />
+      <QuestionCardBar />
       <ContentPane
         backgroundColor='white'
         position='sticky'
         style={{
           boxShadow:'10px -10px 8px -8px #888'
         }}
-        question={activeQuestion}
       />
       <IconButton
         icon={<FaChevronUp />}

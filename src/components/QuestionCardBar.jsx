@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import React, { useEffect, useReducer } from 'react';
 import QuestionCard from './QuestionCard';
-import Questions from '../data/Questions';
+import Questions, { useActiveQuestionStore } from '../data/Questions';
 
 function questionsInit(initActiveQuestion) {
   const questionButtons = []
@@ -21,7 +21,7 @@ function questionsInit(initActiveQuestion) {
 
 const questionsReducer = (state, action) => {
   const currentActive = state.findIndex((q) => q.active)
-  if (state[currentActive].key === action) {
+  if (currentActive >= 0 && state[currentActive].key === action) {
     const newState = [...state]
     newState[currentActive].expanded = false
     return newState
@@ -56,16 +56,17 @@ const questionsReducer = (state, action) => {
   return newState
 }
 
-export default function QuestionCardBar(activeQuestion, setActiveQuestion) {
+export default function QuestionCardBar() {
+  const { activeQuestion, setActiveQuestion } = useActiveQuestionStore()
   const [questionState, questionDispatch] = useReducer(
     questionsReducer,
-    'beat-the-heat',
+    activeQuestion,
     questionsInit
   )
 
   useEffect(() => {
     questionDispatch(activeQuestion)
-  }, [activeQuestion])
+  }, [activeQuestion, questionDispatch])
 
   return (
     <Flex
@@ -88,10 +89,7 @@ export default function QuestionCardBar(activeQuestion, setActiveQuestion) {
         <QuestionCard
           key={q.key}
           question={q}
-          onClick={() => {
-            questionDispatch(q.key)
-            setActiveQuestion(q.key)
-          }}
+          onClick={() => setActiveQuestion(q.key)}
           variant={q.active ? q.expanded ? 'expanded' : 'wide' : 'button'}
         />
       )}

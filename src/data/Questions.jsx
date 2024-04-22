@@ -23,6 +23,25 @@ const questionMap = new Map(questions);
 questions = undefined;
 export default questionMap;
 
+
+
+
+export const useActiveQuestionStore = create((set, get) => ({
+  activeQuestion: undefined,
+  setActiveQuestion: (question) => {
+    if (!questionMap.has(question)) return;
+    set(() => ({ activeQuestion: question }))
+  },
+  getActiveQuestion: () => {
+    if (get().activeQuestion === undefined) {
+      get().setActiveQuestion(questionMap.keys().next().value)
+    }
+    return get().activeQuestion;
+  }
+}))
+
+
+
 // Import all layer modules
 const layerCache = {};
 function importAll(r) {

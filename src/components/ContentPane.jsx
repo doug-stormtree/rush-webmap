@@ -5,18 +5,20 @@ import {
   Heading,
   Text,
 } from '@chakra-ui/react';
-import Questions from '../data/Questions';
+import Questions, { useActiveQuestionStore } from '../data/Questions';
 import InitiativeCard from './InitiativeCard';
 import FormattedText from './FormattedText';
 
-export default function ContentPane({ question, ...props }) {
+export default function ContentPane(props) {
+  // active question
+  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
   // question content
   const [content, setContent] = useState({});
   const [initiatives, setInitiatives] = useState([]);
 
   useEffect(() => {
-    if (!question) return;
-    const questionContent = Questions.get(question);
+    if (!activeQuestion) return;
+    const questionContent = Questions.get(activeQuestion);
     setContent({
       title: questionContent.title,
       subtitle: questionContent.question,
@@ -27,7 +29,7 @@ export default function ContentPane({ question, ...props }) {
       setContent({});
       setInitiatives([]);
     }
-  }, [ question ]);
+  }, [ activeQuestion ]);
 
   return (
     <Flex
