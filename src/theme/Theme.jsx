@@ -103,6 +103,13 @@ const QuestionButton = defineStyleConfig({
 })
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      'html, body': {
+        fontSize: '16px'
+      }
+    }
+  },
   colors: {
     rush: {
       50:  "#F2F1E3",

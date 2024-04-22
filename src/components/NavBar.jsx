@@ -6,7 +6,6 @@ import {
   ButtonGroup,
   Link,
   Spacer,
-  Text,
   useBreakpointValue,
   useMultiStyleConfig,
 } from '@chakra-ui/react';
@@ -29,29 +28,35 @@ export default function NavBar(props) {
         <Box __css={styles.title}>{pageTitle}</Box>
       </ReactLink>
       <Spacer />
-      <ButtonGroup variant='nav' spacing='-2'>
-        <Link 
-          href='https://forms.gle/rB1WaaLcUmEjxmMr8'
-          isExternal
-          color='orange.500'
-        >
-          <Button
-            rightIcon={<FiMessageSquare strokeWidth='4'/>}
-            fontWeight='extrabold'
-          >Feedback</Button>
-        </Link>
-        <Link
-          href='https://www.instagram.com/nature_rnd/'
-          isExternal
-        >
-          <Button
-            aria-label='@nature_rnd Instagram'
-            rightIcon={<FiInstagram />}
-          >Instagram</Button>
-        </Link>
-        <ShareModalButton getShareURL={getShareURL} />
-        <LandingModalButton vh={props.vh} />
-      </ButtonGroup>
+      <Box __css={styles.buttons}>
+        <ButtonGroup variant='nav' spacing='-2'>
+          <Link 
+            href='https://forms.gle/rB1WaaLcUmEjxmMr8'
+            isExternal
+          >
+            <Box __css={styles.buttonHighlight}>
+              <Button
+                rightIcon={<FiMessageSquare strokeWidth='inherit'/>}
+                fontWeight='inherit'
+              >Feedback</Button>
+            </Box>
+          </Link>
+          <Link
+            href='https://www.instagram.com/nature_rnd/'
+            isExternal
+          >
+            <Button
+              aria-label='@nature_rnd Instagram'
+              rightIcon={<FiInstagram strokeWidth='inherit' />}
+              fontWeight='inherit'
+            >Instagram</Button>
+          </Link>
+          <ShareModalButton
+            getShareURL={getShareURL}
+          />
+          <LandingModalButton vh={props.vh} />
+        </ButtonGroup>
+      </Box>
     </Box>
   )
 }

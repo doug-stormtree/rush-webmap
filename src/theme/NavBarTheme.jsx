@@ -11,11 +11,22 @@ const NavBar = helpers.defineMultiStyleConfig({
     navbar: {
       bg: '#FFF',
       display: 'flex',
+      alignItems: 'center',
+      height: '2.5rem'
     },
     title: {
-      margin: 'auto 0.75rem',
+      marginLeft: '1em',
       fontFamily: 'var(--chakra-fonts-heading)',
       fontWeight: '700'
+    },
+    buttons: {
+      fontWeight: 'medium',
+      strokeWidth: '0.1875em',
+    },
+    buttonHighlight: {
+      fontWeight: 'extrabold',
+      strokeWidth: '0.25em',
+      color: 'orange.500',
     }
   },
 })

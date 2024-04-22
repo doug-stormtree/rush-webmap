@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react';
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import QuestionCard from './QuestionCard';
 import Questions from '../data/Questions';
 
@@ -56,12 +56,16 @@ const questionsReducer = (state, action) => {
   return newState
 }
 
-export default function QuestionCardBar() {
+export default function QuestionCardBar(activeQuestion, setActiveQuestion) {
   const [questionState, questionDispatch] = useReducer(
     questionsReducer,
     'beat-the-heat',
     questionsInit
   )
+
+  useEffect(() => {
+    questionDispatch(activeQuestion)
+  }, [activeQuestion])
 
   return (
     <Flex
@@ -86,6 +90,7 @@ export default function QuestionCardBar() {
           question={q}
           onClick={() => {
             questionDispatch(q.key)
+            setActiveQuestion(q.key)
           }}
           variant={q.active ? q.expanded ? 'expanded' : 'wide' : 'button'}
         />

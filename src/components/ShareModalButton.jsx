@@ -25,12 +25,12 @@ export default function ShareModalButton(props) {
   return (
     <>
       <Button
-        rightIcon={<FiShare strokeWidth='3' />}
+        rightIcon={<FiShare strokeWidth='inherit' />}
+        fontWeight='inherit'
         onClick={() => {
           onOpen();
           setUrl(props.getShareURL());
         }}
-        fontWeight='medium'
       >Share</Button>
       <Modal
         isCentered

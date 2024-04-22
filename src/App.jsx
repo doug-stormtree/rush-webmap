@@ -7,7 +7,6 @@ import {
   useParams,
 } from 'react-router-dom';
 import {
-  useBreakpointValue,
   ChakraProvider,
   Box,
   Flex,
@@ -20,15 +19,14 @@ import MapData from './components/MapData';
 import MapBasemap from './components/MapBasemap';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
-import QuestionMenuBar from './components/QuestionMenuBar';
-import { LegendPane } from './components/Legend';
+import { LegendPane } from './components/Legend'; // eslint-disable-line no-unused-vars
 import { latLng } from 'leaflet';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // Questions
 import Questions from './data/Questions';
-import { PlacesAutocomplete } from './components/PlacesAutocomplete';
+import { PlacesAutocomplete } from './components/PlacesAutocomplete'; // eslint-disable-line no-unused-vars
 import Sandbox from './components/Sandbox';
 import QuestionCardBar from './components/QuestionCardBar';
 import HomePage from './components/HomePage';
@@ -120,12 +118,6 @@ function WebMap() {
     return `${currHost}/app/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
   }
 
-  // Handle Legend Display on Small Screens
-  const smallDisplay = useBreakpointValue({
-    xl: false,
-    base: true,
-  },{ssr:false, fallback:true});
-
   return (
     <Box
       minH={vh}
@@ -138,24 +130,10 @@ function WebMap() {
         getShareURL={getShareURL}
         vh={vh}
       />
-      {/*
-      <QuestionMenuBar
-        style={{
-          backgroundColor:'white',
-          position:'sticky',
-          top:'2.5rem',
-          zIndex:'9',
-          //borderRadius:'16px 16px 0 0',
-          boxShadow:'0px 0px 8px 2px #888'
-        }}
-        activeQuestion={activeQuestion}
-        setActiveQuestion={setActiveQuestion}
-      />
-      */}
       <Flex
         h={`60vh`}
         position='sticky'
-        top='11.25rem'
+        top='2.5rem'
         direction='row'
         //zIndex='-1'
       >
@@ -175,7 +153,10 @@ function WebMap() {
           : <LegendPane flex='0' activeQuestion={activeQuestion} />
     */}
       </Flex>
-      <QuestionCardBar />
+      <QuestionCardBar
+        activeQuestion={activeQuestion}
+        setActiveQuestion={setActiveQuestion}
+      />
       <ContentPane
         backgroundColor='white'
         position='sticky'
