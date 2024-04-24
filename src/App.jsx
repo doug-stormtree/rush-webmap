@@ -134,8 +134,9 @@ function WebMap() {
         getShareURL={getShareURL}
         vh={vh}
       />
+      <QuestionCardBar />
       <Flex
-        h={`60vh`}
+        h={`calc(100vh - 2.5rem)`}
         position='sticky'
         top='2.5rem'
         direction='row'
@@ -147,13 +148,12 @@ function WebMap() {
           zoom={zoom}
           center={center}
         >
-          {//<PlacesAutocomplete />
-          }
+          <PlacesAutocomplete />
           <MapBasemap />
           <MapData />
         </MapView>
       </Flex>
-      <QuestionCardBar />
+      {/*
       <ContentPane
         backgroundColor='white'
         position='sticky'
@@ -170,6 +170,7 @@ function WebMap() {
         bottom='16px'
         left='calc(100% - 56px)'
       />
+      */}
     </Box>
   );
 }

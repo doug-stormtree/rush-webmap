@@ -25,21 +25,31 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
+import { FiX } from "react-icons/fi";
 import FormattedText from './FormattedText';
 import { useMapLayerStore, LOADING, useActiveQuestionStore } from '../data/Questions';
 import { LegendGroups } from '../data/TextContent';
 
 // Wraps Legend in a Box for large screen sizes.
-export const LegendPane = () => {
+export const LegendPane = ({ onClose }) => {
   return (
     <Box
-      w='2xl'
-      p='12px'
-      pe='4px'
-      overflowY='scroll'
+      w='80ch'
+      maxH='calc(100vh - 11.875rem)'
+      p='1em'
+      pe='0'
+      overflowY='hidden'
+      borderRadius='xl'
+      backgroundColor='white'
+      display='flex'
+      flexDirection='column'
     >
-      <LegendHeader />
-      <LegendList />
+      <Box flex='0'>
+        <LegendHeader onClose={onClose} />
+      </Box>
+      <Box flex='1' overflow='scroll' minH='0' pe='1em'>
+        <LegendList />
+      </Box>
     </Box>
   )
 }
@@ -52,14 +62,22 @@ export const LegendDrawerButton = () => {
 
   return (
     <>
-      <Button
-        ref={btnRef}
-        onClick={onOpen}
-        isLoading={layersLoading}
-        loadingText='Legend'
-      >
-        Legend
-      </Button>
+      { isOpen
+        ? (
+          <LegendPane onClose={onClose} />
+        )
+        : (
+          <Button
+            ref={btnRef}
+            onClick={onOpen}
+            isLoading={layersLoading}
+            loadingText='Legend'
+          >
+            Legend
+          </Button>
+        )
+      }
+      {/* 
       <Drawer
         isOpen={isOpen}
         onClose={onClose}
@@ -78,15 +96,28 @@ export const LegendDrawerButton = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+       */}
     </>
   )
 }
 
-const LegendHeader = () => {
+const LegendHeader = ({ onClose }) => {
   return (
     <>
       <Heading size='lg' align='center'>Legend</Heading>
       <Text fontSize='sm' align='right' my='2' me='14px'>Click here for information about each layer ⤵</Text>
+      <IconButton
+        aria-label='Close Legend'
+        icon={<FiX size='1.5rem' />}
+        onClick={onClose}
+        position='absolute'
+        top='0.75em'
+        right='0.75em'
+        variant='ghost'
+        height='2.25rem'
+        maxWidth='2.25rem'
+        minWidth='2.25rem'
+      />
     </>
   )
 }
@@ -129,11 +160,7 @@ const LegendList = () => {
     (key) => legendComponents.push(<LegendGroup key={key} title={key}>{legendEntries.get(key)}</LegendGroup>)
   )
 
-  return (
-    <>
-      {legendComponents}
-    </>
-  )
+  return legendComponents
 }
 
 // LegendGroup Component
