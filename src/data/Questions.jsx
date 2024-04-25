@@ -23,9 +23,7 @@ const questionMap = new Map(questions);
 questions = undefined;
 export default questionMap;
 
-
-
-
+// Question State Store
 export const useActiveQuestionStore = create((set, get) => ({
   activeQuestion: undefined,
   setActiveQuestion: (question) => {
@@ -37,10 +35,14 @@ export const useActiveQuestionStore = create((set, get) => ({
       get().setActiveQuestion(questionMap.keys().next().value)
     }
     return get().activeQuestion;
+  },
+  sectionFocus: 0,
+  setSectionFocus: (focus) => {
+    if (focus >= 0 && focus <= 3) {
+      set(() => ({ sectionFocus: focus }))
+    }
   }
 }))
-
-
 
 // Import all layer modules
 const layerCache = {};

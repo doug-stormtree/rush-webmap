@@ -107,18 +107,13 @@ export const PlacesAutocomplete = () => {
     base: 'Search...',
   }, {ssr:false, fallback:true});
 
-  const inputPos = useBreakpointValue({
-    md: 'topleft',
-    base: 'topright',
-  }, {ssr:false, fallback:true});
-
   const inputWidth = useBreakpointValue({
     md: '500px',
     base: `calc(100vw - 20px - ${window.innerWidth - document.documentElement.clientWidth}px)`,
   }, {ssr:false, fallback:true});
   
   return (
-    <Control prepend position={inputPos}>
+    <Control prepend position='topright'>
       <Input
         ref={inputRef}
         width={inputWidth}

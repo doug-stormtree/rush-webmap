@@ -9,7 +9,6 @@ function questionsInit(initActiveQuestion) {
     questionButtons.push({
       key: k,
       active: k === initActiveQuestion,
-      expanded: true,
       image: q.image,
       title: q.title,
       subtitle: q.question,
@@ -23,7 +22,6 @@ const questionsReducer = (state, action) => {
   const currentActive = state.findIndex((q) => q.active)
   if (currentActive >= 0 && state[currentActive].key === action) {
     const newState = [...state]
-    newState[currentActive].expanded = false
     return newState
   }
 
@@ -33,7 +31,6 @@ const questionsReducer = (state, action) => {
     newState.push({
       ...q,
       active: q.key === action,
-      expanded: true,
     })
   })
   // find the index of first active question in new state
@@ -57,7 +54,12 @@ const questionsReducer = (state, action) => {
 }
 
 export default function QuestionCardBar() {
-  const { activeQuestion, setActiveQuestion } = useActiveQuestionStore()
+  const {
+    activeQuestion,
+    setActiveQuestion,
+    sectionFocus,
+    setSectionFocus
+  } = useActiveQuestionStore()
   const [questionState, questionDispatch] = useReducer(
     questionsReducer,
     activeQuestion,
@@ -89,8 +91,11 @@ export default function QuestionCardBar() {
         <QuestionCard
           key={q.key}
           question={q}
-          onClick={() => setActiveQuestion(q.key)}
-          variant={q.active ? q.expanded ? 'expanded' : 'wide' : 'button'}
+          onClick={() => {
+            setActiveQuestion(q.key)
+            setSectionFocus(sectionFocus + 1)
+          }}
+          variant={q.active ? sectionFocus === 1 ? 'expanded' : 'wide' : 'button'}
         />
       )}
     </Flex>

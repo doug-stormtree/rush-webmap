@@ -27,15 +27,19 @@ import {
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import { FiX } from "react-icons/fi";
 import FormattedText from './FormattedText';
+import useScrollShadows from './useScrollShadows';
 import { useMapLayerStore, LOADING, useActiveQuestionStore } from '../data/Questions';
 import { LegendGroups } from '../data/TextContent';
 
 // Wraps Legend in a Box for large screen sizes.
 export const LegendPane = ({ onClose }) => {
+  const scrollBoxRef = useRef()
+  const scrollContainerProps = useScrollShadows(scrollBoxRef)
+  
   return (
     <Box
       w='80ch'
-      maxH='calc(100vh - 11.875rem)'
+      maxH='calc(100vh - 16.375rem)'
       p='1em'
       pe='0'
       overflowY='hidden'
@@ -47,8 +51,22 @@ export const LegendPane = ({ onClose }) => {
       <Box flex='0'>
         <LegendHeader onClose={onClose} />
       </Box>
-      <Box flex='1' overflow='scroll' minH='0' pe='1em'>
-        <LegendList />
+      <Box
+        flex='1'
+        display='flex'
+        flexDirection='column'
+        overflow='hidden'
+        {...scrollContainerProps}
+      >
+        <Box
+          flex='1'
+          overflow='scroll'
+          minH='0'
+          pe='1em'
+          ref={scrollBoxRef}
+        >
+          <LegendList />
+        </Box>
       </Box>
     </Box>
   )
@@ -59,12 +77,13 @@ export const LegendDrawerButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   const layersLoading = useMapLayerStore((state) => state.layersLoading());
+  const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
 
   return (
     <>
       { isOpen
         ? (
-          <LegendPane onClose={onClose} />
+          <LegendPane onClose={onClose} key={activeQuestion} />
         )
         : (
           <Button
@@ -125,8 +144,7 @@ const LegendHeader = ({ onClose }) => {
 // LegendList Component
 //   Builds list of LegendItem components for active question layers.
 const LegendList = () => {
-  // Get active question
-  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion);
+  const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
   // Get all layers
   const layers = useMapLayerStore((state) => state.layers);
 
