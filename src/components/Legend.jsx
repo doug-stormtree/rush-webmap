@@ -38,7 +38,7 @@ export const LegendPane = ({ onClose }) => {
   
   return (
     <Box
-      w='80ch'
+      w='30rem'
       maxH='calc(100vh - 16.375rem)'
       p='1em'
       pe='0'
