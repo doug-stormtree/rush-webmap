@@ -11,7 +11,7 @@ import FormattedText from './FormattedText';
 
 export default function ContentPane(props) {
   // active question
-  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
+  const [activeQuestion, sectionFocus] = useActiveQuestionStore((state) => [state.activeQuestion, state.sectionFocus])
   // question content
   const [content, setContent] = useState({});
   const [initiatives, setInitiatives] = useState([]);
@@ -31,7 +31,7 @@ export default function ContentPane(props) {
     }
   }, [ activeQuestion ]);
 
-  return (
+  return sectionFocus >= 2 && (
     <Flex
       flexFlow='row wrap'
       justifyContent='space-evenly'

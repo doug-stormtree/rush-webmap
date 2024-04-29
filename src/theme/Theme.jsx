@@ -2,6 +2,8 @@ import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
 import '@fontsource-variable/aleo';
 import '@fontsource-variable/figtree';
 import '@fontsource-variable/inter';
+import '@fontsource-variable/urbanist';
+import '@fontsource-variable/bitter';
 
 import '@fontsource/poppins/100.css';
 import '@fontsource/poppins/200.css';
@@ -16,6 +18,7 @@ import '@fontsource/poppins/900.css';
 import '@fontsource/raleway/400.css';
 import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
+
 import QuestionCard from './QuestionCardTheme';
 import NavBar from './NavBarTheme';
 
@@ -155,17 +158,13 @@ const theme = extendTheme({
   fonts: {
     brand: `'Poppins', sans-serif`,
     title: `'Figtree Variable', sans-serif`,
-    body: `'Inter', sans-serif`,
+    body: `'Bitter Variable', serif`,
     heading: `'Poppins', sans-serif`,
-    subTitle: `'Raleway', sans-serif`,
+    subHeading: `'Urbanist Variable', sans-serif`,
     inter: `'Inter Variable', sans-serif`,
     aleo: `'Aleo Variable', serif`,
   },
   textStyles: {
-    h3: {
-      'font-family': 'var(--chakra-fonts-subTitle)',
-      'font-size': '1rem',
-    }
   }
 });
 export default theme;

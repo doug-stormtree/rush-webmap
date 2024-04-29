@@ -18,7 +18,7 @@ export default function NavBar(props) {
   const { getShareURL, ...rest } = props;
 
   const pageTitle = useBreakpointValue({
-    md: '[RUSH] Resilient Urban Systems & Habitat',
+    xl: '[RUSH] Resilient Urban Systems & Habitat',
     base: '[RUSH]',
   },{ssr:false, fallback:true});
 

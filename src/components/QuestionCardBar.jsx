@@ -56,10 +56,8 @@ const questionsReducer = (state, action) => {
 export default function QuestionCardBar() {
   const {
     activeQuestion,
-    setActiveQuestion,
     sectionFocus,
-    setSectionFocus
-  } = useActiveQuestionStore()
+  } = useActiveQuestionStore(state => ({activeQuestion: state.activeQuestion, sectionFocus: state.sectionFocus}))
   const [questionState, questionDispatch] = useReducer(
     questionsReducer,
     activeQuestion,
@@ -91,10 +89,6 @@ export default function QuestionCardBar() {
         <QuestionCard
           key={q.key}
           question={q}
-          onClick={() => {
-            setActiveQuestion(q.key)
-            setSectionFocus(sectionFocus + 1)
-          }}
           variant={q.active ? sectionFocus === 1 ? 'expanded' : 'wide' : 'button'}
         />
       )}

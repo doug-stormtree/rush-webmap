@@ -23,6 +23,31 @@ const questionMap = new Map(questions);
 questions = undefined;
 export default questionMap;
 
+// Question reducer
+export const questionActions = { open: 'OPEN', close: 'CLOSE', makeYourMove: 'MOVE', rabbitHole: 'RABBIT' }
+const questionReducer = (state, {question, action}) => {
+  const newState = {}
+  if (questionMap.has(question) && state.activeQuestion !== question) {
+    newState.activeQuestion = question
+  }
+  switch (action) {
+    case questionActions.open:
+      newState.sectionFocus = 1
+      return newState
+    case questionActions.close:
+      newState.sectionFocus = 0
+      return newState
+    case questionActions.makeYourMove:
+      newState.sectionFocus = 2
+      return newState
+    case questionActions.rabbitHole:
+      newState.sectionFocus = 3
+      return newState
+    default:
+      return newState
+  }
+}
+
 // Question State Store
 export const useActiveQuestionStore = create((set, get) => ({
   activeQuestion: undefined,
@@ -41,7 +66,8 @@ export const useActiveQuestionStore = create((set, get) => ({
     if (focus >= 0 && focus <= 3) {
       set(() => ({ sectionFocus: focus }))
     }
-  }
+  },
+  dispatch: (args) => set((state) => questionReducer(state, args))
 }))
 
 // Import all layer modules

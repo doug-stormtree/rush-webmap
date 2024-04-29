@@ -98,8 +98,7 @@ function WebMap() {
   const { question, zoom, center } = validateParams(params);
 
   // Active Question State
-  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
-  const setActiveQuestion = useActiveQuestionStore((state) => state.setActiveQuestion)
+  const { activeQuestion, setActiveQuestion } = useActiveQuestionStore((state) => ({activeQuestion: state.activeQuestion, setActiveQuestion: state.setActiveQuestion}))
   useEffect(() => {
     setActiveQuestion(question)
   }, [ params, question, setActiveQuestion ])
@@ -153,14 +152,17 @@ function WebMap() {
           <MapData />
         </MapView>
       </Flex>
-      {/*
       <ContentPane
         backgroundColor='white'
-        position='sticky'
-        style={{
-          boxShadow:'10px -10px 8px -8px #888'
-        }}
+        position='absolute'
+        overflow='hidden'
+        borderRadius='xl'
+        width='60%'
+        height='65%'
+        left='3.5rem'
+        top='35%'
       />
+      {/*
       <IconButton
         icon={<FaChevronUp />}
         onClick={() => window.scrollTo({top:0,behavior:'smooth'})}

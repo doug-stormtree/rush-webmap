@@ -26,29 +26,40 @@ const QuestionCard = helpers.defineMultiStyleConfig({
       height: '100%',
       borderRadius: 'inherit',
       objectFit: 'cover',
+      objectPosition: 'top',
       opacity: '0.9',
       overflow: 'hidden',
     },
     content: {
       textAlign: 'left',
+      borderRadius: 'inherit',
+      overflow: 'hidden',
+      paddingX: '1rem',
+      paddingY: '0.6rem',
     },
     title: {
       // text styling
+      lineHeight: '130%',
       fontFamily: 'var(--chakra-fonts-heading)',
-      fontSize: 'sm',
+      fontWeight: '500',
+      fontSize: '2xl',
       textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
     },
     subtitle: {
       display: 'none',
       // text styling
       fontFamily: 'var(--chakra-fonts-subHeading)',
+      fontWeight: '500',
       lineHeight: '130%',
       textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
+      // positioning
+      marginTop: '0.25rem'
     },
     body: {
       display: 'none',
       // text styling
-      fontFamily: 'var(--chakra-fonts-subHeading)'
+      fontFamily: 'var(--chakra-fonts-body)',
+      fontWeight: '500',
     },
     footer: {
       display: 'none'
@@ -70,6 +81,7 @@ const QuestionCard = helpers.defineMultiStyleConfig({
         left: '50%',
         transform: 'translateX(-50%)',
         // text styling
+        fontSize: 'sm',
         textAlign: 'center',
         textShadow: '1px 1px 2px black, 1px 1px 1px black',
       },
@@ -87,12 +99,8 @@ const QuestionCard = helpers.defineMultiStyleConfig({
         zIndex: '-1',
       },
       content: {
-        padding: '1rem',
-        paddingTop: '0.6rem',
-      },
-      title: {
-        // text styling
-        fontSize: 'xl',
+        height: '100%',
+        background: 'linear-gradient(rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9)) 100%',
       },
       subtitle: {
         display: 'block',
@@ -116,14 +124,7 @@ const QuestionCard = helpers.defineMultiStyleConfig({
         borderRadius: '0.75rem 0.75rem 0 0',
       },
       content: {
-        borderRadius: 'inherit',
-        padding: '1rem',
-        paddingTop: '0.6rem',
         background: 'linear-gradient(rgba(255,255,255,0.8) 0, rgba(255,255,255,0.5) 180px, rgba(255,255,255,1) 320px, rgba(255,255,255,1)) 100%',
-      },
-      title: {
-        // text styling
-        fontSize: 'xl',
       },
       subtitle: {
         display: 'block',
