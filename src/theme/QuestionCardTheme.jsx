@@ -53,7 +53,8 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       lineHeight: '130%',
       textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
       // positioning
-      marginTop: '0.25rem'
+      marginTop: '0.25rem',
+      // line clamp
     },
     body: {
       display: 'none',
@@ -108,7 +109,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         background: 'linear-gradient(rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9)) 100%',
       },
       subtitle: {
-        display: 'block',
+        noOfLines: '3', // overrides 'display: none'
       }
     },
     expanded: {

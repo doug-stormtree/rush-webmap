@@ -65,6 +65,7 @@ export default function QuestionCardBar() {
   )
 
   useEffect(() => {
+    if (!activeQuestion) return
     questionDispatch(activeQuestion)
   }, [activeQuestion, questionDispatch])
 

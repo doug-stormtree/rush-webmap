@@ -14,6 +14,11 @@ export default function QuestionCard({ question, variant }) {
   const styles = useMultiStyleConfig('QuestionCard', { variant })
   const dispatch = useActiveQuestionStore(state => state.dispatch)
 
+  // hack for long title strings
+  const longTitleStyle = variant === 'wide' && question.title.length > 22
+    ? { fontSize: '1.125rem', lineHeight: '1.95rem'}
+    : {}
+
   return (
     <Box
       __css={styles.card}
@@ -44,7 +49,7 @@ export default function QuestionCard({ question, variant }) {
           maxWidth='1.875rem'
           onClick={() => dispatch({question: question.key, action: questionActions.close})}
         />
-        <Box __css={styles.title}>{question.title}</Box>
+        <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
         <Box __css={styles.subtitle}>{question.subtitle}</Box>
         <Box __css={styles.body}>
           {
