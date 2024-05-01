@@ -1,93 +1,81 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Box,
-  Flex,
-  Heading,
-  Text,
+  Button,
+  ListItem,
+  UnorderedList,
+  useMultiStyleConfig,
 } from '@chakra-ui/react';
-import Questions, { useActiveQuestionStore } from '../data/Questions';
+import { FaRegArrowAltCircleDown } from 'react-icons/fa';
+import Questions, { useActiveQuestionStore, questionActions } from '../data/Questions';
 import InitiativeCard from './InitiativeCard';
-import FormattedText from './FormattedText';
 
-export default function ContentPane(props) {
+export const Tabs = {
+  content: 'content',
+  initiatives: 'initiatives',
+}
+
+export default function ContentPane({ active, variant, onClick }) {
+  // theme
+  const styles = useMultiStyleConfig('ContentPane', {variant: active ? variant : 'inactive'})
   // active question
-  const [activeQuestion, sectionFocus] = useActiveQuestionStore((state) => [state.activeQuestion, state.sectionFocus])
+  const [
+    activeQuestion,
+    sectionFocus,
+    dispatch
+  ] = useActiveQuestionStore((state) => [
+    state.activeQuestion,
+    state.sectionFocus,
+    state.dispatch
+  ])
   // question content
-  const [content, setContent] = useState({});
-  const [initiatives, setInitiatives] = useState([]);
-
-  useEffect(() => {
-    if (!activeQuestion) return;
-    const questionContent = Questions.get(activeQuestion);
-    setContent({
-      title: questionContent.title,
-      subtitle: questionContent.sections.two.heading,
-      description: questionContent.sections.two.items.map(i => ({type: 'p', content: i})),
-    });
-    setInitiatives(questionContent.act.initiatives);
-    return () => {
-      setContent({});
-      setInitiatives([]);
+  const questionData = Questions.get(activeQuestion)
+  const content = variant === Tabs.content
+    ? {
+      title: questionData?.title,
+      subtitle: 'Make your move. ' + questionData?.sections.two.heading,
+      body: (
+        <UnorderedList>
+          {questionData?.sections.two.items.map((i) => (
+            <ListItem key={i}>{i}</ListItem>
+          ))}
+        </UnorderedList>
+      ),
+      footer: (
+        <Button
+          rightIcon={<FaRegArrowAltCircleDown />}
+          onClick={() => dispatch({action: questionActions.rabbitHole})}
+        >
+          Down the rabbit hole
+        </Button>
+      )
+    } : {
+      title: 'Good Stuff To Check Out',
+      subtitle: 'We\'ve noticed these movers and shakers working on solutions.',
+      body: questionData?.act.initiatives.map((item, index) =>
+        <InitiativeCard
+          key={item.title}
+          initiative={item}
+          flip={index%2===0}
+          flex='0'
+        />
+      ),
+      footer: null,
     }
-  }, [ activeQuestion ]);
 
   return sectionFocus >= 2 && (
-    <Flex
-      flexFlow='row wrap'
-      justifyContent='space-evenly'
-      paddingTop='6'
-      {...props}
-    >
-      <DescriptionComponent {...content} />
-      <InitiativesList initiatives={initiatives} />
-    </Flex>
-  )
-}
-
-function DescriptionComponent({ title, subtitle, description }) {
-  return (
-    <Flex
-      direction='column'
-      maxW='4xl'
-      paddingInline='6'
-      paddingBottom='6'
-    >
-      <Heading size='lg' mb='0.125em'>{title}</Heading>
-      <Text
-        as='h3'
-        mb='6'
-      >
-        {subtitle}
-      </Text>
-      <FormattedText textArray={description ?? []} />
-    </Flex>
-  )
-}
-
-function InitiativesList({ initiatives }) {
-  return (
     <Box
-      maxW='3xl'
-      paddingInline='6'
+      __css={styles.container}
+      onClick={onClick}
     >
-      <Heading as='h2' size='lg' mb='0.125em'>
-        Good Stuff To Check Out
-      </Heading>
-      <Text as='h3' mb='6'>
-        We've noticed these movers and shakers working on solutions.
-      </Text>
-      <Flex
-        direction="column"
-        gap="10px"
-      >
-        {initiatives.map((item, index) =>
-          <InitiativeCard
-            key={item.title}
-            initiative={item}
-            flip={index%2===0}
-          />
-        )}
-      </Flex>
+      <Box __css={styles.title}>{content.title}</Box>
+      <Box __css={styles.subtitle}>{content.subtitle}</Box>
+      <Box __css={styles.body}>
+        {content.body}
+      </Box>
+      <Box __css={styles.footer}>
+        {content.footer}
+      </Box>
     </Box>
   )
 }

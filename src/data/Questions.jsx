@@ -125,7 +125,7 @@ export const useMapLayerStore = create((set, get) => ({
         });
       })
     ),
-  toggleLayerActive: (layerId, question) =>
+  toggleLayerActive: (layerId, question) => 
     set(
       produce((state) => {
         const layer = state.layers.get(layerId);

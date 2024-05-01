@@ -214,7 +214,7 @@ export const LegendItem = ({ layerId, question }) => {
             />
           : <Switch
               isChecked={layer.questions.some((q) => q.key === question && q.active === true)}
-              onChange={(e) => toggleLayerActive(layerId, question)}
+              onChange={() => toggleLayerActive(layerId, question)}
               flex='0'
             />
         }

@@ -19,8 +19,11 @@ import '@fontsource/raleway/400.css';
 import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
 
-import QuestionCard from './QuestionCardTheme';
 import NavBar from './NavBarTheme';
+import QuestionCard from './QuestionCardTheme';
+import ContentPane from './ContentPaneTheme';
+import ContentInitiativeContainer from './ContentInitiativeContainerTheme';
+import RabbitHoleDrawer from './RabbitHoleDrawerTheme';
 
 const MenuCard = defineStyleConfig({
   baseStyle: {
@@ -135,6 +138,9 @@ const theme = extendTheme({
     MenuCard,
     QuestionButton,
     QuestionCard,
+    ContentPane,
+    ContentInitiativeContainer,
+    RabbitHoleDrawer,
     Button: {
       variants: {
         nav: {

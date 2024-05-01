@@ -45,7 +45,7 @@ export const MapBasemap = () => {
   return (
     <>
       <AttributionControl session={session} />
-      <Control position='bottomleft'>
+      <Control prepend position='bottomright'>
         <img
           src='/google_on_non_white.png'
           alt='Google'

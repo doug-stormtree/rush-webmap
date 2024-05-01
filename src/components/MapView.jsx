@@ -17,7 +17,7 @@ export default function MapView(props) {
       zoomControl={false}
       maxZoom={20}
     >
-      <ZoomControl position='bottomleft' />
+      <ZoomControl position='topleft' />
       {props.children}
     </MapContainer>
   );

@@ -10,10 +10,7 @@ import {
   ChakraProvider,
   Box,
   Flex,
-  IconButton,
 } from '@chakra-ui/react';
-import { FaChevronUp } from 'react-icons/fa';
-import ContentPane from './components/ContentPane';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
 import MapData from './components/MapData';
 import MapBasemap from './components/MapBasemap';
@@ -30,6 +27,8 @@ import { PlacesAutocomplete } from './components/PlacesAutocomplete'; // eslint-
 import Sandbox from './components/Sandbox';
 import QuestionCardBar from './components/QuestionCardBar';
 import HomePage from './components/HomePage';
+import ContentInitiativeContainer from './components/ContentInitiativeContainer';
+import RabbitHoleDrawer from './components/RabbitHoleDrawer';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -152,16 +151,8 @@ function WebMap() {
           <MapData />
         </MapView>
       </Flex>
-      <ContentPane
-        backgroundColor='white'
-        position='absolute'
-        overflow='hidden'
-        borderRadius='xl'
-        width='60%'
-        height='65%'
-        left='3.5rem'
-        top='35%'
-      />
+      <ContentInitiativeContainer />
+      <RabbitHoleDrawer />
       {/*
       <IconButton
         icon={<FaChevronUp />}

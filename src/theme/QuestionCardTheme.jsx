@@ -10,7 +10,7 @@ const helpers = createMultiStyleConfigHelpers([
   'footer',
 ])
 
-const QuestionCard = helpers.defineMultiStyleConfig({
+const QuestionCardTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     card: {
       pointerEvents: 'auto',
@@ -60,6 +60,10 @@ const QuestionCard = helpers.defineMultiStyleConfig({
       // text styling
       fontFamily: 'var(--chakra-fonts-body)',
       fontWeight: '500',
+      fontSize: '0.875rem',
+      listStyle: 'inside',
+      // positioning
+      paddingY: '0.6rem',
     },
     footer: {
       display: 'none'
@@ -91,6 +95,7 @@ const QuestionCard = helpers.defineMultiStyleConfig({
         zIndex: '0',
         height: '120px',
         minWidth: '320px',
+        maxWidth: '320px',
         color: 'black',
       },
       image: {
@@ -113,6 +118,7 @@ const QuestionCard = helpers.defineMultiStyleConfig({
         // size
         minHeight: '120px',
         minWidth: '320px',
+        maxWidth: '320px',
         // styling
         background: 'white',
         color: 'black',
@@ -131,9 +137,6 @@ const QuestionCard = helpers.defineMultiStyleConfig({
       },
       body: {
         display: 'block',
-        paddingY: '0.6rem',
-        fontSize: '0.875rem',
-        listStyle: 'inside'
       },
       footer: {
         display: 'flex',
@@ -150,4 +153,4 @@ const QuestionCard = helpers.defineMultiStyleConfig({
   }
 })
 
-export default QuestionCard
+export default QuestionCardTheme
