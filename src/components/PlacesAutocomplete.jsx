@@ -118,7 +118,9 @@ export const PlacesAutocomplete = () => {
         ref={inputRef}
         width={inputWidth}
         bgColor='gray.100'
+        fontFamily='var(--chakra-fonts-body)'
         placeholder={placeholderText}
+        _placeholder={{color: 'orange.500', opacity: '0.8'}}
       />
     </Control>
   )
