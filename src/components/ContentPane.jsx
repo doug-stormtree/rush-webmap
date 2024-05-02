@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -63,7 +63,7 @@ export default function ContentPane({ active, variant, onClick }) {
       footer: null,
     }
 
-  return sectionFocus >= 2 && (
+  return sectionFocus >= 2 ? (
     <Box
       __css={styles.container}
       onClick={onClick}
@@ -77,5 +77,5 @@ export default function ContentPane({ active, variant, onClick }) {
         {content.footer}
       </Box>
     </Box>
-  )
+  ) : null
 }

@@ -11,11 +11,11 @@ const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
       flexDirection: 'column',
       position: 'absolute',
       overflow: 'hidden',
-      width: '80%',
+      //maxWidth: 'min(calc(100% - 31.875rem), 20rem)',
       maxHeight: 'calc(100% - 17.5rem)',
-      left: '0.625rem',
       bottom: '0',
-      
+      left: '0.625rem',
+      right: '31.875rem',
     },
   },
 })

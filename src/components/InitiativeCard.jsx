@@ -26,6 +26,8 @@ export default function InitiativeCard({initiative, flip = false}) {
         float={{md: flip ? 'right' : 'left'}}
         marginRight={{md: flip ? '0' : '5'}}
         marginLeft={{md: flip ? '5' : '0'}}
+        borderTopLeftRadius={{md: flip ? '0' : 'xl'}}
+        borderTopRightRadius={{md: flip ? 'xl' : '0'}}
         borderBottomRightRadius={{md: flip ? '0' : 'xl'}}
         borderBottomLeftRadius={{md: flip ? 'xl' : '0'}}
       />

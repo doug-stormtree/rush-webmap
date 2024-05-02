@@ -21,7 +21,8 @@ export default function useScrollShadows(ref) {
     // effect to listen to scrollBox events
     useEffect(() => {
         // save reference to scollBox for clean-up
-        const scrollBox = ref.current
+        const scrollBox = ref?.current
+        if (!scrollBox) return
 
         // fire onScroll once on mount so shadows show up
         onScroll({target: scrollBox})

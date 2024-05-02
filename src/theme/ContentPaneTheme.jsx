@@ -11,12 +11,15 @@ const helpers = createMultiStyleConfigHelpers([
 const ContentPaneTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     container: {
+      // positioning
+      marginX: 'auto',
+      width: ['100%', null, '40rem', null, null, null],
+      // padding
       padding: '1rem',
       paddingRight: '0',
       // from App
       backgroundColor: 'white',
       borderRadius: '0.75rem 0.75rem 0 0',
-      //width: '40%',
       flex: '0 1 auto',
       display: 'flex',
       flexDirection: 'column',
