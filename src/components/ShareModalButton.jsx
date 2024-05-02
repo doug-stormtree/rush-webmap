@@ -31,7 +31,7 @@ export default function ShareModalButton(props) {
           onOpen();
           setUrl(props.getShareURL());
         }}
-      >Share</Button>
+      >{props.label}</Button>
       <Modal
         isCentered
         isOpen={isOpen}

@@ -18,9 +18,24 @@ export default function NavBar(props) {
   const { getShareURL, ...rest } = props;
 
   const pageTitle = useBreakpointValue({
-    xl: '[RUSH] Resilient Urban Systems & Habitat',
     base: '[RUSH]',
-  },{ssr:false, fallback:true});
+    xl: '[RUSH] Resilient Urban Systems & Habitat',
+  },{ssr:false});
+  
+  const navLabels = useBreakpointValue({
+    base: {
+      feedback: 'Feedback',
+      social: '',
+      share: '',
+      about: '',
+    },
+    md: {
+      feedback: 'Feedback',
+      social: 'Instagram',
+      share: 'Share',
+      about: 'About',
+    },
+  },{ssr:false});
 
   return (
     <Box __css={styles.navbar} {...rest} >
@@ -38,7 +53,7 @@ export default function NavBar(props) {
               <Button
                 rightIcon={<FiMessageSquare strokeWidth='inherit'/>}
                 fontWeight='inherit'
-              >Feedback</Button>
+              >{navLabels?.feedback}</Button>
             </Box>
           </Link>
           <Link
@@ -49,12 +64,16 @@ export default function NavBar(props) {
               aria-label='@nature_rnd Instagram'
               rightIcon={<FiInstagram strokeWidth='inherit' />}
               fontWeight='inherit'
-            >Instagram</Button>
+            >{navLabels?.social}</Button>
           </Link>
           <ShareModalButton
+            label={navLabels?.share}
             getShareURL={getShareURL}
           />
-          <LandingModalButton vh={props.vh} />
+          <LandingModalButton
+            label={navLabels?.about}
+            vh={props.vh}
+          />
         </ButtonGroup>
       </Box>
     </Box>

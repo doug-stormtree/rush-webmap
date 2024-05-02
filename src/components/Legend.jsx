@@ -23,6 +23,7 @@ import {
   Text,
   Tooltip,
   VStack,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import { FiX } from "react-icons/fi";
@@ -32,13 +33,13 @@ import { useMapLayerStore, LOADING, useActiveQuestionStore } from '../data/Quest
 import { LegendGroups } from '../data/TextContent';
 
 // Wraps Legend in a Box for large screen sizes.
-export const LegendPane = ({ onClose }) => {
+export const LegendPane = () => {
   const scrollBoxRef = useRef()
   const scrollContainerProps = useScrollShadows(scrollBoxRef)
   
   return (
     <Box
-      w='30rem'
+      w='27rem'
       maxH='calc(100vh - 16.375rem)'
       p='1em'
       pe='0'
@@ -49,7 +50,7 @@ export const LegendPane = ({ onClose }) => {
       flexDirection='column'
     >
       <Box flex='0'>
-        <LegendHeader onClose={onClose} />
+        <LegendHeader />
       </Box>
       <Box
         flex='1'
@@ -74,7 +75,12 @@ export const LegendPane = ({ onClose }) => {
 
 // Wraps Legend in a collapsible Drawer for small screen sizes.
 export const LegendDrawerButton = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // render legend as drawer overlay for smaller screen sizes.
+  const isDrawer = useBreakpointValue(
+    [true, null, null, null, false, null],
+    {ssr: false}
+  )
+  const { isOpen, onOpen, onClose } = useDisclosure({defaultIsOpen: !isDrawer});
   const btnRef = useRef();
   const layersLoading = useMapLayerStore((state) => state.layersLoading());
   const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
@@ -82,8 +88,22 @@ export const LegendDrawerButton = () => {
   return (
     <>
       { isOpen
-        ? (
-          <LegendPane onClose={onClose} key={activeQuestion} />
+        ? !isDrawer && (
+          <>
+            <LegendPane key={activeQuestion} />
+            <IconButton
+              aria-label='Close Legend'
+              icon={<FiX size='1.5rem' />}
+              onClick={onClose}
+              position='absolute'
+              top='0.75em'
+              right='0.75em'
+              variant='ghost'
+              height='2.25rem'
+              maxWidth='2.25rem'
+              minWidth='2.25rem'
+            />
+          </>
         )
         : (
           <Button
@@ -96,9 +116,8 @@ export const LegendDrawerButton = () => {
           </Button>
         )
       }
-      {/* 
       <Drawer
-        isOpen={isOpen}
+        isOpen={isOpen && isDrawer}
         onClose={onClose}
         finalFocusRef={btnRef}
         placement='right'
@@ -115,28 +134,15 @@ export const LegendDrawerButton = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-       */}
     </>
   )
 }
 
-const LegendHeader = ({ onClose }) => {
+const LegendHeader = () => {
   return (
     <>
       <Heading size='lg' align='center'>Legend</Heading>
       <Text fontSize='sm' align='right' my='2' me='14px'>Click here for information about each layer ⤵</Text>
-      <IconButton
-        aria-label='Close Legend'
-        icon={<FiX size='1.5rem' />}
-        onClick={onClose}
-        position='absolute'
-        top='0.75em'
-        right='0.75em'
-        variant='ghost'
-        height='2.25rem'
-        maxWidth='2.25rem'
-        minWidth='2.25rem'
-      />
     </>
   )
 }

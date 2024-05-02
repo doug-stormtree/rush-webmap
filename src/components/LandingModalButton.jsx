@@ -28,7 +28,7 @@ export default function LandingModalButton(props) {
         rightIcon={<FiHelpCircle strokeWidth='inherit' />}
         onClick={onOpen}
         fontWeight='inherit'
-      >About</Button>
+      >{props.label}</Button>
       <Modal 
         isOpen={isOpen}
         onClose={onClose}
