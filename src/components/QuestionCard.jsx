@@ -50,10 +50,10 @@ export default function QuestionCard({ question, variant }) {
           onClick={() => dispatch({question: question.key, action: questionActions.close})}
         />
         <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
-        <Box __css={styles.subtitle}>{question.subtitle}</Box>
+        <Box __css={styles.subtitle}>{question.question}</Box>
         <Box __css={styles.body}>
           {
-            question.body.map((list, index) => {
+            question.sections.one.map((list, index) => {
               return (
                 <Box key={index}>
                   {list.heading}

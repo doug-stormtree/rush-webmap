@@ -21,6 +21,7 @@ import '@fontsource/raleway/700.css';
 
 import NavBar from './NavBarTheme';
 import QuestionCard from './QuestionCardTheme';
+import QuestionCardBar from './QuestionCardBarTheme';
 import ContentPane from './ContentPaneTheme';
 import ContentInitiativeContainer from './ContentInitiativeContainerTheme';
 import RabbitHoleDrawer from './RabbitHoleDrawerTheme';
@@ -138,6 +139,7 @@ const theme = extendTheme({
     MenuCard,
     QuestionButton,
     QuestionCard,
+    QuestionCardBar,
     ContentPane,
     ContentInitiativeContainer,
     RabbitHoleDrawer,
