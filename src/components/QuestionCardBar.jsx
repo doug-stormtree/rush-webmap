@@ -12,23 +12,32 @@ export default function QuestionCardBar() {
     activeQuestion: state.activeQuestion,
     sectionFocus: state.sectionFocus
   }))
-
+  
   return (
-    <Box __css={styles.container}>
-      <Box __css={styles.bar} >
-        {[...Questions.entries()].map((q) => 
+    <>
+      <Box __css={styles.container}>
+        <Box __css={styles.bar}>
           <QuestionCard
-            key={q[0]}
-            question={q[1]}
-            variant={q[0] === activeQuestion
-              ? sectionFocus === 1
-                ? 'expanded'
-                : 'wide'
-              : 'button'
+            key={activeQuestion}
+            question={{key: activeQuestion, ...Questions.get(activeQuestion)}}
+            size={sectionFocus === 1
+              ? 'expanded'
+              : 'wide'
             }
+            variant='sticky'
           />
-        )}
+          {[...Questions.entries()]
+            .filter(q => q[0] !== activeQuestion)
+            .map(q => 
+              <QuestionCard
+                key={q[0]}
+                question={{key: q[0], ...q[1]}}
+                size='button'
+              />
+            )
+          }
+        </Box>
       </Box>
-    </Box>
+    </>
   )
 }

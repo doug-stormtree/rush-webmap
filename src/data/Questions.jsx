@@ -25,12 +25,12 @@ export default questionMap;
 
 // Question reducer
 export const questionActions = { open: 'OPEN', close: 'CLOSE', makeYourMove: 'MOVE', rabbitHole: 'RABBIT' }
-const questionReducer = (state, {question, action}) => {
+const questionReducer = (state, {question, focus}) => {
   const newState = {}
   if (questionMap.has(question) && state.activeQuestion !== question) {
     newState.activeQuestion = question
   }
-  switch (action) {
+  switch (focus) {
     case questionActions.open:
       newState.sectionFocus = 1
       return newState

@@ -10,25 +10,25 @@ import { FaRegArrowAltCircleDown } from 'react-icons/fa'
 import { FiX } from 'react-icons/fi'
 import { useActiveQuestionStore, questionActions } from '../data/Questions'
 
-export default function QuestionCard({ question, variant }) {
-  const styles = useMultiStyleConfig('QuestionCard', { variant })
+export default function QuestionCard({ question, size, variant }) {
+  const styles = useMultiStyleConfig('QuestionCard', { size, variant })
   const dispatch = useActiveQuestionStore(state => state.dispatch)
 
   // hack for long title strings
-  const longTitleStyle = variant === 'wide' && question.title.length > 22
+  const longTitleStyle = size === 'wide' && question.title?.length > 22
     ? { fontSize: '1.125rem', lineHeight: '1.95rem'}
     : {}
-
-  return (
+  
+  return question.key && (
     <Box
       __css={styles.card}
       onClick={() => {
-        switch (variant) {
+        switch (size) {
           case 'button':
-            dispatch({question: question.key, action: questionActions.open})
+            dispatch({question: question.key})
             return
           case 'wide':
-            dispatch({question: question.key, action: questionActions.open})
+            dispatch({question: question.key, focus: questionActions.open})
             return
           default:
             return
@@ -39,7 +39,7 @@ export default function QuestionCard({ question, variant }) {
       <Box __css={styles.content}>
         <IconButton
           icon={<FiX />}
-          display={variant !== 'expanded' ? 'none' : null}
+          display={size !== 'expanded' ? 'none' : null}
           position='absolute'
           top='0.6rem'
           right='0.6rem'
@@ -47,7 +47,7 @@ export default function QuestionCard({ question, variant }) {
           height='1.875rem'
           minWidth='1.875rem'
           maxWidth='1.875rem'
-          onClick={() => dispatch({question: question.key, action: questionActions.close})}
+          onClick={() => dispatch({question: question.key, focus: questionActions.close})}
         />
         <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
         <Box __css={styles.subtitle}>{question.question}</Box>
@@ -76,7 +76,7 @@ export default function QuestionCard({ question, variant }) {
         <Box __css={styles.footer}>
           <Button
             rightIcon={<FaRegArrowAltCircleDown />}
-            onClick={() => dispatch({question: question.key, action: questionActions.makeYourMove})}
+            onClick={() => dispatch({question: question.key, focus: questionActions.makeYourMove})}
           >
             Make your move
           </Button>

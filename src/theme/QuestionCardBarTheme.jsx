@@ -10,10 +10,9 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       display: 'flex',
       flexDirection: 'column',
       paddingStart: '10px',
+      paddingY: '10px',
       gap: '10px',
       transform: 'scaleX(-1)', //Flips the child back to normal
-      _before: { content:'""', margin: 'auto' },
-      _after: { content:'""', margin: 'auto' },
     },
     container: {
       transform: 'scaleX(-1)', //Reflects the parent horizontally

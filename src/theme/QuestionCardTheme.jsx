@@ -70,7 +70,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       display: 'none'
     }
   },
-  variants: {
+  sizes: {
     button: {
       card: {
         height: '120px',
@@ -118,11 +118,16 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         zIndex: '0',
         // size
         minHeight: '120px',
+        maxHeight: 'calc(100vh - 11.875rem)',
         minWidth: '320px',
         maxWidth: '320px',
         // styling
         background: 'white',
         color: 'black',
+
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden'
       },
       image: {
         position: 'absolute',
@@ -132,25 +137,43 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       },
       content: {
         background: 'linear-gradient(rgba(255,255,255,0.8) 0, rgba(255,255,255,0.5) 180px, rgba(255,255,255,1) 320px, rgba(255,255,255,1)) 100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        height: '100%'
+      },
+      title: {
+        flex: '0',
       },
       subtitle: {
         display: 'block',
+        flex: '0'
       },
       body: {
         display: 'block',
+        overflowX: 'auto',
       },
       footer: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        display: 'block',
+        flex: '0',
+        alignSelf: 'center',
         fontFamily: 'var(--chakra-fonts-body)',
         fontSize: '0.875rem',
         fontWeight: '700',
       }
     }
   },
+  variants: {
+    sticky: {
+      card: {
+        position: 'sticky',
+        top: '10px',
+        zIndex: '10',
+      }
+    }
+  },
   defaultProps: {
-    variant: 'button'
+    size: 'button'
   }
 })
 
