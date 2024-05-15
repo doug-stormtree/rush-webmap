@@ -37,13 +37,13 @@ export const MapBasemap = () => {
   }, [map]);
 
   return (
-    <Control position='bottomleft'>
+    <Control prepend position='bottomleft'>
       <img
         src='/mapbox-logo-white.png'
         alt='Mapbox'
         style={{
-          margin: '0 0 -8px -8px',
-          height: '2.5rem',
+          margin: '0 0 -2px 0',
+          height: '2rem',
         }}
       />
     </Control>

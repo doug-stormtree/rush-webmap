@@ -13,6 +13,19 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       paddingY: '10px',
       gap: '10px',
       transform: 'scaleX(-1)', //Flips the child back to normal
+
+      _before: {
+        content: '"How can I...?"',
+        fontFamily: 'var(--chakra-fonts-body)',
+        fontWeight: '500',
+        padding: '0.5rem',
+        borderRadius: 'xl',
+        background: 'white',
+        alignSelf: 'flex-start',
+        position: 'sticky',
+        top: '0.625rem',
+        zIndex: '10',
+      }
     },
     container: {
       transform: 'scaleX(-1)', //Reflects the parent horizontally
@@ -21,7 +34,7 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       overflow: 'scroll',
       background: 'transparent',
       position:'absolute',
-      top:'40px',
+      top:'2.5rem',
       zIndex:'9',
       pointerEvents: 'none',
     }

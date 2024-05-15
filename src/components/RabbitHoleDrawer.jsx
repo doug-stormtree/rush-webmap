@@ -33,7 +33,7 @@ export default function RabbitHoleDrawer() {
     <Drawer
       placement='bottom'
       isOpen={sectionFocus === 3}
-      onClose={() => {dispatch({action: questionActions.makeYourMove})}}
+      onClose={() => {dispatch({focus: questionActions.makeYourMove})}}
     >
       <DrawerOverlay />
       <DrawerContent>

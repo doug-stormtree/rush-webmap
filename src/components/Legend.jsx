@@ -40,7 +40,7 @@ export const LegendPane = () => {
   return (
     <Box
       w='27rem'
-      maxH='calc(100vh - 16.375rem)'
+      maxH='calc(100vh - 9.75rem)'
       p='1em'
       pe='0'
       overflowY='hidden'

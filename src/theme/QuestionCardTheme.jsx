@@ -14,12 +14,15 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     card: {
       pointerEvents: 'auto',
-      position: 'relative',
+      //position: 'relative',
       minWidth: '120px',
       borderRadius: 'xl',
       background: '#333',
       // text styling
       color: 'white',
+
+      position: 'sticky',
+      top: '3.75rem',
     },
     image: {
       width: '100%',
@@ -51,7 +54,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       fontFamily: 'var(--chakra-fonts-subHeading)',
       fontWeight: '500',
       lineHeight: '130%',
-      textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
+      textShadow: '1px 1px 4px rgba(0,0,0,0.4)',
       // positioning
       marginTop: '0.25rem',
       // line clamp
@@ -77,7 +80,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         width: '120px',
         _hover: {
           color: '#BBB'
-        }
+        },
       },
       title: {
         // positioning
@@ -107,6 +110,9 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       content: {
         height: '100%',
         background: 'linear-gradient(rgba(255,255,255,0.5) 0, rgba(255,255,255,0.9)) 100%',
+        _hover: {
+          background: 'linear-gradient(rgba(200,200,200,0.5) 0, rgba(200,200,200,0.9)) 100%',
+        },
       },
       subtitle: {
         noOfLines: '3', // overrides 'display: none'
@@ -127,7 +133,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
 
         display: 'flex',
         flexDirection: 'column',
-        overflow: 'hidden'
+        overflow: 'hidden',
       },
       image: {
         position: 'absolute',
@@ -136,7 +142,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         borderRadius: '0.75rem 0.75rem 0 0',
       },
       content: {
-        background: 'linear-gradient(rgba(255,255,255,0.8) 0, rgba(255,255,255,0.5) 180px, rgba(255,255,255,1) 320px, rgba(255,255,255,1)) 100%',
+        background: 'linear-gradient(rgba(255,255,255,0.9) 0, rgba(255,255,255,0.8) 180px, rgba(255,255,255,1) 320px, rgba(255,255,255,1)) 100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
@@ -166,10 +172,16 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
   variants: {
     sticky: {
       card: {
-        position: 'sticky',
-        top: '10px',
         zIndex: '10',
-      }
+      },
+    },
+    absolute: { // not used
+      card: {
+        zIndex: '11',
+        position: 'absolute',
+        top: '6.25rem',
+        left: '3rem',
+      },
     }
   },
   defaultProps: {

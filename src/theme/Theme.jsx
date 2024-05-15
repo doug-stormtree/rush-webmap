@@ -115,9 +115,9 @@ const theme = extendTheme({
       'html, body': {
         fontSize: '16px'
       },
-      '.leaflet-top': {
-        top: '130px'
-      }
+      '.leaflet-left': {
+        left: '8.125rem'
+      },
     }
   },
   colors: {

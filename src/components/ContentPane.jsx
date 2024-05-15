@@ -44,7 +44,7 @@ export default function ContentPane({ active, variant, onClick }) {
       footer: (
         <Button
           rightIcon={<FaRegArrowAltCircleDown />}
-          onClick={() => dispatch({action: questionActions.rabbitHole})}
+          onClick={() => dispatch({focus: questionActions.rabbitHole})}
         >
           Down the rabbit hole
         </Button>
