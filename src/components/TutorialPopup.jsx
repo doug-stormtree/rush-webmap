@@ -30,8 +30,11 @@ export default function TutorialPopup() {
             paddingTop='15%'
             paddingBottom='50%'
             paddingX='10%'
+            transform='scale(-1, 1)'
           >
-            Find your question and explore the map!
+            <Box transform='scale(-1, 1)'>
+              Find your question and explore the map!
+            </Box>
           </Box>
           <Image
             src={require('../images/Hummingbird.png')}
