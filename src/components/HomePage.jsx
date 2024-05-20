@@ -101,9 +101,9 @@ export default function HomePage() {
             bottom={['12rem', null, '14.5rem', null, '12rem', null]}
             right={['10.5rem', null, '0.25rem', null, '10.5rem', null]}
             background={{
-              base: "url('/SpeechBubble.svg')",
-              md: "url('/SpeechBubbleFlip.svg')",
-              xl: "url('/SpeechBubble.svg')",
+              base: "url('/SpeechBubbleLeft.svg')",
+              md: "url('/SpeechBubbleRight.svg')",
+              xl: "url('/SpeechBubbleLeft.svg')",
             }}
             backgroundPosition='center'
             backgroundRepeat='no-repeat !important'
