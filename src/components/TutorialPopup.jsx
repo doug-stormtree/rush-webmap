@@ -4,6 +4,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 import { useActiveQuestionStore } from '../data/Questions';
+import { TutorialPopupQuote } from '../data/TextContent';
 
 export default function TutorialPopup() {
   const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
@@ -16,6 +17,7 @@ export default function TutorialPopup() {
           left='10rem'
           boxSize='10rem'
           zIndex='9999'
+          pointerEvents='none'
         >
           <Box
             background="url('/SpeechBubble.svg')"
@@ -33,11 +35,12 @@ export default function TutorialPopup() {
             transform='scale(-1, 1)'
           >
             <Box transform='scale(-1, 1)'>
-              Find your question and explore the map!
+              {TutorialPopupQuote}
             </Box>
           </Box>
           <Image
             src={require('../images/Hummingbird.png')}
+            filter='drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))'
             position='absolute'
             top='9.7rem'
             left='7.2rem'

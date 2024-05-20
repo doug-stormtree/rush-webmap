@@ -8,7 +8,13 @@ import {
 } from '@chakra-ui/react';
 import { FaArrowRight } from "react-icons/fa6";
 import NavBar from './NavBar'
-import { AboutPageBody, AboutPageSubTitle, AboutPageTitle, AboutPageButtonLabel } from '../data/TextContent';
+import {
+  AboutPageBody,
+  AboutPageButtonLabel,
+  AboutPageQuote,
+  AboutPageSubTitle,
+  AboutPageTitle,
+} from '../data/TextContent';
 
 export default function HomePage() {
   return (
@@ -33,7 +39,7 @@ export default function HomePage() {
           bgColor='white'
           borderRadius='xl'
           marginTop='1.5rem'
-          marginBottom={{base: '20.5rem', md: '1.5rem'}}
+          marginBottom={{base: '21.5rem', md: '1.5rem'}}
           marginStart='0.5rem'
           marginEnd={{base: '0.5rem', md:'13rem', lg: '16.5rem'}}
           padding='1.5rem'
@@ -87,8 +93,8 @@ export default function HomePage() {
           position='absolute'
           bottom='0'
           right='0'
-          height={['22rem', null, '24.5rem', null, '22rem', null]}
-          width={['20.5rem', null, '18rem', null, '20.5rem', null]}
+          height={['24rem', null, '26.5rem', null, '24rem', null]}
+          width={['21.5rem', null, '19rem', null, '21.5rem', null]}
           overflow='hidden'
           zIndex='9'
           background={'url("' + require('../images/GrizzlyBear.png') + '")'}
@@ -98,7 +104,7 @@ export default function HomePage() {
         >
           <Box
             position='absolute'
-            bottom={['12rem', null, '14.5rem', null, '12rem', null]}
+            bottom={['11rem', null, '14.5rem', null, '11rem', null]}
             right={['10.5rem', null, '0.25rem', null, '10.5rem', null]}
             background="url('/SpeechBubble.svg')"
             backgroundPosition='center'
@@ -106,15 +112,19 @@ export default function HomePage() {
             backgroundSize='100% 100%'
             margin='0 auto'
             textAlign='center'
-            lineHeight='1'
-            boxSize='10rem'
-            paddingTop='1.375rem'
+            lineHeight='1.125rem'
+            width='11rem'
+            height='12rem'
+            paddingTop='1.4rem'
             paddingBottom='4.75rem'
-            paddingX='1rem'
+            paddingX='1.125rem'
             transform={['scale(-1, 1)', null, 'none', null, 'scale(-1, 1)', null]}
+            fontFamily='var(--chakra-fonts-subHeading)'
+            fontSize='0.875rem'
+            fontWeight='500'
           >
             <Box transform={['scale(-1, 1)', null, 'none', null, 'scale(-1, 1)', null]}>
-              Find your question and explore the map!
+              {AboutPageQuote}
             </Box>
           </Box>
         </Box>
