@@ -100,11 +100,7 @@ export default function HomePage() {
             position='absolute'
             bottom={['12rem', null, '14.5rem', null, '12rem', null]}
             right={['10.5rem', null, '0.25rem', null, '10.5rem', null]}
-            background={{
-              base: "url('/SpeechBubbleLeft.svg')",
-              md: "url('/SpeechBubbleRight.svg')",
-              xl: "url('/SpeechBubbleLeft.svg')",
-            }}
+            background="url('/SpeechBubble.svg')"
             backgroundPosition='center'
             backgroundRepeat='no-repeat !important'
             backgroundSize='100% 100%'
@@ -115,8 +111,11 @@ export default function HomePage() {
             paddingTop='1.375rem'
             paddingBottom='4.75rem'
             paddingX='1rem'
+            transform={['scale(-1, 1)', null, 'none', null, 'scale(-1, 1)', null]}
           >
-            Find your question and explore the map!
+            <Box transform={['scale(-1, 1)', null, 'none', null, 'scale(-1, 1)', null]}>
+              Find your question and explore the map!
+            </Box>
           </Box>
         </Box>
       </Flex>
