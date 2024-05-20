@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
-  Container,
   Flex,
-  Image,
   Text,
 } from '@chakra-ui/react';
 import { FaArrowRight } from "react-icons/fa6";
 import NavBar from './NavBar'
 import { AboutPageBody, AboutPageSubTitle, AboutPageTitle, AboutPageButtonLabel } from '../data/TextContent';
-import logos_xl from '../images/RUSH_Logos_xl.png';
 
 export default function HomePage() {
   return (
