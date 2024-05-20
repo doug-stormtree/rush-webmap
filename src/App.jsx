@@ -29,6 +29,7 @@ import QuestionCardBar from './components/QuestionCardBar';
 import HomePage from './components/HomePage';
 import ContentInitiativeContainer from './components/ContentInitiativeContainer';
 import RabbitHoleDrawer from './components/RabbitHoleDrawer';
+import TutorialPopup from './components/TutorialPopup';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -150,6 +151,7 @@ function WebMap() {
           <MapBasemap />
           <MapData />
         </MapView>
+        <TutorialPopup />
       </Flex>
       <ContentInitiativeContainer />
       <RabbitHoleDrawer />
@@ -172,7 +174,7 @@ function validateParams(params) {
   const valid = {
     question: params?.question && Questions.has(params.question)
       ? params.question
-      : Questions.keys().next().value,
+      : undefined,
     zoom: params?.zoom && !Number.isNaN(parseInt(params.zoom))
       ? parseInt(params.zoom)
       : DEFAULT_ZOOM,

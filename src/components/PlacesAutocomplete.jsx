@@ -113,7 +113,7 @@ export const PlacesAutocomplete = () => {
   }, {ssr:false, fallback:true});
   
   return (
-    <Control position='bottomleft'>
+    <Control position='topleft'>
       <Input
         ref={inputRef}
         width={inputWidth}

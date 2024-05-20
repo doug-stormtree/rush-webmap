@@ -85,7 +85,9 @@ export const LegendDrawerButton = () => {
   const layersLoading = useMapLayerStore((state) => state.layersLoading());
   const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
 
-  return (
+  return activeQuestion === undefined
+    ? null
+    : (
     <>
       { isOpen
         ? !isDrawer && (

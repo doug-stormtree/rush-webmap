@@ -36,26 +36,32 @@ export const MapData = () => {
       <Control position='topright'>
         <LegendDrawerButton />
       </Control>
-      { [...layers.values()].some((layer) => layer.questions.some((q) => q.key === activeQuestion)) ? null : (
-        <Center style={{
-          position: 'absolute',
-          margin: 'auto',
-          left: '0',
-          top: '0',
-          width: '100%',
-          height: '100%',
-          zIndex: '9000',
-          backgroundColor: 'rgba(20,20,20,0.4)'
-        }}>
-          <Heading
-            size='2xl'
-            color="#FFF"
-            textShadow="0 0 3px #222"
-          >
-            Coming Soon
-          </Heading>
-        </Center>
-      )}
+      { activeQuestion === undefined ||
+        [...layers.values()].some(
+          (layer) => layer.questions.some((q) => q.key === activeQuestion)
+        )
+          ? null
+          : (
+              <Center style={{
+                position: 'absolute',
+                margin: 'auto',
+                left: '0',
+                top: '0',
+                width: '100%',
+                height: '100%',
+                zIndex: '9000',
+                backgroundColor: 'rgba(20,20,20,0.4)'
+              }}>
+                <Heading
+                  size='2xl'
+                  color="#FFF"
+                  textShadow="0 0 3px #222"
+                >
+                  Coming Soon
+                </Heading>
+              </Center>
+            )
+      }
     </>
   );
 }
