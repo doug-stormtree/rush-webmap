@@ -14,8 +14,8 @@ const layer = {
   title: 'Tree Coverage (2005)',
   description: [
     {type:'p', content:'Estimated 2005 Tree Cover Percentage. The data have been created on behalf of the Urban Forest Stewardship Initiative (UFSI), a program of Habitat Acquisition Trust (HAT) by Caslys Consulting Ltd.'},
-    {type:'p', content:'RUSH has chosen a diverging colour scheme to highlight areas that meet the 30% canopy cover goal set by Nature Canada. Notice the light yellow areas representing 20% to 30% canopy cover. These could be areas of opportunity for expanding tree equity into more neighbourhoods. Check out the Nature Canada report in the Initiatives section.'},
-    {type:'p', content:'Learn more and compare with other years by reading the report here:'},
+    //{type:'p', content:'RUSH has chosen a diverging colour scheme to highlight areas that meet the 30% canopy cover goal set by Nature Canada. Notice the light yellow areas representing 20% to 30% canopy cover. These could be areas of opportunity for expanding tree equity into more neighbourhoods. Check out the Nature Canada report in the Initiatives section.'},
+    {type:'p', content:'Learn more about the original land cover classification project and methodology and compare with other years by reading the report here:'},
     {
       type:'link',
       content:'Caslys Consulting Ltd., 2013. Capital Regional District Land Cover Mapping 1986, 2005 and 2011 Summary Report. Capital Regional District, Victoria.',
