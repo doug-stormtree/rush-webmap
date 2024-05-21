@@ -103,20 +103,27 @@ export const PlacesAutocomplete = () => {
   }, [ autocomplete, map ])
 
   const placeholderText = useBreakpointValue({
-    sm: 'Search for an address, business, or point of interest...',
     base: 'Search...',
+    md: 'Search for an address, business, or point of interest...',
   }, {ssr:false, fallback:true});
 
   const inputWidth = useBreakpointValue({
+    base: `calc(100vw - 8.5rem)`,
     md: '27rem',
-    base: `calc(100vw - 3.95rem - ${window.innerWidth - document.documentElement.clientWidth}px)`,
+  }, {ssr:false, fallback:true});
+
+  const inputPosition = useBreakpointValue({
+    base: 'topright',
+    lg: 'topleft',
   }, {ssr:false, fallback:true});
   
   return (
-    <Control position='topleft'>
+    <Control prepend position={inputPosition}>
       <Input
         ref={inputRef}
         width={inputWidth}
+        marginStart='-0.875rem'
+        borderRadius='xl'
         bgColor='gray.100'
         fontFamily='var(--chakra-fonts-body)'
         placeholder={placeholderText}
