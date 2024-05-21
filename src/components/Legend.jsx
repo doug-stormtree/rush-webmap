@@ -39,7 +39,7 @@ export const LegendPane = () => {
   
   return (
     <Box
-      w='27rem'
+      w='24rem'
       maxH='calc(100vh - 9.75rem)'
       p='1em'
       pe='0'
@@ -143,8 +143,25 @@ export const LegendDrawerButton = () => {
 const LegendHeader = () => {
   return (
     <>
-      <Heading size='lg' align='center'>Legend</Heading>
-      <Text fontSize='sm' align='right' my='2' me='14px'>Click here for information about each layer ⤵</Text>
+      <Box
+        fontFamily='var(--chakra-fonts-heading)'
+        fontWeight='500'
+        fontSize='2xl'
+        lineHeight='130%'
+        textAlign='center'
+        textShadow='1px 1px 4px rgba(0,0,0,0.3)'
+      >
+        Legend
+      </Box>
+      <Box
+        fontFamily='var(--chakra-fonts-subHeading)'
+        fontSize='sm'
+        align='right'
+        marginY='2'
+        marginEnd='14px'
+      >
+        Click here for information about each layer ⤵
+      </Box>
     </>
   )
 }
@@ -195,8 +212,8 @@ const LegendGroup = ({ title, children }) => {
 
   return children && children.length > 0 && (
     <VStack gap='0'>
-      {title && <Text fontWeight='bold' size='sm' width='100%'>{title}</Text>}
-      {subheading && <Text>{subheading}</Text>}
+      {title && <Text fontFamily='var(--chakra-fonts-heading)' fontWeight='bold' size='sm' width='100%'>{title}</Text>}
+      {subheading && <Text fontFamily='var(--chakra-fonts-subHeading)' fontWeight='normal' size='xs' letterSpacing='wide'>{subheading}</Text>}
       {children}
     </VStack>
   )
@@ -234,6 +251,8 @@ export const LegendItem = ({ layerId, question }) => {
           textOverflow='ellipsis'
           display='-webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;'
           whiteSpace='normal'
+          fontFamily='var(--chakra-fonts-title)'
+          fontSize='md'
         >{layer.leafletLayer === LOADING ? 'Loading...' : layer.title}</FormLabel>
         <LegendPatch layerId={layerId} flex='0' />
         <IconButton
