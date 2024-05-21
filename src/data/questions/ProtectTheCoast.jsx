@@ -3,50 +3,55 @@ const Coastal = {
   title: "Protect the Coast",
   question: 'Melting ice caps are neither sweet nor refreshing when it comes to sea level rise. Find out if your coast and drinking water supply is at risk.',
   image: require('../png/ProtectTheCoast.png'),
-  description_new: [
-    {type: 'h2', content: 'You can stand your ground if...'},
-    {type: 'ul', content: [
-      'The coastal sensitivity rating is low. This means that the shoreline ecosystem near you is in good shape.',
-      'Sea level rise is projected to be less than 0.5m. This means your area is not as likely to be eroded by coastal inundation.',
-      'Your risk of saltwater intrusion shows green on the map. This means that the ground you are standing on is not likely to let saltwater seep into the aquifer/water table.',
-      'The shoreline is naturalized with plenty of land and marine vegetation to buffer storm surges and shift sands to adapt to changing conditions.',
-      'Your municipality has a standard of 30m shoreline setbacks to give Nature enough room to sculpt sands and stones at the water\'s edge.',
-    ]},
-    {type: 'h2', content: 'Head for the hills if...'},
-    {type: 'ul', content: [
-      'The coastal sensitivity rating is high. This means that the shoreline ecosystem is not in good shape.',
-      'Sea level rise is projected to be higher than 0.5m. This means that your area is vulnerable to coastal erosion and flooding.',
-      'The map shows your risk of salt water intrusion in the range of yellow to red. This means that there is a risk of the water table and aquifer turning from fresh to salty.',
-      'The shoreline is built up with concrete. Armouring or hardscaping creates a risk that storm surges will erode the shoreline behind and beneath it.',
-      'Your municipality has not planned for shoreline setbacks that leave ample room for Nature (or Jesus) to make things right.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Harmonize natural and built infrastructure.'},
-    {type: 'ul', content: [
-      'Use your open greenmap account to plot the vulnerable places where you see potential sea level rise and a highly sensitive coastline.',
-      'Work with your neighbours to create a plan to protect your coastal community. Engage shoreline experts like SeaChange Marine Conservation Society, Greenshores, and Peninsula Streams & Shorelines to help.',
-      'Work together to install Nature-based solutions to protect the coast, infrastructure, and our freshwater supply.',
-      'Keep shade on the shoreline to protect coastal plants and creatures from extreme heat. These riparian areas filter and maintain the marine ecosystem, stop erosion, and ultimately protect coastal homes.',
-      'Respect and protect eel grass and bull kelp beds and coral reefs. We need these natural coastal habitats to buffer the shore against storm surges. You can help them thrive by:',
-      '  - joining a restoration crew to plant eelgrass and seed kelp gravel.',
-      '  - cleaning off boats, paddleboards and kayaks to avoid introducing invasive species into the ecosystem.',
-      '  - using mooring buoys instead of anchoring to avoid pulling up eelgrass beds and damaging sensitive ecosystems.',
-      '  - using designated pump out stations for boat sewage so you aren’t contaminating marine ecosystems.',
-      'Install and advocate for permeable ground surfaces, paving stones and pavement that properly drains.',
-      'Understand the factors that threaten a healthy coast and speak up at planning meetings.',
-      'Support community groups that restore watersheds and protect natural coastal habitats.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'The frequency of extreme water events and sea level rise will increase alongside more greenhouse gasses in the atmosphere.  This is because the gasses trap heat which changes the way air and water currents move around the globe.'},
-    {type: 'p', content: 'If we don\'t consider the potential impacts of sea level on the land and the water table, our communities risk flooding and fresh water scarcity.'},
-    {type: 'p', content: 'Our community conversations and decisions about housing and development must be informed by potential sea level rise and climate risk data so we can protect ourselves.  We can look to Nature-based solutions to help.'},
-    {type: 'p', content: 'Nature-based solutions (NBS) is a form of development that copies and amplifies Nature\'s designs in places that are vulnerable. Integrating NBS can mitigate storm surges, manage flood risks, and support a resilient coast line. NBS can inform better insurance rates and property values.'},
-    {type: 'p', content: 'The Government of Canada recognizes the need for Nature based solutions to address climate change events with a number of programs.'},
-    {type: 'p', content: 'Learn more about Nature-based Insurance Solutions in the Good Stuff below.'},
-    {type: 'p', content: 'Our long coastline gives us lots of space for carbon capture both on land and in the ocean. BC’s “blue carbon” stocks (e.g., eelgrass and other marine species) capture the equivalent of emissions from 200,000 cars every year.'},
-    {type: 'p', content: 'Another piece of good news is that fine sand beaches provide habitat for forage fish which are the foundation of the food chain on the BC coast. To protect it we need housing and development to be set back (ideally 30 meters) so that natural wave action can turn pebbles into sand and provide forage fish habitat as well as the best kind of beach to put a towel down on!'},
-  ],
+  sections: {
+    one: [
+      {
+        heading: 'You can stand your ground if...',
+        items: [
+          'the map shows a low coastal sensitivity rating, which means that the shoreline ecosystem near you is in good shape.',
+          'your risk of saltwater intrusion shows green on the map. This means that the ground you are standing on is not likely to let saltwater seep into the aquifer/water table.',
+          'your municipality has a standard of 30m shoreline setbacks to give Nature enough room to sculpt sands and stones at the water\'s edge.',
+        ]
+      },
+      {
+        heading: 'Head for the hills if...',
+        items: [
+          'sea level rise is projected to be higher than 0.5m. This means that your area is vulnerable to coastal erosion and flooding.',
+          'the map shows your risk of salt water intrusion in the range of yellow to red. This means that there is a risk of the water table and aquifer turning from fresh to salty.',
+          'the shoreline is not naturalized. Concrete armouring or hardscaping along the coast creates a risk that storm surges will erode the shoreline behind and beneath it.',
+        ]
+      },
+    ],
+    two: {
+      heading: 'Harmonize natural and built infrastructure.',
+      items: [
+        'Use your Open Green Map account to plot the vulnerable places where you see potential sea level rise and a highly sensitive coastline.',
+        'Work with your neighbours to create a plan to protect your coastal community. Engage shoreline experts like SeaChange Marine Conservation Society, Greenshores, and Peninsula Streams & Shorelines to help.',
+        'Work together to install Nature-based solutions to protect the coast, infrastructure, and our freshwater supply.',
+        'Keep shade on the shoreline to protect coastal plants and creatures from extreme heat. These riparian areas filter and maintain the marine ecosystem, stop erosion, and ultimately protect coastal homes.',
+        'Respect and protect eel grass and bull kelp beds and coral reefs. We need these natural coastal habitats to buffer the shore against storm surges.',
+        'Join a restoration crew to plant eelgrass and seed kelp gravel.',
+        'Clean off boats, paddleboards and kayaks to avoid introducing invasive species into the ecosystem.',
+        'Use mooring buoys instead of anchoring to avoid pulling up eelgrass beds and damaging sensitive ecosystems.',
+        'Use designated pump out stations for boat sewage so you aren’t contaminating  marine ecosystems.',
+        'Install and advocate for permeable ground surfaces, paving stones and pavement that properly drains.',
+        'Understand the factors that threaten a healthy coast and speak up at planning meetings.',
+        'Support community groups that restore watersheds and protect natural coastal habitats.',
+      ]
+    },
+    three: {
+      items: [
+        'The frequency of extreme water events and sea level rise will increase alongside more greenhouse gasses in the atmosphere. This is because the gasses trap heat which changes the way air and water currents move around the globe.',
+        'If we don\'t consider the potential impacts of sea level on the land and the water table, our communities risk flooding and fresh water scarcity.',
+        'Our community conversations and decisions about housing and development must be informed by potential sea level rise and climate risk data so we can protect ourselves. We can look to Nature-based solutions to help.',
+        'Nature-based solutions (NBS) is a form of development that copies and amplifies Nature\'s designs in places that are vulnerable. Integrating NBS can mitigate storm surges, manage flood risks, and support a resilient coast line. NBS can inform better insurance rates and property values.',
+        'The Government of Canada recognizes the need for Nature based solutions to address climate change events with a number of programs.',
+        'Learn more about Nature-based Insurance Solutions in the Good Stuff below.',
+        'Our long coastline gives us lots of space for carbon capture both on land and in the ocean. BC’s “blue carbon” stocks (e.g., eelgrass and other marine species) capture the equivalent of emissions from 200,000 cars every year.',
+        'Another piece of good news is that fine sand beaches provide habitat for forage fish which are the foundation of the food chain on the BC coast. To protect it we need housing and development to be set back (ideally 30 meters) so that natural wave action can turn pebbles into sand and provide forage fish habitat as well as the best kind of beach to put a towel down on!',
+      ]
+    },
+  },
   act: {
     initiatives: [
       {

@@ -1,44 +1,53 @@
 const CircularEcon = {
   key: 'circular-economy',
   title: 'Circular Economy',
-  question: 'Shape up your triple bottom line. Close the loop on waste and eliminate the guilt with the garbage of consumerism.',
+  question: 'All this "stuff" is clogging up our systems. How do I close the loop on waste?',
   image: require('../png/CircularEconomy.png'),
-  description_new: [
-    {type: 'h2', content: 'Your region is turning waste into a resource if...'},
-    {type: 'ul', content: [
-      'you notice Circular Economy Businesses near you.',
-      'you see convenient places to recycle unwanted household materials and medications.',
-      'your municipality has a ban on plastic bags and single-use items, and businesses are on board.',
-      'you can find a convenient way to get rid of your stuff on the RCBC website.',
-      'when you arrive at the landfill with a truckload, you can easily dispose responsibly - and drive away feeling flush and free.',
-    ]},
-    {type: 'h2', content: 'It’s a vicious circle if...'},
-    {type: 'ul', content: [
-      'when you shop or get take out, you end up with a bail of plastic and styrofoam that you don’t know what to do with.',
-      'your municipality doesn’t have a ban on single use items.',
-      'there are no convenient places to recycle or re-purpose your stuff.',
-      'when you arrive at the landfill with a truckload, you spend your day and empty your wallet sorting out how to dispose responsibly.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Turn trash into treasure.'},
-    {type: 'ul', content: [
-      'Plot your favourite circular economy business on the map with your open greenmap account.',
-      'Shop and drop things into your own reusable bag. Refuse single use items including checkout bags, straws, stir-sticks, and take-away food containers.',
-      'Take the time to digest good food and surroundings at your local eatery.',
-      'Understand the options at your local depot for returning unwanted paints, electronics, soft plastics, batteries, lightbulbs, and styrofoam.',
-      'Get a free tour of the Hartland landfill to witness next level waste reduction and circular production.',
-      'Enjoy treasure hunting at yard sales, thrift stores, and internet sites that facilitate the exchange of used items. Support community services by donating good quality household items that you no longer need.',
-      'Check out Project Zero and BC Green Business for companies who are closing the loop on waste. Shop from businesses that have a zero waste strategy and are committed to climate action and social justice.',
-      'Consult the Recycling Council of BC website if you don’t know how to safely and productively get rid of something.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'About 340,000 tonnes of plastic and packaging was thrown away in 2019 in BC. 40% of plastic is used only once. Businesses often must pay for disposal, and also lose the potential value of keeping valuable waste in circulation.'},
-    {type: 'p', content: 'When we turn trash into treasure, we improve the local economy, limit pollution and greenhouse gas emissions, divert waste from the landfill, reduce stress on our environment, encourage innovation, and invest in health and wellbeing.'},
-    {type: 'p', content: 'Municipalities are now empowered to ban plastic bags and single-use plastics without provincial approval - a change led by Esquimalt, Saanich and Victoria. The Town of Sidney is now leading the pack in banning plastic bags, straws, polystyrene foam serviceware, and single-use plastic utensils.'},
-    {type: 'p', content: 'BC is a leader in "take back programs" known as Extended Producer Responsibility (EPR) which require producers to account for the lifecycle of the products and packaging they sell. From medications to batteries, to packaging and paint, our community is well set up for a high level of recycling and reuse. BC’s EPR programs currently recapture 315,000 tonnes of plastics found in various products. You are in a good place to look again at what you’ve been calling “garbage.”'},
-    {type: 'p', content: 'If you shop at thrift stores that fund community organizations you are getting more bang.'},
-  ],
+  sections: {
+    one: [
+      {
+        heading: 'Your region is turning waste into a resource if...',
+        items: [
+          'you notice Circular Economy Businesses near you.',
+          'you see convenient places to recycle unwanted household materials and medications. When in doubt, the RCBC website has an answer.',
+          'your municipality has a ban on plastic bags and single-use items, and businesses are on board.',
+          'when you arrive at the landfill with a truckload, you can easily dispose responsibly - and drive away feeling flush and free.',
+        ]
+      },
+      {
+        heading: 'It’s a vicious circle if...',
+        items: [
+          'when you shop or get take out, you end up with a bail of plastic and styrofoam that you don’t know what to do with.',
+          'you need a day, a driver and a degree to de-clutter responsibly.',
+          'your municipality seems to have a preference for big box and big brand business.',
+          'all the talented people you know are having trouble finding meaningful work.',
+        ]
+      },
+    ],
+    two: {
+      heading: 'Turn trash into treasure.',
+      items: [
+        'Plot your favourite circular economy business on the map with your Open Green Map account.',
+        'Shop and drop things into your own reusable bag.  Refuse single use items including checkout bags, straws, stir-sticks, and take-away food containers.',
+        'Take the time to digest good food and surroundings at your local eatery.',
+        'Understand the options at your local depot for returning unwanted paints, electronics, soft plastics, batteries, lightbulbs, and styrofoam.',
+        'Get a free tour of the Hartland landfill to witness next level waste reduction and circular production.',
+        'Enjoy treasure hunting at yard sales, thrift stores, and internet sites that facilitate the exchange of used items. Support community services by donating good quality household items that you no longer need.',
+        'Check out Project Zero and BC Green Business for companies who are closing the loop on waste. Shop from businesses that have a zero waste strategy and are committed to climate action and social justice.',
+        'Consult the Recycling Council of BC website if you don’t know how to safely and productively get rid of something',
+      ]
+    },
+    three: {
+      items: [
+        'When we turn trash into treasure, we improve the local economy, limit pollution and greenhouse gas emissions, divert waste from the landfill, reduce stress on our environment, encourage innovation, and invest in health and wellbeing.',
+        'About 340,000 tonnes of plastic and packaging was thrown away in 2019 in BC. 40% of plastic is used only once. Businesses often must pay for disposal, and also lose the potential value of keeping valuable waste in circulation. Municipalities are now empowered to ban plastic bags and single-use plastics without provincial approval - a change led by Esquimalt, Saanich and Victoria. The Town of Sidney is now leading the pack in banning plastic bags, straws, polystyrene foam serviceware, and single-use plastic utensils. The United Nations Environment Assembly is working towards a Global Treaty on Plastic Pollution that includes the marine environment and should be ready by 2024. Over 200 countries have signed on so far.',
+        'BC is a leader in "take back programs" known as Extended Producer Responsibility (EPR) which require producers to account for the lifecycle of the products and packaging they sell. From medications to batteries, to packaging and paint, our community is well set up for a high level of recycling and reuse. BC’s EPR programs currently recapture 315,000 tonnes of plastics found in various products. You are in a good place to look again at what you’ve been calling “garbage.”',
+        'Shaping up your triple bottom line means shopping at buisnesses that contribute economic, social and environmental benefits. This region is a hot bed of innovation and ingenuity on this front. Check out Project Zero for an ever-growing list of businesses that transform & redirect materials into the things that make life fun.',
+        'Integrated Resource Recovery (IRR) is a term for an industrial park that shares resources like excess heat, energy and by products to eliminate waste. Malahat Nation is leading in this space. Advocating for IRR in all new developments is an obvious way to reduce our local carbon and waste footprints.Housing developments like Dockside Green are designed to make the most of the water and energy in the system and even make a profit by selling to neighbouring facilities.',
+        'We have an opportunity to create local fuel sources out of waste products like invasive species, medical waste, and biosolids. It’s important to evaluate waste streams for their highest and best use. If problems arise by having them pile up, then the answer could be biofuel. Having a reliable and consistent source of local fuel is would be pretty nice. Imagine if all that invasive and highly flammable broom lining the highway to Port Hardy was being harvested by people earning a living wage so that you could fly to see your grandmother on sustainable avaition fuel. That would be a lot to feel good about!',
+      ]
+    },
+  },
   act: {
     initiatives: [
       {

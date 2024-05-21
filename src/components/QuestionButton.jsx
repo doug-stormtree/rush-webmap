@@ -11,7 +11,7 @@ export default function QuestionButton({ image, title, onClick, variant }) {
   const styles = useStyleConfig('QuestionButton',{ variant });
 
   return (
-    <AspectRatio ratio={1} minW="120px" minH="120px">
+    <AspectRatio ratio={1} w="120px" h="120px">
       <Box
         as='button'
         textAlign="center"

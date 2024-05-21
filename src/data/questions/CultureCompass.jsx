@@ -1,52 +1,50 @@
 const Culture = {
   key: 'culture-compass',
   title: "Culture Compass",
-  question: "Culture clash happens on a crowded planet. Cultivate a vibe of respect and belonging for everyone.",
+  question: "Where can I find my people and expand my perspective?",
   image: require('../png/CultureCompass.png'),
-  description_new: [
-    {type: 'h2', content: 'Your community culture is vibing if...'},
-    {type: 'ul', content: [
-      'there are free public gathering places like parks, squares and fountains.',
-      'you see public art.',
-      'Indigenous places of significance are marked and honoured.',
-      'you can get to greenspaces including parks and beach access points.',
-      'your neighbourhood has cultural spaces and facilities like galleries and libraries, recreation & community centres.',
-      'all of these spaces are a safe and accessible walk, roll, bike or bus ride from home.',
-    ]},
-    {type: 'h2', content: 'It’s a dangerous divide if...'},
-    {type: 'ul', content: [
-      'there is no good place to hang with your gang.',
-      'everything you want to do costs money.',
-      'nobody knows whose traditional territory they are on.',
-      'everywhere nice is private property.',
-      'there’s only one kind of food available and it’s got no taste.',
-      'ways to expand your mind, feed your soul, or let off steam don’t exist nearby...',
-      '...and, even if they did, getting there is dodgy and takes forever.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Cultivate culture.'},
-    {type: 'ul', content: [
-      'Use your open greenmap account to plot your favorite spots and organizations that give you a sense of belonging.',
-      'Look out for each other. Help people connect to the people, places & services they need.',
-      'Protect the rights of everyone to express their culture.',
-      'Build a culture of reconciliation with Indigenous communities.',
-      '    Respect these days of observance:',
-      '        Red Dress Day - MMIWG2S - May 5',
-      '        National Indigenous Peoples Day - June 21',
-      '        National Truth and Reconciliation Day - September 30',
-      '    Know the name of the original peoples whose traditional territory you are on. Take care of the ecosystem so the Indigenous way of life is possible.',
-      '    Read the Truth and Reconciliation Commission of Canada Calls to Action.',
-      'Set up a Little Free Library or Seed Bank and register it with the Greater Victoria Place-making Network.',
-      'Find out what is happening in your local community centres and support local art exhibitions, music festivals, and cultural celebrations.',
-      'Consider growing exotic fruits and vegetables to donate to cultural food programs. Get your culture fix in local stores and restaurants that supply and serve cultural foods.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'Culture is not just about art, food and dance. You know your community’s culture is robust if you see people from across generations, genders and cultures represented throughout the system. Diversity is the key to stability in a human community as well as an ecosystem.'},
-    {type: 'p', content: 'Hardly a century ago European settlers, empowered by their governments, took over lands and resources in BC and tried to eliminate the original people and culture of this place. Healing from these extreme acts of oppression does not happen easily or quickly, and will never happen without practical changes in the way our governments, communities and individuals live and work together. The UN Declaration on the Rights of Indigenous Peoples (UNDRIP) is only recently being applied by governments in Canada to show more respect, care, and recognition of the autonomy and sovereignty of Indigenous communities.'},
-    {type: 'p', content: 'Global problems like climate change and war are forcing people to abandon their homes and families to seek better opportunities in our region - risking a sense of community belonging in the process. Creating a warmth of welcome for newcomers is crucial for strong and vibrant community culture.'},
-    {type: 'p', content: 'Place-making is an international movement to cultivate a sense of belonging and strength in communities. The Greater Victoria Place-making Network and local community organizations are good ways to create the vibe and features you want to see in your neighbourhood.'},
-  ],
+  sections: {
+    one: [
+      {
+        heading: 'Your community culture is vibing if...',
+        items: [
+          'your neighbourhood includes public gathering places, cultural facilities, and greenspaces where you can expand your mind, feed your soul, or let off steam.',
+          'you see public art.',
+          'Indigenous places of significance are marked and honoured.',
+          'all of these spaces are a safe and accessible walk, roll, bike or bus ride from home.',
+        ]
+      },
+      {
+        heading: 'It’s a dangerous divide if...',
+        items: [
+          'there is no good place to hang with your gang.',
+          'everywhere nice is private property.',
+          'everything you want to do costs money.',
+          'there’s only one kind of food available and it’s got no taste.',
+        ]
+      },
+    ],
+    two: {
+      heading: 'Cultivate culture.',
+      items: [
+        'Use your Open Green Map account to plot your favorite spots and organizations that give you a sense of belonging.',
+        'Set up a Little Free Library or Seed Bank and register it with the Greater Victoria Place-making Network.',
+        'Know the name of the original peoples whose traditional territory you are on. Take care of the ecosystem so the Indigenous way of life is possible.',
+        'Find out what is happening in your local community centres and support local art exhibitions, music festivals, and cultural celebrations.',
+        'Consider growing exotic fruits and vegetables to donate to cultural food programs. Get your culture fix in local stores and restaurants that supply and serve cultural foods.',
+        'Look out for each other. Help people connect to the people, places & services they need.',
+        'Build a culture of reconciliation with Indigenous communities.',
+      ]
+    },
+    three: {
+      items: [
+        'Culture is not just about art, food and dance. You know your community’s culture is robust if you see people from across generations, genders and cultures represented throughout the system. Diversity is the key to stability in a human community as well as an ecosystem.',
+        'Hardly a century ago European settlers, empowered by their governments, took over lands and resources in BC and tried to eliminate the original people and culture of this place. Healing from these extreme acts of oppression does not happen easily or quickly, and will never happen without practical changes in the way our governments, communities and individuals live and work together. The UN Declaration on the Rights of Indigenous Peoples (UNDRIP) is only recently being applied by governments in Canada to show more respect, care, and recognition of the autonomy and sovereignty of Indigenous communities.',
+        'Global problems like climate change and war are forcing people to abandon their homes and families to seek better opportunities in our region - risking a sense of community belonging in the process. Creating a warmth of welcome for newcomers is crucial for strong and vibrant community culture.',
+        'Place-making is an international movement to cultivate a sense of belonging and strength in communities. The Greater Victoria Place-making Network and local community organizations are good ways to create the vibe and features you want to see in your neighbourhood.',
+      ]
+    },
+  },
   act: {
     initiatives: [
       {

@@ -3,44 +3,50 @@ const Naturehood = {
   title: "Neighbourhood to Naturehood",
   question: "Make the human-Nature connection for your health and inner peace. Live your best life in a Naturehood.",
   image: require('../png/Naturehood.png'),
-  description_new: [
-    {type: 'h2', content: 'You live in a Naturehood if...'},
-    {type: 'ul', content: [
-      'your neighbourhood has at least 30% canopy cover for shade and habitat.',
-      'you see healthy plants native to the ecosystem in the neighbourhood and nearby parks.',
-      'stewardship groups are working in your community to monitor and support a healthy ecosystem.',
-      'you can see & hear birds and bees visiting the pollinator gardens all the way down your street, meaning the food web is working.',
-      'trees and roots are surrounded by rich, loose soil and plants that can transform atmospheric greenhouse gasses into more Nature.',
-    ]},
-    {type: 'h2', content: 'It’s a concrete jungle if...'},
-    {type: 'ul', content: [
-      'your region has less than 30% canopy cover. This creates hot pockets and heat stress for you and Nature.',
-      'you can’t see 3 trees from your window, which means you don’t have habitat for all that good Nature stuff.',
-      'you don’t see flowering plants, which means pollinators are not finding food.',
-      'you see mostly dark pavement and hard dirt that will radiate heat and more road runoff carrying toxins into nearby watersheds.',
-      'there isn’t an active stewardship group in your area.  This may mean people aren’t prioritizing Naturehood in the neighbourhood.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Turn the concrete jungle into a thriving urban ecosystem.'},
-    {type: 'ul', content: [
-      'Use your open greenmap account to plot your own pollinator garden to connect pollinator habitats and secure the food system.',
-      'Get outside. You are Nature.',
-      'Plot and plant your own pollinator garden to connect pollinator habitats and secure the food system.',
-      'Extend the reach of the closest ecosystem by planting native species in pots or in the ground.',
-      'Learn to identify invasive species and how to remove them safely.',
-      'Keep poisons out of the watershed and food web by avoiding the use of pesticides and herbicides in your garden.',
-      'Volunteer with your local stewardship group to restore watersheds and ecosystems.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'Life is hard in a concrete jungle.  Bringing Naturehood back to your neighbourhood will mean a better health outlook for all creatures big and small.'},
-    {type: 'p', content: 'Your Naturehood can protect you from viruses and bacteria.  By creating space for Nature the life support systems like air and water filtration are able to do their magic.  Research shows a clear link between the loss of nature and the increase of pathogens.  By making sure there is enough space for habitat so we get the benefit of ecosystem services without competing for living space which increases human-wildlife contact in a way that is not healthy.'},
-    {type: 'p', content: 'The sounds of Nature have a positive impact on your stress levels and well-being.  From the sound of water to bird calls, we are learning about how soothing the sound of Nature is on the soul.'},
-    {type: 'p', content: 'Pollinators are essential for food production on Vancouver Island, and pollination relies on the health of our wild ecosystems. Many pollinators are facing extinction around the globe due to development and fragmentation of habitat, absence of food, pesticides (neonicotinoids), invasive species, general pollution and climate change. Human settlement has altered watersheds affecting the key corridors that are home to these creatures.'},
-    {type: 'p', content: 'The concrete jungle is more likely to create poverty and impact human health too. A 2022 Nature Canada Report revealed that the percentage of tree canopy is much lower in low-income and racialized neighbourhoods. In October 2022, Vancouver Island’s chief medical officer, Dr. Reka Gustafson says she wants to tackle mental health and track how climate change is making these inequities more pronounced. Learn about the clear link between the quality of the Naturehood and your long-term health. Show Nature some love and let the sights, sounds, scents and sensations work their healing magic for you.'},
-    {type: 'p', content: 'Help pollinate the world with kindness.  Support community groups that are working to re-green the concrete jungle and take care of the folks who live there.'},
-    {type: 'image', url: require('../png/Infographic_PollinatorPathways_min.png')},
-  ],
+  sections: {
+    one: [
+      {
+        heading: 'You live in a Naturehood if...',
+        items: [
+          'there is at least 30% tree canopy cover for shade and habitat.',
+          'your neighbourhood and parks have healthy plants native to the ecosystem.',
+          'you can see & hear birds and bees visiting the pollinator gardens all the way down your street, meaning the food web is working.',
+          'trees and roots are surrounded by rich, loose soil and plants that can transform atmospheric greenhouse gasses into more Nature.',
+        ]
+      },
+      {
+        heading: 'It\'s a concrete jungle if...',
+        items: [
+          'you can\'t see three trees from your window, which means you don’t have habitat for all that good Nature stuff.',
+          'you see mostly dark pavement and hard dirt that will radiate heat and move road runoff carrying toxins into nearby watersheds.',
+          'there isn’t an active stewardship group in your area. This may mean people aren’t prioritizing Naturehood in the neighbourhood.',
+          'greenspaces are fragmented which means the populations of biodiversity like turtles, frogs and hummingbirds don\'t have the habitats needed to exist over time.',
+        ]
+      },
+    ],
+    two: {
+      heading: 'Turn the concrete jungle into a thriving urban ecosystem.',
+      items: [
+        'Use your Open Green Map account to plot your own pollinator garden to connect pollinator habitats and secure the food system.',
+        'Get outside. You are Nature.',
+        'Extend the reach of the closest ecosystem by planting native species in pots or in the ground.',
+        'Learn to identify invasive species and how to remove them safely.',
+        'Keep poisons out of the watershed and food web by avoiding the use of pesticides and herbicides in your garden.',
+        'Volunteer with your local stewardship group to restore watersheds and ecosystems.',
+        'Learn about the birds and the bees to appreciate the music of the natural world.',
+      ]
+    },
+    three: {
+      items: [
+        'Life is hard in a concrete jungle. Bringing Naturehood back to your neighbourhood will mean a better health outlook for all creatures big and small.',
+        'Your Naturehood can protect you from viruses and bacteria. By creating space for natural life support systems like air and water filtration are able to do their magic.  Research shows a clear link between the loss of nature and the increase of pathogens. By making sure there is enough space for habitat, we get the benefit of ecosystem services without competing for living space which increases human-wildlife contact in a way that is not healthy.',
+        'The sounds of Nature have a positive impact on your stress levels and well-being. From the sound of water to bird calls, we are learning about how soothing the sound of Nature is on the soul.',
+        'Pollinators are essential for food production on Vancouver Island, and pollination relies on the health of our wild ecosystems. Many pollinators are facing extinction around the globe due to development and fragmentation of habitat, absence of food, pesticides (neonicotinoids), invasive species, general pollution and climate change. Human settlement has altered watersheds affecting the key corridors that are home to these creatures.',
+        'The concrete jungle is more likely to create poverty and impact human health too. A 2022 Nature Canada Report revealed that the percentage of tree canopy is much lower in low-income and racialized neighbourhoods. In October 2022, Vancouver Island’s chief medical officer, Dr. Reka Gustafson says she wants to tackle mental health and track how climate change is making these inequities more pronounced. Learn about the clear link between the quality of the Naturehood and your long-term health. Show Nature some love and let the sights, sounds, scents and sensations work their healing magic for you.',
+        'Help pollinate the world with kindness. Support community groups that are working to re-green the concrete jungle and take care of the folks who live there.',
+      ]
+    },
+  },
   act: {
     initiatives: [
       {

@@ -7,29 +7,29 @@ import {
   useParams,
 } from 'react-router-dom';
 import {
-  useBreakpointValue,
   ChakraProvider,
   Box,
   Flex,
-  IconButton,
 } from '@chakra-ui/react';
-import { FaChevronUp } from 'react-icons/fa';
-import ContentPane from './components/ContentPane';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
 import MapData from './components/MapData';
 import MapBasemap from './components/MapBasemap';
 import NavBar from './components/NavBar';
 import theme from './theme/Theme';
-import QuestionMenuBar from './components/QuestionMenuBar';
-import { LegendPane } from './components/Legend';
+import { LegendPane } from './components/Legend'; // eslint-disable-line no-unused-vars
 import { latLng } from 'leaflet';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // Questions
-import Questions from './data/Questions';
-import { PlacesAutocomplete } from './components/PlacesAutocomplete';
+import Questions, { useActiveQuestionStore } from './data/Questions';
+import { PlacesAutocomplete } from './components/PlacesAutocomplete'; // eslint-disable-line no-unused-vars
+import Sandbox from './components/Sandbox';
+import QuestionCardBar from './components/QuestionCardBar';
 import HomePage from './components/HomePage';
+import ContentInitiativeContainer from './components/ContentInitiativeContainer';
+import RabbitHoleDrawer from './components/RabbitHoleDrawer';
+import TutorialPopup from './components/TutorialPopup';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -68,6 +68,10 @@ function App() {
             path="/app/q/:question"
             element={<WebMap />}
           />
+          <Route
+            path="/sandbox"
+            element={<Sandbox />}
+          />
         </Routes>
       </Router>
     </ChakraProvider>
@@ -94,7 +98,10 @@ function WebMap() {
   const { question, zoom, center } = validateParams(params);
 
   // Active Question State
-  const [activeQuestion, setActiveQuestion] = useState(question);
+  const { activeQuestion, setActiveQuestion } = useActiveQuestionStore((state) => ({activeQuestion: state.activeQuestion, setActiveQuestion: state.setActiveQuestion}))
+  useEffect(() => {
+    setActiveQuestion(question)
+  }, [ params, question, setActiveQuestion ])
 
   // Leaflet map reference
   const map = useRef(null);
@@ -114,12 +121,6 @@ function WebMap() {
     return `${currHost}/app/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
   }
 
-  // Handle Legend Display on Small Screens
-  const smallDisplay = useBreakpointValue({
-    xl: false,
-    base: true,
-  },{ssr:false, fallback:true});
-
   return (
     <Box
       minH={vh}
@@ -132,22 +133,11 @@ function WebMap() {
         getShareURL={getShareURL}
         vh={vh}
       />
-      <QuestionMenuBar
-        style={{
-          backgroundColor:'white',
-          position:'sticky',
-          top:'2.5rem',
-          zIndex:'9',
-          //borderRadius:'16px 16px 0 0',
-          boxShadow:'0px 0px 8px 2px #888'
-        }}
-        activeQuestion={activeQuestion}
-        setActiveQuestion={setActiveQuestion}
-      />
+      <QuestionCardBar />
       <Flex
-        h={`60vh`}
+        h={`calc(100vh - 2.5rem)`}
         position='sticky'
-        top='11.25rem'
+        top='2.5rem'
         direction='row'
         //zIndex='-1'
       >
@@ -159,21 +149,13 @@ function WebMap() {
         >
           <PlacesAutocomplete />
           <MapBasemap />
-          <MapData question={activeQuestion} />
+          <MapData />
         </MapView>
-        { smallDisplay
-          ? null
-          : <LegendPane flex='0' activeQuestion={activeQuestion} />
-        }
+        <TutorialPopup />
       </Flex>
-      <ContentPane
-        backgroundColor='white'
-        position='sticky'
-        style={{
-          boxShadow:'10px -10px 8px -8px #888'
-        }}
-        question={activeQuestion}
-      />
+      <ContentInitiativeContainer />
+      <RabbitHoleDrawer />
+      {/*
       <IconButton
         icon={<FaChevronUp />}
         onClick={() => window.scrollTo({top:0,behavior:'smooth'})}
@@ -183,6 +165,7 @@ function WebMap() {
         bottom='16px'
         left='calc(100% - 56px)'
       />
+      */}
     </Box>
   );
 }
@@ -191,7 +174,7 @@ function validateParams(params) {
   const valid = {
     question: params?.question && Questions.has(params.question)
       ? params.question
-      : Questions.keys().next().value,
+      : undefined,
     zoom: params?.zoom && !Number.isNaN(parseInt(params.zoom))
       ? parseInt(params.zoom)
       : DEFAULT_ZOOM,

@@ -3,55 +3,55 @@ const WoodWideWeb = {
   title: "Wood Wide Web",
   question: "Your life support eco-system depends on the trees talking to each other. Pass it on.",
   image: require('../png/WoodWideWeb.png'),
-  description_new: [
-    {type: 'h2', content: 'The wood wide web is working if...'},
-    {type: 'ul', content: [
-      'Big trees are still standing with room to breathe after development projects. These trees provide important homes for bats, bees and big birds of prey.',
-      'Trees and roots are surrounded by rich, loose soil and that let the microbiome transform atmospheric gasses into beautiful plants and food.',
-      'You see a community of trees who can share resources and communicate via mycelial networks underground. Older trees have more to share so they are identified as key contributors to the wood wide web on this map.',
-      'Infrastructure, transportation and shipping routes accommodate species migration routes and timing. Turtles, birds and whales have the range they need to thrive.',
-      'Your community celebrates key life cycle moments in plants, fish and birds.',
-      'There are eel grass and bull kelp beds to provide additional nurseries, nutrients and transition zones',
-    ]},
-    {type: 'h2', content: 'It’s decidedly disconnected if...'},
-    {type: 'ul', content: [
-      'After developments, all you see are small new trees without room for their roots.',
-      'The soil you see is compacted and the roots are bare which means the soil and the atmosphere cannot make their exchange and mycelial networks cannot thrive.',
-      'The tree stands alone without a plant community.',
-      'Butterflies, birds, and fish return in smaller numbers or not at all.',
-      'People clear eel grass and bull kelp beds for boating or swimming, not knowing that they are destroying the food web in the process.',
-      'Your community is not making time to get to know that more-the-human community of creatures that is fighting the good fight for life.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Connect your natural life support system.'},
-    {type: 'ul', content: [
-      'Use your open greenmap account to plot big trees in your neighbourhood.',
-      'Figure out whether your home meets the tree equity standard. If you can see 3 trees from your window, use your open greenmap account to plot them on the map using the my 3 trees icon.',
-      'Register and measure big trees in your ecosystem by filling out the BC Big Tree Registry nomination form and using the field package to measure.',
-      'Stick to the sidewalks and trails to avoid compacting soil. Use leaves as mulch to  feed the roots and soil.',
-      'Plant some native plants in your garden to extend the reach of the closest ecosystem.',
-      'Register and measure big trees in your ecosystem by filling out the BC Big Tree Registry nomination form and using the field package to measure.',
-      'Plant a pollinator garden to encourage all parts of the food web.',
-      'Stand up for the big trees in your neighbourhood when development is in the works.',
-      'Advocate for connected greenways and blueways that make it possible for creatures to move through the habitat.',
-      'Be an ally to Indigenous peoples and their ways of life.',
-      'Take in the spring cherry blossom storms. Experience the drama of the salmon returning! Welcome back the bufflehead ducks!',
-      'Support your local stewardship groups in restoring ecosystem performance.',
-      'Tie your boat to buoys so that you don’t drop anchor in an eel grass bed.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Down the rabbit hole.'},
-    {type: 'p', content: 'UBC scientist Suzanne Simard coined the terms “Mothertrees” and the “Wood Wide Web” when she discovered that trees and their roots are connected through an underground network of mushrooms.  These fungal webs allow trees to pass food, medicines and messages to each other.  The chemicals trees use to communicate are identical to the neurotransmitters in the human brain.'},
-    {type: 'link', content: 'https://mothertreeproject.org/mother-tree-experiment/', url: 'https://mothertreeproject.org/mother-tree-experiment/'},
-    {type: 'p', content: 'Mothertrees help their saplings survive in an ever changing climate.  When a tree falls in the forest, it feeds the next generations of trees for up to five times it’s age.  Fallen big trees often become nurse logs and you see young trees growing out of them.'},
-    {type: 'p', content: 'The urban ecosystem creates “natural infrastructure” that builds resilience to climate change. Biodiversity like birds,insects and other critters depend on urban forest ecosystems for their habitat. The forested greenspaces act as pathways to forests outside the city limits.'},
-    {type: 'p', content: 'Big trees and old growth forests are important because they are able to provide ecosystem services like: creating habitat, water storage and filtration, wind buffering, carbon drawdown, bank stabilization, dispersing seismic waves, clean air, and storing carbon at a scale that small trees cannot.'},
-    {type: 'p', content: 'Particularly in this time of climate crisis, it is incredibly important to maintain forests.  We can really only hope that in this crisis, the increasing number of climate impacts are a wake up call for us to realize that we are part of nature and our health and safety really depends on strong and working ecosystems.'},
-    {type: 'p', content: 'It is important to find out who is responsible for planning and looking after trees in urban areas. Now, with the combination of pollution, increasing population and now climate change, there is a lot of pressure on urban areas. It is really important to look after the health of these trees because they are now stressed.'},
-    {type: 'p', content: 'Research shows that anyone who spends at least 2 hours in Nature a week can improve their mental, emotional and physical health. Nature can boost your confidence immune system and brainpower.'},
-    {type: 'p', content: 'Science is still catching up with what Indigenous people have known forever which is that we are made of the same stuff and we are all related. Lets keep Nature close and our connection strong.'},
-    {type: 'image', url: require('../png/Infographic_MotherTrees_min.png')},
-  ],
+  sections: {
+    one: [
+      {
+        heading: 'The wood wide web is working if...',
+        items: [
+          'big trees are still standing after development projects in your region. Their roots are surrounded by rich, loose soil letting the microbiome transform atmospheric gasses into beautiful plants and food.',
+          'your region has communities of trees who can share resources and information through underground mycelial networks. Older trees have more to share so they are identified as key contributors to the wood wide web on this map.',
+          'infrastructure, transportation, and shipping routes accommodate species migration routes and timing.',
+          'there are thriving eelgrass and bull kelp beds to provide additional nurseries, nutrients, and transition zones.',
+        ]
+      },
+      {
+        heading: 'It’s decidedly disconnected if...',
+        items: [
+          'after developments, all you see are small new trees standing alone in compacted soil.',
+          'butterflies, birds, and fish return in smaller numbers or not at all.',
+          'trees are starting to inhabit flower pots on sidewalks full of dogs in strollers.',
+          'your community is not making time to get to know the more-the-human community of creatures that are fighting the good fight for life.',
+        ]
+      },
+    ],
+    two: {
+      heading: 'Connect your natural life support system.',
+      items: [
+        'Use your Open Green Map account to plot big trees in your neighbourhood.',
+        'Figure out whether your home meets the tree equity standard. If you can see 3 trees from your window, use your Open Green Map account to plot them on the map using the my 3 trees icon.',
+        'Register and measure big trees in your ecosystem by filling out the BC Big Tree Registry nomination form and using the field package to measure.',
+        'Stick to the sidewalks and trails to avoid compacting soil. Use leaves as mulch to feed the roots and soil.',
+        'Plant some native plants in your garden to extend the reach of the closest ecosystem. Extending and connecting natural spaces across urban landscapes will help keep us cool and moist.',
+        'Plant a pollinator garden to encourage all parts of the food web.',
+        'Stand up for the big trees in your neighbourhood when development is in the works.',
+        'Advocate for connected greenways and blueways that make it possible for creatures to move through the habitat.',
+        'Be an ally to Indigenous peoples and their ways of life.',
+        'Celebrate the spring cherry blossom storms. Experience the drama of the salmon returning. Welcome back the bufflehead ducks. Notice Nature\'s timing.',
+        'Support your local stewardship groups in restoring ecosystem performance.',
+        'Tie your boat to buoys so that you don’t drop anchor in an eelgrass bed.',
+      ]
+    },
+    three: {
+      items: [
+        'UBC scientist Suzanne Simard coined the terms “Mothertrees” and the “Wood Wide Web” when she discovered that trees and their roots are connected through an underground network of mushrooms. These fungal webs allow trees to pass food, medicines and messages to each other. The chemicals trees use to communicate are identical to the neurotransmitters in the human brain.',
+        'Mothertrees help their saplings survive in an ever-changing climate. When a tree falls in the forest, it feeds the next generations of trees for up to five times its age.  Fallen big trees often become nurse logs and you see young trees growing out of them. The urban ecosystem creates “natural infrastructure” that builds resilience to climate change. Biodiversity like birds, insects, and other critters depend on urban forest ecosystems for their habitat. The forested greenspaces act as pathways to forests outside the city limits.',
+        'Big trees and old growth forests are important because they are able to provide ecosystem services like: creating habitat, water storage and filtration, wind buffering, carbon drawdown, bank stabilization, dispersing seismic waves, clean air, and storing carbon at a scale that small trees cannot.',
+        'Particularly in this time of climate crisis, it is incredibly important to maintain forests. We can only hope that in this crisis, the increasing number of climate impacts are a wake-up call for us to realize that we are part of Nature and our health and safety depends on vital and working ecosystems.',
+        'It is important to find out who is responsible for planting and looking after trees in urban areas. Now, with the combination of pollution, increasing population and climate change, there is a lot of pressure on urban areas. It is crucial to look after the health of these trees because they are now stressed.',
+        'Research shows that anyone who spends at least 2 hours in Nature a week can improve their mental, emotional, and physical health. Nature can boost your confidence immune system and brainpower. Science is still catching up with what Indigenous peoples have known forever: we are made of the same stuff and we are all related. Lets keep Nature close and our connection strong.',
+      ]
+    },
+  },
   act: {
     initiatives: [
       {

@@ -1,5 +1,10 @@
 import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
-import '@fontsource/raleway';
+import '@fontsource-variable/aleo';
+import '@fontsource-variable/figtree';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/urbanist';
+import '@fontsource-variable/bitter';
+
 import '@fontsource/poppins/100.css';
 import '@fontsource/poppins/200.css';
 import '@fontsource/poppins/300.css';
@@ -9,18 +14,17 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/900.css';
-import '@fontsource-variable/figtree';
-import '@fontsource-variable/inter';
-import '@fontsource-variable/aleo';
 
-const NavBar = defineStyleConfig({
-  baseStyle: {
-    minHeight: '2.5rem',
-    bg: '#FFF',
-    display: 'flex',
-    alignItems: 'center',
-  },
-});
+import '@fontsource/raleway/400.css';
+import '@fontsource/raleway/500.css';
+import '@fontsource/raleway/700.css';
+
+import NavBar from './NavBarTheme';
+import QuestionCard from './QuestionCardTheme';
+import QuestionCardBar from './QuestionCardBarTheme';
+import ContentPane from './ContentPaneTheme';
+import ContentInitiativeContainer from './ContentInitiativeContainerTheme';
+import RabbitHoleDrawer from './RabbitHoleDrawerTheme';
 
 const MenuCard = defineStyleConfig({
   baseStyle: {
@@ -106,6 +110,16 @@ const QuestionButton = defineStyleConfig({
 })
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      'html, body': {
+        fontSize: '16px'
+      },
+      '.leaflet-left': {
+        left: '8.125rem'
+      },
+    }
+  },
   colors: {
     rush: {
       50:  "#F2F1E3",
@@ -124,6 +138,11 @@ const theme = extendTheme({
     NavBar,
     MenuCard,
     QuestionButton,
+    QuestionCard,
+    QuestionCardBar,
+    ContentPane,
+    ContentInitiativeContainer,
+    RabbitHoleDrawer,
     Button: {
       variants: {
         nav: {
@@ -147,15 +166,13 @@ const theme = extendTheme({
   fonts: {
     brand: `'Poppins', sans-serif`,
     title: `'Figtree Variable', sans-serif`,
-    subTitle: `'Raleway', sans-serif`,
+    body: `'Bitter Variable', serif`,
+    heading: `'Poppins', sans-serif`,
+    subHeading: `'Urbanist Variable', sans-serif`,
     inter: `'Inter Variable', sans-serif`,
     aleo: `'Aleo Variable', serif`,
   },
   textStyles: {
-    h3: {
-      'font-family': 'var(--chakra-fonts-subTitle)',
-      'font-size': '1rem',
-    }
   }
 });
 export default theme;

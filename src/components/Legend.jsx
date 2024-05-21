@@ -23,45 +23,103 @@ import {
   Text,
   Tooltip,
   VStack,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
+import { FiX } from "react-icons/fi";
 import FormattedText from './FormattedText';
-import { useMapLayerStore, LOADING } from '../data/Questions';
+import useScrollShadows from './useScrollShadows';
+import { useMapLayerStore, LOADING, useActiveQuestionStore } from '../data/Questions';
 import { LegendGroups } from '../data/TextContent';
 
 // Wraps Legend in a Box for large screen sizes.
-export const LegendPane = ({ activeQuestion }) => {
+export const LegendPane = () => {
+  const scrollBoxRef = useRef()
+  const scrollContainerProps = useScrollShadows(scrollBoxRef)
+  
   return (
     <Box
-      w='2xl'
-      p='12px'
-      pe='4px'
-      overflowY='scroll'
+      w='24rem'
+      maxH='calc(100vh - 9.75rem)'
+      p='1em'
+      pe='0'
+      overflowY='hidden'
+      borderRadius='xl'
+      backgroundColor='white'
+      display='flex'
+      flexDirection='column'
     >
-      <LegendHeader />
-      <LegendList activeQuestion={activeQuestion} />
+      <Box flex='0'>
+        <LegendHeader />
+      </Box>
+      <Box
+        flex='1'
+        display='flex'
+        flexDirection='column'
+        overflow='hidden'
+        {...scrollContainerProps}
+      >
+        <Box
+          flex='1'
+          overflow='scroll'
+          minH='0'
+          pe='1em'
+          ref={scrollBoxRef}
+        >
+          <LegendList />
+        </Box>
+      </Box>
     </Box>
   )
 }
 
 // Wraps Legend in a collapsible Drawer for small screen sizes.
-export const LegendDrawerButton = ({ activeQuestion }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+export const LegendDrawerButton = () => {
+  // render legend as drawer overlay for smaller screen sizes.
+  const isDrawer = useBreakpointValue(
+    [true, null, null, null, false, null],
+    {ssr: false}
+  )
+  const { isOpen, onOpen, onClose } = useDisclosure({defaultIsOpen: !isDrawer});
   const btnRef = useRef();
   const layersLoading = useMapLayerStore((state) => state.layersLoading());
+  const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
 
-  return (
+  return activeQuestion === undefined
+    ? null
+    : (
     <>
-      <Button
-        ref={btnRef}
-        onClick={onOpen}
-        isLoading={layersLoading}
-        loadingText='Legend'
-      >
-        Legend
-      </Button>
+      { isOpen
+        ? !isDrawer && (
+          <>
+            <LegendPane key={activeQuestion} />
+            <IconButton
+              aria-label='Close Legend'
+              icon={<FiX size='1.5rem' />}
+              onClick={onClose}
+              position='absolute'
+              top='0.75em'
+              right='0.75em'
+              variant='ghost'
+              height='2.25rem'
+              maxWidth='2.25rem'
+              minWidth='2.25rem'
+            />
+          </>
+        )
+        : (
+          <Button
+            ref={btnRef}
+            onClick={onOpen}
+            isLoading={layersLoading}
+            loadingText='Legend'
+          >
+            Legend
+          </Button>
+        )
+      }
       <Drawer
-        isOpen={isOpen}
+        isOpen={isOpen && isDrawer}
         onClose={onClose}
         finalFocusRef={btnRef}
         placement='right'
@@ -74,7 +132,7 @@ export const LegendDrawerButton = ({ activeQuestion }) => {
             <LegendHeader />
           </DrawerHeader>
           <DrawerBody>
-            <LegendList activeQuestion={activeQuestion} />
+            <LegendList />
           </DrawerBody>
         </DrawerContent>
       </Drawer>
@@ -85,15 +143,33 @@ export const LegendDrawerButton = ({ activeQuestion }) => {
 const LegendHeader = () => {
   return (
     <>
-      <Heading size='lg' align='center'>Legend</Heading>
-      <Text fontSize='sm' align='right' my='2' me='14px'>Click here for information about each layer ⤵</Text>
+      <Box
+        fontFamily='var(--chakra-fonts-heading)'
+        fontWeight='500'
+        fontSize='2xl'
+        lineHeight='130%'
+        textAlign='center'
+        textShadow='1px 1px 4px rgba(0,0,0,0.3)'
+      >
+        Legend
+      </Box>
+      <Box
+        fontFamily='var(--chakra-fonts-subHeading)'
+        fontSize='sm'
+        align='right'
+        marginY='2'
+        marginEnd='14px'
+      >
+        Click here for information about each layer ⤵
+      </Box>
     </>
   )
 }
 
 // LegendList Component
 //   Builds list of LegendItem components for active question layers.
-const LegendList = ({ activeQuestion }) => {
+const LegendList = () => {
+  const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
   // Get all layers
   const layers = useMapLayerStore((state) => state.layers);
 
@@ -127,11 +203,7 @@ const LegendList = ({ activeQuestion }) => {
     (key) => legendComponents.push(<LegendGroup key={key} title={key}>{legendEntries.get(key)}</LegendGroup>)
   )
 
-  return (
-    <>
-      {legendComponents}
-    </>
-  )
+  return legendComponents
 }
 
 // LegendGroup Component
@@ -140,8 +212,8 @@ const LegendGroup = ({ title, children }) => {
 
   return children && children.length > 0 && (
     <VStack gap='0'>
-      {title && <Text fontWeight='bold' size='sm' width='100%'>{title}</Text>}
-      {subheading && <Text>{subheading}</Text>}
+      {title && <Text fontFamily='var(--chakra-fonts-heading)' fontWeight='bold' size='sm' width='100%'>{title}</Text>}
+      {subheading && <Text fontFamily='var(--chakra-fonts-subHeading)' fontWeight='normal' size='xs' letterSpacing='wide'>{subheading}</Text>}
       {children}
     </VStack>
   )
@@ -167,7 +239,7 @@ export const LegendItem = ({ layerId, question }) => {
             />
           : <Switch
               isChecked={layer.questions.some((q) => q.key === question && q.active === true)}
-              onChange={(e) => toggleLayerActive(layerId, question)}
+              onChange={() => toggleLayerActive(layerId, question)}
               flex='0'
             />
         }
@@ -179,6 +251,8 @@ export const LegendItem = ({ layerId, question }) => {
           textOverflow='ellipsis'
           display='-webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;'
           whiteSpace='normal'
+          fontFamily='var(--chakra-fonts-title)'
+          fontSize='md'
         >{layer.leafletLayer === LOADING ? 'Loading...' : layer.title}</FormLabel>
         <LegendPatch layerId={layerId} flex='0' />
         <IconButton

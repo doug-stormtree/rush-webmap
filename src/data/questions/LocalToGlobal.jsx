@@ -3,38 +3,47 @@ const LocalToGlobal = {
   title: "Local to Global",
   question: "This spinning ball of hot rock covered with a web of life is your call to consciousness. Be the change you want to see in the world.",
   image: require('../png/NASAEarth.png'),
-  description_new: [
-    {type: 'h2', content: 'You can rest easy if...'},
-    {type: 'ul', content: [
-      'the salmon are returning, the whales are healthy and you see vegetation on both sides of the shoreline.',
-      'you hear several different birds in several trees outside your window and several of your friends can hang out at your favorite local.',
-      'you know who to call and where to go to deal with invasive species',
-      'neighbourhoods are making greenways & blueways a priority for all around well-being, biodiversity, carbon drawdown and climate resilience.',
-      'every renovation and development increases wellbeing through material choice, facilitates community through place-making design and features nature-base solutions.',
-      'your municipality’s travel footprint re: greenhouse gases (GHGs) is getting smaller and yours is too. You can get where you need to go without relying on dinosaur technology.',
-      'your municipality’s GHGs from fossil fuel power consumption is reducing and you have ways of powering your life that are fossil free.',
-      'the businesses you need collaborate with each other and share resources to create their products and services. This keeps money and value in the community via the circular economy.',
-      'you see all genders and cultures represented in leadership positions across industries.',
-    ]},
-    {type: 'h2', content: 'Answer the wake up call if...'},
-    {type: 'ul', content: [
-      'the watershed you live in flows through pipes, deep and bare ditches, and across concrete making it unlive-able for a fish.',
-      'you don’t hear birds, see trees or have friends close by to hang with.',
-      'you see a lot of invasive plants like ivy, broom, laurel and daphne and the bullfrogs (picture poop-ups) are a lot bigger than you remember them.',
-      'every reno and development means less Nature. The result looks like plastic and it goes up before you even knew it was in the works.',
-      'you see on the map that your municipality’s travel footprint is increasing and you haven’t figured out lighter footprint travel yourself.',
-      'you see on the map that your municipality’s power footprint is increasing and you haven’t figured out lighter footprint travel yourself.',
-      'all the people in local leadership positions look and sound the same.',
-    ]},
-    {type: 'spacer'},
-    {type: 'h2', content: 'Make your move. Think cosmically, act locally.'},
-    {type: 'ul', content: [
-      'Southern Vancouver Island is a traditional wintering ground for the lək̓ʷəŋən (Lekwungen) and W̱SÁNEĆ peoples because it was bountiful and protected. Vancouver Island is still considered lush by comparison to other parts of the world, but this sense of abundance can create the impression that Nature will handle it when humans intervene with old growth logging or salmon farms. In fact, our Coastal Douglas Fir ecosystem is considered critically endangered as a result of development pressures, recent climate change events, and resource extraction/interventions.',
-      'Conserving and protecting the local natural environment should be a key focus in contributing to a more stable climate and playing our part as global citizens. Our temperate forests are a net carbon sink, typically containing roughly 100 metric tons of carbon per hectare.',
-      'Restoring our fish-bearing streams will support populations of salmon that are a keystone species for the west coast of North America. The food web relies on healthy salmon - and our support of the food web is mission critical.',
-      'BC is also a hotbed of innovation with programs and businesses to facilitate all forms of climate action. Rather than being complacent in the quality of life Nature offers up everyday, we have the opportunity to be a node of health and resilience that the world’s human built and natural systems can connect to and rely on.',
-    ]},
-  ],
+  sections: {
+    one: [
+      {
+        heading: 'You can rest easy if...',
+        items: [
+          'ecosystems of greenways & blueways connect the neighbourhoods you navigate. This means biodiverstiry is getting its dues.',
+          'every renovation and development increases wellbeing through mobility options, place-making, cultural features, nature-based solutions to climate risks in the urban landscape.',
+          'your municipality’s travel footprint is on the downturn because can get where you need to go without relying on dinosaur technology.',
+          'all levels of government have programs to help the transition of powering your life that are fossil free.',
+        ]
+      },
+      {
+        heading: 'Answer the wake up call if...',
+        items: [
+          'The watershed you live in flows through pipes, deep and bare ditches, and across concrete delivering a toxic soup for a fish.',
+          'In your neighbourhood, you don’t hear birds, see trees or have places to hang with friends.',
+          'You see a lot of invasive plants like ivy, broom, laurel, and daphne and the bullfrogs are a lot bigger than you remember them.',
+          'All the people in local leadership positions look and sound the same.',
+        ]
+      },
+    ],
+    two: {
+      heading: 'Think cosmically, act locally.',
+      items: [
+        'Create a lifestyle that works with natural systems. Extend the reach of the ecosystem you live in by planting plants that belong to the native community.',
+        'Support conservation groups so that our natural infrastructure can provide resilience and protection for communities.',
+        'Get to know the timing of key species migrations so that you can witness, sync up and celebrate Nature\'s rhythm.',
+        'Advocate and vote for people and initiatives that consider climate change factors in decision-making, planning, and development.',
+        'Consider ways that your community can support policies and action for food security and that make cultural harvesting on land and water everything it should be.',
+        'Engage in community conversations that figure out how to provide housing and services to those who need it while making space for Nature to provide the ecosystem services needed for overall well-being.',
+      ]
+    },
+    three: {
+      items: [
+        'Southern Vancouver Island is a traditional wintering ground for the lək̓ʷəŋən and W̱SÁNEĆ peoples because it was bountiful and protected. Vancouver Island is still considered lush by comparison to other parts of the world, but this sense of abundance can create the impression that Nature will handle it when humans intervene with old growth logging or salmon farms. In fact, our Coastal Douglas Fir ecosystem is considered critically endangered as a result of development pressures, recent climate change events, and resource extraction/interventions.',
+        'Conserving and protecting the local natural environment should be a key focus in contributing to a more stable climate and playing our part as global citizens. Our temperate forests are a net carbon sink, typically containing roughly 100 metric tons of carbon per hectare.',
+        'Restoring our fish-bearing streams will support populations of salmon that are a keystone species for the west coast of North America. The food web relies on healthy salmon - and our support of the food web is mission critical.',
+        'BC is also a hotbed of innovation with programs and businesses to facilitate all forms of climate action. Rather than being complacent in the quality of life Nature offers up everyday, we have the opportunity to be a node of health and resilience that the world’s human-built and natural systems can connect to and rely on.',
+      ]
+    },
+  },
   act: {
     initiatives: [
       {

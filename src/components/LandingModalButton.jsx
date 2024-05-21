@@ -11,7 +11,7 @@ import {
   ModalOverlay,
   Stack,
 } from '@chakra-ui/react';
-import { FaRegQuestionCircle } from 'react-icons/fa';
+import { FiHelpCircle } from 'react-icons/fi';
 import FormattedText from './FormattedText';
 import { AboutPageText, AboutPageTitleLong } from '../data/TextContent';
 
@@ -25,10 +25,10 @@ export default function LandingModalButton(props) {
   return (
     <>
       <Button
-        rightIcon={<FaRegQuestionCircle strokeWidth='4' />}
+        rightIcon={<FiHelpCircle strokeWidth='inherit' />}
         onClick={onOpen}
-        fontWeight='medium'
-      >About</Button>
+        fontWeight='inherit'
+      >{props.label}</Button>
       <Modal 
         isOpen={isOpen}
         onClose={onClose}

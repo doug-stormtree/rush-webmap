@@ -1,91 +1,96 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   Box,
-  Flex,
-  Heading,
-  Text,
+  Button,
+  IconButton,
+  ListItem,
+  UnorderedList,
+  useMultiStyleConfig,
 } from '@chakra-ui/react';
-import Questions from '../data/Questions';
+import { FaRegArrowAltCircleDown } from 'react-icons/fa';
+import { FiX } from 'react-icons/fi';
+import Questions, { useActiveQuestionStore, questionActions } from '../data/Questions';
 import InitiativeCard from './InitiativeCard';
-import FormattedText from './FormattedText';
 
-export default function ContentPane({ question, ...props }) {
+export const Tabs = {
+  content: 'content',
+  initiatives: 'initiatives',
+  minimized: 'minimized',
+}
+
+export default function ContentPane({ active, variant, onClick, setActiveTab }) {
+  // theme
+  const styles = useMultiStyleConfig('ContentPane', {variant: active ? variant : 'inactive'})
+  // active question
+  const [
+    activeQuestion,
+    sectionFocus,
+    dispatch
+  ] = useActiveQuestionStore((state) => [
+    state.activeQuestion,
+    state.sectionFocus,
+    state.dispatch
+  ])
   // question content
-  const [content, setContent] = useState({});
-  const [initiatives, setInitiatives] = useState([]);
-
-  useEffect(() => {
-    if (!question) return;
-    const questionContent = Questions.get(question);
-    setContent({
-      title: questionContent.title,
-      subtitle: questionContent.question,
-      description: questionContent.description_new ?? questionContent.description,
-    });
-    setInitiatives(questionContent.act.initiatives);
-    return () => {
-      setContent({});
-      setInitiatives([]);
+  const questionData = Questions.get(activeQuestion)
+  const content = variant === Tabs.content
+    ? {
+      title: 'Make Your Move',
+      subtitle: questionData?.sections.two.heading,
+      body: (
+        <UnorderedList>
+          {questionData?.sections.two.items.map((i) => (
+            <ListItem key={i}>{i}</ListItem>
+          ))}
+        </UnorderedList>
+      ),
+      footer: (
+        <Button
+          rightIcon={<FaRegArrowAltCircleDown />}
+          onClick={() => dispatch({focus: questionActions.rabbitHole})}
+        >
+          Down the rabbit hole
+        </Button>
+      )
+    } : {
+      title: 'Good Stuff To Check Out',
+      subtitle: 'We\'ve noticed these movers and shakers working on solutions.',
+      body: questionData?.act.initiatives.map((item, index) =>
+        <InitiativeCard
+          key={item.title}
+          initiative={item}
+          flip={index%2===0}
+          flex='0'
+        />
+      ),
+      footer: null,
     }
-  }, [ question ]);
 
-  return (
-    <Flex
-      flexFlow='row wrap'
-      justifyContent='space-evenly'
-      paddingTop='6'
-      {...props}
-    >
-      <DescriptionComponent {...content} />
-      <InitiativesList initiatives={initiatives} />
-    </Flex>
-  )
-}
-
-function DescriptionComponent({ title, subtitle, description }) {
-  return (
-    <Flex
-      direction='column'
-      maxW='4xl'
-      paddingInline='6'
-      paddingBottom='6'
-    >
-      <Heading size='lg' mb='0.125em'>{title}</Heading>
-      <Text
-        as='h3'
-        mb='6'
-      >
-        {subtitle}
-      </Text>
-      <FormattedText textArray={description ?? []} />
-    </Flex>
-  )
-}
-
-function InitiativesList({ initiatives }) {
-  return (
+  return sectionFocus >= 2 ? (
     <Box
-      maxW='3xl'
-      paddingInline='6'
+      __css={styles.container}
+      onClick={onClick}
     >
-      <Heading as='h2' size='lg' mb='0.125em'>
-        Good Stuff To Check Out
-      </Heading>
-      <Text as='h3' mb='6'>
-        We've noticed these movers and shakers working on solutions.
-      </Text>
-      <Flex
-        direction="column"
-        gap="10px"
-      >
-        {initiatives.map((item, index) =>
-          <InitiativeCard
-            key={item.title}
-            initiative={item}
-            flip={index%2===0}
-          />
-        )}
-      </Flex>
+      <IconButton
+        icon={<FiX />}
+        display={active ? null : 'none'}
+        position='absolute'
+        top='0.6rem'
+        right='0.6rem'
+        variant='ghost'
+        height='1.875rem'
+        minWidth='1.875rem'
+        maxWidth='1.875rem'
+        onClick={() => setActiveTab(Tabs.minimized)}
+      />
+      <Box __css={styles.title}>{content.title}</Box>
+      <Box __css={styles.subtitle}>{content.subtitle}</Box>
+      <Box __css={styles.body}>
+        {content.body}
+      </Box>
+      <Box __css={styles.footer}>
+        {content.footer}
+      </Box>
     </Box>
-  )
+  ) : null
 }
