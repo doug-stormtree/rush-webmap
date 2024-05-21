@@ -14,8 +14,8 @@ const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
       //maxWidth: 'min(calc(100% - 31.875rem), 20rem)',
       maxHeight: 'calc(100% - 17.5rem)',
       bottom: '0',
-      left: '0.625rem',
-      right: ['0.625rem', null, null, '100px', '28.25rem', null],
+      left: '8.75rem',
+      right: '3.325rem',
     },
   },
 })

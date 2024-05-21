@@ -69,7 +69,8 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       paddingY: '0.6rem',
     },
     footer: {
-      display: 'none'
+      display: 'none',
+      marginTop: '0.5rem',
     }
   },
   sizes: {

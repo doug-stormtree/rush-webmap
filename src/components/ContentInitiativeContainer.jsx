@@ -17,11 +17,13 @@ export default function ContentInitiativeContainer() {
         variant={Tabs.content}
         active={activeTab === Tabs.content}
         onClick={activeTab !== Tabs.content ? () => setActiveTab(Tabs.content) : null}
+        setActiveTab={setActiveTab}
       />
       <ContentPane
         variant={Tabs.initiatives}
         active={activeTab === Tabs.initiatives}
         onClick={activeTab !== Tabs.initiatives ? () => {setActiveTab(Tabs.initiatives)} : null}
+        setActiveTab={setActiveTab}
       />
     </Box>
   )

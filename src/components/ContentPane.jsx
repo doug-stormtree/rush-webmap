@@ -2,20 +2,23 @@ import React from 'react';
 import {
   Box,
   Button,
+  IconButton,
   ListItem,
   UnorderedList,
   useMultiStyleConfig,
 } from '@chakra-ui/react';
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
+import { FiX } from 'react-icons/fi';
 import Questions, { useActiveQuestionStore, questionActions } from '../data/Questions';
 import InitiativeCard from './InitiativeCard';
 
 export const Tabs = {
   content: 'content',
   initiatives: 'initiatives',
+  minimized: 'minimized',
 }
 
-export default function ContentPane({ active, variant, onClick }) {
+export default function ContentPane({ active, variant, onClick, setActiveTab }) {
   // theme
   const styles = useMultiStyleConfig('ContentPane', {variant: active ? variant : 'inactive'})
   // active question
@@ -32,8 +35,8 @@ export default function ContentPane({ active, variant, onClick }) {
   const questionData = Questions.get(activeQuestion)
   const content = variant === Tabs.content
     ? {
-      title: questionData?.title,
-      subtitle: 'Make your move. ' + questionData?.sections.two.heading,
+      title: 'Make Your Move',
+      subtitle: questionData?.sections.two.heading,
       body: (
         <UnorderedList>
           {questionData?.sections.two.items.map((i) => (
@@ -68,6 +71,18 @@ export default function ContentPane({ active, variant, onClick }) {
       __css={styles.container}
       onClick={onClick}
     >
+      <IconButton
+        icon={<FiX />}
+        display={active ? null : 'none'}
+        position='absolute'
+        top='0.6rem'
+        right='0.6rem'
+        variant='ghost'
+        height='1.875rem'
+        minWidth='1.875rem'
+        maxWidth='1.875rem'
+        onClick={() => setActiveTab(Tabs.minimized)}
+      />
       <Box __css={styles.title}>{content.title}</Box>
       <Box __css={styles.subtitle}>{content.subtitle}</Box>
       <Box __css={styles.body}>
