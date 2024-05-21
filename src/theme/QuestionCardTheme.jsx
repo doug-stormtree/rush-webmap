@@ -14,13 +14,12 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     card: {
       pointerEvents: 'auto',
-      //position: 'relative',
       minWidth: '120px',
       borderRadius: 'xl',
       background: '#333',
       // text styling
       color: 'white',
-
+      // sticky
       position: 'sticky',
       top: '3.75rem',
     },
@@ -96,7 +95,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
     },
     wide: {
       card: {
-        zIndex: '0',
+        zIndex: '1000',
         height: '120px',
         minWidth: '320px',
         maxWidth: '320px',
@@ -121,7 +120,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
     expanded: {
       card: {
         // positioning
-        zIndex: '0',
+        zIndex: '1000',
         // size
         minHeight: '120px',
         maxHeight: 'calc(100vh - 11.875rem)',

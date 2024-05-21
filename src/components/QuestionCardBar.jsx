@@ -1,5 +1,5 @@
+import React, { useRef } from 'react';
 import { Box, useMultiStyleConfig } from '@chakra-ui/react';
-import React from 'react';
 import QuestionCard from './QuestionCard';
 import Questions, { useActiveQuestionStore } from '../data/Questions';
 
@@ -12,9 +12,10 @@ export default function QuestionCardBar() {
     activeQuestion: state.activeQuestion,
     sectionFocus: state.sectionFocus
   }))
+  const scrollRef = useRef(null)
   
   return (
-    <Box __css={styles.container}>
+    <Box __css={styles.container} ref={scrollRef}>
       <Box __css={styles.bar}>
         <QuestionCard
           key={activeQuestion}
@@ -27,13 +28,16 @@ export default function QuestionCardBar() {
         />
         {[...Questions.entries()]
           .filter(q => q[0] !== activeQuestion)
-          .map(q => 
-            <QuestionCard
-              key={q[0]}
-              question={{key: q[0], ...q[1]}}
-              size='button'
-            />
-          )
+          .map(q => {
+            return (
+              <QuestionCard
+                key={q[0]}
+                question={{key: q[0], ...q[1]}}
+                size='button'
+                scrollRef={scrollRef}
+              />
+            )
+          })
         }
       </Box>
     </Box>
