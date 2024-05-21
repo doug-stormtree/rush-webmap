@@ -1,7 +1,7 @@
 const Question = {
   key: 'eat-local',
   title: "Eat Local",
-  question: "I see potato chips for $6.29! Can somebody call food security?",
+  question: "My corner store is charging $6.29 for potato chips! Can somebody call food security?",
   image: require('../png/EatLocal.png'),
   sections: {
     one: [

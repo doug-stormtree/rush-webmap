@@ -1,7 +1,7 @@
 const Question = {
   key: 'create-community',
   title: "Create Community",
-  question: "When we chop down trees, cheap out on the build and charm the big brands to set up shop in a new neighbourhood, are we choosing quality of life?",
+  question: "When we chop down trees, cheap out on the build and charm the big brands to set up shop, are we choosing quality of life?",
   image: require('../png/CultureCompass.png'),
   sections: {
     one: [

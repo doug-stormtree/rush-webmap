@@ -1,7 +1,7 @@
 const Question = {
   key: 'protect-the-coast',
   title: "Protect the Coast",
-  question: 'Melting ice caps are neither sweet nor refreshing when it comes to sea level rise. How can I be ready when the surfs up?',
+  question: 'Melting ice caps offer no refreshment when it comes to sea level rise. How can I be ready when the surfs up?',
   image: require('../png/ProtectTheCoast.png'),
   sections: {
     one: [
