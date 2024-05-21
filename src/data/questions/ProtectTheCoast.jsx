@@ -1,7 +1,7 @@
-const Coastal = {
+const Question = {
   key: 'protect-the-coast',
   title: "Protect the Coast",
-  question: 'Melting ice caps are neither sweet nor refreshing when it comes to sea level rise. Find out if your coast and drinking water supply is at risk.',
+  question: 'Melting ice caps are neither sweet nor refreshing when it comes to sea level rise. How can I be ready when the surfs up?',
   image: require('../png/ProtectTheCoast.png'),
   sections: {
     one: [
@@ -25,29 +25,21 @@ const Coastal = {
     two: {
       heading: 'Harmonize natural and built infrastructure.',
       items: [
-        'Use your Open Green Map account to plot the vulnerable places where you see potential sea level rise and a highly sensitive coastline.',
+        'Use your Open Green Map account to plot rain gardens that provide surface absorption. Install and advocate for permeable ground surfaces, paving stones and pavement that properly drains.',
+        'Support and/or join community groups that restore watersheds and protect natural coastal habitats. Keep shade on the shoreline to protect coastal plants and creatures from extreme heat. These riparian areas filter and maintain the marine ecosystem, stop erosion, and ultimately protect coastal homes.',
         'Work with your neighbours to create a plan to protect your coastal community. Engage shoreline experts like SeaChange Marine Conservation Society, Greenshores, and Peninsula Streams & Shorelines to help.',
-        'Work together to install Nature-based solutions to protect the coast, infrastructure, and our freshwater supply.',
-        'Keep shade on the shoreline to protect coastal plants and creatures from extreme heat. These riparian areas filter and maintain the marine ecosystem, stop erosion, and ultimately protect coastal homes.',
-        'Respect and protect eel grass and bull kelp beds and coral reefs. We need these natural coastal habitats to buffer the shore against storm surges.',
-        'Join a restoration crew to plant eelgrass and seed kelp gravel.',
+        'Join a restoration crew to plant eelgrass and seed kelp gravel. Use mooring buoys instead of anchoring to avoid pulling up eelgrass beds and damaging sensitive ecosystems.',
+        'We need natural coastal habitats to buffer the shore against storm surges.',
         'Clean off boats, paddleboards and kayaks to avoid introducing invasive species into the ecosystem.',
-        'Use mooring buoys instead of anchoring to avoid pulling up eelgrass beds and damaging sensitive ecosystems.',
-        'Use designated pump out stations for boat sewage so you aren’t contaminating  marine ecosystems.',
-        'Install and advocate for permeable ground surfaces, paving stones and pavement that properly drains.',
-        'Understand the factors that threaten a healthy coast and speak up at planning meetings.',
-        'Support community groups that restore watersheds and protect natural coastal habitats.',
+        'Use designated pump out stations for boat sewage so you aren’t contaminating marine ecosystems.',
+        'Advocate for policies that support shoreline setbacks to allow room for Nature to groom the shoreline. Sandy beaches mean forage fish nurseries which mean a healthy food chain for all.',
+        'Find ways that your community can support policies and action for food security and cultural harvesting on land and water.',
       ]
     },
     three: {
       items: [
-        'The frequency of extreme water events and sea level rise will increase alongside more greenhouse gasses in the atmosphere. This is because the gasses trap heat which changes the way air and water currents move around the globe.',
-        'If we don\'t consider the potential impacts of sea level on the land and the water table, our communities risk flooding and fresh water scarcity.',
-        'Our community conversations and decisions about housing and development must be informed by potential sea level rise and climate risk data so we can protect ourselves. We can look to Nature-based solutions to help.',
-        'Nature-based solutions (NBS) is a form of development that copies and amplifies Nature\'s designs in places that are vulnerable. Integrating NBS can mitigate storm surges, manage flood risks, and support a resilient coast line. NBS can inform better insurance rates and property values.',
-        'The Government of Canada recognizes the need for Nature based solutions to address climate change events with a number of programs.',
-        'Learn more about Nature-based Insurance Solutions in the Good Stuff below.',
-        'Our long coastline gives us lots of space for carbon capture both on land and in the ocean. BC’s “blue carbon” stocks (e.g., eelgrass and other marine species) capture the equivalent of emissions from 200,000 cars every year.',
+        'The frequency of extreme water events and sea level rise will increase alongside more greenhouse gasses in the atmosphere. This is because the gasses trap heat which changes the way air and water currents move around the globe. If we don’t consider the potential impacts of sea level on the land and the water table, our communities risk flooding and fresh water scarcity. Our community conversations and decisions about housing and development must be informed by potential sea level rise and climate risk data so we can protect ourselves.',
+        'We can look to Nature-based solutions to help. Nature-based solutions (NBS) is a form of development that copies and amplifies Nature’s designs in places that are vulnerable. Integrating NBS can mitigate storm surges, manage flood risks, and support a resilient coast line. NBS can inform better insurance rates and property values. The Government of Canada recognizes the need for Nature based solutions to address climate change events with a number of programs. Learn more about Nature-based Insurance Solutions in the Good Stuff to Check out.',
         'Another piece of good news is that fine sand beaches provide habitat for forage fish which are the foundation of the food chain on the BC coast. To protect it we need housing and development to be set back (ideally 30 meters) so that natural wave action can turn pebbles into sand and provide forage fish habitat as well as the best kind of beach to put a towel down on!',
       ]
     },
@@ -190,4 +182,4 @@ const Coastal = {
     ],
   },
 };
-export default Coastal;
+export default Question;

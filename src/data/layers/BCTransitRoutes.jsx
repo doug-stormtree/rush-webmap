@@ -26,7 +26,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'light-footprint', active: false, ...LegendGroups.StartOff },
+    { key: 'travel-light', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

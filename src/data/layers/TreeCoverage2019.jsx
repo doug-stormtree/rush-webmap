@@ -14,7 +14,7 @@ const layer = {
   title: 'Tree Coverage (2019)',
   description: [
     {type:'p', content:'Estimated 2019 Tree Cover Percentage. The data have been created on behalf of the Urban Forest Stewardship Initiative (UFSI), a program of Habitat Acquisition Trust (HAT), by Caslys Consulting Ltd.'},
-    {type:'p', content:'RUSH has chosen a diverging colour scheme to highlight areas that meet the 30% canopy cover goal set by Nature Canada. Notice the light yellow areas representing 20% to 30% canopy cover. These could be areas of opportunity for expanding tree equity into more neighbourhoods. Check out the Nature Canada report in the Initiatives section.'},
+    //{type:'p', content:'RUSH has chosen a diverging colour scheme to highlight areas that meet the 30% canopy cover goal set by Nature Canada. Notice the light yellow areas representing 20% to 30% canopy cover. These could be areas of opportunity for expanding tree equity into more neighbourhoods. Check out the Nature Canada report in the Initiatives section.'},
     {type:'p', content:'Learn more about the project and methodology by reading the report here:'},
     {
       type:'link',
@@ -32,7 +32,8 @@ const layer = {
   styleMap: styleMap,
   questions: [
     { key: 'beat-the-heat', active: true, ...LegendGroups.StartOn },
-    { key: 'neighbourhood-to-naturehood', active: false, ...LegendGroups.StartOff },
+    { key: 'be-healthy', active: false, ...LegendGroups.StartOff },
+    { key: 'create-community', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

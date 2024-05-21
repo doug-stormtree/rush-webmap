@@ -1,7 +1,7 @@
-const CircularEcon = {
-  key: 'circular-economy',
-  title: 'Circular Economy',
-  question: 'All this "stuff" is clogging up our systems. How do I close the loop on waste?',
+const Question = {
+  key: 'have-it-all',
+  title: 'Have it All',
+  question: 'Economy, Community, Environment. I want it all. How can I shape my triple bottom line?',
   image: require('../png/CircularEconomy.png'),
   sections: {
     one: [
@@ -18,7 +18,7 @@ const CircularEcon = {
         heading: 'It’s a vicious circle if...',
         items: [
           'when you shop or get take out, you end up with a bail of plastic and styrofoam that you don’t know what to do with.',
-          'you need a day, a driver and a degree to de-clutter responsibly.',
+          'you need a day, a driver, and a degree to de-clutter responsibly.',
           'your municipality seems to have a preference for big box and big brand business.',
           'all the talented people you know are having trouble finding meaningful work.',
         ]
@@ -39,12 +39,13 @@ const CircularEcon = {
     },
     three: {
       items: [
+        'What comes around goes around. Closing the loop on waste means making the most of what we have and separating out the toxins and hazards every chance we get.',
         'When we turn trash into treasure, we improve the local economy, limit pollution and greenhouse gas emissions, divert waste from the landfill, reduce stress on our environment, encourage innovation, and invest in health and wellbeing.',
         'About 340,000 tonnes of plastic and packaging was thrown away in 2019 in BC. 40% of plastic is used only once. Businesses often must pay for disposal, and also lose the potential value of keeping valuable waste in circulation. Municipalities are now empowered to ban plastic bags and single-use plastics without provincial approval - a change led by Esquimalt, Saanich and Victoria. The Town of Sidney is now leading the pack in banning plastic bags, straws, polystyrene foam serviceware, and single-use plastic utensils. The United Nations Environment Assembly is working towards a Global Treaty on Plastic Pollution that includes the marine environment and should be ready by 2024. Over 200 countries have signed on so far.',
         'BC is a leader in "take back programs" known as Extended Producer Responsibility (EPR) which require producers to account for the lifecycle of the products and packaging they sell. From medications to batteries, to packaging and paint, our community is well set up for a high level of recycling and reuse. BC’s EPR programs currently recapture 315,000 tonnes of plastics found in various products. You are in a good place to look again at what you’ve been calling “garbage.”',
         'Shaping up your triple bottom line means shopping at buisnesses that contribute economic, social and environmental benefits. This region is a hot bed of innovation and ingenuity on this front. Check out Project Zero for an ever-growing list of businesses that transform & redirect materials into the things that make life fun.',
-        'Integrated Resource Recovery (IRR) is a term for an industrial park that shares resources like excess heat, energy and by products to eliminate waste. Malahat Nation is leading in this space. Advocating for IRR in all new developments is an obvious way to reduce our local carbon and waste footprints.Housing developments like Dockside Green are designed to make the most of the water and energy in the system and even make a profit by selling to neighbouring facilities.',
-        'We have an opportunity to create local fuel sources out of waste products like invasive species, medical waste, and biosolids. It’s important to evaluate waste streams for their highest and best use. If problems arise by having them pile up, then the answer could be biofuel. Having a reliable and consistent source of local fuel is would be pretty nice. Imagine if all that invasive and highly flammable broom lining the highway to Port Hardy was being harvested by people earning a living wage so that you could fly to see your grandmother on sustainable avaition fuel. That would be a lot to feel good about!',
+        'Integrated Resource Recovery (IRR) is a term for an industrial park that shares resources like excess heat, energy and by products to eliminate waste. Malahat Nation is leading in this space. Advocating for IRR in all new developments is an obvious way to reduce our local carbon and waste footprints. Housing developments like Dockside Green are designed to make the most of the water and energy in the system and even make a profit by selling to neighbouring facilities.',
+        'We have an opportunity to create local fuel sources out of waste products like invasive species, medical waste, and biosolids. It’s important to evaluate waste streams for their highest and best use. If problems arise by having them pile up, then the answer could be biofuel. Having a reliable and consistent source of local fuel is would be pretty nice. Imagine if all that invasive and highly flammable broom lining the highway to Port Hardy was being harvested by people earning a living wage so that you could fly to see your grandmother on sustainable aviation fuel. That would be a lot to feel good about!',
       ]
     },
   },
@@ -125,4 +126,4 @@ const CircularEcon = {
     ],
   },
 };
-export default CircularEcon;
+export default Question;

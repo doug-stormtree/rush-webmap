@@ -34,7 +34,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', active: true, ...LegendGroups.OGM },
+    { key: 'be-healthy', active: true, ...LegendGroups.OGM },
+    { key: 'eat-local', active: false, ...LegendGroups.OGM },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

@@ -1,49 +1,57 @@
-const Naturehood = {
-  key: 'neighbourhood-to-naturehood',
-  title: "Neighbourhood to Naturehood",
-  question: "Make the human-Nature connection for your health and inner peace. Live your best life in a Naturehood.",
+const Question = {
+  key: 'be-healthy',
+  title: "Be Healthy",
+  question: "Personal and planetary health are the same thing. How can I keep my natural life support system connected and protected?",
   image: require('../png/Naturehood.png'),
   sections: {
     one: [
       {
-        heading: 'You live in a Naturehood if...',
+        heading: 'The vital signs are good if...',
         items: [
-          'there is at least 30% tree canopy cover for shade and habitat.',
-          'your neighbourhood and parks have healthy plants native to the ecosystem.',
+          'big trees are still standing despite development projects in your region. Their roots are surrounded by rich, loose soil letting the microbiome transform atmospheric gasses into beautiful plants and food. Older trees have more to share so they are identified as key contributors to the "wood wide web" on this map.',
           'you can see & hear birds and bees visiting the pollinator gardens all the way down your street, meaning the food web is working.',
-          'trees and roots are surrounded by rich, loose soil and plants that can transform atmospheric greenhouse gasses into more Nature.',
+          'infrastructure, transportation, and shipping routes accommodate species migration routes and timing.',
+          'there are thriving eelgrass and bull kelp beds to provide additional nurseries, nutrients, and transition zones.',
         ]
       },
       {
-        heading: 'It\'s a concrete jungle if...',
+        heading: 'Going into system failure if...',
         items: [
-          'you can\'t see three trees from your window, which means you don’t have habitat for all that good Nature stuff.',
+          'greenspaces are fragmented so that the populations of biodiversity like turtles, frogs and hummingbirds don’t have the habitats needed to exist over time.',
+          'the tree protection bylaws don’t contribute to an urban forest strategy that facilitates the "wood wide web".',
+          'your neighbourhood has less than 30% canopy cover and you can’t see three trees from your window.',
           'you see mostly dark pavement and hard dirt that will radiate heat and move road runoff carrying toxins into nearby watersheds.',
-          'there isn’t an active stewardship group in your area. This may mean people aren’t prioritizing Naturehood in the neighbourhood.',
-          'greenspaces are fragmented which means the populations of biodiversity like turtles, frogs and hummingbirds don\'t have the habitats needed to exist over time.',
+          'there isn’t an active stewardship group in your area. This may mean people aren’t prioritizing Nature in the neighbourhood.',
         ]
       },
     ],
     two: {
-      heading: 'Turn the concrete jungle into a thriving urban ecosystem.',
+      heading: 'Turn the concrete jungle into an urban ecosystem.',
       items: [
-        'Use your Open Green Map account to plot your own pollinator garden to connect pollinator habitats and secure the food system.',
-        'Get outside. You are Nature.',
-        'Extend the reach of the closest ecosystem by planting native species in pots or in the ground.',
-        'Learn to identify invasive species and how to remove them safely.',
+        'Use your Open Green Map account to plot significant trees and invasive species infestations in your neighbourhood.',
+        'Plant & plot your pollinator garden to show connected pollinator habitat which leads to mental health, food security, soil moisture retention and temperature regulation.',
+        'Extend the reach of the closest ecosystem by planting native species in pots or in the ground. This will boost the soil microbiome to transform guck into good.',
         'Keep poisons out of the watershed and food web by avoiding the use of pesticides and herbicides in your garden.',
-        'Volunteer with your local stewardship group to restore watersheds and ecosystems.',
-        'Learn about the birds and the bees to appreciate the music of the natural world.',
+        'Tie your boat to buoys so that you don’t drop anchor in an eelgrass bed.',
+        'Be an ally to Indigenous peoples and their ways of life.',
+        'Support your local stewardship groups in restoring ecosystem performance so we can welcome the salmon and herring returning, knowing the food chain is working.',
+        'Notice Nature’s timing and move to the rhythm of spring cherry tree storms, long summer evenings, fall harvest, and winter rest. Get to know the timing of key species migrations so that you can witness, sync up and celebrate Nature’s rhythm.',
       ]
     },
     three: {
       items: [
-        'Life is hard in a concrete jungle. Bringing Naturehood back to your neighbourhood will mean a better health outlook for all creatures big and small.',
-        'Your Naturehood can protect you from viruses and bacteria. By creating space for natural life support systems like air and water filtration are able to do their magic.  Research shows a clear link between the loss of nature and the increase of pathogens. By making sure there is enough space for habitat, we get the benefit of ecosystem services without competing for living space which increases human-wildlife contact in a way that is not healthy.',
-        'The sounds of Nature have a positive impact on your stress levels and well-being. From the sound of water to bird calls, we are learning about how soothing the sound of Nature is on the soul.',
-        'Pollinators are essential for food production on Vancouver Island, and pollination relies on the health of our wild ecosystems. Many pollinators are facing extinction around the globe due to development and fragmentation of habitat, absence of food, pesticides (neonicotinoids), invasive species, general pollution and climate change. Human settlement has altered watersheds affecting the key corridors that are home to these creatures.',
+        'Get outside. You are Nature. Research shows that anyone who spends at lease 2 hours in Nature a week can improve their mental, emotional, and physical health. Nature can boost your confidence, immune system and brain power.',
+        'The sounds of Nature have a positive impact on your stress levels and well-being. From babbling brooks to bird calls, we are learning about how soothing the sound of Nature is on the soul.',
+        'Your Naturehood can protect you from viruses and bacteria. By creating space for Nature, life support functions like air and water filtration happen. Research shows a clear link between the loss of Nature and the increase of pathogens. By making sure there is enough space for wildlife habitat, we minimize direct human-wildlife contact get the benefit of ecosystem services without competing for living space.',
+        'Pollinators are essential for food production on Vancouver Island, and pollination relies on the health of our wild ecosystems. Many pollinators are facing extinction around the globe due to development and fragmentation of habitat, absence of food, pesticides (neonicotinoids), invasive species, general pollution and climate change. Human settlement has altered watersheds affecting the key corridors that are home to these creatures. Your pollinator garden, bird baths and trees provide vital connections in the ecosystem.',
         'The concrete jungle is more likely to create poverty and impact human health too. A 2022 Nature Canada Report revealed that the percentage of tree canopy is much lower in low-income and racialized neighbourhoods. In October 2022, Vancouver Island’s chief medical officer, Dr. Reka Gustafson says she wants to tackle mental health and track how climate change is making these inequities more pronounced. Learn about the clear link between the quality of the Naturehood and your long-term health. Show Nature some love and let the sights, sounds, scents and sensations work their healing magic for you.',
-        'Help pollinate the world with kindness. Support community groups that are working to re-green the concrete jungle and take care of the folks who live there.',
+        'Life is also hard for trees in a concrete jungle. The combination of pollution, increasing population and climate change, creates is a lot of stress and pressure on urban trees.',
+        'UBC scientist Suzanne Simard coined the terms “Mothertrees” and the “Wood Wide Web” when she discovered that trees and their roots are connected through an underground network of mushrooms. These fungal webs allow trees to pass food, medicines and messages to each other through the soil’s microbiome. The nodes of the underground network can be 25 kilometres apart. Twenty five kilometres of continuous soil in the city is hard to find so when a tree calls in the city, does it make a sound?',
+        'The urban ecosystem creates “natural infrastructure” that builds resilience to climate change. Biodiversity like birds, insects and other critters depend on urban forest ecosystems for their habitat. The forested greenspaces act as pathways to forests outside the city limits.',
+        'When a tree falls in the forest, it feeds the next generations of trees for up to five times its age. Big trees and old growth forests are also important because they are able to provide ecosystem services like: creating habitat, water storage and filtration, wind buffering, carbon drawdown, bank stabilization, dispersing seismic waves, clean air, and storing carbon at a scale that small trees cannot.',
+        'Particularly in this time of climate crisis, it is incredibly important to maintain forests. We can only hope that in this crisis, the increasing number of climate impacts are a wake-up call for us to realize that we are part of Nature and our health and safety depends on vital and working ecosystems. The chemicals trees use to communicate are similar to the neurotransmitters in the human brain and we know how nice it is when we have good word retrieval and can remember people’s names.',
+        'Science is still catching up with what Indigenous people have known forever: we are made of the same stuff and we are all related. Lets keep Nature close and our connection strong.',
+        'The trees talking to each other. Pass it on.',
       ]
     },
   },
@@ -159,7 +167,55 @@ const Naturehood = {
         description: 'The Dawn Chorus project maps a massive collection of birdsong, collected from around the world in May 2020.  Michael Gorman, a bird lover in Germany, initiated this project in what he recognized to be an "extraordinary acoustic moment” - the pandemic had reduced ground and air traffic, and humans were making a fraction of the noise they usually do, making birdsong much easier to hear. He inspired thousands worldwide to get outside, listen, hold up their smartphones and press record. These recordings are now shared on this global sounds map which captures a unique moment in human history through the songs of birds. The map also provides an invaluable resource for understanding the global state of bird biodiversity. The Dawn Chorus team is exploring future collaborations with sound artists - let’s listen for what’s to come!',
         image: require('../png/DawnChorus.png')
       },
+      {
+        title: 'The Mothertree Project',
+        link: 'https://mothertreeproject.org/',
+        description: 'The Mother Tree project is investigating forest renewal practices that will protect biodiversity, carbon storage and forest regeneration as climate changes. The research, led by Dr. Suzanne Simard, explores how connections and communication between trees, particularly below-ground connections between Douglas-fir Mother Trees and seedlings, could influence forest recovery and resilience following various harvesting and regeneration treatments across different climates.',
+        image: require('../png/Mothertree.png')
+      },
+      {
+        title: 'Indigenous Protected & Conserved Areas',
+        link: 'https://conservation-reconciliation.ca/about-ipcas',
+        description: 'The 2018 We Rise Together Report defines IPCAs as "lands and waters where Indigenous governments have the primary role in protecting and conserving ecosystems through Indigenous laws, governance and knowledge systems.” More than 60 IPCAs are now led by Indigenous Peoples from coast-to-coast-to-coast, and there is growing recognition that IPCAs andIndigenous-led conservation will have a critical role in achieving Canada’s climate change and biodiversity targets.',
+        image: require('../png/IPCA.png')
+      },
+      {
+        title: 'Soil Factsheet: BC Ministry of Agriculture',
+        link: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/agricultural-land-and-environment/soil-nutrients/613100-1_soil_compaction.pdf',
+        description: 'Soil compaction refers to "the disruption and reduction of the large pores within the soil” which makes it harder for plant roots to grow down into soil layers, and restricts the movement of air and water through the soil. This Factsheet, produced by the Ministry of Agriculture, describes various causes and effects of soil compaction, as well as how soil structure may be improved.',
+        image: require('../png/SoilFactsheet.png')
+      },
+      {
+        title: 'BC Big Tree Registry',
+        link: 'https://bigtrees.forestry.ubc.ca/bc-bigtree-registry/',
+        description: 'The BC BigTree Registry is maintained by the BC Big Tree Committee and supported by the Faculty of Forestry at the University of British Columbia. It\'s an evolving project whose mandate is "To identify, describe, monitor, and conserve the largest trees of each species within British Columbia, and to educate and enlist the help of its citizens in this task."',
+        image: require('../png/BigTreeRegistry.png')
+      },
+      {
+        title: 'Territories of Life',
+        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of Indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
+        link: 'https://report.territoriesoflife.org/',
+        image: require('../png/TerritoriesOfLife.png')
+      },
+      {
+        title: 'Co-Designing Urban Carbon Sink Parks',
+        link: 'https://www.frontiersin.org/articles/10.3389/fenvs.2021.672468/full',
+        description: 'Drawing on lessons learned from a demonstration area in a Helsinki park, this paper highlights the importance of healthy urban vegetation and soils for carbon sequestration, as well as for stormwater management, urban recreation and food production.',
+        image: require('../png/UrbanCarbonSinkParks.png')
+      },
+      {
+        title: 'Coastal Douglas Fir Conservation Partnership',
+        link: 'https://www.cdfcp.ca/',
+        description: 'The Coastal Douglas-fir Conservation Partnership (CDFCP) promotes the conservation and stewardship of the Coastal Douglas-fir and associated ecosystems in south-western BC. Visit the site to learn about the unique ecosystems occurring within our Coastal Douglas-fir Moist Maritime Biogeoclimatic Zone, and to find out about the CDFCPs 30-year strategy for conserving these ecosystems.',
+        image: require('../png/CoastalDouglasFir.png')
+      },
+      {
+        title: 'STAND.earth',
+        link: 'https://stand.earth/about/',
+        description: 'Stand.earth began over 20 years ago on the frontlines defending old-growth forests in BC. They are now a growing and diverse team demanding transformational change in three key impact areas: Protecting Forests, Moving Beyond Fossil Fuels, and Reinventing Cities and Transportation. Stand.earth strategies range from grassroots events and building networks, to investigative research and media campaigns. Check out this site to be inspired by powerful Stand.earth results stories, and meet Spencer, Stand.earth\'s “cup monster” who helped get Starbucks to work faster towards a 100% recyclable to-go cup.',
+        image: require('../png/StandEarth.png')
+      },
     ],
   }
 };
-export default Naturehood;
+export default Question;

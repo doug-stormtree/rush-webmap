@@ -32,7 +32,7 @@ const layer = {
   styleMap: styleMap,
   questions: [
     { key: 'beat-the-heat', active: false, ...LegendGroups.StartOn },
-    { key: 'neighbourhood-to-naturehood', active: false, ...LegendGroups.StartOff },
+    { key: 'be-healthy', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

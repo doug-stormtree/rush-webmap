@@ -76,7 +76,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', active: true, ...LegendGroups.StartOn },
+    { key: 'be-healthy', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

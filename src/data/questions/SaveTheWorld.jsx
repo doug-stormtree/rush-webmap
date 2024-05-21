@@ -1,49 +1,53 @@
-const HelpWithChange = {
-  key: 'help-with-change',
-  title: "Help with Change",
-  question: "There is wisdom in the crowd and power in numbers. Discover where to find the folks that are making hope happen.",
-  image: require('../png/HelpWithChange.png'),
+const Question = {
+  key: 'save-the-world',
+  title: 'Save the World',
+  question: "The next seven generations are counting on us. How do we plan ahead now?",
+  image: require('../png/NASAEarth.png'),
   sections: {
     one: [
       {
         heading: 'Change is at your fingertips if...',
         items: [
           'there is an organization or initiative in your community that speaks to the problem you care about, and wants your help.',
-          'the governments representing you have declared a climate emergency. Planning and decision-making is done with a climate lens.',
+          'the governments representing you have declared a climate emergency. Planning and decision-making is done through a climate lens. How can "X" decrease emissions, increase carbon drawdown, or contribute to long term health?',
           'local events and communications demonstrate nation-to-nation relationships with Indigenous communities.',
-          'policies emerging across the region commitments to social equity and the wellbeing of future generations, by living in alignment with natural systems.',
+          'ecosystems of greenways & blueways connect the neighbourhoods you navigate. This means biodiversity is getting its dues.',
+          'policies emerging across the region commitments to social equity and the well-being of future generations, by living in alignment with natural systems.',
         ]
       },
       {
-        heading: 'The movement needs you more than ever if...',
+        heading: 'Answer the wake up call if...',
         items: [
-          'you are being engaged as a community member but your questions and the things you care about aren\'t on the agenda or part of the info pack.',
+          'the community engagement strategy won’t take your questions and the things you care about aren’t on the agenda.',
+          'all the people in local leadership positions look and sound the same.',
           'there is no meaningful collaboration between government offices, businesses, community groups, and local First Nations.',
-          'the problem is clear but the people behind the sign say the system won\'t let them do the logical next thing.',
+          'the problem is clear but the people behind the sign say the system won’t let them do the logical next thing.',
           'services for emergency help are hard to navigate and only result in temporary relief.',
         ]
       },
     ],
     two: {
-      heading: 'Be the Change.',
+      heading: 'Think cosmically, act locally.',
       items: [
-        'Identify your passion and find your purpose. There are many issues to tackle and action takes many forms.',
-        'Take collective action. Identify organizations or initiatives that align with your purpose and reach out to get involved. Volunteering can be a powerful tool against apathy.',
-        'If you see a gap, consider creating your own initiative and find people who will come along with you. Ask the question and find the resonance. Build relationships with allies and advocates across sectors and help break down silos. Identify funding opportunities to move your work forward.',
-        'Ensure all the work you do is justice-focused and rooted in Nature. Understand the perspectives of local Indigenous groups on environmental issues, and support Indigenous-led action.',
-        'As you take collective action, also identify opportunities to make change everyday. Eat less meat, opt for public transit, tend your pollinator-friendly garden, use a reusable mug. Any action – big or small – makes an impact.',
-        'Engage in the political process. Write to your representatives, sign petitions, and visit their offices. Make your voice heard in public meetings and participate in public consultation processes. Vote for environmental champions and support their campaigns.',
+        'Identify your passion and find your purpose. There are many issues to tackle and action takes many forms. Any action – big or small – makes an impact.',
+        'Understand the perspectives of local Indigenous groups on the issues, and support Indigenous-led action.',
+        'Take collective action. Identify organizations or initiatives that align with your purpose and reach out to get involved. Volunteering can be a powerful tool against apathy. Find the organization that cares about it too.',
         'Identify and show appreciation for the services that are there for you. Access them when you need them and help others do the same. Provide feedback when possible so they can be improved.',
-        'Stay informed on environment-related issues, big and small. Support media that tells the truth about our climate and biodiversity challenges. Balance out the doom and gloom with positive stories of climate wins. Share what inspires you with others.',
+        'Engage, advocate, vote and write to the decision makers between you and the change you want to see.',
+        'Engage in community conversations that figure out how to provide housing and services to those who need it while making space for Nature to provide the ecosystem services needed for overall well-being.',
       ]
     },
     three: {
       items: [
-        'Over 50% of greenhouse gas emissions in Canada can be influenced by municipalities, highlighting the real opportunities that exist at the local level for environmental action. This starts with us as individuals. Every action counts, and the small steps we take give us agency.',
-        'But you don’t need to hold it together on your own. The most transformative actions are those that create new relationships and build networks and coalitions within and across communities. We each represent a piece to the puzzle, and we can make connections with those who make up our governments, businesses, and community organizations. Resilience comes from the strength of these connections, and the collective solutions that then emerge.',
-        'In a moment of crisis, we need accountable leadership. As we saw during the pandemic, governments provide essential services. They make funding available to community organizations, the fastest change-agents of society. Through policy and regulations, they require businesses to consider people and the planet, and support them in creating innovative solutions. Governments can build partnerships for impact and create public value. They get their platform from what matters to the public, giving us enormous power to shape decision-making, but only when we choose to make our voices heard. We need your voice... and we all need to choose again and again to keep on voicing, even when we may feel shocked into silence by discouraging news - like the Federal Court’s November 2023 decision to overturn Canada’s ban on harmful single-use plastics.',
-        'As we urgently move towards more sustainable ways of living, we have an opportunity to dismantle the systems that have caused harm and rebuild in ways that support thriving communities in alignment with the natural world. It is essential that we take our lead from Indigenous communities and their knowledge systems. Reconciliation and broader equity goals are possible when our environmental action is in line with our values.',
-        'The science of climate change and its impacts can be scary. It is easy to get caught up in despair. But hope is our most powerful tool, and by translating that hope into collective action, we set the course for a more positive future.',
+        'This spinning ball of hot rock covered with a web of life is losing it’s balance. Staying true to the climate targets and peace treaties can keep it rocking and rolling.',
+        'There is wisdom in the crowd and power in numbers. The most transformative actions are those that create new relationships and build networks and coalitions within and across communities. We each represent a piece to the puzzle, and we can make connections with those who make up our governments, businesses, and community organizations. Resilience comes from the strength of these connections, and the collective solutions that then emerge.',
+        'Governments provide essential services. They make funding available to community organizations, the fastest change-agents of society. Through policy and regulations, they require businesses to consider people and the planet, and support them in creating innovative solutions. Governments can build partnerships for impact and create public value. They get their platform from what matters to the public, giving us enormous power to shape decision-making, but only when we choose to make our voices heard even when we may feel shocked into silence by discouraging news - like the Federal Court’s November 2023.',
+        'Over 50% of greenhouse gas emissions in Canada can be influenced by municipalities, highlighting the real opportunities that exist at the local level for environmental action. This starts with us as individuals.',
+        'Every action counts, and the small steps we take give us agency. As we urgently move towards more sustainable ways of living, we have an opportunity to dismantle the systems that have caused harm and rebuild in ways that support thriving communities in alignment with the natural world. It is essential that we take our lead from Indigenous communities and their knowledge systems. Reconciliation and broader equity goals are possible when we reject forced choices between economy and environment in favour of solutions that value a quality of life for all.',
+        'Southern Vancouver Island is a traditional wintering ground for the lək̓ʷəŋən and W̱SÁNEĆ peoples because it was bountiful and protected. Vancouver Island is still considered lush by comparison to other parts of the world, but this sense of abundance can create the impression that Nature will handle it when humans intervene with old growth logging or salmon farms. In fact, our Coastal Douglas Fir ecosystem is considered critically endangered as a result of development pressures, recent climate change events, and resource extraction/interventions.',
+        'Conserving and protecting the local natural environment should be a key focus in contributing to a more stable climate and playing our part as global citizens. Our temperate forests are a net carbon sink, typically containing roughly 100 metric tons of carbon per hectare.',
+        'Restoring our fish-bearing streams will support populations of salmon that are a keystone species for the west coast of North America. The food web relies on healthy salmon - and our support of the food web is mission critical.',
+        'BC is also a hotbed of innovation with programs and businesses to facilitate all forms of climate action. Rather than being complacent in the quality of life Nature offers up everyday, we have the opportunity to be a node of health and resilience that the world’s human-built and natural systems can connect to and rely on.',
       ]
     },
   },
@@ -133,7 +137,61 @@ const HelpWithChange = {
         link: 'https://www.indigenousclimateaction.com/',
         description: 'Indigenous Climate Action (ICA) is an Indigenous-led organization guided by "a diverse group of Indigenous knowledge keepers, water protectors and land defenders from communities and regions across the country.” The ICA offers programs and publications that promote knowledge and awareness of climate change issues, and how climate action is intricately connected to Indigenous rights and sovereignty.',
       },
+      {
+        title: 'Community Health & Climate Change - VCH',
+        description: 'This ArcGIS storymap created by Vancouver Coastal Health shows climate hazards across BC\'s Lower mainland with help interpreting the hazard data.',
+        link: 'https://storymaps.arcgis.com/stories/7bf7141bb6fd41fb9b61a02cfbc61ecd',
+        image: require('../png/VancouverCoastalHealth.png')
+      },
+      {
+        title: 'Community Health & Climate Change - Interior Health',
+        description: 'Mapping Exposure, Sensitivity, and Adaptive Capacity to Four Health-Related Climate Hazards in BC\'s Interior.',
+        link: 'https://wwf.panda.org/projects/one_planet_cities/one_planet_city_challenge/',
+        image: require('../png/InteriorHealth.png')
+      },
+      {
+        title: 'One Planet Saanich',
+        description: 'As an early adopter, One Planet Saanich is engaging across sectors and generations in the Saanich community through training, meet-ups, the One Planet Student Challenge, apps, events, and resources since 2018.',
+        link: 'https://oneplanetbc.com/one-planet-saanich/',
+        image: require('../png/OnePlanetBC.png')
+      },
+      {
+        title: 'Project Drawdown',
+        description: 'This ever-evolving collection of strategies for reversing global warming in the next 30 years draws on the world’s top talent in analyzing solutions that are available now, scalable, financially feasible, measurable, and have a net positive impact.',
+        link: 'https://www.drawdown.org/solutions',
+        image: require('../png/ProjectDrawdown.png')
+      },
+      {
+        title: 'Global Alliance for the Rights of Nature',
+        description: 'This network of individuals and organizations is a growing alliance with the goal of legally recognizing, respecting and enforcing that Nature has rights to exist, persist, maintain and regenerate its vital cycles.',
+        link: 'https://www.garn.org/rights-of-nature/',
+        image: require('../png/GlobalAllianceNatureRights.png')
+      },
+      {
+        title: 'Territories of Life',
+        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of Indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
+        link: 'https://report.territoriesoflife.org/',
+        image: require('../png/TerritoriesOfLife.png')
+      },
+      {
+        title: '1.5-Degree Lifestyles',
+        description: 'The goal of the Hot or Cool Institute is to provide policy-makers and communities with the facts that support hard decisions and new lifestyle strategies that match the limits of the planet.',
+        link: 'https://hotorcool.org/1-5-degree-lifestyles-report/',
+        image: require('../png/1p5DegreeLifestyles.png')
+      },
+      {
+        title: 'West Coast Climate Action Network',
+        description: 'This network brings together individuals and organizations in BC with a deep concern about the climate emergency and a desire to take collective action.',
+        link: 'https://westcoastclimateaction.ca/',
+        image: require('../png/WestCoastClimateAction.png')
+      },
+      {
+        title: 'Convention on Conservation of Migratory Species',
+        description: 'The Convention on the Conservation of Migratory Species of Wild Animals is an organization dedicated to creating global connectivity of ecosystems and habitats for the migration of wild species around the planet with the deep understanding that this action maintains life support systems and the vital functions of the planet as a living entity that benefits all species.',
+        link: 'https://www.cms.int/en/topics/ecological-connectivity',
+        image: require('../png/ConventionMigratorySpecies.png')
+      },
     ],
   },
 };
-export default HelpWithChange;
+export default Question;

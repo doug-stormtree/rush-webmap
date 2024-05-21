@@ -1,7 +1,7 @@
-const EatLocal = {
+const Question = {
   key: 'eat-local',
   title: "Eat Local",
-  question: "Find your flow from farm-to-fork-to-fertilizer. Chowing locally-grown means a lighter footprint and flippin’ food security.",
+  question: "I see potato chips for $6.29! Can somebody call food security?",
   image: require('../png/EatLocal.png'),
   sections: {
     one: [
@@ -9,7 +9,7 @@ const EatLocal = {
         heading: 'Plenty of low-hanging fruit if...',
         items: [
           'you see Agricultural Land Reserves near you.',
-          'you see greenways or hedgerows connecting green spaces providing vital uninterrupted habitat for the pollinators critical to local food production.',
+          'you see pollinator gardens connecting green spaces providing vital uninterrupted habitat for the pollinators critical to local food production.',
           'you can easily buy directly from the folks who are growing your food at nearby farmer’s markets and farms with CSA or box programs.',
           'community garden plots provide space for you and your neighbours to grow your own.',
         ]
@@ -35,6 +35,7 @@ const EatLocal = {
         'Plant a pollinator garden and plot it on the RUSH Naturehood map.',
         'Don’t treat the soil like dirt. Compost in your backyard or through a collection service and contribute to the terroire of the region.',
         'Volunteer with a local food group and add your strength to the system.',
+        'Find ways that your community can support policies and action for food security and that make cultural harvesting on land and water everything it should be',
       ]
     },
     three: {
@@ -45,6 +46,8 @@ const EatLocal = {
         'Food waste is banned from the Hartland Landfill because when it rots it creates methane which is a very powerful greenhouse gas. Soil is key to regulating the atmosphere so the more we compost and plant native plants, the better our ecosystem can function. Feed the soil that feeds the foods that feed you. Check out the Victoria Compost Education Centre for resources on how to garden sustainably, without herbicides and pesticides.',
         'Make local food more affordable. The BC Alliance for Healthy Living Society found that one third of the BC population said that healthy food was not affordable. Farming is a difficult business with the price of land and access to tools and processing facilities. If we can strengthen the system, the market will improve. Growing cultural foods locally makes it easier to access them through food banks and community programs.',
         'Our efforts to divert food waste from the landfill are beginning to work due to composting services, people and programs. The payoff is an endless supply of local soil.',
+        'Shellfish harvesting closures are the result of pollutants in the watershed. Fertilizers, pesticides and leaky septic tanks are the things we need to eliminate to fix this problem. When cultural harvesting is restored, it will be a sign of ecosystem health and food security',
+        'Forage fish lay their eggs on fine sand beaches and are foundational to the food chain. Advocating for shoreline set backs will let Nature sculpt the beaches and refine the sand so that our seafood chain is well linked.',
       ]
     },
   },
@@ -137,4 +140,4 @@ const EatLocal = {
     ],
   }
 };
-export default EatLocal;
+export default Question;

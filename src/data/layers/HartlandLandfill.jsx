@@ -33,7 +33,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', active: true, ...LegendGroups.StartOn },
+    { key: 'have-it-all', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

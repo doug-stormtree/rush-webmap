@@ -25,7 +25,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'eat-local', active: false, ...LegendGroups.StartOff },
+    { key: 'eat-local', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

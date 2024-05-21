@@ -1,7 +1,7 @@
-const SenseOfPeace = {
-  key: 'sense-of-peace',
-  title: "Sense of Peace",
-  question: "What did the buddhist say to the hot dog vendor? Make me one with everything...",
+const Question = {
+  key: 'be-happy',
+  title: "Be Happy",
+  question: "Cost of living, lack of housing, biodiversity loss, polarized politics, climate change and media messages are giving us all anxiety. What's it gonna take to calm the folk down?",
   image: require('../png/SenseOfPeace.png'),
   sections: {
     one: [
@@ -26,10 +26,10 @@ const SenseOfPeace = {
       },
     ],
     two: {
-      heading: 'Create your Om at home: find and foster a sense of peace in your community.',
+      heading: 'Create your Om at home.',
       items: [
         'Find your piece of paradise in your community. Consult the RUSH map for public access beaches and parks, big trees and drinking fountains.',
-        'Uphold dignity. Use your Open Green Map account to plot inclusive washrooms when you spot them.',
+        'Uphold dignity. Find and foster a sense of peace in your community. Use your Open Green Map account to plot inclusive washrooms when you spot them.',
         'Help others be in the zone. Plot benches and sweet spots to take a hot minute of pause with your Open Green Map account.',
         'Get the Merlin app to help you hear the birds and get to know the bird community, and their habits and note the trees they call home.',
         'You belong. Use the legend on the map to find the community groups and services that will make you feel at home. Plot the ones you know are missing.',
@@ -39,8 +39,8 @@ const SenseOfPeace = {
     },
     three: {
       items: [
-        'The saying, "It takes a village to raise a child" speaks to the way a community that knows each other can look out for everyone. Knowing your neighbour contributes to a sense of safety. Being able to access basic needs within walking distance contributes to a healthy lifestyle. Having safe and convenient transportation options lowers a community\'s greenhouse gas footprint. Accessible public spaces make a quality of life available to everyone which levels the playing field and creates community spirit.',
-        'Place-making is a name given to actions that help communities thrive. Gathering spaces, festivals and features that show the art, culture, and characteristics of a place all contribute to a sense of belonging and connection. Knowing how to access the services in our community allows us to help each other when situations seem impossible to solve.',
+        'The saying, "It takes a village to raise a child" speaks to the way a community that knows each other can look out for everyone. Knowing your neighbour contributes to a sense of safety. Being able to access basic needs within walking distance contributes to a healthy lifestyle. Having safe and convenient transportation options lowers a community’s greenhouse gas footprint. Accessible public spaces make a quality of life available to everyone which levels the playing field and creates community spirit. Place-making is a name given to actions that help communities thrive.',
+        'Gathering spaces, festivals and features that show the art, culture, and characteristics of a place all contribute to a sense of belonging and connection. Knowing how to access the services in our community allows us to help each other when situations seem impossible to solve.',
         'The World Health Organization (WHO) has acknowledged that the common urban combination of noise and air pollution from traffic and construction has a negative impact on human health - including our overall sense of peace. Higher rates of stress, addiction, depression and poverty are linked to climate change issues.',
         'Science now recognizes the central role that Nature plays in human wellbeing. Good air, soil, and water, as well as organic sounds and sights truly soothe our souls. Research finds health benefits across mental, physical, and emotional states as well as contributing to our sense of connection, belonging, and general well-being.',
         'In these times of frequent natural disasters, news often reports the impressive ways that communities come together to support each other. This is an invitation to build a strong sense of community and belonging now to build rapid resilience in record time and be protected and connected in the climate emergency.',
@@ -142,4 +142,4 @@ const SenseOfPeace = {
     ],
   },
 };
-export default SenseOfPeace;
+export default Question;
