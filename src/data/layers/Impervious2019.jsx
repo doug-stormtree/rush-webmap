@@ -12,9 +12,9 @@ const styleMap = new Map([
 const layer = {
   title: 'Impervious Surfaces (2019)',
   description: [
-    {type:'p', content:'Estimated 2019 Impervious Surfaces Percentage. The data have been created on behalf of the Urban Forest Stewardship Initiative (UFSI), a program of Habitat Acquisition Trust (HAT), by Caslys Consulting Ltd.'},
+    {type:'p', content:'Estimated 2019 Impervious Surfaces Percentage. The data was derived from a land cover classification produced by Casyls Consulting Ltd. for the CRD. RUSH has modified the datasets provided to suit the purposes of the mapping tool.'},
     {type:'p', content:'Impervious surfaces mainly comprise of pavement, buildings, and other artificial structures that prevent rainwater from infiltrating the soil below. This can result in urban flooding or excessive fast flowing water that erodes the landscape downstream.'},
-    {type:'p', content:'Learn more about the project and methodology by reading the report here:'},
+    {type:'p', content:'Learn more about the original land cover classification project and methodology by reading the report here:'},
     {
       type:'link',
       content:'Caslys Consulting Ltd., 2021. Capital Regional District Urban Land Cover Classification 2017/2019 Summary Report. Capital Regional District, Victoria.',

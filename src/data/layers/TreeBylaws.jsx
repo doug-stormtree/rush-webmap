@@ -47,7 +47,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'wood-wide-web', active: true, ...LegendGroups.StartOn },
+    { key: 'be-healthy', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Civic', active: false },
   ]
 }

@@ -1,4 +1,4 @@
-const BeatTheHeat = {
+const Question = {
   key: 'beat-the-heat',
   title: "Beat the Heat",
   question: "Smokin’ hot spells are happening now with climate change. Is your neighbourhood a heat island?",
@@ -11,14 +11,14 @@ const BeatTheHeat = {
           'you have shady places of refuge, cool buildings, and drinking fountains nearby.',
           'your area follows the tree equity rule and your neighbourhood has 30% canopy cover.',
           'the green spaces are connected by "greenways" which increases cooling capacity.',
-          'the pavement around you is permeable and light in colour.',
+          'the % of pavement around you is less than 20-40% and some of it is permeable and light in colour.',
         ]
       },
       {
         heading: 'Start "sweating" if...',
         items: [
           'when you pinpoint your location on the map, it is in a red heat dome.',
-          'your neighbourhood has a high density of buildings.',
+          'your neighbourhood has a high density of buildings which will mean more heat radiating.',
           'your neighbourhood has less than 30% canopy cover.',
           'there is lots of impermeable dark pavement around you that traps and radiates the sun’s heat.',
           'the green spaces are few and fragmented.',
@@ -118,4 +118,4 @@ const BeatTheHeat = {
     ],
   }
 };
-export default BeatTheHeat;
+export default Question;

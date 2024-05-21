@@ -58,7 +58,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'wood-wide-web', group: 'Deeper Roots', active: true },
+    { key: 'be-healthy', group: 'Deeper Roots', active: false },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

@@ -38,7 +38,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'circular-economy', active: true, ...LegendGroups.OGM },
+    { key: 'have-it-all', active: true, ...LegendGroups.OGM },
     { key: 'development', group: 'Community', active: false },
   ]
 }

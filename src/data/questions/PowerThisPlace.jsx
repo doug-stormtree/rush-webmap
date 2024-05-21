@@ -1,7 +1,7 @@
-const Power = {
+const Question = {
   key: 'power-this-place',
   title: "Power this Place",
-  question: "The lights are on but nobody’s home. Empower yourself to take charge.",
+  question: "The lights are on but nobody’s home. Am I using my power wisely?",
   image: require('../png/PowerThisPlace.png'),
   sections: {
     one: [
@@ -147,4 +147,4 @@ const Power = {
     ],
   }
 };
-export default Power;
+export default Question;

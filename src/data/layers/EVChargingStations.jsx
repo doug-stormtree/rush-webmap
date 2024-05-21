@@ -10,6 +10,12 @@ const styleMap = new Map([
   ['3', {icon: <EVIcon />, fill: 'rgb(253,106,33)', legendText: 'Level 3 (>40 kW)', subText: ['Fast Charger']}],
 ])
 
+const levelNameMap = new Map([
+  ['1', 'Level 1: Low (Under 2kW, usually domestic socket types)'],
+  ['2', 'Level 2: Medium (Over 2kW, usually non-domestic socket type)'],
+  ['3', 'Level 3: High (Over 40kW, fast charger)'],
+])
+
 const layer = {
   title: 'EV Charging Stations',
   description: [
@@ -38,7 +44,10 @@ const layer = {
         .bindPopup(
           mapPopupContent(
             data.properties.name,
-            data.properties.connectionType
+            [
+              'Connector: ' + data.properties.connectionType,
+              levelNameMap.get(data.properties.level) 
+            ]
           )
         )
     },
@@ -47,7 +56,7 @@ const layer = {
   symbology: 'classified',
   styleMap: styleMap,
   questions: [
-    { key: 'light-footprint', active: false, ...LegendGroups.StartOff },
+    { key: 'travel-light', active: false, ...LegendGroups.StartOff },
     { key: 'development', group: 'Energy', active: false },
   ]
 }

@@ -30,7 +30,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'neighbourhood-to-naturehood', group: 'Community', active: false },
+    { key: 'be-healthy', group: 'Community', active: false },
+    { key: 'save-the-world', group: 'Community', active: true },
     { key: 'development', group: 'Greenspace', active: false },
   ]
 }

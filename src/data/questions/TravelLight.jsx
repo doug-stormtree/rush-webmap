@@ -1,7 +1,7 @@
-const Footprint = {
-  key: 'light-footprint',
-  title: 'Light Footprint',
-  question: 'Fossil fuel travel is a fast track to climate change. Explore multi-modal travel and discover how you can bypass the gas.',
+const Question = {
+  key: 'travel-light',
+  title: 'Travel Light',
+  question: 'Fossil fuel travel is a fast track to climate change. How do I arrive in style and on time?',
   image: require('../png/LightFootprint.png'),
   sections: {
     one: [
@@ -26,7 +26,7 @@ const Footprint = {
       },
     ],
     two: {
-      heading: 'Arrive in style with light footprint travel.',
+      heading: 'Explore multi-modal travel and bypass the gas.',
       items: [
         'Use your Open Green Map account to plot well lit bus stops, bike lanes, and other safe travel features on the map.',
         'Find your flow to save time, money and energy. Do your errands with a friend and cut your emissions in half.',
@@ -95,4 +95,4 @@ const Footprint = {
     ],
   },
 };
-export default Footprint;
+export default Question;

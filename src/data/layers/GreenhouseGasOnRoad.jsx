@@ -73,7 +73,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'light-footprint', active: true, ...LegendGroups.StartOn },
+    { key: 'travel-light', active: true, ...LegendGroups.StartOn },
     { key: 'development', group: 'Energy', active: false },
   ]
 }
