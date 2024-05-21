@@ -1,7 +1,7 @@
 const Question = {
   key: 'be-happy',
   title: "Be Happy",
-  question: "Cost of living, polarized politics, and climate change and are causing anxiety. What's it gonna take to calm the folk down?",
+  question: "Cost of living, polarized politics, and climate change are causing anxiety. What's it gonna take to calm the folk down?",
   image: require('../png/SenseOfPeace.png'),
   sections: {
     one: [
