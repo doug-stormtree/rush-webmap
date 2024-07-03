@@ -3,10 +3,10 @@ import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ["1", {legendText: 'Very Low', color: '#DADADA'}],
-  ["2", {legendText: 'Low', color: '#E3A3A3'}],
-  ["3", {legendText: 'Moderate', color: '#EC6D6D'}],
-  ["4", {legendText: 'High', color: '#F53636'}],
-  ["5", {legendText: 'Very High', color: '#FF0000'}]
+  ["2", {legendText: 'Low', color: '#DEACAC'}],
+  ["3", {legendText: 'Moderate', color: '#E27F7F'}],
+  ["4", {legendText: 'High', color: '#E65151'}],
+  ["5", {legendText: 'Very High', color: '#EB2424'}]
 ]);
 
 const layer = {
