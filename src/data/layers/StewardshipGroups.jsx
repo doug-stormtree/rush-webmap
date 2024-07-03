@@ -32,7 +32,7 @@ const layer = {
   questions: [
     { key: 'be-healthy', group: 'Community', active: false },
     { key: 'save-the-world', group: 'Community', active: true },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'create-community', group: 'Greenspace', active: false },
   ]
 }
 

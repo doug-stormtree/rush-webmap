@@ -76,8 +76,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'be-healthy', active: false, ...LegendGroups.StartOff },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'be-healthy', active: false, group: 'Landcover' },
+    { key: 'create-community', group: 'Greenspace', active: false },
   ]
 }
 

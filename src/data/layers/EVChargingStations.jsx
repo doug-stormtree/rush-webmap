@@ -56,8 +56,8 @@ const layer = {
   symbology: 'classified',
   styleMap: styleMap,
   questions: [
-    { key: 'travel-light', active: false, ...LegendGroups.StartOff },
-    { key: 'development', group: 'Energy', active: false },
+    { key: 'travel-light', active: true, ...LegendGroups.StartOn },
+    { key: 'create-community', group: 'Energy', active: false },
   ]
 }
 

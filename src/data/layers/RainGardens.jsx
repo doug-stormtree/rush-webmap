@@ -37,7 +37,7 @@ const layer = {
   },
   questions: [
     { key: 'protect-from-flooding', active: true, ...LegendGroups.OGM },
-    { key: 'development', group: 'Water', active: false },
+    { key: 'create-community', group: 'Water', active: false },
   ]
 }
 

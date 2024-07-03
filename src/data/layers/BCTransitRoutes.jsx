@@ -26,8 +26,9 @@ const layer = {
     }
   },
   questions: [
-    { key: 'travel-light', active: false, ...LegendGroups.StartOff },
-    { key: 'development', group: 'Civic', active: false },
+    { key: 'be-happy', active: true, ...LegendGroups.StartOn },
+    { key: 'travel-light', active: true, ...LegendGroups.StartOn },
+    { key: 'create-community', group: 'Civic', active: false },
   ]
 }
 

@@ -42,7 +42,7 @@ const layer = {
   },
   questions: [
     { key: 'be-healthy', active: true, ...LegendGroups.OGM },
-    { key: 'development', group: 'Community', active: false },
+    { key: 'create-community', group: 'Community', active: false },
   ]
 }
 

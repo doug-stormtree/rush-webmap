@@ -1,4 +1,5 @@
 import { getStyleMapProperty, mapPopupContent } from "../LeafletStyleHelpers";
+import { LegendGroups } from '../TextContent';
 
 const styleMap_CarbonSeq = new Map([
   ['Wetland',    {fillColor: '#225ea8', legendText: 'Wetland', subText: ['471.5 tC02e per hectare','3.3 tC02e per hectare per year']}],
@@ -58,8 +59,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'be-healthy', group: 'Deeper Roots', active: false },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'be-healthy', active: false, group: 'Landcover' },
+    { key: 'create-community', group: 'Greenspace', active: false },
   ]
 }
 
