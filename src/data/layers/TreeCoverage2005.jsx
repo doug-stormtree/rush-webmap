@@ -31,9 +31,10 @@ const layer = {
   legendTitle: 'Percentage of Tree Cover',
   styleMap: styleMap,
   questions: [
+    { key: 'be-happy', active: false, ...LegendGroups.StartOff },
+    { key: 'be-healthy', active: false, group: 'Trees' },
     { key: 'beat-the-heat', active: false, ...LegendGroups.StartOn },
-    { key: 'be-healthy', active: false, ...LegendGroups.StartOff },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'create-community', group: 'Greenspace', active: false },
   ]
 }
 

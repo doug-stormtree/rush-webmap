@@ -25,7 +25,7 @@ const layer = {
     }
   },
   questions: [
-    { key: 'development', group: 'Civic', active: false }
+    { key: 'create-community', group: 'Civic', active: false }
   ]
 }
 

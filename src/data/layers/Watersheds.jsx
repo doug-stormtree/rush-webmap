@@ -42,10 +42,10 @@ const layer = {
     }
   },
   questions: [
-    { key: 'be-healthy', active: false, ...LegendGroups.StartOff },
+    { key: 'be-healthy', active: false, group: 'Landcover' },
     { key: 'create-community', active: true, ...LegendGroups.StartOn },
     { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
-    { key: 'development', group: 'Water', active: false },
+    { key: 'create-community', group: 'Water', active: false },
   ]
 }
 

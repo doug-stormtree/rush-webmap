@@ -1,5 +1,4 @@
 import { mapPopupContent, setStyleIfSupported } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const title = 'Tree Protection Bylaws'
 const layer = {
@@ -47,8 +46,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'be-healthy', active: true, ...LegendGroups.StartOn },
-    { key: 'development', group: 'Civic', active: false },
+    { key: 'be-healthy', active: true, group: 'Trees' },
+    { key: 'create-community', group: 'Civic', active: false },
   ]
 }
 

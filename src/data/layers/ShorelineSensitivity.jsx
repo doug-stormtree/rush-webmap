@@ -2,11 +2,11 @@ import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
-  ["1", {legendText: 'Very Low', color: '#feebe2'}],
-  ["2", {legendText: 'Low', color: '#fbb4b9'}],
-  ["3", {legendText: 'Moderate', color: '#f768a1'}],
-  ["4", {legendText: 'High', color: '#c51b8a'}],
-  ["5", {legendText: 'Very High', color: '#7a0177'}]
+  ["1", {legendText: 'Very Low', color: '#DADADA'}],
+  ["2", {legendText: 'Low', color: '#DEACAC'}],
+  ["3", {legendText: 'Moderate', color: '#E27F7F'}],
+  ["4", {legendText: 'High', color: '#E65151'}],
+  ["5", {legendText: 'Very High', color: '#EB2424'}]
 ]);
 
 const layer = {
@@ -50,8 +50,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'protect-the-coast', active: false, ...LegendGroups.StartOff },
-    { key: 'development', group: 'Water', active: false },
+    { key: 'protect-the-coast', active: true, ...LegendGroups.StartOn },
+    { key: 'create-community', group: 'Water', active: false },
   ]
 }
 

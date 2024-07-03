@@ -34,7 +34,7 @@ const layer = {
     { key: 'be-happy', active: true, ...LegendGroups.StartOn },
     { key: 'create-community', active: true, ...LegendGroups.StartOn },
     { key: 'find-shelter', active: true, ...LegendGroups.StartOn },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'create-community', group: 'Greenspace', active: false },
   ]
 }
 

@@ -30,7 +30,7 @@ const layer = {
   },
   questions: [
     { key: 'beat-the-heat', active: true, ...LegendGroups.StartOn },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'create-community', group: 'Greenspace', active: false },
   ]
 }
 

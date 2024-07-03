@@ -3,7 +3,6 @@ import {
   mapPopupContent,
   setStyleIfSupported
 } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ['Cliff', { fillColor: 'rgb(156,156,156)' }],
@@ -76,8 +75,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'be-healthy', active: false, ...LegendGroups.StartOff },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'be-healthy', active: false, group: 'Landcover' },
+    { key: 'create-community', active: false, group: 'Greenspace' },
   ]
 }
 

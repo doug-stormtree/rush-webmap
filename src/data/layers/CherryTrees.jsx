@@ -1,7 +1,6 @@
 import ReactDOMServer from "react-dom/server";
 import { divIcon } from 'leaflet';
 import { mapPopupContent, pointToIcon, MapMarker } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 import { ReactComponent as CherryBlossomIcon } from '../svg/CherryBlossom.svg';
 
 const CherryBlossomIconStyle = {
@@ -73,8 +72,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'be-healthy', active: true, ...LegendGroups.StartOn },
-    { key: 'development', group: 'Nature', active: false },
+    { key: 'be-healthy', active: true, group: 'Trees' },
+    { key: 'create-community', group: 'Nature', active: false },
   ]
 }
 

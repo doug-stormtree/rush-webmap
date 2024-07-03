@@ -35,8 +35,8 @@ const layer = {
   },
   questions: [
     { key: 'be-healthy', active: true, ...LegendGroups.OGM },
-    { key: 'eat-local', active: false, ...LegendGroups.OGM },
-    { key: 'development', group: 'Greenspace', active: false },
+    { key: 'eat-local', active: true, ...LegendGroups.OGM },
+    { key: 'create-community', active: false, ...LegendGroups.OGM },
   ]
 }
 

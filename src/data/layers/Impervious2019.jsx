@@ -30,8 +30,9 @@ const layer = {
   legendTitle: 'Percentage of Impervious Surfaces',
   styleMap: styleMap,
   questions: [
+    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
     { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
-    { key: 'development', group: 'Water', active: false },
+    { key: 'create-community', group: 'Water', active: false },
   ]
 }
 

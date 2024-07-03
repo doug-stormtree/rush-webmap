@@ -39,7 +39,7 @@ const layer = {
   },
   questions: [
     { key: 'have-it-all', active: true, ...LegendGroups.OGM },
-    { key: 'development', group: 'Community', active: false },
+    { key: 'create-community', active: false, ...LegendGroups.OGM },
   ]
 }
 
