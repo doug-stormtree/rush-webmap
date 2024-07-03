@@ -3,7 +3,6 @@ import {
   mapPopupContent,
   setStyleIfSupported
 } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ['Cliff', { fillColor: 'rgb(156,156,156)' }],

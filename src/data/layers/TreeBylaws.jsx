@@ -1,5 +1,4 @@
 import { mapPopupContent, setStyleIfSupported } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const title = 'Tree Protection Bylaws'
 const layer = {

@@ -1,5 +1,4 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 import { GiPineTree } from "react-icons/gi";
 
 const styleMap = new Map([
