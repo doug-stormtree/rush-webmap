@@ -79,6 +79,7 @@ const layer = {
   questions: [
     { key: 'eat-local', active: false, ...LegendGroups.StartOff },
     { key: 'protect-the-coast', active: false, ...LegendGroups.StartOn },
+    { key: 'protect-from-flooding', active: false, ...LegendGroups.StartOff },
     { key: 'create-community', group: 'Water', active: false },
   ]
 }
