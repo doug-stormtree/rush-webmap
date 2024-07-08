@@ -44,7 +44,7 @@ const layer = {
   questions: [
     { key: 'be-healthy', active: false, group: 'Landcover' },
     { key: 'create-community', active: true, ...LegendGroups.StartOn },
-    { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
+    { key: 'protect-from-flooding', active: false, ...LegendGroups.StartOff },
     { key: 'create-community', group: 'Water', active: false },
   ]
 }
