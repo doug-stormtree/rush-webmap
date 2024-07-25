@@ -25,8 +25,8 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', group: 'Community', active: true },
-    { key: 'create-community', group: 'Community', active: false },
+    { key: 'beat-the-heat', active: true, group: 'Community' },
+    { key: 'create-community', active: false, group: 'Community' },
   ]
 }
 

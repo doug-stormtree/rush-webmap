@@ -74,7 +74,7 @@ const layer = {
   },
   questions: [
     { key: 'travel-light', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', group: 'Energy', active: false },
+    { key: 'create-community', active: false, group: 'Energy' },
   ]
 }
 

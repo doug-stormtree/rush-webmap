@@ -38,7 +38,7 @@ const layer = {
   },
   questions: [
     { key: 'eat-local', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', group: 'Community', active: false },
+    { key: 'create-community', active: false, group: 'Community' },
   ]
 }
 

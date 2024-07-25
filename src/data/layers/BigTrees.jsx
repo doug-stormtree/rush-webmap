@@ -41,7 +41,7 @@ const layer = {
   },
   questions: [
     { key: 'be-healthy', active: true, group: 'Trees' },
-    { key: 'create-community', group: 'Greenspace', active: false },
+    { key: 'create-community', active: false, group: 'Greenspace' },
   ]
 }
 

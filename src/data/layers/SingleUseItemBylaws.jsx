@@ -85,7 +85,7 @@ const layer = {
   },
   questions: [
     { key: 'have-it-all', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', group: 'Civic', active: false },
+    { key: 'create-community', active: false, group: 'Civic' },
   ]
 }
 

@@ -31,7 +31,7 @@ const layer = {
   styleMap: styleMap,
   questions: [
     { key: 'protect-the-coast', active: false, ...LegendGroups.StartOff },
-    { key: 'create-community', group: 'Water', active: false },
+    { key: 'create-community', active: false, group: 'Water' },
   ]
 }
 
