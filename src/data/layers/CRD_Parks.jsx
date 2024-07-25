@@ -30,11 +30,10 @@ const layer = {
     }
   },
   questions: [
-    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
     { key: 'be-happy', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: true, ...LegendGroups.StartOn },
+    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
     { key: 'find-shelter', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', group: 'Greenspace', active: false },
+    { key: 'create-community', active: false, group: 'Greenspace' },
   ]
 }
 

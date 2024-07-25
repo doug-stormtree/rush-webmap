@@ -32,7 +32,7 @@ const layer = {
   questions: [
     { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
     { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', group: 'Water', active: false },
+    { key: 'create-community', active: false, group: 'Water' },
   ]
 }
 

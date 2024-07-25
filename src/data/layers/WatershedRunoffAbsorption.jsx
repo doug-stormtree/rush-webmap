@@ -66,7 +66,7 @@ const layer = {
   },
   questions: [
     { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Greenspace' },
+    { key: 'create-community', active: false, group: 'Water' },
   ]
 }
 

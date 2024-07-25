@@ -51,7 +51,7 @@ const layer = {
   },
   questions: [
     { key: 'protect-the-coast', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', group: 'Water', active: false },
+    { key: 'create-community', active: false, group: 'Water' },
   ]
 }
 
