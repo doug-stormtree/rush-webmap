@@ -25,6 +25,7 @@ import QuestionCardBar from './QuestionCardBarTheme';
 import ContentPane from './ContentPaneTheme';
 import ContentInitiativeContainer from './ContentInitiativeContainerTheme';
 import RabbitHoleDrawer from './RabbitHoleDrawerTheme';
+import TutorialPopup from './TutorialPopupTheme';
 
 const MenuCard = defineStyleConfig({
   baseStyle: {
@@ -143,6 +144,7 @@ const theme = extendTheme({
     ContentPane,
     ContentInitiativeContainer,
     RabbitHoleDrawer,
+    TutorialPopup,
     Button: {
       variants: {
         nav: {

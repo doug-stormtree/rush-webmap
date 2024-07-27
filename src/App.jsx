@@ -140,6 +140,7 @@ function WebMap() {
         top='2.5rem'
         direction='row'
         //zIndex='-1'
+        overflow='hidden'
       >
         <MapView
           flex='1'
