@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Box,
   useBreakpointValue,
@@ -21,13 +21,14 @@ export default function QuestionCardBar() {
     sectionFocus: state.sectionFocus
   }))
   const scrollRef = useRef(null)
+  const [isOpen, setIsOpen] = useState(false)
   
   return (
     <Box __css={styles.container} ref={scrollRef}>
-      <Box __css={styles.button}>
+      <Box __css={styles.button} onClick={() => setIsOpen(!isOpen)}>
         How can I...?
       </Box>
-      {screenSize === 'desktop' && (
+      {(isOpen || screenSize === 'desktop') && (
         <Box __css={styles.bar}>
           <QuestionCard
             key={activeQuestion}
@@ -45,7 +46,7 @@ export default function QuestionCardBar() {
                 <QuestionCard
                   key={q[0]}
                   question={{key: q[0], ...q[1]}}
-                  size='button'
+                  size={isOpen ? 'wide' : 'button'}
                   scrollRef={scrollRef}
                 />
               )

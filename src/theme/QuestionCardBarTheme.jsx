@@ -30,16 +30,17 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     container: {
       position:'absolute',
-      
       zIndex:'9',
       paddingX: '0.625rem',
+      
+      overflowY: 'scroll',
     },
     bar: {
       display: 'flex',
       flexDirection: 'column',
       paddingY: '10px',
       gap: '10px',
-      transform: 'scaleX(-1)', //Flips the child back to normal
+      
     },
     button: {
       fontFamily: 'var(--chakra-fonts-body)',
@@ -57,24 +58,32 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       container: {
         transform: 'scaleX(-1)', //Reflects the parent horizontally
         background: containerGradient,
-        height: 'calc(100% - 40px)',
+        height: 'calc(100% - 2.5rem)',
         minWidth: '140px',
-        overflow: 'scroll',
         pointerEvents: 'none',
-
         top:'2.5rem',
+      },
+      bar: {
+        transform: 'scaleX(-1)', //Flips the child back to normal
       },
       button: {
         display: 'block',
         transform: 'scaleX(-1)'
-
-
       },
     },
     mobile: {
       container: {
-        bottom: '0.625rem'
-      }
+        bottom: '0',
+        maxHeight: 'calc(100% - 2.5rem)',
+        width: '100%',
+      },
+      bar: {
+        alignItems: 'center',
+      },
+      button: {
+        maxWidth: '140px',
+        marginBottom: '0.625rem'
+      },
     }
   },
   defaultProps: {
