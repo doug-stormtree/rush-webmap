@@ -22,3 +22,14 @@ export const LegendGroups = {
   StartOff: { group: 'Deeper Connections', position: 1, subheading: undefined},
   OGM: { group: 'Plot that Spot', position: 9999, subheading: 'Connect the call to action by joining these community mapping projects powered by OpenGreenMap.' },
 }
+
+export const InitiativeTags = {
+  StoryMap: 'StoryMap',
+  Report: 'Report',
+  Organization: 'Organization',
+  Business: 'Business',
+  Indigenous: 'Indigenous',
+  Map: 'Map',
+  Agreement: 'Agreement',
+  Target: 'Target',
+}
