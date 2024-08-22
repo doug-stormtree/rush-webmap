@@ -32,4 +32,7 @@ export const InitiativeTags = {
   Map: 'Map',
   Agreement: 'Agreement',
   Target: 'Target',
+  Initiative: 'Initiative',
+  Program: 'Program',
+  Portal: 'Info Portal',
 }
