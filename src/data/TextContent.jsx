@@ -37,4 +37,6 @@ export const InitiativeTags = {
   Portal: 'Info Portal',
   Funding: 'Funding',
   Government: 'Government',
+  Video: 'Video',
+  Infographic: 'Infographic',
 }
