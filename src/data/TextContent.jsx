@@ -36,4 +36,5 @@ export const InitiativeTags = {
   Program: 'Program',
   Portal: 'Info Portal',
   Funding: 'Funding',
+  Government: 'Government',
 }
