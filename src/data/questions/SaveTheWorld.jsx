@@ -174,7 +174,7 @@ const Question = {
         title: 'Indigenous Climate Hub',
         link: 'https://victoriafoundation.bc.ca/grants-funding/nature-based-climate-action-funding/',
         image: 'https://indigenousclimatehub.ca/wp-content/uploads/2020/10/ICH-logo-clr-01-sml.png',
-        description: 'Find support from the Victoria Foundation with climate action funding.',
+        description: 'The Indigenous Climate Hub is a web platform developed by Indigenous peoples for Indigenous peoples across Canada. With the expectation that Indigenous communities will experience the impacts of climate change in ways that may be different from most non-Indigenous Canadians, the Hub offers a place for Indigenous peoples to share their unique climate change experiences and stories. The Hub also provides access to climate change resources and tools that will support Indigenous peoples in monitoring and adapting to the various impacts of climate change.',
         tags: [
           Tag.Organization,
           Tag.Indigenous,
@@ -191,7 +191,7 @@ const Question = {
         ],
       },
       {
-        title: 'Youth Policy Program - Vancouver Foundation',
+        title: 'Youth Policy Program - LEVEL',
         link: 'https://levelvf.ca/youth-policy-program/program-outline/',
         image: 'https://levelvf.ca/wp-content/uploads/2018/12/header-ypp.png',
         description: 'The LEVEL Youth Policy Program (YPP) brings together Indigenous and racialized immigrant and refugee youth from across BC to provide training to shape and advocate for public policy that addresses issues impacting their lives. The YPP is an initiative of the Vancouver Foundation.',

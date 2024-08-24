@@ -332,7 +332,7 @@ const Question = {
       {
         title: 'Victoria Grandmothers for Africa',
         link: 'https://www.vg4a.ca/',
-        image: 'https://cdn.wildapricot.com/382740/resources/Pictures/VG4A%20logo.jpg?version=1694798743000&Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLndpbGRhcHJpY290LmNvbS8zODI3NDAvcmVzb3VyY2VzL1BpY3R1cmVzL1ZHNEElMjBsb2dvLmpwZz92ZXJzaW9uPTE2OTQ3OTg3NDMwMDAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3MjQzNTg5MzR9LCJJcEFkZHJlc3MiOnsiQVdTOlNvdXJjZUlwIjoiMC4wLjAuMC8wIn19fV19&Signature=sUZ4X00J-lGtwYDNqNcuFEKjto7hslw8W38SsE7UwLNWb-Ad74eP-q4a86giBJoBbPYHhl6KL3E-s3QWfD8xfIsCBBG6ssmeq-sjf2WdfArWv1O6LFKR4WiL3bQwO0mhi4zzPZqpBjNJwOCz8k~c5VL8tSTNXCYYVGnOewbjF7uAin1-PlnMdJgvbhOfCYh8~UiO~uOFkmhRCYWXtuIjoN-Ze9X2hMRXyTq7bYaOWP2gTl556TDaFEEk8qI7stvL8rgyyYeuIPUqLf1C-WnSBQWnGkk0gsIbQIIAF5PFURpfisNoI5LyhHI-0eFeedsxEbIujRHh4C6XvPrsE688MQ__&Key-Pair-Id=K27MGQSHTHAGGF',
+        image: require('../png/VG4A.jpg'),
         description: 'VG4A is a group of over 100 Victoria grandmothers and grand others who work to raise funds and awareness to support Africa’s resilient grandmothers who have taken on the loving challenge of raising their grandchildren orphaned due to HIV & AIDS. Organizing, fundraising, awareness, and social events include sale of crafts at markets; school and community presentations; and an annual cycling tour. All proceeds from VG4A are donate to the Stephen Lewis Foundation Grandmothers to Grandmothers Campaign.',
         tags: [
           Tag.Organization,

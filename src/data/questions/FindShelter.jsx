@@ -62,7 +62,7 @@ const Question = {
       {
         title: 'Innovating the Future of Housing',
         link: 'https://www.youtube.com/watch?v=HLU0UOt9RoA&t=387s',
-        image: '',
+        image: 'https://i.ytimg.com/vi/HLU0UOt9RoA/maxresdefault.jpg',
         description: 'The Rising Economy Conference 2024 hosted this fascinating fireside talk explores how innovation can solve some of our biggest urban housing challenges, infusing the way we build with imagination and innovation to counter environmental damage, soaring costs, long construction timelines, and labour and material shortages.',
         tags: [
           Tag.Video,
