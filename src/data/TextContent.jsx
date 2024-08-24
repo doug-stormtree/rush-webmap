@@ -40,3 +40,21 @@ export const InitiativeTags = {
   Video: 'Video',
   Infographic: 'Infographic',
 }
+
+export const InitiativeTagColors = {
+  Organization: 'blue',
+  Business: 'blue',
+  Initiative: 'cyan',
+  Program: 'cyan',
+  Government: 'red',
+  Indigenous: 'orange',
+  Funding: 'green',
+  Report: 'gray',
+  Agreement: 'teal',
+  Target: 'red',
+  StoryMap: 'purple',
+  Map: 'purple',
+  Video: 'pink',
+  Infographic: 'yellow',
+  'Info Portal': 'yellow',
+}
