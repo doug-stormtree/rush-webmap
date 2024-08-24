@@ -1,3 +1,5 @@
+import { InitiativeTags as Tag } from '../TextContent';
+
 const Question = {
   key: 'find-shelter',
   title: "Find Shelter",
@@ -53,6 +55,112 @@ const Question = {
         link: 'https://storymaps.arcgis.com/stories/14aeb7c901e04cc59272745e7a538994',
         image: require('../png/MakingRoom.png'),
         description: 'This story map is a hub of resources, information and narrative that builds awareness about the plight of houselessness generally, as it also tells of the specific response to houselessness in the North Park Community of Victoria: a Transitional Tiny Home Village made of re-purposed shipping containers.',
+        tags: [
+          Tag.StoryMap,
+        ],
+      },
+      {
+        title: 'Innovating the Future of Housing',
+        link: 'https://www.youtube.com/watch?v=HLU0UOt9RoA&t=387s',
+        image: 'https://i.ytimg.com/vi/HLU0UOt9RoA/maxresdefault.jpg',
+        description: 'The Rising Economy Conference 2024 hosted this fascinating fireside talk explores how innovation can solve some of our biggest urban housing challenges, infusing the way we build with imagination and innovation to counter environmental damage, soaring costs, long construction timelines, and labour and material shortages.',
+        tags: [
+          Tag.Video,
+        ],
+      },
+      {
+        title: 'CRD Housing Needs Assessment',
+        link: 'https://www.victoria.ca/media/file/crd-housing-needs-reportvictoria2020pdf',
+        image: 'https://www.victoria.ca/sites/default/files/Victoria%20Logo_0.png',
+        description: 'This 2020 profile summarizes the findings of the City of Victoria Housing Needs Report which was completed as part of a joint Housing Needs Report project for 11 CRD communities.  It offers detailed Stats Can data on community and housing profiles, and summarizes key areas of local need, challenges and opportunities with regard to housing in Victoria. including an estimate of the number and size of housing units required to address existing demand and future growth over the next five years.',
+        tags: [
+          Tag.Report,
+          Tag.Government,
+        ],
+      },
+      {
+        title: 'City of Victoria Housing Strategy Annual Review 2022',
+        link: 'https://www.victoria.ca/media/file/housing-strategy-annual-review',
+        image: 'https://www.victoria.ca/sites/default/files/Victoria%20Logo_0.png',
+        description: 'This report provides an in-depth summary of the annual as well as cumulative progress made to achieve the goals of the Victoria Housing Strategy. It describes the state of Housing in Victoria in 2022, and details the City’s ongoing efforts to track and improve the supply and diversity of both affordable and market housing.',
+        tags: [
+          Tag.Report,
+          Tag.Government,
+        ],
+      },
+      {
+        title: 'Numbeo Cost of Living Comparison',
+        link: 'https://www.numbeo.com/cost-of-living/in/Victoria',
+        image: 'https://www.numbeo.com/images/numbeo_1B3B6F.svg',
+        description: 'This site offers a cool summary and comparison of cost of living, property prices, and quality of life for cities across the globe. In a quick search you can see how Victoria compares on these counts to Saanich, Duncan as well as to cities much further abroad. Fun Fact from Numbeo stats: Victoria has the 11th Most Expensive Potato in the world (out of 404 cities compared).',
+        tags: [
+          Tag.Portal,
+        ],
+      },
+      {
+        title: 'CRHC Current Developments',
+        link: 'https://www.crd.bc.ca/crhc/current-developments',
+        image: 'https://www.crd.bc.ca/images/default-source/housing/logos/crhc_logo_2021.png',
+        description: 'Capital Region Housing Corporation (CRHC) is working to increase affordable housing opportunities for individuals and families in the CRD.  This site allows users to view available rentals in CRHC\'s newest buildings, and offers a summary of more developments planned and in progress.',
+        tags: [
+          Tag.Portal,
+        ],
+      },
+      {
+        title: 'CRHC Information about Properties',
+        link: 'https://www.crd.bc.ca/crhc/applying-for-housing/information-about-properties',
+        image: 'https://www.crd.bc.ca/images/default-source/housing/logos/crhc_logo_2021.png',
+        description: 'Part of the Capital Region Housing Corporation\'s (CRHC) mission is to develop and manage affordable housing for low income households within the CRD. This CRHC site lists and maps affordable and subsidized housing in the region.',
+        tags: [
+          Tag.Portal,
+        ],
+      },
+      {
+        title: 'Building Benchmark BC',
+        link: 'https://buildingbenchmarkbc.ca/#results',
+        image: 'https://buildingbenchmarkbc.ca/assets/img/logo.svg',
+        description: 'Building Benchmark BC is a voluntary energy benchmarking and disclosure program led by a growing collection of local governments with shared interest in climate change mitigation in the built environment, as well as understanding the role of building energy benchmarking and disclosure within a larger suite of climate regulations, policies, and incentives. By participating in voluntary benchmarking and disclosure, property owners can ensure that their voices are heard in the industry shift towards increased building performance. Owners can also learn more about how their building(s) are stacking up against provincial building stock in BBBC Annual Reports.',
+        tags: [
+          Tag.Initiative,
+        ],
+      },
+      {
+        title: 'Nationally, Renters report lower quality of life than Homeowners',
+        link: 'https://www150.statcan.gc.ca/n1/en/daily-quotidien/240219/dq240219b-eng.pdf?st=yLgcSOUR',
+        image: require('../png/GovCan.png'),
+        description: 'This Stats Can Report released in February, 2024, reveals that nationally, in 2021 and 2022, people living in rental housing report lower quality of life across several dimensions of well-being compared with those living in a home owned by someone in the household. When compared with homeowners, renters were over 15 percentage points more likely to report difficulty meeting financial needs, and over 11 percentage points less likely to report high overall life satisfaction. Tenants were also less likely to report a strong sense of belonging to their community and were more likely to report feelings of loneliness.',
+        tags: [
+          Tag.Report,
+          Tag.Government,
+        ],
+      },
+      {
+        title: 'StreetMessenger: Shelter Map',
+        link: 'https://shelters.bc211.ca/map',
+        image: 'https://shelters.bc211.ca/assets/sms-logo-final2-c120e0b7abb88a6d507e9f4646e28cbdd6c23f2a981f72e3904fdcb78b0f4bfa.png',
+        description: 'This Shelter Map of Victoria and the Lower Mainland pinpoints Shelters, categorizes them, and indicates whether each Shelter is pet-friendly, takes large items, and is wheelchair accessible. Shelters with confidential addresses are not shown on the map.',
+        tags: [
+          Tag.Map,
+        ],
+      },
+      {
+        title: 'City of Victoria Census',
+        link: 'https://opendata.victoria.ca/datasets/b02a6f0d96f0471bb6aff8ea8404386a/explore',
+        image: 'https://www.victoria.ca/sites/default/files/Victoria%20Logo_0.png',
+        description: 'This 2016 Short Form Census (100% Sample) gives data on different types of housing units by neighbourhood in the City of Victoria.  Data were adapted from the 2016 National Household Survey (short form census questionnaire).',
+        tags: [
+          Tag.Report,
+          Tag.Government,
+        ],
+      },
+      {
+        title: 'Development of Folkets Park, Copenhagen',
+        link: 'https://www.youtube.com/watch?v=1zQqgvGcK0E',
+        image: 'https://i.ytimg.com/vi/1zQqgvGcK0E/maxresdefault.jpg',
+        description: 'This video documents Copenhagen\'s new inclusive approach to planning and design. It is a talk by Kenneth A. Balfelt, about how in-depth interviews and dialogue meetings with park users helped to generate a new working model for a troubled park.',
+        tags: [
+          Tag.Video,
+        ],
       },
     ],
   },

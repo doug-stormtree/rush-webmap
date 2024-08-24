@@ -1,11 +1,14 @@
 import React from 'react';
 import {
+  Badge,
   Heading,
   Image,
   LinkBox,
   LinkOverlay,
+  Stack,
   Text,
 } from '@chakra-ui/react';
+import { InitiativeTagColors } from '../data/TextContent';
 
 export default function InitiativeCard({initiative, flip = false}) {
 
@@ -44,6 +47,11 @@ export default function InitiativeCard({initiative, flip = false}) {
           {initiative.title}
         </LinkOverlay>
       </Heading>
+      <Stack direction='row' marginX='5' marginBottom='2'>
+        {initiative.tags.map((tag) => (
+          <Badge colorScheme={InitiativeTagColors[tag] ?? 'gray.200'}>{tag}</Badge>
+        ))}
+      </Stack>
       <Text
         marginX='5'
         marginBottom={{base: '4', md: '3'}}

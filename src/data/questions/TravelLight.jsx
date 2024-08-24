@@ -1,3 +1,5 @@
+import { InitiativeTags as Tag } from '../TextContent';
+
 const Question = {
   key: 'travel-light',
   title: 'Travel Light',
@@ -51,46 +53,98 @@ const Question = {
     initiatives: [
       {
         title: 'BC Climate Emergency Report Card',
-        description: "The BC Climate Emergency Campaign has published a December 2022 Progress Report on the BC government's progress implementing ten urgent climate actions. These actions were called for in an open letter signed by a growing coalition of organizations that represent over two million British Columbians.",
+        link: 'https://bcclimateemergency.ca/report-card',
         image: require('../png/ClimateEmergencyReportCard.png'),
-        link: 'https://bcclimateemergency.ca/report-card'
+        description: "The BC Climate Emergency Campaign has published a December 2022 Progress Report on the BC government's progress implementing ten urgent climate actions. These actions were called for in an open letter signed by a growing coalition of organizations that represent over two million British Columbians.",
+        tags: [
+          Tag.Report,
+        ],
       },
       {
         title: 'Environment & Climate Change Canada Funding',
-        description: 'Funding offered by the Government of Canada through various Grants and Contributions programs. Eligible groups, organizations and individuals can apply for support of projects that protect or conserve our natural environment.',
+        link: 'https://www.canada.ca/en/environment-climate-change/services/environmental-funding.html',
         image: require('../png/GovCan.png'),
-        link: 'https://www.canada.ca/en/environment-climate-change/services/environmental-funding.html'
+        description: 'Funding offered by the Government of Canada through various Grants and Contributions programs. Eligible groups, organizations and individuals can apply for support of projects that protect or conserve our natural environment.',
+        tags: [
+          Tag.Funding,
+        ],
       },
       {
         title: 'CleanBC Go Electric',
-        description: 'Buying an electric vehicle is more affordable than ever. You can apply for rebates on eligible cars, SUVs, trucks and vans and get rebates on charging stations, too.',
+        link: 'https://goelectricbc.gov.bc.ca/personal-rebate-offers/passenger-vehicle-rebates/',
         image: require('../png/GoElectric.png'),
-        link: 'https://goelectricbc.gov.bc.ca/personal-rebate-offers/passenger-vehicle-rebates/'
+        description: 'Buying an electric vehicle is more affordable than ever. You can apply for rebates on eligible cars, SUVs, trucks and vans and get rebates on charging stations, too.',
+        tags: [
+          Tag.Funding,
+        ],
       },
       {
         title: 'South Island Climate Action Network',
-        description: 'SI-CAN is a network of volunteers, citizens, and professionals on Southern Vancouver Island concerned with the climate emergency. SI-CAN shares useful information and urges businesses, individuals, and governments throughout the region towards best-practices to reduce emissions and strengthen carbon sinks.',
+        link: 'https://siclimateactionnetwork.wordpress.com/',
         image: require('../png/SICAN.png'),
-        noText: true,
-        link: 'https://siclimateactionnetwork.wordpress.com/'
+        description: 'SI-CAN is a network of volunteers, citizens, and professionals on Southern Vancouver Island concerned with the climate emergency. SI-CAN shares useful information and urges businesses, individuals, and governments throughout the region towards best-practices to reduce emissions and strengthen carbon sinks.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'BC Hydro EV',
-        description: 'The BC Hydro EV network currently has over 70 fast charging stations across B.C., with more on the way. This handy webpage tells you everything you need to know about using the charge stations, and maps out the EV network so you know where you’ll find 50kW DC fast chargers, 25kW “mini” fast chargers, and Level 2 chargers.',
+        link: 'https://electricvehicles.bchydro.com/charge/public-charging/our-fast-charging-network',
         image: require('../png/BCHydro.png'),
-        link: 'https://electricvehicles.bchydro.com/charge/public-charging/our-fast-charging-network'
+        description: 'The BC Hydro EV network currently has over 70 fast charging stations across B.C., with more on the way. This handy webpage tells you everything you need to know about using the charge stations, and maps out the EV network so you know where you’ll find 50kW DC fast chargers, 25kW “mini” fast chargers, and Level 2 chargers.',
+        tags: [
+          Tag.Map,
+        ],
       },
       {
         title: 'Chargepoint',
-        description: 'Chargepoint created the world’s largest and most open EV charging network, and is “leading the charge” on pioneering new ways to make electric mobility an easy choice for all people and goods.',
+        link: 'https://www.chargepoint.com/en-ca',
         image: require('../png/Chargepoint.png'),
-        link: 'https://www.chargepoint.com/en-ca'
+        description: 'Chargepoint created the world’s largest and most open EV charging network, and is “leading the charge” on pioneering new ways to make electric mobility an easy choice for all people and goods.',
+        tags: [
+          Tag.Portal,
+          Tag.Map,
+          Tag.Business,
+        ],
       },
       {
         title: 'Plug In BC',
-        description: 'Plug In BC provides a hub of super practical information and incentive programs to support consumers and fleets in BC to go electric.',
+        link: 'https://pluginbc.ca',
         image: require('../png/PlugInBC.png'),
-        link: 'https://pluginbc.ca'
+        description: 'Plug In BC provides a hub of super practical information and incentive programs to support consumers and fleets in BC to go electric.',
+        tags: [
+          Tag.Portal,
+          Tag.Map,
+          Tag.Organization,
+        ],
+      },
+      {
+        title: 'NanoTerraTech',
+        link: 'https://nanoterratech.com/',
+        image: 'https://nanoterratech.com/wp-content/uploads/2023/09/NTT-BGBG-Logos_rectangle-300x146.png',
+        description: 'NanoTerraTech has developed Sustainable Advanced Materials from Forestry Waste that Replaces Fossil Fuel Derived Carbon Materials in Manufacturing. They use simple natural materials like Tree Bark, Sawdust and Forestry Residue, and with their renewable energy powered technology and novel methodology, they convert the waste biomass into an Environmentally Friendly Advanced Material: BIO-Graphite.',
+        tags: [
+          Tag.Business,
+        ],
+      },
+      {
+        title: 'Capital Bike',
+        link: 'https://capitalbike.ca/',
+        image: 'https://capitalbike.ca/wp-content/uploads/2021/12/social.png',
+        description: 'Capital Bike is a cycling society born from the merger of the Greater Victoria Cycling Coalition and the Greater Victoria Bike to Work Society. Capital Bike’s vision is to serve the entire Capital region with cycling education, celebration, and advocacy to get more people cycling to more places more often.',
+        tags: [
+          Tag.Organization,
+        ],
+      },
+      {
+        title: 'RUSH Community TikTok Project',
+        link: 'https://storymaps.arcgis.com/stories/d3dce22ddab4487a9ec38325257e05d8',
+        image: require('../png/RUSH.png'),
+        description: 'For our project we produced three TikTok videos, for the RUSH website. Each video covers different themes. We collaborated with local high school students to hear their opinions and also broaden their knowledge. Main themes include Safe Bus Stops, Big trees, Invasive species.',
+        tags: [
+          Tag.Video,
+        ],
       },
     ],
   },

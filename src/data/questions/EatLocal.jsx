@@ -1,3 +1,5 @@
+import { InitiativeTags as Tag } from '../TextContent';
+
 const Question = {
   key: 'eat-local',
   title: "Eat Local",
@@ -55,87 +57,207 @@ const Question = {
     initiatives: [
       {
         title: "Our Food Future",
-        image: require('../png/OurFoodFuture.png'),
         link: "https://biomimicryfrontiers.com/our-food-future",
-        description: 'Biomimicry reminds us that there is no waste out in nature, and to truly imitate nature, we must eliminate waste. Biomimicry Frontiers brings a biomimetic lens to the Our Food Future initiative.'
+        image: require('../png/OurFoodFuture.png'),
+        description: 'Biomimicry reminds us that there is no waste out in nature, and to truly imitate nature, we must eliminate waste. Biomimicry Frontiers brings a biomimetic lens to the Our Food Future initiative.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'Iyé Creative',
-        image: require('../png/IyeCreative.png'),
         link: 'https://www.iyeherstories.com/',
-        description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.'
+        image: require('../png/IyeCreative.png'),
+        description: 'Iyé Creative is a food justice and grassroots collective nurturing reciprocal relations and mutual aid systems. Their work involves supporting the healthy and culturally informed food needs of disenfranchised communities, raising awareness of food accessibility, and uplifting racialized voices in food production and distribution.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'Greater Victoria Cultural Food Community Map',
-        image: require('../png/GVCulturalFoodMap.png'),
         link: 'https://storymaps.arcgis.com/stories/06ee241047d8455bbb02230f453f2edc',
-        description: 'The Greater Victoria Cultural Food Community Map illustrates many ways in which food is a critical component of cultural well-being. The Map emphasizes that while Cultural foods help individuals maintain a sense of belonging and identity, there is a lack of culturally relevant foods being grown and sold at affordable prices in the Victoria and Saanich regions for IBPOC, refugees, and community members experiencing marginalization. The Map recommends allocating more resources towards the local production of culturally appropriate foods, as well as to cultural food events and other avenues to help folks navigate the local food scene.'
+        image: require('../png/GVCulturalFoodMap.png'),
+        description: 'The Greater Victoria Cultural Food Community Map illustrates many ways in which food is a critical component of cultural well-being. The Map emphasizes that while Cultural foods help individuals maintain a sense of belonging and identity, there is a lack of culturally relevant foods being grown and sold at affordable prices in the Victoria and Saanich regions for IBPOC, refugees, and community members experiencing marginalization. The Map recommends allocating more resources towards the local production of culturally appropriate foods, as well as to cultural food events and other avenues to help folks navigate the local food scene.',
+        tags: [
+          Tag.StoryMap,
+          Tag.Map,
+        ],
       },
       {
         title: 'BC Farmers’ Market - Food coupons',
-        image: require('../png/BCFarmersMarket.png'),
         link: 'https://bcfarmersmarket.org/coupon-program/where-it-operates/',
-        description: 'The Farmers’ Market Nutrition Coupon Program is "a healthy eating initiative that supports farmers’ markets and strengthens food security across British Columbia." Community partner organizations provide coupons to lower-income families, pregnant people and seniors. These coupons can be spent at all participating member farmers’ markets. Households enrolled in the program may receive $27/week in coupons for up to 16 weeks. Get in touch with your local community partner (identified on the website) to access coupons. There is high demand and limited funding for this program across BC, and capacity will vary from partner to partner.'
+        image: require('../png/BCFarmersMarket.png'),
+        description: 'The Farmers’ Market Nutrition Coupon Program is "a healthy eating initiative that supports farmers’ markets and strengthens food security across British Columbia." Community partner organizations provide coupons to lower-income families, pregnant people and seniors. These coupons can be spent at all participating member farmers’ markets. Households enrolled in the program may receive $27/week in coupons for up to 16 weeks. Get in touch with your local community partner (identified on the website) to access coupons. There is high demand and limited funding for this program across BC, and capacity will vary from partner to partner.',
+        tags: [
+          Tag.Initiative,
+          Tag.Program,
+        ],
       },
       {
         title: 'Cascadia Seaweed',
-        image: require('../png/CascadiaSeaweed.png'),
         link: 'https://www.cascadiaseaweed.com/about-us-4-0',
-        description: 'Cultivated kelp provides a nature-based solution to climate change and food security. Cascadia Seaweed cultivates local species of seaweed on low-impact ocean farms in partnership with coastal First Nations, harvests the seaweed, and manufactures products for land-based farmers. Cascadia operations use biological solutions to increase food production, mitigate climate change, improve ocean ecosystems, and advance Indigenous reconciliation.  Cascadia describes their operation as "sustainable aquaculture supporting regenerative agriculture — a circular system where every touch point makes a positive impact."'
+        image: require('../png/CascadiaSeaweed.png'),
+        description: 'Cultivated kelp provides a nature-based solution to climate change and food security. Cascadia Seaweed cultivates local species of seaweed on low-impact ocean farms in partnership with coastal First Nations, harvests the seaweed, and manufactures products for land-based farmers. Cascadia operations use biological solutions to increase food production, mitigate climate change, improve ocean ecosystems, and advance Indigenous reconciliation.  Cascadia describes their operation as "sustainable aquaculture supporting regenerative agriculture — a circular system where every touch point makes a positive impact."',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'Capital Region Food & Agriculture Initiatives Roundtable',
-        image: require('../png/CRFAIR.png'),
         link: 'http://www.crfair.ca/',
-        description: 'The Capital Region Food and Agricultural Initiatives Roundtable (CRFAIR) works to mobilize and connect efforts to develop healthy, equitable and sustainable food systems in the Capital Region. CRFAIR acts as a regional backbone organization, and offers a range of services to community organizations, government, and industry.'
+        image: require('../png/CRFAIR.png'),
+        description: 'The Capital Region Food and Agricultural Initiatives Roundtable (CRFAIR) works to mobilize and connect efforts to develop healthy, equitable and sustainable food systems in the Capital Region. CRFAIR acts as a regional backbone organization, and offers a range of services to community organizations, government, and industry.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'Cowichan Green Community',
-        image: require('../png/CowichanGreen.png'),
         link: 'https://cowichangreencommunity.org/all-locations/',
-        description: 'The Cowichan Green Communities local farm map features producers across Vancouver Island dedicated to adding value to their ecosystems and improving food security.'
+        image: require('../png/CowichanGreen.png'),
+        description: 'The Cowichan Green Communities local farm map features producers across Vancouver Island dedicated to adding value to their ecosystems and improving food security.',
+        tags: [
+          Tag.Map,
+        ],
       },
       {
         title: 'Foodlands Trust Business Case - CRD',
-        image: require('../png/CRDFoodlands.png'),
         link: 'https://www.crd.bc.ca/docs/default-source/regional-planning-pdf/food-agriculture/foodlands-trust-business-case-february-2022.pdf',
-        description: 'This 2022 business case seeks to understand the challenges and opportunities related to a Foodland Trust Incubator Program in the CRD. The aim of Foodland Trust is to increase access to agricultural land and provide start-up support for aspiring farmers, as well as to contribute to local food security. There are only a handful of incubator programs in Canada, including two in the capital region - Haliburton Community Farm in Saanich and Sandown Centre in North Saanich. Moving forward, the CRD and its partners intend to engage with neighbouring First Nations in decision making of the Foodland Trust, and invite them to incorporate traditional and Indigenous food systems on the parcels.'
+        image: require('../png/CRDFoodlands.png'),
+        description: 'This 2022 business case seeks to understand the challenges and opportunities related to a Foodland Trust Incubator Program in the CRD. The aim of Foodland Trust is to increase access to agricultural land and provide start-up support for aspiring farmers, as well as to contribute to local food security. There are only a handful of incubator programs in Canada, including two in the capital region - Haliburton Community Farm in Saanich and Sandown Centre in North Saanich. Moving forward, the CRD and its partners intend to engage with neighbouring First Nations in decision making of the Foodland Trust, and invite them to incorporate traditional and Indigenous food systems on the parcels.',
+        tags: [
+          Tag.Report,
+        ],
       },
       {
         title: 'FED Urban Agriculture',
-        image: require('../png/FEDUrbanAgriculture.png'),
         link: 'https://www.get-fed.ca/my-fed-farm',
-        description: 'FED is a registered charity that partners with growers, restaurants, and others to transform the southern Van Isle cityscape into a vibrant foodscape. FED engages in advocacy and education as well as tackling the awesome dirty work of creating urban food gardens. FED projects include My FED Farm which provides free garden kits and support to vulnerable populations; the Urban Learning Garden in the courtyard of the downtown branch of the GVPL. Check out this site to find videos and resources to learn to grow your own food, as well as everything you need to know about starting a community garden.'
+        image: require('../png/FEDUrbanAgriculture.png'),
+        description: 'FED is a registered charity that partners with growers, restaurants, and others to transform the southern Van Isle cityscape into a vibrant foodscape. FED engages in advocacy and education as well as tackling the awesome dirty work of creating urban food gardens. FED projects include My FED Farm which provides free garden kits and support to vulnerable populations; the Urban Learning Garden in the courtyard of the downtown branch of the GVPL. Check out this site to find videos and resources to learn to grow your own food, as well as everything you need to know about starting a community garden.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'Food Rescue Project',
-        image: require('../png/FoodRescueProject.png'),
         link: 'https://victoriafoundation.bc.ca/food-rescue-project/',
-        description: 'The Food Rescue Project recovers and redistributes fresh food to food insecure communities in the CRD.  Since March 2017, the project has been collecting over 2,000kg of fresh food daily and distributing it through a network of more than 50 organizations including non-profits, First Nations and public schools. The Food Rescue Project estimates that it nourishes about 35,000 people monthly with good food that otherwise would be destined for the landfill.'
+        image: require('../png/FoodRescueProject.png'),
+        description: 'The Food Rescue Project recovers and redistributes fresh food to food insecure communities in the CRD.  Since March 2017, the project has been collecting over 2,000kg of fresh food daily and distributing it through a network of more than 50 organizations including non-profits, First Nations and public schools. The Food Rescue Project estimates that it nourishes about 35,000 people monthly with good food that otherwise would be destined for the landfill.',
+        tags: [
+          Tag.Initiative,
+          Tag.Program,
+        ],
       },
       {
         title: 'Vancouver Island\'s 100-Mile Diet',
-        image: require('../png/VanIsland100MileDiet.png'),
         link: 'https://bcfarmsandfood.com/vancouver-island-farms-local-food-map/',
-        description: 'BC Farms & Food created this interactive farm map to connect people with locally grown foods in 16 Vancouver Island regions. This map guides users to farm stands, u-picks, CSA farm box programs and farmers markets, and highlights farms that offer tours, workshops, wine tasting, earth-to-table restaurants, events and overnight farm stays.'
+        image: require('../png/VanIsland100MileDiet.png'),
+        description: 'BC Farms & Food created this interactive farm map to connect people with locally grown foods in 16 Vancouver Island regions. This map guides users to farm stands, u-picks, CSA farm box programs and farmers markets, and highlights farms that offer tours, workshops, wine tasting, earth-to-table restaurants, events and overnight farm stays.',
+        tags: [
+          Tag.Map,
+        ],
       },
       {
         title: 'Community Food Hub',
-        image: require('../png/CommunityFoodHub.png'),
         link: 'https://www.victoriacommunityfoodhub.com/',
-        description: 'The Victoria Community Food Hub Society (VCFHS) works to strengthen the local food system, build community, and alleviate poverty and hunger by providing access to healthy food for all.'
+        image: require('../png/CommunityFoodHub.png'),
+        description: 'The Victoria Community Food Hub Society (VCFHS) works to strengthen the local food system, build community, and alleviate poverty and hunger by providing access to healthy food for all.',
+        tags: [
+          Tag.Organization,
+        ],
       },
       {
         title: 'Sandown Centre for Regenerative Agriculture',
-        image: 'https://static.wixstatic.com/media/0fd4be_5e90dfb6e65b42808d5f1deaa6d11c53~mv2.png/v1/fill/w_810,h_274,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Sandown%20Centre%20Logo%20-%20Horizontal.png',
         link: 'https://www.sandowncentre.com/',
-        description: 'The Sandown Centre for Regenerative Agriculture operates 83 acres made up of farmland, forest, wetlands, meadows, and community gardens. Sandown serves as a demonstration site and works with farmers, researchers, and community members to develop best practices in regenerative agriculture.'
+        image: 'https://static.wixstatic.com/media/0fd4be_5e90dfb6e65b42808d5f1deaa6d11c53~mv2.png/v1/fill/w_810,h_274,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Sandown%20Centre%20Logo%20-%20Horizontal.png',
+        description: 'The Sandown Centre for Regenerative Agriculture operates 83 acres made up of farmland, forest, wetlands, meadows, and community gardens. Sandown serves as a demonstration site and works with farmers, researchers, and community members to develop best practices in regenerative agriculture.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'TOPSOIL',
-        image: require('../png/TOPSOIL.png'),
         link: 'https://www.topsoileatlocal.com/',
-        description: 'TOPSOIL is a great example of innovative urban agriculture. TOPSOIL transforms unused urban spaces – like rooftops, or vacant blocks awaiting development – into productive and profitable agricultural growing areas to support a sustainable, hyper-local food economy. TOPSOIL uses "innovative, light-footprint gardening technology" like geotextile planter containers to grow a variety of fruit, veggies, salad greens and herbs right in the heart of Victoria. The harvest is sold direct to restaurants and the local community.'
+        image: require('../png/TOPSOIL.png'),
+        description: 'TOPSOIL is a great example of innovative urban agriculture. TOPSOIL transforms unused urban spaces – like rooftops, or vacant blocks awaiting development – into productive and profitable agricultural growing areas to support a sustainable, hyper-local food economy. TOPSOIL uses "innovative, light-footprint gardening technology" like geotextile planter containers to grow a variety of fruit, veggies, salad greens and herbs right in the heart of Victoria. The harvest is sold direct to restaurants and the local community.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
+      },
+      {
+        title: 'Farm to Table Restaurants',
+        link: 'https://www.tourismvictoria.com/blog/harvest-table-greater-victoria',
+        image: 'https://www.tourismvictoria.com/_next/image?url=https%3A%2F%2Fadmin.tourismvictoria.com%2Fcontent%2Fuploads%2F2024%2F03%2F2024_DGV_Vacation_Guide_cover_web.jpg&w=768&q=75',
+        description: 'Big thanks to Tourism Victoria for pulling together this list of restaurants around Greater Victoria that bring a flourishing farm-to-table scene to our region by featuring incredible seasonal offerings grown nearby.',
+        tags: [
+          Tag.Portal,
+        ],
+      },
+      {
+        title: 'Metchosin Farm',
+        link: 'https://metchosinfarm.ca/',
+        image: 'https://metchosinfarm.ca/cdn/shop/files/MF-Seed-The-Change-Banner-websize.png?v=1718832221&width=300',
+        description: 'In the face of a global decline in the diversity of seeds available to farmers and gardeners, Metchosin Farm is dedicated to providing growers with Locally Grown, Adapted, and Open Pollinated seeds. The growers at Metchosin Farm steward heirloom seeds and also create new food plants using traditional plant breeding and selecting methods. Many Metchosin Farm seeds are available online, but why not visit the farm, and buy them directly from the inspiring people who grow them? Metchosin Farm stand is open dawn to dusk 7 days a week, all year round, and well stocked with a full range of products available in season.  Ask about their cool potato project and register for on-farm tours and workshops.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
+      },
+      {
+        title: 'Young Agrarians Foundation',
+        link: 'https://youngagrarians.org/about/',
+        image: require('../png/YoungAgrarians.jpg'),
+        description: 'Young Agrarians is digging in and turning new ground to grow the next generation of ecological farmers in Canada. YA is a volunteer-driven farmer-to-farmer educational resource network made up of a diverse array of food growers and lovers including farmers, fishers, holistic managers, market gardeners, ranchers, seed savers, food activists, bee keepers, community gardeners, and food and farm organizations. With farmers across the country, YA organizes on-farm events to build community and share knowledge with new and young ecological, organic and regenerative farmers. In 2021 only 8.6% of Canadian farmers were under the age of 35, and the farming population reached a historic low in 2021. YA knows that in order to make sustainable food systems a reality, regenerating farmers will be as important as regenerating the land.',
+        tags: [
+          Tag.Organization,
+        ],
+      },
+      {
+        title: 'CLIMAVORE',
+        link: 'https://www.climavore.org/',
+        image: require('../png/Climavore.png'),
+        description: 'CLIMAVORE, a term coined in 2015, is a call to shift to a climate-responsive food system that can grow food while cultivating habitats. Becoming CLIMAVORE advocates for changing farming practices as well as the culture of eating. To become CLIMAVORE is to move beyond a carnivore, omnivore, locavore, vegetarian or vegan diet, and embrace a way of eating that tackles new seasonalities associated with the climate emergency, while addressing the extractive and intensive practices that lead to them. This has to happen not only in people’s kitchens, but also in collective eating spaces where infrastructural change can take place. Becoming CLIMAVORE is now a global network of food trucks, pizzerias, bakeries, ice cream parlours, Michelin-starred establishments, school canteens, collective kitchens, and other feeding spaces that are transitioning from becoming places that work primarily to nourish and restore human body, to places that also venture to care for the planet’s ecology.  They do this by creatively adapting their food offerings to the climate crisis. The transition starts with the removal of farmed salmon and other intensively farmed ingredients from the menu, replacing them with others that positively contribute to ebuilding habitats and restoring the planet. If you are interested in Becoming CLIMAVORE, get in touch!',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
+      },
+      {
+        title: 'Closing the Supply Gap',
+        link: 'https://www.closingthesupplygap.com/',
+        image: 'https://static.wixstatic.com/media/287ffd_9b0848aa2f0f49f0a37ec467ce6c279a~mv2.png/v1/crop/x_0,y_164,w_500,h_148/fill/w_308,h_91,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/CSG%20LOGOS%20(18).png',
+        description: 'Closing the Supply Gap is a collaboration of local food producers, businesses and hubs that aims to create a strong food supply chain in the Capital Region. Its work addresses gaps in local food infrastructure, investment, and processing and distribution networks. Check out this website to explore a super helpful Short Local Food Supply Chain graphic model, and another model to help pinpoint where you are on that chain.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
+      },
+      {
+        title: 'Urban Food Resilience Initiatives Society',
+        link: 'https://urbanfoodresilience.ca/',
+        image: 'https://urbanfoodresilience.ca/wp-content/uploads/2024/01/UFRIS-LOGOwordmark-300px.jpg',
+        description: 'Urban Food Resilience is a new initiative launched by three leadership-minded folks from the west shore to guide the growing, harvesting & sharing of food in local urban spaces. This non-profit collaborates with other groups and engages with all levels of government. Its projects include public education about local food growing, as well as the development of urban food gardens, improvement of regional soils, municipal infrastructure and emergency preparedness. Volunteer support for its projects is most welcome!',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
+      },
+      {
+        title: 'The Soil Guy',
+        link: 'https://www.instagram.com/the.soil.guy/',
+        image: require('../png/TheSoilGuy.jpg'),
+        description: 'Kane is The Soil Guy! Landscaper, enthusiastic gardener and farmer, trained Soil Lab Technician, and expert on harnessing the power of soil microbiota to transform the health of your soil and plants, Kane is stoked to bring non-toxic, all-natural solutions to farmers, gardeners, and home-owners. The Soil Guy’s services include Regenerative Landscaping, Premium Compost, Soil Microbial Analysis, and Biological Fertilizer application packages. The Soil Guy wants everyone to know: "when you work in harmony with nature, you don’t have to sacrifice yields or aesthetics!"',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
     ],
   }

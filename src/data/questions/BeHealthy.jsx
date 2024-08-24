@@ -1,3 +1,5 @@
+import { InitiativeTags as Tag } from '../TextContent';
+
 const Question = {
   key: 'be-healthy',
   title: "Be Healthy",
@@ -58,46 +60,79 @@ const Question = {
   act: {
     initiatives: [
       {
+        title: 'The State of the Forest in Canada',
+        link: 'https://www.stateoftheforest.ca/',
+        image: require('../png/StateOfTheForest.png'),
+        description: 'The State of Forests in Canada: Seeing Through the Spin is an NGO-produced report that challenges the yearly official government account of how our forests are faring as told in The State of Canada’s Forests Annual Report. Drawing upon scientific evidence, data, and metrics, Seeing Through the Spin deconstructs Natural Resources Canada’s portrayal of the Canadian forestry sector as “sustainable," presenting  the alternative perspective that the actual state of the forests is far more complex and worrisome, and the logging industry far less sustainable, than the government claims.  Seeing Through the Spin includes practical recommendations for policy reform.',
+        tags: [
+          Tag.Report,
+        ],
+      },
+      {
         title: 'Activate your Neighbourhood',
-        description: 'This Tactical Guide to help you re-imagine, re-think and re-purpose the spaces in your neighbourhood to support and encourage physical activity and social connections is funded by the federal public health agency and created by Canada Parks and Recreation.',
         link: 'https://activateyourneighbourhood.ca/',
-        image: require('../png/ActivateYourNeighbourhood.png')
+        image: require('../png/ActivateYourNeighbourhood.png'),
+        description: 'This Tactical Guide to help you re-imagine, re-think and re-purpose the spaces in your neighbourhood to support and encourage physical activity and social connections is funded by the federal public health agency and created by Canada Parks and Recreation.',
+        tags: [
+          Tag.Initiative,
+          Tag.Program,
+        ],
       },
       {
         title: 'Habitat Acquisition Trust',
-        description: 'Habitat Acquisition Trust (HAT) runs several Species at Risk Programs: "On Southern Vancouver Island, the increase in urbanization and loss of habitat has lead to many species at risk in our region. HAT works to protect and improve habitat for many of these species, and though we wish we could help them all we only run programs from a few of them."',
         link: 'https://hat.bc.ca/wildlife',
-        image: require('../png/HAT.png')
+        image: require('../png/HAT.png'),
+        description: 'Habitat Acquisition Trust (HAT) runs several Species at Risk Programs: "On Southern Vancouver Island, the increase in urbanization and loss of habitat has lead to many species at risk in our region. HAT works to protect and improve habitat for many of these species, and though we wish we could help them all we only run programs from a few of them."',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'W̱SÁNEĆ Peninsula Environmental Organizations',
-        description: 'There are many people & organizations across the Saanich Peninsula working towards healthier ecosystems and connected communities across municipal boundaries. Learn about their work in this StoryMap created by UVic Community Mapping students Evan Gerbrecht, Casey Lake, Samantha Denton, Ethan Heckrodt with direction from the Saanich Peninsula Environmental Coalition.',
         link: 'https://storymaps.arcgis.com/stories/5239fadd726c462da56ebcbe231c57be',
-        image: require('../png/WSANECStoryMap.png')
+        image: require('../png/WSANECStoryMap.png'),
+        description: 'There are many people & organizations across the Saanich Peninsula working towards healthier ecosystems and connected communities across municipal boundaries. Learn about their work in this StoryMap created by UVic Community Mapping students Evan Gerbrecht, Casey Lake, Samantha Denton, Ethan Heckrodt with direction from the Saanich Peninsula Environmental Coalition.',
+        tags: [
+          Tag.Organization,
+          Tag.Indigenous,
+        ],
       },
       {
         title: 'Quadra Cedar Hill Community Association',
-        description: 'The mission of QCHCA is to be an advocate and trusted resource for sustainability, vibrancy and engagement in our community. Through its Climate Action initiative, the community is undertaking pollinator mapping, urban food farming and tree canopy initiatives and an annual going-greener event.',
         link: 'https://qchca.org/',
-        image: require('../png/QuadraCedarHill.png')
+        image: require('../png/QuadraCedarHill.png'),
+        description: 'The mission of QCHCA is to be an advocate and trusted resource for sustainability, vibrancy and engagement in our community. Through its Climate Action initiative, the community is undertaking pollinator mapping, urban food farming and tree canopy initiatives and an annual going-greener event.',
+        tags: [
+          Tag.Organization,
+        ],
       },
       {
         title: 'Gorge Tillicum Community Association',
         link: 'https://www.gorgetillicum.ca/',
+        image: require('../png/GorgeTillicum.png'),
         description: '"The Gorge Tillicum Community Association is a volunteer-based non-profit organization that seeks to further the collective interests of the Gorge Tillicum neighbourhood.  The GTCA is recognized by Saanich as a significant community voice on local issues."',
-        image: require('../png/GorgeTillicum.png')
+        tags: [
+          Tag.Organization,
+        ],
       },
       {
         title: 'Connectivity on the Saanich Peninsula',
         link: 'https://storymaps.arcgis.com/stories/a68767b15837450aaf8a0d7e2094f345',
+        image: require('../png/Connectivity.png'),
         description: 'The purpose of this StoryMap is to highlight the historical connectivity between culture, community, and ecology on the Saanich Peninsula, and look for ways to improve connectivity in future collaboration with the Saanich Peninsula Environmental Coalition (SPEC).  This map was created by Ella Bethune, Darryl Seah, Ben DesRosiers, Ardis Mellor-Laing, as part of their work with the University of Victoria, Saanich Peninsula Environmental Coalition, and the Engage with Nature-based Solutions Initiative.',
-        image: require('../png/Connectivity.png')
+        tags: [
+          Tag.StoryMap,
+        ],
       },
       {
-        title: 'Greater Victoria NatureHood: Nature in the City Map',
+        title: 'Greater Victoria NatureHood',
         link: 'https://experience.arcgis.com/experience/b360590fbbb44966952c0cfe240d65c4',
+        image: require('../png/NatureInTheCity.png'),
         description: 'Use this digital map to help you navigate natural places in Greater Victoria. Learn about the Greater Victoria NatureHood initiative, ecosystems and biodiversity, waterways and watersheds, riparian zones, and some of the species of plants and animals found in the region.',
-        image: require('../png/NatureInTheCity.png')
+        tags: [
+          Tag.Map,
+        ],
       },
       /*
       {
@@ -110,110 +145,198 @@ const Question = {
       {
         title: 'Friends of Maltby Lake Watershed Society',
         link: 'https://maltbylake.com/',
+        image: require('../png/MaltbyLake.png'),
         description: 'Maltby Lake is at the headwaters of the Tod Creek Watershed. The 21-acre near pristine water body is surrounded by 172 acres of relatively undisturbed forest and wetland. The property is an example of unspoiled lake and land ecosystems. The Friends of Maltby Lake Watershed Society is a registered BC non-profit society and Canadian Registered Charity established by BC environmental activists to: conserve the riparian, Garry Oak and coastal Douglas Fir ecosystems, the sensitive flora and fauna therein and the watershed ecosystems draining into and from, Maltby Lake; educate the public and relevant stakeholders to the importance of this delicate ecological and cultural landscape; and create wildlife corridors, generate habitat for native species, and to reduce pollution on Vancouver Island for the benefit and enjoyment of the public.',
-        image: require('../png/MaltbyLake.png')
+        tags: [
+          Tag.Organization,
+        ],
       },
       {
         title: 'Nature Canada Report: Tree Equity',
         link: 'https://naturecanada.ca/wp-content/uploads/2022/09/Nature-Canada-Report-Tree-Equity.pdf',
+        image: require('../png/NatureCanadaReport.png'),
         description: 'This report outlines the need for "the 3-30-300 rule" to support universal well-being across Canada\'s cities. Everybody should be able to see 3 trees from their home. Neighbourhoods should have a minimum of 30% canopy cover and access to a greenspace of one hectare minimum which is less than 300 meters from home.',
-        image: require('../png/NatureCanadaReport.png')
+        tags: [
+          Tag.Report,
+        ],
       },
       {
         title: 'CRD Educational Resources',
-        image: require('../png/CRDEducational.png'),
         link: 'https://www.crd.bc.ca/education/school-programs/education-resources#tab-5',
-        description: 'The Capital Regional District has published a number of identification charts and fact sheets about the living things that can be found in our regional parks. Follow the link to learn about local mosses, seaweeds, lichens, shoreline birds and more!'
+        image: require('../png/CRDEducational.png'),
+        description: 'The Capital Regional District has published a number of identification charts and fact sheets about the living things that can be found in our regional parks. Follow the link to learn about local mosses, seaweeds, lichens, shoreline birds and more!',
+        tags: [
+          Tag.Portal,
+        ],
       },
       {
         title: "BirdLife International",
-        image: require('../png/Birdlife.png'),
         link: "https://www.birdlife.org/what-we-do/",
-        description: "BirdLife International's mission is to conserve birds, their habitats, and global biodiversity, working with people toward sustainability in the use of natural resources."
+        image: require('../png/Birdlife.png'),
+        description: "BirdLife International's mission is to conserve birds, their habitats, and global biodiversity, working with people toward sustainability in the use of natural resources.",
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'Colquitz Storymap',
         link: 'https://storymaps.arcgis.com/stories/e884cb42946a46d1800e90a692eca278',
+        image: require('../png/ColquitzRiver.png'),
         description: 'The Colquitz Storymap beautifully depicts the ongoing Colquitz River restoration project, launched by Peninsula Streams and the  District of Saanich in 2019. Interact with the map to learn about how the renewed health of the stream, as indicated by the return of native species including coho salmon, coastal cutthroat trout, otters and grey blue herons. Volunteer at native planting parties in the watershed to help ensure these positive changes continue and endure.',
-        image: require('../png/ColquitzRiver.png')
+        tags: [
+          Tag.StoryMap,
+        ],
       },
       {
         title: 'Gorge Stewardship Centre',
         link: 'https://stewardshipcentrebc.ca/esquimalt-gorge-park-gs-demonstration-site/',
+        image: require('../png/GorgeStewardshipCentre.png'),
         description: 'The Stewardship Centre for BC promotes and delivers stewardship education, and champions science-based stewardship practices for land and water in BC. As part of the Resilient Coasts for Salmon (RC4S) project, the Stewardship Centre for BC is partnered with community groups, the CRD, and the Songhees Nation and Esquimalt Nations to use a nature-based approach in restoring the ecological and cultural values of the Esquimalt Gorge Park shoreline.',
-        image: require('../png/GorgeStewardshipCentre.png')
+        tags: [
+          Tag.Organization,
+        ],
       },
       {
         title: 'Greater Victoria Green Team',
         link: 'https://greenteamscanada.ca/our-green-teams/greater-victoria-green-team/',
+        image: require('../png/GVGreenTeam.png'),
         description: 'The Greater Victoria Green Team has worked since 2014 to connect people and nature for the well-being of all. There are plenty of opportunities for volunteers to get their hands dirty with the Green Team. Projects include removal of invasive plants and native planting; picking up litter from shorelines, creeks and parks; trail building and maintainence; and tending vegetable gardens on educational farms.',
-        image: require('../png/GVGreenTeam.png')
+        tags: [
+          Tag.Organization,
+        ],
       },
       {
         title: 'Satinflower Nurseries',
         link: 'https://satinflower.ca/',
+        image: require('../png/SatinflowerNurseries.png'),
         description: 'Satinflower Nurseries connects people with nature by providing native plants, seeds, and expertise in growing them. The plants and seeds they provide are native to a variety of habitats in the Victoria area, including meadows, woodlands, forests, wetlands, and beaches. Satinflower specializes in the restoration and ecology of Garry oak ecosystems, and meadowscaping - the transformation of lawns to meadows that become much-needed patches of habitat for migratory pollinators.',
-        image: require('../png/SatinflowerNurseries.png')
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'The Power of Nature for Mental Health and Well-Being',
         link: 'https://www.csla-aapc.ca/sites/csla-aapc.ca/files/Nature%20Note%20EN.pdf',
+        image: require('../png/NatureForMentalHealth.png'),
         description: 'This paper from the Canadian Society of Landscape Architects’ Human Health and Wellbeing Committee highlights the benefits nature has on mental health.  In Canada, programs like PaRx and Prescri-Nature enable healthcare professionals to prescribe spending time in nature.  However, accelerating urbanization can make access to greenspaces a challenge for many. Landscape architects will continue to play an active role in contributing to the health and well-being of Canadians by making natural spaces more accessible to all.',
-        image: require('../png/NatureForMentalHealth.png')
+        tags: [
+          Tag.Report,
+        ],
       },
       {
         title: 'The Dawn Chorus',
         link: 'https://explore.dawn-chorus.org/',
+        image: require('../png/DawnChorus.png'),
         description: 'The Dawn Chorus project maps a massive collection of birdsong, collected from around the world in May 2020.  Michael Gorman, a bird lover in Germany, initiated this project in what he recognized to be an "extraordinary acoustic moment” - the pandemic had reduced ground and air traffic, and humans were making a fraction of the noise they usually do, making birdsong much easier to hear. He inspired thousands worldwide to get outside, listen, hold up their smartphones and press record. These recordings are now shared on this global sounds map which captures a unique moment in human history through the songs of birds. The map also provides an invaluable resource for understanding the global state of bird biodiversity. The Dawn Chorus team is exploring future collaborations with sound artists - let’s listen for what’s to come!',
-        image: require('../png/DawnChorus.png')
+        tags: [
+          Tag.Map,
+        ],
+      },
+      {
+        title: 'Compost Education Centre',
+        link: 'https://compost.bc.ca/',
+        image: 'https://compost.bc.ca/wp-content/uploads/2023/01/CEC-Logo-Colour-Digital.png',
+        description: 'The Compost Education Centre is a non-profit organization, dedicated to teaching about organic growing and sustainable living. It’s weekly public workshops address everything from composting (of course) to harvesting rainwater, to basket weaving with invasive species. CEC’s lush demonstration gardens - open for tours - are a true oasis at the heart of the Fernwood community. Check out CEC’s website for a Soil Quality Map of Victoria. This map generally indicates where elevated levels of metals in soil may be present - great information for individuals and communities who want to grow food safely or simply assess whether to seek out more detailed information on area-wide soil health.',
+        tags: [
+          Tag.Organization,
+        ],
+      },
+      {
+        title: 'The Metchosin Foundation',
+        link: 'https://metchosinfoundation.ca/home/',
+        image: 'https://metchosinfoundation.ca/wp-content/uploads/2018/06/cropped-MF-Logo-Oct-2017-transparent-1933x1242.png',
+        description: 'The Metchosin Foundation is focussed on protecting and sustaining important natural habitats and environmental values in its region.  It’s initiatives work at the exciting intersection of science, education, art and community - inspiring Metchosin residents and visitors to recognize the interdependence of ecological health, biodiversity, and human well-being. Among the Foundations’s Recent initiatives are  a multi-year fund-raising and project coordination initiative to help support the Sc’ianew Mary Hill Project; sustaining financial support for the Memorial Garry Oak Meadow restoration project on Metchosin Municipal Grounds; and collaborating with other local organizations to produce nature art cards featuring local plants, birds and mushrooms. The Metchosin Foundation is also engaged with the Bilston conservation corridor project working to secure a 7 km long conservation corridor that will link hilltop headwaters to the protected seashore at Witty’s Lagoon.',
+        tags: [
+          Tag.Organization,
+        ],
       },
       {
         title: 'The Mothertree Project',
         link: 'https://mothertreeproject.org/',
+        image: require('../png/Mothertree.png'),
         description: 'The Mother Tree project is investigating forest renewal practices that will protect biodiversity, carbon storage and forest regeneration as climate changes. The research, led by Dr. Suzanne Simard, explores how connections and communication between trees, particularly below-ground connections between Douglas-fir Mother Trees and seedlings, could influence forest recovery and resilience following various harvesting and regeneration treatments across different climates.',
-        image: require('../png/Mothertree.png')
+        tags: [
+          Tag.Initiative,
+          Tag.Program,
+        ],
       },
       {
         title: 'Indigenous Protected & Conserved Areas',
         link: 'https://conservation-reconciliation.ca/about-ipcas',
-        description: 'The 2018 We Rise Together Report defines IPCAs as "lands and waters where Indigenous governments have the primary role in protecting and conserving ecosystems through Indigenous laws, governance and knowledge systems.” More than 60 IPCAs are now led by Indigenous Peoples from coast-to-coast-to-coast, and there is growing recognition that IPCAs andIndigenous-led conservation will have a critical role in achieving Canada’s climate change and biodiversity targets.',
-        image: require('../png/IPCA.png')
+        image: require('../png/IPCA.png'),
+        description: 'The 2018 We Rise Together Report defines IPCAs as "lands and waters where Indigenous governments have the primary role in protecting and conserving ecosystems through Indigenous laws, governance and knowledge systems.” More than 60 IPCAs are now led by Indigenous Peoples from coast-to-coast-to-coast, and there is growing recognition that IPCAs and Indigenous-led conservation will have a critical role in achieving Canada’s climate change and biodiversity targets.',
+        tags: [
+          Tag.Report,
+          Tag.Indigenous,
+        ],
       },
       {
         title: 'Soil Factsheet: BC Ministry of Agriculture',
         link: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/agricultural-land-and-environment/soil-nutrients/613100-1_soil_compaction.pdf',
+        image: require('../png/SoilFactsheet.png'),
         description: 'Soil compaction refers to "the disruption and reduction of the large pores within the soil” which makes it harder for plant roots to grow down into soil layers, and restricts the movement of air and water through the soil. This Factsheet, produced by the Ministry of Agriculture, describes various causes and effects of soil compaction, as well as how soil structure may be improved.',
-        image: require('../png/SoilFactsheet.png')
+        tags: [
+          Tag.Report,
+        ],
       },
       {
         title: 'BC Big Tree Registry',
         link: 'https://bigtrees.forestry.ubc.ca/bc-bigtree-registry/',
+        image: require('../png/BigTreeRegistry.png'),
         description: 'The BC BigTree Registry is maintained by the BC Big Tree Committee and supported by the Faculty of Forestry at the University of British Columbia. It\'s an evolving project whose mandate is "To identify, describe, monitor, and conserve the largest trees of each species within British Columbia, and to educate and enlist the help of its citizens in this task."',
-        image: require('../png/BigTreeRegistry.png')
+        tags: [
+          Tag.Initiative,
+          Tag.Program,
+        ],
       },
       {
         title: 'Territories of Life',
-        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of Indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
         link: 'https://report.territoriesoflife.org/',
-        image: require('../png/TerritoriesOfLife.png')
+        image: require('../png/TerritoriesOfLife.png'),
+        description: 'This 2021 report demonstrates that the healthy areas of our planet are largely because of Indigenous and local community effort.  Our success in addressing climate change depends on all governments, businesses, and organizations to honour the rights of Indigenous peoples, their connection to the land, and to learn from their way of life.',
+        tags: [
+          Tag.Report,
+        ],
       },
       {
         title: 'Co-Designing Urban Carbon Sink Parks',
         link: 'https://www.frontiersin.org/articles/10.3389/fenvs.2021.672468/full',
+        image: require('../png/UrbanCarbonSinkParks.png'),
         description: 'Drawing on lessons learned from a demonstration area in a Helsinki park, this paper highlights the importance of healthy urban vegetation and soils for carbon sequestration, as well as for stormwater management, urban recreation and food production.',
-        image: require('../png/UrbanCarbonSinkParks.png')
+        tags: [
+          Tag.Report,
+        ],
       },
       {
         title: 'Coastal Douglas Fir Conservation Partnership',
         link: 'https://www.cdfcp.ca/',
+        image: require('../png/CoastalDouglasFir.png'),
         description: 'The Coastal Douglas-fir Conservation Partnership (CDFCP) promotes the conservation and stewardship of the Coastal Douglas-fir and associated ecosystems in south-western BC. Visit the site to learn about the unique ecosystems occurring within our Coastal Douglas-fir Moist Maritime Biogeoclimatic Zone, and to find out about the CDFCPs 30-year strategy for conserving these ecosystems.',
-        image: require('../png/CoastalDouglasFir.png')
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: 'STAND.earth',
         link: 'https://stand.earth/about/',
+        image: require('../png/StandEarth.png'),
         description: 'Stand.earth began over 20 years ago on the frontlines defending old-growth forests in BC. They are now a growing and diverse team demanding transformational change in three key impact areas: Protecting Forests, Moving Beyond Fossil Fuels, and Reinventing Cities and Transportation. Stand.earth strategies range from grassroots events and building networks, to investigative research and media campaigns. Check out this site to be inspired by powerful Stand.earth results stories, and meet Spencer, Stand.earth\'s “cup monster” who helped get Starbucks to work faster towards a 100% recyclable to-go cup.',
-        image: require('../png/StandEarth.png')
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
+      },
+      {
+        title: 'Victoria Grandmothers for Africa',
+        link: 'https://www.vg4a.ca/',
+        image: require('../png/VG4A.jpg'),
+        description: 'VG4A is a group of over 100 Victoria grandmothers and grand others who work to raise funds and awareness to support Africa’s resilient grandmothers who have taken on the loving challenge of raising their grandchildren orphaned due to HIV & AIDS. Organizing, fundraising, awareness, and social events include sale of crafts at markets; school and community presentations; and an annual cycling tour. All proceeds from VG4A are donate to the Stephen Lewis Foundation Grandmothers to Grandmothers Campaign.',
+        tags: [
+          Tag.Organization,
+        ],
       },
     ],
   }
