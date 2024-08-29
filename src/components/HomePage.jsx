@@ -65,8 +65,9 @@ export default function HomePage() {
             {AboutPageSubTitle}
           </Text>
           {
-            AboutPageBody.map((p) => (
+            AboutPageBody.map((p, i) => (
               <Text
+                key={i}
                 fontFamily='var(--chakra-fonts-body)'
                 fontSize={['0.875rem', null, null, null, '1rem', '1.125rem']}
                 fontWeight='500'

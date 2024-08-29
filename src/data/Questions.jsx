@@ -77,21 +77,19 @@ function importAll(r) {
 }
 importAll(require.context('./layers/', true, /\.jsx$/));
 
-// Create mapLayerStore
-const layerMap = produce(new Map(), draft => {
-  Object.keys(layerCache).forEach((key) => {
-    const {styleMap, ...layerAttrs} = layerCache[key]
-    draft.set(key, {
-      active: false,
-      ...layerAttrs
-    })
-  });
+// Create mapLayerStore base state
+const layerMap = new Map();
+Object.keys(layerCache).forEach((key) => {
+  const {styleMap, ...layerAttrs} = layerCache[key]
+  layerMap.set(key, {
+    active: false,
+    ...layerAttrs
+  })
 });
 
-const layerStylesMap = produce(new Map(), draft => {
-  Object.keys(layerCache).forEach((key) => {
-    draft.set(key, layerCache[key].styleMap)
-  })
+const layerStylesMap = new Map();
+Object.keys(layerCache).forEach((key) => {
+  layerStylesMap.set(key, layerCache[key].styleMap)
 })
 
 export const useMapLayerStore = create((set, get) => ({
