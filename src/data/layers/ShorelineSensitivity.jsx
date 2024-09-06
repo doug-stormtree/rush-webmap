@@ -1,5 +1,4 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ["1", {legendText: 'Very Low', color: '#DADADA'}],
@@ -49,10 +48,6 @@ const layer = {
         {offset: [0,8]});
     }
   },
-  questions: [
-    { key: 'protect-the-coast', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Water' },
-  ]
 }
 
 export default layer;

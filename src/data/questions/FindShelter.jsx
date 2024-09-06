@@ -1,10 +1,16 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'find-shelter',
   title: "Find Shelter",
   question: "Shelter is ... a human right. How do we get it right in light of climate change?",
   image: require('../png/Shelter.png'),
+  layers: [
+    { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },
+  ],
   sections: {
     one: [
       {

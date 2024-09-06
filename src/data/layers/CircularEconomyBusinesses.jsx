@@ -3,7 +3,6 @@ import {
   ogmFeaturesLink,
   pointToIcon,
 } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Circular Economy Buisinesses',
@@ -37,10 +36,6 @@ const layer = {
         ), {offset: [0,-6]});
     }
   },
-  questions: [
-    { key: 'have-it-all', active: true, ...LegendGroups.OGM },
-    { key: 'create-community', active: false, ...LegendGroups.OGM },
-  ]
 }
 
 export default layer;

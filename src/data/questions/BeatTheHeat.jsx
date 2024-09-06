@@ -1,10 +1,23 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'beat-the-heat',
   title: "Beat the Heat",
   question: "Smokin’ hot spells are happening now with climate change. Is your neighbourhood a heat island?",
   image: require('../png/BeatTheHeat.png'),
+  layers: [
+    { key: 'AirConditionedBuildings', active: false, ...LegendGroups.StartOff },
+    { key: 'BTH_LocalInitiatives', active: false, group: 'Community' },
+    { key: 'CRD_Parks', active: false, ...LegendGroups.StartOff },
+    { key: 'DrinkingFountains', active: false, ...LegendGroups.StartOff },
+    { key: 'HeatDomes', active: true, ...LegendGroups.StartOn },
+    { key: 'Impervious2019', active: false, ...LegendGroups.StartOff },
+    { key: 'TreeCoverage2005', active: false, ...LegendGroups.StartOn },
+    { key: 'TreeCoverage2019', active: true, ...LegendGroups.StartOn },
+  ],
   sections: {
     one: [
       {

@@ -1,5 +1,4 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Agricultural Land Reserve',
@@ -24,10 +23,6 @@ const layer = {
         {offset: [0,8]});
     }
   },
-  questions: [
-    { key: 'eat-local', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Greenspace' },
-  ]
 }
 
 export default layer;

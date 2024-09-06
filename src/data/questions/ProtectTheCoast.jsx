@@ -1,10 +1,22 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'protect-the-coast',
   title: "Protect the Coast",
   question: 'Melting ice caps offer no refreshment when it comes to sea level rise. How can I be ready when the surfs up?',
   image: require('../png/ProtectTheCoast.png'),
+  layers: [
+    { key: 'Aquifers', active: false, ...LegendGroups.StartOff },
+    { key: 'AquiferSusceptibilityBedrock', active: false, ...LegendGroups.StartOff },
+    { key: 'AquiferSusceptibilitySediment', active: false, ...LegendGroups.StartOff },
+    { key: 'CoastalFloodInundationScenarios', active: true, ...LegendGroups.StartOn },
+    { key: 'HardShorelines', active: false, ...LegendGroups.StartOn },
+    { key: 'ShellfishPO', active: false, ...LegendGroups.StartOn },
+    { key: 'ShorelineSensitivity', active: true, ...LegendGroups.StartOn },
+  ],
   sections: {
     one: [
       {

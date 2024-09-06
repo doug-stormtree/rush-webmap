@@ -1,5 +1,4 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ["T1" , {legendText: 'Paved Multi-Use Trails / Protected Bike Lanes', color: 'rgba(120, 162, 47, 255)'}],
@@ -43,10 +42,6 @@ const layer = {
         {offset: [0,8]});
     }
   },
-  questions: [
-    { key: 'travel-light', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;

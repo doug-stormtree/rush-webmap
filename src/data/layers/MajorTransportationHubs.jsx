@@ -1,7 +1,6 @@
 import { pointToIconByProperty } from '../LeafletStyleHelpers';
 import { ReactComponent as WaterIcon } from '../svg/WaterTransport.svg';
 import { ReactComponent as AirportIcon } from '../svg/Airport.svg';
-import { LegendGroups } from '../TextContent';
 
 const styleMap_TransportHubs = new Map([
   ['Ferry',   {icon: <WaterIcon />, fill: 'rgb(13,101,149)', legendText: 'Ferry Terminal'}],
@@ -38,10 +37,6 @@ const layer = {
       l.on('add', (e) => e.target.openPopup());
     }
   },
-  questions: [
-    { key: 'travel-light', active: false, ...LegendGroups.StartOff },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;

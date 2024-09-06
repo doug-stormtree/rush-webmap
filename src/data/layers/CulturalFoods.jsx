@@ -1,5 +1,4 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Cultural Foods',
@@ -35,10 +34,6 @@ const layer = {
         ), {offset: [0,-6]});
     }
   },
-  questions: [
-    { key: 'eat-local', active: true, ...LegendGroups.OGM },
-    { key: 'create-community', active: false, ...LegendGroups.OGM },
-  ]
 }
 
 export default layer;

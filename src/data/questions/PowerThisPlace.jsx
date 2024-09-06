@@ -1,10 +1,17 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'power-this-place',
   title: "Power this Place",
   question: "The lights are on but nobody’s home. Am I using my power wisely?",
   image: require('../png/PowerThisPlace.png'),
+  layers: [
+    { key: 'GreenhouseGasStationary2020', active: false, ...LegendGroups.StartOn },
+    { key: 'GreenhouseGasStationary2022', active: true, ...LegendGroups.StartOn },
+  ],
   sections: {
     one: [
       {

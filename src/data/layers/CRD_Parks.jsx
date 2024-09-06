@@ -1,5 +1,4 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Parks',
@@ -29,12 +28,6 @@ const layer = {
       ), {offset: [0,8]});
     }
   },
-  questions: [
-    { key: 'be-happy', active: true, ...LegendGroups.StartOn },
-    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
-    { key: 'find-shelter', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Greenspace' },
-  ]
 }
 
 export default layer;

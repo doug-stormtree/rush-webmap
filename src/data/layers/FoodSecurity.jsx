@@ -1,5 +1,4 @@
 import { mapPopupContent, pointToIconByProperty } from "../LeafletStyleHelpers";
-import { LegendGroups } from "../TextContent";
 import { ReactComponent as EcoJustice } from '../svg/Eco-justice organization.svg';
 import { ReactComponent as Government } from '../svg/Government office.svg';
 import { ReactComponent as NGO } from '../svg/Green enterprise.svg';
@@ -36,10 +35,6 @@ const layer = {
         ), {offset: [4,2]});
     }
   },
-  questions: [
-    { key: 'eat-local', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Community' },
-  ]
 }
 
 export default layer;

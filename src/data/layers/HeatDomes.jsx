@@ -1,5 +1,4 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Heat Domes',
@@ -28,10 +27,6 @@ const layer = {
         'Do these communities meet the 3-30-300 equity test?'), {offset: [0,8]});
     }
   },
-  questions: [
-    { key: 'beat-the-heat', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Greenspace' },
-  ]
 }
 
 export default layer;

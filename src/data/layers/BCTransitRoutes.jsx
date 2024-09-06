@@ -1,5 +1,4 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'BC Transit Bus Routes',
@@ -24,12 +23,7 @@ const layer = {
           ),
         {offset: [0,8]});
     }
-  },
-  questions: [
-    { key: 'be-happy', active: true, ...LegendGroups.StartOn },
-    { key: 'travel-light', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
+  },  
 }
 
 export default layer;

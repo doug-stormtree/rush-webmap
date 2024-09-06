@@ -1,10 +1,21 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'travel-light',
   title: 'Travel Light',
   question: 'Fossil fuel travel is a fast track to climate change. How do I arrive in style and on time?',
   image: require('../png/LightFootprint.png'),
+  layers: [
+    { key: 'BCTransitRoutes', active: true, ...LegendGroups.StartOn },
+    { key: 'CRDBikeMap', active: true, ...LegendGroups.StartOn },
+    { key: 'EVChargingStations', active: true, ...LegendGroups.StartOn },
+    { key: 'GreenhouseGasOnRoad2020', active: false, ...LegendGroups.StartOn },
+    { key: 'GreenhouseGasOnRoad2022', active: true, ...LegendGroups.StartOn },
+    { key: 'MajorTransportationHubs', active: false, ...LegendGroups.StartOff },
+  ],
   sections: {
     one: [
       {

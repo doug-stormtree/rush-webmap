@@ -1,10 +1,22 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'protect-from-flooding',
   title: 'Protect from Flooding',
   question: 'Climate change is too big for our stormwater infrastructure.  What\'s the fix on flood risk?',
   image: require('../png/ProtectFromFlooding.png'),
+  layers: [
+    { key: 'CoastalFloodInundationScenarios', active: false, ...LegendGroups.StartOff },
+    { key: 'Impervious2019', active: true, ...LegendGroups.StartOn },
+    { key: 'RainGardens', active: true, ...LegendGroups.OGM },
+    { key: 'RestorationSites', active: false, ...LegendGroups.OGM },
+    { key: 'ShellfishPO', active: false, ...LegendGroups.StartOff },
+    { key: 'WatershedRunoffAbsorption', active: true, ...LegendGroups.StartOn },
+    { key: 'Watersheds', active: false, ...LegendGroups.StartOff },
+  ],
   sections: {
     one: [
       {

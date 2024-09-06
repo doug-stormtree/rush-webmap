@@ -45,10 +45,6 @@ const layer = {
       });
     }
   },
-  questions: [
-    { key: 'be-healthy', active: true, group: 'Trees' },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;
