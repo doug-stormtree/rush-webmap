@@ -30,7 +30,12 @@ import { FiX } from "react-icons/fi";
 import FormattedText from './FormattedText';
 import useScrollShadows from './useScrollShadows';
 import { useActiveQuestionStore } from '../data/QuestionStore';
-import { useMapLayerDataStore, LAYER_STATUS, layerMap } from '../data/MapLayerStore';
+import {
+  LAYER_STATUS,
+  layerMap,
+  useMapLayerDataStore,
+  useMapLayerStyleStore,
+} from '../data/MapLayerStore';
 import { LegendGroups } from '../data/TextContent';
 
 // Wraps Legend in a Box for large screen sizes.
@@ -272,7 +277,7 @@ export const LegendItem = ({ layerId, question }) => {
 
 const LegendItemDetails = ({ layerId }) => {
   const layer = layerMap.get(layerId)
-  const styleMap = useMapLayerDataStore((state) => state.getLayerStyleMap(layerId))
+  const styleMap = useMapLayerStyleStore((state) => state.getLayerStyleMap(layerId))
 
   return (
     <Flex direction='column' gap='2' my='2' marginInlineStart='3' mb='3'>
@@ -313,7 +318,7 @@ const LegendItemDescription = ({ description, noOfLines = undefined }) => {
 // Legend Patch Components
 const LegendPatch = ({ layerId }) => {
   const layer = layerMap.get(layerId)
-  const styleMap = useMapLayerDataStore((state) => state.getLayerStyleMap(layerId))
+  const styleMap = useMapLayerStyleStore((state) => state.getLayerStyleMap(layerId))
 
   if (layer.symbology === 'classified') {
     return layer.shape === 'point' ? (

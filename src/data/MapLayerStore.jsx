@@ -34,17 +34,11 @@ const layerDataMap = produce(new Map(), draft => {
   }
 });
 
-const layerStyleMap = produce(new Map(), draft => {
-  [...layerMap.entries()].forEach(([key, val]) => {
-    draft.set(key, val.styleMap)
-  })
-});
-
 export const useMapLayerDataStore = create((set, get) => ({
   layerDataMap: layerDataMap,
-
+  
   areLayersLoading: () => [...get().layerDataMap.values()]
-    .some( l => l.status === LAYER_STATUS.Loading ),
+  .some( l => l.status === LAYER_STATUS.Loading ),
   
   getLayerData: (layerId) => {
     const layerAttr = layerMap.get(layerId)
@@ -53,20 +47,20 @@ export const useMapLayerDataStore = create((set, get) => ({
     if (layerData.status === LAYER_STATUS.Undefined) {
       get()._setLayerStatus(layerId, LAYER_STATUS.Loading);
       fetch(layerAttr.data)
-        .then((response) => response.json())
-        .then((json) => {
-          const mapLayer = L.geoJSON(
-                json,
-                layerAttr.options,
-              )
-          if (layerAttr.cluster) {
-            const clusterLayer = L.markerClusterGroup(layerAttr?.clusterOpts).addLayers(mapLayer)
-            get()._setLayerData(layerId, clusterLayer);
-          } else {
-            get()._setLayerData(layerId, mapLayer);
-          }
-          get()._setLayerStatus(layerId, LAYER_STATUS.Ready);
-        });
+      .then((response) => response.json())
+      .then((json) => {
+        const mapLayer = L.geoJSON(
+          json,
+          layerAttr.options,
+        )
+        if (layerAttr.cluster) {
+          const clusterLayer = L.markerClusterGroup(layerAttr?.clusterOpts).addLayers(mapLayer)
+          get()._setLayerData(layerId, clusterLayer);
+        } else {
+          get()._setLayerData(layerId, mapLayer);
+        }
+        get()._setLayerStatus(layerId, LAYER_STATUS.Ready);
+      });
     }
     return undefined;
   },
@@ -83,9 +77,19 @@ export const useMapLayerDataStore = create((set, get) => ({
         state.layerDataMap.get(layerId).data = layerData;
       })
     ),
+}))
 
+// Create layer styleMap store
+
+const layerStyleMap = produce(new Map(), draft => {
+  [...layerMap.entries()].forEach(([key, val]) => {
+    draft.set(key, val.styleMap)
+  })
+});
+    
+export const useMapLayerStyleStore = create((set, get) => ({
   layerStyleMap: layerStyleMap,
-
+  
   // Layer Legend Style Map
   _setLayerStyleMap: (layerId, styleMap) =>
     set(
@@ -93,7 +97,7 @@ export const useMapLayerDataStore = create((set, get) => ({
         state.layerStyleMap.set(layerId, styleMap);
       })
     ),
-  
+    
   getLayerStyleMap: (layerId) => {
     const styleMap = get().layerStyleMap.get(layerId)
     const ogmMapId = layerMap.get(layerId).ogmMapId
