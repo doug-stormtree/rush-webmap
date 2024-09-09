@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react'
 import { FaRegArrowAltCircleDown } from 'react-icons/fa'
 import { FiX } from 'react-icons/fi'
-import { useActiveQuestionStore, questionActions } from '../data/Questions'
+import { useActiveQuestionStore, questionActions } from '../data/QuestionStore'
 
 export default function QuestionCard({ question, size, variant, scrollRef }) {
   const styles = useMultiStyleConfig('QuestionCard', { size, variant })

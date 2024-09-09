@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Box, useMultiStyleConfig } from '@chakra-ui/react';
 import QuestionCard from './QuestionCard';
-import Questions, { useActiveQuestionStore } from '../data/Questions';
+import Questions, { useActiveQuestionStore } from '../data/QuestionStore';
 
 export default function QuestionCardBar() {
   const styles = useMultiStyleConfig('QuestionCardBar')

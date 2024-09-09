@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { FaRegArrowAltCircleDown } from 'react-icons/fa';
 import { FiX } from 'react-icons/fi';
-import Questions, { useActiveQuestionStore, questionActions } from '../data/Questions';
+import Questions, { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
 import InitiativeCard from './InitiativeCard';
 
 export const Tabs = {
