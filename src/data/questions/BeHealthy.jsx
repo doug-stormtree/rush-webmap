@@ -12,6 +12,7 @@ const Question = {
     { key: 'BigTrees', active: true, group: 'Trees' },
     { key: 'CarbonSequestration', active: false, group: 'Landcover' },
     { key: 'CherryTrees', active: true, group: 'Trees' },
+    { key: 'ENBS', active: true, group: 'Community' },
     { key: 'MaltbyLakeBirdsong', active: true, group: 'Landcover' },
     { key: 'Pollinators', active: true, ...LegendGroups.OGM },
     { key: 'SensitiveEcosystems', active: false, group: 'Landcover' },

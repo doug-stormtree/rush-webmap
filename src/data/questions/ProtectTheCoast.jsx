@@ -16,6 +16,7 @@ const Question = {
     { key: 'HardShorelines', active: false, ...LegendGroups.StartOn },
     { key: 'ShellfishPO', active: false, ...LegendGroups.StartOn },
     { key: 'ShorelineSensitivity', active: true, ...LegendGroups.StartOn },
+    { key: 'ForageFish', active: false, ...LegendGroups.StartOff },
   ],
   sections: {
     one: [
