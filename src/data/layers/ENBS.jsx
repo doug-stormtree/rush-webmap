@@ -6,6 +6,22 @@ const iconStyle = {
   legendText:"Community Stories"
 }
 
+const images = {
+  "bowkercreekwatershed.jpg": require("../png/bowkercreekwatershed.jpg"),
+  "shorelinerestorationsongheeswalkwaypocketbeach.jpg": require("../png/shorelinerestorationsongheeswalkwaypocketbeach.jpg"),
+  "slideonoverrepeatphotographyasresearchmethod.jpg": require("../png/slideonoverrepeatphotographyasresearchmethod.jpg"),
+  "colquitzriverrestoration.jpg": require("../png/colquitzriverrestoration.jpg"),
+  "aquietmomentsoundlandscapesinthecrd.jpg": require("../png/aquietmomentsoundlandscapesinthecrd.jpg"),
+  "ecologicaldesigninpractice.jpg": require("../png/ecologicaldesigninpractice.jpg"),
+  "connectivityonthesaanichpeninsula.jpg": require("../png/connectivityonthesaanichpeninsula.jpg"),
+  "theRUSHinitiative.jpg": require("../png/theRUSHinitiative.jpg"),
+  "artattackplacebasedartinterventions.jpg": require("../png/artattackplacebasedartinterventions.jpg"),
+  "hardandsoftshorelines.jpg": require("../png/hardandsoftshorelines.jpg"),
+  "salishseanearshorehabitatrecoverychapter1.jpg": require("../png/salishseanearshorehabitatrecoverychapter1.jpg"),
+  "bilstonwatershedhabitatprotection.jpg": require("../png/bilstonwatershedhabitatprotection.jpg"),
+  "bilstonwatershedgroundwaterandsurfaceflow.jpg": require("../png/bilstonwatershedgroundwaterandsurfaceflow.jpg"),
+}
+
 const layer = {
   title: "Engage with Nature-Based Solutions",
   description: [
@@ -24,7 +40,7 @@ const layer = {
         undefined,
         f.properties.url,
         'Link to StoryMap',
-        require('../png/' + f.properties.image)
+        images[f.properties.image],
         ), {offset: [4,2]});
     }
   },
