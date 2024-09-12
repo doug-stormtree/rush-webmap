@@ -22,7 +22,7 @@ const Question = {
     { key: 'CircularEconomyBusinesses', active: false, ...LegendGroups.OGM },
     { key: 'CoastalFloodInundationScenarios', active: false, group: 'Water' },
     { key: 'CRD_Parks', active: false, group: 'Greenspace' },
-    { key: 'CRDBikeMap', active: true, ...LegendGroups.StartOn },
+    { key: 'CRDBikeMap', active: false, group: 'Civic' },
     { key: 'CulturalFoods', active: false, ...LegendGroups.OGM },
     { key: 'DrinkingFountains', active: false, group: 'Civic' },
     { key: 'ENBS', active: false, group: 'Greenspace' },
