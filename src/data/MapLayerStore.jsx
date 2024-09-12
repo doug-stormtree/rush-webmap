@@ -80,12 +80,11 @@ export const useMapLayerDataStore = create((set, get) => ({
 }))
 
 // Create layer styleMap store
-
-const layerStyleMap = produce(new Map(), draft => {
-  [...layerMap.entries()].forEach(([key, val]) => {
-    draft.set(key, val.styleMap)
-  })
-});
+const layerStyleMapInitial = new Map();
+[...layerMap.entries()].forEach(([key, val]) => {
+  layerStyleMapInitial.set(key, val.styleMap)
+})
+const layerStyleMap = freeze(layerStyleMapInitial)
     
 export const useMapLayerStyleStore = create((set, get) => ({
   layerStyleMap: layerStyleMap,
