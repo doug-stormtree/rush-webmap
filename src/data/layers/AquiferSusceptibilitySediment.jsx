@@ -1,5 +1,4 @@
 import { tileLayer } from "leaflet";
-import { LegendGroups } from "../TextContent";
 
 const styleMap = new Map([
   ["1", {legendText: 'Very Low', fillColor: '#00b547'}],
@@ -29,10 +28,6 @@ const layer = {
   symbology: 'classified',
   legendTitle: 'Risk of Sea Water Intrusion',
   styleMap: styleMap,
-  questions: [
-    { key: 'protect-the-coast', active: false, ...LegendGroups.StartOff },
-    { key: 'create-community', active: false, group: 'Water' },
-  ]
 }
 
 export default layer;

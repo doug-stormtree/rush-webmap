@@ -1,5 +1,4 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Tree Equity Community Map',
@@ -40,10 +39,6 @@ const layer = {
         ), {offset: [0,-6]});
     }
   },
-  questions: [
-    { key: 'be-healthy', active: true, ...LegendGroups.OGM },
-    { key: 'create-community', active: false, ...LegendGroups.OGM },
-  ]
 }
 
 export default layer;

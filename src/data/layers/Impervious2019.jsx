@@ -1,5 +1,4 @@
 import { tileLayer } from 'leaflet';
-import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ["1", {legendText:   '0 - 20',   fillColor: 'rgb(198, 219, 235)'}],
@@ -29,11 +28,6 @@ const layer = {
   symbology: 'classified',
   legendTitle: 'Percentage of Impervious Surfaces',
   styleMap: styleMap,
-  questions: [
-    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
-    { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Water' },
-  ]
 }
 
 export default layer;

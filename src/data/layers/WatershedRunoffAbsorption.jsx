@@ -3,7 +3,6 @@ import {
   getStyleMapKeyFromContinuousValue,
   mapPopupContent
 } from "../LeafletStyleHelpers";
-import { LegendGroups } from '../TextContent';
 
 // TODO: Convert water volumes of m3 to litres?
 
@@ -64,10 +63,6 @@ const layer = {
         ), {offset: [0,8]});
     }
   },
-  questions: [
-    { key: 'protect-from-flooding', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Water' },
-  ]
 }
 
 export default layer;

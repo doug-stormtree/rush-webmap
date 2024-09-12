@@ -1,5 +1,4 @@
 import { mapPopupContent, setStyleIfSupported } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Watersheds',
@@ -41,11 +40,6 @@ const layer = {
       });
     }
   },
-  questions: [
-    { key: 'be-healthy', active: false, group: 'Landcover' },
-    { key: 'protect-from-flooding', active: false, ...LegendGroups.StartOff },
-    { key: 'create-community', active: false, group: 'Water' },
-  ]
 }
 
 export default layer;

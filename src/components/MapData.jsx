@@ -4,31 +4,32 @@ import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
 import { LegendDrawerButton } from './Legend';
-import { useActiveQuestionStore, useMapLayerStore } from '../data/Questions';
+import { useActiveQuestionStore } from '../data/QuestionStore';
+import { useMapLayerDataStore } from '../data/MapLayerStore';
 
 export const MapData = () => {
   const map = useMap();
   const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
-  const layers = useMapLayerStore((state) => state.layers);
-  const getLeafletLayer = useMapLayerStore((state) => state.getLeafletLayer);
+  const layers = useActiveQuestionStore((state) => state.activeLayers)
+  const [layerDataMap, getLayerData] = useMapLayerDataStore((state) => [state.layerDataMap, state.getLayerData]);
 
   // Effect adds all active layers to the map, fetching their data if necessary.
   useEffect(() => {
     if (map === undefined) return;
     
-    layers.forEach((el, key) => {
-      if (el.questions.some((q) => (q.key === activeQuestion) && q.active)) {
-        const leafletLayer = getLeafletLayer(key);
+    layers.forEach((layer) => {
+      if (layer.active) {
+        const leafletLayer = getLayerData(layer.key)
         if (leafletLayer instanceof L.Layer) map.addLayer(leafletLayer);
       }
     });
 
     return () => {
-      layers.forEach(el => {
-        if (el.leafletLayer instanceof L.Layer) map.removeLayer(el.leafletLayer);
-      });
+      [...layerDataMap.values()].forEach((layer) => {
+        if (layer.data instanceof L.Layer) map.removeLayer(layer.data);
+      })
     };
-  }, [map, layers, activeQuestion, getLeafletLayer]);
+  }, [map, layers, activeQuestion, getLayerData, layerDataMap]);
 
   // Render Legend Control on small displays.
   return (
@@ -37,9 +38,7 @@ export const MapData = () => {
         <LegendDrawerButton />
       </Control>
       { activeQuestion === undefined ||
-        [...layers.values()].some(
-          (layer) => layer.questions.some((q) => q.key === activeQuestion)
-        )
+        layers.length > 0
           ? null
           : (
               <Center style={{

@@ -1,5 +1,4 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 import { ReactComponent as RecyclingIcon } from '../svg/Recycling.svg';
 
 const RecyclingIconStyle = {
@@ -25,10 +24,6 @@ const layer = {
         ), {offset: [0,-6]});
     }
   },
-  questions: [
-    { key: 'have-it-all', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;

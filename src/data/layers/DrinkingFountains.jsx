@@ -1,5 +1,4 @@
 import { mapPopupContent, pointToIconByProperty } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 import { ReactComponent as WaterIcon } from '../svg/water.svg';
 
 const styleMap_Water_Fountains = new Map([
@@ -32,10 +31,6 @@ const layer = {
         ), {offset: [4.5,2]});
     }
   },
-  questions: [
-    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;

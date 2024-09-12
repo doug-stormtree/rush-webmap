@@ -2,7 +2,6 @@ import L from 'leaflet';
 import 'leaflet-layerjson';
 import { mapPopupContent, pointToIconByProperty } from "../LeafletStyleHelpers";
 import { ReactComponent as EVIcon } from '../svg/CarEV.svg';
-import { LegendGroups } from '../TextContent';
 
 const styleMap = new Map([
   ['1', {icon: <EVIcon />, fill: 'rgb(7,72,174)', legendText: 'Level 1 (<2 kW)'}],
@@ -55,10 +54,6 @@ const layer = {
   shape: 'point',
   symbology: 'classified',
   styleMap: styleMap,
-  questions: [
-    { key: 'travel-light', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Energy' },
-  ]
 }
 
 export default layer;

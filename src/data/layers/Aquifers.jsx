@@ -3,7 +3,6 @@ import {
   getStyleMapProperty,
   setStyleIfSupported,
 } from "../LeafletStyleHelpers";
-import { LegendGroups } from "../TextContent";
 
 const styleMap = new Map([
   ["Bedrock", {fillColor: '#4A6FA5', color: 'rgb(130,130,130)', legendText: 'Bedrock'}],
@@ -72,10 +71,6 @@ const layer = {
       });
     }
   },
-  questions: [
-    { key: 'protect-the-coast', active: false, ...LegendGroups.StartOff },
-    { key: 'create-community', active: false, group: 'Water' },
-  ]
 }
 
 export default layer;

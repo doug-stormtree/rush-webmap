@@ -1,10 +1,19 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'have-it-all',
   title: 'Have it All',
   question: 'Economy, Community, Environment. I want it all. How can I shape my triple bottom line?',
   image: require('../png/CircularEconomy.png'),
+  layers: [
+    { key: 'CircularEconomyBusinesses', active: true, ...LegendGroups.OGM },
+    { key: 'HartlandLandfill', active: true, ...LegendGroups.StartOn },
+    { key: 'RecyclingDepots', active: true, ...LegendGroups.StartOn },
+    { key: 'SingleUseItemBylaws', active: true, ...LegendGroups.StartOn },
+  ],
   sections: {
     one: [
       {

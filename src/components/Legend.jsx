@@ -29,7 +29,13 @@ import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import { FiX } from "react-icons/fi";
 import FormattedText from './FormattedText';
 import useScrollShadows from './useScrollShadows';
-import { useMapLayerStore, LOADING, useActiveQuestionStore } from '../data/Questions';
+import { useActiveQuestionStore } from '../data/QuestionStore';
+import {
+  LAYER_STATUS,
+  layerMap,
+  useMapLayerDataStore,
+  useMapLayerStyleStore,
+} from '../data/MapLayerStore';
 import { LegendGroups } from '../data/TextContent';
 
 // Wraps Legend in a Box for large screen sizes.
@@ -82,7 +88,7 @@ export const LegendDrawerButton = () => {
   )
   const { isOpen, onOpen, onClose } = useDisclosure({defaultIsOpen: !isDrawer});
   const btnRef = useRef();
-  const layersLoading = useMapLayerStore((state) => state.layersLoading());
+  const layersLoading = useMapLayerDataStore((state) => state.areLayersLoading());
   const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
 
   return activeQuestion === undefined
@@ -169,25 +175,23 @@ const LegendHeader = () => {
 // LegendList Component
 //   Builds list of LegendItem components for active question layers.
 const LegendList = () => {
-  const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
-  // Get all layers
-  const layers = useMapLayerStore((state) => state.layers);
+  const [activeQuestion, activeLayers] = useActiveQuestionStore(state => 
+    [state.activeQuestion, state.activeLayers]
+  )
 
   // Start empty map for all legend groups
   const legendEntries = new Map();
   
-  [...layers.entries()]
-    .filter(([key, layer]) => !layer.noLegend && 
-      layer.questions?.some((q) => q.key === activeQuestion))
-    .forEach(([key, layer]) => {
-      const legendGroup = layer.questions.find((q) => q.key === activeQuestion).group;
-      const groupEntries = legendEntries.get(legendGroup) ?? [];
+  activeLayers
+    .filter((layer) => !layerMap.get(layer.key).noLegend)
+    .forEach(({key, group}) => {
+      const groupEntries = legendEntries.get(group) ?? [];
       groupEntries.push(
-        layer?.ogmMapId
-        ? <LegendItemOGM key={key} layerId={key} question={activeQuestion} mb={1} />
+        layerMap.get(key)?.ogmMapId
+        ? <LegendItemOGM key={key} layerId={key} mb={1} />
         : <LegendItem key={key} layerId={key} question={activeQuestion} mb={1} />
       );
-      legendEntries.set(legendGroup, groupEntries);
+      legendEntries.set(group, groupEntries);
     });
   
   // Make array with groups that have special positions
@@ -223,13 +227,13 @@ const LegendGroup = ({ title, children }) => {
 //   A single legend entry row with toggle, name, patch, and learn more button.
 export const LegendItem = ({ layerId, question }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const layer = useMapLayerStore((state) => state.layers.get(layerId));
-  const toggleLayerActive = useMapLayerStore((state) => state.toggleLayerActive);
+  const layerStatus = useMapLayerDataStore((state) => state.layerDataMap.get(layerId).status);
+  const [activeLayers, toggleLayerActive] = useActiveQuestionStore((state) => [state.activeLayers, state.toggleLayerActive]);
 
   return (
     <>
       <Flex direction='row' alignItems='center' gap={2} width='100%'>
-        {layer.leafletLayer === LOADING
+        {layerStatus === LAYER_STATUS.Loading
           ? <Spinner
               color='blue.500'
               emptyColor='gray.200'
@@ -238,8 +242,8 @@ export const LegendItem = ({ layerId, question }) => {
               marginInline='5px'
             />
           : <Switch
-              isChecked={layer.questions.some((q) => q.key === question && q.active === true)}
-              onChange={() => toggleLayerActive(layerId, question)}
+              isChecked={activeLayers.find(l => l.key === layerId).active === true}
+              onChange={() => toggleLayerActive(layerId)}
               flex='0'
             />
         }
@@ -253,7 +257,7 @@ export const LegendItem = ({ layerId, question }) => {
           whiteSpace='normal'
           fontFamily='var(--chakra-fonts-title)'
           fontSize='md'
-        >{layer.leafletLayer === LOADING ? 'Loading...' : layer.title}</FormLabel>
+        >{layerStatus === LAYER_STATUS.Loading ? 'Loading...' : layerMap.get(layerId).title}</FormLabel>
         <LegendPatch layerId={layerId} flex='0' />
         <IconButton
           variant='ghost'
@@ -272,8 +276,8 @@ export const LegendItem = ({ layerId, question }) => {
 }
 
 const LegendItemDetails = ({ layerId }) => {
-  const layer = useMapLayerStore((state) => state.layers.get(layerId))
-  const styleMap = useMapLayerStore((state) => state.getLayerStyleMap(layerId))
+  const layer = layerMap.get(layerId)
+  const styleMap = useMapLayerStyleStore((state) => state.getLayerStyleMap(layerId))
 
   return (
     <Flex direction='column' gap='2' my='2' marginInlineStart='3' mb='3'>
@@ -313,8 +317,8 @@ const LegendItemDescription = ({ description, noOfLines = undefined }) => {
 
 // Legend Patch Components
 const LegendPatch = ({ layerId }) => {
-  const layer = useMapLayerStore((state) => state.layers.get(layerId))
-  const styleMap = useMapLayerStore((state) => state.getLayerStyleMap(layerId))
+  const layer = layerMap.get(layerId)
+  const styleMap = useMapLayerStyleStore((state) => state.getLayerStyleMap(layerId))
 
   if (layer.symbology === 'classified') {
     return layer.shape === 'point' ? (
@@ -438,11 +442,12 @@ const LinePatchSVG = ({ fill, stroke, dashed = false }) => (
 
 // LegendItemOGM Component
 //   A single legend entry row for an OpenGreenMap layer.
-export const LegendItemOGM = ({ layerId, question }) => {
+export const LegendItemOGM = ({ layerId }) => {
   const { isOpen, onToggle } = useDisclosure();
-  const layer = useMapLayerStore((state) => state.layers.get(layerId));
-  const toggleLayerActive = useMapLayerStore((state) => state.toggleLayerActive);
-  const active = layer.questions.some((q) => q.key === question && q.active === true)
+  const layerStatus = useMapLayerDataStore((state) => state.layerDataMap.get(layerId).status);
+  const layer = layerMap.get(layerId);
+  const [activeLayers, toggleLayerActive] = useActiveQuestionStore((state) => [state.activeLayers, state.toggleLayerActive]);
+  const active = activeLayers.find(l => l.key === layerId).active
 
   const [mapName, setMapName] = useState(layer.title)
   const [team, setTeam] = useState({ name: '', id: null, src: require('../data/png/Placeholder.png') })
@@ -488,7 +493,7 @@ export const LegendItemOGM = ({ layerId, question }) => {
       <Flex direction='row' alignItems='center' justifyContent='space-between'>
         <LegendPatch layerId={layerId} flex='0' />
         <Spacer />
-        {layer.leafletLayer === LOADING
+        {layerStatus === LAYER_STATUS.Loading
           ? <Spinner
               color='blue.500'
               emptyColor='gray.200'
@@ -498,7 +503,7 @@ export const LegendItemOGM = ({ layerId, question }) => {
             />
           : <Switch
               isChecked={active}
-              onChange={(e) => toggleLayerActive(layerId, question)}
+              onChange={(e) => toggleLayerActive(layerId)}
             >{ active ? 'On' : 'Off' }</Switch>
         }
       </Flex>

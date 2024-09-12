@@ -39,10 +39,6 @@ const layer = {
         ), {offset: [4.5,2]});
     }
   },
-  questions: [
-    { key: 'be-healthy', active: true, group: 'Trees' },
-    { key: 'create-community', active: false, group: 'Greenspace' },
-  ]
 }
 
 export default layer;

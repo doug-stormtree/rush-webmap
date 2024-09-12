@@ -1,10 +1,21 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'eat-local',
   title: "Eat Local",
   question: "My corner store is charging $6.29 for potato chips! Can somebody call food security?",
   image: require('../png/EatLocal.png'),
+  layers: [
+    { key: 'AgriculturalLandReserve', active: true, ...LegendGroups.StartOn },
+    { key: 'CulturalFoods', active: true, ...LegendGroups.OGM },
+    { key: 'FoodSecurity', active: true, ...LegendGroups.StartOn },
+    { key: 'Pollinators', active: true, ...LegendGroups.OGM },
+    { key: 'ShellfishPO', active: false, ...LegendGroups.StartOff },
+    { key: 'ForageFish', active: false, ...LegendGroups.StartOff },
+  ],
   sections: {
     one: [
       {

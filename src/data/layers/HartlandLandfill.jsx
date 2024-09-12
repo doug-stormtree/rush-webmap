@@ -5,7 +5,6 @@ import {
 } from "leaflet";
 import { mapPopupContent } from "../LeafletStyleHelpers";
 import { ReactComponent as HartlandPie } from '../svg/HartlandPie.svg';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Hartland Landfill',
@@ -32,10 +31,6 @@ const layer = {
         ), {offset: [0,-72]});
     }
   },
-  questions: [
-    { key: 'have-it-all', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;

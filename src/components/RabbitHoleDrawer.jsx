@@ -10,7 +10,7 @@ import {
   DrawerOverlay,
   useMultiStyleConfig,
 } from '@chakra-ui/react';
-import Questions, { useActiveQuestionStore, questionActions } from '../data/Questions';
+import Questions, { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
 
 export default function RabbitHoleDrawer() {
   // theme

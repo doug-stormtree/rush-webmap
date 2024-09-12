@@ -1,10 +1,29 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import {
+  LegendGroups,
+  InitiativeTags as Tag,
+} from '../TextContent';
 
 const Question = {
   key: 'be-healthy',
   title: "Be Healthy",
   question: "Personal and planetary health are the same thing. How can I keep my natural life support system connected and protected?",
   image: require('../png/Naturehood.png'),
+  layers: [
+    { key: 'BigTrees', active: true, group: 'Trees' },
+    { key: 'CarbonSequestration', active: false, group: 'Landcover' },
+    { key: 'CherryTrees', active: true, group: 'Trees' },
+    { key: 'ENBS', active: true, group: 'Community' },
+    { key: 'MaltbyLakeBirdsong', active: true, group: 'Landcover' },
+    { key: 'Pollinators', active: true, ...LegendGroups.OGM },
+    { key: 'SensitiveEcosystems', active: false, group: 'Landcover' },
+    { key: 'SpeciesAtRisk', active: false, group: 'Landcover' },
+    { key: 'StewardshipGroups', active: false, group: 'Community' },
+    { key: 'TreeBylaws', active: true, group: 'Trees' },
+    { key: 'TreeCoverage2005', active: false, group: 'Trees' },
+    { key: 'TreeCoverage2019', active: false, group: 'Trees' },
+    { key: 'TreeEquity', active: true, ...LegendGroups.OGM },
+    { key: 'Watersheds', active: false, group: 'Landcover' },
+  ],
   sections: {
     one: [
       {

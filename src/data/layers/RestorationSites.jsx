@@ -1,5 +1,4 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: 'Restoration Sites',
@@ -33,10 +32,6 @@ const layer = {
         ), {offset: [0,-6]});
     }
   },
-  questions: [
-    { key: 'protect-from-flooding', active: false, ...LegendGroups.OGM },
-    { key: 'create-community', active: false, ...LegendGroups.OGM },
-  ]
 }
 
 export default layer;

@@ -1,5 +1,4 @@
 import { mapPopupContent, pointToIconByProperty } from "../LeafletStyleHelpers";
-import { LegendGroups } from "../TextContent";
 import { ReactComponent as CommunityCtrIcon } from '../svg/cc.svg';
 import { ReactComponent as LibraryIcon } from '../svg/lib.svg';
 
@@ -29,10 +28,6 @@ const layer = {
         ), {offset: [4.5,2]});
     }
   },
-  questions: [
-    { key: 'beat-the-heat', active: false, ...LegendGroups.StartOff },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;

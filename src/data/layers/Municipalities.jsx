@@ -24,9 +24,6 @@ const layer = {
         {offset: [0,8]});
     }
   },
-  questions: [
-    { key: 'create-community', active: false, group: 'Civic' }
-  ]
 }
 
 export default layer;

@@ -1,5 +1,4 @@
 import { mapPopupContent, pointToIcon, ogmFeaturesLink } from '../LeafletStyleHelpers';
-import { LegendGroups } from '../TextContent';
 
 const layer = {
   title: '1000 Rain Gardens',
@@ -35,10 +34,6 @@ const layer = {
         ), {offset: [0,-6]});
     }
   },
-  questions: [
-    { key: 'protect-from-flooding', active: true, ...LegendGroups.OGM },
-    { key: 'create-community', active: false, ...LegendGroups.OGM },
-  ]
 }
 
 export default layer;

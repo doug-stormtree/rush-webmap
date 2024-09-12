@@ -3,7 +3,6 @@ import {
   geoDateToLocaleString,
   getStyleMapProperty
 } from "../LeafletStyleHelpers";
-import { LegendGroups } from "../TextContent";
 
 const styleMap = new Map([
   ["None", {fillColor: 'rgb(90,90,90)', color: 'rgb(130,130,130)', legendText: 'No Bylaws'}],
@@ -83,10 +82,6 @@ const layer = {
       });
     }
   },
-  questions: [
-    { key: 'have-it-all', active: true, ...LegendGroups.StartOn },
-    { key: 'create-community', active: false, group: 'Civic' },
-  ]
 }
 
 export default layer;

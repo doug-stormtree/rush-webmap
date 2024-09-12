@@ -22,7 +22,7 @@ import { latLng } from 'leaflet';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // Questions
-import Questions, { useActiveQuestionStore } from './data/Questions';
+import Questions, { useActiveQuestionStore } from './data/QuestionStore';
 import { PlacesAutocomplete } from './components/PlacesAutocomplete'; // eslint-disable-line no-unused-vars
 import Sandbox from './components/Sandbox';
 import QuestionCardBar from './components/QuestionCardBar';
