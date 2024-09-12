@@ -1,11 +1,7 @@
-import produce, { enableMapSet, freeze } from 'immer';
 import { create } from 'zustand';
 import L from 'leaflet';
 import 'leaflet.markercluster';
 import { ogmIconLink } from './LeafletStyleHelpers';
-
-// Enable Immer MapSet
-enableMapSet();
 
 // Import all layer modules
 export const layerMap = new Map();
@@ -32,10 +28,9 @@ for (const key of layerMap.keys()) {
     data: leafletLayer
   })
 }
-const layerDataMap = freeze(layerDataInitial)
 
 export const useMapLayerDataStore = create((set, get) => ({
-  layerDataMap: layerDataMap,
+  layerDataMap: layerDataInitial,
   
   areLayersLoading: () => [...get().layerDataMap.values()]
   .some( l => l.status === LAYER_STATUS.Loading ),
@@ -66,17 +61,21 @@ export const useMapLayerDataStore = create((set, get) => ({
   },
   
   _setLayerStatus: (layerId, layerStatus) =>
-    set(
-      produce((state) => {
-        state.layerDataMap.get(layerId).status = layerStatus;
+    set((state) => {
+      const newState = new Map(state)
+      newState.set(layerId, {
+        ...state.get(layerId),
+        status: layerStatus,
       })
-    ),
+    }),
   _setLayerData: (layerId, layerData) =>
-    set(
-      produce((state) => {
-        state.layerDataMap.get(layerId).data = layerData;
+    set((state) => {
+      const newState = new Map(state)
+      newState.set(layerId, {
+        ...state.get(layerId),
+        data: layerData,
       })
-    ),
+    }),
 }))
 
 // Create layer styleMap store
@@ -84,18 +83,16 @@ const layerStyleMapInitial = new Map();
 [...layerMap.entries()].forEach(([key, val]) => {
   layerStyleMapInitial.set(key, val.styleMap)
 })
-const layerStyleMap = freeze(layerStyleMapInitial)
     
 export const useMapLayerStyleStore = create((set, get) => ({
-  layerStyleMap: layerStyleMap,
+  layerStyleMap: layerStyleMapInitial,
   
   // Layer Legend Style Map
   _setLayerStyleMap: (layerId, styleMap) =>
-    set(
-      produce((state) => {
-        state.layerStyleMap.set(layerId, styleMap);
-      })
-    ),
+    set((state) => {
+      const newState = new Map(state)
+      newState.set(layerId, styleMap)
+    }),
     
   getLayerStyleMap: (layerId) => {
     const styleMap = get().layerStyleMap.get(layerId)
