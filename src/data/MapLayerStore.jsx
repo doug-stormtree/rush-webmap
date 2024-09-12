@@ -1,4 +1,4 @@
-import produce, { enableMapSet } from 'immer';
+import produce, { enableMapSet, freeze } from 'immer';
 import { create } from 'zustand';
 import L from 'leaflet';
 import 'leaflet.markercluster';
@@ -24,15 +24,15 @@ export const LAYER_STATUS = {
   Ready: 2,
 }
 
-const layerDataMap = produce(new Map(), draft => {
-  for (const key of layerMap.keys()) {
-    const leafletLayer = layerMap.get(key).leafletLayer
-    draft.set(key, {
-      status: leafletLayer === undefined ? LAYER_STATUS.Undefined : LAYER_STATUS.Ready,
-      data: leafletLayer
-    })
-  }
-});
+const layerDataInitial = new Map()
+for (const key of layerMap.keys()) {
+  const leafletLayer = layerMap.get(key).leafletLayer
+  layerDataInitial.set(key, {
+    status: leafletLayer === undefined ? LAYER_STATUS.Undefined : LAYER_STATUS.Ready,
+    data: leafletLayer
+  })
+}
+const layerDataMap = freeze(layerDataInitial)
 
 export const useMapLayerDataStore = create((set, get) => ({
   layerDataMap: layerDataMap,
