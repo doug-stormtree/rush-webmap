@@ -452,7 +452,7 @@ export const LegendItemOGM = ({ layerId }) => {
   const [mapName, setMapName] = useState(layer.title)
   const [team, setTeam] = useState({ name: '', id: null, src: require('../data/png/Placeholder.png') })
   useEffect(() => {
-    if (!layer?.ogmMapId) return;
+    if (!layer?.ogmMapId || team.id !== null) return;
 
     // Fetch OGM Team Image
     fetch(`https://new.opengreenmap.org/api-v1/maps/${layer.ogmMapId}`)
@@ -462,6 +462,7 @@ export const LegendItemOGM = ({ layerId }) => {
         const resMapName = json.map?.name
         if (resMapName) setMapName(resMapName)
         if (teamId) {
+          setTeam({ name: 'Loading...', id: 'loading', src: team.src })
           fetch(`https://new.opengreenmap.org/api-v1/teams/${teamId}`)
             .then((response) => response.json())
             .then((json) => {
@@ -472,6 +473,12 @@ export const LegendItemOGM = ({ layerId }) => {
                   name: teamName,
                   id: teamId,
                   src: `https://new.opengreenmap.org/api-v1/pictures/${teamLogoId}/picture`
+                })
+              } else {
+                setTeam({
+                  name: '',
+                  id: 'error',
+                  src: team.src
                 })
               }
             })

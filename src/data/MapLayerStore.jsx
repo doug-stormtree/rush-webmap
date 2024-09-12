@@ -18,6 +18,7 @@ export const LAYER_STATUS = {
   Undefined: 0,
   Loading: 1,
   Ready: 2,
+  Error: -1,
 }
 
 const layerDataInitial = new Map()
@@ -40,7 +41,7 @@ export const useMapLayerDataStore = create((set, get) => ({
     const layerData = get().layerDataMap.get(layerId)
     if (layerData.status === LAYER_STATUS.Ready) return layerData.data
     if (layerData.status === LAYER_STATUS.Undefined) {
-      get()._setLayerStatus(layerId, LAYER_STATUS.Loading);
+      get()._setLayer(layerId, LAYER_STATUS.Loading, undefined);
       fetch(layerAttr.data)
       .then((response) => response.json())
       .then((json) => {
@@ -49,35 +50,27 @@ export const useMapLayerDataStore = create((set, get) => ({
           layerAttr.options,
         )
         if (layerAttr.cluster) {
-          const clusterLayer = L.markerClusterGroup(layerAttr?.clusterOpts).addLayers(mapLayer)
-          get()._setLayerData(layerId, clusterLayer);
+          try {
+            const clusterLayer = L.markerClusterGroup(layerAttr?.clusterOpts).addLayers(mapLayer)
+            get()._setLayer(layerId, LAYER_STATUS.Ready, clusterLayer);
+          } catch (error) {
+            get()._setLayer(layerId, LAYER_STATUS.Error, undefined);
+          }
         } else {
-          get()._setLayerData(layerId, mapLayer);
+          get()._setLayer(layerId, LAYER_STATUS.Ready, mapLayer);
         }
-        get()._setLayerStatus(layerId, LAYER_STATUS.Ready);
       });
     }
     return undefined;
   },
   
-  _setLayerStatus: (layerId, layerStatus) =>
+  _setLayer: (layerId, layerStatus, layerData) =>
     set((state) => {
       const newState = {
         layerDataMap: new Map(state.layerDataMap),
       }
       newState.layerDataMap.set(layerId, {
-        ...state.layerDataMap.get(layerId),
         status: layerStatus,
-      })
-      return newState
-    }),
-  _setLayerData: (layerId, layerData) =>
-    set((state) => {
-      const newState = {
-        layerDataMap: new Map(state.layerDataMap)
-      }
-      newState.layerDataMap.set(layerId, {
-        ...state.layerDataMap.get(layerId),
         data: layerData,
       })
       return newState
