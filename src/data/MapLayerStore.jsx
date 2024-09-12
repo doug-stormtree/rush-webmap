@@ -1,4 +1,4 @@
-import { create, createStore, useStore } from 'zustand';
+import { create } from 'zustand';
 import L from 'leaflet';
 import 'leaflet.markercluster';
 import { ogmIconLink } from './LeafletStyleHelpers';
@@ -62,25 +62,36 @@ export const useMapLayerDataStore = create((set, get) => ({
   
   _setLayerStatus: (layerId, layerStatus) =>
     set((state) => {
-      const newState = { layerDataMap: new Map(state.layerDataMap) }
+      const newState = {
+        layerDataMap: new Map(state.layerDataMap),
+      }
       newState.layerDataMap.set(layerId, {
         ...state.layerDataMap.get(layerId),
         status: layerStatus,
       })
+      return newState
     }),
   _setLayerData: (layerId, layerData) =>
     set((state) => {
-      const newState = { layerDataMap: new Map(state.layerDataMap) }
+      const newState = {
+        layerDataMap: new Map(state.layerDataMap)
+      }
       newState.layerDataMap.set(layerId, {
         ...state.layerDataMap.get(layerId),
         data: layerData,
       })
+      return newState
     }),
 }))
 
 // Create layer styleMap store
 const layerStyleMapInitial = new Map();
-const mapLayerStyleStore = createStore((set, get) => ({
+[...layerMap.entries()].forEach(([key, val]) => {
+  val.styleMap === undefined
+    ? layerStyleMapInitial.set(key, new Map())
+    : layerStyleMapInitial.set(key, val.styleMap)
+})
+export const useMapLayerStyleStore = create((set, get) => ({
   layerStyleMap: layerStyleMapInitial,
   
   // Layer Legend Style Map
@@ -88,25 +99,19 @@ const mapLayerStyleStore = createStore((set, get) => ({
     set((state) => {
       const newState = { layerStyleMap: new Map(state.layerStyleMap) }
       newState.layerStyleMap.set(layerId, styleMap)
+      return newState
     }),
     
   getLayerStyleMap: (layerId) => {
-    const styleMap = get().layerStyleMap.get(layerId)
-    return styleMap;
-  }
-}));
+    let styleMap = get().layerStyleMap.get(layerId)
+    const ogmMapId = layerMap.get(layerId).ogmMapId
 
-// pre-fetch OGM icons
-[...layerMap.entries()].forEach(([key, val]) => {
-  if (val.styleMap === undefined) {
-    if (val.ogmMapId === undefined) {
-      mapLayerStyleStore.getState()._setLayerStyleMap(key, new Map())
-    } else {
+    if (styleMap.size === 0 && ogmMapId !== undefined) {
       // Fetch OGM Icons
-      fetch(`https://new.opengreenmap.org/api-v1/icons?withoutAttributes=true&edit=false&map=${val.ogmMapId}`)
+      fetch(`https://new.opengreenmap.org/api-v1/icons?withoutAttributes=true&edit=false&map=${ogmMapId}`)
         .then((response) => response.json())
         .then((json) => {
-          mapLayerStyleStore.getState()._setLayerStyleMap(key, new Map(
+          get()._setLayerStyleMap(layerId, new Map(
             json.icons
               .sort((a,b) => a.name > b.name ? 1 : a.name < b.name ? -1 : 0)
               .map((s) => {
@@ -115,13 +120,10 @@ const mapLayerStyleStore = createStore((set, get) => ({
             ))
         })
       // Return loading state
-      mapLayerStyleStore.getState()._setLayerStyleMap(key,
-        new Map([['',{legendText:'Loading...'}]])
-      )
+      styleMap = new Map([['',{legendText:'Loading...'}]])
+      get()._setLayerStyleMap(layerId, styleMap)
     }
-  } else {
-    mapLayerStyleStore.getState()._setLayerStyleMap(key, val.styleMap)
-  }
-})
 
-export const useMapLayerStyleStore = (selector) => useStore(mapLayerStyleStore, selector)
+    return styleMap
+  }
+}));
