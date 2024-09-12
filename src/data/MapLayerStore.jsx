@@ -18,6 +18,7 @@ export const LAYER_STATUS = {
   Undefined: 0,
   Loading: 1,
   Ready: 2,
+  Error: -1,
 }
 
 const layerDataInitial = new Map()
@@ -49,8 +50,12 @@ export const useMapLayerDataStore = create((set, get) => ({
           layerAttr.options,
         )
         if (layerAttr.cluster) {
-          const clusterLayer = L.markerClusterGroup(layerAttr?.clusterOpts).addLayers(mapLayer)
-          get()._setLayer(layerId, LAYER_STATUS.Ready, clusterLayer);
+          try {
+            const clusterLayer = L.markerClusterGroup(layerAttr?.clusterOpts).addLayers(mapLayer)
+            get()._setLayer(layerId, LAYER_STATUS.Ready, clusterLayer);
+          } catch (error) {
+            get()._setLayer(layerId, LAYER_STATUS.Error, undefined);
+          }
         } else {
           get()._setLayer(layerId, LAYER_STATUS.Ready, mapLayer);
         }
