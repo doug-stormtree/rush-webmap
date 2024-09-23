@@ -13,10 +13,12 @@ const Question = {
     { key: 'BTH_LocalInitiatives', active: false, group: 'Community' },
     { key: 'CRD_Parks', active: false, ...LegendGroups.StartOff },
     { key: 'DrinkingFountains', active: false, ...LegendGroups.StartOff },
-    { key: 'HeatDomes', active: true, ...LegendGroups.StartOn },
+    //{ key: 'HeatDomes', active: true, ...LegendGroups.StartOn },
+    { key: 'HeatExposureLandSurfaceTemp', active: true, ...LegendGroups.StartOn },
+    { key: 'HeatExposureAirTemp', active: false, ...LegendGroups.StartOn },
     { key: 'Impervious2019', active: false, ...LegendGroups.StartOff },
     { key: 'TreeCoverage2005', active: false, ...LegendGroups.StartOn },
-    { key: 'TreeCoverage2019', active: true, ...LegendGroups.StartOn },
+    { key: 'TreeCoverage2019', active: false, ...LegendGroups.StartOn },
   ],
   sections: {
     one: [
