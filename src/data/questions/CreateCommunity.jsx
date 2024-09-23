@@ -36,7 +36,7 @@ const Question = {
     { key: 'HardShorelines', active: false, group: 'Water' },
     { key: 'HartlandLandfill', active: false, group: 'Civic' },
     //{ key: 'HeatDomes', active: false, group: 'Greenspace' },
-    { key: 'HeatExposureLandSurfaceTemp', active: true, group: 'Heat' },
+    { key: 'HeatExposureLandSurfaceTemp', active: false, group: 'Heat' },
     { key: 'HeatExposureAirTemp', active: false, group: 'Heat' },
     { key: 'Impervious2019', active: false, group: 'Water' },
     { key: 'MajorTransportationHubs', active: false, group: 'Civic' },
