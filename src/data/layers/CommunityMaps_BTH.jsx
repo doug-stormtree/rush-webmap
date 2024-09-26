@@ -1,26 +1,34 @@
 import { mapPopupContent } from '../LeafletStyleHelpers';
 
 const layer = {
-  title: 'Local Initiatives',
+  title: 'Community Maps',
   description: 'Learn more from these area-specific community mapping initiatives by clicking one of these areas on the map and following the link.',
-  data: require('../geojson/BeatTheHeat_Links.geojson'),
+  data: require('../geojson/CommunityMaps_BTH.geojson'),
   shape: 'polygon',
   symbology: 'single',
   options: {
-    style: {
-      stroke: false,
-      fill: true,
-      opacity: 0.5,
-      fillOpacity: 0.4,
-      fillColor: 'rgba(253,218,13,1.0)',
-      interactive: true,
+    style: function (feature) {
+      return {
+        stroke: false,
+        fill: true,
+        opacity: 0.5,
+        fillOpacity: 0.4,
+        fillColor: feature.properties.color,
+        interactive: true,
+      }
     },
     onEachFeature: (f,l) => {
+      l.bindTooltip(f.properties.Name, {
+        permanent: true,
+        opacity: 0.8,
+        direction: 'center',
+        className: 'leaflet-label'
+      })
       l.bindPopup(mapPopupContent(
         f.properties['Name'],
         f.properties['Description'],
         f.properties['URL'],
-        'Click here to view the ' + f.properties['Name']),
+        'Click here to view the map'),
         {offset: [0,8]});
     }
   },

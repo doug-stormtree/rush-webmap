@@ -10,7 +10,7 @@ const Question = {
   image: require('../png/BeatTheHeat.png'),
   layers: [
     { key: 'AirConditionedBuildings', active: false, ...LegendGroups.StartOff },
-    { key: 'BTH_LocalInitiatives', active: false, group: 'Community' },
+    { key: 'CommunityMaps_BTH', active: false, group: 'Community' },
     { key: 'CRD_Parks', active: false, ...LegendGroups.StartOff },
     { key: 'DrinkingFountains', active: false, ...LegendGroups.StartOff },
     //{ key: 'HeatDomes', active: true, ...LegendGroups.StartOn },
