@@ -14,6 +14,9 @@ const Question = {
     { key: 'LittleFreeLibraries', active: false, ...LegendGroups.StartOff },
     { key: 'TreeCoverage2005', active: false, ...LegendGroups.StartOff },
     { key: 'TreeCoverage2019', active: false, ...LegendGroups.StartOff },
+    { key: 'NativeLandDigitalLanguages', active: false, group: 'Indigenous' },
+    { key: 'NativeLandDigitalTerritories', active: false, group: 'Indigenous' },
+    { key: 'NativeLandDigitalTreaties', active: false, group: 'Indigenous' },
   ],
   sections: {
     one: [
