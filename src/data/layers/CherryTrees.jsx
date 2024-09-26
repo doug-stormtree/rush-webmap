@@ -55,6 +55,8 @@ const layer = {
               transform: 'translate(0, -50%)',
               width: '100%',
               textAlign: 'center',
+              fontWeight: 'bold',
+              textShadow: '#FFF 2px 2px 4px, #FFF -2px 2px 4px, #FFF 2px -2px 4px, #FFF -2px -2px 4px;',
             }}>{cluster.getChildCount()}</div>
           </>
         ),

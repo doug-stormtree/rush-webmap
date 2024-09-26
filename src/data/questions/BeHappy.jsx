@@ -11,6 +11,7 @@ const Question = {
   layers: [
     { key: 'BCTransitRoutes', active: true, ...LegendGroups.StartOn },
     { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },
+    { key: 'LittleFreeLibraries', active: false, ...LegendGroups.StartOff },
     { key: 'TreeCoverage2005', active: false, ...LegendGroups.StartOff },
     { key: 'TreeCoverage2019', active: false, ...LegendGroups.StartOff },
   ],
