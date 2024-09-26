@@ -1,0 +1,54 @@
+{
+  "type": "FeatureCollection",
+  "name": "CommunityMaps",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "North Park Heatwave Map",
+        "Description": "A community map of the North Park neighbourhood showing assets, concerns, and opportunities for dealing with heatwave events in the future. Created by UVic geography students Tenaya Lynx, Julia Frasher, Riley Sondergaard.",
+        "URL": "https://www.google.com/maps/d/viewer?mid=12YLjmNqss6nHrcWQYYgK0ffl8JqkYaKd&ll=48.431337468326106%2C-123.35707554999999&z=16",
+        "color": "#fdda0d"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -123.3609917,
+              48.4354733
+            ],
+            [
+              -123.3618928,
+              48.4286964
+            ],
+            [
+              -123.3589104,
+              48.428554
+            ],
+            [
+              -123.3589533,
+              48.4275146
+            ],
+            [
+              -123.353267,
+              48.4272013
+            ],
+            [
+              -123.3522583,
+              48.4349893
+            ],
+            [
+              -123.3609917,
+              48.4354733
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

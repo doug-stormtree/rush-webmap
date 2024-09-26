@@ -16,7 +16,7 @@ const Question = {
     { key: 'AquiferSusceptibilitySediment', active: false, group: 'Water' },
     { key: 'BCTransitRoutes', active: false, group: 'Civic' },
     { key: 'BigTrees', active: false, group: 'Greenspace' },
-    { key: 'BTH_LocalInitiatives', active: false, group: 'Community' },
+    { key: 'CommunityMaps', active: false, group: 'Community' },
     { key: 'CarbonSequestration', active: false, group: 'Greenspace' },
     { key: 'CherryTrees', active: false, group: 'Greenspace' },
     { key: 'CircularEconomyBusinesses', active: false, ...LegendGroups.OGM },
