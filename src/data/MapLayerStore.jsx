@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import L from 'leaflet';
+import * as L from 'leaflet';
 import 'leaflet.markercluster';
 import { ogmIconLink } from './LeafletStyleHelpers';
 
@@ -54,7 +54,7 @@ export const useMapLayerDataStore = create((set, get) => ({
             const clusterLayer = L.markerClusterGroup(layerAttr?.clusterOpts).addLayers(mapLayer)
             get()._setLayer(layerId, LAYER_STATUS.Ready, clusterLayer);
           } catch (error) {
-            get()._setLayer(layerId, LAYER_STATUS.Error, undefined);
+            get()._setLayer(layerId, LAYER_STATUS.Ready, mapLayer);
           }
         } else {
           get()._setLayer(layerId, LAYER_STATUS.Ready, mapLayer);

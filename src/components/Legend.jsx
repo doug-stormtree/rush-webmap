@@ -285,7 +285,7 @@ const LegendItemDetails = ({ layerId }) => {
       <Flex direction='column' gap='1' mx='2' p='2' bgColor='gray.100' borderRadius='lg'>
         {layer.legendTitle ? <Heading size='sm'>{layer.legendTitle}</Heading> : null }
         {[...styleMap.entries()].map(([key, val]) => 
-          <Flex key={val?.legendText ?? key} direction='row' alignItems='center' >
+          <Flex key={key} direction='row' alignItems='center' >
             { layer.shape === 'point'
                 ? <SinglePatchPoint style={val} flex='0' />
                 : layer.shape === 'line'
@@ -400,7 +400,7 @@ const ClassifiedPatchPolygon = ({ styleMap }) => {
     <HStack spacing='0'>
       {styles.map(([key, style]) => {
         return (
-          <div key={style.legendText ?? key} style={{
+          <div key={key} style={{
             width: (45 / styles.length) + 'px',
             height: '27px',
             background: style.fillColor ?? style.color ?? '#BBB'

@@ -39,6 +39,7 @@ const Question = {
     { key: 'HeatExposureLandSurfaceTemp', active: false, group: 'Heat' },
     { key: 'HeatExposureAirTemp', active: false, group: 'Heat' },
     { key: 'Impervious2019', active: false, group: 'Water' },
+    { key: 'LittleFreeLibraries', active: false, group: 'Community' },
     { key: 'MajorTransportationHubs', active: false, group: 'Civic' },
     { key: 'MaltbyLakeBirdsong', active: false, group: 'Greenspace' },
     { key: 'Municipalities', active: false, group: 'Civic' },
