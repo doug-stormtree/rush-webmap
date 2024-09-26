@@ -1,5 +1,5 @@
 import { mapPopupContent, pointToIcon } from "../LeafletStyleHelpers";
-import { ReactComponent as SpecialSiteIcon } from '../svg/special site icon.svg';
+import { ReactComponent as SpecialSiteIcon } from '../svg/ENBS.svg';
 
 const iconStyle = {
   icon: (<SpecialSiteIcon />),

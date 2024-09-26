@@ -29,6 +29,7 @@ const Question = {
     { key: 'EVChargingStations', active: false, group: 'Energy' },
     { key: 'FoodSecurity', active: false, group: 'Community' },
     { key: 'ForageFish', active: false, group: 'Water' },
+    { key: 'GreenBlueBelt', active: false, group: 'Greenspace' },
     { key: 'GreenhouseGasOnRoad2020', active: false, group: 'Energy' },
     { key: 'GreenhouseGasOnRoad2022', active: false, group: 'Energy' },
     { key: 'GreenhouseGasStationary2020', active: false, group: 'Energy' },

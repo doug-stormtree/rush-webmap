@@ -11,9 +11,10 @@ const Question = {
   layers: [
     { key: 'BigTrees', active: true, group: 'Trees' },
     { key: 'CarbonSequestration', active: false, group: 'Landcover' },
-    { key: 'CherryTrees', active: true, group: 'Trees' },
+    { key: 'CherryTrees', active: false, group: 'Trees' },
     { key: 'CommunityMaps', active: true, group: 'Community'},
     { key: 'ENBS', active: true, group: 'Community' },
+    { key: 'GreenBlueBelt', active: false, group: 'Landcover' },
     { key: 'MaltbyLakeBirdsong', active: true, group: 'Landcover' },
     { key: 'Pollinators', active: true, ...LegendGroups.OGM },
     { key: 'SensitiveEcosystems', active: false, group: 'Landcover' },
