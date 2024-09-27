@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { FiHelpCircle } from 'react-icons/fi';
 import FormattedText from './FormattedText';
-import { AboutPageText, AboutPageTitleLong } from '../data/TextContent';
+import { AboutPageText, HomePageTitleLong } from '../data/TextContent';
 
 export default function LandingModalButton(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -44,7 +44,7 @@ export default function LandingModalButton(props) {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader maxW={parseInt(props.vh, 10) < 680 ? '2xl' : '4xl'}>
-            {AboutPageTitleLong}
+            {HomePageTitleLong}
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody maxW={parseInt(props.vh, 10) < 680 ? '2xl' : '4xl'}>
