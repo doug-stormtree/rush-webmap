@@ -9,11 +9,11 @@ import {
 import { FaArrowRight } from "react-icons/fa6";
 import NavBar from './NavBar'
 import {
-  AboutPageBody,
-  AboutPageButtonLabel,
-  AboutPageQuote,
-  AboutPageSubTitle,
-  AboutPageTitle,
+  HomePageBody,
+  HomePageButtonLabel,
+  HomePageQuote,
+  HomePageSubTitle,
+  HomePageTitle,
 } from '../data/TextContent';
 
 export default function HomePage() {
@@ -53,7 +53,7 @@ export default function HomePage() {
             fontWeight='bold'
             marginTop={['0.25rem', '0.75rem', null, null, '1.0rem', '1.5rem']}
           >
-            {AboutPageTitle}
+            {HomePageTitle}
           </Text>
           <Text
             fontFamily='var(--chakra-fonts-subHeading)'
@@ -62,10 +62,10 @@ export default function HomePage() {
             color='rgba(0,0,0,0.6)'
             marginBottom='1rem'
           >
-            {AboutPageSubTitle}
+            {HomePageSubTitle}
           </Text>
           {
-            AboutPageBody.map((p, i) => (
+            HomePageBody.map((p, i) => (
               <Text
                 key={`AboutText${i}`}
                 fontFamily='var(--chakra-fonts-body)'
@@ -85,7 +85,7 @@ export default function HomePage() {
                 colorScheme='green'
                 rightIcon={<FaArrowRight />}
               >
-                {AboutPageButtonLabel}
+                {HomePageButtonLabel}
               </Button>
             </Link>
           </Flex>
@@ -125,7 +125,7 @@ export default function HomePage() {
             fontWeight='500'
           >
             <Box transform={['scale(-1, 1)', null, 'none', null, 'scale(-1, 1)', null]}>
-              {AboutPageQuote}
+              {HomePageQuote}
             </Box>
           </Box>
         </Box>

@@ -30,6 +30,7 @@ import HomePage from './components/HomePage';
 import ContentInitiativeContainer from './components/ContentInitiativeContainer';
 import RabbitHoleDrawer from './components/RabbitHoleDrawer';
 import TutorialPopup from './components/TutorialPopup';
+import AboutPage from './components/AboutPage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -55,6 +56,10 @@ function App() {
           <Route
             path="/"
             element={<HomePage />}
+          />
+          <Route
+            path="/about"
+            element={<AboutPage />}
           />
           <Route
             path="/app"

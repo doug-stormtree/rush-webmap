@@ -1,12 +1,12 @@
-export const AboutPageButtonLabel = 'Get Started'
-export const AboutPageTitle = 'Welcome to the RUSH'
-export const AboutPageTitleLong = 'Welcome to the RUSH Initiative Web Map'
-export const AboutPageSubTitle = 'Climate change is a real bummer but reversing the trend is at our fingertips and in our footprints. The Resilient Urban Systems & Habitat (RUSH) Initiative is about rapid resilience in record time.'
-export const AboutPageBody = [
+export const HomePageButtonLabel = 'Get Started'
+export const HomePageTitle = 'Welcome to the RUSH'
+export const HomePageTitleLong = 'Welcome to the RUSH Initiative Web Map'
+export const HomePageSubTitle = 'Climate change is a real bummer but reversing the trend is at our fingertips and in our footprints. The Resilient Urban Systems & Habitat (RUSH) Initiative is about rapid resilience in record time.'
+export const HomePageBody = [
   'Join this collective creation to mapping the difference we’re all making. Comparing datasets on personal and planetary health. Help us plot the spots that track the healing. Help identify the risks and the fixes.',
   'The RUSH Initiative is exploring this work on the unceded and unsurrendered territories of the lək̓ʷəŋən and SENĆOŦEN speaking peoples. Maps have a long history of erasure of Indigenous cultures and territories. Our goal is to promote tools that support the healing of ecosystems and communities so that all beings can live their best life.',
 ]
-export const AboutPageQuote = 'Choose a question. Consider the data. Find the people and solutions that werk for you.'
+export const HomePageQuote = 'Choose a question. Consider the data. Find the people and solutions that werk for you.'
 
 export const AboutPageText = [
   {type: 'p', content: 'The RUSH Initiative is exploring this work on the unceded and unsurrendered territories of the lək̓ʷəŋən and SENĆOŦEN speaking peoples. Maps have a long history of erasure of Indigenous cultures and territories. Our goal is to promote tools that support the healing of ecosystems and communities as a way to practice reconciliation, gratitude, and respect.'},
