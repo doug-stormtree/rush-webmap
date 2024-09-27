@@ -73,6 +73,11 @@ const logos = [
     url: 'https://new.opengreenmap.org/'
   },
   { 
+    src: require('../data/logos/18. Engage with Nature-Based Solutions.png'),
+    alt: 'Engage with Nature-Based Solutions',
+    url: 'https://engagewithnbs.ca/'
+  },
+  { 
     src: require('../data/logos/5. SeaChange.png'),
     alt: 'SeaChange Society',
     url: 'https://seachangesociety.com/'
@@ -94,48 +99,48 @@ const logos = [
   },
   { 
     src: require('../data/logos/9. GVPlacemaking Network.png'),
+    alt: 'Greater Victoria NatureHood',
+    url: 'https://www.gvnaturehood.com/'
+  },
+  { 
+    src: require('../data/logos/10. Greater Victoria NatureHood.png'),
     alt: 'Greater Victoria Placemaking Network',
     url: 'https://victoriaplacemaking.ca/'
   },
   { 
-    src: require('../data/logos/10. Data for Good Vancouver.png'),
+    src: require('../data/logos/11. Data for Good Vancouver.png'),
     alt: 'Data for Good Vancouver',
     url: 'https://vancouver.dataforgood.ca/'
   },
   { 
-    src: require('../data/logos/11. Oak Bay High.png'),
+    src: require('../data/logos/12. Oak Bay High.png'),
     alt: 'Oak Bay High School',
     url: 'https://oakbay.sd61.bc.ca/'
   },
   { 
-    src: require('../data/logos/12. Parklands High School.png'),
+    src: require('../data/logos/13. Parklands High School.png'),
     alt: 'Parklands High School',
     url: 'https://parkland.saanichschools.ca/'
   },
   { 
-    src: require('../data/logos/13. Mount Doug High School.png'),
+    src: require('../data/logos/14. Mount Doug High School.png'),
     alt: 'Mount Douglas Secondary',
     url: 'https://mountdoug.sd61.bc.ca/'
   },
   { 
-    src: require('../data/logos/14. Claremont High School.png'),
+    src: require('../data/logos/15. Claremont High School.png'),
     alt: 'Claremont Secondary',
     url: 'https://claremont.saanichschools.ca/'
   },
   { 
-    src: require('../data/logos/15. RBC Tech for Nature.png'),
+    src: require('../data/logos/16. RBC Tech for Nature.png'),
     alt: 'RBC Tech for Nature',
     url: 'https://www.rbc.com/our-impact/climate/environmental-donations.html'
   },
   { 
-    src: require('../data/logos/16. University of Victoria CEL.png'),
+    src: require('../data/logos/17. University of Victoria CEL.png'),
     alt: 'The University of Victoria Community-Engaged Learning',
     url: 'https://www.uvic.ca/career-services/build-your-career/community-engaged-learning/index.php#ipn-community-engaged-learning'
-  },
-  { 
-    src: require('../data/logos/17. Engage with Nature-Based Solutions.png'),
-    alt: 'Engage with Nature-Based Solutions',
-    url: 'https://engagewithnbs.ca/'
   },
 ]
 
