@@ -73,6 +73,11 @@ const logos = [
     url: 'https://new.opengreenmap.org/'
   },
   { 
+    src: require('../data/logos/18. Engage with Nature-Based Solutions.png'),
+    alt: 'Engage with Nature-Based Solutions',
+    url: 'https://engagewithnbs.ca/'
+  },
+  { 
     src: require('../data/logos/5. SeaChange.png'),
     alt: 'SeaChange Society',
     url: 'https://seachangesociety.com/'
@@ -136,11 +141,6 @@ const logos = [
     src: require('../data/logos/17. University of Victoria CEL.png'),
     alt: 'The University of Victoria Community-Engaged Learning',
     url: 'https://www.uvic.ca/career-services/build-your-career/community-engaged-learning/index.php#ipn-community-engaged-learning'
-  },
-  { 
-    src: require('../data/logos/18. Engage with Nature-Based Solutions.png'),
-    alt: 'Engage with Nature-Based Solutions',
-    url: 'https://engagewithnbs.ca/'
   },
 ]
 
