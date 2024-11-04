@@ -494,7 +494,6 @@ export const LegendItemOGM = ({ layerId }) => {
       padding='8px'
       bgColor='gray.100'
       borderRadius='xl'
-      boxShadow={isOpen ? undefined : 'inset 0px -24px 16px -16px hsla(0,0%,0%,.25)'}
     >
       {/* Map icons and toggle */}
       <Flex direction='row' alignItems='center' justifyContent='space-between'>
@@ -518,7 +517,7 @@ export const LegendItemOGM = ({ layerId }) => {
       <Flex direction='row' alignItems='bottom' justifyContent='space-between'>
         <Flex direction='column' alignItems='left' justifyContent='flex-end'>
           <Link
-            href={`https://new.opengreenmap.org/browse/teams/${team.id}`}
+            href={layer.liveOverride?.team?.url ?? `https://new.opengreenmap.org/browse/teams/${team.id}`}
             isExternal
           >
             <Text
@@ -527,7 +526,7 @@ export const LegendItemOGM = ({ layerId }) => {
               fontWeight='light'
               noOfLines={1}
             >
-              {team.name}
+              {layer.liveOverride?.team?.name ?? team.name}
             </Text>
           </Link>
           <Text
@@ -539,14 +538,19 @@ export const LegendItemOGM = ({ layerId }) => {
             {mapName}
           </Text>
         </Flex>
-        <Image
-          boxSize='100px'
-          objectFit='contain'
-          bgColor='white'
-          borderRadius='xl'
-          alt={team?.name ?? ''}
-          src={team?.src ?? ''}
-        />
+        <Link
+          href={layer.liveOverride?.team?.url ?? `https://new.opengreenmap.org/browse/teams/${team.id}`}
+          isExternal
+        >
+          <Image
+            boxSize='100px'
+            objectFit='contain'
+            bgColor='white'
+            borderRadius='xl'
+            alt={team?.name ?? ''}
+            src={team?.src ?? ''}
+          />
+        </Link>
       </Flex>
       {/* Description */}
       <Tooltip
@@ -556,28 +560,36 @@ export const LegendItemOGM = ({ layerId }) => {
         hasArrow
         isDisabled={isOpen}
       >
-        <Box onClick={onToggle}>
+        <Box
+          onClick={onToggle}
+          paddingBottom={isOpen ? 'unset' : '0.75em'}
+          boxShadow={isOpen ? undefined : 'inset 0px -24px 16px -16px hsla(0,0%,0%,.25)'}
+        >
           <LegendItemDescription
             description={layer.description}
             noOfLines={isOpen ? undefined : 2}
           />
         </Box>
       </Tooltip>
-      { isOpen ? (
+      { true || isOpen ? (
         <Flex direction='row' justifyContent='space-around' >
           <Link
-            href={`https://new.opengreenmap.org/browse/sites?map=${layer?.ogmMapId}`}
+            href={layer.liveOverride?.btn1?.url ?? `https://new.opengreenmap.org/browse/sites?map=${layer?.ogmMapId}`}
             isExternal
           >
-            <Button colorScheme='green'>Visit Campaign</Button>
+            <Button colorScheme='green'>{layer.liveOverride?.btn1?.label ?? 'Visit Campaign'}</Button>
           </Link>
           <Link
-            href={`https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
+            href={layer.liveOverride?.btn2?.url ?? `https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
             isExternal
           >
-            <Tooltip label='Will Require OpenGreenMap Account' placement='top' bg='orange.600' hasArrow>
-              <Button colorScheme='green' >Add a Feature</Button>
-            </Tooltip>
+            { layer.liveOverride?.ogmNoAccountWarning ? (
+              <Button colorScheme='green' >{layer.liveOverride?.btn2?.label ?? 'Add a Feature'}</Button>
+            ) : (
+              <Tooltip label='Will Require OpenGreenMap Account' placement='top' bg='orange.600' hasArrow>
+                <Button colorScheme='green' >{layer.liveOverride?.btn2?.label ?? 'Add a Feature'}</Button>
+              </Tooltip>
+            )}
           </Link>
         </Flex>
       ) : null }
