@@ -494,7 +494,6 @@ export const LegendItemOGM = ({ layerId }) => {
       padding='8px'
       bgColor='gray.100'
       borderRadius='xl'
-      boxShadow={isOpen ? undefined : 'inset 0px -24px 16px -16px hsla(0,0%,0%,.25)'}
     >
       {/* Map icons and toggle */}
       <Flex direction='row' alignItems='center' justifyContent='space-between'>
@@ -561,7 +560,10 @@ export const LegendItemOGM = ({ layerId }) => {
         hasArrow
         isDisabled={isOpen}
       >
-        <Box onClick={onToggle}>
+        <Box
+          onClick={onToggle}
+          boxShadow={isOpen ? undefined : 'inset 0px -24px 16px -16px hsla(0,0%,0%,.25)'}
+        >
           <LegendItemDescription
             description={layer.description}
             noOfLines={isOpen ? undefined : 2}
@@ -580,9 +582,13 @@ export const LegendItemOGM = ({ layerId }) => {
             href={layer.liveOverride?.btn2?.url ?? `https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
             isExternal
           >
-            <Tooltip label='Will Require OpenGreenMap Account' placement='top' bg='orange.600' hasArrow>
+            { layer.liveOverride?.ogmNoAccountWarning ? (
               <Button colorScheme='green' >{layer.liveOverride?.btn2?.label ?? 'Add a Feature'}</Button>
-            </Tooltip>
+            ) : (
+              <Tooltip label='Will Require OpenGreenMap Account' placement='top' bg='orange.600' hasArrow>
+                <Button colorScheme='green' >{layer.liveOverride?.btn2?.label ?? 'Add a Feature'}</Button>
+              </Tooltip>
+            )}
           </Link>
         </Flex>
       ) : null }
