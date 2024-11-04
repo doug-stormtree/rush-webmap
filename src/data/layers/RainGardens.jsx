@@ -34,6 +34,19 @@ const layer = {
         ), {offset: [0,-6]});
     }
   },
+  liveOverride: {
+    team: {
+      url: 'https://bowkercreek.org/',
+    },
+    btn1: {
+      label: 'Plot Raingardens Here',
+      url: 'https://new.opengreenmap.org/campaigns/67103761724dd201002705e4',
+    },
+    btn2: {
+      label: 'View Map',
+      url: 'https://new.opengreenmap.org/browse/maps/63e6939eabcc260100514352/map-view',
+    },
+  },
 }
 
 export default layer;
