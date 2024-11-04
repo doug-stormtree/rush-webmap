@@ -562,6 +562,7 @@ export const LegendItemOGM = ({ layerId }) => {
       >
         <Box
           onClick={onToggle}
+          paddingBottom={isOpen ? 'unset' : '0.75em'}
           boxShadow={isOpen ? undefined : 'inset 0px -24px 16px -16px hsla(0,0%,0%,.25)'}
         >
           <LegendItemDescription
