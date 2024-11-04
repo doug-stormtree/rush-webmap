@@ -518,7 +518,7 @@ export const LegendItemOGM = ({ layerId }) => {
       <Flex direction='row' alignItems='bottom' justifyContent='space-between'>
         <Flex direction='column' alignItems='left' justifyContent='flex-end'>
           <Link
-            href={`https://new.opengreenmap.org/browse/teams/${team.id}`}
+            href={layer.liveOverride?.team?.url ?? `https://new.opengreenmap.org/browse/teams/${team.id}`}
             isExternal
           >
             <Text
@@ -527,7 +527,7 @@ export const LegendItemOGM = ({ layerId }) => {
               fontWeight='light'
               noOfLines={1}
             >
-              {team.name}
+              {layer.liveOverride?.team?.name ?? team.name}
             </Text>
           </Link>
           <Text
@@ -563,20 +563,20 @@ export const LegendItemOGM = ({ layerId }) => {
           />
         </Box>
       </Tooltip>
-      { isOpen ? (
+      { true || isOpen ? (
         <Flex direction='row' justifyContent='space-around' >
           <Link
-            href={`https://new.opengreenmap.org/browse/sites?map=${layer?.ogmMapId}`}
+            href={layer.liveOverride?.btn1?.url ?? `https://new.opengreenmap.org/browse/sites?map=${layer?.ogmMapId}`}
             isExternal
           >
-            <Button colorScheme='green'>Visit Campaign</Button>
+            <Button colorScheme='green'>{layer.liveOverride?.btn1?.label ?? 'Visit Campaign'}</Button>
           </Link>
           <Link
-            href={`https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
+            href={layer.liveOverride?.btn2?.url ?? `https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
             isExternal
           >
             <Tooltip label='Will Require OpenGreenMap Account' placement='top' bg='orange.600' hasArrow>
-              <Button colorScheme='green' >Add a Feature</Button>
+              <Button colorScheme='green' >{layer.liveOverride?.btn2?.label ?? 'Add a Feature'}</Button>
             </Tooltip>
           </Link>
         </Flex>
