@@ -539,14 +539,19 @@ export const LegendItemOGM = ({ layerId }) => {
             {mapName}
           </Text>
         </Flex>
-        <Image
-          boxSize='100px'
-          objectFit='contain'
-          bgColor='white'
-          borderRadius='xl'
-          alt={team?.name ?? ''}
-          src={team?.src ?? ''}
-        />
+        <Link
+          href={layer.liveOverride?.team?.url ?? `https://new.opengreenmap.org/browse/teams/${team.id}`}
+          isExternal
+        >
+          <Image
+            boxSize='100px'
+            objectFit='contain'
+            bgColor='white'
+            borderRadius='xl'
+            alt={team?.name ?? ''}
+            src={team?.src ?? ''}
+          />
+        </Link>
       </Flex>
       {/* Description */}
       <Tooltip
