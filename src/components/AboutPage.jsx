@@ -152,6 +152,11 @@ const logos = [
     alt: 'Friends of Maltby Lake Watershed Society',
     url: 'https://maltbylake.com/'
   },
+  { 
+    src: require('../data/logos/21. Victoria Drains.png'),
+    alt: 'Victoria Drains',
+    url: 'https://www.victoriadrains.com/'
+  },
 ]
 
 const LogoComponents = logos.map((logo) => (
