@@ -142,8 +142,17 @@ const logos = [
     alt: 'The University of Victoria Community-Engaged Learning',
     url: 'https://www.uvic.ca/career-services/build-your-career/community-engaged-learning/index.php#ipn-community-engaged-learning'
   },
+  { 
+    src: require('../data/logos/19. Friends of Bowker Creek.jpg'),
+    alt: 'Friends of Bowker Creek Society',
+    url: 'https://bowkercreek.org/'
+  },
+  { 
+    src: require('../data/logos/20. Friends of Maltby Lake Watershed Society.jpg'),
+    alt: 'Friends of Maltby Lake Watershed Society',
+    url: 'https://maltbylake.com/'
+  },
 ]
-
 
 const LogoComponents = logos.map((logo) => (
   <a href={logo.url}>
