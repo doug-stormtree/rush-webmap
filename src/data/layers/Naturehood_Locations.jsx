@@ -29,7 +29,7 @@ const layer = {
         f.properties['DESCRIPTION'],
         null, null,
         require('../jpg/' + f.properties.IMAGE + '.jpg')
-        ), {offset: [0,6]});
+        ), {offset: [0,0]});
     }
   },
 }

@@ -28,7 +28,7 @@ const layer = {
         f.properties['Name'],
         f.properties['Closed'] ? 'Permenantly Closed' : '',
         f.properties['URL']
-      ), {offset: [0,6]});
+      ), {offset: [0,0]});
       l.bindTooltip(f.properties.Name, {
         permanent: true,
         opacity: 0.8,
