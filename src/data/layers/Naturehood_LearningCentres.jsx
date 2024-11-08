@@ -32,7 +32,8 @@ const layer = {
       l.bindTooltip(f.properties.Name, {
         permanent: true,
         opacity: 0.8,
-        offset: [0,-12],
+        direction: 'bottom',
+        offset: [0,-4],
         className: 'leaflet-label'
       });
     }
