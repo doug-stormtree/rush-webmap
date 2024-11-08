@@ -217,7 +217,7 @@ const LegendGroup = ({ title, children }) => {
   return children && children.length > 0 && (
     <VStack gap='0'>
       {title && <Text fontFamily='var(--chakra-fonts-heading)' fontWeight='bold' size='sm' width='100%'>{title}</Text>}
-      {subheading && <Text fontFamily='var(--chakra-fonts-subHeading)' fontWeight='normal' size='xs' letterSpacing='wide'>{subheading}</Text>}
+      {subheading && <Text fontFamily='var(--chakra-fonts-subHeading)' fontWeight='normal' size='xs' letterSpacing='wide' width='100%'>{subheading}</Text>}
       {children}
     </VStack>
   )

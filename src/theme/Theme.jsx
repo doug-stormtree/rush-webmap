@@ -126,6 +126,9 @@ const theme = extendTheme({
         fontSize: '1.0rem',
         textShadow: '#FFF 2px 2px 4px, #FFF -2px 2px 4px, #FFF 2px -2px 4px, #FFF -2px -2px 4px;',
         opacity: '0.8 !important',
+      },
+      '.leaflet-label::before': {
+        display: 'none'
       }
     }
   },
