@@ -18,7 +18,10 @@ const layer = {
   options: {
     pointToLayer: (f,l) => pointToIcon(
       l,
-      styleMap.get("Learning Centre")
+      styleMap.get("Learning Centre"),
+      undefined,
+      undefined,
+      'rgba(0,0,0,0)'
     ),
     onEachFeature: (f,l) => {
       l.bindPopup(mapPopupContent(
