@@ -28,7 +28,7 @@ const layer = {
   options: {
     pointToLayer: (f,l) => pointToIcon(
       l,
-      (<TextCircleIcon label={f.properties.ID} />),
+      (<TextCircleIcon>{f.properties.ID}</TextCircleIcon>),
       undefined,
       undefined,
       'rgba(0,0,0,0)'
