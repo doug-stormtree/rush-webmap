@@ -28,12 +28,12 @@ const layer = {
         f.properties['Name'],
         f.properties['Closed'] ? 'Permenantly Closed' : '',
         f.properties['URL']
-      ), {offset: [0,4]});
+      ), {offset: [0,6]});
       l.bindTooltip(f.properties.Name, {
         permanent: true,
         opacity: 0.8,
         direction: 'bottom',
-        offset: [0,24],
+        offset: [0,4],
         className: 'leaflet-label'
       });
     }
