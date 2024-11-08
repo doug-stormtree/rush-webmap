@@ -1,19 +1,9 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
-
-const TextCircleIcon = (props) => {
-  return (
-    <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="16" cy="16" r="16" fill="#FFAA2D"/>
-      <text fill="black" x="16" y="24" fontWeight="bold" fontSize="22" textAnchor="middle">
-        {props.children}
-      </text>
-    </svg>
-  )
-}
+import TextCircleIcon from '../../components/TextCircleIcon';
 
 const styleMap = new Map([
   ["Naturehood Locations", {
-    icon: (<TextCircleIcon>1</TextCircleIcon>),
+    icon: (<TextCircleIcon label='1' />),
     legendText: 'Naturehood Locations',
   }],
 ]);
@@ -28,7 +18,7 @@ const layer = {
   options: {
     pointToLayer: (f,l) => pointToIcon(
       l,
-      (<TextCircleIcon>{f.properties.ID}</TextCircleIcon>),
+      {icon: (<TextCircleIcon label={f.properties.ID} />)},
       undefined,
       undefined,
       'rgba(0,0,0,0)'
