@@ -17,6 +17,7 @@ const Question = {
     { key: 'WatershedRunoffAbsorption', active: true, ...LegendGroups.StartOn },
     { key: 'Watersheds', active: false, ...LegendGroups.StartOff },
     { key: 'Naturehood_LearningCentres', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_Locations', active: false, ...LegendGroups.Naturehood },
   ],
   sections: {
     one: [
