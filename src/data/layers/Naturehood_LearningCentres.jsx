@@ -33,7 +33,7 @@ const layer = {
         permanent: true,
         opacity: 0.8,
         direction: 'bottom',
-        offset: [0,-4],
+        offset: [0,-24],
         className: 'leaflet-label'
       });
     }
