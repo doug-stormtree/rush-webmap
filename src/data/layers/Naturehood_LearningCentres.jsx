@@ -10,7 +10,7 @@ const styleMap = new Map([
 
 const layer = {
   title: 'Learning Centre',
-  description: '',
+  description: 'These are some of the Nature Houses and educational institutions with Nature-based programming available across Greater Victoria.',
   data: require('../geojson/Naturehood_LearningCentres.geojson'),
   shape: 'point',
   symbology: 'classified',
@@ -28,11 +28,11 @@ const layer = {
         f.properties['Name'],
         f.properties['Closed'] ? 'Permenantly Closed' : '',
         f.properties['URL']
-      ), {offset: [4.5,2]});
+      ), {offset: [0,4]});
       l.bindTooltip(f.properties.Name, {
         permanent: true,
         opacity: 0.8,
-        direction: 'bottom',
+        offset: [0,-12],
         className: 'leaflet-label'
       });
     }
