@@ -1,4 +1,14 @@
+import React from 'react';
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
+
+const TextCircleIcon = (props) => {
+  return (
+    <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="16" fill="#FFAA2D"/>
+      {props.children}
+    </svg>
+  )
+}
 
 const styleMap = new Map([
   ["Naturehood Locations", {
@@ -34,12 +44,3 @@ const layer = {
 }
 
 export default layer;
-
-const TextCircleIcon = (props) => {
-  return (
-    <svg width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="16" cy="16" r="16" fill="#FFAA2D"/>
-      {props.children}
-    </svg>
-  )
-}
