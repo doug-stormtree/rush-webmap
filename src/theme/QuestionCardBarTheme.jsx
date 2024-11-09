@@ -18,7 +18,18 @@ const containerGradient = [
   'hsla(0, 0%, 0%, 0.039) 130px,',
   'hsla(0, 0%, 0%, 0.01) 135px,',
   'hsla(0, 0%, 0%, 0) 140px)'
-].join('')
+].join('');
+
+export const mobileStyle = (mobileCss, fallbackCss) => {
+  return {
+    base: mobileCss, // iphone SE
+    sm: mobileCss, // android
+    md: fallbackCss, // ipad mini
+    lg: fallbackCss, // ipad pro
+    xl: fallbackCss, // macbook air
+    '2xl': fallbackCss, // desktop
+  };
+};
 
 const helpers = createMultiStyleConfigHelpers([
   'bar',
@@ -28,9 +39,11 @@ const helpers = createMultiStyleConfigHelpers([
 const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     bar: {
+      backgroundColor: mobileStyle('white', 'transparent'),
       display: 'flex',
       flexDirection: 'column',
-      paddingStart: '10px',
+      alignItems: 'center',
+      paddingStart: mobileStyle('0', '10px'),
       paddingY: '10px',
       gap: '10px',
       transform: 'scaleX(-1)', //Flips the child back to normal
@@ -46,19 +59,19 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
         position: 'sticky',
         top: '0.625rem',
         zIndex: '10',
+        marginLeft: '6%',
       }
     },
     container: {
       transform: 'scaleX(-1)', //Reflects the parent horizontally
       height: 'calc(100% - 40px)',
-      minWidth: '140px',
+      minWidth: mobileStyle('100%', '140px'),
       overflow: 'scroll',
-      //background: 'transparent',
       position:'absolute',
       top:'2.5rem',
       zIndex:'9',
       pointerEvents: 'none',
-      background: containerGradient,
+      background: mobileStyle('none', containerGradient),
     }
   },
   defaultProps: {
