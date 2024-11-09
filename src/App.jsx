@@ -10,6 +10,7 @@ import {
   ChakraProvider,
   Box,
   Flex,
+  useBreakpoint,
 } from '@chakra-ui/react';
 import MapView, { DEFAULT_ZOOM, DEFAULT_CENTER } from './components/MapView';
 import MapData from './components/MapData';
@@ -107,6 +108,9 @@ function WebMap() {
   useEffect(() => {
     setActiveQuestion(question)
   }, [ params, question, setActiveQuestion ])
+
+   // Track whether the app should be rendered for mobile devices
+   const isMobile = ['base', 'sm'].includes(useBreakpoint());
 
   // Leaflet map reference
   const map = useRef(null);
