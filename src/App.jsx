@@ -155,7 +155,9 @@ function WebMap() {
         getShareURL={getShareURL}
         vh={vh}
       />
-      <QuestionCardBar />
+      <QuestionCardBar 
+        isMobile={isMobile}
+      />
       <MobileQuestionMenu
         isMobile={isMobile}
         mobileMenuState={mobileMenuState}
