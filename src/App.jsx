@@ -178,7 +178,9 @@ function WebMap() {
           <MapBasemap />
           <MapData />
         </MapView>
-        <TutorialPopup />
+        <TutorialPopup
+          isMobile={isMobile}
+        />
       </Flex>
       <ContentInitiativeContainer />
       <RabbitHoleDrawer />
