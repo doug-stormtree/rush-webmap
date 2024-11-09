@@ -32,6 +32,7 @@ import ContentInitiativeContainer from './components/ContentInitiativeContainer'
 import RabbitHoleDrawer from './components/RabbitHoleDrawer';
 import TutorialPopup from './components/TutorialPopup';
 import AboutPage from './components/AboutPage';
+import MobileQuestionMenu from './components/MobileQuestionMenu';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -88,6 +89,15 @@ export default App;
 
 export const ShareURLContext = createContext();
 
+/**
+ * The possible states that the menu on mobile versions can be in.
+ */
+export const MobileMenuState = {
+  SELECT: 'select_a_question',
+  COLLAPSED_HEADER: 'question_header_is_collapsed',
+  EXPANDED_HEADER: 'question_header_is_expanded',
+};
+
 function WebMap() {
   // Fix window height to viewport on web and mobile
   const [vh, setVh] = useState(`${window.innerHeight}px`);
@@ -111,6 +121,9 @@ function WebMap() {
 
    // Track whether the app should be rendered for mobile devices
    const isMobile = ['base', 'sm'].includes(useBreakpoint());
+
+   // Track what state the mobile question menu is in (this state does nothing when isMobile === false).
+   const [mobileMenuState, setMobileMenuState] = useState(MobileMenuState.SELECT);
 
   // Leaflet map reference
   const map = useRef(null);
