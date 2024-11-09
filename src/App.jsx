@@ -174,7 +174,9 @@ function WebMap() {
           zoom={zoom}
           center={center}
         >
-          <PlacesAutocomplete />
+          <PlacesAutocomplete 
+            isMobile={isMobile}
+          />
           <MapBasemap />
           <MapData />
         </MapView>
