@@ -156,6 +156,11 @@ function WebMap() {
         vh={vh}
       />
       <QuestionCardBar />
+      <MobileQuestionMenu
+        isMobile={isMobile}
+        mobileMenuState={mobileMenuState}
+        setMobileMenuState={setMobileMenuState}
+      />
       <Flex
         h={`calc(100vh - 2.5rem)`}
         position='sticky'
