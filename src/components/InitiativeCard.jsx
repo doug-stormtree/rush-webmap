@@ -49,7 +49,7 @@ export default function InitiativeCard({initiative, flip = false}) {
       </Heading>
       <Stack direction='row' marginX='5' marginBottom='2'>
         {initiative.tags.map((tag) => (
-          <Badge colorScheme={InitiativeTagColors[tag] ?? 'gray.200'}>{tag}</Badge>
+          <Badge key={tag} colorScheme={InitiativeTagColors[tag] ?? 'gray.200'}>{tag}</Badge>
         ))}
       </Stack>
       <Text
