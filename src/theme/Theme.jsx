@@ -121,7 +121,8 @@ const theme = extendTheme({
   styles: {
     global: {
       'html, body': {
-        fontSize: '16px'
+        fontSize: '16px',
+        minW: 'min-content'
       },
       '.leaflet-left': {
         left: '9.125rem'
