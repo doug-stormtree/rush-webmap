@@ -3,6 +3,7 @@ import {
   Box,
   Flex,
   Image,
+  List,
   ListItem,
   Text,
   UnorderedList,
@@ -11,7 +12,7 @@ import NavBar from './NavBar'
 
 const textFormatter = (text, index) => (
   <Text
-    key={`TextList${index}`}
+    key={`TextList - ${index}`}
     fontFamily='var(--chakra-fonts-body)'
     fontSize={['0.875rem', null, null, null, '1rem', '1.125rem']}
     fontWeight='500'
@@ -24,7 +25,7 @@ const textFormatter = (text, index) => (
 
 const listItemFormatter = (text, index) => (
   <ListItem
-    key={`ListItemList${index}`}
+    key={`ListItemList - ${index}`}
     fontFamily='var(--chakra-fonts-body)'
     fontSize={['0.875rem', null, null, null, '1rem', '1.125rem']}
     fontWeight='500'
@@ -40,12 +41,14 @@ const PreListParagraphs = [
   'By showcasing the research, creativity, and innovation happening in this region on an interactive landing page, we hope to provide a shared language on the vulnerabilities and opportunities for long-term health and climate action.',
   'We want to change the critical questions that get asked in planning meetings such as:', 
 ].map(textFormatter)
+
 const BulletList = [
   'How is a development proposal an opportunity to increase resilience to climate-related events?', 
   'How can we support neighbourhoods to adapt and thrive in changing conditions?', 
   'If we extend and connect the ecosystem features across the urban landscape, what are all the benefits people would feel?', 
   'How can we work with Nature to create a quality of life for all?',
 ].map(listItemFormatter)
+
 const PostListParagraphs = [
   'This is a tool for people to connect habitats, restore watersheds, feel a sense of belonging, and start conversations that help us reverse the trend of climate change, pollution and hopelessness.', 
   'Please use the feedback button to let us know what you think and any suggestions you have.',
@@ -159,10 +162,10 @@ const logos = [
   },
 ]
 
-const LogoComponents = logos.map((logo) => (
+const LogoComponents = logos.map((logo, index) => (
   <a href={logo.url}>
     <Image
-      key={logo.alt}
+      key={`${logo.alt}-${index}`}
       alt={logo.alt}
       src={logo.src}
       objectFit='contain'
@@ -177,7 +180,6 @@ const contributors = [
   'Helena Jacobsen',
   'Brendan Kerwin',
   'Griffin Stever',
-  'Ella Bethune',
   'Sarah Swan',
   'Liam Lepik',
   'Victoria Jeffery',
@@ -235,21 +237,17 @@ const contributors = [
   'Clara Dickieson',
   'Jack Panayi',
   'Hazim Ismail',
-  'Chloe Cizeron',
   'Madison Hopkyns',
-  'Sophie Buitendyk',
   'Adam Yates LaBerge',
   'Miranda Chen',
   'Chloe Cizeron',
-  'Madison Hopkyns',
   'Sophie Buitendyk',
-  'Adam Yates LaBerge',
-  'Miranda Chen',
 ].map((name) => (
-  <Text fontFamily='var(--chakra-fonts-subHeading)' fontSize='1rem'>{name}</Text>
+  <Text key={name} fontFamily='var(--chakra-fonts-subHeading)' fontSize='1rem'>{name}</Text>
 ))
 
 export default function AboutPage() {
+  // TODO: there is still a unique key error when this page gets rendered.. for the life of me I can't find it!
   return (
     <Flex direction='column' minHeight='100svh'>
       <NavBar
@@ -287,12 +285,17 @@ export default function AboutPage() {
           >
             About
           </Text>
-          { PreListParagraphs }
-          <UnorderedList py='0.5em' ps='2em'>
+          <List key='pre-list-paragraphs'>
+            { PreListParagraphs }
+          </List>
+          <UnorderedList key='bullet-list' py='0.5em' ps='2em'>
             { BulletList }
           </UnorderedList>
-          { PostListParagraphs }
+          <List key='post-list-paragraphs'>
+            { PostListParagraphs }
+          </List> 
           <Flex
+            key='logos'
             flexFlow='row wrap'
             justifyContent='center'
             alignItems='center'
@@ -302,6 +305,7 @@ export default function AboutPage() {
             { LogoComponents }
           </Flex>
           <Text
+            key='student-contributors'
             fontFamily='var(--chakra-fonts-subHeading)'
             fontSize='1.25rem'
             fontWeight='500'
@@ -314,6 +318,7 @@ export default function AboutPage() {
             University of Victoria - Community Mapping & Community Based Participatory Research - Student Contributors
           </Text>
           <Flex
+            key='contributors'
             flexFlow='row wrap'
             justifyContent='center'
             alignItems='baseline'
