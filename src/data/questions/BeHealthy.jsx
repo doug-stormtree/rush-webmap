@@ -25,6 +25,8 @@ const Question = {
     { key: 'TreeCoverage2019', active: false, group: 'Trees' },
     { key: 'TreeEquity', active: true, ...LegendGroups.OGM },
     { key: 'Watersheds', active: false, group: 'Landcover' },
+    { key: 'Naturehood_LearningCentres', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_Locations', active: false, ...LegendGroups.Naturehood },
   ],
   sections: {
     one: [
