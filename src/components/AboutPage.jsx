@@ -247,7 +247,7 @@ const contributors = [
 ))
 
 export default function AboutPage() {
-  // TODO: there is still a unique key error when this page gets rendered.. for the life of me I can't find it!
+  // TODO: there is still a React unique key warning when this page gets rendered.. for the life of me I can't find it!
   return (
     <Flex direction='column' minHeight='100svh'>
       <NavBar

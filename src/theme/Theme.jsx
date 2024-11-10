@@ -122,7 +122,11 @@ const theme = extendTheme({
     global: {
       'html, body': {
         fontSize: '16px',
-        minW: 'min-content'
+        W: '100%',
+        H: '100%',
+        margin: '0',
+        padding: '0',
+        overflowX: 'hidden',
       },
       '.leaflet-left': {
         left: '9.125rem'
