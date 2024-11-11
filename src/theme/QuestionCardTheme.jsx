@@ -176,6 +176,12 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         zIndex: '10',
       },
     },
+    dockExpanded: {
+      card: {
+        minWidth: '100%',
+        minHeight: '100%',
+      },
+    },
     absolute: { // not used
       card: {
         zIndex: '11',

@@ -6,7 +6,7 @@ import {
   Image,
   useMultiStyleConfig
 } from '@chakra-ui/react'
-import { FaRegArrowAltCircleDown } from 'react-icons/fa'
+import { FaAngleDown, FaRegArrowAltCircleDown } from 'react-icons/fa'
 import { FiX } from 'react-icons/fi'
 import { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
 import { MobileMenuState } from '../App'
@@ -26,15 +26,28 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
     return {};
   };
 
-  // TODO: min and max sizing for mobile question cards in wide mode is mobileStyle('90%', '120px').
   const styles = useMultiStyleConfig('QuestionCard', { size, variant }); // re-use theme from original question card
   const dispatch = useActiveQuestionStore(state => state.dispatch);
 
   const onCardClick = () => {
-    setMobileMenuState(MobileMenuState.COLLAPSED_HEADER);
-    dispatch({question: question.key, focus: questionActions.open});
+    if (mobileMenuState === MobileMenuState.SELECT){
+      setMobileMenuState(MobileMenuState.COLLAPSED_HEADER);
+      dispatch({question: question.key, focus: questionActions.open});
+    }
+    else if (mobileMenuState === MobileMenuState.COLLAPSED_HEADER){
+      setMobileMenuState(MobileMenuState.EXPANDED_HEADER);
+      //dispatch({question: question.key, focus: questionActions.makeYourMove});
+    }
   };
 
+  const onXClick = () => {
+    setMobileMenuState(MobileMenuState.SELECT);
+    //dispatch({question: question.key, focus: questionActions.close})
+  };
+
+  const onDownArrowClicked = () => {
+    setMobileMenuState(MobileMenuState.COLLAPSED_HEADER);
+  };
 
   return question.key && (
     <Box __css={styles.card} onClick={onCardClick}>
@@ -42,7 +55,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
       <Box __css={styles.content}>
         <IconButton
           icon={<FiX />}
-          display='block'
+          display={mobileMenuState === MobileMenuState.COLLAPSED_HEADER ? 'block' : 'none'}
           position='absolute'
           top='0.6rem'
           right='0.6rem'
@@ -50,7 +63,19 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
           height='1.875rem'
           minWidth='1.875rem'
           maxWidth='1.875rem'
-          onClick={() => dispatch({question: question.key, focus: questionActions.close})}
+          onClick={onXClick}
+        />
+        <IconButton
+          icon={<FaAngleDown />}
+          display={mobileMenuState === MobileMenuState.EXPANDED_HEADER ? 'block' : 'none'}
+          position='absolute'
+          top='0.6rem'
+          right='0.6rem'
+          variant='ghost'
+          height='1.875rem'
+          minWidth='1.875rem'
+          maxWidth='1.875rem'
+          onClick={onDownArrowClicked}
         />
         <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
         <Box __css={styles.subtitle}>{question.question}</Box>

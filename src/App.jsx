@@ -33,6 +33,7 @@ import RabbitHoleDrawer from './components/RabbitHoleDrawer';
 import TutorialPopup from './components/TutorialPopup';
 import AboutPage from './components/AboutPage';
 import MobileQuestionMenu from './components/MobileQuestionMenu';
+import MobileQuestionDock from './components/MobileQuestionDock';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -175,6 +176,8 @@ function WebMap() {
           mapRef={map}
           zoom={zoom}
           center={center}
+          mobileMenuState={mobileMenuState}
+          setMobileMenuState={setMobileMenuState}
         >
           <PlacesAutocomplete 
             isMobile={isMobile}
@@ -186,6 +189,12 @@ function WebMap() {
           isMobile={isMobile}
         />
       </Flex>
+      <MobileQuestionDock
+        isMobile={isMobile}
+        activeQuestion={activeQuestion}
+        mobileMenuState={mobileMenuState}
+        setMobileMenuState={setMobileMenuState}
+      />
       <ContentInitiativeContainer />
       <RabbitHoleDrawer />
       {/*

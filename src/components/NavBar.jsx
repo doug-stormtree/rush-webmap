@@ -93,6 +93,7 @@ export default function NavBar(props) {
 
   const menuBurgerButtons = useBreakpointValue({
     base: (
+      // smallest mobile phones contain all buttons + menu that spans the entire screen.
       <MenuList h='100vh' w="100vw">
         <MenuItem>
           {mapButton}
@@ -112,6 +113,7 @@ export default function NavBar(props) {
       </MenuList>
     ),
     sm: (
+      // slightly larger mobile phones contain less essential buttons, menu still spans entire screen.
       <MenuList h='100vh' w="100vw">
         <MenuItem>
           {feedbackButton}
@@ -125,6 +127,7 @@ export default function NavBar(props) {
       </MenuList>
     ),
     md: (
+      // in-between phase (probably ipads or similar devices) have a smaller menu
       <MenuList>
         <MenuItem>
           {feedbackButton}

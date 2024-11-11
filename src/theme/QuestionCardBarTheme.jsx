@@ -38,6 +38,19 @@ const helpers = createMultiStyleConfigHelpers([
 
 const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
+    dock: {
+      display: 'flex',
+      flexDirection: 'column',
+      flexAlign: 'center',
+      position: 'absolute',
+      overflow: 'hidden',
+      minHeight: '75%',
+      minWidth: '100%',
+      bottom: '0',
+      left: '0',
+      right: '0',
+      backgroundColor: 'red',
+    },
     bar: {
       backgroundColor: mobileStyle('white', 'transparent'),
       display: 'flex',
