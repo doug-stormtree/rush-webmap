@@ -212,12 +212,34 @@ const LegendList = () => {
 
 // LegendGroup Component
 const LegendGroup = ({ title, children }) => {
-  const subheading = Object.values(LegendGroups).find(g => g.group === title)?.subheading
+  const group = Object.values(LegendGroups).find(g => g.group === title)
+
+  const titleElement = (
+    <Text
+      fontFamily='var(--chakra-fonts-heading)'
+      fontWeight='bold'
+      size='sm'
+      width='100%'
+    >{group?.link !== undefined
+        ? <Link href={group.link} isExternal>{title}</Link>
+        : title}
+    </Text>
+  )
 
   return children && children.length > 0 && (
     <VStack gap='0'>
-      {title && <Text fontFamily='var(--chakra-fonts-heading)' fontWeight='bold' size='sm' width='100%'>{title}</Text>}
-      {subheading && <Text fontFamily='var(--chakra-fonts-subHeading)' fontWeight='normal' size='xs' letterSpacing='wide' width='100%'>{subheading}</Text>}
+      {title ? titleElement : null}
+      {group?.subheading && (
+        <Text
+          fontFamily='var(--chakra-fonts-subHeading)'
+          fontWeight='normal'
+          size='xs'
+          letterSpacing='wide'
+          width='100%'
+        >
+          {group?.subheading}
+        </Text>
+      )}
       {children}
     </VStack>
   )
