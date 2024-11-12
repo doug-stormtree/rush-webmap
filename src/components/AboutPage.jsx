@@ -70,7 +70,7 @@ const logos = [
   { 
     src: require('../data/logos/4. OpenGreenMap.png'),
     alt: 'Open Green Map',
-    url: 'https://new.opengreenmap.org/'
+    url: 'https://greenmap.org/'
   },
   { 
     src: require('../data/logos/18. Engage with Nature-Based Solutions.png'),

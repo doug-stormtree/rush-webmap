@@ -16,19 +16,19 @@ const layer = {
       <img
         width="26px"
         height="26px"
-        src={`https://new.opengreenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}
+        src={`https://greenmap.org/api-v1/icons/${f.properties.icons[0]}/image/value`}
         alt={f.properties?.name ?? ''}
       /> : null
     }),
     onEachFeature: (f,l) => {
       const imageURL = f.properties.pictures[0]
-        ? `https://new.opengreenmap.org/api-v1/pictures/${f.properties.pictures[0]}/picture/sm`
+        ? `https://greenmap.org/api-v1/pictures/${f.properties.pictures[0]}/picture/sm`
         : null;
       
       l.bindPopup(mapPopupContent(
           f.properties.name,
           f.properties?.description?.blocks.filter((b) => b.type === "paragraph")[0]?.data.text ?? '',
-          `https://new.opengreenmap.org/browse/sites/${f.properties._id}`,
+          `https://greenmap.org/browse/sites/${f.properties._id}`,
           'Show More at OpenGreenMap.org',
           imageURL
         ), {offset: [0,-6]});
