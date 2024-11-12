@@ -220,7 +220,7 @@ const LegendGroup = ({ title, children }) => {
       fontWeight='bold'
       size='sm'
       width='100%'
-    >{group.link
+    >{group?.link !== undefined
         ? <Link href={group.link} isExternal>{title}</Link>
         : title}
     </Text>
@@ -229,7 +229,7 @@ const LegendGroup = ({ title, children }) => {
   return children && children.length > 0 && (
     <VStack gap='0'>
       {title ? titleElement : null}
-      {group.subheading && (
+      {group?.subheading && (
         <Text
           fontFamily='var(--chakra-fonts-subHeading)'
           fontWeight='normal'
@@ -237,7 +237,7 @@ const LegendGroup = ({ title, children }) => {
           letterSpacing='wide'
           width='100%'
         >
-          {group.subheading}
+          {group?.subheading}
         </Text>
       )}
       {children}
