@@ -101,7 +101,7 @@ export const useMapLayerStyleStore = create((set, get) => ({
 
     if (styleMap.size === 0 && ogmMapId !== undefined) {
       // Fetch OGM Icons
-      fetch(`https://new.opengreenmap.org/api-v1/icons?withoutAttributes=true&edit=false&map=${ogmMapId}`)
+      fetch(`https://greenmap.org/api-v1/icons?withoutAttributes=true&edit=false&map=${ogmMapId}`)
         .then((response) => response.json())
         .then((json) => {
           get()._setLayerStyleMap(layerId, new Map(

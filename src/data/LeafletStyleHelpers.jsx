@@ -141,10 +141,10 @@ const MapPopup = (
 
 // Open Green Map
 export const ogmIconLink = (id) =>
-  `https://new.opengreenmap.org/api-v1/icons/${id}/image/value`
+  `https://greenmap.org/api-v1/icons/${id}/image/value`
 
 export const ogmFeaturesLink = (id) =>
-  `https://new.opengreenmap.org/api-v1/features?format=geojson&edit=false&map=${id}`
+  `https://greenmap.org/api-v1/features?format=geojson&edit=false&map=${id}`
 
 // Mouseover setStyle
 export const setStyleIfSupported = (e, style) => {

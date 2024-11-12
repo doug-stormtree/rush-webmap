@@ -455,7 +455,7 @@ export const LegendItemOGM = ({ layerId }) => {
     if (!layer?.ogmMapId || team.id !== null) return;
 
     // Fetch OGM Team Image
-    fetch(`https://new.opengreenmap.org/api-v1/maps/${layer.ogmMapId}`)
+    fetch(`https://greenmap.org/api-v1/maps/${layer.ogmMapId}`)
       .then((response) => response.json())
       .then((json) => {
         const teamId = json.map?.visibility.team
@@ -463,7 +463,7 @@ export const LegendItemOGM = ({ layerId }) => {
         if (resMapName) setMapName(resMapName)
         if (teamId) {
           setTeam({ name: 'Loading...', id: 'loading', src: team.src })
-          fetch(`https://new.opengreenmap.org/api-v1/teams/${teamId}`)
+          fetch(`https://greenmap.org/api-v1/teams/${teamId}`)
             .then((response) => response.json())
             .then((json) => {
               const teamName = json.team?.name
@@ -472,7 +472,7 @@ export const LegendItemOGM = ({ layerId }) => {
                 setTeam({
                   name: teamName,
                   id: teamId,
-                  src: `https://new.opengreenmap.org/api-v1/pictures/${teamLogoId}/picture`
+                  src: `https://greenmap.org/api-v1/pictures/${teamLogoId}/picture`
                 })
               } else {
                 setTeam({
@@ -517,7 +517,7 @@ export const LegendItemOGM = ({ layerId }) => {
       <Flex direction='row' alignItems='bottom' justifyContent='space-between'>
         <Flex direction='column' alignItems='left' justifyContent='flex-end'>
           <Link
-            href={layer.liveOverride?.team?.url ?? `https://new.opengreenmap.org/browse/teams/${team.id}`}
+            href={layer.liveOverride?.team?.url ?? `https://greenmap.org/browse/teams/${team.id}`}
             isExternal
           >
             <Text
@@ -539,7 +539,7 @@ export const LegendItemOGM = ({ layerId }) => {
           </Text>
         </Flex>
         <Link
-          href={layer.liveOverride?.team?.url ?? `https://new.opengreenmap.org/browse/teams/${team.id}`}
+          href={layer.liveOverride?.team?.url ?? `https://greenmap.org/browse/teams/${team.id}`}
           isExternal
         >
           <Image
@@ -574,13 +574,13 @@ export const LegendItemOGM = ({ layerId }) => {
       { true || isOpen ? (
         <Flex direction='row' justifyContent='space-around' >
           <Link
-            href={layer.liveOverride?.btn1?.url ?? `https://new.opengreenmap.org/browse/sites?map=${layer?.ogmMapId}`}
+            href={layer.liveOverride?.btn1?.url ?? `https://greenmap.org/browse/sites?map=${layer?.ogmMapId}`}
             isExternal
           >
             <Button colorScheme='green'>{layer.liveOverride?.btn1?.label ?? 'Visit Campaign'}</Button>
           </Link>
           <Link
-            href={layer.liveOverride?.btn2?.url ?? `https://new.opengreenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
+            href={layer.liveOverride?.btn2?.url ?? `https://greenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
             isExternal
           >
             { layer.liveOverride?.ogmNoAccountWarning ? (
