@@ -21,7 +21,7 @@ export const LegendGroups = {
   StartOn: { group: 'Starting Place', position: 0, subheading: undefined },
   StartOff: { group: 'Deeper Connections', position: 1, subheading: undefined},
   OGM: { group: 'Plot that Spot', position: 9999, subheading: 'Connect the call to action by joining these community mapping projects powered by OpenGreenMap.' },
-  Naturehood: { group: 'Naturehood in the City', position: 2, subheading: 'One Map, One NatureHood, A Guide to Many Adventures. Provided by Greater Victoria NatureHood.' },
+  Naturehood: { group: 'NatureHood in the City', link:'https://www.gvnaturehood.com/greater-victoria-naturehood-map', subheading: 'One Map, One NatureHood, A Guide to Many Adventures. Provided by Greater Victoria NatureHood. 🕊️ Leave no trace 🕊️ Leave what you find 🕊️ Respect wildlife 🕊️ Be mindful of others' },
 }
 
 export const InitiativeTags = {
