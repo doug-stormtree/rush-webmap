@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "Naturehood_Animals",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"xy_coordinate_resolution": 1e-05,
+"features": [
+{ "type": "Feature", "properties": { "image": "7" }, "geometry": { "type": "Point", "coordinates": [ -123.57452, 48.49763 ] } },
+{ "type": "Feature", "properties": { "image": "8" }, "geometry": { "type": "Point", "coordinates": [ -123.51634, 48.66405 ] } },
+{ "type": "Feature", "properties": { "image": "2" }, "geometry": { "type": "Point", "coordinates": [ -123.34015, 48.67818 ] } },
+{ "type": "Feature", "properties": { "image": "2" }, "geometry": { "type": "Point", "coordinates": [ -123.33159, 48.66649 ] } },
+{ "type": "Feature", "properties": { "image": "5" }, "geometry": { "type": "Point", "coordinates": [ -123.27029, 48.53795 ] } },
+{ "type": "Feature", "properties": { "image": "7" }, "geometry": { "type": "Point", "coordinates": [ -123.45481, 48.42212 ] } }
+]
+}

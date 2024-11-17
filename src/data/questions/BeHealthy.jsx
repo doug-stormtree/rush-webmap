@@ -31,6 +31,7 @@ const Question = {
     { key: 'Naturehood_PlaceNamesEnglish', active: false, ...LegendGroups.Naturehood },
     { key: 'Naturehood_FirstNationsReserves', active: false, ...LegendGroups.Naturehood },
     { key: 'CRD_Parks', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_Animals', active: true, ...LegendGroups.Naturehood },
   ],
   sections: {
     one: [
