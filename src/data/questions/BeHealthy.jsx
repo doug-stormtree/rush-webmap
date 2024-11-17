@@ -27,6 +27,11 @@ const Question = {
     { key: 'Watersheds', active: false, group: 'Landcover' },
     { key: 'Naturehood_LearningCentres', active: false, ...LegendGroups.Naturehood },
     { key: 'Naturehood_Locations', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_PlaceNames', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_PlaceNamesEnglish', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_FirstNationsReserves', active: false, ...LegendGroups.Naturehood },
+    { key: 'CRD_Parks', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_Animals', active: true, ...LegendGroups.Naturehood },
   ],
   sections: {
     one: [

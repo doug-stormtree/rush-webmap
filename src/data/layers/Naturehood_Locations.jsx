@@ -1,16 +1,22 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
-import TextCircleIcon from '../../components/TextCircleIcon';
 
 const styleMap = new Map([
   ["Naturehood Locations", {
-    icon: (<TextCircleIcon label='1' />),
+    icon: (
+    <img
+      width="26px"
+      height="26px"
+      src={require('../png/NatureHood_Logo.png')}
+      alt={'NatureHood Location'}
+    />),
     legendText: 'Naturehood Locations',
+    bgColor: 'rgb(255, 170, 45)',
   }],
 ]);
 
 const layer = {
   title: 'Naturehood Locations',
-  description: 'A NatureHood is any place where you connect with nature’s wonders – from observing a bee pollinate a flower in a planter box, to watching wild birds at a backyard feeder or local park, to witnessing the trees change with the passing of the seasons in your local forest. Look around and you will find nature everywhere throughout the Greater Victoria NatureHood.',
+  description: 'A NatureHood is any place where you connect with Nature’s wonders – from observing a bee pollinate a flower in a planter box, to watching wild birds at a backyard feeder or local park, to witnessing the trees change with the passing of the seasons in your local forest. Look around and you will find Nature everywhere throughout the Greater Victoria NatureHood.',
   data: require('../geojson/Naturehood_NaturehoodLocations.geojson'),
   shape: 'point',
   symbology: 'classified',
@@ -18,10 +24,16 @@ const layer = {
   options: {
     pointToLayer: (f,l) => pointToIcon(
       l,
-      {icon: (<TextCircleIcon label={f.properties.ID} />)},
+      {icon: (
+      <img
+        width="100%"
+        height="100%"
+        src={require('../png/NatureHood_Logo.png')}
+        alt={'NatureHood Location'}
+      />)},
       undefined,
       undefined,
-      'rgba(0,0,0,0)'
+      'rgb(255, 170, 45)'
     ),
     onEachFeature: (f,l) => {
       l.bindPopup(mapPopupContent(
