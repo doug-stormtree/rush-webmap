@@ -10,7 +10,7 @@ const styleMap = new Map([
 
 const layer = {
   title: 'Naturehood Locations',
-  description: 'A NatureHood is any place where you connect with nature’s wonders – from observing a bee pollinate a flower in a planter box, to watching wild birds at a backyard feeder or local park, to witnessing the trees change with the passing of the seasons in your local forest. Look around and you will find nature everywhere throughout the Greater Victoria NatureHood.',
+  description: 'A NatureHood is any place where you connect with Nature’s wonders – from observing a bee pollinate a flower in a planter box, to watching wild birds at a backyard feeder or local park, to witnessing the trees change with the passing of the seasons in your local forest. Look around and you will find Nature everywhere throughout the Greater Victoria NatureHood.',
   data: require('../geojson/Naturehood_NaturehoodLocations.geojson'),
   shape: 'point',
   symbology: 'classified',
