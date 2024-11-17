@@ -26,8 +26,8 @@ const layer = {
       l,
       {icon: (
       <img
-        width="26px"
-        height="26px"
+        width="100%"
+        height="100%"
         src={require('../png/NatureHood_Logo.png')}
         alt={'NatureHood Location'}
       />)},

@@ -362,7 +362,7 @@ const SinglePatchPoint = ({ style }) => {
     <Avatar
       size='sm'
       showBorder='true'
-      bg='gray.200'
+      bg={style?.bgColor ?? 'gray.200'}
       icon={style.icon}
       fill={style.fill}
       stroke={style.stroke}
