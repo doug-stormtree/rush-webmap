@@ -1,9 +1,8 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
-import TextCircleIcon from '../../components/TextCircleIcon';
 
 const styleMap = new Map([
   ["Naturehood Locations", {
-    icon: (<TextCircleIcon label='1' />),
+    icon: (<image href={require('../png/NatureHood_Logo.png')} />),
     legendText: 'Naturehood Locations',
   }],
 ]);
@@ -18,7 +17,7 @@ const layer = {
   options: {
     pointToLayer: (f,l) => pointToIcon(
       l,
-      {icon: (<TextCircleIcon label={f.properties.ID} />)},
+      {icon: (<image href={require('../png/NatureHood_Logo.png')} />)},
       undefined,
       undefined,
       'rgba(0,0,0,0)'
