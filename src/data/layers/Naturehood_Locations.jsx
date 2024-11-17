@@ -1,18 +1,16 @@
 import { mapPopupContent, pointToIcon } from '../LeafletStyleHelpers';
 
-const NatureHood_Icon = (
-  <img
-    width="30px"
-    height="30px"
-    src={require('../png/NatureHood_Logo.png')}
-    alt={'NatureHood Location'}
-  />
-)
-
 const styleMap = new Map([
   ["Naturehood Locations", {
-    icon: (<NatureHood_Icon />),
+    icon: (
+    <img
+      width="26px"
+      height="26px"
+      src={require('../png/NatureHood_Logo.png')}
+      alt={'NatureHood Location'}
+    />),
     legendText: 'Naturehood Locations',
+    bgColor: 'rgb(255, 170, 45)',
   }],
 ]);
 
@@ -26,10 +24,16 @@ const layer = {
   options: {
     pointToLayer: (f,l) => pointToIcon(
       l,
-      {icon: (<NatureHood_Icon />)},
+      {icon: (
+      <img
+        width="26px"
+        height="26px"
+        src={require('../png/NatureHood_Logo.png')}
+        alt={'NatureHood Location'}
+      />)},
       undefined,
       undefined,
-      'rgba(0,0,0,0)'
+      'rgb(255, 170, 45)'
     ),
     onEachFeature: (f,l) => {
       l.bindPopup(mapPopupContent(
