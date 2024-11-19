@@ -1,12 +1,16 @@
 import React from 'react'
 import {
   Box,
-  Button,
   IconButton,
   Image,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
   useMultiStyleConfig
 } from '@chakra-ui/react'
-import { FaAngleDown, FaRegArrowAltCircleDown } from 'react-icons/fa'
+import { FaAngleDown, FaBook, FaHighlighter, FaLink } from 'react-icons/fa'
 import { FiX } from 'react-icons/fi'
 import { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
 import { MobileMenuState } from '../App'
@@ -31,23 +35,44 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
 
   const onCardClick = () => {
     if (mobileMenuState === MobileMenuState.SELECT){
+      console.log('card clicked when in SELECT state!');
       setMobileMenuState(MobileMenuState.COLLAPSED_HEADER);
       dispatch({question: question.key, focus: questionActions.open});
     }
     else if (mobileMenuState === MobileMenuState.COLLAPSED_HEADER){
+      console.log('card clicked when in COLLAPSED HEADER state!')
       setMobileMenuState(MobileMenuState.EXPANDED_HEADER);
-      //dispatch({question: question.key, focus: questionActions.makeYourMove});
     }
   };
 
-  const onXClick = () => {
-    setMobileMenuState(MobileMenuState.SELECT);
-    //dispatch({question: question.key, focus: questionActions.close})
-  };
-
-  const onDownArrowClicked = () => {
-    setMobileMenuState(MobileMenuState.COLLAPSED_HEADER);
-  };
+  const cardContent = (
+    <Box>
+      <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
+      <Box __css={styles.subtitle}>{question.question}</Box>
+      <Box __css={styles.body}>
+        {
+          question.sections.one.map((list, index) => {
+            return (
+              <Box key={index}>
+                {list.heading}
+                <ul style={{
+                  listStylePosition: 'outside',
+                  paddingInlineStart: '1.5rem',
+                }}>
+                  {list.items.map((item, index) => {
+                    return (
+                      <li key={index} style={{
+                      }}>{item}</li>
+                    )
+                  })}
+                </ul>
+              </Box>
+            )
+          })
+        }
+      </Box>
+    </Box>
+  );
 
   return question.key && (
     <Box __css={styles.card} onClick={onCardClick}>
@@ -56,6 +81,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
         <IconButton
           icon={<FiX />}
           display={mobileMenuState === MobileMenuState.COLLAPSED_HEADER ? 'block' : 'none'}
+          onClick={() => setMobileMenuState(MobileMenuState.SELECT)}
           position='absolute'
           top='0.6rem'
           right='0.6rem'
@@ -63,11 +89,14 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
           height='1.875rem'
           minWidth='1.875rem'
           maxWidth='1.875rem'
-          onClick={onXClick}
+          _hover={{bg: "var(--chakra-colors-rush-200)" }}
+          transitionDuration='0.02s'
+          zIndex='1001'
         />
         <IconButton
           icon={<FaAngleDown />}
           display={mobileMenuState === MobileMenuState.EXPANDED_HEADER ? 'block' : 'none'}
+          onClick={() => setMobileMenuState(MobileMenuState.COLLAPSED_HEADER)}
           position='absolute'
           top='0.6rem'
           right='0.6rem'
@@ -75,39 +104,32 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
           height='1.875rem'
           minWidth='1.875rem'
           maxWidth='1.875rem'
-          onClick={onDownArrowClicked}
+          _hover={{bg: "var(--chakra-colors-rush-200)" }}
+          transitionDuration='0.02s'
+          zIndex='1001'
         />
-        <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
-        <Box __css={styles.subtitle}>{question.question}</Box>
-        <Box __css={styles.body}>
-          {
-            question.sections.one.map((list, index) => {
-              return (
-                <Box key={index}>
-                  {list.heading}
-                  <ul style={{
-                    listStylePosition: 'outside',
-                    paddingInlineStart: '1.5rem',
-                  }}>
-                    {list.items.map((item, index) => {
-                      return (
-                        <li key={index} style={{
-                        }}>{item}</li>
-                      )
-                    })}
-                  </ul>
-                </Box>
-              )
-            })
-          }
-        </Box>
+        {mobileMenuState !== MobileMenuState.EXPANDED_HEADER ? cardContent : false}
+        <Tabs 
+          display={mobileMenuState === MobileMenuState.EXPANDED_HEADER}
+        >
+          <TabPanels>
+            <TabPanel>
+              {cardContent}
+            </TabPanel>
+            <TabPanel>
+              <p>two!</p>
+            </TabPanel>
+            <TabPanel>
+              <p>three!</p>
+            </TabPanel>
+          </TabPanels>
+          <TabList>
+            <Tab>Highlights</Tab>
+            <Tab>Info</Tab>
+            <Tab>Links</Tab>
+          </TabList>
+        </Tabs>
         <Box __css={styles.footer}>
-          <Button
-            rightIcon={<FaRegArrowAltCircleDown />}
-            onClick={() => dispatch({question: question.key, focus: questionActions.makeYourMove})}
-          >
-            Make your move
-          </Button>
         </Box>
       </Box>
     </Box>

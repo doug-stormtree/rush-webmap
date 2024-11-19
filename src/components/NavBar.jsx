@@ -42,7 +42,7 @@ export default function NavBar(props) {
         aria-label='map-button'
         leftIcon={<FiMap strokeWidth='inherit' />}
         fontWeight='inherit'>
-          Map
+          {fullPageTitle ? "Map" : 'Home'}
       </Button>
     </Link>
   );
@@ -147,15 +147,12 @@ export default function NavBar(props) {
     <Menu>
       <ButtonGroup variant='nav'>
         <MenuButton
-          // TODO: I couldn't figure out how to re-use the hover styles here...
-          _hover={{color: "var(--chakra-colors-rush-200)" }}
+          as={Button}
+          leftIcon={<FiMenu strokeWidth='inherit' />}
+          _hover={{ color: "var(--chakra-colors-rush-200)" }}
+          fontWeight='inherit'
           transitionDuration='0.02s'
-        >
-          <Button
-            leftIcon={<FiMenu strokeWidth='inherit' />}
-            fontWeight='inherit'>
-          </Button>
-        </MenuButton>
+        />
         {menuBurgerButtons}
       </ButtonGroup>
     </Menu>

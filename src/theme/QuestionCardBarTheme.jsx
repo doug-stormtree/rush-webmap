@@ -41,15 +41,14 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
     dock: {
       display: 'flex',
       flexDirection: 'column',
-      flexAlign: 'center',
+      //flexAlign: mobileStyle('center', 'left'),
       position: 'absolute',
       overflow: 'hidden',
-      minHeight: '75%',
+      minHeight: '120px',
       minWidth: '100%',
       bottom: '0',
       left: '0',
       right: '0',
-      backgroundColor: 'red',
     },
     bar: {
       backgroundColor: mobileStyle('white', 'transparent'),
@@ -87,8 +86,7 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       background: mobileStyle('none', containerGradient),
     }
   },
-  defaultProps: {
-  }
+  defaultProps: {},
 })
 
 export default QuestionCardBarTheme

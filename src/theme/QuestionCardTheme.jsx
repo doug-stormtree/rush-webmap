@@ -18,11 +18,10 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       minWidth: '120px',
       borderRadius: 'xl',
       background: '#333',
-      // text styling
       color: 'white',
-      // sticky
       position: 'sticky',
       top: '3.75rem',
+      alignSelf: mobileStyle('inherit', 'flex-start'),
     },
     image: {
       width: '100%',
@@ -125,7 +124,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         zIndex: '1000',
         // size
         minHeight: '120px',
-        maxHeight: 'calc(100vh - 11.875rem)',
+        maxHeight: 'calc(100vh - 8rem)',
         minWidth: '320px',
         maxWidth: '320px',
         // styling
@@ -159,6 +158,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       body: {
         display: 'block',
         overflowX: 'auto',
+        height: mobileStyle('180px', 'inherit'), // cap height to show bottom tabs on mobile and hide content using scroll
       },
       footer: {
         display: 'block',
