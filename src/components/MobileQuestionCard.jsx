@@ -124,9 +124,9 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
             </TabPanel>
           </TabPanels>
           <TabList>
-            <Tab>Highlights</Tab>
-            <Tab>Info</Tab>
-            <Tab>Links</Tab>
+            <Tab>Notice</Tab>
+            <Tab>Act</Tab>
+            <Tab>Check out</Tab>
           </TabList>
         </Tabs>
         <Box __css={styles.footer}>
