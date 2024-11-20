@@ -85,6 +85,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
   sizes: {
     button: {
       card: {
+        cursor: 'pointer',
         height: '120px',
         width: '120px',
         _hover: {
