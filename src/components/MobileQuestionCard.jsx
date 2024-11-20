@@ -75,6 +75,8 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
     </Box>
   );
 
+  console.log('state: ' + mobileMenuState);
+
   return question.key && (
     <Box __css={styles.card} onClick={onCardClick}>
       <Image src={question.image} __css={styles.image} />
@@ -109,9 +111,11 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
           transitionDuration='0.02s'
           zIndex='1001'
         />
-        {mobileMenuState !== MobileMenuState.EXPANDED_HEADER ? cardContent : false}
+        <Box display={mobileMenuState !== MobileMenuState.EXPANDED_HEADER ? 'block' : 'none'}>
+          {cardContent}
+        </Box>
         <Tabs 
-          display={mobileMenuState === MobileMenuState.EXPANDED_HEADER}
+          display={mobileMenuState === MobileMenuState.EXPANDED_HEADER ? 'block' : 'none'}
           position='relative'
           variant='unstyled'
           minWidth='100%'
