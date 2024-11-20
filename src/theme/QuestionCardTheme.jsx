@@ -38,6 +38,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       overflow: 'hidden',
       paddingX: '1rem',
       paddingY: '0.6rem',
+      paddingBottom: mobileStyle('0px', 'inherit'),
     },
     title: {
       // text styling
@@ -67,11 +68,19 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       listStyle: 'inside',
       // positioning
       paddingY: '0.6rem',
+      minHeight: '70%',
     },
     footer: {
       display: 'none',
       marginTop: '0.5rem',
-    }
+    },
+    mobileTabMenuTab: {
+      paddingRight: '5px',
+      paddingLeft: '5px',
+    },
+    mobileTabMenuIcon: {
+      marginRight: '10px',
+    },
   },
   sizes: {
     button: {

@@ -4,6 +4,7 @@ import {
   IconButton,
   Image,
   Tab,
+  TabIndicator,
   TabList,
   TabPanel,
   TabPanels,
@@ -111,6 +112,9 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
         {mobileMenuState !== MobileMenuState.EXPANDED_HEADER ? cardContent : false}
         <Tabs 
           display={mobileMenuState === MobileMenuState.EXPANDED_HEADER}
+          position='relative'
+          variant='unstyled'
+          minWidth='100%'
         >
           <TabPanels>
             <TabPanel>
@@ -123,14 +127,28 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
               <p>three!</p>
             </TabPanel>
           </TabPanels>
-          <TabList>
-            <Tab>Notice</Tab>
-            <Tab>Act</Tab>
-            <Tab>Check out</Tab>
+          <TabList
+            minWidth='100%' 
+            justifyContent='space-evenly' 
+            gap='10px'
+          >
+            <Tab style={styles.mobileTabMenuTab}>
+              <FaHighlighter style={styles.mobileTabMenuIcon}/>Notice
+            </Tab>
+            <Tab style={styles.mobileTabMenuTab}>
+              <FaBook style={styles.mobileTabMenuIcon}/>Act
+            </Tab>
+            <Tab style={styles.mobileTabMenuTab}>
+              <FaLink style={styles.mobileTabMenuIcon}/>Check out
+            </Tab>
           </TabList>
+          <TabIndicator 
+            marginTop='-42px' // HACK: negative margin because Chakra doesn't recognize TabIndicator unless it's directly below a TabList.
+            height='2px' 
+            bg='currentColor' 
+            borderRadius='1px'
+          />
         </Tabs>
-        <Box __css={styles.footer}>
-        </Box>
       </Box>
     </Box>
   );
