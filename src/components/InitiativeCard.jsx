@@ -9,6 +9,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { InitiativeTagColors } from '../data/TextContent';
+import { mobileStyle } from '../theme/QuestionCardBarTheme';
 
 export default function InitiativeCard({initiative, flip = false}) {
 
@@ -24,11 +25,11 @@ export default function InitiativeCard({initiative, flip = false}) {
         src={initiative.image}
         alt={initiative.title}
         fit='contain'
-        height='120px'
-        width={{base: '100%', md: '120px'}}
+        height={mobileStyle('75%', '120px')}
+        width={mobileStyle('75%', '120px')}
         float={{md: flip ? 'right' : 'left'}}
-        marginRight={{md: flip ? '0' : '5'}}
-        marginLeft={{md: flip ? '5' : '0'}}
+        marginRight={mobileStyle('0', {md: flip ? '0' : '5'})}
+        marginLeft={mobileStyle('12.5%', {md: flip ? '5' : '0'})} // center image
         borderTopLeftRadius={{md: flip ? '0' : 'xl'}}
         borderTopRightRadius={{md: flip ? 'xl' : '0'}}
         borderBottomRightRadius={{md: flip ? '0' : 'xl'}}
