@@ -3,18 +3,21 @@ import { Box, useMultiStyleConfig } from '@chakra-ui/react';
 import QuestionCard from './QuestionCard';
 import Questions, { useActiveQuestionStore } from '../data/QuestionStore';
 
-export default function QuestionCardBar() {
-  const styles = useMultiStyleConfig('QuestionCardBar')
+export default function QuestionCardBar({ isMobile }) {
+  const styles = useMultiStyleConfig('QuestionCardBar');
   const {
     activeQuestion,
     sectionFocus,
   } = useActiveQuestionStore(state => ({
     activeQuestion: state.activeQuestion,
     sectionFocus: state.sectionFocus
-  }))
-  const scrollRef = useRef(null)
+  }));
+  const scrollRef = useRef(null);
+  const shouldRender = () => {
+    return !isMobile; 
+  };
   
-  return (
+  return shouldRender() && (
     <Box __css={styles.container} ref={scrollRef}>
       <Box __css={styles.bar}>
         <QuestionCard

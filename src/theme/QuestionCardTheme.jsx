@@ -1,4 +1,5 @@
 import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system"
+import { mobileStyle } from "./QuestionCardBarTheme"
 
 const helpers = createMultiStyleConfigHelpers([
   'card',
@@ -17,11 +18,10 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       minWidth: '120px',
       borderRadius: 'xl',
       background: '#333',
-      // text styling
       color: 'white',
-      // sticky
       position: 'sticky',
       top: '3.75rem',
+      alignSelf: mobileStyle('inherit', 'flex-start'),
     },
     image: {
       width: '100%',
@@ -38,6 +38,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       overflow: 'hidden',
       paddingX: '1rem',
       paddingY: '0.6rem',
+      paddingBottom: mobileStyle('0px', 'inherit'),
     },
     title: {
       // text styling
@@ -60,22 +61,28 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
     },
     body: {
       display: 'none',
-      // text styling
       fontFamily: 'var(--chakra-fonts-body)',
       fontWeight: '500',
       fontSize: '0.875rem',
       listStyle: 'inside',
-      // positioning
       paddingY: '0.6rem',
     },
     footer: {
       display: 'none',
       marginTop: '0.5rem',
-    }
+    },
+    mobileTabMenuTab: {
+      paddingRight: '5px',
+      paddingLeft: '5px',
+    },
+    mobileTabMenuIcon: {
+      marginRight: '10px',
+    },
   },
   sizes: {
     button: {
       card: {
+        cursor: 'pointer',
         height: '120px',
         width: '120px',
         _hover: {
@@ -98,8 +105,8 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       card: {
         zIndex: '1000',
         height: '120px',
-        minWidth: '320px',
-        maxWidth: '320px',
+        minWidth: mobileStyle('85%', '320px'),
+        maxWidth: mobileStyle('85%', '320px'),
         color: 'black',
       },
       image: {
@@ -124,7 +131,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         zIndex: '1000',
         // size
         minHeight: '120px',
-        maxHeight: 'calc(100vh - 11.875rem)',
+        maxHeight: 'calc(100vh - 8rem)',
         minWidth: '320px',
         maxWidth: '320px',
         // styling
@@ -158,6 +165,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       body: {
         display: 'block',
         overflowX: 'auto',
+        height: mobileStyle('180px', 'inherit'), // cap height to show bottom tabs on mobile and hide content using scroll
       },
       footer: {
         display: 'block',
@@ -173,6 +181,12 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
     sticky: {
       card: {
         zIndex: '10',
+      },
+    },
+    dockExpanded: {
+      card: {
+        minWidth: '100%',
+        minHeight: '100%',
       },
     },
     absolute: { // not used

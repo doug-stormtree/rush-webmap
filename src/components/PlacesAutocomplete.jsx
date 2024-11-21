@@ -17,7 +17,7 @@ const leafletBoundsFromGoogle = (googleLatLngBounds) => {
   )
 }
 
-export const PlacesAutocomplete = () => {
+export const PlacesAutocomplete = ({ isMobile }) => {
   const map = useMap()
   const inputRef = useRef(null)
   const [ autocomplete, setAutocomplete ] = useState(null);
@@ -127,6 +127,7 @@ export const PlacesAutocomplete = () => {
         bgColor='gray.100'
         fontFamily='var(--chakra-fonts-body)'
         placeholder={placeholderText}
+        hidden={isMobile}
         _placeholder={{color: 'orange.500', opacity: '0.8'}}
       />
     </Control>

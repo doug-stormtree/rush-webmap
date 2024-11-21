@@ -25,7 +25,7 @@ export default function ShareModalButton(props) {
   return (
     <>
       <Button
-        rightIcon={<FiShare strokeWidth='inherit' />}
+        leftIcon={<FiShare strokeWidth='inherit' />}
         fontWeight='inherit'
         onClick={() => {
           onOpen();
