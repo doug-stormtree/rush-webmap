@@ -19,6 +19,7 @@ import { FiX } from 'react-icons/fi'
 import Questions, { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
 import { MobileMenuState } from '../App'
 import ContentPane, { Tabs as ContentPaneTab} from './ContentPane';
+import InitiativeCard from './InitiativeCard';
 
 
 /**
@@ -55,7 +56,11 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
     <Box>
       <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
       <Box __css={styles.subtitle}>{question.question}</Box>
-      <Box __css={styles.body}>
+      <Box 
+        overflowY='scroll'
+        maxHeight='55vh' // slightly less than the other two tabs because of the subtitle taking up space
+        marginTop='10px'
+      >
         {
           question.sections.one.map((list, index) => {
             return (
@@ -86,7 +91,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
       <Box __css={styles.subtitle}>{questionData?.sections.two.heading}</Box>
       <UnorderedList
         overflowY='scroll'
-        maxHeight='50vh'
+        maxHeight='60vh'
         marginTop='10px'
       >
         {questionData?.sections.two.items.map((i) => (
@@ -114,7 +119,27 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
     </Box>
   );
 
-  console.log('questionData: ' + questionData);
+  const initiatives = (
+    <Box>
+      <Box __css={styles.title}>Good Stuff To Check Out</Box>
+      <Box __css={styles.subtitle}>We've noticed these movers and shakers working on solutions.</Box>
+      <UnorderedList
+        overflowY='scroll'
+        maxHeight='60vh'
+        marginTop='10px'
+      >
+        {
+          questionData?.act.initiatives.map((item, index) =>
+          <InitiativeCard
+            key={item.title}
+            initiative={item}
+            flip={index%2===0}
+            flex='0'
+          />)
+        }
+      </UnorderedList>
+    </Box>
+  );
 
   return question.key && (
     <Box __css={styles.card} onClick={onCardClick}>
@@ -167,7 +192,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
               {makeYourMoveAndRabbitHole}
             </TabPanel>
             <TabPanel>
-              <p>three!</p>
+              {initiatives}
             </TabPanel>
           </TabPanels>
           <TabList
