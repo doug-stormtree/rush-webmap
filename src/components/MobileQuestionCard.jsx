@@ -1,20 +1,24 @@
 import React from 'react'
 import {
   Box,
+  Button,
   IconButton,
   Image,
+  ListItem,
   Tab,
   TabIndicator,
   TabList,
   TabPanel,
   TabPanels,
   Tabs,
+  UnorderedList,
   useMultiStyleConfig
 } from '@chakra-ui/react'
-import { FaAngleDown, FaBook, FaHighlighter, FaLink } from 'react-icons/fa'
+import { FaAngleDown, FaBook, FaHighlighter, FaLink, FaRegArrowAltCircleDown } from 'react-icons/fa'
 import { FiX } from 'react-icons/fi'
-import { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
+import Questions, { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
 import { MobileMenuState } from '../App'
+import ContentPane, { Tabs as ContentPaneTab} from './ContentPane';
 
 
 /**
@@ -33,6 +37,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
 
   const styles = useMultiStyleConfig('QuestionCard', { size, variant }); // re-use theme from original question card
   const dispatch = useActiveQuestionStore(state => state.dispatch);
+  const questionData = Questions.get(question.key)
 
   const onCardClick = () => {
     if (mobileMenuState === MobileMenuState.SELECT){
@@ -75,7 +80,41 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
     </Box>
   );
 
-  console.log('state: ' + mobileMenuState);
+  const makeYourMoveAndRabbitHole = (
+    <Box>
+      <Box __css={styles.title}>Make your move</Box>
+      <Box __css={styles.subtitle}>{questionData?.sections.two.heading}</Box>
+      <UnorderedList
+        overflowY='scroll'
+        maxHeight='50vh'
+        marginTop='10px'
+      >
+        {questionData?.sections.two.items.map((i) => (
+          <ListItem 
+            key={i}
+            marginBottom='10px'
+            listStylePos='inside' // TODO: I'm not sure why outside pos isn't rendering here... Would be nice to fix this.
+          >{i}</ListItem>
+        ))}
+        <ListItem key='footer-btn-down-the-rabbit-hole'>
+          <Box 
+            __css={styles.footer} 
+            justifyContent='center' 
+            display='flex'
+          >
+            <Button
+              rightIcon={<FaRegArrowAltCircleDown />}
+              onClick={() => dispatch({focus: questionActions.rabbitHole})}
+            >
+              Down the rabbit hole
+            </Button>
+          </Box>
+        </ListItem>
+      </UnorderedList>
+    </Box>
+  );
+
+  console.log('questionData: ' + questionData);
 
   return question.key && (
     <Box __css={styles.card} onClick={onCardClick}>
@@ -120,12 +159,12 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
           variant='unstyled'
           minWidth='100%'
         >
-          <TabPanels>
+          <TabPanels minHeight='500px'>
             <TabPanel>
               {cardContent}
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              {makeYourMoveAndRabbitHole}
             </TabPanel>
             <TabPanel>
               <p>three!</p>

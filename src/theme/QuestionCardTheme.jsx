@@ -61,14 +61,11 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
     },
     body: {
       display: 'none',
-      // text styling
       fontFamily: 'var(--chakra-fonts-body)',
       fontWeight: '500',
       fontSize: '0.875rem',
       listStyle: 'inside',
-      // positioning
       paddingY: '0.6rem',
-      minHeight: '70%',
     },
     footer: {
       display: 'none',
