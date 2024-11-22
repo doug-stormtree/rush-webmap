@@ -146,7 +146,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
       <Image src={question.image} __css={styles.image} />
       <Box __css={styles.content}>
         <IconButton
-          icon={<FiX />}
+          icon={<FiX fontSize='3rem'/>}
           display={mobileMenuState === MobileMenuState.COLLAPSED_HEADER ? 'flex' : 'none'}
           onClick={() => setMobileMenuState(MobileMenuState.SELECT)}
           position='absolute'
@@ -161,7 +161,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
           zIndex='1001'
         />
         <IconButton
-          icon={<FaAngleDown />}
+          icon={<FaAngleDown fontSize='2rem'/>}
           display={mobileMenuState === MobileMenuState.EXPANDED_HEADER ? 'flex' : 'none'}
           onClick={() => setMobileMenuState(MobileMenuState.COLLAPSED_HEADER)}
           position='absolute'
