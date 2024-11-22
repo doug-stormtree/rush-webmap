@@ -1,4 +1,5 @@
 import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system"
+import { mobileStyle } from "./QuestionCardBarTheme"
 
 const helpers = createMultiStyleConfigHelpers([
   'container',
@@ -13,7 +14,7 @@ const ContentPaneTheme = helpers.defineMultiStyleConfig({
     container: {
       // positioning
       position: 'relative',
-      width: ['100%', null, null, '34rem', '40rem', '40rem'],
+      width: '100%',
       // padding
       padding: '1rem',
       paddingRight: '0',
@@ -21,7 +22,7 @@ const ContentPaneTheme = helpers.defineMultiStyleConfig({
       backgroundColor: 'white',
       borderRadius: '0.75rem 0.75rem 0 0',
       flex: '0 1 auto',
-      display: 'flex',
+      display: mobileStyle('none', 'flex'), // content pane is hidden on mobile
       flexDirection: 'column',
       overflow: 'hidden',
       _notFirst: {

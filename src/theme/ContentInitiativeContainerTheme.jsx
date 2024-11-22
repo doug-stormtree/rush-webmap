@@ -12,6 +12,7 @@ const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
       position: 'absolute',
       overflow: 'hidden',
       //maxWidth: 'min(calc(100% - 31.875rem), 20rem)',
+      maxWidth: '48rem',
       maxHeight: 'calc(100% - 17.5rem)',
       bottom: '0',
       left: '9.75rem',
