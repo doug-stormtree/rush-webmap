@@ -38,7 +38,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       overflow: 'hidden',
       paddingX: '1rem',
       paddingY: '0.6rem',
-      paddingBottom: mobileStyle('0px', 'inherit'),
+      paddingBottom: mobileStyle('0px', '0.6rem'),
     },
     title: {
       // text styling
