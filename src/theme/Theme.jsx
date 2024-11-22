@@ -19,6 +19,8 @@ import '@fontsource/raleway/400.css';
 import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
 
+import '@fontsource/luckiest-guy';
+
 import NavBar from './NavBarTheme';
 import QuestionCard from './QuestionCardTheme';
 import QuestionCardBar from './QuestionCardBarTheme';
@@ -196,6 +198,7 @@ const theme = extendTheme({
     subHeading: `'Urbanist Variable', sans-serif`,
     inter: `'Inter Variable', sans-serif`,
     aleo: `'Aleo Variable', serif`,
+    leaderboard: `'Luckiest Guy', system-ui;`
   },
   textStyles: {
   }
