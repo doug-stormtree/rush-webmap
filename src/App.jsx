@@ -155,6 +155,7 @@ function WebMap() {
         boxShadow='0px 0px 8px 2px #888'
         getShareURL={getShareURL}
         vh={vh}
+        isMobile={isMobile}
       />
       <QuestionCardBar 
         isMobile={isMobile}

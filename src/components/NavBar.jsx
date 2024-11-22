@@ -41,7 +41,7 @@ export default function NavBar(props) {
         aria-label='map-button'
         leftIcon={<FiMap strokeWidth='inherit' />}
         fontWeight='inherit'>
-          {fullPageTitle ? "Map" : 'Home'}
+          {props.isMobile ? "Map" : 'Home'}
       </Button>
     </Link>
   );
