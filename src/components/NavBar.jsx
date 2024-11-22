@@ -21,7 +21,7 @@ import ShareModalButton from './ShareModalButton';
 export default function NavBar(props) {
 
   const styles = useMultiStyleConfig('NavBar');
-  const { getShareURL, ...rest } = props;
+  const { getShareURL, isMobile, ...rest } = props;
 
   const fullPageTitle = useBreakpointValue({
     base: false,
