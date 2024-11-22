@@ -59,6 +59,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
         overflowY='scroll'
         maxHeight='55vh' // slightly less than the other two tabs because of the subtitle taking up space
         marginTop='10px'
+        display={mobileMenuState === MobileMenuState.EXPANDED_HEADER ? 'inherit' : 'none'}
       >
         {
           question.sections.one.map((list, index) => {
