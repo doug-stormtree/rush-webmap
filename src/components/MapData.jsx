@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { Center, Heading } from '@chakra-ui/react';
+import { Center, Flex, Heading } from '@chakra-ui/react';
 import * as L from 'leaflet';
 import { useMap } from 'react-leaflet';
 import Control from 'react-leaflet-custom-control';
 import { LegendDrawerButton } from './Legend';
 import { useActiveQuestionStore } from '../data/QuestionStore';
 import { useMapLayerDataStore } from '../data/MapLayerStore';
+import Leaderboard from './Leaderboard';
 
 export const MapData = () => {
   const map = useMap();
@@ -35,7 +36,10 @@ export const MapData = () => {
   return (
     <>
       <Control position='topright'>
-        <LegendDrawerButton />
+        <Flex direction='row' gap='0.5rem'>
+          <Leaderboard />
+          <LegendDrawerButton />
+        </Flex>
       </Control>
       { activeQuestion === undefined ||
         layers.length > 0
