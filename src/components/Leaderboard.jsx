@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Box,
   Flex,
@@ -19,10 +19,6 @@ const lbContent = {
     name: 'None',
     score: '0',
   },
-  total: {
-    name: 'Total',
-    score: '0'
-  }
 }
 
 const textFieldOpts = {
@@ -34,6 +30,21 @@ const textFieldOpts = {
 
 export default function Leaderboard({ db, initContent = lbContent }) {
   const [ content, setContent ] = useState(initContent);
+
+  // store Rain Garden count separately to fetch from OGM
+  const [ total, setTotal ] = useState('0')
+  const getTotalRainGardens = useMemo(() => async () => {
+    // Fetch count of Rain Gardens from OGM
+    fetch('https://greenmap.org/api-v1/maps/63e6939eabcc260100514352/meta')
+      .then((response) => response.json())
+      .then((json) => {
+        setTotal(json.publicFeatures.toString())
+      })
+  }, [])
+
+  useEffect(() => {
+    getTotalRainGardens()
+  }, [getTotalRainGardens])
   
   useEffect(() => {
     if (db === undefined) return;
@@ -47,7 +58,7 @@ export default function Leaderboard({ db, initContent = lbContent }) {
   }, [setContent, db])
 
   return (
-    <LeaderboardComponent content={content} />
+    <LeaderboardComponent content={{total: { name: 'Total', score: total }, ...content}} />
   )
 }
 
