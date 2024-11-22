@@ -1,26 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Flex,
   useDisclosure,
 } from '@chakra-ui/react';
+import { ref, onValue } from 'firebase/database';
 
 const lbContent = {
   topRainmaker: {
-    name: 'Tom',
-    score: '1123',
+    name: 'None',
+    score: '0',
   },
   topClass: {
-    name: 'Mrs. Stevens Grade Sevens',
-    score: '1121343',
+    name: 'None',
+    score: '0',
   },
   topSchool: {
-    name: 'Claremont Most Excellent School',
-    score: '1123',
+    name: 'None',
+    score: '0',
   },
   total: {
     name: 'Total',
-    score: '1123asdf'
+    score: '0'
   }
 }
 
@@ -31,7 +32,26 @@ const textFieldOpts = {
   overflow:'hidden',
 }
 
-export default function Leaderboard() {
+export default function Leaderboard({ db, initContent = lbContent }) {
+  const [ content, setContent ] = useState(initContent);
+  
+  useEffect(() => {
+    if (db === undefined) return;
+
+    // Listen for DB changes
+    const lbRef = ref(db, 'leaderboard/');
+    onValue(lbRef, (snapshot) => {
+      const data = snapshot.val()
+      setContent(data)
+    })
+  }, [setContent, db])
+
+  return (
+    <LeaderboardComponent content={content} />
+  )
+}
+
+export function LeaderboardComponent({ content }) {
   const { isOpen, onOpen, onClose } = useDisclosure({defaultIsOpen: true})
 
   return isOpen ? (
@@ -55,20 +75,20 @@ export default function Leaderboard() {
       onClick={onClose}
     >
       <Flex direction='row' justifyContent='space-between' marginBottom='0.8rem'>
-        <Box textAlign='left' {...textFieldOpts}>{lbContent.topRainmaker.name}</Box>
-        <Box textAlign='right'>{lbContent.topRainmaker.score.substring(0,4)}</Box>
+        <Box textAlign='left' {...textFieldOpts}>{content.topRainmaker.name}</Box>
+        <Box textAlign='right'>{content.topRainmaker.score.substring(0,4)}</Box>
       </Flex>
       <Flex direction='row' justifyContent='space-between' marginBottom='0.8rem'>
-        <Box textAlign='left' {...textFieldOpts}>{lbContent.topClass.name}</Box>
-        <Box textAlign='right'>{lbContent.topClass.score.substring(0,4)}</Box>
+        <Box textAlign='left' {...textFieldOpts}>{content.topClass.name}</Box>
+        <Box textAlign='right'>{content.topClass.score.substring(0,4)}</Box>
       </Flex>
       <Flex direction='row' justifyContent='space-between'>
-        <Box textAlign='left' {...textFieldOpts}>{lbContent.topSchool.name}</Box>
-        <Box textAlign='right'>{lbContent.topSchool.score.substring(0,4)}</Box>
+        <Box textAlign='left' {...textFieldOpts}>{content.topSchool.name}</Box>
+        <Box textAlign='right'>{content.topSchool.score.substring(0,4)}</Box>
       </Flex>
       <Flex direction='row' justifyContent='space-between'>
-        <Box textAlign='left' {...textFieldOpts}>{lbContent.total.name}</Box>
-        <Box textAlign='right'>{lbContent.total.score.substring(0,4)}</Box>
+        <Box textAlign='left' {...textFieldOpts}>{content.total.name}</Box>
+        <Box textAlign='right'>{content.total.score.substring(0,4)}</Box>
       </Flex>
     </Flex>
   ) : (

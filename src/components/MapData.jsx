@@ -8,7 +8,7 @@ import { useActiveQuestionStore } from '../data/QuestionStore';
 import { useMapLayerDataStore } from '../data/MapLayerStore';
 import Leaderboard from './Leaderboard';
 
-export const MapData = () => {
+export const MapData = ({ db }) => {
   const map = useMap();
   const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
   const layers = useActiveQuestionStore((state) => state.activeLayers)
@@ -37,7 +37,7 @@ export const MapData = () => {
     <>
       <Control position='topright'>
         <Flex direction='row' gap='0.5rem'>
-          <Leaderboard />
+          <Leaderboard db={db} />
           <LegendDrawerButton />
         </Flex>
       </Control>

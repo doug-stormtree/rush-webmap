@@ -22,10 +22,10 @@ import { latLng } from 'leaflet';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
 // Questions
 import Questions, { useActiveQuestionStore } from './data/QuestionStore';
 import { PlacesAutocomplete } from './components/PlacesAutocomplete'; // eslint-disable-line no-unused-vars
-import Sandbox from './components/Sandbox';
 import QuestionCardBar from './components/QuestionCardBar';
 import HomePage from './components/HomePage';
 import ContentInitiativeContainer from './components/ContentInitiativeContainer';
@@ -34,6 +34,7 @@ import TutorialPopup from './components/TutorialPopup';
 import AboutPage from './components/AboutPage';
 import MobileQuestionMenu from './components/MobileQuestionMenu';
 import MobileQuestionDock from './components/MobileQuestionDock';
+import LeaderboardAdmin from './components/LeaderboardAdmin';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -44,12 +45,14 @@ const firebaseConfig = {
   messagingSenderId: "475584087043",
   appId: "1:475584087043:web:b7f77d9656f9721da37a36",
   measurementId: "G-F052FD5Y1T",
+  databaseURL: "https://rush-webapp-default-rtdb.firebaseio.com"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 if (app === null) {console.log("Firebase did not initialize.")};
 const analytics = getAnalytics(app); // eslint-disable-line no-unused-vars
+const database = getDatabase(app); // eslint-disable-line no-unused-vars
 
 function App() {
   return (
@@ -77,8 +80,8 @@ function App() {
             element={<WebMap />}
           />
           <Route
-            path="/sandbox"
-            element={<Sandbox />}
+            path="/lbadmin"
+            element={<LeaderboardAdmin db={database} />}
           />
         </Routes>
       </Router>
@@ -184,7 +187,7 @@ function WebMap() {
             isMobile={isMobile}
           />
           <MapBasemap />
-          <MapData />
+          <MapData db={database} />
         </MapView>
         <TutorialPopup
           isMobile={isMobile}
