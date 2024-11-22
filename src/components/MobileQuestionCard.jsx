@@ -17,8 +17,7 @@ import {
 import { FaAngleDown, FaBook, FaHighlighter, FaLink, FaRegArrowAltCircleDown } from 'react-icons/fa'
 import { FiX } from 'react-icons/fi'
 import Questions, { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
-import { MobileMenuState } from '../App'
-import ContentPane, { Tabs as ContentPaneTab} from './ContentPane';
+import { MobileMenuState } from '../App';
 import InitiativeCard from './InitiativeCard';
 
 

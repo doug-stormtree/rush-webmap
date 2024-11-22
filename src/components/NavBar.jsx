@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link as ReactLink } from 'react-router-dom';
 import {
   Box,
@@ -17,7 +17,6 @@ import {
 import { FiInstagram, FiMessageSquare, FiHelpCircle, FiMap, FiMenu } from 'react-icons/fi';
 //import LandingModalButton from './LandingModalButton';
 import ShareModalButton from './ShareModalButton';
-import { mobileStyle } from '../theme/QuestionCardBarTheme';
 
 export default function NavBar(props) {
 

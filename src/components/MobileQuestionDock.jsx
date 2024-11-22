@@ -1,4 +1,4 @@
-import { Box, Text, useMultiStyleConfig } from '@chakra-ui/react';
+import { Box, useMultiStyleConfig } from '@chakra-ui/react';
 import Questions from '../data/QuestionStore';
 import { MobileMenuState } from '../App';
 import MobileQuestionCard from './MobileQuestionCard';

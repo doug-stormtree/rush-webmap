@@ -16,7 +16,7 @@ export default function MapView(props) {
   };
 
   const CustomMapHooks = () => {
-    const map = useMapEvents({
+    useMapEvents({
       click: collapseMobileMenu,
       dragstart: collapseMobileMenu,
     })
