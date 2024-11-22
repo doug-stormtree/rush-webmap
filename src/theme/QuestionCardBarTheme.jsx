@@ -84,6 +84,8 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       zIndex:'9',
       pointerEvents: 'none',
       background: mobileStyle('none', containerGradient),
+      //pos: mobileStyle('static', 'inherit'),
+      WebkitOverflowScrolling: mobileStyle('touch', 'inherit'),
     }
   },
   defaultProps: {},

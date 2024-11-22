@@ -59,6 +59,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
         overflowY='scroll'
         maxHeight='55vh' // slightly less than the other two tabs because of the subtitle taking up space
         marginTop='10px'
+        display={mobileMenuState === MobileMenuState.EXPANDED_HEADER ? 'inherit' : 'none'}
       >
         {
           question.sections.one.map((list, index) => {
@@ -145,9 +146,12 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
       <Image src={question.image} __css={styles.image} />
       <Box __css={styles.content}>
         <IconButton
-          icon={<FiX />}
+          icon={<FiX fontSize='3rem' />}
           display={mobileMenuState === MobileMenuState.COLLAPSED_HEADER ? 'flex' : 'none'}
-          onClick={() => setMobileMenuState(MobileMenuState.SELECT)}
+          onClick={(e) => {
+            e.stopPropagation()
+            setMobileMenuState(MobileMenuState.SELECT)
+          }}
           position='absolute'
           top='0.6rem'
           right='0.6rem'
@@ -160,7 +164,7 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
           zIndex='1001'
         />
         <IconButton
-          icon={<FaAngleDown />}
+          icon={<FaAngleDown fontSize='2rem' />}
           display={mobileMenuState === MobileMenuState.EXPANDED_HEADER ? 'flex' : 'none'}
           onClick={() => setMobileMenuState(MobileMenuState.COLLAPSED_HEADER)}
           position='absolute'

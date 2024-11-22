@@ -149,7 +149,8 @@ function WebMap() {
 
   return (
     <Box
-      minH={vh}
+      height='dvh'
+      overflow='hidden'
     >
       <NavBar
         position='sticky'
