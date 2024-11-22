@@ -14,7 +14,13 @@ questions = undefined;
 export default questionMap;
 
 // Question reducer
-export const questionActions = { open: 'OPEN', close: 'CLOSE', makeYourMove: 'MOVE', rabbitHole: 'RABBIT' }
+export const questionActions = {
+  open: 'OPEN',
+  close: 'CLOSE',
+  makeYourMove: 'MOVE',
+  rabbitHole: 'RABBIT',
+  closeExpandedOnly: 'CLOSE_EXPANDED_ONLY',
+}
 const questionReducer = (state, {question, focus}) => {
   const newState = {}
   if (questionMap.has(question) && state.activeQuestion !== question) {
@@ -27,6 +33,9 @@ const questionReducer = (state, {question, focus}) => {
       return newState
     case questionActions.close:
       newState.sectionFocus = 0
+      return newState
+    case questionActions.closeExpandedOnly:
+      if (state.sectionFocus === 1) { newState.sectionFocus = 0 }
       return newState
     case questionActions.makeYourMove:
       newState.sectionFocus = 2

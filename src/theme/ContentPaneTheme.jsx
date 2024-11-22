@@ -14,7 +14,7 @@ const ContentPaneTheme = helpers.defineMultiStyleConfig({
     container: {
       // positioning
       position: 'relative',
-      width: ['100%', null, null, '34rem', '40rem', '40rem'],
+      width: '100%',
       // padding
       padding: '1rem',
       paddingRight: '0',
