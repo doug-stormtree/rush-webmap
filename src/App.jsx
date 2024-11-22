@@ -35,7 +35,6 @@ import AboutPage from './components/AboutPage';
 import MobileQuestionMenu from './components/MobileQuestionMenu';
 import MobileQuestionDock from './components/MobileQuestionDock';
 import LeaderboardAdmin from './components/LeaderboardAdmin';
-import { mobileStyle } from './theme/QuestionCardBarTheme';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -175,11 +174,6 @@ function WebMap() {
         top='2.5rem'
         direction='row'
         //zIndex='-1'
-        display={mobileStyle(
-          // hide map-view on mobile when user is selecting a question-card
-          mobileMenuState === MobileMenuState.SELECT ? 'none' : 'flex',
-          'flex', // desktop style
-        )}
       >
         <MapView
           flex='1'
