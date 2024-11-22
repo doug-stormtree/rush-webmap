@@ -148,7 +148,10 @@ export default function MobileQuestionCard({ question, size, variant, mobileMenu
         <IconButton
           icon={<FiX fontSize='3rem'/>}
           display={mobileMenuState === MobileMenuState.COLLAPSED_HEADER ? 'flex' : 'none'}
-          onClick={() => setMobileMenuState(MobileMenuState.SELECT)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setMobileMenuState(MobileMenuState.SELECT);
+          }}
           position='absolute'
           top='0.6rem'
           right='0.6rem'
