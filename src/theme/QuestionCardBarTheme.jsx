@@ -86,7 +86,7 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       background: mobileStyle('none', containerGradient),
 
       // From https://stackoverflow.com/a/7896882, static position is required to fix scrolling on mobile.
-      pos: mobileStyle('static', 'inherit'),
+      pos: mobileStyle('static', 'fixed'),
       WebkitOverflowScrolling: mobileStyle('touch', 'inherit'),
     }
   },

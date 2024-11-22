@@ -170,6 +170,7 @@ function WebMap() {
         setMobileMenuState={setMobileMenuState}
       />
       <Flex
+        id='map-flex'
         h={`calc(100vh - 2.5rem)`}
         position='sticky'
         top='2.5rem'
