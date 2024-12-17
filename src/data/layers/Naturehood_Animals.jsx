@@ -12,7 +12,7 @@ const AnimalImages = {
 }
 
 const layer = {
-  title: 'Naturehood Animal Images',
+  title: 'NatureHood Animal Images',
   description: 'Animal ambassadors who can guide you through our NatureHood. Keep an eye out for them as you visit NatureHood Locations in the region.',
   data: require('../geojson/Naturehood_Animals.geojson'),
   shape: 'polygon',
