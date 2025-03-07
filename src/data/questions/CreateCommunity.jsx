@@ -27,6 +27,7 @@ const Question = {
     { key: 'DrinkingFountains', active: false, group: 'Civic' },
     { key: 'ENBS', active: false, group: 'Greenspace' },
     { key: 'EVChargingStations', active: false, group: 'Energy' },
+    { key: 'FarmToFork', active: false, ...LegendGroups.OGM },
     { key: 'FoodSecurity', active: false, group: 'Community' },
     { key: 'ForageFish', active: false, group: 'Water' },
     { key: 'GreenBlueBelt', active: false, group: 'Greenspace' },
