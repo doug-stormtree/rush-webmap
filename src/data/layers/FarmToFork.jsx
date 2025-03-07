@@ -36,7 +36,7 @@ const layer = {
   },
   liveOverride: {
     team: {
-      //url: 'https://bowkercreek.org/',
+      url: 'https://bowkercreek.org/',
     },
     btn1: {
       label: 'Plot Food Infrastructure',
