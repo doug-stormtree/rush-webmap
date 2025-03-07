@@ -5,8 +5,8 @@ const layer = {
   description: [
     {type: 'p', content: "Mapping food security features and urban agriculture initiatives. Plot that spot and help us grow together!"},
   ],
-  data: ogmFeaturesLink('67cb5be6278e270100114afb'),
-  ogmMapId: '67cb5be6278e270100114afb',
+  data: ogmFeaturesLink('67cb63ff278e270100114b09'),
+  ogmMapId: '67cb63ff278e270100114b09',
   shape: 'point',
   symbology: 'classified',
   options: {
@@ -36,7 +36,7 @@ const layer = {
   },
   liveOverride: {
     team: {
-      //url: 'https://bowkercreek.org/',
+      url: 'https://bowkercreek.org/',
     },
     btn1: {
       label: 'Plot Food Infrastructure',
@@ -44,7 +44,7 @@ const layer = {
     },
     btn2: {
       label: 'View Map',
-      url: 'https://greenmap.org/browse/maps/67cb5be6278e270100114afb/map-view',
+      url: 'https://greenmap.org/browse/maps/67cb63ff278e270100114b09/map-view',
     },
     ogmNoAccountWarning: true,
   },
