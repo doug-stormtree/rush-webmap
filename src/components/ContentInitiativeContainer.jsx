@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Box,
+  IconButton,
   Tab,
   Tabs,
   TabList,
@@ -9,7 +10,7 @@ import {
   useMultiStyleConfig,
 } from '@chakra-ui/react'
 import { FaHandsHelping, FaHighlighter, FaLink } from 'react-icons/fa'
-import { LuRabbit } from "react-icons/lu";
+import { LuArrowDownToLine, LuArrowUpFromLine, LuRabbit, LuX } from "react-icons/lu";
 import ContentPanel from './ContentPanel';
 import Questions, { useActiveQuestionStore } from '../data/QuestionStore';
 
@@ -23,25 +24,58 @@ const tabIconStyle = {
   marginRight: '0.5rem',
 }
 
+
 export default function ContentInitiativeContainer() {
   // theme
   const styles = useMultiStyleConfig('ContentInitiativeContainer')
   // TODO: container overflows onto legend at medium screen sizes -> conditional right pos if legend open
 
   // TODO: all question content fetching should go here for now
-  const activeQuestion = useActiveQuestionStore((state) => state.activeQuestion)
+  const [ activeQuestion, setActiveQuestion ] = useActiveQuestionStore((state) => [ state.activeQuestion, state.setActiveQuestion ])
   const tabs = questionContentToTabs(activeQuestion)
 
+  // Used to scroll content to top on tab change
   const tabPanelsRef = useRef()
 
+  // State for minimizing ContentPane
+  const [ isMinimized, setIsMinimized ] = useState(false)
+
   return activeQuestion && (
-    <Box __css={styles.container} >
-      <Tabs height='100%' onChange={() => tabPanelsRef.current.scrollTo(0,0)}>
-        <TabList>
-          {tabs.map(tab => <Tab key={tab.name} {...tabStyle}>{tab.icon}{tab.name}</Tab>)}
-        </TabList>
+    <Box __css={styles.container} height={isMinimized ? 'auto' : undefined} >
+      <Tabs height='100%' onChange={() => {
+        if (isMinimized) setIsMinimized(false)
+        tabPanelsRef.current.scrollTo(0,0)}
+      }>
+        <Box display='flex' direction='row'>
+          <TabList flex='1 1 auto'>
+            {tabs.map(tab => <Tab key={tab.name} {...tabStyle}>{tab.icon}{tab.name}</Tab>)}
+          </TabList>
+          {/* This box continues the style of the TabList */}
+          <Box display='flex' gap='0.25rem' borderBottom='1.6px solid rgb(226, 232, 240)' >
+            <IconButton
+              aria-label='Minimize Question'
+              icon={isMinimized
+                ? <LuArrowUpFromLine size='1.5rem' />
+                : <LuArrowDownToLine size='1.5rem' />
+              }
+              onClick={() => setIsMinimized(!isMinimized)}
+              variant='ghost'
+              height='2.25rem'
+              width='2.25rem'
+            />
+            <IconButton
+              aria-label='Close Question'
+              icon={<LuX size='1.5rem' />}
+              onClick={() => setActiveQuestion(undefined)}
+              variant='ghost'
+              height='2.25rem'
+              width='2.25rem'
+            />
+          </Box>
+        </Box>
         <TabPanels
           ref={tabPanelsRef}
+          display={isMinimized ? 'none' : undefined}
           overflow='scroll'
           height='calc(100% - 1rem)'
           paddingBottom='1rem'

@@ -49,10 +49,18 @@ const questionReducer = (state, {question, focus}) => {
 }
 
 // Question State Store
-export const useActiveQuestionStore = create((set, get) => ({
+const baseQuestionState = {
   activeQuestion: undefined,
   activeLayers: [],
+}
+
+export const useActiveQuestionStore = create((set, get) => ({
+  ...baseQuestionState,
   setActiveQuestion: (question) => {
+    if (question === undefined) {
+      set(baseQuestionState)
+      return;
+    }
     if (!questionMap.has(question)) return;
     set({
       activeQuestion: question,
