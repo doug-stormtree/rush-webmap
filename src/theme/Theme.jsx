@@ -25,6 +25,7 @@ import NavBar from './NavBarTheme';
 import QuestionCard from './QuestionCardTheme';
 import QuestionCardBar from './QuestionCardBarTheme';
 import ContentPane from './ContentPaneTheme';
+import ContentPanel from './ContentPanelTheme';
 import ContentInitiativeContainer from './ContentInitiativeContainerTheme';
 import RabbitHoleDrawer from './RabbitHoleDrawerTheme';
 
@@ -168,6 +169,7 @@ const theme = extendTheme({
     QuestionCard,
     QuestionCardBar,
     ContentPane,
+    ContentPanel,
     ContentInitiativeContainer,
     RabbitHoleDrawer,
     Button: {

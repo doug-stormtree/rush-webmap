@@ -7,18 +7,23 @@ const helpers = createMultiStyleConfigHelpers([
 const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     container: {
-      display: 'flex',
-      flexDirection: 'column',
       position: 'absolute',
       overflow: 'hidden',
       //maxWidth: 'min(calc(100% - 31.875rem), 20rem)',
+      height: '40%',
       maxWidth: '48rem',
-      maxHeight: 'calc(100% - 17.5rem)',
+      maxHeight: '32rem',
       bottom: '0',
       left: '9.75rem',
       right: '3.325rem',
+      bgColor:'white',
+      padding:'1rem',
+      borderTopRadius:'xl',
     },
   },
 })
 
 export default ContentInitiativeContainerTheme
+
+//w:'100%',
+//h:'100%',
