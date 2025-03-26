@@ -24,6 +24,7 @@ import {
   Tooltip,
   VStack,
   useBreakpointValue,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { IoMdInformationCircle, IoMdCloseCircleOutline } from 'react-icons/io';
 import { FiX } from "react-icons/fi";
@@ -42,11 +43,17 @@ import { LegendGroups } from '../data/TextContent';
 export const LegendPane = () => {
   const scrollBoxRef = useRef()
   const scrollContainerProps = useScrollShadows(scrollBoxRef)
+
+  // Fit Legend above ContentPane
+  const [isLegendOverContent] = useMediaQuery('(max-width: 1310px)')
   
   return (
     <Box
       w='24rem'
-      maxH='calc(100vh - 9.75rem)'
+      maxH={isLegendOverContent
+        ? 'calc(60svh - 3.75rem)'
+        : 'calc(100svh - 9.75rem)'
+      }
       p='1em'
       pe='0'
       overflowY='hidden'
