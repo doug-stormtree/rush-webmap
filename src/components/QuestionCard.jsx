@@ -44,15 +44,26 @@ export default function QuestionCard({ question, size, variant, scrollRef }) {
       // do nothing
     }
   };
+
+  const color = question?.color ?? 'teal'
   
   return question.key && (
     <Box
       ref={cardRef}
-      __css={styles.card}
       onClick={onQuestionClick}
+      __css={styles.card}
+      backgroundColor={color + '.300'}
+      _hover={{color:color + '.200'}}
+      sx={{
+        '&:hover img': {
+          opacity: 0.6,
+        }}}
     >
       <Image src={question.image} __css={styles.image} />
-      <Box __css={styles.content}>
+      <Box
+        __css={styles.content}
+        color={variant === 'selected' ? color + '.300' : undefined}
+      >
         <IconButton
           icon={<FiX />}
           display={size !== 'expanded' ? 'none' : null}
@@ -65,7 +76,11 @@ export default function QuestionCard({ question, size, variant, scrollRef }) {
           maxWidth='1.875rem'
           onClick={() => dispatch({question: question.key, focus: questionActions.close})}
         />
-        <Box __css={styles.title} {...longTitleStyle}>{question.title}</Box>
+        <Box
+          __css={styles.title}
+          color={variant === 'selected' ? color + '.100' : undefined}
+          {...longTitleStyle}
+        >{question.title}</Box>
         <Box __css={styles.subtitle}>{question.question}</Box>
         <Box __css={styles.body}>
           {

@@ -8,6 +8,7 @@ const Question = {
   title: "Eat Local",
   question: "My corner store is charging $6.29 for potato chips! Can somebody call food security?",
   image: require('../png/EatLocal.png'),
+  color: 'orange',
   layers: [
     { key: 'AgriculturalLandReserve', active: true, ...LegendGroups.StartOn },
     { key: 'CulturalFoods', active: true, ...LegendGroups.OGM },

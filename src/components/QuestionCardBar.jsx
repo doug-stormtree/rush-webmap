@@ -2,18 +2,18 @@ import React, { useRef } from 'react';
 import { Box, useMultiStyleConfig } from '@chakra-ui/react';
 import QuestionCard from './QuestionCard';
 import Questions, { 
-  //useActiveQuestionStore 
+  useActiveQuestionStore 
 } from '../data/QuestionStore';
 
 export default function QuestionCardBar({ isMobile }) {
   const styles = useMultiStyleConfig('QuestionCardBar');
-  // const {
-  //   activeQuestion,
-  //   sectionFocus,
-  // } = useActiveQuestionStore(state => ({
-  //   activeQuestion: state.activeQuestion,
-  //   sectionFocus: state.sectionFocus
-  // }));
+  const {
+    activeQuestion,
+    //sectionFocus,
+  } = useActiveQuestionStore(state => ({
+    activeQuestion: state.activeQuestion,
+    //sectionFocus: state.sectionFocus
+  }));
   const scrollRef = useRef(null);
   const shouldRender = () => {
     return !isMobile; 
@@ -40,6 +40,7 @@ export default function QuestionCardBar({ isMobile }) {
                 question={{key: q[0], ...q[1]}}
                 size='button'
                 scrollRef={scrollRef}
+                variant={q[0] === activeQuestion ? 'selected' : undefined}
               />
             )
           })

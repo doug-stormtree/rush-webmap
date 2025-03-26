@@ -8,6 +8,7 @@ const Question = {
   title: 'Protect from Flooding',
   question: 'Climate change is too big for our stormwater infrastructure.  What\'s the fix on flood risk?',
   image: require('../png/ProtectFromFlooding.png'),
+  color: 'teal',
   layers: [
     { key: 'CoastalFloodInundationScenarios', active: false, ...LegendGroups.StartOff },
     { key: 'Impervious2019', active: true, ...LegendGroups.StartOn },

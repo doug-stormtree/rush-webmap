@@ -8,6 +8,7 @@ const Question = {
   title: "Power this Place",
   question: "The lights are on but nobody’s home. Am I using my power wisely?",
   image: require('../png/PowerThisPlace.png'),
+  color: 'blue',
   layers: [
     { key: 'GreenhouseGasStationary2020', active: false, ...LegendGroups.StartOn },
     { key: 'GreenhouseGasStationary2022', active: true, ...LegendGroups.StartOn },
