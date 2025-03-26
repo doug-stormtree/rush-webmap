@@ -1,10 +1,11 @@
-import { Box, Link } from '@chakra-ui/react';
+import { Flex, Link } from '@chakra-ui/react';
 import { FaBinoculars, FaHandsHelping, FaHighlighter, FaLink } from 'react-icons/fa'
 import { LuRabbit } from "react-icons/lu";
 import {
   LegendGroups,
   InitiativeTags as Tag,
 } from '../TextContent';
+import ChecklistCard from '../../components/ChecklistCard';
 
 // copied from ContentInitiativeContainer.jsx for now
 const tabIconStyle = {
@@ -120,6 +121,198 @@ const questionData = {
   },
 }
 
+const locals = [
+  {
+    name: 'Arbutus',
+    nameScientific: 'Arbutus menziesii',
+    nameIndigenous: 'ḰOḰE,IȽĆ',
+    description: 'A broadleaf evergreen tree, up to 30 m tall, usually with a crooked or leaning trunk that divides into several twisting upright branches and an irregularly rounded crown. The tree drops its leaves in the summer instead of the fall. The tree’s reddish bark peels off, revealing the smooth, new green bark underneath.',
+    image: require('../jpg/LocalsNaturehood/Arbutus.jpg'),
+  },
+  {
+    name: 'American Wigeon',
+    nameScientific: 'Mareca americana',
+    nameIndigenous: 'ŚEŚENE',
+    description: 'Also known as a Baldpate, the American Wigeon is a species of dabbling duck found in North America. Formerly assigned to Anas, this species is classified with the other wigeons in the dabbling duck genus Mareca. It is the New World counterpart of the Eurasian wigeon.',
+    image: require('../jpg/LocalsNaturehood/AmericanWigeon.jpg'),
+  },
+  {
+    name: 'Bald Eagle',
+    nameScientific: 'Haliaeetus leucocephalus',
+    nameIndigenous: 'QELEṈSEN',
+    description: 'The adult Bald Eagle is a striking dark brownish-black bird. It gets its white head and tail at approximately four years of age. The Bald Eagle is not bald. They got the name from an old English word “balde” meaning white (white- headed). They can grow to about 1 m tall and have a wingspread of over 2 m.',
+    image: require('../jpg/LocalsNaturehood/BaldEagle.jpg'),
+  },
+  {
+    name: 'Banana Slug',
+    nameScientific: 'Ariolimax columbianus',
+    nameIndigenous: 'PENÁNE KÍOṮEN',
+    description: 'Banana Slugs are one of the largest slugs in the world! They can grow up to 26 cm long. Banana Slugs can also have 27,000 teeth on a long tooth- covered “tongue”. They come in a range of colours, from yellow to brown to black and many are mottled with black spots. Banana slugs like a moist, cool environment and are native to the BC temperate coastal rainforest.',
+    image: require('../jpg/LocalsNaturehood/BananaSlug.jpg'),
+  },
+  {
+    name: 'Belted Kingfisher',
+    nameScientific: 'Megaceryle alcyon',
+    nameIndigenous: 'ȾĆELE',
+    description: 'The Belted Kingfisher is a pigeon-sized bird. It is blue-gray above, white below, with a bushy crest and dagger-like bill. The male has a blue-gray breast band. The female is similar, but also has a chestnut belly band.',
+    image: require('../jpg/LocalsNaturehood/BeltedKingfisher.jpg'),
+  },
+  {
+    name: 'Eelgrass',
+    nameScientific: 'Zostera marina',
+    nameIndigenous: 'ĆELEM',
+    description: 'Sometimes known as the \'salmon highway\', Eelgrass is important to the survival of salmon. A native seagrass, it rivals some of the world’s richest rainforests. It provides food and protection important to fish and shellfish species.',
+    image: require('../jpg/LocalsNaturehood/Eelgrass.jpg'),
+  },
+  {
+    name: 'Bumblebee',
+    nameScientific: 'Bombus',
+    nameIndigenous: 'SEMSEMÍYE',
+    description: 'The native bumblebee has a robust black body that is extensively covered with black, yellow, and sometimes orange hairs on all body segments. Its colonies nest underground and unlike honey bees, they prefer to be out pollinating in cool, cloudy weather.',
+    image: require('../jpg/LocalsNaturehood/Bumblebee.jpg'),
+  },
+  {
+    name: 'Common Camas',
+    nameScientific: 'Camassia quamash',
+    nameIndigenous: 'ḰȽO,EL',
+    description: 'Common Camas (on the cover) and Great Camas have light to deep blue flowers and bloom in the spring. Both are perennial herbs that grow from an edible bulb. They were once an im- portant cultural item for the Salish in the area who shaped the landscape to “farm” it. They are not to be confused with the Death Camas, which has a creamy white flower, but underground, the bulbs can be difficult to identify and toxic if consumed.',
+    image: require('../jpg/LocalsNaturehood/CommonCamas.jpg'),
+  },
+  {
+    name: 'Fawn Lily',
+    nameScientific: 'Erythronium revolutum',
+    //nameIndigenous: '',
+    description: 'Fawn Lily plants grow to over 30 cm tall, and have pairs of long, thick, white-spotted leaves growing from the base. The flowers are pink and some- times almost look fluorescent. The leaves show up in springtime and the flowers open in early summer.',
+    image: require('../jpg/LocalsNaturehood/FawnLily.jpg'),
+  },
+  {
+    name: 'Garry Oak',
+    nameScientific: 'Quercus garryana',
+    nameIndigenous: 'ĆEṈ,IȽĆ',
+    description: 'An iconic tree with thick, grooved, scaly, greyish-black bark and a round spreading crown. Garry Oak trees (on the cover) can grow out of rock and be super stunted, adapting to its environment, or grow up to 20 m tall, and the Garry Oak habitat supports many species at risk.',
+    image: require('../jpg/LocalsNaturehood/GarryOak.jpg'),
+  },
+  {
+    name: 'Hermit Crab',
+    nameScientific: 'Paguroidea',
+    //nameIndigenous: '',
+    description: 'Hermit Crabs tend to live in ‘secondhand’ or previously owned and discarded shells. For this reason, it is important to leave empty shells where you find them.',
+    image: require('../jpg/LocalsNaturehood/HermitCrab.jpg'),
+  },
+  {
+    name: 'Hooded Merganser',
+    nameScientific: 'Mergus cucullatus',
+    nameIndigenous: 'X̱OE₭',
+    description: 'This small duck has a slender pointed bill. The male has a white, fan-shaped, black-bordered crest, a blackish body with dull rusty flanks, and a white breast with two black stripes down the side. The female is dull gray-brown, with a warmer brown head and crest. Both sexes show a white wing patch in flight.',
+    image: require('../jpg/LocalsNaturehood/HoodedMerganser.jpg'),
+  },
+  {
+    name: 'June Plum',
+    nameScientific: 'Oemleria cerasiformis',
+    nameIndigenous: 'ȾEX̱EṈ',
+    description: 'This shrub is also known as osoberry. It is native to the Pacific coast and mountain ranges of North America. It is among the first plants to fruit and it flowers in early spring.',
+    image: require('../jpg/LocalsNaturehood/JunePlum.jpg'),
+  },
+  {
+    name: 'Lorquin’s Admiral',
+    nameScientific: 'Limenitis lorquini',
+    nameIndigenous: 'QELAXEN',
+    description: 'This butterfly can easily be recognized by the orange tips on the upper part of its wings. There is a white band across both wings, above and below. Females are considerably larger than males.',
+    image: require('../jpg/LocalsNaturehood/Arbutus.jpg'), //TODO: Find correct image.
+  },
+  {
+    name: 'Orca',
+    nameScientific: 'Orcinus orca',
+    nameIndigenous: 'ḴEL,ȽOLEMEĆEN',
+    description: 'The Orca is the largest member of the oceanic dolphin family. This toothed whale has a diverse diet, although individual populations often specialize in particular types of prey. Some feed exclusively on fish, while others hunt marine mammals such as seals and other species of dolphin.',
+    image: require('../jpg/LocalsNaturehood/Orca.jpg'),
+  },
+  {
+    name: 'Great Blue Heron',
+    nameScientific: 'Ardea herodias',
+    nameIndigenous: 'SṈE₭E',
+    description: 'This large wading bird is common near the shores of open water and in wetlands over most of Greater Victoria. Despite their impressive size, Great Blue Herons (on the cover) weigh only 2 to 3 kg thanks in part to their hollow bones, a feature shared by all birds.',
+    image: require('../jpg/LocalsNaturehood/GreatBlueHeron.jpg'),
+  },
+  {
+    name: 'Harbour Seal',
+    nameScientific: 'Phoca vitulina',
+    nameIndigenous: 'ÁSW̱',
+    description: 'Harbour Seals are found along the coast in coastal waters, estuaries and river systems. Look for them basking in the sun on the rocks along the shore. They range in colour from brownish to black with a speckled pattern.',
+    image: require('../jpg/LocalsNaturehood/HarbourSeal.jpg'),
+  },
+  {
+    name: 'Pacific Chorus Frog',
+    nameScientific: 'Pseudacris regilla',
+    nameIndigenous: 'WEKEK',
+    description: 'This small frog is usually about 5 cm long full grown. They can be green, bronze, grey, and all colours in between. Pacific Chorus Frogs can be heard calling throughout the year, especially during rainstorms, and the spring mating choruses are impossible to miss. It’s very difficult to spot these little fellows, though, since they will cease calling if they feel threatened.',
+    image: require('../jpg/LocalsNaturehood/PacificChorusFrog.jpg'),
+  },
+  {
+    name: 'Pacific Wren',
+    nameScientific: 'Troglodytes pacificus',
+    nameIndigenous: 'DEDEM',
+    description: 'These birds are very vocal, so listen for their rapid series of tumbling and trill- ing notes in forest environments. When you hear their sweet song, patiently look in the understory for mouse-like movements along decaying logs and in upturned roots. Early mornings during the breeding season are the best times to find them perched in the open, shaking as they sing.',
+    image: require('../jpg/LocalsNaturehood/PacificWren.jpg'),
+  },
+  {
+    name: 'Douglas-Fir',
+    nameScientific: 'Pseudotsuga menziesii',
+    nameIndigenous: 'JSȺ',
+    description: 'There are two varieties of Douglas-fir: they are Coastal and Interior. The Coastal variety that grows in the NatureHood can reach heights of 80 m.',
+    image: require('../jpg/LocalsNaturehood/DouglasFir.jpg'),
+  },
+  {
+    name: 'Red Squirrel',
+    nameScientific: 'Tamiasciurus hudsonicus',
+    nameIndigenous: 'ĆEPSIOŦEN',
+    description: 'This small tree squirrel prefers coniferous forests. They spend most of their day in the tree canopy and will chirp loudly when you get close, which makes it easier to find them by listen- ing than by sight. Their colour will change during the winter season to a greyish brown hue without a black side stripe.',
+    image: require('../jpg/LocalsNaturehood/RedSquirrel.jpg'),
+  },
+  {
+    name: 'River Otter',
+    nameScientific: 'Lontra Canadensis',
+    nameIndigenous: 'ĆTEMES',
+    description: 'River Otters have short coarse fur and lengthy, streamlined bodies. They have short powerful legs with fully webbed toes and a long tail to help them swim efficiently underwater while searching for fish, their main source of food.',
+    image: require('../jpg/LocalsNaturehood/RiverOtter.jpg'),
+  },
+  {
+    name: 'Salmon',
+    nameScientific: 'Oncorhynchus kisutch',
+    nameIndigenous: 'SĆÁÁNEW̱',
+    description: 'Salmon are large fish, in various colours from silver and grey with dark spots or fins. Chinook, can weigh up to 36 kg. There are 6 species of Pacific Salmon (Oncorhynchus spp.): Chinook, Chum, Coho, Pink, Sockeye, and Steelhead.',
+    image: require('../jpg/LocalsNaturehood/Salmon.jpg'),
+  },
+  {
+    name: 'Salmonberry',
+    nameScientific: 'Rubus spectabilis',
+    nameIndigenous: 'ELILE',
+    description: 'Salmonberry grows in groups and reaches up to 4 m tall. Look for the butterfly-shaped basil leaves, and the pink flowers that bloom in spring. Its salmon-red coloured berries ripen in summer. The thorny stems of the plant are covered in papery brown bark.',
+    image: require('../jpg/LocalsNaturehood/Salmonberry.jpg'),
+  },
+  {
+    name: 'Western Purple Martin',
+    nameScientific: 'Progne subis arboricola',
+    nameIndigenous: 'QSEĆEN',
+    description: 'This iridescent dark blue/purple bird occurs exclusively west of the Rocky Mountains from southwest BC to southern California. They have been designated as a species at risk in BC are recovering from a severe population decline in the mid-late 1900s. (on the cover)',
+    image: require('../jpg/LocalsNaturehood/WesternPurpleMartin.jpg'),
+  },
+  {
+    name: 'Western Terrestrial Garter Snake',
+    nameScientific: 'Thamnophis elegans vagrans',
+    nameIndigenous: 'SOȽḴE',
+    description: 'Also known as the “wandering” Garter Snake, this species is a frequent visitor to many back s throughout its range. Garter Snakes are rarely found far from water, either fresh or marine. During the summer, these snakes prefer open areas like meadows and estuaries.',
+    image: require('../jpg/LocalsNaturehood/WesternTerrestrialGarterSnake.jpg'),
+  },
+  {
+    name: 'Wood Duck',
+    nameScientific: 'Aix sponsa',
+    nameIndigenous: 'MO,EḴ',
+    description: 'This species of perching duck breeds most widely in the wooded valleys and floodplains of southern British Columbia. It is one of the most colorful North American waterfowl.',
+    image: require('../jpg/LocalsNaturehood/WoodDuck.jpg'),
+  },
+]
+
 const Question = {
   key: 'nature-in-the-city',
   image: require('../png/GVNaturehood.png'),
@@ -174,7 +367,9 @@ const Question = {
       subtitle: (<>Artwork by <Link isExternal href='https://www.kristibridgeman.com/'>Kristi Bridgeman</Link></>),
       //initiatives: questionData.act.initiatives,
       children: [
-        <Box bgColor='red' boxSize='100px'></Box>
+        <Flex direction='row' wrap='wrap' gap='0.5rem'>
+          {locals.map((local) => <ChecklistCard key={local.name} {...local}/>)}
+        </Flex>
       ]
     },
   ],

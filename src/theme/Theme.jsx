@@ -4,6 +4,7 @@ import '@fontsource-variable/figtree';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/urbanist';
 import '@fontsource-variable/bitter';
+import '@fontsource-variable/raleway';
 
 import '@fontsource/poppins/100.css';
 import '@fontsource/poppins/200.css';
@@ -195,6 +196,7 @@ const theme = extendTheme({
   fonts: {
     brand: `'Poppins', sans-serif`,
     title: `'Figtree Variable', sans-serif`,
+    raleway: `'Raleway Variable', sans-serif`,
     body: `'Bitter Variable', serif`,
     heading: `'Poppins', sans-serif`,
     subHeading: `'Urbanist Variable', sans-serif`,
