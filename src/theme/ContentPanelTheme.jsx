@@ -35,6 +35,7 @@ const ContentPanelTheme = helpers.defineMultiStyleConfig({
       textShadow: '1px 1px 4px rgba(0,0,0,0.3)',
       // positioning
       marginTop: '0.25rem',
+      marginBottom: '1rem',
     },
     body: {
       flex: '1',
@@ -45,8 +46,6 @@ const ContentPanelTheme = helpers.defineMultiStyleConfig({
       fontFamily: 'var(--chakra-fonts-body)',
       fontWeight: '500',
       fontSize: '0.875rem',
-      // positioning
-      marginTop: '1rem',
       // scrolling
       overflowY: 'auto',
       height: '100%',

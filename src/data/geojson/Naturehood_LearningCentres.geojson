@@ -4,7 +4,6 @@
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "xy_coordinate_resolution": 1e-05,
 "features": [
-{ "type": "Feature", "properties": { "Name": "Government House", "URL": "https://ltgov.bc.ca/getting-here/", "Closed": null }, "geometry": { "type": "Point", "coordinates": [ -123.34235, 48.41869 ] } },
 { "type": "Feature", "properties": { "Name": "Royal BC Museum", "URL": "https://royalbcmuseum.bc.ca/", "Closed": null }, "geometry": { "type": "Point", "coordinates": [ -123.36763, 48.41869 ] } },
 { "type": "Feature", "properties": { "Name": "Bateman Gallery of Nature", "URL": "http://robertbateman.ca/", "Closed": true }, "geometry": { "type": "Point", "coordinates": [ -123.37133, 48.42105 ] } },
 { "type": "Feature", "properties": { "Name": "Gorge Waterway Nature House", "URL": "https://www.crd.bc.ca/GWI/projects-outreach/community-outreach/gorge-waterway-nature-house", "Closed": null }, "geometry": { "type": "Point", "coordinates": [ -123.40658, 48.44627 ] } },

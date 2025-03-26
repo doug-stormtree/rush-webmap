@@ -26,12 +26,12 @@ export default function ContentPanel({
             listStylePosition: 'outside',
             paddingInlineStart: '1.5rem',
           }}>
-            {list.items.map((item, index) => {
+            {list.items ? list.items.map((item, index) => {
               return (
                 <li key={index} style={{
                 }}>{item}</li>
               )
-            })}
+            }):null}
           </ul>
         </Box>
       )
@@ -53,8 +53,8 @@ export default function ContentPanel({
 
   return (
     <Box __css={styles.container}>
-      <Box __css={styles.title}>{title}</Box>
-      <Box __css={styles.subtitle}>{subtitle}</Box>
+      {title ? <Box __css={styles.title}>{title}</Box> : null}
+      {subtitle ? <Box __css={styles.subtitle}>{subtitle}</Box> : null}
       <Box __css={styles.body}>
         {content}
       </Box>

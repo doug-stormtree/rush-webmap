@@ -21,6 +21,7 @@ const layer = {
     onEachFeature: (f,l) => {
       l.bindPopup(mapPopupContent(
         f.properties['NAME'],
+        f.properties['DESC']
       ), {
         offset: [0,-6],
         closeOnClick: true,

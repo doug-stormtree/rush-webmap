@@ -14,6 +14,7 @@ const ChecklistCard = ({
   nameIndigenous,
   description,
   onCheckChange,
+  defaultChecked,
 }) => {
   return (
     <Flex
@@ -37,6 +38,7 @@ const ChecklistCard = ({
           colorScheme='green'
           size='lg'
           onChange={onCheckChange}
+          defaultChecked={defaultChecked}
         />
       </Flex>
       <Flex direction='column' color='white'>
