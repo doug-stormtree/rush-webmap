@@ -207,7 +207,7 @@ function WebMap() {
         mobileMenuState={mobileMenuState}
         setMobileMenuState={setMobileMenuState}
       />
-      <ContentInitiativeContainer />
+      {isMobile ? null : <ContentInitiativeContainer />}
       <RabbitHoleDrawer />
       {/*
       <IconButton
