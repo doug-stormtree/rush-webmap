@@ -8,7 +8,11 @@ const Question = {
   title: "Find Shelter",
   question: "Shelter is ... a human right. How do we get it right in light of climate change?",
   image: require('../png/Shelter.png'),
-  color: 'yellow',
+  color: {
+    background: 'yellow.300',
+    hover: 'yellow.200',
+    selected: 'yellow.100',
+  },
   layers: [
     { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },
   ],

@@ -8,7 +8,11 @@ const Question = {
   title: 'Have it All',
   question: 'Economy, Community, Environment. I want it all. How can I shape my triple bottom line?',
   image: require('../png/CircularEconomy.png'),
-  color: 'pink',
+  color: {
+    background: 'pink.300',
+    hover: 'pink.200',
+    selected: 'pink.100',
+  },
   layers: [
     { key: 'CircularEconomyBusinesses', active: true, ...LegendGroups.OGM },
     { key: 'HartlandLandfill', active: true, ...LegendGroups.StartOn },

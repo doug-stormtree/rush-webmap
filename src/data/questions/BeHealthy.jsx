@@ -8,7 +8,11 @@ const Question = {
   title: "Be Healthy",
   question: "Personal and planetary health are the same thing. How can I keep my natural life support system connected and protected?",
   image: require('../png/Naturehood.png'),
-  color: 'cyan',
+  color: {
+    background: 'cyan.300',
+    hover: 'cyan.200',
+    selected: 'cyan.100',
+  },
   layers: [
     { key: 'BigTrees', active: true, group: 'Trees' },
     { key: 'CarbonSequestration', active: false, group: 'Landcover' },

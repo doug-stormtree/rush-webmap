@@ -8,7 +8,11 @@ const Question = {
   title: "Beat the Heat",
   question: "Smokin’ hot spells are happening now with climate change. Is your neighbourhood a heat island?",
   image: require('../png/BeatTheHeat.png'),
-  color: 'red',
+  color: {
+    background: 'red.300',
+    hover: 'red.200',
+    selected: 'red.100',
+  },
   layers: [
     { key: 'AirConditionedBuildings', active: false, ...LegendGroups.StartOff },
     { key: 'CommunityMaps_BTH', active: false, group: 'Community' },

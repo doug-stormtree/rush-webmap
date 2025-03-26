@@ -45,15 +45,22 @@ export default function QuestionCard({ question, size, variant, scrollRef }) {
     }
   };
 
-  const color = question?.color ?? 'teal'
+  const defaultColor = {
+    background: 'teal.300',
+    hover: 'teal.200',
+    selected: 'teal.100'
+  }
+  const color = question?.color ?? defaultColor
   
   return question.key && (
     <Box
       ref={cardRef}
       onClick={onQuestionClick}
       __css={styles.card}
-      backgroundColor={color + '.300'}
-      _hover={{color:color + '.200'}}
+
+      _hover={{color:color.hover}}
+      // sx prop blends color with image when any part of card is hovered
+      backgroundColor={color.background}
       sx={{
         '&:hover img': {
           opacity: 0.6,
@@ -62,7 +69,7 @@ export default function QuestionCard({ question, size, variant, scrollRef }) {
       <Image src={question.image} __css={styles.image} />
       <Box
         __css={styles.content}
-        color={variant === 'selected' ? color + '.300' : undefined}
+        color={variant === 'selected' ? color.background : undefined}
       >
         <IconButton
           icon={<FiX />}
@@ -78,7 +85,7 @@ export default function QuestionCard({ question, size, variant, scrollRef }) {
         />
         <Box
           __css={styles.title}
-          color={variant === 'selected' ? color + '.100' : undefined}
+          color={variant === 'selected' ? color.selected : undefined}
           {...longTitleStyle}
         >{question.title}</Box>
         <Box __css={styles.subtitle}>{question.question}</Box>

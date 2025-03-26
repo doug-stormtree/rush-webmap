@@ -8,7 +8,11 @@ const Question = {
   title: 'Travel Light',
   question: 'Fossil fuel travel is a fast track to climate change. How do I arrive in style and on time?',
   image: require('../png/LightFootprint.png'),
-  color: 'yellow',
+  color: {
+    background: 'yellow.300',
+    hover: 'yellow.200',
+    selected: 'yellow.100',
+  },
   layers: [
     { key: 'BCTransitRoutes', active: true, ...LegendGroups.StartOn },
     { key: 'CRDBikeMap', active: true, ...LegendGroups.StartOn },

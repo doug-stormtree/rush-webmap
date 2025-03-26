@@ -8,7 +8,11 @@ const Question = {
   title: "Be Happy",
   question: "Cost of living, polarized politics, and climate change are causing anxiety. What's it gonna take to calm the folk down?",
   image: require('../png/SenseOfPeace.png'),
-  color: 'orange',
+  color: {
+    background: 'orange.300',
+    hover: 'orange.200',
+    selected: 'orange.100',
+  },
   layers: [
     { key: 'BCTransitRoutes', active: true, ...LegendGroups.StartOn },
     { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },

@@ -5,7 +5,11 @@ const Question = {
   title: 'Save the World',
   question: "The next seven generations are counting on us. How do we plan ahead now?",
   image: require('../png/NASAEarth.png'),
-  color: 'purple',
+  color: {
+    background: 'purple.300',
+    hover: 'purple.200',
+    selected: 'purple.100',
+  },
   layers: [
     { key: 'StewardshipGroups', active: true, group: 'Community' },
   ],
