@@ -106,7 +106,7 @@ const questionContentToTabs = (questionKey) => {
       icon: <FaHandsHelping style={tabIconStyle}/>,
       title: 'Make Your Move',
       subtitle: questionData.sections.two.heading,
-      items: [ questionData.sections.two ],
+      items: [ { items: questionData.sections.two.items } ],
     },
     {
       name: 'Rabbit Hole',

@@ -20,7 +20,7 @@ export default function ContentPanel({
     items.forEach((list, index) => {
       content.push(
         <Box key={index}>
-          {list.heading}
+          {list?.heading}
           <ul style={{
             listStylePosition: 'outside',
             paddingInlineStart: '1.5rem',
