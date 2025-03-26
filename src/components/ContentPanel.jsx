@@ -10,11 +10,12 @@ export default function ContentPanel({
   subtitle,
   items,
   initiatives,
+  children
 }) {
   // theme
   const styles = useMultiStyleConfig('ContentPanel')
 
-  const content = []
+  const content = children ?? []
   
   if (items !== undefined) {
     items.forEach((list, index) => {

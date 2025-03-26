@@ -43,16 +43,50 @@ export default function ContentInitiativeContainer() {
 
   return activeQuestion && (
     <Box __css={styles.container} height={isMinimized ? 'auto' : undefined} >
-      <Tabs height='100%' onChange={() => {
+      <Tabs height='100%' onChange={(index) => {
         if (isMinimized) setIsMinimized(false)
         tabPanelsRef.current.scrollTo(0,0)}
       }>
-        <Box display='flex' direction='row'>
-          <TabList flex='1 1 auto'>
-            {tabs.map(tab => <Tab key={tab.name} {...tabStyle}>{tab.icon}{tab.name}</Tab>)}
+        <Box display='flex' direction='row' alignItems='stretch'>
+          <TabList
+            flex='1 1 auto'
+            overflowY='hidden'
+            sx={{
+              scrollbarWidth: 'none',
+              '::-webkit-scrollbar': { display: 'none' }
+            }}
+          >
+            {tabs.map(tab => {
+              const ref = React.createRef();
+
+              const handleClick = () =>
+                ref.current.scrollIntoView({
+                  behaviour: 'smooth',
+                  block: 'end',
+                  inline: 'center',
+                })
+              
+              return (
+                <Tab
+                  key={tab.name}
+                  ref={ref}
+                  onClick={handleClick}
+                  flexShrink='0'
+                  {...tabStyle}
+                >
+                  {tab.icon}
+                  {tab.name}
+                </Tab>
+              )})
+            }
           </TabList>
           {/* This box continues the style of the TabList */}
-          <Box display='flex' gap='0.25rem' borderBottom='1.6px solid rgb(226, 232, 240)' >
+          <Box 
+            display='flex'
+            alignItems='center'
+            gap='0.25rem'
+            borderBottom='1.6px solid rgb(226, 232, 240)'
+          >
             <IconButton
               aria-label='Minimize Question'
               icon={isMinimized
@@ -92,6 +126,8 @@ const questionContentToTabs = (questionKey) => {
   const questionData = Questions.get(questionKey)
 
   if (questionData === undefined) return []
+
+  if (questionData?.tabs) return questionData.tabs
 
   const tabs = [
     {

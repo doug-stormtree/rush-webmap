@@ -1,28 +1,19 @@
+import { Box, Link } from '@chakra-ui/react';
+import { FaBinoculars, FaHandsHelping, FaHighlighter, FaLink } from 'react-icons/fa'
+import { LuRabbit } from "react-icons/lu";
 import {
   LegendGroups,
   InitiativeTags as Tag,
 } from '../TextContent';
 
-const Question = {
-  key: 'gvnaturehood',
+// copied from ContentInitiativeContainer.jsx for now
+const tabIconStyle = {
+  marginRight: '0.5rem',
+}
+
+const questionData = {
   title: "Nature in the City",
   question: "One Map, One NatureHood, A guide to Many Adventures.",
-  image: require('../png/GVNaturehood.png'),
-  color: {
-    background: '#b0d243',
-    hover: '#d5ff51',
-    selected: '#edf4d4',
-  },
-  layers: [
-    { key: 'Naturehood_LearningCentres', active: false, ...LegendGroups.Naturehood },
-    { key: 'Naturehood_Locations', active: false, ...LegendGroups.Naturehood },
-    { key: 'Naturehood_PlaceNames', active: false, ...LegendGroups.Naturehood },
-    { key: 'Naturehood_PlaceNamesEnglish', active: false, ...LegendGroups.Naturehood },
-    { key: 'Naturehood_FirstNationsReserves', active: false, ...LegendGroups.Naturehood },
-    { key: 'Naturehood_MBS', active: false, ...LegendGroups.Naturehood },
-    { key: 'CRD_Parks', active: false, ...LegendGroups.Naturehood },
-    { key: 'Naturehood_Animals', active: true, ...LegendGroups.Naturehood },
-  ],
   sections: {
     one: [
       {
@@ -126,6 +117,67 @@ const Question = {
         ],
       },
     ],
-  }
+  },
+}
+
+const Question = {
+  key: 'nature-in-the-city',
+  image: require('../png/GVNaturehood.png'),
+  color: {
+    background: '#b0d243',
+    hover: '#d5ff51',
+    selected: '#edf4d4',
+  },
+  layers: [
+    { key: 'Naturehood_LearningCentres', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_Locations', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_PlaceNames', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_PlaceNamesEnglish', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_FirstNationsReserves', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_MBS', active: false, ...LegendGroups.Naturehood },
+    { key: 'CRD_Parks', active: false, ...LegendGroups.Naturehood },
+    { key: 'Naturehood_Animals', active: true, ...LegendGroups.Naturehood },
+  ],
+  tabs: [
+    {
+      name: 'Notice',
+      icon: <FaHighlighter style={tabIconStyle}/>,
+      title: questionData.title,
+      subtitle: questionData.question,
+      items: questionData.sections.one,
+    },
+    {
+      name: 'Act',
+      icon: <FaHandsHelping style={tabIconStyle}/>,
+      title: 'Make Your Move',
+      subtitle: questionData.sections.two.heading,
+      items: [ { items: questionData.sections.two.items } ],
+    },
+    {
+      name: 'Rabbit Hole',
+      icon: <LuRabbit strokeWidth='3px' style={tabIconStyle}/>,
+      title: 'Jump Down The Rabbit Hole',
+      subtitle: 'Don\'t forget your reading glasses.',
+      items: [ questionData.sections.three ],
+    },
+    {
+      name: 'Check Out',
+      icon: <FaLink style={tabIconStyle}/>,
+      title: 'Good Stuff To Check Out',
+      subtitle: 'We\'ve noticed these movers and shakers working on solutions.',
+      initiatives: questionData.act.initiatives,
+    },
+    {
+      name: 'Locals in the Naturehood',
+      icon: <FaBinoculars style={tabIconStyle}/>,
+      //title: 'Locals in the Naturehood',
+      subtitle: (<>Artwork by <Link isExternal href='https://www.kristibridgeman.com/'>Kristi Bridgeman</Link></>),
+      //initiatives: questionData.act.initiatives,
+      children: [
+        <Box bgColor='red' boxSize='100px'></Box>
+      ]
+    },
+  ],
+  ...questionData
 };
 export default Question;
