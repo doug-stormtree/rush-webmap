@@ -93,7 +93,7 @@ const MapPopup = (
 ) => {
   const descItems = Array.isArray(desc) ? desc : [ desc ]
   return (
-    <VStack align='flex-start'>
+    <VStack align='flex-start' maxHeight='min(36vh, 300px)'>
       <Heading size='sm' fontSize='20px'><b>{title}</b></Heading>
       { descItems.map((desc, index) => 
         <Text key={'desc'+index} fontSize='16px'>

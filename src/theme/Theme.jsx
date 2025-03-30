@@ -132,6 +132,10 @@ const theme = extendTheme({
         padding: '0',
         overflowX: 'hidden',
       },
+      '.leaflet-container': {
+        width: '100%',
+        height: '100%',
+      },
       '.leaflet-left': {
         left: '9.125rem'
       },
@@ -146,6 +150,13 @@ const theme = extendTheme({
       },
       '.leaflet-label::before': {
         display: 'none'
+      },
+      '.leaflet-popup-content': {
+        overflow: 'auto',
+        marginRight: '4px',
+        paddingRight: '12px',
+        marginTop: '20px',
+        width: '300px',
       }
     }
   },
