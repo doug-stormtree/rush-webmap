@@ -10,7 +10,7 @@ const tabIconStyle = {
 };
 
 const questionData = {
-  title: "Nature in the City",
+  title: "Nature in the City Map",
   question: "One Map, One NatureHood, A guide to Many Adventures.",
   sections: {
     one: [
@@ -378,7 +378,7 @@ const h3 = {
 };
 
 const Question = {
-  key: "nature-in-the-city",
+  key: "nature-in-the-city-map",
   image: require("../png/GVNatureHood.png"),
   color: {
     background: "#b0d243",
@@ -404,6 +404,7 @@ const Question = {
       ...LegendGroups.NatureHood,
     },
     { key: "NatureHood_MBS", active: true, ...LegendGroups.NatureHood },
+    { key: "ImportantBirdAreas", active: true, ...LegendGroups.NatureHood },
     { key: "CRD_Parks", active: true, ...LegendGroups.NatureHood },
     { key: "NatureHood_Animals", active: true, ...LegendGroups.NatureHood },
   ],

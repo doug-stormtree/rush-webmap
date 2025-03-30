@@ -158,11 +158,11 @@ const theme = extendTheme({
         display: 'none'
       },
       '.leaflet-popup-content': {
-        overflow: 'auto',
+        overflowY: 'auto',
         marginRight: '4px',
         paddingRight: '12px',
         marginTop: '20px',
-        width: '300px',
+        width: 'min(464px, 80vw) !important',
       }
     }
   },
