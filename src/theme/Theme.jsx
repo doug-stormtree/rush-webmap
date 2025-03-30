@@ -145,8 +145,14 @@ const theme = extendTheme({
         border: 'unset',
         boxShadow: 'unset',
         fontSize: '1.0rem',
-        textShadow: '#FFF 2px 2px 4px, #FFF -2px 2px 4px, #FFF 2px -2px 4px, #FFF -2px -2px 4px;',
         opacity: '0.8 !important',
+        
+        color: 'white',
+        fontWeight: '700',
+        fontFamily: `'Inter Variable', sans-serif`,
+        //'-webkit-text-stroke': '1px black',
+        textShadow: '-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;'
+        //textShadow: '#FFF 2px 2px 4px, #FFF -2px 2px 4px, #FFF 2px -2px 4px, #FFF -2px -2px 4px;',
       },
       '.leaflet-label::before': {
         display: 'none'
