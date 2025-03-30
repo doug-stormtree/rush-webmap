@@ -230,7 +230,7 @@ const locals = [
     nameScientific: 'Limenitis lorquini',
     nameIndigenous: 'QELAXEN',
     description: 'This butterfly can easily be recognized by the orange tips on the upper part of its wings. There is a white band across both wings, above and below. Females are considerably larger than males.',
-    image: require('../jpg/LocalsNaturehood/Arbutus.jpg'), //TODO: Find correct image.
+    image: require('../jpg/LocalsNaturehood/LorquinsAdmiral.jpg'),
   },
   {
     name: 'Orca',
@@ -441,7 +441,7 @@ const Question = {
             fontStyle='italic'
           >NatureHood recognizes that language is critical for connecting the <span style={{color: '#ffaa2d'}}>W̱SÁNEĆ</span> and <span style={{color: '#0d3396'}}>lək̓ʷəŋən</span> speaking peoples to their culture, spirituality, identity and land. &emsp;&emsp;<span style={{color: '#ffaa2d', fontStyle: 'normal'}}>■ SENĆOŦEN</span>&emsp;&emsp;<span style={{color: '#0d3396', fontStyle: 'normal'}}>■ lək̓ʷəŋən</span></Text>
         </Box>),
-        (<Flex direction='row' wrap='wrap' gap='0.5rem'>
+        (<Flex direction='row' wrap='wrap' gap='0.5rem' justifyContent='stretch'>
           {locals.map((local) => 
             <ChecklistCard
               key={local.name}
@@ -475,8 +475,17 @@ const Question = {
         <Text>Riparian zones are important transition areas that connect the water with the land, and support a wide diversity of plant and animal life. Riparian zones may be found surrounding lakes, estuaries, streams and rivers. These critical buffer zones improve water quality, retain water during storm events, prevent erosion, and provide important habitat for fish and other species.</Text>,
         <Text {...h2}>Important Bird Areas</Text>,
         <Text>In our NatureHood there are three Important Bird & Biodiversity areas: Sidney Channel and Mandarte Island located next to Shoal Harbour MBS, and Chain Islets - Grand Chain Island located next to Victoria Harbour MBS. There are 84 IBAs in British Columbia. These IBAs are of exceptional international significance for the conservation of birds and biodiversity and are part of a global network first established in 1985. In Canada, IBAs are a joint initiative of Nature Canada and Birds Canada.</Text>,
-        <Text {...h2}>Gulls</Text>,
+        <Text {...h3}>Gulls</Text>,
+        <iframe title="Glaucous-winged Gull" src="https://macaulaylibrary.org/asset/213666391/embed" height="296" width="320" frameborder="0" allowfullscreen></iframe>,
         <Text>There are 12 species of gulls known to regularly visit the NatureHood. Pictured here is the Glaucous-winged Gull; it is the only gull known to breed locally. Gulls are scavengers and are sometimes called the ‘vultures of the coast’ because they scrounge the coastline and will eat almost anything that washes up on the beach and shoreline.</Text>,
+        <Text {...h3}>Black Brant</Text>,
+        <iframe title="Black Brant" src="https://macaulaylibrary.org/asset/44467061/embed" height="296" width="320" frameborder="0" allowfullscreen></iframe>,
+        <Text>Found during spring migration, using their small bill, Brants feed on eelgrass and marine algae along the shore. Once a popular Christmas meal, their declining numbers, along with the decline of other birds, led to the establishment of NatureHood’s Migratory Bird Sanctuaries.</Text>,
+        <Text {...h3}>Local Birds</Text>,
+        <iframe title="Harlequin Duck" src="https://macaulaylibrary.org/asset/51436371/embed" height="296" width="320" frameborder="0" allowfullscreen></iframe>,
+        <iframe title="Black Oystercatcher" src="https://macaulaylibrary.org/asset/207044861/embed" height="296" width="320" frameborder="0" allowfullscreen></iframe>,
+        <iframe title="Rhinoceros Auklet" src="https://macaulaylibrary.org/asset/36490871/embed" height="296" width="320" frameborder="0" allowfullscreen></iframe>,
+        <iframe title="Marbled Murrelet" src="https://macaulaylibrary.org/asset/226683221/embed" height="296" width="320" frameborder="0" allowfullscreen></iframe>,
       ]
     },
   ],
