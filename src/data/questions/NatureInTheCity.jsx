@@ -388,7 +388,7 @@ const Question = {
   layers: [
     {
       key: "NatureHood_LearningCentres",
-      active: false,
+      active: true,
       ...LegendGroups.NatureHood,
     },
     { key: "NatureHood_Locations", active: true, ...LegendGroups.NatureHood },
