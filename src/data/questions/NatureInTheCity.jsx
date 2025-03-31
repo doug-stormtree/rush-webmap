@@ -428,9 +428,11 @@ const Question = {
           <li>Volunteer with a local stewardship group,</li>
           <li>Look for plants and animals on the species list, and check off the ones you find.</li>
         </ul>),
+        <Image key='img.1' src={require('../jpg/Buffleheads.jpg')} maxWidth='28rem' />,
         <Text key='2'>While you explore, this map will help put names to some of the life that you see. Look for the beautiful images, names, and interesting facts about these plants and animals.</Text>,
         <Text key='3'>If you are curious to learn more, take photos of your discoveries and use iNaturalist and eBird apps on your smartphone to confirm your sightings. You will create data for scientists working to better understand and protect nature.</Text>,
         <Text key='4'>Enjoy a journey to learn, love and discover more about nature.</Text>,
+        <Image key='img.2' src={require('../jpg/Restoration.jpg')} maxWidth='28rem' />,
         (<Text key='5'>{"The Nature in the City Map was originally designed for print and a PDF version can be "}
           <Link isExternal href="https://www.gvnaturehood.com/greater-victoria-naturehood-map">
             found here
@@ -560,10 +562,16 @@ const Question = {
           </Link>
         </Text>,
         <Text key='31' {...h3}>About the Cover Art</Text>,
+        (<Link key='img.1' href={require('../jpg/CoverArtKristiBridgeman.jpg')}>
+          <Image src={require('../jpg/CoverArtKristiBridgeman.jpg')} maxWidth='28rem' />
+        </Link>),
         <Text key='32'>
           There are so many wonderful natural places to explore in the Greater
           Victoria NatureHood, which made it hard to choose just one to showcase
-          on the cover. Artist Kristi Bridgeman came up with a fictional work
+          on the cover. Artist {" "}
+          <Link isExternal href="https://www.kristibridgeman.com/">
+            Kristi Bridgeman
+          </Link> came up with a fictional work
           that captures special elements from many of Victoria’s natural spaces,
           including the iconic Garry Oak habitat, which supports many species at
           risk. With less than 5% of the original Garry Oak habitat remaining in
@@ -572,6 +580,7 @@ const Question = {
           Bumblebee and camas flowers.
         </Text>,
         <Text key='33' {...h2}>Acknowledgements</Text>,
+        <Image key='img.2' src={require('../jpg/Fern.jpg')} maxWidth='28rem' />,
         <Text key='34'>
           We acknowledge with respect the territory of the SENĆOŦEN and lək̓ʷəŋən
           speaking peoples on whose traditional lands and waterways we live,
