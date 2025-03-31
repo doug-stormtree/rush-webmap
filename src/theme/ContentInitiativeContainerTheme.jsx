@@ -17,7 +17,7 @@ const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
       maxWidth: mobileStyle('100vw', 'min(calc(100% - 34rem), 100vw)'),
       minWidth: 'min(100vw, 37.5rem)',
       bottom: '0',
-      left: mobileStyle('0', '8.75rem'),
+      left: mobileStyle('0', '9.375rem'),
       right: mobileStyle('0', '3.325rem'),
       resize: mobileStyle('none', 'both'),
       bgColor:'white',

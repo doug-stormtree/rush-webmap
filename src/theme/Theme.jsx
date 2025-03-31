@@ -137,7 +137,7 @@ const theme = extendTheme({
         height: '100%',
       },
       '.leaflet-left': {
-        left: '9.125rem'
+        left: '9.375rem'
       },
       '.leaflet-label': {
         padding: 0,
