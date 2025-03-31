@@ -81,6 +81,14 @@ function App() {
             element={<WebMap />}
           />
           <Route
+            path="/app/:question/:zoom/:center"
+            element={<WebMap />}
+          />
+          <Route
+            path="/app/:question"
+            element={<WebMap />}
+          />
+          <Route
             path="/lbadmin"
             element={<LeaderboardAdmin db={database} />}
           />
