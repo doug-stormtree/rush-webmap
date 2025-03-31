@@ -581,7 +581,7 @@ const Question = {
           to provide a more complete illustration of our region’s natural
           heritage.
         </Text>,
-        <Image key='35' maxWidth='360px' src={require('../jpg/Acknowledgements.jpg')} />
+        <Image key='35' maxWidth='28rem' src={require('../jpg/Acknowledgements.jpg')} />
       ],
     },
     {
@@ -651,6 +651,7 @@ const Question = {
       name: "Ecosystems & Biodiversity",
       icon: <LuLeaf style={tabIconStyle} />,
       children: [
+        <Image key='img.1' src={require('../jpg/Ecosystem.jpg')} maxWidth='28rem' />,
         <Text key='1'>
           Greater Victoria is high in biodiversity, as shown by the great
           variety of plants, animals, and ecosystems that are found throughout
@@ -684,6 +685,7 @@ const Question = {
           As you visit different sites in the NatureHood, watch and listen for
           the incredible biodiversity that surrounds you.
         </Text>,
+        <Image key='img.2' src={require('../jpg/Waterways.jpg')} maxWidth='28rem' />,
         <Text key='13' {...h2}>Waterways and Watersheds</Text>,
         <Text key='14'>
           We all live in a watershed, whether natural, urban or rural. A
@@ -698,6 +700,7 @@ const Question = {
           how you can clean, protect and enhance the watersheds in your
           NatureHood.
         </Text>,
+        <Image key='img.3' src={require('../jpg/Riparian.jpg')} maxWidth='28rem' />,
         <Text key='15' {...h2}>Riparian Zones</Text>,
         <Text key='16'>
           Riparian zones are important transition areas that connect the water
@@ -707,6 +710,7 @@ const Question = {
           water during storm events, prevent erosion, and provide important
           habitat for fish and other species.
         </Text>,
+        <Image key='img.4' src={require('../jpg/Riparian2.jpg')} maxWidth='28rem' />,
         <Text key='17' {...h2}>Important Bird Areas</Text>,
         <Text key='18'>
           In our NatureHood there are three Important Bird & Biodiversity areas:
