@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import { FaBinoculars, FaHighlighter } from "react-icons/fa";
 import { LuInfo, LuTrees, LuLeaf } from "react-icons/lu";
 import { LegendGroups, InitiativeTags as Tag } from "../TextContent";
@@ -581,6 +581,7 @@ const Question = {
           to provide a more complete illustration of our region’s natural
           heritage.
         </Text>,
+        <Image maxWidth='360px' src={require('../jpg/Acknowledgements.jpg')} />
       ],
     },
     {
