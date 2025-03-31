@@ -24,7 +24,7 @@ export const mobileStyle = (mobileCss, fallbackCss) => {
   return {
     base: mobileCss, // iphone SE
     sm: mobileCss, // android
-    md: fallbackCss, // ipad mini
+    md: mobileCss, // ipad mini
     lg: fallbackCss, // ipad pro
     xl: fallbackCss, // macbook air
     '2xl': fallbackCss, // desktop
@@ -58,7 +58,7 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       paddingStart: mobileStyle('0', '10px'),
       paddingY: '10px',
       gap: '10px',
-      transform: 'scaleX(-1)', //Flips the child back to normal
+      transform: mobileStyle('none', 'scaleX(-1)'), //Flips the child back to normal
 
       _before: {
         content: '"How can I...?"',
@@ -76,18 +76,18 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       }
     },
     container: {
-      transform: 'scaleX(-1)', //Reflects the parent horizontally
+      transform: mobileStyle('none', 'scaleX(-1)'), //Reflects the parent horizontally
       height: 'calc(100% - 40px)',
       minWidth: mobileStyle('100%', '140px'),
       overflow: 'scroll',
       top:'2.5rem',
       zIndex:'9',
-      pointerEvents: 'none',
+      pointerEvents: mobileStyle('auto', 'none'),
       background: mobileStyle('none', containerGradient),
-      
+      position: mobileStyle('absolute', null)
       // From https://stackoverflow.com/a/7896882, static position is required to fix scrolling on mobile.
-      position: mobileStyle('static', 'fixed'),
-      WebkitOverflowScrolling: mobileStyle('touch', 'inherit'),
+      //position: mobileStyle('static', 'fixed'),
+      //WebkitOverflowScrolling: mobileStyle('touch', 'inherit'),
     }
   },
   defaultProps: {},

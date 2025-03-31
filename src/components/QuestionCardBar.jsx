@@ -16,7 +16,7 @@ export default function QuestionCardBar({ isMobile }) {
   }));
   const scrollRef = useRef(null);
   const shouldRender = () => {
-    return !isMobile; 
+    return !isMobile || activeQuestion === undefined; 
   };
   
   return shouldRender() && (
@@ -38,7 +38,7 @@ export default function QuestionCardBar({ isMobile }) {
               <QuestionCard
                 key={q[0]}
                 question={{key: q[0], ...q[1]}}
-                size='button'
+                size={isMobile ? 'wide' : 'button'}
                 scrollRef={scrollRef}
                 variant={q[0] === activeQuestion ? 'selected' : undefined}
               />

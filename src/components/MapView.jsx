@@ -7,14 +7,23 @@ import { useActiveQuestionStore, questionActions } from '../data/QuestionStore';
 export const DEFAULT_CENTER = latLng([48.46557, -123.314736]);
 export const DEFAULT_ZOOM = 12;
 
-export default function MapView(props) {
+export default function MapView({
+  mapRef,
+  zoom,
+  center,
+  style,
+  isMobile,
+  mobileMenuState,
+  setMobileMenuState,
+  children,
+}) {
   const dispatch = useActiveQuestionStore(state => state.dispatch);
 
   const collapseMobileMenu = () => {
     // Mobile state
-    if (props.mobileMenuState === MobileMenuState.EXPANDED_HEADER){
+    if (mobileMenuState === MobileMenuState.EXPANDED_HEADER){
       // collapse mobile menu dock if the map is clicked while it's expanded
-      props.setMobileMenuState(MobileMenuState.COLLAPSED_HEADER);
+      setMobileMenuState(MobileMenuState.COLLAPSED_HEADER);
     }
     // Desktop state
     // collapse desktop menus when map is clicked
@@ -31,18 +40,18 @@ export default function MapView(props) {
 
   return (
     <MapContainer
-      ref={props.mapRef}
-      center={props.center}
-      zoom={props.zoom}
+      ref={mapRef}
+      center={center}
+      zoom={zoom}
       scrollWheelZoom={true}
-      style={props.style}
+      style={style}
       closePopupOnClick={false}
       zoomControl={false}
       maxZoom={20}
     >
-      <ZoomControl prepend position='bottomright' />
+      {isMobile ? null : <ZoomControl prepend position='bottomright' />}
       <CustomMapHooks/>
-      {props.children}
+      {children}
     </MapContainer>
   );
 }

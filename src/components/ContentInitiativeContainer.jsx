@@ -29,7 +29,6 @@ export default function ContentInitiativeContainer() {
 
   // theme
   const styles = useMultiStyleConfig('ContentInitiativeContainer')
-  // TODO: container overflows onto legend at medium screen sizes -> conditional right pos if legend open
 
   // TODO: all question content fetching should go here for now
   const [ activeQuestion, setActiveQuestion ] = useActiveQuestionStore((state) => [ state.activeQuestion, state.setActiveQuestion ])
@@ -43,7 +42,7 @@ export default function ContentInitiativeContainer() {
 
   return activeQuestion && (
     <Box __css={styles.container} height={isMinimized ? 'auto' : undefined} >
-      <Tabs height='100%' onChange={(index) => {
+      <Tabs height='100%' onChange={() => {
         if (isMinimized) setIsMinimized(false)
         tabPanelsRef.current.scrollTo(0,0)}
       }>

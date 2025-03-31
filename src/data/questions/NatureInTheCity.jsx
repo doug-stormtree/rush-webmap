@@ -11,7 +11,7 @@ const tabIconStyle = {
 
 const questionData = {
   title: "Nature in the City Map",
-  question: "One Map, One NatureHood, A guide to Many Adventures.",
+  question: "One Map, One NatureHood, A Guide to Many Adventures.",
   sections: {
     one: [
       {
@@ -388,26 +388,26 @@ const Question = {
   layers: [
     {
       key: "NatureHood_LearningCentres",
-      active: true,
+      active: false,
       ...LegendGroups.NatureHood,
     },
     { key: "NatureHood_Locations", active: true, ...LegendGroups.NatureHood },
-    { key: "NatureHood_PlaceNames", active: true, ...LegendGroups.NatureHood },
+    { key: "NatureHood_PlaceNames", active: false, ...LegendGroups.NatureHood },
     {
       key: "NatureHood_PlaceNamesEnglish",
-      active: true,
+      active: false,
       ...LegendGroups.NatureHood,
     },
     {
       key: "NatureHood_FirstNationsReserves",
-      active: true,
+      active: false,
       ...LegendGroups.NatureHood,
     },
     { key: "NatureHood_MBS", active: true, ...LegendGroups.NatureHood },
     { key: "ImportantBirdAreas", active: true, ...LegendGroups.NatureHood },
     { key: "CRD_Parks", active: true, ...LegendGroups.NatureHood },
     { key: "Watersheds", active: false, ...LegendGroups.NatureHood },
-    { key: "NatureHood_Animals", active: true, ...LegendGroups.NatureHood },
+    { key: "NatureHood_Animals", active: false, ...LegendGroups.NatureHood },
   ],
   tabs: [
     {
@@ -415,7 +415,38 @@ const Question = {
       icon: <FaHighlighter style={tabIconStyle} />,
       title: questionData.title,
       subtitle: questionData.question,
-      items: questionData.sections.one,
+      children: [
+        <Text>This map is a guide to help connect you with amazing places and nearby nature. Here are some fun ideas to get you started on your journey!</Text>,
+        (<ul style={{
+          listStylePosition: 'outside',
+          paddingInlineStart: '1.5rem',
+        }}>
+          <li>Go birdwatching (see map for prime locations),</li>
+          <li>Paint, draw, sketch wildflowers in spring,</li>
+          <li>Explore diverse intertidal life in summer,</li>
+          <li>View spawning salmon in the fall,</li>
+          <li>Volunteer with a local stewardship group,</li>
+          <li>Look for plants and animals on the species list, and check off the ones you find.</li>
+        </ul>),
+        <Text>While you explore, this map will help put names to some of the life that you see. Look for the beautiful images, names, and interesting facts about these plants and animals.</Text>,
+        <Text>If you are curious to learn more, take photos of your discoveries and use iNaturalist and eBird apps on your smartphone to confirm your sightings. You will create data for scientists working to better understand and protect nature.</Text>,
+        <Text>Enjoy a journey to learn, love and discover more about nature.</Text>,
+        (<Text>{"The Nature in the City Map was originally designed for print and a PDF version can be "}
+          <Link isExternal href="https://www.gvnaturehood.com/greater-victoria-naturehood-map">
+            found here
+          </Link>.
+        </Text>),
+        <Text>Provided by Greater Victoria NatureHood.</Text>,
+        (<ul style={{
+          listStylePosition: 'outside',
+          paddingInlineStart: '1.5rem',
+        }}>
+          <li>Leave no trace.</li>
+          <li>Leave what you find.</li>
+          <li>Respect wildlife.</li>
+          <li>Be mindful of others.</li>
+        </ul>),
+      ]
     },
     {
       name: "Greater Victoria NatureHood",
@@ -423,11 +454,14 @@ const Question = {
       children: [
         <Text {...h3}>About NatureHood</Text>,
         <Text>
-          Nature Canada’s NatureHood Program is about connecting children and
-          families to nature right where they live. It is a call to expose a new
-          generation of nature lovers, naturalists and citizen scientists to
-          nature all around them. To learn more about NatureHood visit
-          www.gvnaturehood.com orcontact us at info@gvnaturehood.com.
+          {"Nature Canada’s NatureHood Program is about connecting children and families to nature right where they live. It is a call to expose a new generation of nature lovers, naturalists and citizen scientists to nature all around them. To learn more about NatureHood visit "}
+          <Link isExternal href="https://www.gvnaturehood.com">
+            www.gvnaturehood.com
+          </Link>
+          {" or contact us at "}
+          <Link isExternal href="mailto:info@gvnaturehood.com">
+            info@gvnaturehood.com
+          </Link>.
         </Text>,
         <Text {...h3}>Greater Victoria NatureHood</Text>,
         <Text>
@@ -468,7 +502,7 @@ const Question = {
           Sanctuary, to name but just a few. We hope that your experience will
           inspire you to care for and protect our natural environment.
         </Text>,
-        <Text {...h3}>Connecting Greater Victoria\'s NatureHoods</Text>,
+        <Text {...h3}>Connecting Greater Victoria's NatureHoods</Text>,
         <Text>
           The Greater Victoria NatureHood is a partnership of grassroots
           naturalist organizations, not-for-profits and local governments, all

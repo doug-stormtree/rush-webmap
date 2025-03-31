@@ -15,6 +15,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     card: {
       pointerEvents: 'auto',
+      cursor: 'pointer',
       minWidth: '120px',
       borderRadius: 'xl',
       background: '#333',

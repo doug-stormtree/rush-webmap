@@ -27,13 +27,17 @@ const ChecklistCard = ({
       maxWidth='calc(50% - 0.25rem)'
     >
       <Flex direction='column' shrink='0'>
-        <Image
-          src={image}
-          boxSize='120px'
-          borderRadius='full'
-          border='3px solid white'
-          boxShadow='rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;'
-        />
+        <a href={image} target='_blank' rel='noreferrer'>
+          <Image
+            alt={name}
+            src={image}
+            boxSize='120px'
+            borderRadius='full'
+            border='3px solid white'
+            boxShadow='rgba(0, 0, 0, 0.25) 0px 14px 28px,
+                       rgba(0, 0, 0, 0.22) 0px 10px 10px;'
+          />
+        </a>
         <Checkbox
           colorScheme='green'
           size='lg'
