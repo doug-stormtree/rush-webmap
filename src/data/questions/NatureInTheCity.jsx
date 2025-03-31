@@ -416,8 +416,8 @@ const Question = {
       title: questionData.title,
       subtitle: questionData.question,
       children: [
-        <Text>This map is a guide to help connect you with amazing places and nearby nature. Here are some fun ideas to get you started on your journey!</Text>,
-        (<ul style={{
+        <Text key='1'>This map is a guide to help connect you with amazing places and nearby nature. Here are some fun ideas to get you started on your journey!</Text>,
+        (<ul key='1.ul' style={{
           listStylePosition: 'outside',
           paddingInlineStart: '1.5rem',
         }}>
@@ -428,16 +428,16 @@ const Question = {
           <li>Volunteer with a local stewardship group,</li>
           <li>Look for plants and animals on the species list, and check off the ones you find.</li>
         </ul>),
-        <Text>While you explore, this map will help put names to some of the life that you see. Look for the beautiful images, names, and interesting facts about these plants and animals.</Text>,
-        <Text>If you are curious to learn more, take photos of your discoveries and use iNaturalist and eBird apps on your smartphone to confirm your sightings. You will create data for scientists working to better understand and protect nature.</Text>,
-        <Text>Enjoy a journey to learn, love and discover more about nature.</Text>,
-        (<Text>{"The Nature in the City Map was originally designed for print and a PDF version can be "}
+        <Text key='2'>While you explore, this map will help put names to some of the life that you see. Look for the beautiful images, names, and interesting facts about these plants and animals.</Text>,
+        <Text key='3'>If you are curious to learn more, take photos of your discoveries and use iNaturalist and eBird apps on your smartphone to confirm your sightings. You will create data for scientists working to better understand and protect nature.</Text>,
+        <Text key='4'>Enjoy a journey to learn, love and discover more about nature.</Text>,
+        (<Text key='5'>{"The Nature in the City Map was originally designed for print and a PDF version can be "}
           <Link isExternal href="https://www.gvnaturehood.com/greater-victoria-naturehood-map">
             found here
           </Link>.
         </Text>),
-        <Text>Provided by Greater Victoria NatureHood.</Text>,
-        (<ul style={{
+        <Text key='6'>Provided by Greater Victoria NatureHood.</Text>,
+        (<ul key='6.ul' style={{
           listStylePosition: 'outside',
           paddingInlineStart: '1.5rem',
         }}>
@@ -452,8 +452,8 @@ const Question = {
       name: "Greater Victoria NatureHood",
       icon: <LuTrees style={tabIconStyle} />,
       children: [
-        <Text {...h3}>About NatureHood</Text>,
-        <Text>
+        <Text key='1' {...h3}>About NatureHood</Text>,
+        <Text key='2'>
           {"Nature Canada’s NatureHood Program is about connecting children and families to nature right where they live. It is a call to expose a new generation of nature lovers, naturalists and citizen scientists to nature all around them. To learn more about NatureHood visit "}
           <Link isExternal href="https://www.gvnaturehood.com">
             www.gvnaturehood.com
@@ -463,16 +463,16 @@ const Question = {
             info@gvnaturehood.com
           </Link>.
         </Text>,
-        <Text {...h3}>Greater Victoria NatureHood</Text>,
-        <Text>
+        <Text key='3' {...h3}>Greater Victoria NatureHood</Text>,
+        <Text key='4'>
           Being in nature promotes awareness of our natural world and increases
           mental and physical health, as well as overall wellbeing. The Greater
           Victoria NatureHood aims to inspire children – and adults – to
           appreciate nature and take action to protect local species and natural
           places.
         </Text>,
-        <Text {...h3}>Connect with Nature</Text>,
-        <Text>
+        <Text key='5' {...h3}>Connect with Nature</Text>,
+        <Text key='6'>
           Connect with nature by taking time to simply go outdoors and explore
           the natural world around you. This can be as simple as going to your
           backyard or to a local park. You do not have to go far to explore
@@ -480,13 +480,13 @@ const Question = {
           to restore city parks, ravines, open spaces and other natural places
           for birds and native wildlife.
         </Text>,
-        <Text {...h3}>Leave No Trace</Text>,
-        <Text>
+        <Text key='7' {...h3}>Leave No Trace</Text>,
+        <Text key='8'>
           When you visit the Greater Victoria NatureHood, be sure to dispose of
           your waste appropriately.
         </Text>,
-        <Text {...h3}>Respect Wildlife</Text>,
-        <Text>
+        <Text key='9' {...h3}>Respect Wildlife</Text>,
+        <Text key='10'>
           Feeding wildlife can lead to health impacts, alter natural behaviours,
           and increase exposure to predators and other dangers. Do not follow or
           approach wildlife but instead, observe from a distance. Avoid wildlife
@@ -494,16 +494,16 @@ const Question = {
           Pets may not be permitted at the places that you visit, please visit
           location websites prior to heading out with your family.
         </Text>,
-        <Text {...h3}>Get Out Into the NatureHood</Text>,
-        <Text>
+        <Text key='11' {...h3}>Get Out Into the NatureHood</Text>,
+        <Text key='12'>
           By using this map, you can connect with nature at nearby urban
           protected areas, like Esquimalt Lagoon Migratory Bird Sanctuary, Shoal
           Harbour Migratory Bird Sanctuary and, Victoria Harbour Migratory Bird
           Sanctuary, to name but just a few. We hope that your experience will
           inspire you to care for and protect our natural environment.
         </Text>,
-        <Text {...h3}>Connecting Greater Victoria's NatureHoods</Text>,
-        <Text>
+        <Text key='13' {...h3}>Connecting Greater Victoria's NatureHoods</Text>,
+        <Text key='14'>
           The Greater Victoria NatureHood is a partnership of grassroots
           naturalist organizations, not-for-profits and local governments, all
           sharing a strong commitment to protect nature in the Greater Victoria
@@ -511,8 +511,8 @@ const Question = {
           activities and events, and wildlife observation, in our public green
           spaces.
         </Text>,
-        <Text {...h3}>Resilient NatureHood</Text>,
-        <Text>
+        <Text key='15' {...h3}>Resilient NatureHood</Text>,
+        <Text key='16'>
           A NatureHood is any place where you connect with nature’s wonders –
           from observing a bee pollinate a flower in a planter box, to watching
           wild birds at a backyard feeder or local park, to witnessing the trees
@@ -520,47 +520,47 @@ const Question = {
           around and you will find nature everywhere throughout the Greater
           Victoria NatureHood.
         </Text>,
-        <Text {...h3}>Respect the Wildlife Laws</Text>,
-        <Text>
+        <Text key='17' {...h3}>Respect the Wildlife Laws</Text>,
+        <Text key='18'>
           The federal Migratory Birds Convention Act protects birds, their
           nests, and their eggs from harm or capture in Canada. Other provincial
           wildlife laws protect other species in the same way. Purchasing,
           keeping or trading a threatened species of wildlife from other
           countries is also illegal without a permit.
         </Text>,
-        <Text {...h3}>Leave What You Find</Text>,
-        <Text>
+        <Text key='19' {...h3}>Leave What You Find</Text>,
+        <Text key='20'>
           To help preserve the past and present for the future, examine, but do
           not touch, cultural or historic artifacts and structures. Leave any
           rocks, plants and other natural objects as you find them and avoid
           introducing or transporting non-native species.
         </Text>,
-        <Text {...h3}>Be Mindful of Others</Text>,
-        <Text>
+        <Text key='21' {...h3}>Be Mindful of Others</Text>,
+        <Text key='22'>
           Be courteous. One of the most important components of outdoor ethics
           is to be courteous to others, and follow local regulations. Many
           people visit the NatureHood specifically to listen to nature, so
           please maintain quiet and keep yourears open.
         </Text>,
-        <Text {...h3}>Become a NatureHood Steward</Text>,
-        <Text>
+        <Text key='23' {...h3}>Become a NatureHood Steward</Text>,
+        <Text key='24'>
           Build community while connecting with nature. Protect the NatureHood
           by joining one of the many stewardship groups in Greater Victoria who
           volunteer in natural areas. Opportunities include:
         </Text>,
-        <Text>• Removing invasive species</Text>,
-        <Text>• Planting native plants and trees</Text>,
-        <Text>• Improving stream quality</Text>,
-        <Text>• Monitoring birds and wildlife</Text>,
-        <Text>• Collecting litter, and more.</Text>,
-        <Text>
+        <Text key='25'>• Removing invasive species</Text>,
+        <Text key='26'>• Planting native plants and trees</Text>,
+        <Text key='27'>• Improving stream quality</Text>,
+        <Text key='28'>• Monitoring birds and wildlife</Text>,
+        <Text key='29'>• Collecting litter, and more.</Text>,
+        <Text key='30'>
           To find an opportunity that suits your interests, visit{" "}
           <Link isExternal href="https://www.gvnaturehood.com">
             www.gvnaturehood.com
           </Link>
         </Text>,
-        <Text {...h3}>About the Cover Art</Text>,
-        <Text>
+        <Text key='31' {...h3}>About the Cover Art</Text>,
+        <Text key='32'>
           There are so many wonderful natural places to explore in the Greater
           Victoria NatureHood, which made it hard to choose just one to showcase
           on the cover. Artist Kristi Bridgeman came up with a fictional work
@@ -571,8 +571,8 @@ const Question = {
           as a variety of native flora and fauna including the Purple Martin,
           Bumblebee and camas flowers.
         </Text>,
-        <Text {...h2}>Acknowledgements</Text>,
-        <Text>
+        <Text key='33' {...h2}>Acknowledgements</Text>,
+        <Text key='34'>
           We acknowledge with respect the territory of the SENĆOŦEN and lək̓ʷəŋən
           speaking peoples on whose traditional lands and waterways we live,
           work and play and whose deep relationship to place continues to this
@@ -581,7 +581,7 @@ const Question = {
           to provide a more complete illustration of our region’s natural
           heritage.
         </Text>,
-        <Image maxWidth='360px' src={require('../jpg/Acknowledgements.jpg')} />
+        <Image key='35' maxWidth='360px' src={require('../jpg/Acknowledgements.jpg')} />
       ],
     },
     {
@@ -600,7 +600,7 @@ const Question = {
       ),
       //initiatives: questionData.act.initiatives,
       children: [
-        <Text
+        <Text key='1'
           fontFamily="var(--chakra-fonts-inter)"
           fontWeight="500"
           fontSize="0.75rem"
@@ -610,6 +610,7 @@ const Question = {
           cloud, RUSH, or anyone.
         </Text>,
         <Box
+          key='2'
           margin="0.25rem"
           padding="0.25rem"
           bgColor="#eef4d6"
@@ -634,7 +635,7 @@ const Question = {
             </span>
           </Text>
         </Box>,
-        <Flex wrap="wrap" gap="0.5rem" justifyContent="stretch">
+        <Flex key='3' wrap="wrap" gap="0.5rem" justifyContent="stretch">
           {locals.map((local) => (
             <ChecklistCard
               key={local.name}
@@ -650,41 +651,41 @@ const Question = {
       name: "Ecosystems & Biodiversity",
       icon: <LuLeaf style={tabIconStyle} />,
       children: [
-        <Text>
+        <Text key='1'>
           Greater Victoria is high in biodiversity, as shown by the great
           variety of plants, animals, and ecosystems that are found throughout
           the region. Biodiversity can be observed close to home, in backyard
           gardens, grassy parks, and street trees. Biodiversity is even higher
           in our region’s natural ecosystems, including:
         </Text>,
-        <Text>• Coastal Douglas-fir forests</Text>,
-        <Text>• Garry Oak meadows</Text>,
-        <Text>• Wetlands</Text>,
-        <Text>• Streams, rivers and riparian areas</Text>,
-        <Text>• Rocky, pebble and sandy shorelines</Text>,
-        <Text>• Eelgrass meadows and kelp forests</Text>,
-        <Text {...h3}>Did you know?</Text>,
-        <Text>
+        <Text key='2'>• Coastal Douglas-fir forests</Text>,
+        <Text key='3'>• Garry Oak meadows</Text>,
+        <Text key='4'>• Wetlands</Text>,
+        <Text key='5'>• Streams, rivers and riparian areas</Text>,
+        <Text key='6'>• Rocky, pebble and sandy shorelines</Text>,
+        <Text key='7'>• Eelgrass meadows and kelp forests</Text>,
+        <Text key='8' {...h3}>Did you know?</Text>,
+        <Text key='9'>
           • Vancouver Island is a biodiversity hotspot and is thought to have
           provided refuge to plants and animals during the last glaciation.
         </Text>,
-        <Text>
+        <Text key='10'>
           • Victoria sits in the Coastal Douglas-fir Biogeoclimatic zone – an
           area affected by factors like temperature, rainfall, moisture balance
           and altitude – which covers only 0.3% of the province but is home to
           the highest number of species and ecosystems at risk in BC.
         </Text>,
-        <Text>
+        <Text key='11'>
           • Some species like the Vancouver Island Water Shrew (found near
           Sooke) are endemic to Vancouver Island, meaning they are not found
           anywhere else.
         </Text>,
-        <Text>
+        <Text key='12'>
           As you visit different sites in the NatureHood, watch and listen for
           the incredible biodiversity that surrounds you.
         </Text>,
-        <Text {...h2}>Waterways and Watersheds</Text>,
-        <Text>
+        <Text key='13' {...h2}>Waterways and Watersheds</Text>,
+        <Text key='14'>
           We all live in a watershed, whether natural, urban or rural. A
           watershed is an area of land that drains precipitation and groundwater
           to a common point, such as a creek, wetland, lake or ocean. Healthy
@@ -697,8 +698,8 @@ const Question = {
           how you can clean, protect and enhance the watersheds in your
           NatureHood.
         </Text>,
-        <Text {...h2}>Riparian Zones</Text>,
-        <Text>
+        <Text key='15' {...h2}>Riparian Zones</Text>,
+        <Text key='16'>
           Riparian zones are important transition areas that connect the water
           with the land, and support a wide diversity of plant and animal life.
           Riparian zones may be found surrounding lakes, estuaries, streams and
@@ -706,8 +707,8 @@ const Question = {
           water during storm events, prevent erosion, and provide important
           habitat for fish and other species.
         </Text>,
-        <Text {...h2}>Important Bird Areas</Text>,
-        <Text>
+        <Text key='17' {...h2}>Important Bird Areas</Text>,
+        <Text key='18'>
           In our NatureHood there are three Important Bird & Biodiversity areas:
           Sidney Channel and Mandarte Island located next to Shoal Harbour MBS,
           and Chain Islets - Grand Chain Island located next to Victoria Harbour
@@ -717,69 +718,69 @@ const Question = {
           1985. In Canada, IBAs are a joint initiative of Nature Canada and
           Birds Canada.
         </Text>,
-        <Text {...h3}>Gulls</Text>,
+        <Text key='19' {...h3}>Gulls</Text>,
         <iframe
+          key='20'
           title="Glaucous-winged Gull"
           src="https://macaulaylibrary.org/asset/213666391/embed"
           height="296"
           width="320"
-          frameborder="0"
-          allowfullscreen
+          allowFullScreen
         ></iframe>,
-        <Text>
+        <Text key='21'>
           There are 12 species of gulls known to regularly visit the NatureHood.
           Pictured here is the Glaucous-winged Gull; it is the only gull known
           to breed locally. Gulls are scavengers and are sometimes called the
           ‘vultures of the coast’ because they scrounge the coastline and will
           eat almost anything that washes up on the beach and shoreline.
         </Text>,
-        <Text {...h3}>Black Brant</Text>,
+        <Text key='22' {...h3}>Black Brant</Text>,
         <iframe
+          key='23'
           title="Black Brant"
           src="https://macaulaylibrary.org/asset/44467061/embed"
           height="296"
           width="320"
-          frameborder="0"
-          allowfullscreen
+          allowFullScreen
         ></iframe>,
-        <Text>
+        <Text key='24'>
           Found during spring migration, using their small bill, Brants feed on
           eelgrass and marine algae along the shore. Once a popular Christmas
           meal, their declining numbers, along with the decline of other birds,
           led to the establishment of NatureHood’s Migratory Bird Sanctuaries.
         </Text>,
-        <Text {...h3}>Local Birds</Text>,
+        <Text key='25' {...h3}>Local Birds</Text>,
         <iframe
+          key='26'
           title="Harlequin Duck"
           src="https://macaulaylibrary.org/asset/51436371/embed"
           height="296"
           width="320"
-          frameborder="0"
-          allowfullscreen
+          allowFullScreen
         ></iframe>,
         <iframe
+          key='27'
           title="Black Oystercatcher"
           src="https://macaulaylibrary.org/asset/207044861/embed"
           height="296"
           width="320"
-          frameborder="0"
-          allowfullscreen
+          allowFullScreen
         ></iframe>,
         <iframe
+          key='28'
           title="Rhinoceros Auklet"
           src="https://macaulaylibrary.org/asset/36490871/embed"
           height="296"
           width="320"
-          frameborder="0"
-          allowfullscreen
+          allowFullScreen
         ></iframe>,
         <iframe
+          key='29'
           title="Marbled Murrelet"
           src="https://macaulaylibrary.org/asset/226683221/embed"
           height="296"
           width="320"
-          frameborder="0"
-          allowfullscreen
+          allowFullScreen
         ></iframe>,
       ],
     },

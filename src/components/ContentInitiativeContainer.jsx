@@ -83,7 +83,7 @@ export default function ContentInitiativeContainer() {
                 '::-webkit-scrollbar': { display: 'none' }
               }}
             >
-              {tabs.map(tab => {
+              {tabs.map((tab) => {
                 const ref = React.createRef();
 
                 const handleClick = () =>
@@ -193,8 +193,3 @@ const questionContentToTabs = (questionKey) => {
 
   return tabs
 }
-
-//<Tab {...tabStyle}><FaHighlighter style={tabIconStyle}/>Notice</Tab>
-//<Tab {...tabStyle}><FaBook style={tabIconStyle}/>Act</Tab>
-//<Tab {...tabStyle}><FaLink style={tabIconStyle}/>Check Out</Tab>
-//<Tab {...tabStyle}><LuRabbit strokeWidth='3' style={tabIconStyle}/>Rabbit Hole</Tab>
