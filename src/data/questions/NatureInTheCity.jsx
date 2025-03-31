@@ -406,6 +406,7 @@ const Question = {
     { key: "NatureHood_MBS", active: true, ...LegendGroups.NatureHood },
     { key: "ImportantBirdAreas", active: true, ...LegendGroups.NatureHood },
     { key: "CRD_Parks", active: true, ...LegendGroups.NatureHood },
+    { key: "Watersheds", active: false, ...LegendGroups.NatureHood },
     { key: "NatureHood_Animals", active: true, ...LegendGroups.NatureHood },
   ],
   tabs: [
