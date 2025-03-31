@@ -570,6 +570,7 @@ export const LegendItemOGM = ({ layerId }) => {
         <Link
           href={layer.liveOverride?.team?.url ?? `https://greenmap.org/browse/teams/${team.id}`}
           isExternal
+          flex='0 0 auto'
         >
           <Image
             boxSize='100px'

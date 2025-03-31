@@ -1,4 +1,4 @@
-import { InitiativeTags as Tag } from '../TextContent';
+import { LegendGroups, InitiativeTags as Tag } from '../TextContent';
 
 const Question = {
   key: 'save-the-world',
@@ -12,6 +12,7 @@ const Question = {
   },
   layers: [
     { key: 'StewardshipGroups', active: true, group: 'Community' },
+    { key: 'LocalClimateInitiatives', active: true, ...LegendGroups.OGM  },
   ],
   sections: {
     one: [
