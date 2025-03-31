@@ -623,17 +623,17 @@ const Question = {
             NatureHood recognizes that language is critical for connecting the{" "}
             <span style={{ color: "#ffaa2d" }}>W̱SÁNEĆ</span> and{" "}
             <span style={{ color: "#0d3396" }}>lək̓ʷəŋən</span> speaking peoples
-            to their culture, spirituality, identity and land. &emsp;&emsp;
+            to their culture, spirituality, identity and land.&emsp;
             <span style={{ color: "#ffaa2d", fontStyle: "normal" }}>
-              ■ SENĆOŦEN
+              ■&nbsp;SENĆOŦEN
             </span>
-            &emsp;&emsp;
+            &emsp;
             <span style={{ color: "#0d3396", fontStyle: "normal" }}>
-              ■ lək̓ʷəŋən
+              ■&nbsp;lək̓ʷəŋən
             </span>
           </Text>
         </Box>,
-        <Flex direction="row" wrap="wrap" gap="0.5rem" justifyContent="stretch">
+        <Flex wrap="wrap" gap="0.5rem" justifyContent="stretch">
           {locals.map((local) => (
             <ChecklistCard
               key={local.name}

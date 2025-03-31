@@ -18,13 +18,15 @@ const ChecklistCard = ({
 }) => {
   return (
     <Flex
+      flex='1 1 21rem'
       direction='row'
       border='1.6px solid #EDF2F7'
       borderRadius='0.75rem'
       bgColor='#3b611a'
       padding='0.5rem'
       gap='1rem'
-      maxWidth='calc(50% - 0.25rem)'
+      //maxWidth='calc(50% - 0.25rem)'
+      //minWidth='min(80%, 24rem)'
     >
       <Flex direction='column' shrink='0'>
         <a href={image} target='_blank' rel='noreferrer'>
