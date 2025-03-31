@@ -32,10 +32,10 @@ import ContentInitiativeContainer from './components/ContentInitiativeContainer'
 import RabbitHoleDrawer from './components/RabbitHoleDrawer';
 import TutorialPopup from './components/TutorialPopup';
 import AboutPage from './components/AboutPage';
-import MobileQuestionMenu from './components/MobileQuestionMenu';
-import MobileQuestionDock from './components/MobileQuestionDock';
+//import MobileQuestionMenu from './components/MobileQuestionMenu';
+//import MobileQuestionDock from './components/MobileQuestionDock';
 import LeaderboardAdmin from './components/LeaderboardAdmin';
-import { mobileStyle } from './theme/QuestionCardBarTheme';
+//import { mobileStyle } from './theme/QuestionCardBarTheme';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -78,6 +78,14 @@ function App() {
           />
           <Route
             path="/app/q/:question"
+            element={<WebMap />}
+          />
+          <Route
+            path="/app/:question/:zoom/:center"
+            element={<WebMap />}
+          />
+          <Route
+            path="/app/:question"
             element={<WebMap />}
           />
           <Route
@@ -125,7 +133,7 @@ function WebMap() {
   }, [ params, question, setActiveQuestion ])
 
    // Track whether the app should be rendered for mobile devices
-   const isMobile = ['base', 'sm'].includes(useBreakpoint());
+   const isMobile = ['base', 'sm', 'md'].includes(useBreakpoint());
 
    // Track what state the mobile question menu is in (this state does nothing when isMobile === false).
    const [mobileMenuState, setMobileMenuState] = useState(MobileMenuState.SELECT);
@@ -145,7 +153,7 @@ function WebMap() {
     const center = map.current.getCenter();
     const lat = center.lat.toFixed(6);
     const lng = center.lng.toFixed(6);
-    return `${currHost}/app/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
+    return `${currHost}/app/${activeQuestion}/${zoom}/${lat},${lng}`;
   }
 
   return (
@@ -165,18 +173,13 @@ function WebMap() {
       <QuestionCardBar 
         isMobile={isMobile}
       />
-      <MobileQuestionMenu
-        isMobile={isMobile}
+      {/*<MobileQuestionMenu
+        isMobile={false}
         mobileMenuState={mobileMenuState}
         setMobileMenuState={setMobileMenuState}
-      />
+      />*/}
       <Flex
         id='map-flex'
-        display={mobileStyle(
-          // hide map-view on mobile when user is selecting a question-card
-          mobileMenuState === MobileMenuState.SELECT ? 'none' : 'flex',
-          'flex', // desktop style
-        )}
         h={`calc(100vh - 2.5rem)`}
         position='sticky'
         top='2.5rem'
@@ -190,6 +193,7 @@ function WebMap() {
           center={center}
           mobileMenuState={mobileMenuState}
           setMobileMenuState={setMobileMenuState}
+          isMobile={isMobile}
         >
           <PlacesAutocomplete 
             isMobile={isMobile}
@@ -201,13 +205,13 @@ function WebMap() {
           isMobile={isMobile}
         />
       </Flex>
-      <MobileQuestionDock
+      {/*<MobileQuestionDock
         isMobile={isMobile}
         activeQuestion={activeQuestion}
         mobileMenuState={mobileMenuState}
         setMobileMenuState={setMobileMenuState}
-      />
-      <ContentInitiativeContainer />
+      />*/}
+      {activeQuestion === undefined ? null : <ContentInitiativeContainer />}
       <RabbitHoleDrawer />
       {/*
       <IconButton

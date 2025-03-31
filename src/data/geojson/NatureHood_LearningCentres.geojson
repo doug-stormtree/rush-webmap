@@ -1,0 +1,83 @@
+{
+  "type": "FeatureCollection",
+  "name": "NatureHood_LearningCentres",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "xy_coordinate_resolution": 1e-5,
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Royal BC Museum",
+        "URL": "https://royalbcmuseum.bc.ca/",
+        "Closed": null
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.36763, 48.41869] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Bateman Gallery of Nature",
+        "URL": "http://robertbateman.ca/",
+        "Closed": true
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.37133, 48.42105] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Gorge Waterway Nature House",
+        "URL": "https://www.crd.bc.ca/GWI/projects-outreach/community-outreach/gorge-waterway-nature-house",
+        "Closed": null
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.40658, 48.44627] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Francis King Park",
+        "URL": "https://www.crd.bc.ca/parks-recreation-culture/parks-trails/find-park-trail/francis-king",
+        "Closed": null
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.44405, 48.48446] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Goldstream Park",
+        "URL": "https://bcparks.ca/goldstream-park/",
+        "Closed": null
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.54985, 48.48453] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Swan Lake",
+        "URL": "https://www.swanlake.bc.ca/visit-explore/the-nature-house/",
+        "Closed": null
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.37391, 48.46481] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Beaver Lake",
+        "URL": "https://www.crd.bc.ca/parks-recreation-culture/parks-trails/find-park-trail/elk-beaver-lake",
+        "Closed": null
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.39042, 48.50968] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Shaw Centre for the Salish Sea",
+        "URL": "https://www.salishseacentre.org/",
+        "Closed": null
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.39484, 48.64966] }
+    }
+  ]
+}

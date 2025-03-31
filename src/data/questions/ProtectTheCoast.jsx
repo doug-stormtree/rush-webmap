@@ -8,6 +8,11 @@ const Question = {
   title: "Protect the Coast",
   question: 'Melting ice caps offer no refreshment when it comes to sea level rise. How can I be ready when the surfs up?',
   image: require('../png/ProtectTheCoast.png'),
+  color: {
+    background: 'cyan.300',
+    hover: 'cyan.200',
+    selected: 'cyan.100',
+  },
   layers: [
     { key: 'Aquifers', active: false, ...LegendGroups.StartOff },
     { key: 'AquiferSusceptibilityBedrock', active: false, ...LegendGroups.StartOff },

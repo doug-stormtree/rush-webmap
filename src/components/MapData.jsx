@@ -37,7 +37,7 @@ export const MapData = ({ db }) => {
     <>
       <Control position='topright'>
         <Flex direction='row' gap='0.5rem'>
-          <Leaderboard db={db} />
+          {activeQuestion === 'protect-from-flooding' ? <Leaderboard db={db} /> : null}
           <LegendDrawerButton />
         </Flex>
       </Control>

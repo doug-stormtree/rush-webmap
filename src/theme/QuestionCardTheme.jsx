@@ -15,6 +15,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
   baseStyle: {
     card: {
       pointerEvents: 'auto',
+      cursor: 'pointer',
       minWidth: '120px',
       borderRadius: 'xl',
       background: '#333',
@@ -29,7 +30,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       borderRadius: 'inherit',
       objectFit: 'cover',
       objectPosition: 'top',
-      opacity: '0.9',
+      //opacity: '0.9',
       overflow: 'hidden',
     },
     content: {
@@ -196,6 +197,17 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         top: '6.25rem',
         left: '3rem',
       },
+    },
+    selected: {
+      content: {
+        boxShadow: 'inset 0 0 16px 8px',
+        position: 'absolute',
+        inset: 0,
+      },
+      title: {
+        fontWeight: '700',
+        color: 'var(--chakra-colors-orange-100)'
+      }
     }
   },
   defaultProps: {

@@ -4,6 +4,7 @@ import '@fontsource-variable/figtree';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/urbanist';
 import '@fontsource-variable/bitter';
+import '@fontsource-variable/raleway';
 
 import '@fontsource/poppins/100.css';
 import '@fontsource/poppins/200.css';
@@ -25,6 +26,7 @@ import NavBar from './NavBarTheme';
 import QuestionCard from './QuestionCardTheme';
 import QuestionCardBar from './QuestionCardBarTheme';
 import ContentPane from './ContentPaneTheme';
+import ContentPanel from './ContentPanelTheme';
 import ContentInitiativeContainer from './ContentInitiativeContainerTheme';
 import RabbitHoleDrawer from './RabbitHoleDrawerTheme';
 
@@ -130,8 +132,12 @@ const theme = extendTheme({
         padding: '0',
         overflowX: 'hidden',
       },
+      '.leaflet-container': {
+        width: '100%',
+        height: '100%',
+      },
       '.leaflet-left': {
-        left: '9.125rem'
+        left: '9.375rem'
       },
       '.leaflet-label': {
         padding: 0,
@@ -139,11 +145,24 @@ const theme = extendTheme({
         border: 'unset',
         boxShadow: 'unset',
         fontSize: '1.0rem',
-        textShadow: '#FFF 2px 2px 4px, #FFF -2px 2px 4px, #FFF 2px -2px 4px, #FFF -2px -2px 4px;',
         opacity: '0.8 !important',
+        
+        color: 'white',
+        fontWeight: '700',
+        fontFamily: `'Inter Variable', sans-serif`,
+        //'-webkit-text-stroke': '1px black',
+        textShadow: '-2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;'
+        //textShadow: '#FFF 2px 2px 4px, #FFF -2px 2px 4px, #FFF 2px -2px 4px, #FFF -2px -2px 4px;',
       },
       '.leaflet-label::before': {
         display: 'none'
+      },
+      '.leaflet-popup-content': {
+        overflowY: 'auto',
+        marginRight: '4px',
+        paddingRight: '12px',
+        marginTop: '20px',
+        width: 'min(464px, 80vw) !important',
       }
     }
   },
@@ -168,6 +187,7 @@ const theme = extendTheme({
     QuestionCard,
     QuestionCardBar,
     ContentPane,
+    ContentPanel,
     ContentInitiativeContainer,
     RabbitHoleDrawer,
     Button: {
@@ -193,6 +213,7 @@ const theme = extendTheme({
   fonts: {
     brand: `'Poppins', sans-serif`,
     title: `'Figtree Variable', sans-serif`,
+    raleway: `'Raleway Variable', sans-serif`,
     body: `'Bitter Variable', serif`,
     heading: `'Poppins', sans-serif`,
     subHeading: `'Urbanist Variable', sans-serif`,

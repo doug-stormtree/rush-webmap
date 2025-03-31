@@ -8,6 +8,11 @@ const Question = {
   title: "Create Community",
   question: "When we chop down trees, cheap out on the build, and charm the big brands to set up shop, are we choosing quality of life?",
   image: require('../png/CultureCompass.png'),
+  color: {
+    background: 'yellow.300',
+    hover: 'yellow.200',
+    selected: 'yellow.100',
+  },
   layers: [
     { key: 'AgriculturalLandReserve', active: false, group: 'Greenspace' },
     { key: 'AirConditionedBuildings', active: false, group: 'Civic' },

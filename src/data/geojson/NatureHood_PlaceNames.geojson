@@ -1,0 +1,118 @@
+{
+  "type": "FeatureCollection",
+  "name": "NatureHood_PlaceNames",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "xy_coordinate_resolution": 1e-5,
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "English": "Tsehum Harbour", "SENĆOŦEN": "W̱SI,IḴEM" },
+      "geometry": { "type": "Point", "coordinates": [-123.41162, 48.67139] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "English": "Shaw centre for the Salish Sea",
+        "SENĆOŦEN": "SETINES"
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.39966, 48.65284] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Sidney Spit", "SENĆOŦEN": "SḰŦÁMEN" },
+      "geometry": { "type": "Point", "coordinates": [-123.33884, 48.6309] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Tsawout First Nation", "SENĆOŦEN": "SȾÁUTW̱" },
+      "geometry": { "type": "Point", "coordinates": [-123.38935, 48.59091] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Cordova Spit", "SENĆOŦEN": "ȾIX̱EṈ" },
+      "geometry": { "type": "Point", "coordinates": [-123.3896, 48.59873] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Darcy Island", "SENĆOŦEN": "ĆTESU" },
+      "geometry": { "type": "Point", "coordinates": [-123.27848, 48.56402] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Little Darcy Island", "SENĆOŦEN": "ĆTISU" },
+      "geometry": { "type": "Point", "coordinates": [-123.26563, 48.56816] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "English": "John Dean Provincial Park",
+        "SENĆOŦEN": "ȽÁU,WELṈEW̱"
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.44928, 48.61199] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "English": "Pauquachin First Nation",
+        "SENĆOŦEN": "BOḰEĆEN"
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.45766, 48.6268] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Tseycum First Nation", "SENĆOŦEN": "W̱SÍḴEM" },
+      "geometry": { "type": "Point", "coordinates": [-123.45144, 48.66545] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Mount Douglas Park", "SENĆOŦEN": "PKOLS" },
+      "geometry": { "type": "Point", "coordinates": [-123.34297, 48.4963] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Tod Inlet", "SENĆOŦEN": "SṈIDȻEȽ" },
+      "geometry": { "type": "Point", "coordinates": [-123.4738, 48.56045] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Squally Reach", "SENĆOŦEN": "SX̱OX̱IYEM" },
+      "geometry": { "type": "Point", "coordinates": [-123.48348, 48.57178] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Mount Work area", "SENĆOŦEN": "W̱MÍEŦEN" },
+      "geometry": { "type": "Point", "coordinates": [-123.50037, 48.55088] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Elk/Beaver Lake", "SENĆOŦEN": "X̱EOL,XELE₭" },
+      "geometry": { "type": "Point", "coordinates": [-123.39912, 48.52742] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "James Island", "SENĆOŦEN": "ȽELTOS" },
+      "geometry": { "type": "Point", "coordinates": [-123.35472, 48.60734] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Cadboro Bay", "SENĆOŦEN": "SṈAḴE" },
+      "geometry": { "type": "Point", "coordinates": [-123.29766, 48.44172] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "English": "Coal Island", "SENĆOŦEN": "ȽEḴTINES" },
+      "geometry": { "type": "Point", "coordinates": [-123.37799, 48.68259] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "English": "McDonald Park Campground",
+        "SENĆOŦEN": "SMONEĆTEN"
+      },
+      "geometry": { "type": "Point", "coordinates": [-123.42646, 48.6737] }
+    }
+  ]
+}
