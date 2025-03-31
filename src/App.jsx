@@ -153,7 +153,7 @@ function WebMap() {
     const center = map.current.getCenter();
     const lat = center.lat.toFixed(6);
     const lng = center.lng.toFixed(6);
-    return `${currHost}/app/q/${activeQuestion}/z/${zoom}/c/${lat},${lng}`;
+    return `${currHost}/app/${activeQuestion}/${zoom}/${lat},${lng}`;
   }
 
   return (
