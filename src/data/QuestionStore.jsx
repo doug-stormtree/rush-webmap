@@ -8,7 +8,11 @@ questionContext.keys().forEach((qcKey) => {
   questions.push([key, rest]);
 });
 questions = questions.sort();
-questions.push(...questions.splice(questions.findIndex(v => v[0] === 'development'), 1));
+
+// Nature in the City Map requested to be manually placed after Be Healthy
+const natureIndex = questions.findIndex(v => v[0] === 'nature-in-the-city-map')
+questions.splice(2, 0, ...questions.splice(natureIndex, 1));
+
 const questionMap = new Map(questions);
 questions = undefined;
 export default questionMap;

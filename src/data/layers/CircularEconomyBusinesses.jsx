@@ -31,7 +31,7 @@ const layer = {
           f.properties.name,
           f.properties?.description?.blocks.filter((b) => b.type === "paragraph")[0]?.data.text ?? '',
           `https://greenmap.org/browse/sites/${f.properties._id}`,
-          'Show More at OpenGreenMap.org',
+          'Show More at GreenMap.org',
           imageURL
         ), {offset: [0,-6]});
     }
