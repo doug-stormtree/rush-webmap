@@ -122,7 +122,7 @@ export const PlacesAutocomplete = ({ isMobile }) => {
       <Input
         ref={inputRef}
         width={inputWidth}
-        marginStart='-0.875rem'
+        marginStart='-0.625rem'
         borderRadius='xl'
         bgColor='gray.100'
         fontFamily='var(--chakra-fonts-body)'

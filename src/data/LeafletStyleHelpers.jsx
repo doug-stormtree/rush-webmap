@@ -101,7 +101,7 @@ const MapPopup = (
         </Text>
       )}
       {imageURL && (
-        <a href={imageURL} target='_blank' rel='noreferrer'>
+        <a href={link ?? imageURL ?? '#'} target='_blank' rel='noreferrer'>
           <Image src={imageURL} alt={title} />
         </a>
       )}
