@@ -11,7 +11,7 @@ const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
     container: {
       position: 'absolute',
       overflow: 'hidden',
-      height: 'min(40svh, 32rem)',
+      height: 'min(48svh, 34rem)',
       width: 'min(48rem, 100vw)',
       maxHeight: 'calc(100svh - 6.25rem)',
       maxWidth: mobileStyle('100vw', 'min(calc(100% - 34.5rem), 100vw)'),
@@ -21,9 +21,12 @@ const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
       right: mobileStyle('0', '3.325rem'),
       resize: mobileStyle('none', 'both'),
       bgColor:'white',
-      padding:'1rem',
+      padding:'0.875rem',
       transform: 'scaleY(-1)',
-      borderBottomRadius:'xl', // Bottom because flipped
+
+      // Bottom because flipped
+      borderBottomLeftRadius: 'xl',
+      borderBottomRightRadius: mobileStyle('xl', 'none')
     },
     inner: {
       transform: 'scaleY(-1)',

@@ -604,22 +604,22 @@ export const LegendItemOGM = ({ layerId }) => {
       { true || isOpen ? (
         <Flex direction='row' justifyContent='space-around' >
           <Link
-            href={layer.liveOverride?.btn1?.url ?? `https://greenmap.org/browse/sites?map=${layer?.ogmMapId}`}
-            isExternal
-          >
-            <Button colorScheme='green'>{layer.liveOverride?.btn1?.label ?? 'Visit Campaign'}</Button>
-          </Link>
-          <Link
-            href={layer.liveOverride?.btn2?.url ?? `https://greenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
+            href={layer.liveOverride?.btn1?.url ?? `https://greenmap.org/manage/features/add?mapId=${layer?.ogmMapId}`}
             isExternal
           >
             { layer.liveOverride?.ogmNoAccountWarning ? (
-              <Button colorScheme='green' >{layer.liveOverride?.btn2?.label ?? 'Add a Feature'}</Button>
+              <Button colorScheme='green' >{layer.liveOverride?.btn1?.label ?? 'Add a Feature'}</Button>
             ) : (
               <Tooltip label='Will Require OpenGreenMap Account' placement='top' bg='orange.600' hasArrow>
-                <Button colorScheme='green' >{layer.liveOverride?.btn2?.label ?? 'Add a Feature'}</Button>
+                <Button colorScheme='green' >{layer.liveOverride?.btn1?.label ?? 'Add a Feature'}</Button>
               </Tooltip>
             )}
+          </Link>
+          <Link
+            href={layer.liveOverride?.btn2?.url ?? `https://greenmap.org/browse/sites?map=${layer?.ogmMapId}`}
+            isExternal
+          >
+            <Button colorScheme='green'>{layer.liveOverride?.btn2?.label ?? 'Visit Campaign'}</Button>
           </Link>
         </Flex>
       ) : null }

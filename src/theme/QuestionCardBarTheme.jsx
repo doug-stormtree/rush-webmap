@@ -60,7 +60,7 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
       gap: '10px',
       transform: mobileStyle('none', 'scaleX(-1)'), //Flips the child back to normal
 
-      _before: {
+      /* _before: {
         content: '"How can I...?"',
         fontFamily: 'var(--chakra-fonts-body)',
         fontWeight: '500',
@@ -73,13 +73,13 @@ const QuestionCardBarTheme = helpers.defineMultiStyleConfig({
         zIndex: '10',
         width: '104px',
         marginLeft: mobileStyle('6%', '0'),
-      }
+      } */
     },
     container: {
       transform: mobileStyle('none', 'scaleX(-1)'), //Reflects the parent horizontally
       height: 'calc(100% - 40px)',
       minWidth: mobileStyle('100%', '140px'),
-      overflow: 'scroll',
+      overflowY: 'scroll',
       top:'2.5rem',
       zIndex:'9',
       pointerEvents: mobileStyle('auto', 'none'),

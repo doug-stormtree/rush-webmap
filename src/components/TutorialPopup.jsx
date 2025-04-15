@@ -36,10 +36,11 @@ export default function TutorialPopup({ isMobile }) {
         margin='0 auto'
         textAlign='center'
         lineHeight='1'
-        paddingTop='15%'
+        paddingTop='14%'
         paddingBottom='50%'
         paddingX='10%'
         transform='scale(-1, 1)'
+        width='9rem'
       >
         <Box transform='scale(-1, 1)'>
           {TutorialPopupQuote}

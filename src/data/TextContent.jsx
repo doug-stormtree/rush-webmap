@@ -33,7 +33,7 @@ export const AboutPageText = [
   },
 ];
 
-export const TutorialPopupQuote = "Find your question and explore the map!";
+export const TutorialPopupQuote = "Pick a topic from the left to start exploring the map!";
 
 export const LegendGroups = {
   StartOn: { group: "Starting Place", position: 0, subheading: undefined },
