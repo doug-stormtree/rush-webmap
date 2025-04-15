@@ -21,9 +21,9 @@ const ContentInitiativeContainerTheme = helpers.defineMultiStyleConfig({
       right: mobileStyle('0', '3.325rem'),
       resize: mobileStyle('none', 'both'),
       bgColor:'white',
-      padding:'1rem',
+      padding:'0.875rem',
       transform: 'scaleY(-1)',
-      borderBottomRadius:'xl', // Bottom because flipped
+      borderBottomLeftRadius: 'xl', // Bottom because flipped
     },
     inner: {
       transform: 'scaleY(-1)',
