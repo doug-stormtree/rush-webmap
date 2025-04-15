@@ -141,7 +141,7 @@ export default function ContentInitiativeContainer() {
           <TabPanels
             ref={tabPanelsRef}
             display={isMinimized ? 'none' : undefined}
-            overflow='scroll'
+            overflow='auto'
             height='calc(100% - 1rem)'
             paddingBottom='1rem'
           >
