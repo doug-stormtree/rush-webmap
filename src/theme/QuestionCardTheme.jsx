@@ -20,8 +20,8 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       borderRadius: 'xl',
       background: '#333',
       color: 'white',
-      position: 'sticky',
-      top: '3.75rem',
+      position: 'relative',
+      top: '0', //'3.75rem',
       alignSelf: mobileStyle('inherit', 'flex-start'),
     },
     image: {
@@ -66,7 +66,7 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
       fontWeight: '500',
       fontSize: '0.875rem',
       listStyle: 'inside',
-      paddingY: '0.6rem',
+      //paddingY: '0.6rem',
     },
     footer: {
       display: 'none',
@@ -100,6 +100,9 @@ const QuestionCardTheme = helpers.defineMultiStyleConfig({
         fontSize: 'sm',
         textAlign: 'center',
         textShadow: '1px 1px 2px black, 1px 1px 1px black',
+      },
+      content: {
+        paddingY: '0px',
       },
     },
     wide: {
