@@ -13,12 +13,13 @@ const Question = {
   },
   layers: [
     { key: "AgriculturalLandReserve", active: true, ...LegendGroups.StartOn },
-    { key: "CulturalFoods", active: true, ...LegendGroups.OGM },
+    { key: "MetchosinWestshoreFarmToFork", active: true, ...LegendGroups.StartOn },
     { key: "FoodSecurity", active: true, ...LegendGroups.StartOn },
+    { key: "ForageFish", active: false, ...LegendGroups.StartOff },
+    { key: "ShellfishPO", active: false, ...LegendGroups.StartOff },
     { key: "FarmToFork", active: false, ...LegendGroups.OGM },
     { key: "Pollinators", active: true, ...LegendGroups.OGM },
-    { key: "ShellfishPO", active: false, ...LegendGroups.StartOff },
-    { key: "ForageFish", active: false, ...LegendGroups.StartOff },
+    { key: "CulturalFoods", active: true, ...LegendGroups.OGM },
   ],
   sections: {
     one: [
