@@ -6,10 +6,10 @@ import sanitizeHtml from 'sanitize-html';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 // mapData to Leaflet helper function
-export const pointToIconByProperty = (feature, latlng, property, propertyMap) => {
+export const pointToIconByProperty = (feature, latlng, property, propertyMap, size = 32, padding = 3) => {
   if (property in feature.properties) {
     const icon = propertyMap.get(feature.properties[property]);
-    return pointToIcon(latlng, icon ?? {fill:'#000',stroke:'#000',icon:null});
+    return pointToIcon(latlng, icon ?? {fill:'#000',stroke:'#000',icon:null}, size, padding);
   }
   return L.marker(latlng);
 }
@@ -92,21 +92,27 @@ const MapPopup = (
   {title, desc, link, linkText, imageURL, audioURL, audioText, warningText}
 ) => {
   const descItems = Array.isArray(desc) ? desc : [ desc ]
+  const linkItems = Array.isArray(link) ? link : [ link ]
+  const linkTextItems = Array.isArray(linkText) ? linkText : [ linkText ]
+  const zipLinks = linkItems.map((link, index) => [link, linkTextItems[index]])
+
   return (
     <VStack align='flex-start' maxHeight='min(36vh, 300px)'>
-      <Heading size='sm' fontSize='20px'><b>{title}</b></Heading>
-      { descItems.map((desc, index) => 
-        <Text key={'desc'+index} fontSize='16px'>
+      <Heading flex='none' size='sm' fontSize='20px'><b>{title}</b></Heading>
+      {descItems.map((desc, index) => 
+        <Text flex='none' key={'desc'+index} fontSize='16px'>
           {sanitizeHtml(desc, {allowedAttributes: {}, allowedTags: []})}
         </Text>
       )}
       {imageURL && (
-        <a href={link ?? imageURL ?? '#'} target='_blank' rel='noreferrer'>
+        <a flex='none' href={link ?? imageURL ?? '#'} target='_blank' rel='noreferrer'>
           <Image src={imageURL} alt={title} />
         </a>
       )}
-      {link && (
-        <Link 
+      {zipLinks.map(([link, linkText], index) => 
+        <Link
+          flex='none'
+          key={link+index}
           href={link}
           isExternal
           width='100%'
@@ -120,6 +126,7 @@ const MapPopup = (
       )}
       {audioURL && (
         <AudioPlayer
+          flex='none'
           src={audioURL}
           header={audioText}
           volume={0.5}
