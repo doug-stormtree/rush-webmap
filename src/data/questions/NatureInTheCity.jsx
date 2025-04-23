@@ -491,7 +491,7 @@ const Question = {
           key='37'
           display='grid'
           gridTemplateColumns='repeat(auto-fill, minmax(200px, 1fr));'
-          gridAutoRows='21px'
+          gridAutoRows='1lh'
         >
           <Text gridRow='span 3'><b>Project Manager</b><br/>Kathleen Burton</Text>
           <Text gridRow='span 7'><b>Content Advisors</b><br/>Eva Riccius<br/>Kitty Lloyd<br/>Lindsey McCrank<br/>Katie Turner<br/>Bob Peart</Text>
