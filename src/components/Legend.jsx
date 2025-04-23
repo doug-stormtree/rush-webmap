@@ -374,6 +374,7 @@ const SinglePatchPoint = ({ style }) => {
       fill={style.fill}
       stroke={style.stroke}
       src={style.src}
+      marginInline='-4px'
     />
   );
 }
@@ -381,7 +382,7 @@ const SinglePatchPoint = ({ style }) => {
 const ClassifiedPatchPoint = ({ styleMap }) => {
   const styles = [...styleMap.entries()].slice(0,3);
   return (
-    <HStack spacing={'1'}>
+    <HStack spacing='0'>
       {styles.map(([key, style], index) => {
         const { legendText, ...restStyle } = style;
         return (
