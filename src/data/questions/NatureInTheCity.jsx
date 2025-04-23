@@ -477,7 +477,7 @@ const Question = {
           <Link isExternal href='https://rpbo.org/'><Image h='80px' src={require('../logos/NatureHood Partners/6. RPBO.png')} /></Link>
           <Link isExternal href='https://vicharbourbirds.ca/'><Image h='60px' src={require('../logos/NatureHood Partners/7. FriendsVHMBS.png')} /></Link>
           <Link isExternal href='https://www.oakbay.ca/'><Image h='42px' src={require('../logos/NatureHood Partners/8. District of Oak Bay.png')} /></Link>
-          <Link isExternal href='https://www.swanlake.bc.ca/'><Image h='75px' src={require('../logos/NatureHood Partners/9. SwanLake.png')} /></Link>
+          <Link isExternal href='https://www.swanlake.bc.ca/'><Image h='60px' src="/SLNS-Primary-Logo-oak-leaf.svg" /></Link>
           <Link isExternal href='https://www.vicnhs.bc.ca/'><Image h='80px' src={require('../logos/NatureHood Partners/10. VNHS.png')} /></Link>
           <Link isExternal href='https://www.eaglewingtours.com/'><Image h='75px' src={require('../logos/NatureHood Partners/11. Eagle Wing Tours.png')} /></Link>
           <Link isExternal href='https://www.birdscanada.org/'><Image h='75px' src={require('../logos/NatureHood Partners/12. Birds Canada.png')} /></Link>
