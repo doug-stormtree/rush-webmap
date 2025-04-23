@@ -18,7 +18,7 @@ const Question = {
     { key: "ForageFish", active: false, ...LegendGroups.StartOff },
     { key: "ShellfishPO", active: false, ...LegendGroups.StartOff },
     { key: "FarmToFork", active: false, ...LegendGroups.OGM },
-    { key: "Pollinators", active: true, ...LegendGroups.OGM },
+    { key: "Pollinators", active: false, ...LegendGroups.OGM },
     { key: "CulturalFoods", active: true, ...LegendGroups.OGM },
   ],
   sections: {

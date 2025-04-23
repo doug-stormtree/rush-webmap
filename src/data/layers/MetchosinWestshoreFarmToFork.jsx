@@ -41,7 +41,7 @@ const styleMap = new Map([
 ])
 
 const layer = {
-  title: "Farm to Fork Map",
+  title: "Re-Imagine Westshore Farm to Fork",
   description: [
     {type: 'p', content: 'The Metchosin & Westshore Farm to Fork Map seeks to connect local folks to local foods by highlighting food assets within the region! This map makes learning about the growing region and its opportunities more accessible, and acts as a resource to support local food and agriculture. Viewers can use this map to check out farms in the region, markets and establishments that make and sell local goods, and opportunities to learn and engage with growers and producers. This map aims to boost food security and empower folks to get out there to grow and enjoy local food!'},
   ],
