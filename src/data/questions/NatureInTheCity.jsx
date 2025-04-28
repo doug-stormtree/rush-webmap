@@ -448,6 +448,68 @@ const Question = {
           <li>Respect wildlife.</li>
           <li>Be mindful of others.</li>
         </ul>),
+        <Image key='img.2' src={require('../jpg/Fern.jpg')} maxWidth='28rem' />,
+        <Text key='33' {...h2}>Acknowledgements</Text>,
+        <Text key='34'>
+          We acknowledge with respect the territory of the SENĆOŦEN and lək̓ʷəŋən
+          speaking peoples on whose traditional lands and waterways we live,
+          work and play and whose deep relationship to place continues to this
+          day. Greater Victoria NatureHood looks forward to building a future
+          map that includes more First Nations knowledge, language and history
+          to provide a more complete illustration of our region’s natural
+          heritage.
+        </Text>,
+        <Flex
+          key='35'
+          direction='row'
+          wrap='wrap'
+          justifyContent='center'
+          alignItems='center'
+          alignSelf='center'
+          gap='24px'
+          maxWidth='1000px'
+        >
+          <Link isExternal href='https://www.gvnaturehood.com/'><Image h='60px' src={require('../logos/NatureHood Partners/1. NatureHood.png')} /></Link>
+          <Link isExternal href='https://www.crd.ca/'><Image h='42px' src={require('../logos/NatureHood Partners/2. CRD.png')} /></Link>
+          <Link isExternal href='https://www.saanich.ca/'><Image h='54px' src={require('../logos/NatureHood Partners/3. Saanich.png')} /></Link>
+          <Link isExternal href='https://www.friendsofshoalharbour.ca/'><Image h='60px' src={require('../logos/NatureHood Partners/4. FoSHMBS.png')} /></Link>
+          <Link isExternal href='https://www.esquimalt.ca/'><Image h='60px' src={require('../logos/NatureHood Partners/5. Township of Esquimalt.png')} /></Link>
+          <Link isExternal href='https://rpbo.org/'><Image h='80px' src={require('../logos/NatureHood Partners/6. RPBO.png')} /></Link>
+          <Link isExternal href='https://vicharbourbirds.ca/'><Image h='60px' src={require('../logos/NatureHood Partners/7. FriendsVHMBS.png')} /></Link>
+          <Link isExternal href='https://www.oakbay.ca/'><Image h='42px' src={require('../logos/NatureHood Partners/8. District of Oak Bay.png')} /></Link>
+          <Link isExternal href='https://www.swanlake.bc.ca/'><Image h='60px' src="/SLNS-Primary-Logo-oak-leaf.svg" /></Link>
+          <Link isExternal href='https://www.vicnhs.bc.ca/'><Image h='80px' src={require('../logos/NatureHood Partners/10. VNHS.png')} /></Link>
+          <Link isExternal href='https://www.eaglewingtours.com/'><Image h='75px' src={require('../logos/NatureHood Partners/11. Eagle Wing Tours.png')} /></Link>
+          <Link isExternal href='https://www.birdscanada.org/'><Image h='75px' src={require('../logos/NatureHood Partners/12. Birds Canada.png')} /></Link>
+          <Link isExternal href='https://www.saanich.ca/EN/main/parks-recreation-community-services.html'><Image h='90px' src={require('../logos/NatureHood Partners/13. Saanich Parks.png')} /></Link>
+          <Link isExternal href='https://hat.bc.ca/'><Image h='54px' src={require('../logos/NatureHood Partners/14. HAT.png')} /></Link>
+          <Link isExternal href='https://ltgov.bc.ca/'><Image h='75px' src={require('../logos/NatureHood Partners/15. Lieutenant Governor of BC.png')} /></Link>
+          <Link isExternal href='https://profils-profiles.science.gc.ca/en/research-centre/pacific-wildlife-research-centre'><Image h='75px' src={require('../logos/NatureHood Partners/16. CanadianWildlifeService.png')} /></Link>
+        </Flex>,
+        <Text key='36' {...h3}>Creative Team</Text>,
+        <Box
+          key='37'
+          display='grid'
+          gridTemplateColumns='repeat(auto-fill, minmax(200px, 1fr));'
+          gridAutoRows='1lh'
+        >
+          <Text gridRow='span 3'><b>Project Manager</b><br/>Kathleen Burton</Text>
+          <Text gridRow='span 7'><b>Content Advisors</b><br/>Eva Riccius<br/>Kitty Lloyd<br/>Lindsey McCrank<br/>Katie Turner<br/>Bob Peart</Text>
+          <Text gridRow='span 5'><b>SENĆOŦEN<br/>Language Revitalist</b><br/>ŚW̱,XELOSELWET<br/>Tiffany Joseph</Text>
+          <Text gridRow='span 3'><b>Visual Artist</b><br/>Kristi Bridgeman</Text>
+          <Text gridRow='span 4'><b>Graphic Designers</b><br/>Matthias Reinicke<br/>Jennifer Hobson</Text>
+          <Text gridRow='span 3'><b>Editor</b><br/>Vicki Metcalfe</Text>
+          <Text gridRow='span 3'><b>Cartography</b><br/>Jean-Paul Bezeau</Text>
+        </Box>,
+        <Text key='38' {...h3}>Sources</Text>,
+        <Text key='39'>
+          Capital Regional District, District of Saanich Concept Field Guide for Plants and Animals & Our Backyard Magazine, Township of Esquimalt, District of Oak Bay.
+        </Text>,
+        <Text key='38' {...h3}>Credits</Text>,
+        <Text key='39'>
+          This map was made possible by a generous grant from Nature Canada to NatureHood Greater Victoria. Additional thanks go to the many individuals and organizations that provided guidance and resources to help make the map, including District of Saanich, Capital Regional District, Lime Design and Hemlock Printers.
+        </Text>,
+        <Image key='40' maxWidth='32rem' src={require('../logos/NatureHood Partners/Environment-and-climate-change-canada-logo.jpg')} />,
       ]
     },
     {
@@ -579,18 +641,6 @@ const Question = {
           as a variety of native flora and fauna including the Purple Martin,
           Bumblebee and camas flowers.
         </Text>,
-        <Text key='33' {...h2}>Acknowledgements</Text>,
-        <Image key='img.2' src={require('../jpg/Fern.jpg')} maxWidth='28rem' />,
-        <Text key='34'>
-          We acknowledge with respect the territory of the SENĆOŦEN and lək̓ʷəŋən
-          speaking peoples on whose traditional lands and waterways we live,
-          work and play and whose deep relationship to place continues to this
-          day. Greater Victoria NatureHood looks forward to building a future
-          map that includes more First Nations knowledge, language and history
-          to provide a more complete illustration of our region’s natural
-          heritage.
-        </Text>,
-        <Image key='35' maxWidth='28rem' src={require('../jpg/Acknowledgements.jpg')} />
       ],
     },
     {
