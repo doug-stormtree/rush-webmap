@@ -12,6 +12,8 @@ const Question = {
     selected: "cyan.100",
   },
   layers: [
+    { key: "GreenspaceForAll-RestrictedGreenspace", active: true, group: "Greenspace for All" },
+    { key: "GreenspaceForAll-UnderservedCommunity", active: true, group: "Greenspace for All" },
     { key: "BigTrees", active: true, group: "Trees" },
     { key: "CarbonSequestration", active: false, group: "Landcover" },
     { key: "CherryTrees", active: false, group: "Trees" },
@@ -48,8 +50,6 @@ const Question = {
     { key: "NatureHood_MBS", active: false, ...LegendGroups.NatureHood },
     { key: "CRD_Parks", active: false, ...LegendGroups.NatureHood },
     { key: "NatureHood_Animals", active: true, ...LegendGroups.NatureHood },
-    { key: "GreenspaceForAll-RestrictedGreenspace", active: true, group: "Greenspace for All" },
-    { key: "GreenspaceForAll-UnderservedCommunity", active: true, group: "Greenspace for All" },
   ],
   sections: {
     one: [
