@@ -23,7 +23,7 @@ const Question = {
     { key: "SensitiveEcosystems", active: false, group: "Landcover" },
     { key: "SpeciesAtRisk", active: false, group: "Landcover" },
     { key: "StewardshipGroups", active: false, group: "Community" },
-    { key: "TreeBylaws", active: true, group: "Trees" },
+    { key: "TreeBylaws", active: false, group: "Trees" },
     { key: "TreeCoverage2005", active: false, group: "Trees" },
     { key: "TreeCoverage2019", active: false, group: "Trees" },
     { key: "TreeEquity", active: true, ...LegendGroups.OGM },
@@ -48,6 +48,8 @@ const Question = {
     { key: "NatureHood_MBS", active: false, ...LegendGroups.NatureHood },
     { key: "CRD_Parks", active: false, ...LegendGroups.NatureHood },
     { key: "NatureHood_Animals", active: true, ...LegendGroups.NatureHood },
+    { key: "GreenspaceForAll-RestrictedGreenspace", active: true, group: "Greenspace for All" },
+    { key: "GreenspaceForAll-UnderservedCommunity", active: true, group: "Greenspace for All" },
   ],
   sections: {
     one: [
