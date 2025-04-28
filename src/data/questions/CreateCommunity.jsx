@@ -14,6 +14,8 @@ const Question = {
     selected: 'yellow.100',
   },
   layers: [
+    { key: "GreenspaceForAll-RestrictedGreenspace", active: false, group: "Greenspace for All" },
+    { key: "GreenspaceForAll-UnderservedCommunity", active: false, group: "Greenspace for All" },
     { key: 'AgriculturalLandReserve', active: false, group: 'Greenspace' },
     { key: 'AirConditionedBuildings', active: false, group: 'Civic' },
     { key: 'Aquifers', active: false, group: 'Water' },
