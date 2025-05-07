@@ -195,9 +195,11 @@ function WebMap() {
           setMobileMenuState={setMobileMenuState}
           isMobile={isMobile}
         >
+          {/*
           <PlacesAutocomplete 
             isMobile={isMobile}
           />
+          */}
           <MapBasemap />
           <MapData db={database} />
         </MapView>
