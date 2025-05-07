@@ -234,6 +234,16 @@ const Question = {
         ],
       },
       {
+        title: 'Green Shores',
+        link: 'https://stewardshipcentrebc.ca/green-shores-home/',
+        image: require('../png/GreenShores.png'),
+        description: 'Green Shores™ is a science-based framework and certification program that provides tools and best practices for property owners, governments, and environmental professionals to restore shoreline ecosystem functions using nature-based solutions. As part of the Resilient Coasts for Salmon (RC4S) project, the Stewardship Centre for BC has partnered with community groups, local and regional governments, and First Nations to apply nature-based approaches to restoring the ecological and cultural values of the Esquimalt Gorge Park and Songhees Walkway Pocket Beach shorelines.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
+      },
+      {
         title: 'Gulf Islands National Parks Reserve',
         link: 'https://parks.canada.ca/pn-np/bc/gulf',
         image: require('../png/GulfIslands.png'),
