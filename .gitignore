@@ -127,3 +127,4 @@ yarn-debug.log*
 yarn-error.log*
 .vscode/settings.json
 src/data/naturehood/svgo.config.js
+.nvmrc

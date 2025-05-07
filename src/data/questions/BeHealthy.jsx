@@ -106,6 +106,14 @@ const Question = {
   act: {
     initiatives: [
       {
+        title: "Stewardship Centre for BC",
+        link: "https://stewardshipcentrebc.ca/greenspace-for-all/",
+        image: require("../png/GorgeStewardshipCentre.png"),
+        description:
+          "The Stewardship Centre for BC promotes and delivers stewardship education and champions science-based stewardship practices for land and water in BC. Through its Greenspace for All initiative, the Stewardship Centre is partnering with local organizations and governments to improve equitable access to greenspaces and their benefits for equity-deserving communities on the East Coast of Vancouver Island.",
+        tags: [Tag.Organization],
+      },
+      {
         title: "The State of the Forest in Canada",
         link: "https://www.stateoftheforest.ca/",
         image: require("../png/StateOfTheForest.png"),
@@ -216,14 +224,6 @@ const Question = {
         description:
           "The Colquitz Storymap beautifully depicts the ongoing Colquitz River restoration project, launched by Peninsula Streams and the  District of Saanich in 2019. Interact with the map to learn about how the renewed health of the stream, as indicated by the return of native species including coho salmon, coastal cutthroat trout, otters and grey blue herons. Volunteer at native planting parties in the watershed to help ensure these positive changes continue and endure.",
         tags: [Tag.StoryMap],
-      },
-      {
-        title: "Gorge Stewardship Centre",
-        link: "https://stewardshipcentrebc.ca/esquimalt-gorge-park-gs-demonstration-site/",
-        image: require("../png/GorgeStewardshipCentre.png"),
-        description:
-          "The Stewardship Centre for BC promotes and delivers stewardship education, and champions science-based stewardship practices for land and water in BC. As part of the Resilient Coasts for Salmon (RC4S) project, the Stewardship Centre for BC is partnered with community groups, the CRD, and the Songhees Nation and Esquimalt Nations to use a nature-based approach in restoring the ecological and cultural values of the Esquimalt Gorge Park shoreline.",
-        tags: [Tag.Organization],
       },
       {
         title: "Greater Victoria Green Team",

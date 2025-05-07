@@ -10,9 +10,9 @@ const styleMap = new Map([
 ]);
 
 const layer = {
-  title: 'Restricted Greenspace',
+  title: 'Greenspace Accessibility',
   description: [
-    {type:'p', content:'This map was created by the Stewardship Centre for BC (SCBC) to identify areas where greenspace such as parks and protected areas are not equitably distributed. This map combines greenspace area and distance to greenspace to evaluate greenspace accessibility. Higher scores indicate lower access to greenspace. More information can be found at:'},
+    {type:'p', content:'This map was created by the Stewardship Centre for BC (SCBC) to identify areas where protected greenspaces are not equitably distributed. This map combines greenspace area and distance to greenspace to evaluate greenspace accessibility. Higher scores indicate lower access to greenspace. More information can be found at:'},
     {
       type:'link',
       content:'Greenspace for All',
