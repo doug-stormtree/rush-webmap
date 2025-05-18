@@ -52,6 +52,7 @@ const Question = {
     { key: 'MajorTransportationHubs', active: false, group: 'Civic' },
     { key: 'MaltbyLakeBirdsong', active: false, group: 'Greenspace' },
     { key: 'Municipalities', active: false, group: 'Civic' },
+    { key: 'MunicipalHousingTargets', active: false, group: 'Civic' },
     { key: 'NativeLandDigitalLanguages', active: false, group: 'Indigenous' },
     { key: 'NativeLandDigitalTerritories', active: false, group: 'Indigenous' },
     { key: 'NativeLandDigitalTreaties', active: false, group: 'Indigenous' },
