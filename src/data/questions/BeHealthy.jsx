@@ -108,10 +108,20 @@ const Question = {
       {
         title: "Stewardship Centre for BC",
         link: "https://stewardshipcentrebc.ca/greenspace-for-all/",
-        image: require("../png/GorgeStewardshipCentre.png"),
+        image: require("../png/SCBC_COL_2019.png"),
         description:
           "The Stewardship Centre for BC promotes and delivers stewardship education and champions science-based stewardship practices for land and water in BC. Through its Greenspace for All initiative, the Stewardship Centre is partnering with local organizations and governments to improve equitable access to greenspaces and their benefits for equity-deserving communities on the East Coast of Vancouver Island.",
         tags: [Tag.Organization],
+      },
+      {
+        title: 'Green Shores',
+        link: 'https://stewardshipcentrebc.ca/green-shores-home/',
+        image: require('../png/GreenShores.png'),
+        description: 'Green Shores™ is a science-based framework and certification program that provides tools and best practices for property owners, governments, and environmental professionals to restore shoreline ecosystem functions using nature-based solutions. As part of the Resilient Coasts for Salmon (RC4S) project, the Stewardship Centre for BC has partnered with community groups, local and regional governments, and First Nations to apply nature-based approaches to restoring the ecological and cultural values of the Esquimalt Gorge Park and Songhees Walkway Pocket Beach shorelines.',
+        tags: [
+          Tag.Organization,
+          Tag.Business,
+        ],
       },
       {
         title: "The State of the Forest in Canada",
