@@ -15,6 +15,7 @@ const Question = {
   },
   layers: [
     { key: 'MunicipalHousingTargets', active: true, ...LegendGroups.StartOn },
+    { key: 'VictoriaShelters', active: true, ...LegendGroups.StartOn },
     { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },
   ],
   sections: {

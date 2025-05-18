@@ -70,6 +70,7 @@ const Question = {
     { key: 'TreeCoverage2005', active: false, group: 'Greenspace' },
     { key: 'TreeCoverage2019', active: false, group: 'Greenspace' },
     { key: 'TreeEquity', active: false, ...LegendGroups.OGM },
+    { key: 'VictoriaShelters', active: false, group: 'Community' },
     { key: 'WatershedRunoffAbsorption', active: false, group: 'Water' },
     { key: 'Watersheds', active: false, group: 'Water' },
   ],
