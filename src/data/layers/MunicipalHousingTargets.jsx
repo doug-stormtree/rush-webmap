@@ -8,7 +8,7 @@ const title = 'Municipality Housing Targets'
 
 const styleMap = new Map([
   ["Yes", {fillColor: '#d7b65a', color: 'rgb(130,130,130)', legendText: 'Housing Supply Act'}],
-  ["No",  {fillColor: '#aacc64', color: 'rgb(130,130,130)', legendText: 'Not Included'}]
+  ["No",  {fillColor: 'rgb(130,130,130)', color: 'rgb(130,130,130)', legendText: 'Not Included'}]
 ]);
 
 const layer = {
@@ -30,6 +30,10 @@ const layer = {
       content:'2. Housing target orders - Province of British Columbia',
       url:'https://www2.gov.bc.ca/gov/content/housing-tenancy/local-governments-and-housing/housing-targets/orders#group-2'
     },
+    {
+      type: 'p',
+      content: 'Note: RUSH provides this information for educational purposes only and cannot guarantee that it is accurate or current.'
+    }
   ],
   data: require('../geojson/MunicipalHousingTargets.geojson'),
   shape: 'polygon',
