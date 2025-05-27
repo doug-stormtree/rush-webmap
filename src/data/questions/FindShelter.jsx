@@ -15,6 +15,8 @@ const Question = {
   },
   layers: [
     { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },
+    { key: "GreenspaceForAll-RestrictedGreenspace", active: true, group: "Greenspace for All" },
+    { key: "GreenspaceForAll-UnderservedCommunity", active: true, group: "Greenspace for All" },
   ],
   sections: {
     one: [

@@ -160,6 +160,11 @@ const logos = [
     alt: 'Victoria Drains',
     url: 'https://www.victoriadrains.com/'
   },
+  { 
+    src: require('../data/png/SCBC_COL_2019.png'),
+    alt: 'Stewardship Centre for British Columbia',
+    url: 'https://stewardshipcentrebc.ca/'
+  },
 ]
 
 const LogoComponents = logos.map((logo, index) => (
