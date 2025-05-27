@@ -22,6 +22,7 @@ const Question = {
     { key: 'NativeLandDigitalLanguages', active: false, group: 'Indigenous' },
     { key: 'NativeLandDigitalTerritories', active: false, group: 'Indigenous' },
     { key: 'NativeLandDigitalTreaties', active: false, group: 'Indigenous' },
+    { key: 'NatureInspiredPlaygrounds', active: true, ...LegendGroups.OGM },
   ],
   sections: {
     one: [
