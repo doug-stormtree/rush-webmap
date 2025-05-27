@@ -111,35 +111,20 @@ const logos = [
     url: 'https://victoriaplacemaking.ca/'
   },
   { 
+    src: require('../data/png/SCBC_COL_2019.png'),
+    alt: 'Stewardship Centre for British Columbia',
+    url: 'https://stewardshipcentrebc.ca/'
+  },
+  { 
     src: require('../data/logos/11. Data for Good Vancouver.png'),
     alt: 'Data for Good Vancouver',
     url: 'https://vancouver.dataforgood.ca/'
   },
-  { 
-    src: require('../data/logos/12. Oak Bay High.png'),
-    alt: 'Oak Bay High School',
-    url: 'https://oakbay.sd61.bc.ca/'
-  },
-  { 
-    src: require('../data/logos/13. Parklands High School.png'),
-    alt: 'Parklands High School',
-    url: 'https://parkland.saanichschools.ca/'
-  },
-  { 
-    src: require('../data/logos/14. Mount Doug High School.png'),
-    alt: 'Mount Douglas Secondary',
-    url: 'https://mountdoug.sd61.bc.ca/'
-  },
-  { 
-    src: require('../data/logos/15. Claremont High School.png'),
-    alt: 'Claremont Secondary',
-    url: 'https://claremont.saanichschools.ca/'
-  },
-  { 
+/*   { 
     src: require('../data/logos/16. RBC Tech for Nature.png'),
     alt: 'RBC Tech for Nature',
     url: 'https://www.rbc.com/our-impact/climate/environmental-donations.html'
-  },
+  }, */
   { 
     src: require('../data/logos/17. University of Victoria CEL.png'),
     alt: 'The University of Victoria Community-Engaged Learning',
@@ -160,11 +145,6 @@ const logos = [
     alt: 'Victoria Drains',
     url: 'https://www.victoriadrains.com/'
   },
-  { 
-    src: require('../data/png/SCBC_COL_2019.png'),
-    alt: 'Stewardship Centre for British Columbia',
-    url: 'https://stewardshipcentrebc.ca/'
-  },
 ]
 
 const LogoComponents = logos.map((logo, index) => (
@@ -174,8 +154,44 @@ const LogoComponents = logos.map((logo, index) => (
       alt={logo.alt}
       src={logo.src}
       objectFit='contain'
-      maxHeight='8rem'
+      maxHeight='7rem'
       maxWidth='16rem'
+    />
+  </a>
+))
+
+const logosHighSchools = [
+  { 
+    src: require('../data/logos/12. Oak Bay High.png'),
+    alt: 'Oak Bay High School',
+    url: 'https://oakbay.sd61.bc.ca/'
+  },
+  { 
+    src: require('../data/logos/13. Parklands High School.png'),
+    alt: 'Parklands High School',
+    url: 'https://parkland.saanichschools.ca/'
+  },
+  { 
+    src: require('../data/logos/14. Mount Doug High School.png'),
+    alt: 'Mount Douglas Secondary',
+    url: 'https://mountdoug.sd61.bc.ca/'
+  },
+  { 
+    src: require('../data/logos/15. Claremont High School.png'),
+    alt: 'Claremont Secondary',
+    url: 'https://claremont.saanichschools.ca/'
+  }
+]
+
+const LogoComponentsHighSchool = logosHighSchools.map((logo, index) => (
+  <a href={logo.url}>
+    <Image
+      key={`${logo.alt}-${index}`}
+      alt={logo.alt}
+      src={logo.src}
+      objectFit='contain'
+      maxHeight='6rem'
+      maxWidth='12rem'
     />
   </a>
 ))
@@ -304,10 +320,53 @@ export default function AboutPage() {
             flexFlow='row wrap'
             justifyContent='center'
             alignItems='center'
-            gap='2rem 1rem'
+            gap='2rem'
             marginY='2rem'
           >
             { LogoComponents }
+          </Flex>
+          <Flex
+            marginInline='10%'
+            marginBottom='1rem'
+            direction='row'
+            gap='10px'
+            alignItems='center'
+            _before={{
+              flex: '1',
+              content: '""',
+              height: '4px',
+              background: 'linear-gradient(to left, gray, transparent)'
+            }}
+            _after={{
+              flex: '1',
+              content: '""',
+              height: '4px',
+              background: 'linear-gradient(to right, gray, transparent)'
+            }}
+          >
+            <Text
+              flex='0 0 auto'
+              key='high-schools-headers'
+              fontFamily='var(--chakra-fonts-subHeading)'
+              fontSize='1.25rem'
+              fontWeight='500'
+              color='rgba(0,0,0,0.6)'
+              textDecor='underline'
+              textAlign='center'
+              
+            >
+              Participating High Schools
+            </Text>
+          </Flex>
+          <Flex
+            key='logosHighSchools'
+            flexFlow='row wrap'
+            justifyContent='center'
+            alignItems='center'
+            gap='3rem 1rem'
+            marginY='2rem'
+          >
+            { LogoComponentsHighSchool }
           </Flex>
           <Text
             key='student-contributors'
@@ -320,14 +379,16 @@ export default function AboutPage() {
             width='100%'
             textAlign='center'
           >
-            University of Victoria - Community Mapping & Community Based Participatory Research - Student Contributors
+            University of Victoria - Community Mapping & Community Based Participatory Research
+            <br />
+            Student Contributors
           </Text>
           <Flex
             key='contributors'
             flexFlow='row wrap'
             justifyContent='center'
             alignItems='baseline'
-            gap='2rem 1rem'
+            gap='1rem 1rem'
             marginY='2rem'
           >
             { contributors }
