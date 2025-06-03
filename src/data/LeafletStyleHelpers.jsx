@@ -109,21 +109,32 @@ const MapPopup = (
           <Image src={imageURL} alt={title} />
         </a>
       )}
-      {zipLinks.map(([link, linkText], index) => 
-        <Link
-          flex='none'
-          key={link+index}
-          href={link}
-          isExternal
-          width='100%'
-          overflow='hidden'
-          whiteSpace='nowrap'
-          textOverflow='ellipsis'
-          fontSize='16px'
-        >
-          {linkText ?? link}
-        </Link>
-      )}
+      {zipLinks.map(([link, linkText], index) => {
+        const linkTextClean = sanitizeHtml(linkText, {allowedAttributes: {}, allowedTags: []}) 
+        if (link !== null && link !== undefined) {
+          return (
+            <Link
+              flex='none'
+              key={link+index}
+              href={link}
+              isExternal
+              width='100%'
+              overflow='hidden'
+              whiteSpace='nowrap'
+              textOverflow='ellipsis'
+              fontSize='16px'
+            >
+              {linkText ? linkTextClean : link}
+            </Link>
+          )
+        } else {
+          return (
+            <Text flex='none' key={'link'+index} fontSize='16px'>
+              { linkTextClean }
+            </Text>
+          )
+        }
+      })}
       {audioURL && (
         <AudioPlayer
           flex='none'
