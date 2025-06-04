@@ -56,6 +56,7 @@ const Question = {
     { key: 'NativeLandDigitalLanguages', active: false, group: 'Indigenous' },
     { key: 'NativeLandDigitalTerritories', active: false, group: 'Indigenous' },
     { key: 'NativeLandDigitalTreaties', active: false, group: 'Indigenous' },
+    { key: 'ProposedHousingDevelopments', active: true, group: 'Civic' },
     { key: 'Pollinators', active: false, ...LegendGroups.OGM },
     { key: 'RainGardens', active: false, ...LegendGroups.OGM },
     { key: 'RecyclingDepots', active: false, group: 'Civic' },

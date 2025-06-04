@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "ProposedDevelopments",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Cedar Hill Library Redevelopment", "Status": "Upcoming", "CrntUnits": 0, "PrpsdUnits": 210, "EstmtdCost": "$138,000,000", "EstmtdTime": "Late 2025 - Late 2029" }, "geometry": { "type": "Point", "coordinates": [ -123.33596, 48.46823 ] } },
+{ "type": "Feature", "properties": { "Name": "926/30 Pandora Avenue", "Status": "Upcoming", "CrntUnits": 0, "PrpsdUnits": 205, "EstmtdCost": "$114,400,000", "EstmtdTime": "2025 - Late 2028" }, "geometry": { "type": "Point", "coordinates": [ -123.35772, 48.42771 ] } },
+{ "type": "Feature", "properties": { "Name": "Campus View", "Status": "Upcoming", "CrntUnits": 12, "PrpsdUnits": 119, "EstmtdCost": "$55,400,000", "EstmtdTime": "Completion in Q4 2025" }, "geometry": { "type": "Point", "coordinates": [ -123.31606, 48.46926 ] } },
+{ "type": "Feature", "properties": { "Name": "Verdier", "Status": "Upcoming", "CrntUnits": 0, "PrpsdUnits": null, "EstmtdCost": "$65,400,00", "EstmtdTime": "Tentitive Start 2025" }, "geometry": { "type": "Point", "coordinates": [ -123.44961, 48.57768 ] } },
+{ "type": "Feature", "properties": { "Name": "Village on the Green", "Status": "Upcoming", "CrntUnits": 38, "PrpsdUnits": 160, "EstmtdCost": "$81,200,00", "EstmtdTime": "Spring 2025 - Fall/Winter 2027" }, "geometry": { "type": "Point", "coordinates": [ -123.35207, 48.42612 ] } },
+{ "type": "Feature", "properties": { "Name": "Caledonia", "Status": "Current", "CrntUnits": 18, "PrpsdUnits": 158, "EstmtdCost": "$73,600,000", "EstmtdTime": "Completion in Q2 2025" }, "geometry": { "type": "Point", "coordinates": [ -123.3491, 48.43025 ] } }
+]
+}
