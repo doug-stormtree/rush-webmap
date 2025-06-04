@@ -33,11 +33,11 @@ const layer = {
       l.bindPopup(mapPopupContent(
         f.properties['Name'],
         [
-          'Status: ' + f.properties['Status'],
-          'Current Units: ' + f.properties['CrntUnits'],
-          'Proposed Units: ' + f.properties['PrpsdUnits'],
-          'Timeline: ' + f.properties['EstmtdTime'],
-          'Estimated Cost: ' + f.properties['EstmtdCost'],
+          'Status: ' + (f.properties['Status'] ?? 'Unknown'),
+          'Current Units: ' + (f.properties['CrntUnits'] ?? 'Unknown'),
+          'Proposed Units: ' + (f.properties['PrpsdUnits'] ?? 'Unknown'),
+          'Timeline: ' + (f.properties['EstmtdTime'] ?? 'Unknown'),
+          'Estimated Cost: ' + (f.properties['EstmtdCost'] ?? 'Unknown'),
         ],
         null,
         null,
