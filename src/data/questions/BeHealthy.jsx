@@ -15,6 +15,7 @@ const Question = {
     { key: "GreenspaceForAll-RestrictedGreenspace", active: true, group: "Greenspace for All" },
     { key: "GreenspaceForAll-UnderservedCommunity", active: true, group: "Greenspace for All" },
     { key: "BigTrees", active: true, group: "Trees" },
+    { key: "CentennialSquareTree", active: true, group: "Trees" },
     { key: "CarbonSequestration", active: false, group: "Landcover" },
     { key: "CherryTrees", active: false, group: "Trees" },
     { key: "CommunityMaps", active: false, group: "Community" },
