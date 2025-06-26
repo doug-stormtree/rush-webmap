@@ -14,12 +14,13 @@ const Question = {
     selected: 'yellow.100',
   },
   layers: [
-    { key: 'MunicipalHousingTargets', active: true, ...LegendGroups.StartOn },
     { key: 'VictoriaShelters', active: true, ...LegendGroups.StartOn },
     { key: 'ProposedHousingDevelopments', active: true, ...LegendGroups.StartOn },
     { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },
     { key: "GreenspaceForAll-RestrictedGreenspace", active: true, group: "Greenspace for All" },
     { key: "GreenspaceForAll-UnderservedCommunity", active: true, group: "Greenspace for All" },
+    { key: 'MunicipalHousingTargets', active: true, ...LegendGroups.StartOn },
+    { key: 'TreeBylaws', active: false, ...LegendGroups.StartOff },
   ],
   sections: {
     one: [
