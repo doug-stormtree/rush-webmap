@@ -3,6 +3,7 @@ import {
   Box,
   Flex,
   Image,
+  Link,
   List,
   ListItem,
   Text,
@@ -37,7 +38,11 @@ const listItemFormatter = (text, index) => (
 
 const PreListParagraphs = [
   'The RUSH Initiative is a cross sectoral collaboration to create rapid resilience in record time by engaging people in creating the conditions for health now, and into the future.',
-  'Our approach combines nature-inspired design, community mapping and a focus on health with watersheds as a primary indicator.',  
+  [
+    'Our approach combines nature-inspired design, ',
+    (<Link isExternal href='https://storymaps.arcgis.com/stories/c128bc545b7b4a6680d3e003780e1be0'>community mapping</Link>),
+    ', and a focus on health with watersheds as a primary indicator.'
+  ],
   'By showcasing the research, creativity, and innovation happening in this region on an interactive landing page, we hope to provide a shared language on the vulnerabilities and opportunities for long-term health and climate action.',
   'We want to change the critical questions that get asked in planning meetings such as:', 
 ].map(textFormatter)
