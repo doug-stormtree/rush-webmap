@@ -11,7 +11,7 @@ const styleMap = new Map([
 ])
 
 const layer = {
-  title: "Proposed Housing Developments",
+  title: "CRD Proposed Housing Developments",
   description: [
     {type: 'p', content: 'Proposed and current housing development projects focus on developing affordable and supportive housing units within the CRD. More information on each project can be found here:'},
     {type: 'link', content: 'Projects | Capital Regional District', url: 'https://www.crd.ca/projects'},

@@ -50,6 +50,10 @@ export const LegendGroups = {
     subheading:
       "One Map, One NatureHood, A Guide to Many Adventures. Provided by Greater Victoria NatureHood. 🕊️ Leave no trace 🕊️ Leave what you find 🕊️ Respect wildlife 🕊️ Be mindful of others",
   },
+  Trees: { group: "Trees", position: 0, subheading: undefined },
+  G4A: { group: "Greenspace for All", position: 2, subheading: undefined },
+  Landcover: { group: "Landcover", position: 3, subheading: undefined },
+  Community: { group: "Community", position: 4, subheading: undefined },
 };
 
 export const InitiativeTags = {
