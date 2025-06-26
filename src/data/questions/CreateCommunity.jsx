@@ -37,6 +37,7 @@ const Question = {
     { key: 'FarmToFork', active: false, ...LegendGroups.OGM },
     { key: 'FoodSecurity', active: false, group: 'Community' },
     { key: 'ForageFish', active: false, group: 'Water' },
+    { key: "GarryOakAreas", active: true, group: 'Trees' },
     { key: 'GreenBlueBelt', active: false, group: 'Greenspace' },
     { key: 'GreenhouseGasOnRoad2020', active: false, group: 'Energy' },
     { key: 'GreenhouseGasOnRoad2022', active: false, group: 'Energy' },
