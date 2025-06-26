@@ -44,6 +44,8 @@ const layer = {
   title: "Re-Imagine Westshore Farm to Fork",
   description: [
     {type: 'p', content: 'The Metchosin & Westshore Farm to Fork Map seeks to connect local folks to local foods by highlighting food assets within the region! This map makes learning about the growing region and its opportunities more accessible, and acts as a resource to support local food and agriculture. Viewers can use this map to check out farms in the region, markets and establishments that make and sell local goods, and opportunities to learn and engage with growers and producers. This map aims to boost food security and empower folks to get out there to grow and enjoy local food!'},
+    {type: 'link', url: 'https://reimagineus.ca/farm-to-fork/', content: 'Click to Visit the Map at Re-Imagine Westshore'},
+    {type: 'link', url: 'https://reimagineus.ca/wp-content/uploads/2025/06/Metchosin-West-Shore-Farm-to-Fork-Map-and-Directory-1.pdf', content: 'Click to Download the PDF Version of the Map'},
   ],
   data: require('../geojson/FarmToFork.geojson'),
   shape: 'point',
