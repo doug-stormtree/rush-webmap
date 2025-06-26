@@ -51,7 +51,8 @@ const Question = {
     { key: "NatureHood_MBS", active: false, ...LegendGroups.NatureHood },
     { key: "CRD_Parks", active: false, ...LegendGroups.NatureHood },
     { key: "NatureHood_Animals", active: true, ...LegendGroups.NatureHood },
-    { key: "GarryOakAreas", active: true, ...LegendGroups.Trees },
+    { key: "GarryOakAreas", active: false, ...LegendGroups.Trees },
+    { key: "GarryOak_OldNewExtent", active: false, ...LegendGroups.Trees },
   ],
   sections: {
     one: [
