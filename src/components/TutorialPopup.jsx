@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import {
   Box,
+  IconButton,
   Image,
 } from '@chakra-ui/react';
+import { FiX } from 'react-icons/fi';
 import { useActiveQuestionStore } from '../data/QuestionStore';
 import { TutorialPopupQuote } from '../data/TextContent';
 
@@ -30,6 +32,18 @@ export default function TutorialPopup({ isMobile }) {
       //pointerEvents='none'
       onClick={() => setIsClosed(true)}
     >
+      <IconButton
+        icon={<FiX />}
+        position='absolute'
+        top='0.6rem'
+        right='-0.6rem'
+        //variant='ghost'
+        height='1.25rem'
+        minWidth='1.25rem'
+        maxWidth='1.25rem'
+        zIndex='799'
+        onClick={() => setIsClosed(true)}
+      />
       <Box
         background="url('/SpeechBubble.svg')"
         boxSize='10rem'
