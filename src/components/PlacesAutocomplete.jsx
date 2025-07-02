@@ -65,12 +65,20 @@ export const PlacesAutocomplete = () => {
     }
   }
 
+  const onClear = () => {
+    if (placeMarker != null) {
+      map.removeLayer(placeMarker)
+      setPlaceMarker(null)
+    }
+  }
+
   return (
     <Control prepend position={inputPosition}>
       <SearchBox
         accessToken='pk.eyJ1IjoicnVzaGFkbWluIiwiYSI6ImNtYzJudWd6czBhNTkybHEzNHdpNGE1MTUifQ.T-8P_6hh3kai9tTzjtvcTQ'
         placeholder={placeholderText}
         onRetrieve={onRetrieve}
+        onClear={onClear}
         options={{
           language: 'en',
           country: 'CA',
