@@ -80,7 +80,10 @@ export const PlacesAutocomplete = () => {
           offset: 5
         }}
         theme={{
-          cssText: `.Results {left: 0} .MapboxSearch {width: ${inputWidth}}`
+          cssText: `
+            .Results { left: 0 !important; top: 46px !important; }
+            .SearchBox {width: ${inputWidth}}
+          `
         }}
       />
     </Control>
