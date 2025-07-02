@@ -64,7 +64,7 @@ export const PlacesAutocomplete = () => {
       setPlaceMarker(placeMarker)
     }
   }
-  
+
   return (
     <Control prepend position={inputPosition}>
       <SearchBox
