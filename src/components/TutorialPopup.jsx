@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
+  IconButton,
   Image,
 } from '@chakra-ui/react';
+import { FiX } from 'react-icons/fi';
 import { useActiveQuestionStore } from '../data/QuestionStore';
 import { TutorialPopupQuote } from '../data/TextContent';
 
@@ -10,11 +12,14 @@ export default function TutorialPopup({ isMobile }) {
   
   const activeQuestion = useActiveQuestionStore(state => state.activeQuestion)
 
+  // State for closing the tutorial popup
+  const [isClosed, setIsClosed] = useState(false);
+
   /**
-   * Render tutorial in non-mobile environments when no question is selected.
+   * Render tutorial in non-mobile environments, when no question is selected, or .
    */
   const shouldRender = () => {
-    return activeQuestion === undefined && !isMobile;
+    return !isClosed && activeQuestion === undefined && !isMobile;
   };
 
   return shouldRender() && (
@@ -23,9 +28,22 @@ export default function TutorialPopup({ isMobile }) {
       top='3.75rem'
       left='10rem'
       boxSize='10rem'
-      zIndex='9999'
-      pointerEvents='none'
+      zIndex='799'
+      //pointerEvents='none'
+      onClick={() => setIsClosed(true)}
     >
+      <IconButton
+        icon={<FiX />}
+        position='absolute'
+        top='0.6rem'
+        right='-0.6rem'
+        //variant='ghost'
+        height='1.25rem'
+        minWidth='1.25rem'
+        maxWidth='1.25rem'
+        zIndex='799'
+        onClick={() => setIsClosed(true)}
+      />
       <Box
         background="url('/SpeechBubble.svg')"
         boxSize='10rem'
