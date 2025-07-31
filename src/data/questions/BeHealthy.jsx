@@ -53,6 +53,7 @@ const Question = {
     { key: "NatureHood_Animals", active: true, ...LegendGroups.NatureHood },
     { key: "GarryOakAreas", active: false, ...LegendGroups.Trees },
     { key: "GarryOak_OldNewExtent", active: false, ...LegendGroups.Trees },
+    { key: "GarryOak_NativeEcosystems", active: false, ...LegendGroups.Trees },
   ],
   sections: {
     one: [
