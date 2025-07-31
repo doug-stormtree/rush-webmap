@@ -15,9 +15,9 @@ const styleMap = new Map([
     icon:(<IconContext.Provider value={iconOpts}><BsShopWindow /></IconContext.Provider>),
     legendText:"Market"
   }],
-  ["Vinyard/Brewery", {
+  ["Vineyard/Brewery", {
     icon:(<IconContext.Provider value={iconOpts}><PiWineFill /></IconContext.Provider>),
-    legendText:"Vinyard/Brewery"
+    legendText:"Vineyard/Brewery"
   }],
   ["Garden", {
     icon:(<IconContext.Provider value={iconOpts}><TbGardenCart /></IconContext.Provider>),
