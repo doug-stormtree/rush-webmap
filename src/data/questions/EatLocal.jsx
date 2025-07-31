@@ -14,6 +14,7 @@ const Question = {
   layers: [
     { key: "AgriculturalLandReserve", active: true, ...LegendGroups.StartOn },
     { key: "MetchosinWestshoreFarmToFork", active: true, ...LegendGroups.StartOn },
+    { key: "FarmFresh", active: true, ...LegendGroups.StartOn },
     { key: "FoodSecurity", active: true, ...LegendGroups.StartOn },
     { key: "ForageFish", active: false, ...LegendGroups.StartOff },
     { key: "ShellfishPO", active: false, ...LegendGroups.StartOff },
