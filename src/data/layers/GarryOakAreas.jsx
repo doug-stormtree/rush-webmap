@@ -1,9 +1,9 @@
 import { getStyleMapProperty } from '../LeafletStyleHelpers';
 
 const styleMap = new Map([
-  ['ConiferousForest', { fillColor: '#f3a6b2' }],
-  ['Garry Oak', { fillColor: '#e8718d' }],
-  ['Wetland', { fillColor: '#987db7' }],
+  ['ConiferousForest', { fillColor: '#CD853F', legendText: 'Coniferous Forest' }],
+  ['Garry Oak', { fillColor: '#8B5A2B' }],
+  ['Wetland', { fillColor: '#becf50' }],
 ]);
 
 const layer = {
@@ -24,7 +24,7 @@ const layer = {
         lineJoin: 'miter',
         weight: 1,
         fill: true,
-        fillOpacity: 0.8,
+        fillOpacity: 0.6,
       }
       return {
         ...baseStyle,
