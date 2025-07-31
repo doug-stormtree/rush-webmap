@@ -14,6 +14,7 @@ const layer = {
     {type: 'link', url: 'https://www.crd.ca/media/file/capital-region-housing-corporation-2024-annual-reportpdf', content: 'Report'},
     {type: 'p', content: 'For the most up to date information on which houses are accepting applications go to CRHC:'},
     {type: 'link', url: 'https://www.capitalregionhousing.ca/find-home/view-our-properties', content: 'View Our Properties | Capital Region Housing Corporation'},
+    {type: 'p', content: 'Note: RUSH provides this information for educational purposes only and cannot guarantee that it is accurate or current.'},
   ],
   data: require('../geojson/AffordableHousing.geojson'),
   shape: 'point',
