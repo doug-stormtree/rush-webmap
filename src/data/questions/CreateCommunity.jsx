@@ -55,6 +55,8 @@ const Question = {
     { key: 'LittleFreeLibraries', active: false, group: 'Community' },
     { key: 'MajorTransportationHubs', active: false, group: 'Civic' },
     { key: 'MaltbyLakeBirdsong', active: false, group: 'Greenspace' },
+    { key: "MetchosinWestshoreFarmToFork", active: false, group: 'Food' },
+    { key: "FarmFresh", active: false, group: 'Food' },
     { key: 'Municipalities', active: false, group: 'Civic' },
     { key: 'MunicipalHousingTargets', active: false, group: 'Civic' },
     { key: 'NativeLandDigitalLanguages', active: false, group: 'Indigenous' },
