@@ -1,10 +1,10 @@
 import { IconContext } from "react-icons";
 import { mapPopupContent, pointToIcon } from "../LeafletStyleHelpers";
-import { FaBuildingCircleCheck } from 'react-icons/fa6';
+import { FaRegBuilding } from 'react-icons/fa';
 
 const styleMap = new Map([
   ["Feature", {
-    icon:(<IconContext.Provider value={{ color: "#464D77", size: '18px' }}><FaBuildingCircleCheck /></IconContext.Provider>),
+    icon:(<IconContext.Provider value={{ color: "#464D77", size: '18px' }}><FaRegBuilding /></IconContext.Provider>),
     fill:"#464D77",
     legendText:"Proposed Housing Development"
   }],

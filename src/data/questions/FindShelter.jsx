@@ -16,7 +16,6 @@ const Question = {
   layers: [
     { key: 'VictoriaShelters', active: true, ...LegendGroups.StartOn },
     { key: 'ProposedHousingDevelopments', active: true, ...LegendGroups.StartOn },
-    { key: 'CRDAffordableHousing', active: true, ...LegendGroups.StartOn },
     { key: 'CRD_Parks', active: true, ...LegendGroups.StartOn },
     { key: "GreenspaceForAll-RestrictedGreenspace", active: true, group: "Greenspace for All" },
     { key: "GreenspaceForAll-UnderservedCommunity", active: true, group: "Greenspace for All" },
