@@ -7,7 +7,7 @@ const styleMap = new Map([
 ]);
 
 const layer = {
-  title: 'Garry Oak Areas',
+  title: 'Historic Garry Oak Areas',
   description: [
     {type: 'p', content: 'This map illustrates Garry Oak Ecosystems, Wetlands, and Mostly Coniferous Forests within Victoria and the Greater Victoria Area in the 1850s. These data were collected from an 1858 Land Survey Map Excerpt, which showcases how these ecosystems looked at the time. Source: J.D. Pemberton, (1858), Historical Map of Garry Oak Areas [Map], BC Surveyor General’s Office.'},
   ],
