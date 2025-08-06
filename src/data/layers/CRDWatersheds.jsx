@@ -29,7 +29,7 @@ const layer = {
         dashArray: '',
         lineCap: 'butt',
         lineJoin: 'miter',
-        weight: 3,
+        weight: 2,
         fill: true,
         fillOpacity: 0,
         fillColor: 'rgb(132,182,185)',
