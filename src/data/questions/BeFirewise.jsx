@@ -7,7 +7,8 @@ const Question = {
   key: 'be-firewise',
   title: "Be Firewise",
   question: "Moisture wicking concrete jungles turn neighbourhoods into tinder boxes. One swipe and you’ll be lit for realsies.",
-  image: require('../png/Placeholder.png'),
+  // Cover Photo by <a href="https://unsplash.com/@venturecreative?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Caleb Cook</a> on <a href="https://unsplash.com/photos/silhouette-of-2-person-standing-on-grass-field-during-sunset-syuox8fipX4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  image: require('../png/BeFirewise.png'),
   color: {
     background: 'yellow.300',
     hover: 'yellow.200',
