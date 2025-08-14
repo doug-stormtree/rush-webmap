@@ -18,6 +18,7 @@ const Question = {
     { key: 'AquiferSusceptibilityBedrock', active: false, ...LegendGroups.StartOff },
     { key: 'AquiferSusceptibilitySediment', active: false, ...LegendGroups.StartOff },
     { key: 'CoastalFloodInundationScenarios', active: true, ...LegendGroups.StartOn },
+    { key: 'Eelgrass', active: true, ...LegendGroups.StartOn },
     { key: 'HardShorelines', active: false, ...LegendGroups.StartOn },
     { key: 'ShellfishPO', active: false, ...LegendGroups.StartOn },
     { key: 'ShorelineSensitivity', active: true, ...LegendGroups.StartOn },

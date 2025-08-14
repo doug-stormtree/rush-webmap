@@ -81,6 +81,7 @@ const Question = {
     { key: 'VictoriaShelters', active: false, group: 'Community' },
     { key: 'WatershedRunoffAbsorption', active: false, group: 'Water' },
     { key: 'Watersheds', active: false, group: 'Water' },
+    { key: 'Eelgrass', active: false, group: 'Water' },
   ],
   sections: {
     one: [
