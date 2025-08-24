@@ -82,6 +82,7 @@ const Question = {
     { key: 'WatershedRunoffAbsorption', active: false, group: 'Water' },
     { key: 'Watersheds', active: false, group: 'Water' },
     { key: 'Eelgrass', active: false, group: 'Water' },
+    { key: 'KelpBeds', active: false, group: 'Water' },
     { key: 'PumpoutStations', active: false, group: 'Water' },
   ],
   sections: {

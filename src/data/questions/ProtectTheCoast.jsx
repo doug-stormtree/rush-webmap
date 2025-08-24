@@ -19,6 +19,7 @@ const Question = {
     { key: 'AquiferSusceptibilitySediment', active: false, ...LegendGroups.StartOff },
     { key: 'CoastalFloodInundationScenarios', active: true, ...LegendGroups.StartOn },
     { key: 'Eelgrass', active: true, ...LegendGroups.StartOn },
+    { key: 'KelpBeds', active: false, ...LegendGroups.StartOff },
     { key: 'HardShorelines', active: false, ...LegendGroups.StartOn },
     { key: 'ShellfishPO', active: false, ...LegendGroups.StartOn },
     { key: 'ShorelineSensitivity', active: true, ...LegendGroups.StartOn },
