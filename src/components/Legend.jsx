@@ -379,6 +379,7 @@ const SinglePatchPoint = ({ style }) => {
       fill={style.fill}
       stroke={style.stroke}
       src={style.src}
+      border={style.border}
       marginInline='-4px'
     />
   );

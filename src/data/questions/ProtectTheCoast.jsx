@@ -23,6 +23,7 @@ const Question = {
     { key: 'ShellfishPO', active: false, ...LegendGroups.StartOn },
     { key: 'ShorelineSensitivity', active: true, ...LegendGroups.StartOn },
     { key: 'ForageFish', active: false, ...LegendGroups.StartOff },
+    { key: 'PumpoutStations', active: false, ...LegendGroups.StartOff },
   ],
   sections: {
     one: [
