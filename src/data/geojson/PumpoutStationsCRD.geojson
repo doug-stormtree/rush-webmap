@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "PumpoutStationsCRD",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "Name": "Victoria International Marina", "Details": "For marina customers only, sometimes make arrangements with commercial vessels.", "Cost": "$30" }, "geometry": { "type": "Point", "coordinates": [ -123.38312, 48.42742 ] } },
+{ "type": "Feature", "properties": { "id": 2, "Name": "Greater Victoria Harbour Authority", "Details": "Located on Finger B at Fisherman's Wharf, payment is only through visa and must be tap. GVHA also offers mobile pump out service for long term moorage customers at the marinas. The pumpout is self operated.", "Cost": "$10" }, "geometry": { "type": "Point", "coordinates": [ -123.38183, 48.42331 ] } },
+{ "type": "Feature", "properties": { "id": 3, "Name": "Angler's Anchorage Marina", "Details": "For long term customers only.", "Cost": "Free" }, "geometry": { "type": "Point", "coordinates": [ -123.46252, 48.57155 ] } },
+{ "type": "Feature", "properties": { "id": 4, "Name": "Port Sidney Marina", "Details": "Should be up and running very soon, some minor repairs have to be done first, only for vessels 40 ft and under.", "Cost": "$10 for stationary, $25 for mobile" }, "geometry": { "type": "Point", "coordinates": [ -123.39502, 48.65094 ] } },
+{ "type": "Feature", "properties": { "id": 5, "Name": "Van Isle Marina", "Details": "Available during business hours.", "Cost": "Under 29 ft: $19.05, 30 - 49 ft: $23.82, 50 ft and above: $28.57" }, "geometry": { "type": "Point", "coordinates": [ -123.40444, 48.66744 ] } },
+{ "type": "Feature", "properties": { "id": 6, "Name": "Mill Bay Marina", "Details": "Available during business hours.", "Cost": "$20" }, "geometry": { "type": "Point", "coordinates": [ -123.55245, 48.64981 ] } },
+{ "type": "Feature", "properties": { "id": 7, "Name": "Ganges Coast Guard Dock", "Details": "Self serve, $10 gets you 7 minutes of pumping.", "Cost": "$10" }, "geometry": { "type": "Point", "coordinates": [ -123.49753, 48.85389 ] } },
+{ "type": "Feature", "properties": { "id": 8, "Name": "Greater Victoria Habour Authority", "Details": "On Wednesdays they have a mobile service.", "Cost": "$80" }, "geometry": { "type": "Point", "coordinates": [ -123.36963, 48.4249 ] } }
+]
+}
