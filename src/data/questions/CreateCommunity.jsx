@@ -30,7 +30,7 @@ const Question = {
     { key: 'CoastalFloodInundationScenarios', active: false, group: 'Water' },
     { key: 'CRD_Parks', active: false, group: 'Greenspace' },
     { key: 'CRDBikeMap', active: false, group: 'Civic' },
-    { key: 'CulturalFoods', active: false, ...LegendGroups.OGM },
+    { key: 'CulturalFoods', active: false, group: 'Food' },
     { key: 'DrinkingFountains', active: false, group: 'Civic' },
     { key: 'ENBS', active: false, group: 'Greenspace' },
     { key: 'EVChargingStations', active: false, group: 'Energy' },
@@ -81,6 +81,9 @@ const Question = {
     { key: 'VictoriaShelters', active: false, group: 'Community' },
     { key: 'WatershedRunoffAbsorption', active: false, group: 'Water' },
     { key: 'Watersheds', active: false, group: 'Water' },
+
+    { key: "CulturalFoodsOGM", active: false, ...LegendGroups.OGM },
+    { key: "CultureCompassOGM", active: false, ...LegendGroups.OGM },
   ],
   sections: {
     one: [
