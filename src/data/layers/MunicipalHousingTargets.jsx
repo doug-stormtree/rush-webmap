@@ -35,7 +35,7 @@ const layer = {
       content: 'Note: RUSH provides this information for educational purposes only and cannot guarantee that it is accurate or current.'
     }
   ],
-  data: require('../geojson/MunicipalHousingTargets.geojson'),
+  data: require('../geojson/MunicipalHousingTargetsUpdate09032025.geojson'),
   shape: 'polygon',
   symbology: 'classified',
   styleMap: styleMap,
@@ -61,16 +61,16 @@ const layer = {
     onEachFeature: (f,l) => {
       l.bindPopup(
         mapPopupContent(
-          f.properties.Name,
+          f.properties.ABRVN,
           f.properties.Listed === "Yes"
             ? [
-                'Current Units Built: ' + f.properties['CurrentUnits'],
+                'Recent Units Built: ' + f.properties['RecentTota'],
                 'Year 1 Target: ' + f.properties['Year1'],
                 'Year 2 Target: ' + f.properties['Year2'],
                 'Year 3 Target: ' + f.properties['Year3'],
                 'Year 4 Target: ' + f.properties['Year4'],
                 'Year 5 Target: ' + f.properties['Year5'],
-            ] : f.properties.ShortName + ' is not currently affected by the Housing Supply Act.',
+            ] : f.properties.AA_NAME + ' is not currently affected by the Housing Supply Act.',
           null,
           null,
           null,
