@@ -57,24 +57,26 @@ export const LegendGroups = {
 };
 
 export const InitiativeTags = {
-  StoryMap: "StoryMap",
-  Report: "Report",
-  Organization: "Organization",
-  Business: "Business",
-  Indigenous: "Indigenous",
-  Map: "Map",
   Agreement: "Agreement",
-  Target: "Target",
-  Initiative: "Initiative",
-  Program: "Program",
-  Portal: "Info Portal",
+  Business: "Business",
+  Book: "Book",
   Funding: "Funding",
   Government: "Government",
-  Video: "Video",
+  Indigenous: "Indigenous",
   Infographic: "Infographic",
+  Initiative: "Initiative",
+  Map: "Map",
+  Organization: "Organization",
+  Portal: "Info Portal",
+  Program: "Program",
+  Report: "Report",
+  StoryMap: "StoryMap",
+  Target: "Target",
+  Video: "Video",
 };
 
 export const InitiativeTagColors = {
+  Book: "gray",
   Organization: "blue",
   Business: "blue",
   Initiative: "cyan",
