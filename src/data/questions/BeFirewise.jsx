@@ -31,6 +31,7 @@ const Question = {
         items: [
           'you see a purple field of camas every spring in your local Garry Oak ecosystem.',
           'your city plans for connected trees and plants in a way that keeps neighbourhoods and the planet cool.',
+          'the ground is covered in native plants, not seas of flammable Scotch broom or English ivy. These invasive species act like gasoline-soaked rags in a dry landscape.',
           'your ecosystem is fire resistant and mostly native because the canopy is high and open, there is not a lot of leaf litter on the ground, and the sap is not flammable (head down the rabbit hole for more info).',
           'nurseries in your neighbourhood have fire resistant plants identified (the legend has it).',
           'homes in your community incorporate fire resistant building materials.',
@@ -43,7 +44,6 @@ const Question = {
         heading: 'You’re strutting in a hot spot if...',
         items: [
           'you clear the trees from around your house and in the process lose the gift of their cooling capacity.',
-          'the ground is covered in native plants, not seas of flammable Scotch broom or English ivy. These invasive species act like gasoline-soaked rags in a dry landscape.',
           'you landscaped with gravel instead of plants, which is radiating heat  and now you’re sweating bullets.',
           'developments in your neighbourhood are landscaped with exotic ornamentals planted like pregnant fireworks.',
           'every square inch of habitable space has been devoted to people, and there’s no room for Nature’s cooling, moisture-retaining, pollinating, comforting and life-giving presence.',
