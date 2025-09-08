@@ -1,6 +1,6 @@
 import {
   LegendGroups,
-  //InitiativeTags as Tag,
+  InitiativeTags as Tag,
 } from '../TextContent';
 
 const Question = {
@@ -8,7 +8,7 @@ const Question = {
   title: "Be Firewise",
   question: "Moisture wicking concrete jungles turn neighbourhoods into tinder boxes. One swipe and you’ll be lit for realsies.",
   // Cover Photo by <a href="https://unsplash.com/@venturecreative?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Caleb Cook</a> on <a href="https://unsplash.com/photos/silhouette-of-2-person-standing-on-grass-field-during-sunset-syuox8fipX4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-  image: require('../png/BeFirewise.png'),
+  image: require('../png/BeFirewiseCamas.png'),
   color: {
     background: 'yellow.300',
     hover: 'yellow.200',
@@ -43,6 +43,7 @@ const Question = {
         heading: 'You’re strutting in a hot spot if...',
         items: [
           'you clear the trees from around your house and in the process lose the gift of their cooling capacity.',
+          'the ground is covered in native plants, not seas of flammable Scotch broom or English ivy. These invasive species act like gasoline-soaked rags in a dry landscape.',
           'you landscaped with gravel instead of plants, which is radiating heat  and now you’re sweating bullets.',
           'developments in your neighbourhood are landscaped with exotic ornamentals planted like pregnant fireworks.',
           'every square inch of habitable space has been devoted to people, and there’s no room for Nature’s cooling, moisture-retaining, pollinating, comforting and life-giving presence.',
@@ -52,11 +53,13 @@ const Question = {
     two: {
       heading: 'Join the fire resistance.',
       items: [
-        'identify your local “bucket brigade”. Look in the legend for your muster station, fire station, and density of fire hydrants in order to be satisfied that people are ready to respond. Don’t forget your own fire alarms and an escape route strategy from your property.',
-        'look great while also providing ecological benefits.  Get advice on how to keep moisture and cooling features around your home.',
-        'hot, dry, and windy conditions fuel wildfires. Deciduous trees with moist, supple leaves and open branching habits are often less flammable than conifers. Strategically planting deciduous trees can significantly reduce fire risk around homes by acting as buffers against flames, slowing down a fire’s progress, and blocking embers from reaching homes.',
-        'see the forest for the trees. Consult your local nursery for species that are compatible with your local fire resistant ecosystem.',
-        'harness the dual benefits of both green and blue infrastructure. Blue infrastructure stores water on land and gives you access when it counts.',
+        'Identify your local “bucket brigade”. Look in the legend for your local fire station and density of fire hydrants in order to be satisfied that people are ready to respond. Don’t forget your own fire alarms and an escape route strategy from your property.',
+        'Look great while also providing ecological benefits.  Get advice on how to keep moisture and cooling features around your home.',
+        'Keep your soil from getting thirsty. Dry, bare soil is a welcome mat for embers. Use mulch on garden beds and around plants to help the ground retain critical moisture, acting as another layer of defence against fire.',
+        'Hot, dry, and windy conditions fuel wildfires. Deciduous trees with moist, supple leaves and open branching habits are often less flammable than conifers. Strategically planting deciduous trees can significantly reduce fire risk around homes by acting as buffers against flames, slowing down a fire’s progress, and blocking embers from reaching homes.',
+        'See the forest for the trees. Consult your local nursery for species that are compatible with your local fire resistant ecosystem.',
+        'Wage war on flammable invaders. Scotch broom and English ivy are notorious for creating intense, fast-moving flames. Prioritize removing them from your property and replace them with fire-resistant native groundcovers.',
+        'Harness the dual benefits of both green and blue infrastructure. Blue infrastructure stores water on land and gives you access when it counts.',
         'Incorporate rain gardens and small water features in your yard to act as effective firebreaks. Consider a sprinkler system.',
         'Before you remove established coniferous trees (and losing your  cool), consider pruning out dead and lower branches, and raking up dead needles and cones for better fire resistance.',
         'Replace your lawn with low-growing, consistently green forage mixes with clover that can serve as effective, less flammable ground covers.',
@@ -72,6 +75,9 @@ const Question = {
         'Effective urban fire resilience requires a fundamental shift away from generic, one-size-fits-all guidelines. It demands an integrated urban planning model that combines ecological principles (like green infrastructure and native species) and finally bridges the systemic gaps between planners, fire experts, and ecologists.',
         'The most powerful push for this change may not come from a government pamphlet, but from your insurance policy. Meaningful premium reductions for fire-resilient homes would be the single most effective incentive to spark widespread, proactive change where it matters most—at the neighbourhood level.',
         'Pre-contact, many Indigenous Nations held balanced and reciprocal relationships with fire and fire-keeping. They would strategically burn some areas of land to reduce future risk of forest and bush fires.  Despite its long history and cultural and ecological benefits, settlers perceived this traditional burning itself as inherently risky, outlawing the practice and starting the long history of fire suppression nationwide.  Western scientists now confirm what Indigenous nations have long known: fire suppression does not make fire less of a risk; it quite literally fuels the flames [link FROM RISK TO RESILIENCE: Indigenous Alternatives to Climate Risk Assessment in Canada, by Janna Wale and Brett Huson, https://yellowheadinstitute.org/from-risk-to-resilience/]. Prescribed burning in cities may not be practical, however the practices of retaining meadows and open spaces in a way that works for Nature is a good bet. ',
+        'It’s called the "Fire Suppression Paradox": by aggressively putting out every small, low-intensity fire for 100 years, we’ve allowed fuels to build up to unnatural levels. Now, when a fire starts, it has so much to burn that it becomes a catastrophic, high-severity event. The very thing we did to "stop" fires has created the mega-fires we see today.',
+        'The interviewees highlighted a fundamental conflict: the urgent need for housing is often "blinding" planners to fire resilience. This leads to densification and development that strips away plantable space, creating heat islands and increasing vulnerability. True resilience requires integrating green and blue infrastructure into housing plans, not treating it as an afterthought.',
+        'Experts are looking beyond simple removal and thinking about system-wide solutions for flammable invasive species. One innovative idea discussed was creating an "Invasive Species for Energy" program, which would incentivize the large-scale removal of Scotch broom by using it for bio-energy.',
         'The provincial government’s urgency regarding the housing crisis and densification risks our capacity to hold water in the landscape, leading to development practices that inadvertently increase vulnerability to fire. Fundamental changes are needed in how communities are planned, especially concerning development into the wildland-urban interface.',
         'Things that make a plant fire-resistant include moist, supple leaves that ignite and burn slower; little dead wood accumulation; open branching habits; watery sap with little odour. Highly flammable plants are generally those that contain fine, dry, dead material within the plant; have loose papery bark; and those containing volatile waxes, terpenes, or oils which you may be able to sniff out by crushing the leaves or needles or smelling the resin. Fire-resistant plants Use the FireSmart BC Plant Chart [FireSmart BC Plant Guide: Trees https://firesmartbc.ca/wp-content/uploads/2023/07/06.08.23_FSBC_PlantChartBooklet.pdf ] as a place to begin identifying which fire resistant trees and plants can be compatible with conserving water and attracting pollinators. Many native species are fire resistant, some of which are listed in the Plant Chart. Our native ecosystems tend to be fire resistant and therefore give us a jump-start in restoring the urban ecosystem. ',
         'True community fire readiness requires a holistic shift in planning and development to acknowledge growing risks, address the negative impacts of densification on resilience, improve infrastructure robustness, and foster better collaboration between planners and fire experts. Homeowners are getting mixed messages at a time when we must be acting together. ',
@@ -81,6 +87,24 @@ const Question = {
   },
   act: {
     initiatives: [
+      {
+        title: 'Beneficial Fire in B.C.: An Exploration of How Fire Can Contribute to Wildfire Resilience - The POLIS Wildfire Resilience Project',
+        link: 'https://poliswildfireproject.org/publications/beneficial-fire/',
+        image: 'https://poliswildfireproject.org/wp-content/uploads/2025/05/Copy-of-Lightning-Explainers-Instagram-Post-45-2.png',
+        description: 'This report explores beneficial fire as a strategy to reduce risk from wildfire, promote wildfire resilience, and shift away from the view that fire is bad. Fire is a necessary part of most ecosystems in B.C., and beneficial fire is a positive force that should be encouraged.',
+        tags: [
+          Tag.Report,
+        ],
+      },
+      {
+        title: 'Native Plants of British Columbia’s Coastal Dry Belt : A Photographic – Harbour Publishing',
+        link: 'https://harbourpublishing.com/products/9781998526000',
+        image: 'https://harbourpublishing.com/cdn/shop/files/9781998526000_900x.jpg',
+        description: 'An innovative guide to the native plants of the coastal dry belt, or “rain shadow” of the Pacific Northwest, including southeast Vancouver Island, the Gulf Islands and some parts of the mainland coast, such as Port Angeles and Bellingham, WA.',
+        tags: [
+          Tag.Book,
+        ],
+      },
     ],
   },
 };
