@@ -38,6 +38,7 @@ import {
   useMapLayerStyleStore,
 } from '../data/MapLayerStore';
 import { LegendGroups } from '../data/TextContent';
+import { ReactComponent as DotPatchSVG } from '../data/svg/DotPatch.svg';
 
 // Wraps Legend in a Box for large screen sizes.
 export const LegendPane = () => {
@@ -357,6 +358,10 @@ const LegendPatch = ({ layerId }) => {
     )
   }
 
+  if (layer.symbology === 'density') {
+    return <DensityDotPatch color={layer.color} />
+  }
+
   return layer.shape === 'point'
     ? <SinglePatchPoint style={layer.icon} />
     : layer.shape === 'line'
@@ -374,6 +379,7 @@ const SinglePatchPoint = ({ style }) => {
       fill={style.fill}
       stroke={style.stroke}
       src={style.src}
+      border={style.border}
       marginInline='-4px'
     />
   );
@@ -396,33 +402,6 @@ const ClassifiedPatchPoint = ({ styleMap }) => {
     </HStack>
   )
 }
-
-const SinglePatchPolygon = ({ style }) => {
-  return (
-    <PolygonPatchSVG
-      fill={style?.fillColor ?? undefined}
-      stroke={style?.color ?? undefined}
-      dashed={style?.dashArray ? true : false}
-    />
-  )
-}
-
-const PolygonPatchSVG = ({ fill, stroke, dashed = false }) => (
-  <svg width="45" height="27" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect
-      x="0"
-      y="0"
-      width="45"
-      height="27"
-      strokeWidth="6"
-      strokeLinecap="butt"
-      fill={fill}
-      stroke={stroke}
-      strokeDashoffset={dashed ? "3" : undefined}
-      strokeDasharray={dashed ? "6 3" : undefined}
-    />
-  </svg>
-)
 
 const ClassifiedPatchPolygon = ({ styleMap }) => {
   const styles = [...styleMap.entries()].slice(0,6);
@@ -469,6 +448,35 @@ const LinePatchSVG = ({ fill, stroke, dashed = false }) => (
     />
   </svg>
 )
+
+const SinglePatchPolygon = ({ style }) => {
+  return (
+    <PolygonPatchSVG
+      fill={style?.fillColor ?? undefined}
+      stroke={style?.color ?? undefined}
+      dashed={style?.dashArray ? true : false}
+    />
+  )
+}
+
+const PolygonPatchSVG = ({ fill, stroke, dashed = false }) => (
+  <svg width="45" height="27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect
+      x="0"
+      y="0"
+      width="45"
+      height="27"
+      strokeWidth="6"
+      strokeLinecap="butt"
+      fill={fill}
+      stroke={stroke}
+      strokeDashoffset={dashed ? "3" : undefined}
+      strokeDasharray={dashed ? "6 3" : undefined}
+    />
+  </svg>
+)
+
+const DensityDotPatch = ({ color }) => <DotPatchSVG fill={color ?? 'black'} />
 
 // LegendItemOGM Component
 //   A single legend entry row for an OpenGreenMap layer.

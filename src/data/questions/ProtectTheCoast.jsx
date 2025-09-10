@@ -3,6 +3,7 @@ import {
   InitiativeTags as Tag,
 } from '../TextContent';
 
+
 const Question = {
   key: 'protect-the-coast',
   title: "Protect the Coast",
@@ -18,10 +19,13 @@ const Question = {
     { key: 'AquiferSusceptibilityBedrock', active: false, ...LegendGroups.StartOff },
     { key: 'AquiferSusceptibilitySediment', active: false, ...LegendGroups.StartOff },
     { key: 'CoastalFloodInundationScenarios', active: true, ...LegendGroups.StartOn },
+    { key: 'Eelgrass', active: true, ...LegendGroups.StartOn },
+    { key: 'KelpBeds', active: false, ...LegendGroups.StartOff },
     { key: 'HardShorelines', active: false, ...LegendGroups.StartOn },
     { key: 'ShellfishPO', active: false, ...LegendGroups.StartOn },
     { key: 'ShorelineSensitivity', active: true, ...LegendGroups.StartOn },
     { key: 'ForageFish', active: false, ...LegendGroups.StartOff },
+    { key: 'PumpoutStations', active: false, ...LegendGroups.StartOff },
   ],
   sections: {
     one: [

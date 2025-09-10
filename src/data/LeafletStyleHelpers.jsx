@@ -25,6 +25,7 @@ export const MapMarker = (props) => {
       width: (props.size) + 'px',
       height: (props.size) + 'px',
       fontSize: (props.size - props.padding - props.padding) + 'px',
+      border: props.border,
     }}>{props.icon}</div>
   )
 }
