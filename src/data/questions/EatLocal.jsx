@@ -20,7 +20,8 @@ const Question = {
     { key: "ShellfishPO", active: false, ...LegendGroups.StartOff },
     { key: "FarmToFork", active: false, ...LegendGroups.OGM },
     { key: "Pollinators", active: false, ...LegendGroups.OGM },
-    { key: "CulturalFoods", active: true, ...LegendGroups.OGM },
+    { key: "CulturalFoods", active: false, ...LegendGroups.StartOff },
+    { key: "CulturalFoodsOGM", active: true, ...LegendGroups.OGM },
   ],
   sections: {
     one: [

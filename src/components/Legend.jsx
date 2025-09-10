@@ -235,7 +235,7 @@ const LegendGroup = ({ title, children }) => {
   )
 
   return children && children.length > 0 && (
-    <VStack gap='0'>
+    <VStack gap='0' alignItems='stretch'>
       {title ? titleElement : null}
       {group?.subheading && (
         <Text

@@ -1,14 +1,14 @@
 import { mapPopupContent, ogmFeaturesLink, pointToIcon } from '../LeafletStyleHelpers';
 
 const layer = {
-  title: 'Cultural Foods',
+  title: 'Cultural Foods - Iyé Creative',
   description: [
-    {type: 'p', content: "Locations of stores and restaurants that provide access to Cultural Foods."},
-    {type: 'p', content: 'Based on the Greater Victoria Cultural Food Community Map by UVic Community Mapping students in collaboration with Iyé Creative.'},
+    {type: 'p', content: "Iyé Creative worked with the UVic Community Mapping students to create this data set of cultural restaurants and food stores on Southern Vancouver Island."},
+    {type: 'link', content: 'Visit Iyé Creative.', url: 'https://www.iyeherstories.com/'},
     {type: 'link', content: 'Learn about Cultural Food access in Greater Victoria from their StoryMap.', url: 'https://storymaps.arcgis.com/stories/06ee241047d8455bbb02230f453f2edc'},
   ],
   data: ogmFeaturesLink('64836448cea704010006d251'),
-  ogmMapId: '64836448cea704010006d251',
+  //ogmMapId: '64836448cea704010006d251',
   shape: 'point',
   symbology: 'classified',
   options: {

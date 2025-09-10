@@ -25,7 +25,7 @@ const layer = {
     ]},
     {type: 'p', content: 'Note: RUSH provides this information for educational purposes only and cannot guarantee that it is accurate or current.'},
   ],
-  data: require('../geojson/TreeBylaws.geojson'),
+  data: require('../geojson/TreeProtectionUpdate09032025.geojson'),
   shape: 'polygon',
   symbology: 'classified',
   styleMap: styleMap,
