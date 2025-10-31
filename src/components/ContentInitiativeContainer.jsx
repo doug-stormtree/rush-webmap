@@ -45,7 +45,7 @@ export default function ContentInitiativeContainer() {
   const tabPanelsRef = useRef()
 
   // State for resize buttons on ContentPane
-  const [ isMinimized, setIsMinimized ] = useState(false)
+  const [ isMinimized, setIsMinimized ] = useState(true)
   const [ isMaximized, setIsMaximized ] = useState(false)
 
   return activeQuestion && (
