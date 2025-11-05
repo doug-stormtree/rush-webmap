@@ -15,7 +15,6 @@ const images = {
   "ecologicaldesigninpractice.jpg": require("../png/ecologicaldesigninpractice.jpg"),
   "connectivityonthesaanichpeninsula.jpg": require("../png/connectivityonthesaanichpeninsula.jpg"),
   "theRUSHinitiative.jpg": require("../png/theRUSHinitiative.jpg"),
-  "artattackplacebasedartinterventions.jpg": require("../png/artattackplacebasedartinterventions.jpg"),
   "hardandsoftshorelines.jpg": require("../png/hardandsoftshorelines.jpg"),
   "salishseanearshorehabitatrecoverychapter1.jpg": require("../png/salishseanearshorehabitatrecoverychapter1.jpg"),
   "bilstonwatershedhabitatprotection.jpg": require("../png/bilstonwatershedhabitatprotection.jpg"),
