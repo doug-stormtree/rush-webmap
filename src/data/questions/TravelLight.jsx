@@ -153,15 +153,6 @@ const Question = {
           Tag.Organization,
         ],
       },
-      {
-        title: 'RUSH Community TikTok Project',
-        link: 'https://storymaps.arcgis.com/stories/d3dce22ddab4487a9ec38325257e05d8',
-        image: require('../png/RUSH.png'),
-        description: 'For our project we produced three TikTok videos, for the RUSH website. Each video covers different themes. We collaborated with local high school students to hear their opinions and also broaden their knowledge. Main themes include Safe Bus Stops, Big trees, Invasive species.',
-        tags: [
-          Tag.Video,
-        ],
-      },
     ],
   },
 };
