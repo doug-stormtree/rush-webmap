@@ -15,6 +15,7 @@ import {
   HomePageSubTitle,
   HomePageTitle,
 } from '../data/TextContent';
+import { ReactComponent as GlobeSVG } from '../data/svg/globe.svg';
 
 export default function HomePage() {
   return (
@@ -37,7 +38,7 @@ export default function HomePage() {
       >
         <Box
           bgColor='white'
-          borderRadius='xl'
+          borderRadius='32px'
           marginTop='1.5rem'
           marginBottom={{base: '21.5rem', md: '1.5rem'}}
           marginStart='0.5rem'
@@ -89,6 +90,37 @@ export default function HomePage() {
               </Button>
             </Link>
           </Flex>
+          <Box
+            direction='column'
+            gap='2'
+            marginTop='1'
+            marginBottom='4'
+            padding='4'
+            borderRadius='xl'
+            backgroundColor='orange.200'
+            color='gray.700'
+            fontWeight='bold'
+          >
+            <p>
+              <GlobeSVG
+                height='5rem'
+                width='5rem'
+                style={{ 
+                  float: 'right',
+                  marginLeft: '10px'
+                }}
+              />
+              {"RUSH is moving to the next stage of our development, come check out the improvements we've made at: "}
+              <Link
+                to='https://whatstherush.earth'
+                style={{
+                  textDecoration: 'underline',
+                  color: '#3182CE',
+                }}
+              >whatstherush.earth</Link>
+            </p>
+            <p style={{ marginTop: '.75rem'}}>This website will soon permenantly redirect to the new website, but don't worry, all your links and QR codes will still work.</p>
+          </Box>
         </Box>
         <Box
           position='absolute'
