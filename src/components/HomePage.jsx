@@ -17,6 +17,13 @@ import {
 } from '../data/TextContent';
 import { ReactComponent as GlobeSVG } from '../data/svg/globe.svg';
 
+const newWebsiteURL = () => {
+  const url = new URL(window.location.href)
+  url.hostname = 'whatstherush.earth'
+  url.port = ''
+  return url
+}
+
 export default function HomePage() {
   return (
     <Flex direction='column' minH='100vh'>
@@ -112,7 +119,7 @@ export default function HomePage() {
               />
               {"RUSH is moving to the next stage of our development, come check out the improvements we've made at: "}
               <Link
-                to='https://whatstherush.earth'
+                href={newWebsiteURL()}
                 style={{
                   textDecoration: 'underline',
                   color: '#3182CE',
