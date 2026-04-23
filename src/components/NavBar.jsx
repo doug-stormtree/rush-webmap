@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link as ReactLink } from 'react-router-dom';
 import {
   Box,
   Button,
   ButtonGroup,
+  Divider,
   Link,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
   Spacer,
   useBreakpointValue,
+  useDisclosure,
   useMediaQuery,
   useMultiStyleConfig,
 } from '@chakra-ui/react';
 import { FiInstagram, FiMessageSquare, FiHelpCircle, FiMap, FiMenu } from 'react-icons/fi';
 //import LandingModalButton from './LandingModalButton';
 import ShareModalButton from './ShareModalButton';
+import { ReactComponent as GlobeSVG } from '../data/svg/globe.svg';
 
 export default function NavBar(props) {
 
@@ -90,10 +99,91 @@ export default function NavBar(props) {
     />
   );
 
+  const newWebsiteURL = () => {
+    const oldURL = new URL(getShareURL())
+    const path = oldURL.pathname.split('/')
+    const geo = {
+      latLng: path.at(-1),
+      zoom: path.at(-2),
+      question: path.at(-3),
+    }
+    console.log(path)
+    console.log(geo)
+
+    const url = new URL(oldURL)
+    url.hostname = 'whatstherush.earth'
+    url.port = ''
+    if (geo.question === 'undefined' || geo.question === undefined) {
+      url.pathname = path.includes('app') ? 'app' : ''
+      url.search = ''
+    } else {
+      url.pathname = `/app/${geo.question}`
+      url.search = new URLSearchParams({
+        zoom: geo.zoom,
+        lat: geo.latLng.split(',')[0],
+        lng: geo.latLng.split(',')[1]
+      }).toString()
+    }
+    return url
+  }
+
+  const NewWebsiteButton = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const [ newURL, setNewURL ] = useState('https://whatstherush.earth/')
+    return (
+      <>
+        <Button
+          leftIcon={<GlobeSVG width='16px' height='16px' />}
+          fontWeight='inherit'
+          onClick={() => {
+            onOpen()
+            setNewURL(newWebsiteURL())
+          }}
+        >
+          New
+        </Button>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent backgroundColor='orange.200' borderRadius='xl' paddingBottom='2'>
+            <ModalHeader>New Website</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <p>
+                <GlobeSVG
+                  height='5rem'
+                  width='5rem'
+                  style={{ 
+                    float: 'right',
+                    marginLeft: '10px'
+                  }}
+                />
+                {"RUSH is moving to the next stage of our development, come check out the improvements we've made at: "}
+              </p>
+              <Box padding='3'>
+                <Link
+                  href={newURL}
+                  style={{
+                    fontWeight: 'bold',
+                    textDecoration: 'underline',
+                    color: '#3182CE',
+                  }}
+                >whatstherush.earth</Link>
+              </Box>
+              <p style={{ marginTop: '.25rem'}}>This website will soon permenantly redirect to the new website, but don't worry, all your links and QR codes will still work.</p>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      </>
+    )
+  }
+
   const menuBurgerButtons = useBreakpointValue({
     base: (
       // smallest mobile phones contain all buttons + menu that spans the entire screen.
       <MenuList h='100vh' w="100vw">
+        <MenuItem>
+          <NewWebsiteButton />
+        </MenuItem>
         <MenuItem>
           {mapButton}
         </MenuItem>
@@ -165,12 +255,16 @@ export default function NavBar(props) {
     ),
     sm: (
       <ButtonGroup id='navbar-buttons' variant='nav' spacing='-2'>
-        {mapButton}{aboutButton}{menuBurger}
+        {<NewWebsiteButton />}{mapButton}{aboutButton}{menuBurger}
       </ButtonGroup>
     ),
     lg: (
       <ButtonGroup id='navbar-buttons' variant='nav' spacing='-2'>
-        {mapButton}{aboutButton}{feedbackButton}{instagramButton}{shareButton}
+        {<NewWebsiteButton />}{
+          <Box padding='2' height='2.5rem'>
+            <Divider orientation='vertical' borderColor='gray.300' />
+          </Box>
+        }{mapButton}{aboutButton}{feedbackButton}{instagramButton}{shareButton}
       </ButtonGroup>
     ),
   },{ssr:false});
