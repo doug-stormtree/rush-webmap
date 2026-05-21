@@ -11,6 +11,11 @@
         "source": "/:path*",
         "destination": "https://whatstherush.earth/:path",
         "type": 302
+      },
+      {
+        "source": "**",
+        "destination": "https://whatstherush.earth/",
+        "type": 302
       }
     ],
     "headers": [
