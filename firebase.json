@@ -8,8 +8,8 @@
     ],
     "redirects": [
       {
-        "source": "**",
-        "destination": "https://whatstherush.earth/",
+        "source": "/:path*",
+        "destination": "https://whatstherush.earth/:path",
         "type": 302
       }
     ],
