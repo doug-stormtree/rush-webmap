@@ -1,19 +1,19 @@
 import { getStyleMapProperty, mapPopupContent } from '../LeafletStyleHelpers';
 
 const styleMap = new Map([
-  ['Arbutus_DouglasFir', { fillColor: '#b7484b', legendText: 'Arbutus - Douglas Fir' }],
-  ['Arbutus_GarryOak', { fillColor: '#987db7', legendText: 'Arbutus - Garry Oak' }],
-  ['Arbutus_LodgePine_DouglasFir', { fillColor: '#e15989', legendText: 'Arbutus - Lodgepole Pine - Douglas-fir' }],
-  ['BlackCottonwood_Crabapple_Willow', { fillColor: '#c43c39', legendText: 'Black Cottonwood - Crabapple - Willow' }],
-  ['FreshWater_Wetland', { fillColor: '#91522d', legendText: 'Fresh-water Wetland' }],
-  ['GarrOak', { fillColor: '#85b66f', legendText: 'Garry Oak' }],
-  ['GarryOak_Arbutus', { fillColor: '#d5b43c', legendText: 'Garry Oak - Arbutus' }],
-  ['Salal_Lichen', { fillColor: '#8d5a99', legendText: 'Salal - Lichen' }],
-  ['Salal_OG', { fillColor: '#ff9e17', legendText: 'Salal - Oregon Grape' }],
-  ['SF_Salal', { fillColor: '#e77148', legendText: 'Swordfern - Salal' }],
-  ['SW_Wetland', { fillColor: '#becf50', legendText: 'Salt-water Wetland' }],
-  ['Swo_Hem_AF', { fillColor: '#e5b636', legendText: 'Swordfern - Hemlock - Amabilis-fir' }],
-  ['SwordFern', { fillColor: '#beb297', legendText: 'Swordfern' }],
+  ['Arbutus_DouglasFir', { fillColor: '#e36c87', legendText: 'Arbutus - Douglas Fir' }],
+  ['Arbutus_GarryOak', { fillColor: '#da4129', legendText: 'Arbutus - Garry Oak' }],
+  ['Arbutus_LodgePine_DouglasFir', { fillColor: '#8f3f82', legendText: 'Arbutus - Lodgepole Pine - Douglas-fir' }],
+  ['BlackCottonwood_Crabapple_Willow', { fillColor: '#3866a3', legendText: 'Black Cottonwood - Crabapple - Willow' }],
+  ['FreshWater_Wetland', { fillColor: '#6b5687', legendText: 'Fresh-water Wetland' }],
+  ['GarrOak', { fillColor: '#f0e735', legendText: 'Garry Oak' }],
+  ['GarryOak_Arbutus', { fillColor: '#f2a539', legendText: 'Garry Oak - Arbutus' }],
+  ['Salal_Lichen', { fillColor: '#bd593e', legendText: 'Salal - Lichen' }],
+  ['Salal_OG', { fillColor: '#88b32f', legendText: 'Salal - Oregon Grape' }],
+  ['SF_Salal', { fillColor: '#427a38', legendText: 'Swordfern - Salal' }],
+  ['SW_Wetland', { fillColor: '#8d8b8c', legendText: 'Salt-water Wetland' }],
+  ['Swo_Hem_AF', { fillColor: '#75a691', legendText: 'Swordfern - Hemlock - Amabilis-fir' }],
+  ['SwordFern', { fillColor: '#285d41', legendText: 'Swordfern' }],
 ]);
 
 const layer = {
